@@ -1,21 +1,87 @@
-name: Release & Tag
+name: Build, Release & Deploy
 
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
-  release:
+  validate:
+    name: Validate YAML
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          fetch-depth: 0
+          node-version: '20'
+      - run: npm install
+      - run: npm run validate
 
-      - name: Get version from package.json
+  build:
+    name: Compile & Generate
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install
+      - run: npm run compile
+      - run: npm run generate
+
+      # Commit compiled JSON back to repo (main only)
+      - name: Commit dist/
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dist/
+          git diff --cached --quiet || git commit -m "chore: compile zorba-core.json [skip ci]"
+          git push
+
+      # Upload generated docs for MkDocs job
+      - name: Upload generated docs
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-docs
+          path: docs/domains/
+
+  deploy-docs:
+    name: Deploy MkDocs
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # Download generated domain docs
+      - uses: actions/download-artifact@v4
+        with:
+          name: generated-docs
+          path: docs/domains/
+
+      - run: pip install mkdocs-material
+      - run: mkdocs gh-deploy --force
+
+  release:
+    name: Tag & Release
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get version
         id: version
         run: |
           VERSION=$(node -p "require('./package.json').version")
@@ -31,20 +97,22 @@ jobs:
             echo "exists=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Create Git tag
+      - name: Create tag and release
         if: steps.check_tag.outputs.exists == 'false'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git tag -a "${{ steps.version.outputs.tag }}" -m "Release ${{ steps.version.outputs.tag }}"
-          git push origin "${{ steps.version.outputs.tag }}"
+          git tag -a "v${{ steps.version.outputs.version }}" -m "Release v${{ steps.version.outputs.version }}"
+          git push origin "v${{ steps.version.outputs.version }}"
 
       - name: Create GitHub Release
         if: steps.check_tag.outputs.exists == 'false'
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ steps.version.outputs.tag }}
-          name: ZORBA ${{ steps.version.outputs.tag }}
+          tag_name: v${{ steps.version.outputs.version }}
+          name: ZORBA v${{ steps.version.outputs.version }}
           generate_release_notes: true
           draft: false
           prerelease: ${{ contains(steps.version.outputs.version, '-') }}
+          files: |
+            dist/zorba-core.json

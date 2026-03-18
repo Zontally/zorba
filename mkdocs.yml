@@ -1,0 +1,61 @@
+site_name: ZORBA — Zontally Reference Business Architecture
+site_description: The open reference architecture for the agentic enterprise
+site_url: https://zontally.github.io/zorba
+repo_url: https://github.com/Zontally/zorba
+repo_name: Zontally/zorba
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: blue grey
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: blue grey
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.follow
+    - search.highlight
+
+nav:
+  - Home: index.md
+  - Framework:
+    - Manifesto: framework/01-manifesto.md
+    - Architecture: framework/02-architecture.md
+    - Workforce Model: framework/03-workforce-model.md
+    - Domain Reference: framework/04-domain-reference.md
+    - Agentic Patterns: framework/05-agentic-patterns.md
+    - Governance: framework/06-governance.md
+    - Information Model: framework/07-information-model.md
+    - Industry Editions: framework/08-industry-editions.md
+    - Glossary: framework/09-glossary.md
+  - Domain Taxonomy:
+    - Overview: docs/domains/index.md
+    - Strategy & Governance: docs/domains/01-strategy-and-governance.md
+    - Product & Innovation: docs/domains/02-product-and-innovation.md
+    - Marketing: docs/domains/03-marketing.md
+    - Sales: docs/domains/04-sales.md
+    - Customer Success & Service: docs/domains/05-customer-success-and-service.md
+    - Operations & Delivery: docs/domains/06-operations-and-delivery.md
+    - Supply Chain: docs/domains/07-supply-chain.md
+    - Finance: docs/domains/08-finance.md
+    - People & Talent: docs/domains/09-people-and-talent.md
+    - Technology & Data: docs/domains/10-technology-and-data.md
+    - Risk, Legal & Compliance: docs/domains/11-risk-legal-and-compliance.md
+    - Corporate Services: docs/domains/12-corporate-services.md
+  - Changelog: CHANGELOG.md
+
+markdown_extensions:
+  - tables
+  - admonition
+  - toc:
+      permalink: true

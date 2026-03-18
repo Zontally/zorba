@@ -8,9 +8,13 @@
     "url": "https://github.com/Zontally/zorba.git"
   },
   "scripts": {
-    "build": "node build/compile.js",
-    "docs": "node build/generate-docs.js",
     "validate": "node build/validate.js",
+    "compile": "node build/compile.js --all",
+    "generate": "node build/generate-docs.js",
+    "build": "npm run validate && npm run compile && npm run generate",
     "version": "echo $npm_package_version"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
   }
 }
