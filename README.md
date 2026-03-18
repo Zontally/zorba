@@ -8,6 +8,8 @@ ZORBA defines how organisations operate when humans and AI agents work as one â€
 
 ## What's Inside
 
+[![Zorba Overview](./assets/images/zorba-overview.jpg)](./assets/images/zorba-overview-large.jpg)
+
 ### Framework Documents
 
 | Document | Description |
