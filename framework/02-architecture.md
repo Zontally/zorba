@@ -16,13 +16,13 @@ What distinguishes ZORBA from traditional reference architectures is that **ever
 
 ### The Structural Hierarchy
 
-![Structural Hierarchy](../assets/images/hierarchy.jpg){height="200"}
+<img src="../../assets/images/hierarchy.jpg" alt="Structural Hierarchy" style="height: 600px;">
 
 ### The Strategic Alignment Overlay
 
 Strategy does not sit "above" the structural hierarchy — it sits **alongside** it, connecting to structural objects through alignment relationships:
 
-![Strategy Interlock](../assets/images/strategy-interlock.jpg){height="200"}
+<img src="../../assets/images/strategy-interlock.jpg" alt="Structural Hierarchy" style="height: 600px;">
 
 A group strategy lives at the OU level. A supply chain strategy lives within the Supply Chain domain. Objectives cascade from strategies and attach to capabilities and processes. This means any work item can be traced back to strategic intent through *two independent paths*:
 
