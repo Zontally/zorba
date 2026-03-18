@@ -16,50 +16,13 @@ What distinguishes ZORBA from traditional reference architectures is that **ever
 
 ### The Structural Hierarchy
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│  ORGANISATIONAL UNIT                                         │
-│  (company, business unit, division, region, department)      │
-│                                                              │
-│  ┌───────────────────────────────────────────────────────┐   │
-│  │  DOMAIN                                                │   │
-│  │  (area of enterprise activity — Value Chain or         │   │
-│  │   Management Function)                                 │   │
-│  │                                                        │   │
-│  │  ┌─────────────────────────────────────────────────┐   │   │
-│  │  │  CAPABILITY                                      │   │   │
-│  │  │  (what the organisation can do)                   │   │   │
-│  │  │                                                  │   │   │
-│  │  │  ┌──────────────────────────────────────────┐    │   │   │
-│  │  │  │  PROCESS                                  │    │   │   │
-│  │  │  │  (how work flows)                         │    │   │   │
-│  │  │  │                                           │    │   │   │
-│  │  │  │  ┌──────────────────────────────────┐     │    │   │   │
-│  │  │  │  │  ACTIVITY                         │     │    │   │   │
-│  │  │  │  │  (discrete unit of work)          │     │    │   │   │
-│  │  │  │  │                                   │     │    │   │   │
-│  │  │  │  │  ┌───────────────────────────┐    │     │    │   │   │
-│  │  │  │  │  │  WORK ITEM                 │    │     │    │   │   │
-│  │  │  │  │  │  (actual execution)        │    │     │    │   │   │
-│  │  │  │  │  └───────────────────────────┘    │     │    │   │   │
-│  │  │  │  └──────────────────────────────────┘     │    │   │   │
-│  │  │  └──────────────────────────────────────────┘    │   │   │
-│  │  └─────────────────────────────────────────────────┘   │   │
-│  └───────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
-```
+![Structural Hierarchy](../assets/images/hierarchy.jpg){height="200"}
 
 ### The Strategic Alignment Overlay
 
 Strategy does not sit "above" the structural hierarchy — it sits **alongside** it, connecting to structural objects through alignment relationships:
 
-```
-Strategy ──aligns_to──→ OU, Domain, Capability
-    │
-    └── Objective ──aligns_to──→ Capability, Process, Team
-            │
-            └── Initiative ──delivers──→ Work Items
-```
+![Strategy Interlock](../assets/images/strategy-interlock.jpg){height="200"}
 
 A group strategy lives at the OU level. A supply chain strategy lives within the Supply Chain domain. Objectives cascade from strategies and attach to capabilities and processes. This means any work item can be traced back to strategic intent through *two independent paths*:
 
