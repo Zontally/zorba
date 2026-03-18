@@ -193,6 +193,22 @@ function main() {
   fs.writeFileSync(path.join(DOCS_DOMAINS_DIR, 'index.md'), indexLines.join('\n'), 'utf8');
   console.log('\n  ✓ index.md — domain index page');
 
+  // Copy static assets into docs/
+  const STATIC_DIR = path.join(ROOT, 'static');
+  if (fs.existsSync(STATIC_DIR)) {
+    const copyRecursive = (src, dest) => {
+      fs.mkdirSync(dest, { recursive: true });
+      for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+        const srcPath = path.join(src, entry.name);
+        const destPath = path.join(dest, entry.name);
+        if (entry.isDirectory()) copyRecursive(srcPath, destPath);
+        else fs.copyFileSync(srcPath, destPath);
+      }
+    };
+    copyRecursive(STATIC_DIR, DOCS_DIR);
+    console.log('  ✓ static assets copied');
+  }
+
   // Copy framework docs into docs/framework/
   fs.mkdirSync(DOCS_FRAMEWORK_DIR, { recursive: true });
   if (fs.existsSync(FRAMEWORK_DIR)) {

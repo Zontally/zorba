@@ -1,4 +1,4 @@
-site_name: ZORBA — Zontally Reference Business Architecture
+site_name: ZORBA
 site_description: The open reference architecture for the agentic enterprise
 site_url: https://zontally.github.io/zorba
 repo_url: https://github.com/Zontally/zorba
@@ -6,6 +6,8 @@ repo_name: Zontally/zorba
 
 theme:
   name: material
+  logo: assets/logo-light.png
+  favicon: assets/logo-dark.png
   palette:
     - scheme: slate
       primary: blue grey
@@ -21,7 +23,6 @@ theme:
         name: Switch to dark mode
   features:
     - navigation.sections
-    - navigation.expand
     - navigation.top
     - toc.follow
     - search.highlight
@@ -38,20 +39,7 @@ nav:
     - Information Model: framework/07-information-model.md
     - Industry Editions: framework/08-industry-editions.md
     - Glossary: framework/09-glossary.md
-  - Domain Taxonomy:
-    - Overview: domains/index.md
-    - Strategy & Governance: domains/01-strategy-and-governance.md
-    - Product & Innovation: domains/02-product-and-innovation.md
-    - Marketing: domains/03-marketing.md
-    - Sales: domains/04-sales.md
-    - Customer Success & Service: domains/05-customer-success-and-service.md
-    - Operations & Delivery: domains/06-operations-and-delivery.md
-    - Supply Chain: domains/07-supply-chain.md
-    - Finance: domains/08-finance.md
-    - People & Talent: domains/09-people-and-talent.md
-    - Technology & Data: domains/10-technology-and-data.md
-    - Risk, Legal & Compliance: domains/11-risk-legal-and-compliance.md
-    - Corporate Services: domains/12-corporate-services.md
+  - Domain Taxonomy: domains/index.md
 
 markdown_extensions:
   - tables
