@@ -1,0 +1,60 @@
+site_name: ZORBA
+site_description: The open reference architecture for the agentic enterprise
+site_url: https://zontally.github.io/zorba
+repo_url: https://github.com/Zontally/zorba
+repo_name: Zontally/zorba
+
+theme:
+  name: material
+  logo: assets/logo-light.png
+  favicon: assets/logo-dark.png
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+    - search.highlight
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Framework:
+    - Manifesto: framework/01-manifesto.md
+    - Architecture: framework/02-architecture.md
+    - Workforce Model: framework/03-workforce-model.md
+    - Domain Reference: framework/04-domain-reference.md
+    - Agentic Patterns: framework/05-agentic-patterns.md
+    - Governance: framework/06-governance.md
+    - Information Model: framework/07-information-model.md
+    - Industry Editions: framework/08-industry-editions.md
+    - Glossary: framework/09-glossary.md
+    - Usage Guide: framework/10-usage-guide.md
+    - Contributing: framework/11-contributing.md
+  - Domain Taxonomy: domains/index.md
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - toc:
+      permalink: true

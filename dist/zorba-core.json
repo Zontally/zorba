@@ -1,0 +1,4189 @@
+{
+  "edition": "core",
+  "name": "ZORBA Core",
+  "version": "0.1.0",
+  "compiled_at": "2026-03-18T10:56:53.078Z",
+  "stats": {
+    "totalDomains": 12,
+    "totalCapabilities": 87,
+    "totalProcesses": 479,
+    "profileCounts": {
+      "H": 30,
+      "H+a": 120,
+      "H=A": 136,
+      "h+A": 141,
+      "A": 52
+    }
+  },
+  "domains": [
+    {
+      "id": "738201",
+      "number": 1,
+      "name": "Strategy & Governance",
+      "subtitle": "Setting direction and ensuring accountability",
+      "classification": "management_function",
+      "description": "This domain encompasses the enterprise's ability to define its purpose, set strategic direction, govern its operations, manage enterprise-wide performance, and ensure the organisation adapts and transforms to remain competitive. It is the domain where long-term intent is formulated, corporate accountability is established, and enterprise-wide coordination is orchestrated.\nIn a ZORBA-enabled enterprise, this domain also governs how the blended workforce itself is designed and overseen — ensuring that the human/agent operating model is a deliberate strategic choice, not an emergent accident.\n",
+      "capabilities": [
+        {
+          "id": "284713",
+          "number": "1.1",
+          "name": "Define the Business Concept and Long-Term Vision",
+          "description": "Establish the foundational purpose, mission, values, and long-term vision of the enterprise. This capability ensures the organisation has a clearly articulated reason for existing and a compelling picture of its future state.\n",
+          "processes": [
+            {
+              "id": "517342",
+              "number": "1.1.1",
+              "name": "Develop and articulate the enterprise mission and purpose",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; agents may research peer missions for benchmarking"
+            },
+            {
+              "id": "842156",
+              "number": "1.1.2",
+              "name": "Define and codify organisational values and principles",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; values require authentic human deliberation"
+            },
+            {
+              "id": "394028",
+              "number": "1.1.3",
+              "name": "Formulate the long-term vision and strategic ambition",
+              "agentic_profile": "H+a",
+              "agentic_note": "Human-led with agent scenario modelling and trend analysis"
+            },
+            {
+              "id": "651873",
+              "number": "1.1.4",
+              "name": "Communicate vision and purpose across the enterprise",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents generate communications; humans approve and personalise"
+            },
+            {
+              "id": "923467",
+              "number": "1.1.5",
+              "name": "Review and refresh the business concept periodically",
+              "agentic_profile": "H+a",
+              "agentic_note": "Agents monitor market shifts and trigger review cycles"
+            }
+          ]
+        },
+        {
+          "id": "156489",
+          "number": "1.2",
+          "name": "Develop and Manage Enterprise Strategy",
+          "description": "Translate the long-term vision into a coherent strategic plan that defines where the enterprise will compete, how it will win, and what capabilities it requires. This includes environmental analysis, strategic option evaluation, and strategy documentation.\n",
+          "processes": [
+            {
+              "id": "308741",
+              "number": "1.2.1",
+              "name": "Conduct environmental and market analysis",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agent-heavy; agents scan, synthesise, and present; humans interpret"
+            },
+            {
+              "id": "762514",
+              "number": "1.2.2",
+              "name": "Assess internal capabilities and strategic readiness",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents map capabilities and gaps; humans validate and prioritise"
+            },
+            {
+              "id": "439286",
+              "number": "1.2.3",
+              "name": "Identify and evaluate strategic options",
+              "agentic_profile": "H+a",
+              "agentic_note": "Agents model scenarios and outcomes; humans judge and decide"
+            },
+            {
+              "id": "185673",
+              "number": "1.2.4",
+              "name": "Select and commit to strategic direction",
+              "agentic_profile": "H",
+              "agentic_note": "Human decision; agents provide decision-support artefacts"
+            },
+            {
+              "id": "624831",
+              "number": "1.2.5",
+              "name": "Document and formalise the strategic plan",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents draft; humans review, refine, and approve"
+            },
+            {
+              "id": "571948",
+              "number": "1.2.6",
+              "name": "Cascade strategy across organisational units and domains",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents distribute and track acknowledgement; humans contextualise for their teams"
+            },
+            {
+              "id": "893215",
+              "number": "1.2.7",
+              "name": "Monitor strategic assumptions and trigger strategy refresh",
+              "agentic_profile": "A",
+              "agentic_note": "Agents continuously monitor assumptions; alert humans when conditions change"
+            }
+          ]
+        },
+        {
+          "id": "472053",
+          "number": "1.3",
+          "name": "Manage Strategic Planning Cycles and Cadences",
+          "description": "Define and operate the rhythms through which strategy is planned, reviewed, and refreshed — including annual planning cycles, quarterly reviews, and event-driven strategic responses.\n",
+          "processes": [
+            {
+              "id": "341679",
+              "number": "1.3.1",
+              "name": "Define the strategic planning calendar and milestones",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans set cadences; agents schedule and track"
+            },
+            {
+              "id": "728463",
+              "number": "1.3.2",
+              "name": "Coordinate cross-functional input to strategic planning",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents orchestrate collection; humans contribute substance"
+            },
+            {
+              "id": "514927",
+              "number": "1.3.3",
+              "name": "Facilitate strategic review sessions",
+              "agentic_profile": "H+a",
+              "agentic_note": "Agents prepare briefing packs; humans facilitate discussion"
+            },
+            {
+              "id": "896234",
+              "number": "1.3.4",
+              "name": "Manage the transition from planning to execution",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents translate strategy into initiative structures; humans approve"
+            },
+            {
+              "id": "263148",
+              "number": "1.3.5",
+              "name": "Operate concurrent planning horizons",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents maintain multiple planning timelines; humans prioritise across horizons"
+            }
+          ]
+        },
+        {
+          "id": "619372",
+          "number": "1.4",
+          "name": "Manage Corporate Governance and Board Operations",
+          "description": "Ensure the enterprise operates within its governance framework — including board management, fiduciary oversight, shareholder relations, and regulatory governance obligations.\n",
+          "processes": [
+            {
+              "id": "485213",
+              "number": "1.4.1",
+              "name": "Manage board composition, meetings, and administration",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents handle scheduling, document prep, minutes; humans govern"
+            },
+            {
+              "id": "753648",
+              "number": "1.4.2",
+              "name": "Prepare and distribute board and committee packs",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agent-assembled; humans review and approve content"
+            },
+            {
+              "id": "192837",
+              "number": "1.4.3",
+              "name": "Manage fiduciary and regulatory governance obligations",
+              "agentic_profile": "H+a",
+              "agentic_note": "Agents monitor compliance calendars; humans exercise fiduciary judgement"
+            },
+            {
+              "id": "647312",
+              "number": "1.4.4",
+              "name": "Coordinate shareholder and stakeholder communications",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents draft; humans approve tone and content"
+            },
+            {
+              "id": "831456",
+              "number": "1.4.5",
+              "name": "Maintain the corporate governance framework and policies",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents track regulatory changes and flag policy gaps; humans update policies"
+            }
+          ]
+        },
+        {
+          "id": "537182",
+          "number": "1.5",
+          "name": "Manage Enterprise Performance",
+          "description": "Establish and operate the enterprise performance management system — defining KPIs, tracking outcomes, conducting performance reviews, and ensuring accountability from strategy through to execution.\n",
+          "processes": [
+            {
+              "id": "412965",
+              "number": "1.5.1",
+              "name": "Define enterprise KPIs and performance frameworks",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans define what matters; agents benchmark and recommend targets"
+            },
+            {
+              "id": "869273",
+              "number": "1.5.2",
+              "name": "Collect, aggregate, and validate performance data",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; continuous automated data collection"
+            },
+            {
+              "id": "234817",
+              "number": "1.5.3",
+              "name": "Analyse performance trends and identify variances",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents analyse and surface insights; humans interpret meaning"
+            },
+            {
+              "id": "695148",
+              "number": "1.5.4",
+              "name": "Conduct periodic performance reviews",
+              "agentic_profile": "H+a",
+              "agentic_note": "Agents prepare review materials; humans lead review discussions"
+            },
+            {
+              "id": "748321",
+              "number": "1.5.5",
+              "name": "Manage corrective actions and performance interventions",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans decide interventions; agents track execution and follow-up"
+            },
+            {
+              "id": "513429",
+              "number": "1.5.6",
+              "name": "Report performance to governance bodies and stakeholders",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents generate reports; humans present and contextualise"
+            }
+          ]
+        },
+        {
+          "id": "843625",
+          "number": "1.6",
+          "name": "Manage Strategic Partnerships and Alliances",
+          "description": "Identify, evaluate, establish, and govern strategic partnerships, joint ventures, alliances, and ecosystem relationships that extend the enterprise's capabilities and market reach.\n",
+          "processes": [
+            {
+              "id": "372841",
+              "number": "1.6.1",
+              "name": "Identify and evaluate potential strategic partners",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents scan market and assess fit; humans evaluate relationship potential"
+            },
+            {
+              "id": "916254",
+              "number": "1.6.2",
+              "name": "Negotiate and formalise partnership agreements",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led negotiation; agents support with research and document preparation"
+            },
+            {
+              "id": "284163",
+              "number": "1.6.3",
+              "name": "Manage ongoing partner relationships and governance",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans own relationships; agents track commitments and performance"
+            },
+            {
+              "id": "637412",
+              "number": "1.6.4",
+              "name": "Measure partner value and contribution",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents track metrics and ROI; humans assess strategic value"
+            },
+            {
+              "id": "459823",
+              "number": "1.6.5",
+              "name": "Manage partner ecosystem coordination",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents orchestrate information flow; humans manage strategic alignment"
+            }
+          ]
+        },
+        {
+          "id": "291648",
+          "number": "1.7",
+          "name": "Manage Enterprise Architecture and Operating Model",
+          "description": "Define, maintain, and evolve the enterprise's architecture and operating model — including the structural hierarchy, domain configuration, and blended workforce design that ZORBA itself describes.\n",
+          "processes": [
+            {
+              "id": "823147",
+              "number": "1.7.1",
+              "name": "Define and maintain the enterprise operating model",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design; agents maintain documentation and track drift"
+            },
+            {
+              "id": "564219",
+              "number": "1.7.2",
+              "name": "Manage the enterprise domain and capability map",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents maintain the living map; humans make structural decisions"
+            },
+            {
+              "id": "715362",
+              "number": "1.7.3",
+              "name": "Design and govern the blended workforce architecture",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans set workforce composition targets; agents model scenarios and monitor actuals"
+            },
+            {
+              "id": "348972",
+              "number": "1.7.4",
+              "name": "Manage framework adoption and customisation",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents track framework versions and compliance; humans decide adaptations"
+            },
+            {
+              "id": "471836",
+              "number": "1.7.5",
+              "name": "Conduct operating model reviews and maturity assessments",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents assess maturity against benchmarks; humans interpret and act"
+            }
+          ]
+        },
+        {
+          "id": "165734",
+          "number": "1.8",
+          "name": "Manage Business Transformation and Change",
+          "description": "Plan, coordinate, and execute enterprise-wide transformation initiatives — including organisational change, digital transformation, operating model transitions, and strategic restructuring.\n",
+          "processes": [
+            {
+              "id": "924183",
+              "number": "1.8.1",
+              "name": "Identify and prioritise transformation opportunities",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents surface opportunities from data; humans prioritise by strategic value"
+            },
+            {
+              "id": "647521",
+              "number": "1.8.2",
+              "name": "Design transformation programmes and roadmaps",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design; agents model dependencies and timelines"
+            },
+            {
+              "id": "382714",
+              "number": "1.8.3",
+              "name": "Manage organisational change and stakeholder readiness",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead change; agents monitor sentiment and readiness indicators"
+            },
+            {
+              "id": "538469",
+              "number": "1.8.4",
+              "name": "Execute and track transformation initiatives",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents track milestones, risks, and dependencies; humans lead delivery"
+            },
+            {
+              "id": "814237",
+              "number": "1.8.5",
+              "name": "Measure transformation outcomes and realise benefits",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents measure and report; humans validate benefit realisation"
+            },
+            {
+              "id": "276948",
+              "number": "1.8.6",
+              "name": "Embed change and ensure sustainability of new ways of working",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans reinforce behaviours; agents monitor adoption and flag regression"
+            }
+          ]
+        },
+        {
+          "id": "428519",
+          "number": "1.9",
+          "name": "Manage Enterprise Risk Oversight",
+          "description": "Provide enterprise-wide risk oversight — identifying, assessing, and monitoring strategic and operational risks that span domains and organisational units. This is the strategic risk layer; domain-specific risk management sits within Domain 11 (Risk, Legal & Compliance).\n",
+          "processes": [
+            {
+              "id": "753219",
+              "number": "1.9.1",
+              "name": "Define the enterprise risk appetite and tolerance",
+              "agentic_profile": "H",
+              "agentic_note": "Human decision; agents provide risk landscape context"
+            },
+            {
+              "id": "319847",
+              "number": "1.9.2",
+              "name": "Identify and assess enterprise-level risks",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents scan for emerging risks; humans assess severity and likelihood"
+            },
+            {
+              "id": "862431",
+              "number": "1.9.3",
+              "name": "Monitor the enterprise risk landscape continuously",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; continuous monitoring with human-defined alert thresholds"
+            },
+            {
+              "id": "547183",
+              "number": "1.9.4",
+              "name": "Report risk exposure to governance bodies",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents compile risk reports; humans present and contextualise"
+            },
+            {
+              "id": "691524",
+              "number": "1.9.5",
+              "name": "Coordinate risk response across domains and OUs",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead cross-domain response; agents track actions and dependencies"
+            }
+          ]
+        },
+        {
+          "id": "374156",
+          "number": "1.10",
+          "name": "Manage Mergers, Acquisitions, and Divestitures",
+          "description": "Evaluate, execute, and integrate (or separate) corporate transactions that reshape the enterprise's portfolio of businesses.\n",
+          "processes": [
+            {
+              "id": "218463",
+              "number": "1.10.1",
+              "name": "Scan and evaluate acquisition and divestiture targets",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents screen and model; humans evaluate strategic fit"
+            },
+            {
+              "id": "785314",
+              "number": "1.10.2",
+              "name": "Conduct due diligence",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents process and analyse data rooms; humans assess risks and red flags"
+            },
+            {
+              "id": "436129",
+              "number": "1.10.3",
+              "name": "Negotiate and structure transactions",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led negotiation with agent research support"
+            },
+            {
+              "id": "862541",
+              "number": "1.10.4",
+              "name": "Plan and execute post-merger integration",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead integration; agents track workstreams and synergies"
+            },
+            {
+              "id": "519873",
+              "number": "1.10.5",
+              "name": "Plan and execute divestitures and separations",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead separation; agents manage checklists and dependencies"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "482917",
+      "number": 2,
+      "name": "Product & Innovation",
+      "subtitle": "Creating what the market needs next",
+      "classification": "value_chain",
+      "description": "This domain encompasses the enterprise's ability to envision, design, build, and evolve the products and services that deliver value to its customers and markets. It spans from early-stage ideation and research through to product lifecycle management and retirement, including the intellectual property that protects competitive advantage.\nIn a ZORBA-enabled enterprise, this domain is where agentic capabilities most visibly augment human creativity — with agents accelerating research synthesis, automating testing cycles, generating design variations, and providing real-time product analytics that inform every decision from concept through sunset.\n",
+      "capabilities": [
+        {
+          "id": "361742",
+          "number": "2.1",
+          "name": "Shape Product Strategy and Portfolio Direction",
+          "description": "Define the overarching product vision, establish portfolio priorities, and maintain a coherent product strategy aligned to enterprise goals. This capability ensures product investments are deliberate and balanced across horizons.\n",
+          "processes": [
+            {
+              "id": "529184",
+              "number": "2.1.1",
+              "name": "Articulate the product vision and strategic positioning",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; product vision requires authentic market intuition"
+            },
+            {
+              "id": "847263",
+              "number": "2.1.2",
+              "name": "Assess market opportunities and whitespace analysis",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents scan markets and model TAM; humans evaluate strategic fit"
+            },
+            {
+              "id": "613427",
+              "number": "2.1.3",
+              "name": "Define and balance the product portfolio across horizons",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans set portfolio mix; agents model resource trade-offs"
+            },
+            {
+              "id": "295814",
+              "number": "2.1.4",
+              "name": "Establish product investment criteria and funding models",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans define criteria; agents benchmark against industry norms"
+            },
+            {
+              "id": "738562",
+              "number": "2.1.5",
+              "name": "Conduct periodic portfolio reviews and rationalisation",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents compile performance data; humans decide keep/kill/invest"
+            },
+            {
+              "id": "184239",
+              "number": "2.1.6",
+              "name": "Align product roadmaps with enterprise strategy",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents flag misalignments; humans resolve strategic tensions"
+            }
+          ]
+        },
+        {
+          "id": "527163",
+          "number": "2.2",
+          "name": "Discover and Validate Product Opportunities",
+          "description": "Systematically identify, explore, and validate new product concepts before committing significant development resources. This capability bridges insight and action through structured experimentation.\n",
+          "processes": [
+            {
+              "id": "493821",
+              "number": "2.2.1",
+              "name": "Gather and synthesise customer needs and pain points",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents aggregate feedback from multiple channels; humans identify patterns"
+            },
+            {
+              "id": "716348",
+              "number": "2.2.2",
+              "name": "Generate and explore product concepts and ideas",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents generate concept variations and provocations; humans curate and refine"
+            },
+            {
+              "id": "382519",
+              "number": "2.2.3",
+              "name": "Conduct rapid prototyping and concept testing",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents build prototype simulations; humans evaluate user response"
+            },
+            {
+              "id": "861234",
+              "number": "2.2.4",
+              "name": "Validate market demand and willingness to pay",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents run conjoint analyses and survey automation; humans interpret signals"
+            },
+            {
+              "id": "254697",
+              "number": "2.2.5",
+              "name": "Build and assess business cases for new products",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents model financials and scenarios; humans judge viability"
+            }
+          ]
+        },
+        {
+          "id": "649281",
+          "number": "2.3",
+          "name": "Design and Engineer Products and Services",
+          "description": "Execute the core design and engineering work that transforms validated concepts into market-ready products. This capability covers requirements definition, architecture, development, and quality assurance.\n",
+          "processes": [
+            {
+              "id": "514738",
+              "number": "2.3.1",
+              "name": "Define product requirements and acceptance criteria",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans specify requirements; agents structure and cross-reference"
+            },
+            {
+              "id": "928471",
+              "number": "2.3.2",
+              "name": "Design product architecture and technical specifications",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans architect; agents generate documentation and check consistency"
+            },
+            {
+              "id": "347165",
+              "number": "2.3.3",
+              "name": "Execute product development and build cycles",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents assist with code generation, component design; humans lead creation"
+            },
+            {
+              "id": "763829",
+              "number": "2.3.4",
+              "name": "Conduct quality assurance and automated testing",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents execute test suites and regression tests; humans define test strategy"
+            },
+            {
+              "id": "481592",
+              "number": "2.3.5",
+              "name": "Manage product configuration and variant engineering",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents manage configuration matrices; humans approve variant decisions"
+            },
+            {
+              "id": "629413",
+              "number": "2.3.6",
+              "name": "Perform usability and accessibility validation",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents run automated accessibility checks; humans conduct user testing"
+            }
+          ]
+        },
+        {
+          "id": "815423",
+          "number": "2.4",
+          "name": "Manage the Innovation Pipeline and Experimentation",
+          "description": "Operate a structured pipeline for innovation — from early-stage ideas through to funded initiatives — ensuring a healthy flow of experiments, validated learning, and scaled innovations.\n",
+          "processes": [
+            {
+              "id": "372948",
+              "number": "2.4.1",
+              "name": "Operate the idea intake and evaluation process",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents collect and deduplicate submissions; humans evaluate merit"
+            },
+            {
+              "id": "594132",
+              "number": "2.4.2",
+              "name": "Design and run structured experiments",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design experiments; agents automate execution and data capture"
+            },
+            {
+              "id": "148726",
+              "number": "2.4.3",
+              "name": "Track innovation portfolio health and stage-gate progression",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents track metrics and flag stalled initiatives; humans intervene"
+            },
+            {
+              "id": "831264",
+              "number": "2.4.4",
+              "name": "Scale validated innovations into core products",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead scaling decisions; agents coordinate handover logistics"
+            },
+            {
+              "id": "267953",
+              "number": "2.4.5",
+              "name": "Foster innovation culture and internal entrepreneurship",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; cultural change requires human leadership and modelling"
+            },
+            {
+              "id": "425189",
+              "number": "2.4.6",
+              "name": "Manage external innovation partnerships and sourcing",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans manage relationships; agents scout and screen opportunities"
+            }
+          ]
+        },
+        {
+          "id": "293814",
+          "number": "2.5",
+          "name": "Direct Research and Development Activities",
+          "description": "Plan, fund, and execute research and development programmes that generate new knowledge, technologies, and capabilities for future products and competitive advantage.\n",
+          "processes": [
+            {
+              "id": "641278",
+              "number": "2.5.1",
+              "name": "Define R&D strategy and research priorities",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; research direction requires scientific and strategic judgement"
+            },
+            {
+              "id": "519346",
+              "number": "2.5.2",
+              "name": "Plan and allocate R&D budgets and resources",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans allocate; agents model scenarios and track burn rates"
+            },
+            {
+              "id": "872413",
+              "number": "2.5.3",
+              "name": "Execute research programmes and technical investigations",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans conduct research; agents assist with literature review and data analysis"
+            },
+            {
+              "id": "364729",
+              "number": "2.5.4",
+              "name": "Manage research outcomes and technology transfer",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents catalogue findings and match to product needs; humans drive transfer"
+            },
+            {
+              "id": "718534",
+              "number": "2.5.5",
+              "name": "Monitor technology trends and competitive R&D activity",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents continuously scan patent filings and publications; humans assess relevance"
+            }
+          ]
+        },
+        {
+          "id": "174628",
+          "number": "2.6",
+          "name": "Manage the Product Lifecycle End to End",
+          "description": "Govern the full lifecycle of each product from launch through growth, maturity, and eventual sunset — ensuring products remain viable, profitable, and aligned with market needs throughout their life.\n",
+          "processes": [
+            {
+              "id": "493162",
+              "number": "2.6.1",
+              "name": "Plan and execute product launches and market entry",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead launch strategy; agents coordinate checklists and readiness tracking"
+            },
+            {
+              "id": "825347",
+              "number": "2.6.2",
+              "name": "Monitor product performance and market reception",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; continuous monitoring of adoption, usage, and revenue metrics"
+            },
+            {
+              "id": "567814",
+              "number": "2.6.3",
+              "name": "Manage product iterations, updates, and enhancements",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents prioritise backlog by data signals; humans approve release scope"
+            },
+            {
+              "id": "314289",
+              "number": "2.6.4",
+              "name": "Plan and execute product retirement and sunsetting",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans decide retirement timing; agents manage migration and communication plans"
+            },
+            {
+              "id": "682431",
+              "number": "2.6.5",
+              "name": "Manage regulatory and compliance aspects of the product lifecycle",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents track regulatory changes affecting products; humans ensure compliance"
+            }
+          ]
+        },
+        {
+          "id": "536182",
+          "number": "2.7",
+          "name": "Protect and Leverage Intellectual Property",
+          "description": "Identify, secure, manage, and commercially exploit the enterprise's intellectual property — including patents, trade secrets, trademarks, and proprietary know-how.\n",
+          "processes": [
+            {
+              "id": "419237",
+              "number": "2.7.1",
+              "name": "Identify and assess intellectual property arising from products",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents scan codebases and designs for patentable elements; humans evaluate"
+            },
+            {
+              "id": "783164",
+              "number": "2.7.2",
+              "name": "File and manage patent and trademark applications",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents draft initial filings and manage deadlines; humans review and approve"
+            },
+            {
+              "id": "295841",
+              "number": "2.7.3",
+              "name": "Maintain the IP portfolio and renewal schedule",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; automated tracking and renewal management with human exception handling"
+            },
+            {
+              "id": "641823",
+              "number": "2.7.4",
+              "name": "Monitor for IP infringement and competitive filings",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; continuous scanning of patent databases and market activity"
+            },
+            {
+              "id": "518472",
+              "number": "2.7.5",
+              "name": "Manage IP licensing and commercialisation",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans negotiate terms; agents model licensing revenue and track agreements"
+            }
+          ]
+        },
+        {
+          "id": "927341",
+          "number": "2.8",
+          "name": "Generate Product Insights and Analytics",
+          "description": "Establish and operate the data, analytics, and insight capabilities that inform product decisions — from usage analytics and A/B testing through to predictive modelling and competitive intelligence.\n",
+          "processes": [
+            {
+              "id": "364218",
+              "number": "2.8.1",
+              "name": "Define product metrics, KPIs, and measurement frameworks",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans define what to measure; agents recommend based on benchmarks"
+            },
+            {
+              "id": "581749",
+              "number": "2.8.2",
+              "name": "Collect and integrate product usage and behavioural data",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; automated data pipeline management"
+            },
+            {
+              "id": "729463",
+              "number": "2.8.3",
+              "name": "Conduct A/B testing and controlled experimentation",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents design, execute, and analyse experiments; humans set hypotheses"
+            },
+            {
+              "id": "413892",
+              "number": "2.8.4",
+              "name": "Generate predictive models for product performance",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents build and maintain models; humans interpret and act on predictions"
+            },
+            {
+              "id": "846527",
+              "number": "2.8.5",
+              "name": "Deliver product insight reports and recommendations",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents generate narrative reports; humans validate and distribute"
+            },
+            {
+              "id": "152843",
+              "number": "2.8.6",
+              "name": "Monitor competitive product landscape and feature parity",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents track competitor releases and features; humans assess strategic implications"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "729415",
+      "number": 3,
+      "name": "Marketing",
+      "subtitle": "Building demand and shaping perception",
+      "classification": "value_chain",
+      "description": "This domain encompasses the enterprise's ability to understand its markets, build compelling brand narratives, generate demand, and attract qualified prospects. It spans the full marketing spectrum from strategic planning and brand stewardship through to campaign execution, content production, and performance measurement.\nIn a ZORBA-enabled enterprise, marketing is where agentic scale meets human creativity — with agents producing content variations at unprecedented speed, optimising campaigns in real time, automating attribution analysis, and freeing marketers to focus on strategy, storytelling, and brand authenticity.\n",
+      "capabilities": [
+        {
+          "id": "418362",
+          "number": "3.1",
+          "name": "Develop Marketing Strategy and Planning",
+          "description": "Define the marketing strategy, set objectives, allocate budgets, and establish the planning frameworks that guide all marketing activity. This capability ensures marketing investments are strategically aligned and measurably effective.\n",
+          "processes": [
+            {
+              "id": "629471",
+              "number": "3.1.1",
+              "name": "Define marketing objectives and strategic priorities",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; marketing strategy requires market intuition and brand judgement"
+            },
+            {
+              "id": "814253",
+              "number": "3.1.2",
+              "name": "Segment markets and identify target audiences",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents cluster data and model segments; humans validate and name segments"
+            },
+            {
+              "id": "537184",
+              "number": "3.1.3",
+              "name": "Develop annual and campaign-level marketing plans",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans plan; agents model budget scenarios and channel mix"
+            },
+            {
+              "id": "293647",
+              "number": "3.1.4",
+              "name": "Allocate and manage marketing budgets",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents optimise allocation models; humans approve and adjust"
+            },
+            {
+              "id": "461928",
+              "number": "3.1.5",
+              "name": "Define positioning and messaging frameworks",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans craft positioning; agents test messaging variations"
+            },
+            {
+              "id": "785312",
+              "number": "3.1.6",
+              "name": "Coordinate marketing calendar and cross-functional alignment",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents maintain calendars and flag conflicts; humans resolve priorities"
+            }
+          ]
+        },
+        {
+          "id": "562413",
+          "number": "3.2",
+          "name": "Steward the Brand and Communications",
+          "description": "Build, protect, and evolve the enterprise brand — ensuring consistency across all touchpoints, managing reputation, and orchestrating corporate and product communications.\n",
+          "processes": [
+            {
+              "id": "348917",
+              "number": "3.2.1",
+              "name": "Define and maintain brand identity and guidelines",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; brand identity requires authentic creative vision"
+            },
+            {
+              "id": "721563",
+              "number": "3.2.2",
+              "name": "Manage brand consistency across channels and touchpoints",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents audit brand compliance; humans address strategic deviations"
+            },
+            {
+              "id": "495831",
+              "number": "3.2.3",
+              "name": "Plan and execute corporate communications",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents draft communications; humans approve tone and substance"
+            },
+            {
+              "id": "163274",
+              "number": "3.2.4",
+              "name": "Manage public relations and media engagement",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans manage relationships; agents monitor media and prepare briefs"
+            },
+            {
+              "id": "842196",
+              "number": "3.2.5",
+              "name": "Monitor and manage brand reputation and sentiment",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents continuously track sentiment; humans respond to critical issues"
+            },
+            {
+              "id": "617428",
+              "number": "3.2.6",
+              "name": "Manage crisis communications and rapid response",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead crisis response; agents monitor situation and draft holding statements"
+            }
+          ]
+        },
+        {
+          "id": "384219",
+          "number": "3.3",
+          "name": "Generate Demand and Manage Lead Flow",
+          "description": "Attract, capture, nurture, and qualify prospective customers through integrated demand generation programmes. This capability ensures a healthy pipeline of marketing-qualified leads for the sales organisation.\n",
+          "processes": [
+            {
+              "id": "529147",
+              "number": "3.3.1",
+              "name": "Design and execute demand generation campaigns",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents optimise targeting and bidding; humans set creative direction"
+            },
+            {
+              "id": "748213",
+              "number": "3.3.2",
+              "name": "Capture and enrich lead data from multiple sources",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; automated capture, deduplication, and enrichment"
+            },
+            {
+              "id": "391564",
+              "number": "3.3.3",
+              "name": "Score and qualify leads for sales readiness",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents score using behavioural and firmographic data; humans set thresholds"
+            },
+            {
+              "id": "613842",
+              "number": "3.3.4",
+              "name": "Nurture leads through automated journey orchestration",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents orchestrate multi-touch journeys; humans design journey logic"
+            },
+            {
+              "id": "274891",
+              "number": "3.3.5",
+              "name": "Manage the marketing-to-sales handover process",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents route and notify; humans ensure quality and context transfer"
+            },
+            {
+              "id": "856423",
+              "number": "3.3.6",
+              "name": "Optimise conversion rates across the demand funnel",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents run tests and recommend optimisations; humans approve changes"
+            }
+          ]
+        },
+        {
+          "id": "731562",
+          "number": "3.4",
+          "name": "Create and Manage Content at Scale",
+          "description": "Develop, produce, manage, and distribute content across all formats and channels — from thought leadership and editorial through to performance content and sales enablement materials.\n",
+          "processes": [
+            {
+              "id": "482913",
+              "number": "3.4.1",
+              "name": "Define content strategy and editorial direction",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; content strategy requires brand voice and audience understanding"
+            },
+            {
+              "id": "613724",
+              "number": "3.4.2",
+              "name": "Plan and manage the content calendar and production pipeline",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents schedule and track production; humans set priorities"
+            },
+            {
+              "id": "348276",
+              "number": "3.4.3",
+              "name": "Produce written, visual, and multimedia content",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents generate drafts and variations; humans create, edit, and approve"
+            },
+            {
+              "id": "926481",
+              "number": "3.4.4",
+              "name": "Localise and adapt content for markets and segments",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents translate and adapt; humans review cultural nuance"
+            },
+            {
+              "id": "157342",
+              "number": "3.4.5",
+              "name": "Manage the content repository and asset lifecycle",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; automated tagging, versioning, and archival"
+            },
+            {
+              "id": "594817",
+              "number": "3.4.6",
+              "name": "Measure content performance and optimise the content mix",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents analyse engagement data; humans adjust strategy"
+            }
+          ]
+        },
+        {
+          "id": "215694",
+          "number": "3.5",
+          "name": "Operate Digital Channels and Campaign Execution",
+          "description": "Manage the enterprise's digital marketing presence — including website, social media, email, paid media, and emerging channels — ensuring coordinated execution and performance optimisation.\n",
+          "processes": [
+            {
+              "id": "863241",
+              "number": "3.5.1",
+              "name": "Manage the enterprise web presence and SEO",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents monitor rankings and suggest optimisations; humans approve changes"
+            },
+            {
+              "id": "724518",
+              "number": "3.5.2",
+              "name": "Plan and execute paid media campaigns",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents manage bids, placements, and budgets in real time; humans set strategy"
+            },
+            {
+              "id": "491362",
+              "number": "3.5.3",
+              "name": "Operate social media channels and community engagement",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents schedule posts and monitor engagement; humans create content and engage"
+            },
+            {
+              "id": "358714",
+              "number": "3.5.4",
+              "name": "Execute email and marketing automation programmes",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents personalise and send; humans design programmes and review performance"
+            },
+            {
+              "id": "642839",
+              "number": "3.5.5",
+              "name": "Manage emerging and experimental channels",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans explore new channels; agents track performance baselines"
+            }
+          ]
+        },
+        {
+          "id": "847231",
+          "number": "3.6",
+          "name": "Measure Marketing Performance and Attribution",
+          "description": "Establish and operate the measurement, analytics, and attribution systems that quantify marketing's contribution to business outcomes and enable data-driven resource allocation.\n",
+          "processes": [
+            {
+              "id": "321468",
+              "number": "3.6.1",
+              "name": "Define marketing measurement frameworks and KPIs",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans define what matters; agents recommend benchmark targets"
+            },
+            {
+              "id": "759312",
+              "number": "3.6.2",
+              "name": "Implement and maintain marketing attribution models",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents build and calibrate models; humans validate methodology"
+            },
+            {
+              "id": "284537",
+              "number": "3.6.3",
+              "name": "Collect and integrate marketing performance data",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; automated data pipeline from all marketing systems"
+            },
+            {
+              "id": "563819",
+              "number": "3.6.4",
+              "name": "Analyse campaign and channel effectiveness",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents analyse and surface insights; humans interpret and act"
+            },
+            {
+              "id": "418726",
+              "number": "3.6.5",
+              "name": "Report marketing ROI and contribution to revenue",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents generate dashboards and reports; humans present to leadership"
+            },
+            {
+              "id": "937214",
+              "number": "3.6.6",
+              "name": "Conduct marketing mix modelling and budget optimisation",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents model scenarios; humans decide reallocation"
+            }
+          ]
+        },
+        {
+          "id": "694238",
+          "number": "3.7",
+          "name": "Understand Customers and Research Markets",
+          "description": "Systematically gather, analyse, and distribute customer insights and market intelligence that inform product, marketing, and sales decisions across the enterprise.\n",
+          "processes": [
+            {
+              "id": "524183",
+              "number": "3.7.1",
+              "name": "Design and commission market research studies",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans define research questions; agents identify methodologies and vendors"
+            },
+            {
+              "id": "871342",
+              "number": "3.7.2",
+              "name": "Conduct primary and secondary market research",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents gather and process data; humans conduct qualitative research"
+            },
+            {
+              "id": "419563",
+              "number": "3.7.3",
+              "name": "Build and maintain customer personas and journey maps",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents aggregate behavioural data; humans craft narrative personas"
+            },
+            {
+              "id": "362714",
+              "number": "3.7.4",
+              "name": "Monitor competitive positioning and market dynamics",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents continuously track competitors; humans assess strategic implications"
+            },
+            {
+              "id": "738291",
+              "number": "3.7.5",
+              "name": "Distribute insights and embed market intelligence in decisions",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents push relevant insights to stakeholders; humans contextualise"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "358741",
+      "number": 4,
+      "name": "Sales",
+      "subtitle": "Converting relationships into revenue",
+      "classification": "value_chain",
+      "description": "This domain encompasses the enterprise's ability to identify, pursue, win, and grow customer relationships that generate revenue. It spans the full sales spectrum from strategic territory design and pipeline management through to deal execution, account development, and revenue operations.\nIn a ZORBA-enabled enterprise, sales is where agents handle the data-heavy mechanics of selling — scoring leads, maintaining CRM hygiene, generating proposals, and forecasting revenue — while humans focus on relationship building, complex negotiation, and strategic account development.\n",
+      "capabilities": [
+        {
+          "id": "461283",
+          "number": "4.1",
+          "name": "Define Sales Strategy and Territory Architecture",
+          "description": "Establish the sales strategy, design territory and segment coverage models, and set the go-to-market approach that maximises revenue potential across the customer base.\n",
+          "processes": [
+            {
+              "id": "529738",
+              "number": "4.1.1",
+              "name": "Define the sales strategy and go-to-market approach",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; sales strategy requires market judgement and leadership vision"
+            },
+            {
+              "id": "813462",
+              "number": "4.1.2",
+              "name": "Design territory and segment coverage models",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents model territory potential and balance workload; humans approve structure"
+            },
+            {
+              "id": "274913",
+              "number": "4.1.3",
+              "name": "Set quota and target frameworks",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents model attainment scenarios; humans set targets and incentives"
+            },
+            {
+              "id": "224906",
+              "number": "4.1.4",
+              "name": "Define ideal customer profiles and account tiering",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents analyse firmographic and behavioural data; humans validate profiles"
+            },
+            {
+              "id": "348176",
+              "number": "4.1.5",
+              "name": "Align sales coverage with marketing and product strategies",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans drive alignment; agents flag gaps and overlaps"
+            }
+          ]
+        },
+        {
+          "id": "582314",
+          "number": "4.2",
+          "name": "Manage the Sales Pipeline and Forecast Revenue",
+          "description": "Operate the end-to-end pipeline from opportunity creation through to close — ensuring pipeline health, forecast accuracy, and visibility into revenue trajectory.\n",
+          "processes": [
+            {
+              "id": "419628",
+              "number": "4.2.1",
+              "name": "Manage opportunity creation and pipeline intake",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents create opportunities from qualified leads; humans validate and enrich"
+            },
+            {
+              "id": "763142",
+              "number": "4.2.2",
+              "name": "Qualify and progress opportunities through sales stages",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans drive deals; agents update stage data and flag stalled opportunities"
+            },
+            {
+              "id": "295831",
+              "number": "4.2.3",
+              "name": "Generate and maintain revenue forecasts",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents model forecasts using pipeline and historical data; humans adjust for judgement"
+            },
+            {
+              "id": "841567",
+              "number": "4.2.4",
+              "name": "Conduct pipeline reviews and health assessments",
+              "agentic_profile": "H+a",
+              "agentic_note": "Agents prepare pipeline analytics; humans lead review discussions"
+            },
+            {
+              "id": "617294",
+              "number": "4.2.5",
+              "name": "Identify and manage pipeline risks and gaps",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents surface at-risk deals and coverage gaps; humans intervene"
+            },
+            {
+              "id": "354182",
+              "number": "4.2.6",
+              "name": "Reconcile forecast to actuals and improve accuracy",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents analyse forecast deviation patterns; humans refine methodology"
+            }
+          ]
+        },
+        {
+          "id": "724918",
+          "number": "4.3",
+          "name": "Develop and Grow Strategic Accounts",
+          "description": "Manage and deepen relationships with the enterprise's most valuable customers — driving account growth, cross-sell, up-sell, and long-term strategic partnership.\n",
+          "processes": [
+            {
+              "id": "483169",
+              "number": "4.3.1",
+              "name": "Develop strategic account plans and growth strategies",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans plan account strategy; agents research account landscape"
+            },
+            {
+              "id": "619427",
+              "number": "4.3.2",
+              "name": "Map stakeholder networks and influence structures",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents compile org charts and relationship data; humans build relationships"
+            },
+            {
+              "id": "847213",
+              "number": "4.3.3",
+              "name": "Identify cross-sell and up-sell opportunities",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents analyse usage and purchase patterns; humans validate and pursue"
+            },
+            {
+              "id": "536184",
+              "number": "4.3.4",
+              "name": "Coordinate multi-product and multi-team account delivery",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead coordination; agents track commitments across teams"
+            },
+            {
+              "id": "291748",
+              "number": "4.3.5",
+              "name": "Conduct executive business reviews with key accounts",
+              "agentic_profile": "H+a",
+              "agentic_note": "Agents prepare review materials and data packs; humans present and discuss"
+            }
+          ]
+        },
+        {
+          "id": "839162",
+          "number": "4.4",
+          "name": "Execute Deals and Navigate Complex Negotiations",
+          "description": "Manage the deal execution process from proposal through to contract — including pricing, negotiation, approval workflows, and deal closure.\n",
+          "processes": [
+            {
+              "id": "418293",
+              "number": "4.4.1",
+              "name": "Develop proposals and solution presentations",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents generate proposal drafts and pricing models; humans customise and present"
+            },
+            {
+              "id": "563817",
+              "number": "4.4.2",
+              "name": "Configure pricing and assemble deal structures",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents calculate pricing, discounts, and terms; humans approve exceptions"
+            },
+            {
+              "id": "729348",
+              "number": "4.4.3",
+              "name": "Navigate complex negotiations and objection handling",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; complex negotiation requires empathy and strategic judgement"
+            },
+            {
+              "id": "184263",
+              "number": "4.4.4",
+              "name": "Manage deal approval workflows and governance",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents route approvals and track SLAs; humans approve within authority"
+            },
+            {
+              "id": "641729",
+              "number": "4.4.5",
+              "name": "Execute contract finalisation and signature",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents manage document assembly and e-signature; humans review final terms"
+            },
+            {
+              "id": "392517",
+              "number": "4.4.6",
+              "name": "Conduct deal retrospectives and win/loss analysis",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents compile data and patterns; humans extract strategic lessons"
+            }
+          ]
+        },
+        {
+          "id": "613482",
+          "number": "4.5",
+          "name": "Operate Sales Infrastructure and Enablement",
+          "description": "Build and maintain the operational foundation that makes selling effective — including CRM management, sales tools, training, onboarding, and process standardisation.\n",
+          "processes": [
+            {
+              "id": "829413",
+              "number": "4.5.1",
+              "name": "Manage CRM data quality and system hygiene",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; continuous data cleansing, deduplication, and enrichment"
+            },
+            {
+              "id": "435003",
+              "number": "4.5.2",
+              "name": "Develop and deliver sales training and onboarding",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design programmes; agents personalise learning paths"
+            },
+            {
+              "id": "315948",
+              "number": "4.5.3",
+              "name": "Create and maintain sales playbooks and collateral",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents generate and update materials; humans review and approve content"
+            },
+            {
+              "id": "748162",
+              "number": "4.5.4",
+              "name": "Manage sales tools and technology stack",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents monitor adoption and performance; humans select and configure tools"
+            },
+            {
+              "id": "263591",
+              "number": "4.5.5",
+              "name": "Standardise and optimise sales processes",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design processes; agents measure adherence and flag deviations"
+            }
+          ]
+        },
+        {
+          "id": "475291",
+          "number": "4.6",
+          "name": "Manage Partner and Channel Sales",
+          "description": "Recruit, enable, manage, and measure indirect sales channels — including resellers, distributors, referral partners, and technology alliances — to extend market reach.\n",
+          "processes": [
+            {
+              "id": "819243",
+              "number": "4.6.1",
+              "name": "Design the channel and partner sales strategy",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; channel strategy requires market and relationship judgement"
+            },
+            {
+              "id": "364721",
+              "number": "4.6.2",
+              "name": "Recruit and onboard channel partners",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans recruit; agents manage onboarding workflows and documentation"
+            },
+            {
+              "id": "592837",
+              "number": "4.6.3",
+              "name": "Enable partners with training, tools, and content",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents distribute and track enablement; humans create programmes"
+            },
+            {
+              "id": "427163",
+              "number": "4.6.4",
+              "name": "Manage partner pipeline and co-selling activities",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents track partner pipeline and flag collaboration opportunities; humans engage"
+            },
+            {
+              "id": "738419",
+              "number": "4.6.5",
+              "name": "Measure partner performance and manage incentive programmes",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents calculate performance metrics and incentives; humans review and adjust"
+            }
+          ]
+        },
+        {
+          "id": "291563",
+          "number": "4.7",
+          "name": "Orchestrate Revenue Operations and Analytics",
+          "description": "Integrate and optimise the operational processes, systems, and analytics that span marketing, sales, and customer success — ensuring a unified revenue engine.\n",
+          "processes": [
+            {
+              "id": "863142",
+              "number": "4.7.1",
+              "name": "Align metrics and definitions across the revenue funnel",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans define standards; agents enforce consistency across systems"
+            },
+            {
+              "id": "524718",
+              "number": "4.7.2",
+              "name": "Manage the lead-to-cash process end to end",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents automate handoffs and track lifecycle; humans resolve exceptions"
+            },
+            {
+              "id": "419836",
+              "number": "4.7.3",
+              "name": "Analyse revenue performance and unit economics",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents model cohort data and trends; humans interpret and act"
+            },
+            {
+              "id": "748291",
+              "number": "4.7.4",
+              "name": "Optimise the revenue tech stack and data architecture",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents monitor system performance; humans make technology decisions"
+            },
+            {
+              "id": "381924",
+              "number": "4.7.5",
+              "name": "Provide revenue intelligence and strategic insights",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents surface patterns and anomalies; humans translate to strategy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "841267",
+      "number": 5,
+      "name": "Customer Success & Service",
+      "subtitle": "Delivering outcomes that earn loyalty",
+      "classification": "value_chain",
+      "description": "This domain encompasses the enterprise's ability to support customers after the sale, ensure they achieve their desired outcomes, manage service delivery, and build long-term loyalty. It is the domain where customer relationships are sustained and deepened — and where blended workforces are already most visibly operational.\nIn a ZORBA-enabled enterprise, this domain is the proving ground for human-agent collaboration. Agents already handle the majority of initial customer interactions, while humans provide empathy, creative problem-solving, and relationship depth for complex scenarios.\n",
+      "capabilities": [
+        {
+          "id": "362841",
+          "number": "5.1",
+          "name": "Manage Customer Support and Issue Resolution",
+          "description": "Provide responsive, effective support to customers experiencing issues, questions, or service disruptions — across all channels and tiers of complexity.\n",
+          "processes": [
+            {
+              "id": "718453",
+              "number": "5.1.1",
+              "name": "Receive, classify, and route customer inquiries",
+              "agentic_profile": "A",
+              "agentic_note": "Fully automated triage and routing"
+            },
+            {
+              "id": "294816",
+              "number": "5.1.2",
+              "name": "Resolve standard issues through automated self-service",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-autonomous within knowledge base boundaries"
+            },
+            {
+              "id": "537162",
+              "number": "5.1.3",
+              "name": "Escalate complex issues to human support specialists",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agent escalation with full context handoff"
+            },
+            {
+              "id": "845219",
+              "number": "5.1.4",
+              "name": "Manage multi-channel support delivery",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents handle channels; humans oversee quality"
+            },
+            {
+              "id": "163748",
+              "number": "5.1.5",
+              "name": "Track issue resolution and confirm customer satisfaction",
+              "agentic_profile": "A",
+              "agentic_note": "Automated follow-up and satisfaction measurement"
+            },
+            {
+              "id": "492631",
+              "number": "5.1.6",
+              "name": "Analyse support patterns to identify systemic issues",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents identify patterns; humans decide remediation"
+            }
+          ]
+        },
+        {
+          "id": "587413",
+          "number": "5.2",
+          "name": "Drive Customer Success and Outcome Achievement",
+          "description": "Proactively ensure customers achieve their desired outcomes from the product or service — reducing churn, increasing adoption, and building advocacy.\n",
+          "processes": [
+            {
+              "id": "731842",
+              "number": "5.2.1",
+              "name": "Define customer success plans and outcome milestones",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans define plans; agents template and track"
+            },
+            {
+              "id": "416285",
+              "number": "5.2.2",
+              "name": "Monitor customer health and engagement signals",
+              "agentic_profile": "A",
+              "agentic_note": "Continuous automated health scoring"
+            },
+            {
+              "id": "853174",
+              "number": "5.2.3",
+              "name": "Intervene proactively on at-risk accounts",
+              "agentic_profile": "H+a",
+              "agentic_note": "Agents alert; humans lead intervention conversations"
+            },
+            {
+              "id": "626925",
+              "number": "5.2.4",
+              "name": "Conduct periodic business reviews with customers",
+              "agentic_profile": "H+a",
+              "agentic_note": "Agents prepare review packs; humans lead discussions"
+            },
+            {
+              "id": "274831",
+              "number": "5.2.5",
+              "name": "Identify and pursue expansion opportunities",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents surface signals; humans qualify and pursue"
+            },
+            {
+              "id": "918346",
+              "number": "5.2.6",
+              "name": "Measure and report customer outcomes achieved",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents compile metrics; humans interpret and present"
+            }
+          ]
+        },
+        {
+          "id": "415962",
+          "number": "5.3",
+          "name": "Manage Customer Experience Across Touchpoints",
+          "description": "Design, measure, and continuously improve the end-to-end customer experience — ensuring consistency and quality across every interaction, whether with a human or an agent.\n",
+          "processes": [
+            {
+              "id": "682135",
+              "number": "5.3.1",
+              "name": "Map and maintain customer journey models",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents map from data; humans validate and design improvements"
+            },
+            {
+              "id": "347591",
+              "number": "5.3.2",
+              "name": "Measure experience quality at each touchpoint",
+              "agentic_profile": "A",
+              "agentic_note": "Automated experience measurement and scoring"
+            },
+            {
+              "id": "819264",
+              "number": "5.3.3",
+              "name": "Identify experience friction points and improvement opportunities",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents surface friction; humans prioritise fixes"
+            },
+            {
+              "id": "536471",
+              "number": "5.3.4",
+              "name": "Design and implement experience improvements",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design; agents model impact and track implementation"
+            },
+            {
+              "id": "271843",
+              "number": "5.3.5",
+              "name": "Ensure consistency across human and agent interactions",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents monitor consistency; humans set quality standards"
+            }
+          ]
+        },
+        {
+          "id": "693218",
+          "number": "5.4",
+          "name": "Manage Service Level Performance",
+          "description": "Define, monitor, and maintain service level commitments — ensuring the enterprise meets its promises to customers and identifies degradation before customers feel it.\n",
+          "processes": [
+            {
+              "id": "814527",
+              "number": "5.4.1",
+              "name": "Define and negotiate service level agreements",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans negotiate; agents benchmark and model"
+            },
+            {
+              "id": "362914",
+              "number": "5.4.2",
+              "name": "Monitor service level compliance in real time",
+              "agentic_profile": "A",
+              "agentic_note": "Continuous automated SLA monitoring"
+            },
+            {
+              "id": "745183",
+              "number": "5.4.3",
+              "name": "Alert and escalate on service level breaches",
+              "agentic_profile": "A",
+              "agentic_note": "Automated alerting with defined thresholds"
+            },
+            {
+              "id": "528641",
+              "number": "5.4.4",
+              "name": "Analyse service level trends and capacity requirements",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents analyse; humans plan capacity responses"
+            },
+            {
+              "id": "193472",
+              "number": "5.4.5",
+              "name": "Report service level performance to stakeholders",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents generate reports; humans contextualise"
+            }
+          ]
+        },
+        {
+          "id": "274639",
+          "number": "5.5",
+          "name": "Build and Maintain the Customer Knowledge Base",
+          "description": "Create, curate, and continuously improve the knowledge resources that enable both customers and agents to resolve issues efficiently.\n",
+          "processes": [
+            {
+              "id": "841362",
+              "number": "5.5.1",
+              "name": "Create and publish knowledge articles and guides",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents draft from ticket patterns; humans review and approve"
+            },
+            {
+              "id": "519247",
+              "number": "5.5.2",
+              "name": "Maintain and update knowledge content for accuracy",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents flag stale content and suggest updates; humans validate"
+            },
+            {
+              "id": "362718",
+              "number": "5.5.3",
+              "name": "Optimise knowledge for self-service discovery",
+              "agentic_profile": "A",
+              "agentic_note": "Agents analyse search patterns and optimise findability"
+            },
+            {
+              "id": "636685",
+              "number": "5.5.4",
+              "name": "Measure knowledge effectiveness and coverage gaps",
+              "agentic_profile": "A",
+              "agentic_note": "Automated gap analysis from unresolved queries"
+            },
+            {
+              "id": "613845",
+              "number": "5.5.5",
+              "name": "Manage knowledge across languages and regions",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents translate and localise; humans verify cultural fit"
+            }
+          ]
+        },
+        {
+          "id": "938147",
+          "number": "5.6",
+          "name": "Capture and Act on the Voice of the Customer",
+          "description": "Systematically collect, analyse, and act on customer feedback — turning customer insight into product, service, and experience improvements.\n",
+          "processes": [
+            {
+              "id": "778636",
+              "number": "5.6.1",
+              "name": "Design and deploy feedback collection mechanisms",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design surveys; agents deploy and manage distribution"
+            },
+            {
+              "id": "851294",
+              "number": "5.6.2",
+              "name": "Aggregate and analyse customer feedback at scale",
+              "agentic_profile": "A",
+              "agentic_note": "Automated sentiment analysis and theme extraction"
+            },
+            {
+              "id": "374218",
+              "number": "5.6.3",
+              "name": "Identify actionable insights from feedback data",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents surface themes; humans assess significance"
+            },
+            {
+              "id": "619437",
+              "number": "5.6.4",
+              "name": "Route insights to product, service, and operations teams",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents route automatically; humans validate priority"
+            },
+            {
+              "id": "283751",
+              "number": "5.6.5",
+              "name": "Close the feedback loop with customers",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents automate acknowledgement; humans respond to significant feedback personally"
+            }
+          ]
+        },
+        {
+          "id": "516284",
+          "number": "5.7",
+          "name": "Manage Customer Retention and Churn Prevention",
+          "description": "Identify customers at risk of leaving, understand the drivers of churn, and execute retention strategies that preserve and grow the customer base.\n",
+          "processes": [
+            {
+              "id": "749381",
+              "number": "5.7.1",
+              "name": "Build and maintain churn prediction models",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents build and train models; humans validate and tune"
+            },
+            {
+              "id": "382615",
+              "number": "5.7.2",
+              "name": "Identify and segment at-risk customers",
+              "agentic_profile": "A",
+              "agentic_note": "Automated risk scoring and segmentation"
+            },
+            {
+              "id": "614293",
+              "number": "5.7.3",
+              "name": "Design and execute retention interventions",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design interventions; agents execute at scale"
+            },
+            {
+              "id": "837142",
+              "number": "5.7.4",
+              "name": "Analyse churn drivers and root causes",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents analyse patterns; humans interpret and act"
+            },
+            {
+              "id": "491837",
+              "number": "5.7.5",
+              "name": "Measure retention programme effectiveness",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents track metrics; humans evaluate ROI"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "471829",
+      "number": 6,
+      "name": "Operations & Delivery",
+      "subtitle": "Executing with precision and adaptability",
+      "classification": "value_chain",
+      "description": "This domain encompasses the enterprise's ability to plan, execute, and continuously improve its core operational activities — whether producing physical goods, delivering services, or running hybrid fulfilment models. It covers the full span from operational planning through delivery execution, quality assurance, and ongoing operational refinement.\nIn a ZORBA-enabled enterprise, operations is where agents move from advisory to executive roles — scheduling production runs, monitoring quality in real time, detecting anomalies before they escalate, and orchestrating exception handling across the delivery chain.\n",
+      "capabilities": [
+        {
+          "id": "207622",
+          "number": "6.1",
+          "name": "Plan and Schedule Operational Activities",
+          "description": "Translate demand signals and strategic priorities into executable operational plans and schedules that balance throughput, resource constraints, and customer commitments.\n",
+          "processes": [
+            {
+              "id": "384216",
+              "number": "6.1.1",
+              "name": "Develop aggregate operational plans aligned to demand",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents model demand scenarios; humans select and approve plans"
+            },
+            {
+              "id": "715943",
+              "number": "6.1.2",
+              "name": "Create and maintain detailed production or service schedules",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents generate optimised schedules; humans review constraints and approve"
+            },
+            {
+              "id": "528367",
+              "number": "6.1.3",
+              "name": "Allocate resources and materials to scheduled activities",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents optimise allocation; humans resolve conflicts and exceptions"
+            },
+            {
+              "id": "263814",
+              "number": "6.1.4",
+              "name": "Manage schedule changes and re-planning triggers",
+              "agentic_profile": "A",
+              "agentic_note": "Agents detect disruptions and re-plan within defined parameters"
+            },
+            {
+              "id": "849172",
+              "number": "6.1.5",
+              "name": "Coordinate cross-functional scheduling dependencies",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents identify clashes and propose resolutions; humans arbitrate"
+            }
+          ]
+        },
+        {
+          "id": "183746",
+          "number": "6.2",
+          "name": "Execute Production and Service Delivery",
+          "description": "Run the core operational processes that produce goods or deliver services — ensuring work is completed on time, to specification, and within cost targets.\n",
+          "processes": [
+            {
+              "id": "492638",
+              "number": "6.2.1",
+              "name": "Initiate and manage production runs or service engagements",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents trigger and track; humans manage exceptions"
+            },
+            {
+              "id": "637281",
+              "number": "6.2.2",
+              "name": "Monitor work-in-progress and operational throughput",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; real-time monitoring with threshold-based alerts"
+            },
+            {
+              "id": "318457",
+              "number": "6.2.3",
+              "name": "Manage handoffs and transitions between operational stages",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents orchestrate transitions; humans handle escalations"
+            },
+            {
+              "id": "754129",
+              "number": "6.2.4",
+              "name": "Record and validate completion of deliverables",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents log completions and validate against specs; humans sign off critical items"
+            },
+            {
+              "id": "861345",
+              "number": "6.2.5",
+              "name": "Manage rework, returns, and service recovery processes",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead recovery decisions; agents track and report rework costs"
+            },
+            {
+              "id": "245893",
+              "number": "6.2.6",
+              "name": "Coordinate delivery and fulfilment to the customer",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents manage logistics handoffs; humans handle customer-sensitive issues"
+            }
+          ]
+        },
+        {
+          "id": "536482",
+          "number": "6.3",
+          "name": "Manage Quality and Assurance",
+          "description": "Establish and operate the quality management system — defining standards, conducting inspections, managing non-conformances, and ensuring consistent output quality across all operational activities.\n",
+          "processes": [
+            {
+              "id": "419573",
+              "number": "6.3.1",
+              "name": "Define quality standards, specifications, and acceptance criteria",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans set standards; agents benchmark against industry norms"
+            },
+            {
+              "id": "782316",
+              "number": "6.3.2",
+              "name": "Conduct in-process and final quality inspections",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents perform automated checks; humans inspect edge cases"
+            },
+            {
+              "id": "364925",
+              "number": "6.3.3",
+              "name": "Detect, log, and classify non-conformances",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; automated detection with classification models"
+            },
+            {
+              "id": "651748",
+              "number": "6.3.4",
+              "name": "Investigate root causes and determine corrective actions",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead root-cause analysis; agents correlate data and suggest hypotheses"
+            },
+            {
+              "id": "893261",
+              "number": "6.3.5",
+              "name": "Track corrective and preventive action closure",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents track timelines and chase overdue actions; humans verify effectiveness"
+            },
+            {
+              "id": "127584",
+              "number": "6.3.6",
+              "name": "Manage quality audits and certification compliance",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents prepare audit evidence; humans conduct and respond to audits"
+            }
+          ]
+        },
+        {
+          "id": "274951",
+          "number": "6.4",
+          "name": "Drive Operational Excellence and Continuous Improvement",
+          "description": "Build and sustain a culture and practice of continuous improvement — leveraging methodologies, metrics, and employee engagement to systematically eliminate waste and enhance performance.\n",
+          "processes": [
+            {
+              "id": "593847",
+              "number": "6.4.1",
+              "name": "Establish and maintain the continuous improvement framework",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design the framework; agents maintain documentation and track adoption"
+            },
+            {
+              "id": "816234",
+              "number": "6.4.2",
+              "name": "Identify improvement opportunities from operational data",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents mine data for patterns and waste; humans validate and prioritise"
+            },
+            {
+              "id": "428716",
+              "number": "6.4.3",
+              "name": "Manage the improvement initiative pipeline",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents track initiatives and ROI; humans approve and resource projects"
+            },
+            {
+              "id": "345192",
+              "number": "6.4.4",
+              "name": "Facilitate improvement workshops and problem-solving events",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans facilitate; agents prepare data packs and track outcomes"
+            },
+            {
+              "id": "762481",
+              "number": "6.4.5",
+              "name": "Measure and report improvement impact",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents calculate savings and performance uplift; humans validate claims"
+            }
+          ]
+        },
+        {
+          "id": "918263",
+          "number": "6.5",
+          "name": "Manage Operational Capacity",
+          "description": "Plan, monitor, and adjust capacity to meet current and anticipated demand — balancing utilisation, flexibility, and cost across people, equipment, and facilities.\n",
+          "processes": [
+            {
+              "id": "483619",
+              "number": "6.5.1",
+              "name": "Assess current capacity and utilisation levels",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; continuous monitoring of capacity metrics"
+            },
+            {
+              "id": "217438",
+              "number": "6.5.2",
+              "name": "Forecast capacity requirements against demand plans",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents model scenarios; humans review assumptions and approve"
+            },
+            {
+              "id": "695172",
+              "number": "6.5.3",
+              "name": "Plan and execute capacity adjustments",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans decide capacity changes; agents model cost and timing implications"
+            },
+            {
+              "id": "354281",
+              "number": "6.5.4",
+              "name": "Manage equipment, facility, and workforce availability",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents track availability and flag risks; humans resolve constraints"
+            },
+            {
+              "id": "738425",
+              "number": "6.5.5",
+              "name": "Monitor capacity performance and recommend rebalancing",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents surface rebalancing opportunities; humans approve changes"
+            }
+          ]
+        },
+        {
+          "id": "352194",
+          "number": "6.6",
+          "name": "Manage Operational Risk and Resilience",
+          "description": "Identify, assess, and mitigate risks specific to operational delivery — including supply disruptions, equipment failures, safety incidents, and process breakdowns. This is the operational risk layer; enterprise-wide risk oversight sits within Domain 1.\n",
+          "processes": [
+            {
+              "id": "584321",
+              "number": "6.6.1",
+              "name": "Identify and assess operational risks and vulnerabilities",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents scan for emerging risks; humans assess severity and define responses"
+            },
+            {
+              "id": "419682",
+              "number": "6.6.2",
+              "name": "Define and maintain operational risk mitigation plans",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design mitigations; agents track implementation and test readiness"
+            },
+            {
+              "id": "763215",
+              "number": "6.6.3",
+              "name": "Monitor operational risk indicators in real time",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; continuous monitoring with escalation protocols"
+            },
+            {
+              "id": "291843",
+              "number": "6.6.4",
+              "name": "Conduct operational resilience testing and simulations",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents run simulations; humans evaluate results and refine plans"
+            },
+            {
+              "id": "847536",
+              "number": "6.6.5",
+              "name": "Manage business continuity for operational functions",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans own continuity plans; agents monitor triggers and coordinate activation"
+            }
+          ]
+        },
+        {
+          "id": "643518",
+          "number": "6.7",
+          "name": "Handle Incidents and Operational Exceptions",
+          "description": "Detect, respond to, and resolve incidents and exceptions that disrupt normal operational flow — restoring service, minimising impact, and capturing lessons for prevention.\n",
+          "processes": [
+            {
+              "id": "175342",
+              "number": "6.7.1",
+              "name": "Detect and classify operational incidents and exceptions",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; real-time anomaly detection and classification"
+            },
+            {
+              "id": "428916",
+              "number": "6.7.2",
+              "name": "Triage and prioritise incident response",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents triage by severity; humans override for complex or sensitive incidents"
+            },
+            {
+              "id": "593274",
+              "number": "6.7.3",
+              "name": "Coordinate incident response and resolution activities",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents orchestrate response workflows; humans lead critical decisions"
+            },
+            {
+              "id": "316748",
+              "number": "6.7.4",
+              "name": "Communicate incident status to stakeholders",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents generate and distribute status updates; humans handle sensitive comms"
+            },
+            {
+              "id": "842157",
+              "number": "6.7.5",
+              "name": "Conduct post-incident reviews and embed learnings",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead reviews; agents compile data, timelines, and suggested improvements"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "824713",
+      "number": 7,
+      "name": "Supply Chain",
+      "subtitle": "Building a resilient, responsive supply network",
+      "classification": "value_chain",
+      "description": "This domain encompasses the enterprise's ability to source, procure, move, store, and distribute goods and services across its extended supply network. It spans from upstream supplier relationships through internal logistics to final-mile delivery, and includes the planning and risk management activities that keep the supply chain responsive and resilient.\nIn a ZORBA-enabled enterprise, the supply chain is arguably the most agent-ready domain — with mature use cases in demand forecasting, inventory optimisation, route planning, supplier monitoring, and autonomous procurement within defined parameters. Agents here operate at scale and speed that human-only models cannot match.\n",
+      "capabilities": [
+        {
+          "id": "391572",
+          "number": "7.1",
+          "name": "Source and Procure Goods and Services",
+          "description": "Identify, evaluate, negotiate, and contract with suppliers to secure the goods and services the enterprise requires — balancing cost, quality, risk, and sustainability objectives.\n",
+          "processes": [
+            {
+              "id": "518234",
+              "number": "7.1.1",
+              "name": "Define sourcing strategies and category plans",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design strategy; agents analyse spend data and market conditions"
+            },
+            {
+              "id": "673841",
+              "number": "7.1.2",
+              "name": "Identify and qualify potential suppliers",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents screen supplier databases and assess fit; humans shortlist"
+            },
+            {
+              "id": "429187",
+              "number": "7.1.3",
+              "name": "Conduct sourcing events and negotiate terms",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead negotiations; agents model scenarios and benchmark pricing"
+            },
+            {
+              "id": "856312",
+              "number": "7.1.4",
+              "name": "Manage purchase orders and procurement transactions",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; automated PO creation within approved parameters"
+            },
+            {
+              "id": "294768",
+              "number": "7.1.5",
+              "name": "Evaluate and onboard new suppliers",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents run due diligence checks; humans make final approval decisions"
+            },
+            {
+              "id": "731456",
+              "number": "7.1.6",
+              "name": "Manage contract compliance and renewal cycles",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents track contract terms and flag renewals; humans negotiate amendments"
+            }
+          ]
+        },
+        {
+          "id": "562381",
+          "number": "7.2",
+          "name": "Manage Supplier Relationships and Performance",
+          "description": "Build, maintain, and govern ongoing relationships with suppliers — monitoring performance, managing development, and ensuring mutual value creation across the supply base.\n",
+          "processes": [
+            {
+              "id": "184329",
+              "number": "7.2.1",
+              "name": "Segment and tier the supplier base",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents analyse spend and risk data; humans define segmentation criteria"
+            },
+            {
+              "id": "647213",
+              "number": "7.2.2",
+              "name": "Monitor and evaluate supplier performance",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents track KPIs and generate scorecards; humans review and act"
+            },
+            {
+              "id": "815674",
+              "number": "7.2.3",
+              "name": "Conduct supplier business reviews and development programmes",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead reviews; agents prepare performance packs and trend analysis"
+            },
+            {
+              "id": "392847",
+              "number": "7.2.4",
+              "name": "Manage supplier corrective actions and improvement plans",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents track actions and deadlines; humans manage supplier engagement"
+            },
+            {
+              "id": "536412",
+              "number": "7.2.5",
+              "name": "Manage supplier risk and contingency planning",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents monitor risk signals (financial, geopolitical); humans define contingencies"
+            }
+          ]
+        },
+        {
+          "id": "418639",
+          "number": "7.3",
+          "name": "Plan and Manage Logistics and Distribution",
+          "description": "Design, operate, and optimise the physical movement of goods from origin to destination — including transportation, warehousing, and distribution network management.\n",
+          "processes": [
+            {
+              "id": "729385",
+              "number": "7.3.1",
+              "name": "Design and optimise the distribution network",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents model network scenarios; humans decide structural changes"
+            },
+            {
+              "id": "563412",
+              "number": "7.3.2",
+              "name": "Plan and schedule transportation movements",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; automated route optimisation and carrier assignment"
+            },
+            {
+              "id": "847261",
+              "number": "7.3.3",
+              "name": "Manage warehousing and distribution centre operations",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents optimise storage and picking; humans manage workforce and exceptions"
+            },
+            {
+              "id": "218534",
+              "number": "7.3.4",
+              "name": "Track shipments and manage in-transit visibility",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; real-time tracking with proactive exception alerts"
+            },
+            {
+              "id": "694173",
+              "number": "7.3.5",
+              "name": "Manage freight costs and carrier performance",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents analyse costs and benchmark carriers; humans negotiate and select"
+            },
+            {
+              "id": "375918",
+              "number": "7.3.6",
+              "name": "Manage returns logistics and reverse supply chain",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents process returns and route items; humans handle disposition decisions"
+            }
+          ]
+        },
+        {
+          "id": "257914",
+          "number": "7.4",
+          "name": "Manage Inventory Across the Supply Network",
+          "description": "Plan, control, and optimise inventory levels across all nodes in the supply chain — balancing service levels, working capital, and obsolescence risk.\n",
+          "processes": [
+            {
+              "id": "483126",
+              "number": "7.4.1",
+              "name": "Set inventory policies and target service levels",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans define policies; agents model trade-offs and recommend targets"
+            },
+            {
+              "id": "926347",
+              "number": "7.4.2",
+              "name": "Monitor inventory positions and movements in real time",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; continuous visibility with automated reorder triggers"
+            },
+            {
+              "id": "614283",
+              "number": "7.4.3",
+              "name": "Optimise replenishment and reorder parameters",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents calculate optimal parameters; humans approve significant changes"
+            },
+            {
+              "id": "730226",
+              "number": "7.4.4",
+              "name": "Manage slow-moving, excess, and obsolete inventory",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents identify at-risk stock; humans decide write-down or disposal actions"
+            },
+            {
+              "id": "742158",
+              "number": "7.4.5",
+              "name": "Conduct inventory counts and reconciliation",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents schedule and track counts; humans investigate discrepancies"
+            }
+          ]
+        },
+        {
+          "id": "693248",
+          "number": "7.5",
+          "name": "Optimise Demand Forecasting and Supply Planning",
+          "description": "Generate, refine, and act on demand forecasts that drive supply chain planning decisions — integrating statistical models, market intelligence, and collaborative input from sales and operations.\n",
+          "processes": [
+            {
+              "id": "821634",
+              "number": "7.5.1",
+              "name": "Generate statistical demand forecasts",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; automated model selection and forecast generation"
+            },
+            {
+              "id": "475312",
+              "number": "7.5.2",
+              "name": "Enrich forecasts with market intelligence and sales input",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents integrate data sources; humans add qualitative judgement"
+            },
+            {
+              "id": "316849",
+              "number": "7.5.3",
+              "name": "Conduct sales and operations planning cycles",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead consensus process; agents prepare scenarios and gap analysis"
+            },
+            {
+              "id": "548273",
+              "number": "7.5.4",
+              "name": "Translate demand plans into supply and production signals",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents generate supply plans; humans validate feasibility"
+            },
+            {
+              "id": "192467",
+              "number": "7.5.5",
+              "name": "Monitor forecast accuracy and refine models",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; continuous model tuning with human review of significant shifts"
+            },
+            {
+              "id": "763518",
+              "number": "7.5.6",
+              "name": "Manage demand shaping and demand sensing",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents detect demand signals in real time; humans decide shaping actions"
+            }
+          ]
+        },
+        {
+          "id": "438172",
+          "number": "7.6",
+          "name": "Manage Supply Chain Risk and Resilience",
+          "description": "Identify, monitor, and mitigate risks across the extended supply chain — from single-source dependencies to geopolitical disruptions — ensuring the supply network can absorb and recover from shocks.\n",
+          "processes": [
+            {
+              "id": "524381",
+              "number": "7.6.1",
+              "name": "Map and assess supply chain risk exposure",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents map multi-tier dependencies; humans assess strategic vulnerabilities"
+            },
+            {
+              "id": "879643",
+              "number": "7.6.2",
+              "name": "Monitor supply chain risk signals and early warnings",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; continuous scanning of geopolitical, weather, and financial signals"
+            },
+            {
+              "id": "316524",
+              "number": "7.6.3",
+              "name": "Develop and maintain supply chain contingency plans",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design contingencies; agents maintain playbooks and test readiness"
+            },
+            {
+              "id": "741283",
+              "number": "7.6.4",
+              "name": "Execute supply chain disruption response",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents activate playbooks and reroute; humans manage critical decisions"
+            },
+            {
+              "id": "253918",
+              "number": "7.6.5",
+              "name": "Conduct supply chain resilience assessments and stress tests",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents run simulations; humans evaluate findings and invest in resilience"
+            }
+          ]
+        },
+        {
+          "id": "185463",
+          "number": "7.7",
+          "name": "Govern Third-Party and Partner Ecosystem Relationships",
+          "description": "Manage the broader ecosystem of third-party service providers, logistics partners, contract manufacturers, and platform participants that extend the enterprise's supply chain capabilities.\n",
+          "processes": [
+            {
+              "id": "642179",
+              "number": "7.7.1",
+              "name": "Define third-party governance frameworks and standards",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans set governance standards; agents benchmark and track compliance"
+            },
+            {
+              "id": "397514",
+              "number": "7.7.2",
+              "name": "Onboard and integrate ecosystem partners",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents manage onboarding workflows; humans approve and establish relationships"
+            },
+            {
+              "id": "813246",
+              "number": "7.7.3",
+              "name": "Monitor ecosystem partner performance and compliance",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents track SLAs and compliance metrics; humans manage escalations"
+            },
+            {
+              "id": "564832",
+              "number": "7.7.4",
+              "name": "Manage data exchange and integration across the ecosystem",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents operate integration platforms; humans govern data standards"
+            },
+            {
+              "id": "238617",
+              "number": "7.7.5",
+              "name": "Review and rationalise the partner ecosystem periodically",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans make portfolio decisions; agents analyse utilisation and overlap"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "593417",
+      "number": 8,
+      "name": "Finance",
+      "subtitle": "Funding growth and protecting the bottom line",
+      "classification": "management_function",
+      "description": "This domain encompasses the enterprise's ability to plan, allocate, record, and report on financial resources — ensuring fiscal discipline, regulatory compliance, and the financial intelligence needed to support strategic decision-making. It spans from long-range financial planning through day-to-day transaction processing to external reporting and audit readiness.\nIn a ZORBA-enabled enterprise, finance is a domain of high automation potential in transactional processes (accounts payable, reconciliation, reporting) while retaining strong human leadership in judgement-intensive areas such as treasury strategy, tax planning, and stakeholder communication.\n",
+      "capabilities": [
+        {
+          "id": "362819",
+          "number": "8.1",
+          "name": "Plan and Analyse Financial Performance",
+          "description": "Develop financial plans, budgets, and forecasts that translate strategic intent into financial targets — and provide ongoing analysis to track performance, explain variances, and inform decisions.\n",
+          "processes": [
+            {
+              "id": "725163",
+              "number": "8.1.1",
+              "name": "Develop annual budgets and long-range financial plans",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead planning; agents compile data and model scenarios"
+            },
+            {
+              "id": "493218",
+              "number": "8.1.2",
+              "name": "Prepare rolling forecasts and outlook updates",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents generate forecasts from actuals and trends; humans adjust assumptions"
+            },
+            {
+              "id": "861347",
+              "number": "8.1.3",
+              "name": "Analyse financial performance and explain variances",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents compute variances and surface drivers; humans interpret and narrate"
+            },
+            {
+              "id": "537412",
+              "number": "8.1.4",
+              "name": "Model financial scenarios and investment cases",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents build models; humans define assumptions and evaluate outcomes"
+            },
+            {
+              "id": "284659",
+              "number": "8.1.5",
+              "name": "Provide financial decision support to business leaders",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans advise; agents prepare briefings and ad hoc analysis"
+            },
+            {
+              "id": "916743",
+              "number": "8.1.6",
+              "name": "Monitor financial KPIs and early warning indicators",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; continuous dashboard monitoring with threshold alerts"
+            }
+          ]
+        },
+        {
+          "id": "741385",
+          "number": "8.2",
+          "name": "Manage Accounting and the General Ledger",
+          "description": "Maintain the enterprise's books of record — processing journal entries, managing the chart of accounts, performing reconciliations, and ensuring the general ledger accurately reflects all financial activity.\n",
+          "processes": [
+            {
+              "id": "352816",
+              "number": "8.2.1",
+              "name": "Maintain and govern the chart of accounts",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans own account structure; agents flag inconsistencies and suggest harmonisation"
+            },
+            {
+              "id": "628491",
+              "number": "8.2.2",
+              "name": "Process journal entries and adjustments",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents post routine entries; humans review and approve non-standard journals"
+            },
+            {
+              "id": "174523",
+              "number": "8.2.3",
+              "name": "Perform account reconciliations",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; automated matching with human review of exceptions"
+            },
+            {
+              "id": "845362",
+              "number": "8.2.4",
+              "name": "Manage intercompany transactions and eliminations",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents process and reconcile; humans resolve disputes and policy questions"
+            },
+            {
+              "id": "593174",
+              "number": "8.2.5",
+              "name": "Execute period-end close processes",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents orchestrate close checklists and track completion; humans manage judgements"
+            },
+            {
+              "id": "416238",
+              "number": "8.2.6",
+              "name": "Manage fixed asset accounting and depreciation",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents calculate depreciation and track assets; humans approve disposals"
+            }
+          ]
+        },
+        {
+          "id": "219648",
+          "number": "8.3",
+          "name": "Process Accounts Payable and Receivable",
+          "description": "Manage the enterprise's payment obligations to suppliers and the collection of amounts owed by customers — ensuring accuracy, timeliness, and optimal cash flow management.\n",
+          "processes": [
+            {
+              "id": "374852",
+              "number": "8.3.1",
+              "name": "Receive, validate, and code supplier invoices",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; automated invoice capture, matching, and coding"
+            },
+            {
+              "id": "618473",
+              "number": "8.3.2",
+              "name": "Manage payment runs and disbursements",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents schedule and execute payments; humans approve above thresholds"
+            },
+            {
+              "id": "543219",
+              "number": "8.3.3",
+              "name": "Manage supplier queries and dispute resolution",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents track disputes and compile evidence; humans negotiate resolutions"
+            },
+            {
+              "id": "892163",
+              "number": "8.3.4",
+              "name": "Generate and distribute customer invoices",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; automated billing based on delivery and contract data"
+            },
+            {
+              "id": "736524",
+              "number": "8.3.5",
+              "name": "Monitor receivables ageing and pursue collections",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents send reminders and escalate; humans handle sensitive or large accounts"
+            },
+            {
+              "id": "451837",
+              "number": "8.3.6",
+              "name": "Process customer payments and apply cash receipts",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; automated matching and application with exception routing"
+            },
+            {
+              "id": "268314",
+              "number": "8.3.7",
+              "name": "Manage credit exposure and bad debt provisions",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans set credit policy; agents monitor exposure and flag breaches"
+            }
+          ]
+        },
+        {
+          "id": "485231",
+          "number": "8.4",
+          "name": "Manage Treasury and Cash Operations",
+          "description": "Oversee the enterprise's cash position, liquidity, banking relationships, and financial risk exposures — ensuring sufficient funding is available and financial risks are managed within appetite.\n",
+          "processes": [
+            {
+              "id": "319472",
+              "number": "8.4.1",
+              "name": "Forecast cash flows and manage liquidity positions",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents generate daily/weekly cash forecasts; humans review and adjust"
+            },
+            {
+              "id": "672148",
+              "number": "8.4.2",
+              "name": "Manage banking relationships and account structures",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans own bank relationships; agents track fees and service levels"
+            },
+            {
+              "id": "825314",
+              "number": "8.4.3",
+              "name": "Execute and manage investment and borrowing activities",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; agents provide market data and scenario analysis"
+            },
+            {
+              "id": "547831",
+              "number": "8.4.4",
+              "name": "Manage foreign exchange and interest rate exposures",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents monitor exposures and model hedging; humans approve strategies"
+            },
+            {
+              "id": "193624",
+              "number": "8.4.5",
+              "name": "Perform daily cash positioning and fund transfers",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents execute routine transfers; humans approve large or unusual movements"
+            }
+          ]
+        },
+        {
+          "id": "637241",
+          "number": "8.5",
+          "name": "Plan and Manage Tax Compliance",
+          "description": "Ensure the enterprise meets all tax obligations accurately and on time — while proactively planning to optimise the tax position within legal and ethical boundaries.\n",
+          "processes": [
+            {
+              "id": "824516",
+              "number": "8.5.1",
+              "name": "Develop and maintain the enterprise tax strategy",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; requires professional judgement and regulatory interpretation"
+            },
+            {
+              "id": "473821",
+              "number": "8.5.2",
+              "name": "Calculate and prepare direct and indirect tax returns",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents compute tax positions and draft returns; humans review and submit"
+            },
+            {
+              "id": "615342",
+              "number": "8.5.3",
+              "name": "Manage transfer pricing documentation and compliance",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents maintain documentation; humans make policy decisions"
+            },
+            {
+              "id": "291438",
+              "number": "8.5.4",
+              "name": "Monitor tax legislation changes and assess impact",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents scan regulatory changes; humans assess strategic implications"
+            },
+            {
+              "id": "748163",
+              "number": "8.5.5",
+              "name": "Manage tax audits and authority inquiries",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead audit responses; agents compile evidence and track requests"
+            }
+          ]
+        },
+        {
+          "id": "158473",
+          "number": "8.6",
+          "name": "Prepare Financial Reports and Consolidations",
+          "description": "Produce accurate, timely financial reports for internal and external stakeholders — including statutory accounts, management reports, and consolidated group financial statements.\n",
+          "processes": [
+            {
+              "id": "394217",
+              "number": "8.6.1",
+              "name": "Prepare statutory financial statements",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents compile and format; humans review and ensure compliance"
+            },
+            {
+              "id": "821546",
+              "number": "8.6.2",
+              "name": "Perform group consolidation and eliminate intercompany balances",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents execute consolidation rules; humans resolve complex judgements"
+            },
+            {
+              "id": "567413",
+              "number": "8.6.3",
+              "name": "Produce management reporting packs and dashboards",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents generate reports from live data; humans add commentary and insight"
+            },
+            {
+              "id": "243815",
+              "number": "8.6.4",
+              "name": "Prepare regulatory and supervisory filings",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents compile data and draft filings; humans validate and submit"
+            },
+            {
+              "id": "751673",
+              "number": "8.6.5",
+              "name": "Manage external stakeholder financial communications",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans own messaging and narrative; agents prepare supporting materials"
+            },
+            {
+              "id": "482631",
+              "number": "8.6.6",
+              "name": "Manage financial data quality and master data governance",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents monitor data quality; humans resolve structural issues"
+            }
+          ]
+        },
+        {
+          "id": "326914",
+          "number": "8.7",
+          "name": "Maintain Financial Controls and Support Audit",
+          "description": "Design, operate, and test the internal control environment over financial reporting and transactions — ensuring the enterprise can demonstrate effective governance and withstand internal and external audit scrutiny.\n",
+          "processes": [
+            {
+              "id": "758241",
+              "number": "8.7.1",
+              "name": "Design and document financial controls and control frameworks",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design controls; agents maintain control documentation"
+            },
+            {
+              "id": "413672",
+              "number": "8.7.2",
+              "name": "Execute and evidence key financial controls",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents perform automated controls and log evidence; humans execute manual controls"
+            },
+            {
+              "id": "683594",
+              "number": "8.7.3",
+              "name": "Test control effectiveness and remediate deficiencies",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents run control tests; humans evaluate results and oversee remediation"
+            },
+            {
+              "id": "864312",
+              "number": "8.7.4",
+              "name": "Support internal audit engagement and follow-up",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans liaise with auditors; agents compile evidence and track findings"
+            },
+            {
+              "id": "291537",
+              "number": "8.7.5",
+              "name": "Coordinate external audit processes and information requests",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents manage information requests and track status; humans manage the relationship"
+            },
+            {
+              "id": "637148",
+              "number": "8.7.6",
+              "name": "Manage segregation of duties and access controls",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents monitor access patterns and flag violations; humans remediate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "482731",
+      "number": 9,
+      "name": "People & Talent",
+      "subtitle": "Attracting and orchestrating the blended workforce",
+      "classification": "management_function",
+      "description": "This domain encompasses the enterprise's ability to attract, develop, engage, and retain the human talent it needs — while simultaneously provisioning, calibrating, and managing the agent workforce that operates alongside them. It spans the full employee lifecycle from workforce planning through separation, and extends into the uniquely ZORBA territory of blended workforce orchestration.\nIn a ZORBA-enabled enterprise, this domain is where the human and agent workforces are designed, composed, and harmonised — ensuring that every role, whether filled by a person or an agent, is deliberately planned, appropriately skilled, and continuously optimised.\n",
+      "capabilities": [
+        {
+          "id": "361842",
+          "number": "9.1",
+          "name": "Plan and Analyse the Workforce",
+          "description": "Forecast workforce demand, assess current capacity, identify skills gaps, and build strategic workforce plans that inform talent acquisition, development, and deployment decisions.\n",
+          "processes": [
+            {
+              "id": "529174",
+              "number": "9.1.1",
+              "name": "Forecast workforce demand by role, skill, and location",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents model demand using business plans and attrition data; humans validate assumptions"
+            },
+            {
+              "id": "814263",
+              "number": "9.1.2",
+              "name": "Assess current workforce capacity and skills inventory",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents aggregate skills data from multiple systems; humans verify accuracy"
+            },
+            {
+              "id": "673918",
+              "number": "9.1.3",
+              "name": "Identify critical skills gaps and surplus areas",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents surface gaps through analytics; humans interpret strategic implications"
+            },
+            {
+              "id": "245781",
+              "number": "9.1.4",
+              "name": "Develop strategic workforce plans and scenarios",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design workforce strategy; agents model cost and feasibility scenarios"
+            },
+            {
+              "id": "918437",
+              "number": "9.1.5",
+              "name": "Monitor workforce metrics and trigger plan adjustments",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; continuous monitoring with automated alerting on threshold breaches"
+            }
+          ]
+        },
+        {
+          "id": "749163",
+          "number": "9.2",
+          "name": "Acquire Talent and Onboard New Starters",
+          "description": "Attract, select, and hire the right people, then integrate them effectively into the organisation through structured onboarding that accelerates time-to-productivity.\n",
+          "processes": [
+            {
+              "id": "382549",
+              "number": "9.2.1",
+              "name": "Define role requirements and craft position profiles",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents draft from templates and market data; humans refine and approve"
+            },
+            {
+              "id": "617284",
+              "number": "9.2.2",
+              "name": "Source and attract candidates through multiple channels",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents manage job postings, screen CVs, and engage passive talent; humans curate shortlists"
+            },
+            {
+              "id": "453712",
+              "number": "9.2.3",
+              "name": "Assess and select candidates through structured evaluation",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead interviews and decisions; agents schedule, score assessments, and flag inconsistencies"
+            },
+            {
+              "id": "198436",
+              "number": "9.2.4",
+              "name": "Extend offers and manage pre-employment processes",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents generate offers and manage checks; humans approve terms and handle negotiations"
+            },
+            {
+              "id": "726351",
+              "number": "9.2.5",
+              "name": "Deliver structured onboarding programmes",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents orchestrate onboarding journeys and track completion; humans provide cultural integration"
+            },
+            {
+              "id": "564893",
+              "number": "9.2.6",
+              "name": "Evaluate onboarding effectiveness and time-to-productivity",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents measure onboarding KPIs; humans interpret and refine the programme"
+            }
+          ]
+        },
+        {
+          "id": "285641",
+          "number": "9.3",
+          "name": "Develop Skills and Foster Continuous Learning",
+          "description": "Build organisational capability through learning programmes, career development, coaching, and knowledge-sharing — ensuring the workforce evolves in line with strategic needs.\n",
+          "processes": [
+            {
+              "id": "413872",
+              "number": "9.3.1",
+              "name": "Assess learning needs across the organisation",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents analyse skills gaps and performance data; humans prioritise development areas"
+            },
+            {
+              "id": "769215",
+              "number": "9.3.2",
+              "name": "Design and curate learning programmes and content",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design curricula; agents curate content and personalise learning paths"
+            },
+            {
+              "id": "328946",
+              "number": "9.3.3",
+              "name": "Deliver learning through multiple modalities",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents deliver digital learning and track progress; humans facilitate workshops and coaching"
+            },
+            {
+              "id": "651428",
+              "number": "9.3.4",
+              "name": "Manage career development and succession planning",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans guide career conversations; agents maintain succession pipelines and readiness dashboards"
+            },
+            {
+              "id": "894317",
+              "number": "9.3.5",
+              "name": "Operate mentoring and coaching programmes",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; agents match mentors to mentees and schedule sessions"
+            },
+            {
+              "id": "537264",
+              "number": "9.3.6",
+              "name": "Measure learning impact and return on investment",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents track completion, assessment scores, and performance correlation; humans validate business impact"
+            }
+          ]
+        },
+        {
+          "id": "613274",
+          "number": "9.4",
+          "name": "Manage Compensation, Benefits, and Rewards",
+          "description": "Design, administer, and continuously optimise the total rewards proposition — ensuring it attracts and retains talent while remaining financially sustainable and equitable.\n",
+          "processes": [
+            {
+              "id": "482139",
+              "number": "9.4.1",
+              "name": "Design compensation structures and pay frameworks",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design philosophy and structures; agents benchmark against market data"
+            },
+            {
+              "id": "736518",
+              "number": "9.4.2",
+              "name": "Administer payroll and compensation processing",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; automated payroll runs with human exception handling"
+            },
+            {
+              "id": "541046",
+              "number": "9.4.3",
+              "name": "Manage employee benefits programmes and enrolment",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents administer enrolment and queries; humans design benefits strategy"
+            },
+            {
+              "id": "518463",
+              "number": "9.4.4",
+              "name": "Operate recognition and reward programmes",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design programmes; agents track nominations and distribute rewards"
+            },
+            {
+              "id": "847321",
+              "number": "9.4.5",
+              "name": "Conduct pay equity analysis and remediation",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents analyse pay data for disparities; humans decide remediation actions"
+            }
+          ]
+        },
+        {
+          "id": "174829",
+          "number": "9.5",
+          "name": "Cultivate Employee Experience and Engagement",
+          "description": "Shape the end-to-end employee experience — from cultural environment to wellbeing — and actively monitor and improve workforce engagement to drive retention and performance.\n",
+          "processes": [
+            {
+              "id": "639217",
+              "number": "9.5.1",
+              "name": "Design and manage the employee experience journey",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design experience touchpoints; agents map journeys and identify friction"
+            },
+            {
+              "id": "481753",
+              "number": "9.5.2",
+              "name": "Measure and analyse employee engagement",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents deploy surveys, analyse sentiment, and surface trends; humans interpret and act"
+            },
+            {
+              "id": "352946",
+              "number": "9.5.3",
+              "name": "Manage employee wellbeing and welfare programmes",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design programmes and provide pastoral support; agents signpost resources and track utilisation"
+            },
+            {
+              "id": "718294",
+              "number": "9.5.4",
+              "name": "Foster workplace culture and inclusion",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; culture requires authentic human leadership and role modelling"
+            },
+            {
+              "id": "263841",
+              "number": "9.5.5",
+              "name": "Manage internal employee communication channels",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents create and distribute content; humans set narrative and tone"
+            },
+            {
+              "id": "895412",
+              "number": "9.5.6",
+              "name": "Handle employee grievances and conflict resolution",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; agents manage case tracking and documentation only"
+            }
+          ]
+        },
+        {
+          "id": "527389",
+          "number": "9.6",
+          "name": "Operate HR Administration and Services",
+          "description": "Deliver efficient, accurate, and compliant HR operational services — including employee records management, policy administration, and HR service delivery.\n",
+          "processes": [
+            {
+              "id": "741628",
+              "number": "9.6.1",
+              "name": "Maintain employee records and HR master data",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; automated record maintenance with human audit"
+            },
+            {
+              "id": "368215",
+              "number": "9.6.2",
+              "name": "Administer HR policies and procedures",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents distribute policies and track acknowledgement; humans author and update policies"
+            },
+            {
+              "id": "294573",
+              "number": "9.6.3",
+              "name": "Operate the HR service desk and case management",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents handle tier-1 queries and route complex cases; humans resolve escalations"
+            },
+            {
+              "id": "856149",
+              "number": "9.6.4",
+              "name": "Manage employee lifecycle events and transitions",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents process promotions, transfers, and separations; humans approve and communicate"
+            },
+            {
+              "id": "612837",
+              "number": "9.6.5",
+              "name": "Ensure HR regulatory compliance and statutory reporting",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents monitor regulatory changes and prepare filings; humans review and submit"
+            }
+          ]
+        },
+        {
+          "id": "938214",
+          "number": "9.7",
+          "name": "Manage the Blended Workforce",
+          "description": "ZORBA-specific capability. Provision, configure, monitor, and govern the agent workforce alongside the human workforce — ensuring agents are treated as managed participants in the operating model with defined roles, performance expectations, trust boundaries, and lifecycle management.\n",
+          "processes": [
+            {
+              "id": "427813",
+              "number": "9.7.1",
+              "name": "Provision and configure new agents into the workforce",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents automate provisioning workflows; humans approve agent deployment and role assignment"
+            },
+            {
+              "id": "583146",
+              "number": "9.7.2",
+              "name": "Define agent roles, responsibilities, and trust boundaries",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans define trust levels and guardrails; agents maintain the role registry"
+            },
+            {
+              "id": "719432",
+              "number": "9.7.3",
+              "name": "Monitor agent performance and behavioural compliance",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents monitor agent fleet metrics and flag anomalies; humans investigate and intervene"
+            },
+            {
+              "id": "264891",
+              "number": "9.7.4",
+              "name": "Calibrate agent trust levels and autonomy thresholds",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans set trust policy; agents track performance and recommend recalibration"
+            },
+            {
+              "id": "835617",
+              "number": "9.7.5",
+              "name": "Manage the agent lifecycle — updates, retraining, and retirement",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents execute lifecycle workflows; humans approve major transitions and decommissioning"
+            },
+            {
+              "id": "391528",
+              "number": "9.7.6",
+              "name": "Coordinate human-agent teaming and workload distribution",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents optimise task routing; humans oversee balance and intervene on conflicts"
+            },
+            {
+              "id": "642375",
+              "number": "9.7.7",
+              "name": "Report on blended workforce composition and effectiveness",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents generate dashboards and trend reports; humans interpret and present to leadership"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "921426",
+      "number": 10,
+      "name": "Technology & Data",
+      "subtitle": "Powering the enterprise with platforms and insight",
+      "classification": "management_function",
+      "description": "This domain encompasses the enterprise's ability to design, build, operate, and evolve its technology landscape — from core infrastructure and applications through to data platforms, cybersecurity, and end-user technology services. It ensures technology investments align with strategic intent and that data is treated as a first-class enterprise asset.\nIn a ZORBA-enabled enterprise, this domain carries a unique additional responsibility: managing the agent platform itself. The technology function not only deploys agents — it operates the infrastructure, tooling, and guardrails that make the blended workforce possible.\n",
+      "capabilities": [
+        {
+          "id": "700381",
+          "number": "10.1",
+          "name": "Shape Technology Strategy and Architecture",
+          "description": "Define the technology vision, principles, and enterprise architecture that guide investment decisions, platform choices, and the evolution of the technology estate.\n",
+          "processes": [
+            {
+              "id": "631824",
+              "number": "10.1.1",
+              "name": "Define the enterprise technology vision and principles",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; technology strategy requires human judgement on business priorities"
+            },
+            {
+              "id": "274953",
+              "number": "10.1.2",
+              "name": "Develop and maintain enterprise architecture standards",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents maintain architecture artefacts; humans set standards and make trade-offs"
+            },
+            {
+              "id": "918362",
+              "number": "10.1.3",
+              "name": "Assess emerging technologies and evaluate adoption readiness",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents scan, evaluate, and benchmark; humans decide strategic relevance"
+            },
+            {
+              "id": "453271",
+              "number": "10.1.4",
+              "name": "Manage the technology investment portfolio and roadmap",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans prioritise investments; agents model costs and dependencies"
+            },
+            {
+              "id": "186439",
+              "number": "10.1.5",
+              "name": "Govern architecture conformance and technical debt",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents detect drift and debt; humans approve remediation priorities"
+            }
+          ]
+        },
+        {
+          "id": "674421",
+          "number": "10.2",
+          "name": "Build and Manage Applications",
+          "description": "Design, develop, test, deploy, and maintain the enterprise's application portfolio — including custom-built, configured, and integrated software solutions.\n",
+          "processes": [
+            {
+              "id": "741258",
+              "number": "10.2.1",
+              "name": "Gather and prioritise application requirements",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents collect and structure requirements; humans validate and prioritise"
+            },
+            {
+              "id": "529463",
+              "number": "10.2.2",
+              "name": "Design and architect application solutions",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design; agents generate reference architectures and patterns"
+            },
+            {
+              "id": "384716",
+              "number": "10.2.3",
+              "name": "Develop and configure application code",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents generate and refactor code; humans review, approve, and guide"
+            },
+            {
+              "id": "862147",
+              "number": "10.2.4",
+              "name": "Test and validate application quality",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents execute automated test suites; humans define test strategies and review edge cases"
+            },
+            {
+              "id": "195384",
+              "number": "10.2.5",
+              "name": "Deploy and release applications to production",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents orchestrate CI/CD pipelines; humans approve production releases"
+            },
+            {
+              "id": "647932",
+              "number": "10.2.6",
+              "name": "Manage the application portfolio lifecycle",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents track usage, costs, and health; humans decide rationalisation actions"
+            }
+          ]
+        },
+        {
+          "id": "714538",
+          "number": "10.3",
+          "name": "Operate Infrastructure and Cloud Platforms",
+          "description": "Provision, manage, and optimise the enterprise's computing infrastructure — including on-premises, cloud, hybrid, and edge environments.\n",
+          "processes": [
+            {
+              "id": "428163",
+              "number": "10.3.1",
+              "name": "Provision and configure infrastructure resources",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents execute infrastructure-as-code; humans define policies and approve changes"
+            },
+            {
+              "id": "563291",
+              "number": "10.3.2",
+              "name": "Monitor infrastructure health and performance",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-autonomous; continuous monitoring with human-defined alert thresholds"
+            },
+            {
+              "id": "819427",
+              "number": "10.3.3",
+              "name": "Manage capacity planning and resource optimisation",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents forecast and recommend; humans approve scaling decisions"
+            },
+            {
+              "id": "246875",
+              "number": "10.3.4",
+              "name": "Operate cloud platform services and governance",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents enforce guardrails and track spend; humans set cloud strategy"
+            },
+            {
+              "id": "738514",
+              "number": "10.3.5",
+              "name": "Execute infrastructure auto-remediation and self-healing",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-autonomous; automated remediation within predefined runbooks"
+            },
+            {
+              "id": "391648",
+              "number": "10.3.6",
+              "name": "Manage network and connectivity services",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents monitor and configure; humans approve topology changes"
+            }
+          ]
+        },
+        {
+          "id": "283946",
+          "number": "10.4",
+          "name": "Govern Data and Deliver Analytics",
+          "description": "Manage data as an enterprise asset — ensuring quality, accessibility, governance, and the delivery of analytics and insights that drive decision-making.\n",
+          "processes": [
+            {
+              "id": "625813",
+              "number": "10.4.1",
+              "name": "Define data governance frameworks and ownership",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans define governance; agents maintain catalogues and lineage"
+            },
+            {
+              "id": "948271",
+              "number": "10.4.2",
+              "name": "Manage data quality, profiling, and remediation",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents profile and cleanse data; humans set quality thresholds and resolve exceptions"
+            },
+            {
+              "id": "174593",
+              "number": "10.4.3",
+              "name": "Build and operate data pipelines and integration",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; automated pipeline orchestration with human-defined schemas"
+            },
+            {
+              "id": "983322",
+              "number": "10.4.4",
+              "name": "Deliver business intelligence and reporting",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents generate dashboards and reports; humans interpret and act on insights"
+            },
+            {
+              "id": "812367",
+              "number": "10.4.5",
+              "name": "Develop and manage advanced analytics and models",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents train and tune models; humans validate methodology and interpret results"
+            },
+            {
+              "id": "469752",
+              "number": "10.4.6",
+              "name": "Manage master data and reference data",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents maintain records; humans resolve conflicts and approve golden records"
+            }
+          ]
+        },
+        {
+          "id": "866025",
+          "number": "10.5",
+          "name": "Protect Information and Ensure Cyber Resilience",
+          "description": "Defend the enterprise against cyber threats, manage information security risks, and ensure resilience through detection, response, and recovery capabilities.\n",
+          "processes": [
+            {
+              "id": "317524",
+              "number": "10.5.1",
+              "name": "Define cybersecurity strategy and risk posture",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; security strategy requires executive judgement and risk appetite alignment"
+            },
+            {
+              "id": "853162",
+              "number": "10.5.2",
+              "name": "Manage identity, access, and authentication controls",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents enforce policies and detect anomalies; humans approve access exceptions"
+            },
+            {
+              "id": "246819",
+              "number": "10.5.3",
+              "name": "Monitor threats and operate security operations",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-autonomous; continuous threat monitoring and initial incident triage"
+            },
+            {
+              "id": "671438",
+              "number": "10.5.4",
+              "name": "Respond to and recover from security incidents",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead incident response; agents execute containment playbooks and collect forensics"
+            },
+            {
+              "id": "594273",
+              "number": "10.5.5",
+              "name": "Conduct vulnerability management and penetration testing",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents scan and prioritise vulnerabilities; humans validate findings and approve remediation"
+            },
+            {
+              "id": "914295",
+              "number": "10.5.6",
+              "name": "Manage security awareness and training",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents deliver training and simulate phishing; humans design curriculum and review results"
+            }
+          ]
+        },
+        {
+          "id": "158493",
+          "number": "10.6",
+          "name": "Deliver Technology Operations and End-User Support",
+          "description": "Operate the day-to-day technology services that keep the enterprise running — including service desk, incident management, problem resolution, and end-user computing.\n",
+          "processes": [
+            {
+              "id": "824367",
+              "number": "10.6.1",
+              "name": "Operate the service desk and manage service requests",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents handle tier-0/1 requests; humans manage complex escalations"
+            },
+            {
+              "id": "396142",
+              "number": "10.6.2",
+              "name": "Manage incidents and restore services",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents detect, categorise, and initiate response; humans lead major incident resolution"
+            },
+            {
+              "id": "571829",
+              "number": "10.6.3",
+              "name": "Conduct problem management and root cause analysis",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead analysis; agents correlate data and suggest patterns"
+            },
+            {
+              "id": "249618",
+              "number": "10.6.4",
+              "name": "Manage change and release processes",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents assess impact and schedule changes; humans approve and review"
+            },
+            {
+              "id": "683475",
+              "number": "10.6.5",
+              "name": "Provision and manage end-user devices and workplace technology",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents automate provisioning and configuration; humans handle exceptions"
+            }
+          ]
+        },
+        {
+          "id": "925743",
+          "number": "10.7",
+          "name": "Manage the Agent Platform",
+          "description": "Operate, evolve, and govern the infrastructure that enables enterprise AI agents — including agent hosting, orchestration, lifecycle management, and the tooling that connects agents to enterprise systems. This is the ZORBA-specific meta-capability: the technology that enables the blended workforce.\n",
+          "processes": [
+            {
+              "id": "348261",
+              "number": "10.7.1",
+              "name": "Operate agent hosting infrastructure and runtime environments",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents monitor their own platform; humans manage capacity and architecture"
+            },
+            {
+              "id": "517948",
+              "number": "10.7.2",
+              "name": "Manage agent lifecycle — provisioning, versioning, and retirement",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans approve agent deployment; agents manage version control and rollback"
+            },
+            {
+              "id": "264839",
+              "number": "10.7.3",
+              "name": "Govern agent access to enterprise systems and data",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; access decisions require accountability and policy alignment"
+            },
+            {
+              "id": "893162",
+              "number": "10.7.4",
+              "name": "Monitor agent performance, health, and resource consumption",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-autonomous; agents monitor agent fleet health and flag anomalies"
+            },
+            {
+              "id": "471526",
+              "number": "10.7.5",
+              "name": "Manage agent orchestration and inter-agent coordination",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents execute orchestration; humans define workflow boundaries and escalation rules"
+            },
+            {
+              "id": "635274",
+              "number": "10.7.6",
+              "name": "Maintain the agent tooling ecosystem and integration layer",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents maintain integrations; humans approve new tool access and capabilities"
+            },
+            {
+              "id": "182943",
+              "number": "10.7.7",
+              "name": "Manage agent platform security and isolation",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans set security policies; agents enforce isolation and detect breaches"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "329571",
+      "number": 11,
+      "name": "Risk, Legal & Compliance",
+      "subtitle": "Governing trust in a human-agent enterprise",
+      "classification": "management_function",
+      "description": "This domain encompasses the enterprise's ability to identify, assess, and mitigate risk, provide legal counsel, ensure regulatory compliance, conduct independent assurance, and uphold ethical standards. It is the domain where organisational trust is built, protected, and demonstrated to regulators, customers, and the public.\nIn a ZORBA-enabled enterprise, this domain bears a critical additional responsibility: governing the behaviour, compliance, and trustworthiness of AI agents — ensuring algorithmic decisions are explainable, auditable, and aligned with regulatory expectations and organisational values.\n",
+      "capabilities": [
+        {
+          "id": "481327",
+          "number": "11.1",
+          "name": "Manage Enterprise Risk",
+          "description": "Identify, assess, treat, and monitor risks across the enterprise — maintaining the risk register, operating risk frameworks, and ensuring risks are owned, communicated, and actively managed.\n",
+          "processes": [
+            {
+              "id": "724619",
+              "number": "11.1.1",
+              "name": "Maintain the enterprise risk framework and taxonomy",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design the framework; agents maintain documentation and version control"
+            },
+            {
+              "id": "358241",
+              "number": "11.1.2",
+              "name": "Identify and register risks across domains and units",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents scan for emerging risks and prompt registration; humans validate and classify"
+            },
+            {
+              "id": "916473",
+              "number": "11.1.3",
+              "name": "Assess and score risks by likelihood and impact",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents compute risk scores using agreed methodologies; humans exercise qualitative judgement"
+            },
+            {
+              "id": "542168",
+              "number": "11.1.4",
+              "name": "Define and track risk treatment plans",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design treatments; agents track implementation and flag overdue actions"
+            },
+            {
+              "id": "273894",
+              "number": "11.1.5",
+              "name": "Monitor the risk landscape and produce risk reports",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents monitor continuously and generate risk dashboards; humans interpret for leadership"
+            },
+            {
+              "id": "685312",
+              "number": "11.1.6",
+              "name": "Conduct risk scenario analysis and stress testing",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents run simulations and model scenarios; humans define parameters and interpret results"
+            }
+          ]
+        },
+        {
+          "id": "817432",
+          "number": "11.2",
+          "name": "Provide Legal Services and Manage Contracts",
+          "description": "Deliver legal counsel to the enterprise, manage the contract lifecycle, handle disputes and litigation, and ensure the organisation's legal interests are protected.\n",
+          "processes": [
+            {
+              "id": "439256",
+              "number": "11.2.1",
+              "name": "Provide legal advice and counsel to business units",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; legal judgement requires qualified human practitioners"
+            },
+            {
+              "id": "763148",
+              "number": "11.2.2",
+              "name": "Draft, review, and negotiate contracts",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead negotiation and review; agents draft from templates and flag non-standard clauses"
+            },
+            {
+              "id": "291875",
+              "number": "11.2.3",
+              "name": "Manage the contract lifecycle and obligations tracking",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents track milestones, renewals, and obligations; humans handle exceptions and renegotiations"
+            },
+            {
+              "id": "648312",
+              "number": "11.2.4",
+              "name": "Manage disputes, litigation, and regulatory proceedings",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; agents manage case files, deadlines, and document assembly"
+            },
+            {
+              "id": "527493",
+              "number": "11.2.5",
+              "name": "Maintain the legal entity structure and corporate records",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents maintain records and filing calendars; humans authorise structural changes"
+            },
+            {
+              "id": "184736",
+              "number": "11.2.6",
+              "name": "Manage intellectual property and brand protection",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans make IP strategy decisions; agents monitor infringement and manage filings"
+            }
+          ]
+        },
+        {
+          "id": "265918",
+          "number": "11.3",
+          "name": "Ensure Regulatory Compliance",
+          "description": "Monitor the regulatory environment, interpret obligations, implement compliance programmes, and demonstrate adherence to all applicable laws, regulations, and industry standards.\n",
+          "processes": [
+            {
+              "id": "834152",
+              "number": "11.3.1",
+              "name": "Monitor and interpret regulatory changes and obligations",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents scan regulatory feeds and summarise changes; humans assess applicability"
+            },
+            {
+              "id": "496731",
+              "number": "11.3.2",
+              "name": "Design and implement compliance programmes",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design programmes; agents operationalise controls and track adoption"
+            },
+            {
+              "id": "713549",
+              "number": "11.3.3",
+              "name": "Conduct compliance assessments and testing",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents execute automated compliance checks; humans investigate exceptions"
+            },
+            {
+              "id": "358274",
+              "number": "11.3.4",
+              "name": "Manage regulatory filings and submissions",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents prepare and submit filings; humans review and approve before submission"
+            },
+            {
+              "id": "621483",
+              "number": "11.3.5",
+              "name": "Manage relationships with regulators and supervisory bodies",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; regulatory relationships require human diplomacy and judgement"
+            }
+          ]
+        },
+        {
+          "id": "742613",
+          "number": "11.4",
+          "name": "Conduct Internal Audit and Assurance",
+          "description": "Provide independent, objective assurance over the effectiveness of governance, risk management, and internal controls — operating with professional scepticism and organisational independence.\n",
+          "processes": [
+            {
+              "id": "318947",
+              "number": "11.4.1",
+              "name": "Develop the risk-based internal audit plan",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans set audit priorities; agents analyse risk data to inform planning"
+            },
+            {
+              "id": "856271",
+              "number": "11.4.2",
+              "name": "Execute audit engagements and fieldwork",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents perform data analytics and automated testing; humans conduct interviews and assess controls"
+            },
+            {
+              "id": "493128",
+              "number": "11.4.3",
+              "name": "Report audit findings and recommendations",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans form opinions and present findings; agents draft reports and track management responses"
+            },
+            {
+              "id": "627314",
+              "number": "11.4.4",
+              "name": "Monitor remediation of audit findings",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents track action completion and escalate overdue items; humans validate remediation quality"
+            },
+            {
+              "id": "185439",
+              "number": "11.4.5",
+              "name": "Assess internal audit effectiveness and independence",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; independence assessment requires human objectivity"
+            }
+          ]
+        },
+        {
+          "id": "593148",
+          "number": "11.5",
+          "name": "Protect Data Privacy and Personal Information",
+          "description": "Ensure the enterprise collects, processes, stores, and shares personal data lawfully, transparently, and securely — meeting the requirements of privacy regulations and respecting individual rights.\n",
+          "processes": [
+            {
+              "id": "905427",
+              "number": "11.5.1",
+              "name": "Maintain the data privacy framework and policies",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans set privacy policy; agents track regulatory changes and flag required updates"
+            },
+            {
+              "id": "816542",
+              "number": "11.5.2",
+              "name": "Conduct data protection impact assessments",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents perform automated data mapping and initial assessments; humans evaluate high-risk processing"
+            },
+            {
+              "id": "439617",
+              "number": "11.5.3",
+              "name": "Manage data subject rights requests",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents process requests, locate data, and prepare responses; humans approve complex cases"
+            },
+            {
+              "id": "758243",
+              "number": "11.5.4",
+              "name": "Monitor data processing activities for compliance",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; continuous monitoring of data flows against consent and purpose records"
+            },
+            {
+              "id": "361829",
+              "number": "11.5.5",
+              "name": "Manage data breach notification and response",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead response and notification decisions; agents detect breaches and manage timelines"
+            }
+          ]
+        },
+        {
+          "id": "428173",
+          "number": "11.6",
+          "name": "Uphold Ethics and Standards of Conduct",
+          "description": "Establish and enforce the ethical standards, codes of conduct, and behavioural expectations that govern how people — and agents — operate within the enterprise.\n",
+          "processes": [
+            {
+              "id": "537284",
+              "number": "11.6.1",
+              "name": "Define and maintain the code of ethics and conduct",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; ethical standards require human moral reasoning"
+            },
+            {
+              "id": "841396",
+              "number": "11.6.2",
+              "name": "Deliver ethics awareness and training programmes",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents deliver training modules and track completion; humans facilitate ethical reasoning discussions"
+            },
+            {
+              "id": "334130",
+              "number": "11.6.3",
+              "name": "Operate whistleblowing and speak-up channels",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans manage investigations; agents operate reporting channels and ensure anonymity"
+            },
+            {
+              "id": "382514",
+              "number": "11.6.4",
+              "name": "Investigate ethical violations and misconduct",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led investigation; agents manage case files and evidence assembly"
+            },
+            {
+              "id": "714928",
+              "number": "11.6.5",
+              "name": "Monitor organisational culture and ethical climate",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents analyse survey data and behavioural signals; humans interpret and intervene"
+            }
+          ]
+        },
+        {
+          "id": "196482",
+          "number": "11.7",
+          "name": "Govern AI Agents and Ensure Algorithmic Compliance",
+          "description": "ZORBA-specific capability. Establish and operate the governance framework for AI agents — ensuring their decisions are explainable, their behaviour is auditable, their outputs are fair, and their operation complies with emerging AI regulations and organisational policies.\n",
+          "processes": [
+            {
+              "id": "853217",
+              "number": "11.7.1",
+              "name": "Define and maintain the AI governance framework and policies",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans set governance principles; agents maintain the policy repository and version history"
+            },
+            {
+              "id": "472831",
+              "number": "11.7.2",
+              "name": "Conduct algorithmic impact assessments before deployment",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents run bias testing and impact simulations; humans evaluate results and approve deployment"
+            },
+            {
+              "id": "618943",
+              "number": "11.7.3",
+              "name": "Monitor agent decisions for fairness, bias, and drift",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents continuously monitor decision patterns and flag anomalies; humans investigate and remediate"
+            },
+            {
+              "id": "345176",
+              "number": "11.7.4",
+              "name": "Maintain audit trails and explainability records for agent actions",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; automated logging and explainability record generation"
+            },
+            {
+              "id": "729368",
+              "number": "11.7.5",
+              "name": "Ensure compliance with AI-specific regulations and standards",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents track evolving AI regulation; humans interpret obligations and design compliance responses"
+            },
+            {
+              "id": "561294",
+              "number": "11.7.6",
+              "name": "Manage AI incident response and agent-related escalations",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead incident response; agents isolate affected agents and preserve evidence"
+            },
+            {
+              "id": "887507",
+              "number": "11.7.7",
+              "name": "Report on AI governance maturity and agent compliance posture",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents generate compliance dashboards; humans present to governance bodies and regulators"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "751284",
+      "number": 12,
+      "name": "Corporate Services",
+      "subtitle": "Running the engine that keeps everything moving",
+      "classification": "management_function",
+      "description": "This domain encompasses the enterprise's supporting infrastructure — the facilities, communications, administrative services, and shared capabilities that enable every other domain to function effectively. It is the operational backbone that maintains the physical and organisational environment, communicates the enterprise story, manages sustainability obligations, and delivers efficient shared services.\nIn a ZORBA-enabled enterprise, corporate services increasingly leverage agents for high-volume administrative workflows, facilities monitoring, and communications distribution — freeing human professionals to focus on strategic programmes and stakeholder relationships.\n",
+      "capabilities": [
+        {
+          "id": "462918",
+          "number": "12.1",
+          "name": "Manage Facilities and the Workplace Environment",
+          "description": "Plan, operate, and maintain the physical and virtual workplace — ensuring safe, productive, and cost-effective environments for the enterprise's workforce.\n",
+          "processes": [
+            {
+              "id": "318542",
+              "number": "12.1.1",
+              "name": "Plan and manage the real estate and property portfolio",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans make portfolio decisions; agents analyse utilisation data and lease terms"
+            },
+            {
+              "id": "729461",
+              "number": "12.1.2",
+              "name": "Operate building systems and facility maintenance",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents monitor IoT sensors and schedule maintenance; humans manage vendors and major repairs"
+            },
+            {
+              "id": "584213",
+              "number": "12.1.3",
+              "name": "Manage workplace health, safety, and security",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans set safety policy and lead incident response; agents monitor compliance and track incidents"
+            },
+            {
+              "id": "861374",
+              "number": "12.1.4",
+              "name": "Manage space allocation and workplace design",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents analyse occupancy patterns; humans design spaces and approve changes"
+            },
+            {
+              "id": "243689",
+              "number": "12.1.5",
+              "name": "Operate reception, mail, and visitor management services",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents manage visitor registration and mail routing; humans handle VIP reception and exceptions"
+            }
+          ]
+        },
+        {
+          "id": "537861",
+          "number": "12.2",
+          "name": "Deliver Corporate Communications and Public Relations",
+          "description": "Craft and distribute the enterprise's narrative — managing internal and external communications, media relations, crisis communications, and brand reputation.\n",
+          "processes": [
+            {
+              "id": "418273",
+              "number": "12.2.1",
+              "name": "Develop corporate communication strategy and messaging frameworks",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans define narrative and strategy; agents research audience insights and benchmark messaging"
+            },
+            {
+              "id": "693142",
+              "number": "12.2.2",
+              "name": "Manage internal communications and employee broadcasts",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents create and distribute content; humans set editorial direction and approve sensitive messages"
+            },
+            {
+              "id": "614750",
+              "number": "12.2.3",
+              "name": "Manage media relations and press engagement",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; media relationships require human judgement and rapport"
+            },
+            {
+              "id": "856917",
+              "number": "12.2.4",
+              "name": "Operate crisis communications and rapid response",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead crisis response; agents monitor media, draft holding statements, and track coverage"
+            },
+            {
+              "id": "341628",
+              "number": "12.2.5",
+              "name": "Manage executive communications and thought leadership",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans provide voice and ideas; agents research, draft, and manage publication schedules"
+            },
+            {
+              "id": "762439",
+              "number": "12.2.6",
+              "name": "Monitor and analyse media coverage and public sentiment",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents continuously monitor and analyse; humans interpret trends and recommend actions"
+            }
+          ]
+        },
+        {
+          "id": "694217",
+          "number": "12.3",
+          "name": "Manage Sustainability and ESG Commitments",
+          "description": "Define, execute, and report on the enterprise's environmental, social, and governance commitments — ensuring genuine progress toward sustainability targets and transparent disclosure to stakeholders.\n",
+          "processes": [
+            {
+              "id": "527341",
+              "number": "12.3.1",
+              "name": "Define the sustainability strategy and targets",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans set ambition and strategy; agents benchmark against industry standards and peer performance"
+            },
+            {
+              "id": "910625",
+              "number": "12.3.2",
+              "name": "Measure and track environmental impact and carbon footprint",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents aggregate emissions data and calculate footprints; humans validate methodology and boundaries"
+            },
+            {
+              "id": "346918",
+              "number": "12.3.3",
+              "name": "Manage social impact programmes and community engagement",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design programmes and build relationships; agents track metrics and manage logistics"
+            },
+            {
+              "id": "728154",
+              "number": "12.3.4",
+              "name": "Prepare ESG disclosures and sustainability reports",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents compile data and draft reports against frameworks; humans approve and present"
+            },
+            {
+              "id": "715011",
+              "number": "12.3.5",
+              "name": "Monitor regulatory developments in sustainability reporting",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents scan regulatory landscape; humans assess impact and adjust reporting approaches"
+            }
+          ]
+        },
+        {
+          "id": "183742",
+          "number": "12.4",
+          "name": "Deliver Administrative and Office Services",
+          "description": "Provide the day-to-day administrative services that support enterprise operations — including document management, records retention, office supplies, and general administrative coordination.\n",
+          "processes": [
+            {
+              "id": "629481",
+              "number": "12.4.1",
+              "name": "Manage enterprise document and records lifecycle",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents classify, tag, store, and apply retention rules; humans set policies and handle exceptions"
+            },
+            {
+              "id": "375218",
+              "number": "12.4.2",
+              "name": "Operate printing, reprographics, and physical distribution",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents manage queues and logistics; humans handle specialised requests"
+            },
+            {
+              "id": "914263",
+              "number": "12.4.3",
+              "name": "Manage office supplies and consumables procurement",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; automated reordering based on consumption patterns and thresholds"
+            },
+            {
+              "id": "548371",
+              "number": "12.4.4",
+              "name": "Coordinate meeting room and resource booking",
+              "agentic_profile": "A",
+              "agentic_note": "Agent-executed; automated scheduling with conflict resolution and optimisation"
+            },
+            {
+              "id": "261849",
+              "number": "12.4.5",
+              "name": "Provide executive and departmental administrative support",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents manage calendars, prepare briefings, and handle correspondence; humans provide judgement and relationship management"
+            }
+          ]
+        },
+        {
+          "id": "825463",
+          "number": "12.5",
+          "name": "Operate Shared Services and Service Integration",
+          "description": "Design, operate, and optimise shared service centres and models that consolidate common processes across the enterprise — delivering standardised, cost-effective services at scale.\n",
+          "processes": [
+            {
+              "id": "473219",
+              "number": "12.5.1",
+              "name": "Design and evolve the shared services operating model",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans design the model; agents benchmark performance and model consolidation scenarios"
+            },
+            {
+              "id": "618342",
+              "number": "12.5.2",
+              "name": "Manage service catalogues and service-level agreements",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents maintain catalogues and track SLA performance; humans negotiate and review agreements"
+            },
+            {
+              "id": "562521",
+              "number": "12.5.3",
+              "name": "Operate the enterprise service desk and request fulfilment",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents handle tier-1 requests and automated fulfilment; humans resolve complex and sensitive cases"
+            },
+            {
+              "id": "742931",
+              "number": "12.5.4",
+              "name": "Monitor shared service performance and drive improvement",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents track KPIs and surface improvement opportunities; humans prioritise and implement changes"
+            },
+            {
+              "id": "381547",
+              "number": "12.5.5",
+              "name": "Manage vendor and outsourcing relationships for shared services",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans manage strategic vendor relationships; agents track performance and contract compliance"
+            }
+          ]
+        },
+        {
+          "id": "219643",
+          "number": "12.6",
+          "name": "Manage Business Travel and Expense Administration",
+          "description": "Operate the enterprise's travel programme and expense management processes — ensuring policy compliance, cost control, duty of care, and a smooth experience for travellers.\n",
+          "processes": [
+            {
+              "id": "847312",
+              "number": "12.6.1",
+              "name": "Define and maintain travel policies and preferred supplier programmes",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans set policies; agents benchmark rates and manage supplier catalogues"
+            },
+            {
+              "id": "563184",
+              "number": "12.6.2",
+              "name": "Process travel requests and itinerary planning",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents search, book, and optimise itineraries; humans approve out-of-policy requests"
+            },
+            {
+              "id": "418729",
+              "number": "12.6.3",
+              "name": "Manage duty of care and traveller safety",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents track traveller locations and issue alerts; humans make evacuation and safety decisions"
+            },
+            {
+              "id": "735261",
+              "number": "12.6.4",
+              "name": "Process expense claims and reimbursements",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents validate receipts, check policy, and process payments; humans approve exceptions"
+            },
+            {
+              "id": "692418",
+              "number": "12.6.5",
+              "name": "Analyse travel spend and optimise the programme",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents analyse spend patterns and savings opportunities; humans negotiate and make programme changes"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

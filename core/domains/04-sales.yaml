@@ -1,0 +1,260 @@
+domain:
+  id: "358741"
+  number: 4
+  name: "Sales"
+  subtitle: "Converting relationships into revenue"
+  classification: value_chain
+  description: >
+    This domain encompasses the enterprise's ability to identify, pursue, win, and grow
+    customer relationships that generate revenue. It spans the full sales spectrum from
+    strategic territory design and pipeline management through to deal execution, account
+    development, and revenue operations.
+
+    In a ZORBA-enabled enterprise, sales is where agents handle the data-heavy mechanics
+    of selling — scoring leads, maintaining CRM hygiene, generating proposals, and
+    forecasting revenue — while humans focus on relationship building, complex negotiation,
+    and strategic account development.
+
+  capabilities:
+    - id: "461283"
+      number: "4.1"
+      name: "Define Sales Strategy and Territory Architecture"
+      description: >
+        Establish the sales strategy, design territory and segment coverage models, and
+        set the go-to-market approach that maximises revenue potential across the customer
+        base.
+      processes:
+        - id: "529738"
+          number: "4.1.1"
+          name: "Define the sales strategy and go-to-market approach"
+          agentic_profile: H
+          agentic_note: "Human-led; sales strategy requires market judgement and leadership vision"
+        - id: "813462"
+          number: "4.1.2"
+          name: "Design territory and segment coverage models"
+          agentic_profile: "H=A"
+          agentic_note: "Agents model territory potential and balance workload; humans approve structure"
+        - id: "274913"
+          number: "4.1.3"
+          name: "Set quota and target frameworks"
+          agentic_profile: "H=A"
+          agentic_note: "Agents model attainment scenarios; humans set targets and incentives"
+        - id: "224906"
+          number: "4.1.4"
+          name: "Define ideal customer profiles and account tiering"
+          agentic_profile: "h+A"
+          agentic_note: "Agents analyse firmographic and behavioural data; humans validate profiles"
+        - id: "348176"
+          number: "4.1.5"
+          name: "Align sales coverage with marketing and product strategies"
+          agentic_profile: "H+a"
+          agentic_note: "Humans drive alignment; agents flag gaps and overlaps"
+
+    - id: "582314"
+      number: "4.2"
+      name: "Manage the Sales Pipeline and Forecast Revenue"
+      description: >
+        Operate the end-to-end pipeline from opportunity creation through to close —
+        ensuring pipeline health, forecast accuracy, and visibility into revenue trajectory.
+      processes:
+        - id: "419628"
+          number: "4.2.1"
+          name: "Manage opportunity creation and pipeline intake"
+          agentic_profile: "H=A"
+          agentic_note: "Agents create opportunities from qualified leads; humans validate and enrich"
+        - id: "763142"
+          number: "4.2.2"
+          name: "Qualify and progress opportunities through sales stages"
+          agentic_profile: "H+a"
+          agentic_note: "Humans drive deals; agents update stage data and flag stalled opportunities"
+        - id: "295831"
+          number: "4.2.3"
+          name: "Generate and maintain revenue forecasts"
+          agentic_profile: "h+A"
+          agentic_note: "Agents model forecasts using pipeline and historical data; humans adjust for judgement"
+        - id: "841567"
+          number: "4.2.4"
+          name: "Conduct pipeline reviews and health assessments"
+          agentic_profile: "H+a"
+          agentic_note: "Agents prepare pipeline analytics; humans lead review discussions"
+        - id: "617294"
+          number: "4.2.5"
+          name: "Identify and manage pipeline risks and gaps"
+          agentic_profile: "H=A"
+          agentic_note: "Agents surface at-risk deals and coverage gaps; humans intervene"
+        - id: "354182"
+          number: "4.2.6"
+          name: "Reconcile forecast to actuals and improve accuracy"
+          agentic_profile: "h+A"
+          agentic_note: "Agents analyse forecast deviation patterns; humans refine methodology"
+
+    - id: "724918"
+      number: "4.3"
+      name: "Develop and Grow Strategic Accounts"
+      description: >
+        Manage and deepen relationships with the enterprise's most valuable customers —
+        driving account growth, cross-sell, up-sell, and long-term strategic partnership.
+      processes:
+        - id: "483169"
+          number: "4.3.1"
+          name: "Develop strategic account plans and growth strategies"
+          agentic_profile: "H+a"
+          agentic_note: "Humans plan account strategy; agents research account landscape"
+        - id: "619427"
+          number: "4.3.2"
+          name: "Map stakeholder networks and influence structures"
+          agentic_profile: "H=A"
+          agentic_note: "Agents compile org charts and relationship data; humans build relationships"
+        - id: "847213"
+          number: "4.3.3"
+          name: "Identify cross-sell and up-sell opportunities"
+          agentic_profile: "h+A"
+          agentic_note: "Agents analyse usage and purchase patterns; humans validate and pursue"
+        - id: "536184"
+          number: "4.3.4"
+          name: "Coordinate multi-product and multi-team account delivery"
+          agentic_profile: "H+a"
+          agentic_note: "Humans lead coordination; agents track commitments across teams"
+        - id: "291748"
+          number: "4.3.5"
+          name: "Conduct executive business reviews with key accounts"
+          agentic_profile: "H+a"
+          agentic_note: "Agents prepare review materials and data packs; humans present and discuss"
+
+    - id: "839162"
+      number: "4.4"
+      name: "Execute Deals and Navigate Complex Negotiations"
+      description: >
+        Manage the deal execution process from proposal through to contract — including
+        pricing, negotiation, approval workflows, and deal closure.
+      processes:
+        - id: "418293"
+          number: "4.4.1"
+          name: "Develop proposals and solution presentations"
+          agentic_profile: "H=A"
+          agentic_note: "Agents generate proposal drafts and pricing models; humans customise and present"
+        - id: "563817"
+          number: "4.4.2"
+          name: "Configure pricing and assemble deal structures"
+          agentic_profile: "h+A"
+          agentic_note: "Agents calculate pricing, discounts, and terms; humans approve exceptions"
+        - id: "729348"
+          number: "4.4.3"
+          name: "Navigate complex negotiations and objection handling"
+          agentic_profile: H
+          agentic_note: "Human-led; complex negotiation requires empathy and strategic judgement"
+        - id: "184263"
+          number: "4.4.4"
+          name: "Manage deal approval workflows and governance"
+          agentic_profile: "h+A"
+          agentic_note: "Agents route approvals and track SLAs; humans approve within authority"
+        - id: "641729"
+          number: "4.4.5"
+          name: "Execute contract finalisation and signature"
+          agentic_profile: "H=A"
+          agentic_note: "Agents manage document assembly and e-signature; humans review final terms"
+        - id: "392517"
+          number: "4.4.6"
+          name: "Conduct deal retrospectives and win/loss analysis"
+          agentic_profile: "H=A"
+          agentic_note: "Agents compile data and patterns; humans extract strategic lessons"
+
+    - id: "613482"
+      number: "4.5"
+      name: "Operate Sales Infrastructure and Enablement"
+      description: >
+        Build and maintain the operational foundation that makes selling effective —
+        including CRM management, sales tools, training, onboarding, and process
+        standardisation.
+      processes:
+        - id: "829413"
+          number: "4.5.1"
+          name: "Manage CRM data quality and system hygiene"
+          agentic_profile: A
+          agentic_note: "Agent-executed; continuous data cleansing, deduplication, and enrichment"
+        - id: "435003"
+          number: "4.5.2"
+          name: "Develop and deliver sales training and onboarding"
+          agentic_profile: "H+a"
+          agentic_note: "Humans design programmes; agents personalise learning paths"
+        - id: "315948"
+          number: "4.5.3"
+          name: "Create and maintain sales playbooks and collateral"
+          agentic_profile: "H=A"
+          agentic_note: "Agents generate and update materials; humans review and approve content"
+        - id: "748162"
+          number: "4.5.4"
+          name: "Manage sales tools and technology stack"
+          agentic_profile: "H=A"
+          agentic_note: "Agents monitor adoption and performance; humans select and configure tools"
+        - id: "263591"
+          number: "4.5.5"
+          name: "Standardise and optimise sales processes"
+          agentic_profile: "H+a"
+          agentic_note: "Humans design processes; agents measure adherence and flag deviations"
+
+    - id: "475291"
+      number: "4.6"
+      name: "Manage Partner and Channel Sales"
+      description: >
+        Recruit, enable, manage, and measure indirect sales channels — including resellers,
+        distributors, referral partners, and technology alliances — to extend market reach.
+      processes:
+        - id: "819243"
+          number: "4.6.1"
+          name: "Design the channel and partner sales strategy"
+          agentic_profile: H
+          agentic_note: "Human-led; channel strategy requires market and relationship judgement"
+        - id: "364721"
+          number: "4.6.2"
+          name: "Recruit and onboard channel partners"
+          agentic_profile: "H+a"
+          agentic_note: "Humans recruit; agents manage onboarding workflows and documentation"
+        - id: "592837"
+          number: "4.6.3"
+          name: "Enable partners with training, tools, and content"
+          agentic_profile: "H=A"
+          agentic_note: "Agents distribute and track enablement; humans create programmes"
+        - id: "427163"
+          number: "4.6.4"
+          name: "Manage partner pipeline and co-selling activities"
+          agentic_profile: "H=A"
+          agentic_note: "Agents track partner pipeline and flag collaboration opportunities; humans engage"
+        - id: "738419"
+          number: "4.6.5"
+          name: "Measure partner performance and manage incentive programmes"
+          agentic_profile: "h+A"
+          agentic_note: "Agents calculate performance metrics and incentives; humans review and adjust"
+
+    - id: "291563"
+      number: "4.7"
+      name: "Orchestrate Revenue Operations and Analytics"
+      description: >
+        Integrate and optimise the operational processes, systems, and analytics that span
+        marketing, sales, and customer success — ensuring a unified revenue engine.
+      processes:
+        - id: "863142"
+          number: "4.7.1"
+          name: "Align metrics and definitions across the revenue funnel"
+          agentic_profile: "H+a"
+          agentic_note: "Humans define standards; agents enforce consistency across systems"
+        - id: "524718"
+          number: "4.7.2"
+          name: "Manage the lead-to-cash process end to end"
+          agentic_profile: "H=A"
+          agentic_note: "Agents automate handoffs and track lifecycle; humans resolve exceptions"
+        - id: "419836"
+          number: "4.7.3"
+          name: "Analyse revenue performance and unit economics"
+          agentic_profile: "h+A"
+          agentic_note: "Agents model cohort data and trends; humans interpret and act"
+        - id: "748291"
+          number: "4.7.4"
+          name: "Optimise the revenue tech stack and data architecture"
+          agentic_profile: "H=A"
+          agentic_note: "Agents monitor system performance; humans make technology decisions"
+        - id: "381924"
+          number: "4.7.5"
+          name: "Provide revenue intelligence and strategic insights"
+          agentic_profile: "h+A"
+          agentic_note: "Agents surface patterns and anomalies; humans translate to strategy"

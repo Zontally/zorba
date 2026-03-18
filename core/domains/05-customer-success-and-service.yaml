@@ -1,0 +1,259 @@
+domain:
+  id: "841267"
+  number: 5
+  name: "Customer Success & Service"
+  subtitle: "Delivering outcomes that earn loyalty"
+  classification: value_chain
+  description: >
+    This domain encompasses the enterprise's ability to support customers after the sale,
+    ensure they achieve their desired outcomes, manage service delivery, and build long-term
+    loyalty. It is the domain where customer relationships are sustained and deepened — and
+    where blended workforces are already most visibly operational.
+
+    In a ZORBA-enabled enterprise, this domain is the proving ground for human-agent
+    collaboration. Agents already handle the majority of initial customer interactions,
+    while humans provide empathy, creative problem-solving, and relationship depth for
+    complex scenarios.
+
+  capabilities:
+    - id: "362841"
+      number: "5.1"
+      name: "Manage Customer Support and Issue Resolution"
+      description: >
+        Provide responsive, effective support to customers experiencing issues, questions,
+        or service disruptions — across all channels and tiers of complexity.
+      processes:
+        - id: "718453"
+          number: "5.1.1"
+          name: "Receive, classify, and route customer inquiries"
+          agentic_profile: A
+          agentic_note: "Fully automated triage and routing"
+        - id: "294816"
+          number: "5.1.2"
+          name: "Resolve standard issues through automated self-service"
+          agentic_profile: A
+          agentic_note: "Agent-autonomous within knowledge base boundaries"
+        - id: "537162"
+          number: "5.1.3"
+          name: "Escalate complex issues to human support specialists"
+          agentic_profile: "h+A"
+          agentic_note: "Agent escalation with full context handoff"
+        - id: "845219"
+          number: "5.1.4"
+          name: "Manage multi-channel support delivery"
+          agentic_profile: "h+A"
+          agentic_note: "Agents handle channels; humans oversee quality"
+        - id: "163748"
+          number: "5.1.5"
+          name: "Track issue resolution and confirm customer satisfaction"
+          agentic_profile: A
+          agentic_note: "Automated follow-up and satisfaction measurement"
+        - id: "492631"
+          number: "5.1.6"
+          name: "Analyse support patterns to identify systemic issues"
+          agentic_profile: "h+A"
+          agentic_note: "Agents identify patterns; humans decide remediation"
+
+    - id: "587413"
+      number: "5.2"
+      name: "Drive Customer Success and Outcome Achievement"
+      description: >
+        Proactively ensure customers achieve their desired outcomes from the product or
+        service — reducing churn, increasing adoption, and building advocacy.
+      processes:
+        - id: "731842"
+          number: "5.2.1"
+          name: "Define customer success plans and outcome milestones"
+          agentic_profile: "H+a"
+          agentic_note: "Humans define plans; agents template and track"
+        - id: "416285"
+          number: "5.2.2"
+          name: "Monitor customer health and engagement signals"
+          agentic_profile: A
+          agentic_note: "Continuous automated health scoring"
+        - id: "853174"
+          number: "5.2.3"
+          name: "Intervene proactively on at-risk accounts"
+          agentic_profile: "H+a"
+          agentic_note: "Agents alert; humans lead intervention conversations"
+        - id: "626925"
+          number: "5.2.4"
+          name: "Conduct periodic business reviews with customers"
+          agentic_profile: "H+a"
+          agentic_note: "Agents prepare review packs; humans lead discussions"
+        - id: "274831"
+          number: "5.2.5"
+          name: "Identify and pursue expansion opportunities"
+          agentic_profile: "H=A"
+          agentic_note: "Agents surface signals; humans qualify and pursue"
+        - id: "918346"
+          number: "5.2.6"
+          name: "Measure and report customer outcomes achieved"
+          agentic_profile: "h+A"
+          agentic_note: "Agents compile metrics; humans interpret and present"
+
+    - id: "415962"
+      number: "5.3"
+      name: "Manage Customer Experience Across Touchpoints"
+      description: >
+        Design, measure, and continuously improve the end-to-end customer experience —
+        ensuring consistency and quality across every interaction, whether with a human
+        or an agent.
+      processes:
+        - id: "682135"
+          number: "5.3.1"
+          name: "Map and maintain customer journey models"
+          agentic_profile: "H=A"
+          agentic_note: "Agents map from data; humans validate and design improvements"
+        - id: "347591"
+          number: "5.3.2"
+          name: "Measure experience quality at each touchpoint"
+          agentic_profile: A
+          agentic_note: "Automated experience measurement and scoring"
+        - id: "819264"
+          number: "5.3.3"
+          name: "Identify experience friction points and improvement opportunities"
+          agentic_profile: "h+A"
+          agentic_note: "Agents surface friction; humans prioritise fixes"
+        - id: "536471"
+          number: "5.3.4"
+          name: "Design and implement experience improvements"
+          agentic_profile: "H+a"
+          agentic_note: "Humans design; agents model impact and track implementation"
+        - id: "271843"
+          number: "5.3.5"
+          name: "Ensure consistency across human and agent interactions"
+          agentic_profile: "H=A"
+          agentic_note: "Agents monitor consistency; humans set quality standards"
+
+    - id: "693218"
+      number: "5.4"
+      name: "Manage Service Level Performance"
+      description: >
+        Define, monitor, and maintain service level commitments — ensuring the enterprise
+        meets its promises to customers and identifies degradation before customers feel it.
+      processes:
+        - id: "814527"
+          number: "5.4.1"
+          name: "Define and negotiate service level agreements"
+          agentic_profile: "H+a"
+          agentic_note: "Humans negotiate; agents benchmark and model"
+        - id: "362914"
+          number: "5.4.2"
+          name: "Monitor service level compliance in real time"
+          agentic_profile: A
+          agentic_note: "Continuous automated SLA monitoring"
+        - id: "745183"
+          number: "5.4.3"
+          name: "Alert and escalate on service level breaches"
+          agentic_profile: A
+          agentic_note: "Automated alerting with defined thresholds"
+        - id: "528641"
+          number: "5.4.4"
+          name: "Analyse service level trends and capacity requirements"
+          agentic_profile: "h+A"
+          agentic_note: "Agents analyse; humans plan capacity responses"
+        - id: "193472"
+          number: "5.4.5"
+          name: "Report service level performance to stakeholders"
+          agentic_profile: "h+A"
+          agentic_note: "Agents generate reports; humans contextualise"
+
+    - id: "274639"
+      number: "5.5"
+      name: "Build and Maintain the Customer Knowledge Base"
+      description: >
+        Create, curate, and continuously improve the knowledge resources that enable both
+        customers and agents to resolve issues efficiently.
+      processes:
+        - id: "841362"
+          number: "5.5.1"
+          name: "Create and publish knowledge articles and guides"
+          agentic_profile: "h+A"
+          agentic_note: "Agents draft from ticket patterns; humans review and approve"
+        - id: "519247"
+          number: "5.5.2"
+          name: "Maintain and update knowledge content for accuracy"
+          agentic_profile: "h+A"
+          agentic_note: "Agents flag stale content and suggest updates; humans validate"
+        - id: "362718"
+          number: "5.5.3"
+          name: "Optimise knowledge for self-service discovery"
+          agentic_profile: A
+          agentic_note: "Agents analyse search patterns and optimise findability"
+        - id: "636685"
+          number: "5.5.4"
+          name: "Measure knowledge effectiveness and coverage gaps"
+          agentic_profile: A
+          agentic_note: "Automated gap analysis from unresolved queries"
+        - id: "613845"
+          number: "5.5.5"
+          name: "Manage knowledge across languages and regions"
+          agentic_profile: "h+A"
+          agentic_note: "Agents translate and localise; humans verify cultural fit"
+
+    - id: "938147"
+      number: "5.6"
+      name: "Capture and Act on the Voice of the Customer"
+      description: >
+        Systematically collect, analyse, and act on customer feedback — turning customer
+        insight into product, service, and experience improvements.
+      processes:
+        - id: "778636"
+          number: "5.6.1"
+          name: "Design and deploy feedback collection mechanisms"
+          agentic_profile: "H+a"
+          agentic_note: "Humans design surveys; agents deploy and manage distribution"
+        - id: "851294"
+          number: "5.6.2"
+          name: "Aggregate and analyse customer feedback at scale"
+          agentic_profile: A
+          agentic_note: "Automated sentiment analysis and theme extraction"
+        - id: "374218"
+          number: "5.6.3"
+          name: "Identify actionable insights from feedback data"
+          agentic_profile: "h+A"
+          agentic_note: "Agents surface themes; humans assess significance"
+        - id: "619437"
+          number: "5.6.4"
+          name: "Route insights to product, service, and operations teams"
+          agentic_profile: "h+A"
+          agentic_note: "Agents route automatically; humans validate priority"
+        - id: "283751"
+          number: "5.6.5"
+          name: "Close the feedback loop with customers"
+          agentic_profile: "H=A"
+          agentic_note: "Agents automate acknowledgement; humans respond to significant feedback personally"
+
+    - id: "516284"
+      number: "5.7"
+      name: "Manage Customer Retention and Churn Prevention"
+      description: >
+        Identify customers at risk of leaving, understand the drivers of churn, and execute
+        retention strategies that preserve and grow the customer base.
+      processes:
+        - id: "749381"
+          number: "5.7.1"
+          name: "Build and maintain churn prediction models"
+          agentic_profile: "h+A"
+          agentic_note: "Agents build and train models; humans validate and tune"
+        - id: "382615"
+          number: "5.7.2"
+          name: "Identify and segment at-risk customers"
+          agentic_profile: A
+          agentic_note: "Automated risk scoring and segmentation"
+        - id: "614293"
+          number: "5.7.3"
+          name: "Design and execute retention interventions"
+          agentic_profile: "H+a"
+          agentic_note: "Humans design interventions; agents execute at scale"
+        - id: "837142"
+          number: "5.7.4"
+          name: "Analyse churn drivers and root causes"
+          agentic_profile: "h+A"
+          agentic_note: "Agents analyse patterns; humans interpret and act"
+        - id: "491837"
+          number: "5.7.5"
+          name: "Measure retention programme effectiveness"
+          agentic_profile: "h+A"
+          agentic_note: "Agents track metrics; humans evaluate ROI"

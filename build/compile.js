@@ -1,0 +1,243 @@
+#!/usr/bin/env node
+
+/**
+ * ZORBA Compiler — compile.js
+ *
+ * Compiles YAML source files into a single machine-readable JSON object graph.
+ * Supports core compilation and edition merging (override + extend).
+ *
+ * Usage:
+ *   node build/compile.js                    # compile core only
+ *   node build/compile.js --edition <name>   # compile core + edition
+ *   node build/compile.js --all              # compile core + all editions
+ */
+
+const fs = require('fs');
+const path = require('path');
+const yaml = require('js-yaml');
+
+const ROOT = path.resolve(__dirname, '..');
+const CORE_DIR = path.join(ROOT, 'core', 'domains');
+const EDITIONS_DIR = path.join(ROOT, 'editions');
+const DIST_DIR = path.join(ROOT, 'dist');
+
+// --- Helpers ---
+
+function readYaml(filePath) {
+  const content = fs.readFileSync(filePath, 'utf8');
+  return yaml.load(content);
+}
+
+function readAllDomains(dir) {
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir)
+    .filter(f => f.endsWith('.yaml'))
+    .sort()
+    .map(f => {
+      const data = readYaml(path.join(dir, f));
+      return data.domain;
+    });
+}
+
+function collectIds(domains) {
+  const ids = new Map(); // id → { type, name, file }
+  for (const domain of domains) {
+    addId(ids, domain.id, 'domain', domain.name);
+    if (domain.capabilities) {
+      for (const cap of domain.capabilities) {
+        addId(ids, cap.id, 'capability', cap.name);
+        if (cap.processes) {
+          for (const proc of cap.processes) {
+            addId(ids, proc.id, 'process', proc.name);
+          }
+        }
+      }
+    }
+  }
+  return ids;
+}
+
+function addId(ids, id, type, name) {
+  if (ids.has(id)) {
+    const existing = ids.get(id);
+    throw new Error(
+      `Duplicate ID "${id}": "${name}" (${type}) conflicts with "${existing.name}" (${existing.type})`
+    );
+  }
+  ids.set(id, { type, name });
+}
+
+function computeStats(domains) {
+  let totalCapabilities = 0;
+  let totalProcesses = 0;
+  const profileCounts = {};
+
+  for (const domain of domains) {
+    if (domain.capabilities) {
+      totalCapabilities += domain.capabilities.length;
+      for (const cap of domain.capabilities) {
+        if (cap.processes) {
+          totalProcesses += cap.processes.length;
+          for (const proc of cap.processes) {
+            const profile = proc.agentic_profile || 'unknown';
+            profileCounts[profile] = (profileCounts[profile] || 0) + 1;
+          }
+        }
+      }
+    }
+  }
+
+  return { totalDomains: domains.length, totalCapabilities, totalProcesses, profileCounts };
+}
+
+// --- Core compilation ---
+
+function compileCore() {
+  console.log('Compiling ZORBA Core...');
+
+  const domains = readAllDomains(CORE_DIR);
+  if (domains.length === 0) {
+    throw new Error(`No YAML files found in ${CORE_DIR}`);
+  }
+
+  // Validate unique IDs
+  collectIds(domains);
+
+  const stats = computeStats(domains);
+  console.log(`  ${stats.totalDomains} domains, ${stats.totalCapabilities} capabilities, ${stats.totalProcesses} processes`);
+
+  const core = {
+    edition: 'core',
+    name: 'ZORBA Core',
+    version: require(path.join(ROOT, 'package.json')).version,
+    compiled_at: new Date().toISOString(),
+    stats,
+    domains
+  };
+
+  return core;
+}
+
+// --- Edition compilation ---
+
+function compileEdition(editionName, core) {
+  const editionDir = path.join(EDITIONS_DIR, editionName);
+  const editionFile = path.join(editionDir, 'edition.yaml');
+
+  if (!fs.existsSync(editionFile)) {
+    throw new Error(`Edition file not found: ${editionFile}`);
+  }
+
+  console.log(`Compiling edition: ${editionName}...`);
+
+  const editionMeta = readYaml(editionFile);
+
+  // Deep clone core domains
+  let domains = JSON.parse(JSON.stringify(core.domains));
+
+  // Apply overrides
+  const overridesDir = path.join(editionDir, 'overrides');
+  if (fs.existsSync(overridesDir)) {
+    const overrides = readAllDomains(overridesDir);
+    for (const override of overrides) {
+      const idx = domains.findIndex(d => d.id === override.id);
+      if (idx === -1) {
+        throw new Error(`Edition "${editionName}" overrides domain ID "${override.id}" which does not exist in core`);
+      }
+      // Merge: override capabilities replace core capabilities with same ID, add new ones
+      if (override.capabilities) {
+        for (const overrideCap of override.capabilities) {
+          const capIdx = domains[idx].capabilities.findIndex(c => c.id === overrideCap.id);
+          if (capIdx !== -1) {
+            // Replace existing capability
+            domains[idx].capabilities[capIdx] = overrideCap;
+          } else {
+            // Add new capability
+            domains[idx].capabilities.push(overrideCap);
+          }
+        }
+      }
+      // Override domain-level fields if provided
+      if (override.name) domains[idx].name = override.name;
+      if (override.subtitle) domains[idx].subtitle = override.subtitle;
+      if (override.description) domains[idx].description = override.description;
+    }
+  }
+
+  // Apply extensions (new domains or new capabilities in new domain files)
+  const extensionsDir = path.join(editionDir, 'extensions');
+  if (fs.existsSync(extensionsDir)) {
+    const extensions = readAllDomains(extensionsDir);
+    for (const ext of extensions) {
+      const existingIdx = domains.findIndex(d => d.id === ext.id);
+      if (existingIdx !== -1) {
+        // Extend existing domain with new capabilities
+        if (ext.capabilities) {
+          domains[existingIdx].capabilities.push(...ext.capabilities);
+        }
+      } else {
+        // Entirely new domain
+        domains.push(ext);
+      }
+    }
+  }
+
+  // Validate unique IDs across merged result
+  collectIds(domains);
+
+  const stats = computeStats(domains);
+  console.log(`  ${stats.totalDomains} domains, ${stats.totalCapabilities} capabilities, ${stats.totalProcesses} processes`);
+
+  return {
+    edition: editionName,
+    name: editionMeta.edition?.name || editionName,
+    extends: 'core',
+    version: require(path.join(ROOT, 'package.json')).version,
+    compiled_at: new Date().toISOString(),
+    stats,
+    domains
+  };
+}
+
+// --- Output ---
+
+function writeJson(filename, data) {
+  fs.mkdirSync(DIST_DIR, { recursive: true });
+  const outPath = path.join(DIST_DIR, filename);
+  fs.writeFileSync(outPath, JSON.stringify(data, null, 2), 'utf8');
+  console.log(`  → ${path.relative(ROOT, outPath)}`);
+}
+
+// --- Main ---
+
+function main() {
+  const args = process.argv.slice(2);
+  const core = compileCore();
+  writeJson('zorba-core.json', core);
+
+  if (args.includes('--all')) {
+    // Compile all editions
+    if (fs.existsSync(EDITIONS_DIR)) {
+      const editions = fs.readdirSync(EDITIONS_DIR)
+        .filter(f => {
+          const editionFile = path.join(EDITIONS_DIR, f, 'edition.yaml');
+          return fs.existsSync(editionFile);
+        });
+      for (const edition of editions) {
+        const compiled = compileEdition(edition, core);
+        writeJson(`zorba-${edition}.json`, compiled);
+      }
+    }
+  } else {
+    const editionIdx = args.indexOf('--edition');
+    if (editionIdx !== -1 && args[editionIdx + 1]) {
+      const editionName = args[editionIdx + 1];
+      const compiled = compileEdition(editionName, core);
+      writeJson(`zorba-${editionName}.json`, compiled);
+    }
+  }
+
+  console.log('\nDone.');
+}
+
+main();

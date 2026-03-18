@@ -1,0 +1,270 @@
+domain:
+  id: "824713"
+  number: 7
+  name: "Supply Chain"
+  subtitle: "Building a resilient, responsive supply network"
+  classification: value_chain
+  description: >
+    This domain encompasses the enterprise's ability to source, procure, move, store, and
+    distribute goods and services across its extended supply network. It spans from upstream
+    supplier relationships through internal logistics to final-mile delivery, and includes
+    the planning and risk management activities that keep the supply chain responsive and
+    resilient.
+
+    In a ZORBA-enabled enterprise, the supply chain is arguably the most agent-ready domain
+    — with mature use cases in demand forecasting, inventory optimisation, route planning,
+    supplier monitoring, and autonomous procurement within defined parameters. Agents here
+    operate at scale and speed that human-only models cannot match.
+
+  capabilities:
+    - id: "391572"
+      number: "7.1"
+      name: "Source and Procure Goods and Services"
+      description: >
+        Identify, evaluate, negotiate, and contract with suppliers to secure the goods and
+        services the enterprise requires — balancing cost, quality, risk, and sustainability
+        objectives.
+      processes:
+        - id: "518234"
+          number: "7.1.1"
+          name: "Define sourcing strategies and category plans"
+          agentic_profile: "H+a"
+          agentic_note: "Humans design strategy; agents analyse spend data and market conditions"
+        - id: "673841"
+          number: "7.1.2"
+          name: "Identify and qualify potential suppliers"
+          agentic_profile: "h+A"
+          agentic_note: "Agents screen supplier databases and assess fit; humans shortlist"
+        - id: "429187"
+          number: "7.1.3"
+          name: "Conduct sourcing events and negotiate terms"
+          agentic_profile: "H+a"
+          agentic_note: "Humans lead negotiations; agents model scenarios and benchmark pricing"
+        - id: "856312"
+          number: "7.1.4"
+          name: "Manage purchase orders and procurement transactions"
+          agentic_profile: A
+          agentic_note: "Agent-executed; automated PO creation within approved parameters"
+        - id: "294768"
+          number: "7.1.5"
+          name: "Evaluate and onboard new suppliers"
+          agentic_profile: "H=A"
+          agentic_note: "Agents run due diligence checks; humans make final approval decisions"
+        - id: "731456"
+          number: "7.1.6"
+          name: "Manage contract compliance and renewal cycles"
+          agentic_profile: "h+A"
+          agentic_note: "Agents track contract terms and flag renewals; humans negotiate amendments"
+
+    - id: "562381"
+      number: "7.2"
+      name: "Manage Supplier Relationships and Performance"
+      description: >
+        Build, maintain, and govern ongoing relationships with suppliers — monitoring
+        performance, managing development, and ensuring mutual value creation across the
+        supply base.
+      processes:
+        - id: "184329"
+          number: "7.2.1"
+          name: "Segment and tier the supplier base"
+          agentic_profile: "H=A"
+          agentic_note: "Agents analyse spend and risk data; humans define segmentation criteria"
+        - id: "647213"
+          number: "7.2.2"
+          name: "Monitor and evaluate supplier performance"
+          agentic_profile: "h+A"
+          agentic_note: "Agents track KPIs and generate scorecards; humans review and act"
+        - id: "815674"
+          number: "7.2.3"
+          name: "Conduct supplier business reviews and development programmes"
+          agentic_profile: "H+a"
+          agentic_note: "Humans lead reviews; agents prepare performance packs and trend analysis"
+        - id: "392847"
+          number: "7.2.4"
+          name: "Manage supplier corrective actions and improvement plans"
+          agentic_profile: "H=A"
+          agentic_note: "Agents track actions and deadlines; humans manage supplier engagement"
+        - id: "536412"
+          number: "7.2.5"
+          name: "Manage supplier risk and contingency planning"
+          agentic_profile: "h+A"
+          agentic_note: "Agents monitor risk signals (financial, geopolitical); humans define contingencies"
+
+    - id: "418639"
+      number: "7.3"
+      name: "Plan and Manage Logistics and Distribution"
+      description: >
+        Design, operate, and optimise the physical movement of goods from origin to
+        destination — including transportation, warehousing, and distribution network
+        management.
+      processes:
+        - id: "729385"
+          number: "7.3.1"
+          name: "Design and optimise the distribution network"
+          agentic_profile: "H=A"
+          agentic_note: "Agents model network scenarios; humans decide structural changes"
+        - id: "563412"
+          number: "7.3.2"
+          name: "Plan and schedule transportation movements"
+          agentic_profile: A
+          agentic_note: "Agent-executed; automated route optimisation and carrier assignment"
+        - id: "847261"
+          number: "7.3.3"
+          name: "Manage warehousing and distribution centre operations"
+          agentic_profile: "H=A"
+          agentic_note: "Agents optimise storage and picking; humans manage workforce and exceptions"
+        - id: "218534"
+          number: "7.3.4"
+          name: "Track shipments and manage in-transit visibility"
+          agentic_profile: A
+          agentic_note: "Agent-executed; real-time tracking with proactive exception alerts"
+        - id: "694173"
+          number: "7.3.5"
+          name: "Manage freight costs and carrier performance"
+          agentic_profile: "h+A"
+          agentic_note: "Agents analyse costs and benchmark carriers; humans negotiate and select"
+        - id: "375918"
+          number: "7.3.6"
+          name: "Manage returns logistics and reverse supply chain"
+          agentic_profile: "H=A"
+          agentic_note: "Agents process returns and route items; humans handle disposition decisions"
+
+    - id: "257914"
+      number: "7.4"
+      name: "Manage Inventory Across the Supply Network"
+      description: >
+        Plan, control, and optimise inventory levels across all nodes in the supply chain —
+        balancing service levels, working capital, and obsolescence risk.
+      processes:
+        - id: "483126"
+          number: "7.4.1"
+          name: "Set inventory policies and target service levels"
+          agentic_profile: "H+a"
+          agentic_note: "Humans define policies; agents model trade-offs and recommend targets"
+        - id: "926347"
+          number: "7.4.2"
+          name: "Monitor inventory positions and movements in real time"
+          agentic_profile: A
+          agentic_note: "Agent-executed; continuous visibility with automated reorder triggers"
+        - id: "614283"
+          number: "7.4.3"
+          name: "Optimise replenishment and reorder parameters"
+          agentic_profile: "h+A"
+          agentic_note: "Agents calculate optimal parameters; humans approve significant changes"
+        - id: "730226"
+          number: "7.4.4"
+          name: "Manage slow-moving, excess, and obsolete inventory"
+          agentic_profile: "H=A"
+          agentic_note: "Agents identify at-risk stock; humans decide write-down or disposal actions"
+        - id: "742158"
+          number: "7.4.5"
+          name: "Conduct inventory counts and reconciliation"
+          agentic_profile: "H=A"
+          agentic_note: "Agents schedule and track counts; humans investigate discrepancies"
+
+    - id: "693248"
+      number: "7.5"
+      name: "Optimise Demand Forecasting and Supply Planning"
+      description: >
+        Generate, refine, and act on demand forecasts that drive supply chain planning
+        decisions — integrating statistical models, market intelligence, and collaborative
+        input from sales and operations.
+      processes:
+        - id: "821634"
+          number: "7.5.1"
+          name: "Generate statistical demand forecasts"
+          agentic_profile: A
+          agentic_note: "Agent-executed; automated model selection and forecast generation"
+        - id: "475312"
+          number: "7.5.2"
+          name: "Enrich forecasts with market intelligence and sales input"
+          agentic_profile: "H=A"
+          agentic_note: "Agents integrate data sources; humans add qualitative judgement"
+        - id: "316849"
+          number: "7.5.3"
+          name: "Conduct sales and operations planning cycles"
+          agentic_profile: "H+a"
+          agentic_note: "Humans lead consensus process; agents prepare scenarios and gap analysis"
+        - id: "548273"
+          number: "7.5.4"
+          name: "Translate demand plans into supply and production signals"
+          agentic_profile: "h+A"
+          agentic_note: "Agents generate supply plans; humans validate feasibility"
+        - id: "192467"
+          number: "7.5.5"
+          name: "Monitor forecast accuracy and refine models"
+          agentic_profile: A
+          agentic_note: "Agent-executed; continuous model tuning with human review of significant shifts"
+        - id: "763518"
+          number: "7.5.6"
+          name: "Manage demand shaping and demand sensing"
+          agentic_profile: "h+A"
+          agentic_note: "Agents detect demand signals in real time; humans decide shaping actions"
+
+    - id: "438172"
+      number: "7.6"
+      name: "Manage Supply Chain Risk and Resilience"
+      description: >
+        Identify, monitor, and mitigate risks across the extended supply chain — from
+        single-source dependencies to geopolitical disruptions — ensuring the supply
+        network can absorb and recover from shocks.
+      processes:
+        - id: "524381"
+          number: "7.6.1"
+          name: "Map and assess supply chain risk exposure"
+          agentic_profile: "h+A"
+          agentic_note: "Agents map multi-tier dependencies; humans assess strategic vulnerabilities"
+        - id: "879643"
+          number: "7.6.2"
+          name: "Monitor supply chain risk signals and early warnings"
+          agentic_profile: A
+          agentic_note: "Agent-executed; continuous scanning of geopolitical, weather, and financial signals"
+        - id: "316524"
+          number: "7.6.3"
+          name: "Develop and maintain supply chain contingency plans"
+          agentic_profile: "H+a"
+          agentic_note: "Humans design contingencies; agents maintain playbooks and test readiness"
+        - id: "741283"
+          number: "7.6.4"
+          name: "Execute supply chain disruption response"
+          agentic_profile: "H=A"
+          agentic_note: "Agents activate playbooks and reroute; humans manage critical decisions"
+        - id: "253918"
+          number: "7.6.5"
+          name: "Conduct supply chain resilience assessments and stress tests"
+          agentic_profile: "H=A"
+          agentic_note: "Agents run simulations; humans evaluate findings and invest in resilience"
+
+    - id: "185463"
+      number: "7.7"
+      name: "Govern Third-Party and Partner Ecosystem Relationships"
+      description: >
+        Manage the broader ecosystem of third-party service providers, logistics partners,
+        contract manufacturers, and platform participants that extend the enterprise's
+        supply chain capabilities.
+      processes:
+        - id: "642179"
+          number: "7.7.1"
+          name: "Define third-party governance frameworks and standards"
+          agentic_profile: "H+a"
+          agentic_note: "Humans set governance standards; agents benchmark and track compliance"
+        - id: "397514"
+          number: "7.7.2"
+          name: "Onboard and integrate ecosystem partners"
+          agentic_profile: "H=A"
+          agentic_note: "Agents manage onboarding workflows; humans approve and establish relationships"
+        - id: "813246"
+          number: "7.7.3"
+          name: "Monitor ecosystem partner performance and compliance"
+          agentic_profile: "h+A"
+          agentic_note: "Agents track SLAs and compliance metrics; humans manage escalations"
+        - id: "564832"
+          number: "7.7.4"
+          name: "Manage data exchange and integration across the ecosystem"
+          agentic_profile: "h+A"
+          agentic_note: "Agents operate integration platforms; humans govern data standards"
+        - id: "238617"
+          number: "7.7.5"
+          name: "Review and rationalise the partner ecosystem periodically"
+          agentic_profile: "H+a"
+          agentic_note: "Humans make portfolio decisions; agents analyse utilisation and overlap"

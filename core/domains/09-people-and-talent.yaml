@@ -1,0 +1,277 @@
+domain:
+  id: "482731"
+  number: 9
+  name: "People & Talent"
+  subtitle: "Attracting and orchestrating the blended workforce"
+  classification: management_function
+  description: >
+    This domain encompasses the enterprise's ability to attract, develop, engage, and retain
+    the human talent it needs — while simultaneously provisioning, calibrating, and managing
+    the agent workforce that operates alongside them. It spans the full employee lifecycle
+    from workforce planning through separation, and extends into the uniquely ZORBA territory
+    of blended workforce orchestration.
+
+    In a ZORBA-enabled enterprise, this domain is where the human and agent workforces are
+    designed, composed, and harmonised — ensuring that every role, whether filled by a person
+    or an agent, is deliberately planned, appropriately skilled, and continuously optimised.
+
+  capabilities:
+    - id: "361842"
+      number: "9.1"
+      name: "Plan and Analyse the Workforce"
+      description: >
+        Forecast workforce demand, assess current capacity, identify skills gaps, and build
+        strategic workforce plans that inform talent acquisition, development, and deployment
+        decisions.
+      processes:
+        - id: "529174"
+          number: "9.1.1"
+          name: "Forecast workforce demand by role, skill, and location"
+          agentic_profile: "h+A"
+          agentic_note: "Agents model demand using business plans and attrition data; humans validate assumptions"
+        - id: "814263"
+          number: "9.1.2"
+          name: "Assess current workforce capacity and skills inventory"
+          agentic_profile: "h+A"
+          agentic_note: "Agents aggregate skills data from multiple systems; humans verify accuracy"
+        - id: "673918"
+          number: "9.1.3"
+          name: "Identify critical skills gaps and surplus areas"
+          agentic_profile: "H=A"
+          agentic_note: "Agents surface gaps through analytics; humans interpret strategic implications"
+        - id: "245781"
+          number: "9.1.4"
+          name: "Develop strategic workforce plans and scenarios"
+          agentic_profile: "H+a"
+          agentic_note: "Humans design workforce strategy; agents model cost and feasibility scenarios"
+        - id: "918437"
+          number: "9.1.5"
+          name: "Monitor workforce metrics and trigger plan adjustments"
+          agentic_profile: A
+          agentic_note: "Agent-executed; continuous monitoring with automated alerting on threshold breaches"
+
+    - id: "749163"
+      number: "9.2"
+      name: "Acquire Talent and Onboard New Starters"
+      description: >
+        Attract, select, and hire the right people, then integrate them effectively into the
+        organisation through structured onboarding that accelerates time-to-productivity.
+      processes:
+        - id: "382549"
+          number: "9.2.1"
+          name: "Define role requirements and craft position profiles"
+          agentic_profile: "H=A"
+          agentic_note: "Agents draft from templates and market data; humans refine and approve"
+        - id: "617284"
+          number: "9.2.2"
+          name: "Source and attract candidates through multiple channels"
+          agentic_profile: "h+A"
+          agentic_note: "Agents manage job postings, screen CVs, and engage passive talent; humans curate shortlists"
+        - id: "453712"
+          number: "9.2.3"
+          name: "Assess and select candidates through structured evaluation"
+          agentic_profile: "H+a"
+          agentic_note: "Humans lead interviews and decisions; agents schedule, score assessments, and flag inconsistencies"
+        - id: "198436"
+          number: "9.2.4"
+          name: "Extend offers and manage pre-employment processes"
+          agentic_profile: "H=A"
+          agentic_note: "Agents generate offers and manage checks; humans approve terms and handle negotiations"
+        - id: "726351"
+          number: "9.2.5"
+          name: "Deliver structured onboarding programmes"
+          agentic_profile: "H=A"
+          agentic_note: "Agents orchestrate onboarding journeys and track completion; humans provide cultural integration"
+        - id: "564893"
+          number: "9.2.6"
+          name: "Evaluate onboarding effectiveness and time-to-productivity"
+          agentic_profile: "h+A"
+          agentic_note: "Agents measure onboarding KPIs; humans interpret and refine the programme"
+
+    - id: "285641"
+      number: "9.3"
+      name: "Develop Skills and Foster Continuous Learning"
+      description: >
+        Build organisational capability through learning programmes, career development,
+        coaching, and knowledge-sharing — ensuring the workforce evolves in line with
+        strategic needs.
+      processes:
+        - id: "413872"
+          number: "9.3.1"
+          name: "Assess learning needs across the organisation"
+          agentic_profile: "H=A"
+          agentic_note: "Agents analyse skills gaps and performance data; humans prioritise development areas"
+        - id: "769215"
+          number: "9.3.2"
+          name: "Design and curate learning programmes and content"
+          agentic_profile: "H+a"
+          agentic_note: "Humans design curricula; agents curate content and personalise learning paths"
+        - id: "328946"
+          number: "9.3.3"
+          name: "Deliver learning through multiple modalities"
+          agentic_profile: "H=A"
+          agentic_note: "Agents deliver digital learning and track progress; humans facilitate workshops and coaching"
+        - id: "651428"
+          number: "9.3.4"
+          name: "Manage career development and succession planning"
+          agentic_profile: "H+a"
+          agentic_note: "Humans guide career conversations; agents maintain succession pipelines and readiness dashboards"
+        - id: "894317"
+          number: "9.3.5"
+          name: "Operate mentoring and coaching programmes"
+          agentic_profile: H
+          agentic_note: "Human-led; agents match mentors to mentees and schedule sessions"
+        - id: "537264"
+          number: "9.3.6"
+          name: "Measure learning impact and return on investment"
+          agentic_profile: "h+A"
+          agentic_note: "Agents track completion, assessment scores, and performance correlation; humans validate business impact"
+
+    - id: "613274"
+      number: "9.4"
+      name: "Manage Compensation, Benefits, and Rewards"
+      description: >
+        Design, administer, and continuously optimise the total rewards proposition — ensuring
+        it attracts and retains talent while remaining financially sustainable and equitable.
+      processes:
+        - id: "482139"
+          number: "9.4.1"
+          name: "Design compensation structures and pay frameworks"
+          agentic_profile: "H+a"
+          agentic_note: "Humans design philosophy and structures; agents benchmark against market data"
+        - id: "736518"
+          number: "9.4.2"
+          name: "Administer payroll and compensation processing"
+          agentic_profile: A
+          agentic_note: "Agent-executed; automated payroll runs with human exception handling"
+        - id: "541046"
+          number: "9.4.3"
+          name: "Manage employee benefits programmes and enrolment"
+          agentic_profile: "H=A"
+          agentic_note: "Agents administer enrolment and queries; humans design benefits strategy"
+        - id: "518463"
+          number: "9.4.4"
+          name: "Operate recognition and reward programmes"
+          agentic_profile: "H+a"
+          agentic_note: "Humans design programmes; agents track nominations and distribute rewards"
+        - id: "847321"
+          number: "9.4.5"
+          name: "Conduct pay equity analysis and remediation"
+          agentic_profile: "h+A"
+          agentic_note: "Agents analyse pay data for disparities; humans decide remediation actions"
+
+    - id: "174829"
+      number: "9.5"
+      name: "Cultivate Employee Experience and Engagement"
+      description: >
+        Shape the end-to-end employee experience — from cultural environment to wellbeing —
+        and actively monitor and improve workforce engagement to drive retention and performance.
+      processes:
+        - id: "639217"
+          number: "9.5.1"
+          name: "Design and manage the employee experience journey"
+          agentic_profile: "H+a"
+          agentic_note: "Humans design experience touchpoints; agents map journeys and identify friction"
+        - id: "481753"
+          number: "9.5.2"
+          name: "Measure and analyse employee engagement"
+          agentic_profile: "h+A"
+          agentic_note: "Agents deploy surveys, analyse sentiment, and surface trends; humans interpret and act"
+        - id: "352946"
+          number: "9.5.3"
+          name: "Manage employee wellbeing and welfare programmes"
+          agentic_profile: "H+a"
+          agentic_note: "Humans design programmes and provide pastoral support; agents signpost resources and track utilisation"
+        - id: "718294"
+          number: "9.5.4"
+          name: "Foster workplace culture and inclusion"
+          agentic_profile: H
+          agentic_note: "Human-led; culture requires authentic human leadership and role modelling"
+        - id: "263841"
+          number: "9.5.5"
+          name: "Manage internal employee communication channels"
+          agentic_profile: "H=A"
+          agentic_note: "Agents create and distribute content; humans set narrative and tone"
+        - id: "895412"
+          number: "9.5.6"
+          name: "Handle employee grievances and conflict resolution"
+          agentic_profile: H
+          agentic_note: "Human-led; agents manage case tracking and documentation only"
+
+    - id: "527389"
+      number: "9.6"
+      name: "Operate HR Administration and Services"
+      description: >
+        Deliver efficient, accurate, and compliant HR operational services — including employee
+        records management, policy administration, and HR service delivery.
+      processes:
+        - id: "741628"
+          number: "9.6.1"
+          name: "Maintain employee records and HR master data"
+          agentic_profile: A
+          agentic_note: "Agent-executed; automated record maintenance with human audit"
+        - id: "368215"
+          number: "9.6.2"
+          name: "Administer HR policies and procedures"
+          agentic_profile: "H=A"
+          agentic_note: "Agents distribute policies and track acknowledgement; humans author and update policies"
+        - id: "294573"
+          number: "9.6.3"
+          name: "Operate the HR service desk and case management"
+          agentic_profile: "h+A"
+          agentic_note: "Agents handle tier-1 queries and route complex cases; humans resolve escalations"
+        - id: "856149"
+          number: "9.6.4"
+          name: "Manage employee lifecycle events and transitions"
+          agentic_profile: "H=A"
+          agentic_note: "Agents process promotions, transfers, and separations; humans approve and communicate"
+        - id: "612837"
+          number: "9.6.5"
+          name: "Ensure HR regulatory compliance and statutory reporting"
+          agentic_profile: "h+A"
+          agentic_note: "Agents monitor regulatory changes and prepare filings; humans review and submit"
+
+    - id: "938214"
+      number: "9.7"
+      name: "Manage the Blended Workforce"
+      description: >
+        ZORBA-specific capability. Provision, configure, monitor, and govern the agent workforce
+        alongside the human workforce — ensuring agents are treated as managed participants in
+        the operating model with defined roles, performance expectations, trust boundaries, and
+        lifecycle management.
+      processes:
+        - id: "427813"
+          number: "9.7.1"
+          name: "Provision and configure new agents into the workforce"
+          agentic_profile: "H=A"
+          agentic_note: "Agents automate provisioning workflows; humans approve agent deployment and role assignment"
+        - id: "583146"
+          number: "9.7.2"
+          name: "Define agent roles, responsibilities, and trust boundaries"
+          agentic_profile: "H+a"
+          agentic_note: "Humans define trust levels and guardrails; agents maintain the role registry"
+        - id: "719432"
+          number: "9.7.3"
+          name: "Monitor agent performance and behavioural compliance"
+          agentic_profile: "h+A"
+          agentic_note: "Agents monitor agent fleet metrics and flag anomalies; humans investigate and intervene"
+        - id: "264891"
+          number: "9.7.4"
+          name: "Calibrate agent trust levels and autonomy thresholds"
+          agentic_profile: "H+a"
+          agentic_note: "Humans set trust policy; agents track performance and recommend recalibration"
+        - id: "835617"
+          number: "9.7.5"
+          name: "Manage the agent lifecycle — updates, retraining, and retirement"
+          agentic_profile: "H=A"
+          agentic_note: "Agents execute lifecycle workflows; humans approve major transitions and decommissioning"
+        - id: "391528"
+          number: "9.7.6"
+          name: "Coordinate human-agent teaming and workload distribution"
+          agentic_profile: "H=A"
+          agentic_note: "Agents optimise task routing; humans oversee balance and intervene on conflicts"
+        - id: "642375"
+          number: "9.7.7"
+          name: "Report on blended workforce composition and effectiveness"
+          agentic_profile: "h+A"
+          agentic_note: "Agents generate dashboards and trend reports; humans interpret and present to leadership"

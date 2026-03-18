@@ -1,0 +1,274 @@
+domain:
+  id: "329571"
+  number: 11
+  name: "Risk, Legal & Compliance"
+  subtitle: "Governing trust in a human-agent enterprise"
+  classification: management_function
+  description: >
+    This domain encompasses the enterprise's ability to identify, assess, and mitigate risk,
+    provide legal counsel, ensure regulatory compliance, conduct independent assurance, and
+    uphold ethical standards. It is the domain where organisational trust is built, protected,
+    and demonstrated to regulators, customers, and the public.
+
+    In a ZORBA-enabled enterprise, this domain bears a critical additional responsibility:
+    governing the behaviour, compliance, and trustworthiness of AI agents — ensuring algorithmic
+    decisions are explainable, auditable, and aligned with regulatory expectations and
+    organisational values.
+
+  capabilities:
+    - id: "481327"
+      number: "11.1"
+      name: "Manage Enterprise Risk"
+      description: >
+        Identify, assess, treat, and monitor risks across the enterprise — maintaining the
+        risk register, operating risk frameworks, and ensuring risks are owned, communicated,
+        and actively managed.
+      processes:
+        - id: "724619"
+          number: "11.1.1"
+          name: "Maintain the enterprise risk framework and taxonomy"
+          agentic_profile: "H+a"
+          agentic_note: "Humans design the framework; agents maintain documentation and version control"
+        - id: "358241"
+          number: "11.1.2"
+          name: "Identify and register risks across domains and units"
+          agentic_profile: "H=A"
+          agentic_note: "Agents scan for emerging risks and prompt registration; humans validate and classify"
+        - id: "916473"
+          number: "11.1.3"
+          name: "Assess and score risks by likelihood and impact"
+          agentic_profile: "H=A"
+          agentic_note: "Agents compute risk scores using agreed methodologies; humans exercise qualitative judgement"
+        - id: "542168"
+          number: "11.1.4"
+          name: "Define and track risk treatment plans"
+          agentic_profile: "H+a"
+          agentic_note: "Humans design treatments; agents track implementation and flag overdue actions"
+        - id: "273894"
+          number: "11.1.5"
+          name: "Monitor the risk landscape and produce risk reports"
+          agentic_profile: "h+A"
+          agentic_note: "Agents monitor continuously and generate risk dashboards; humans interpret for leadership"
+        - id: "685312"
+          number: "11.1.6"
+          name: "Conduct risk scenario analysis and stress testing"
+          agentic_profile: "H=A"
+          agentic_note: "Agents run simulations and model scenarios; humans define parameters and interpret results"
+
+    - id: "817432"
+      number: "11.2"
+      name: "Provide Legal Services and Manage Contracts"
+      description: >
+        Deliver legal counsel to the enterprise, manage the contract lifecycle, handle disputes
+        and litigation, and ensure the organisation's legal interests are protected.
+      processes:
+        - id: "439256"
+          number: "11.2.1"
+          name: "Provide legal advice and counsel to business units"
+          agentic_profile: H
+          agentic_note: "Human-led; legal judgement requires qualified human practitioners"
+        - id: "763148"
+          number: "11.2.2"
+          name: "Draft, review, and negotiate contracts"
+          agentic_profile: "H+a"
+          agentic_note: "Humans lead negotiation and review; agents draft from templates and flag non-standard clauses"
+        - id: "291875"
+          number: "11.2.3"
+          name: "Manage the contract lifecycle and obligations tracking"
+          agentic_profile: "h+A"
+          agentic_note: "Agents track milestones, renewals, and obligations; humans handle exceptions and renegotiations"
+        - id: "648312"
+          number: "11.2.4"
+          name: "Manage disputes, litigation, and regulatory proceedings"
+          agentic_profile: H
+          agentic_note: "Human-led; agents manage case files, deadlines, and document assembly"
+        - id: "527493"
+          number: "11.2.5"
+          name: "Maintain the legal entity structure and corporate records"
+          agentic_profile: "h+A"
+          agentic_note: "Agents maintain records and filing calendars; humans authorise structural changes"
+        - id: "184736"
+          number: "11.2.6"
+          name: "Manage intellectual property and brand protection"
+          agentic_profile: "H+a"
+          agentic_note: "Humans make IP strategy decisions; agents monitor infringement and manage filings"
+
+    - id: "265918"
+      number: "11.3"
+      name: "Ensure Regulatory Compliance"
+      description: >
+        Monitor the regulatory environment, interpret obligations, implement compliance
+        programmes, and demonstrate adherence to all applicable laws, regulations, and
+        industry standards.
+      processes:
+        - id: "834152"
+          number: "11.3.1"
+          name: "Monitor and interpret regulatory changes and obligations"
+          agentic_profile: "h+A"
+          agentic_note: "Agents scan regulatory feeds and summarise changes; humans assess applicability"
+        - id: "496731"
+          number: "11.3.2"
+          name: "Design and implement compliance programmes"
+          agentic_profile: "H+a"
+          agentic_note: "Humans design programmes; agents operationalise controls and track adoption"
+        - id: "713549"
+          number: "11.3.3"
+          name: "Conduct compliance assessments and testing"
+          agentic_profile: "H=A"
+          agentic_note: "Agents execute automated compliance checks; humans investigate exceptions"
+        - id: "358274"
+          number: "11.3.4"
+          name: "Manage regulatory filings and submissions"
+          agentic_profile: "h+A"
+          agentic_note: "Agents prepare and submit filings; humans review and approve before submission"
+        - id: "621483"
+          number: "11.3.5"
+          name: "Manage relationships with regulators and supervisory bodies"
+          agentic_profile: H
+          agentic_note: "Human-led; regulatory relationships require human diplomacy and judgement"
+
+    - id: "742613"
+      number: "11.4"
+      name: "Conduct Internal Audit and Assurance"
+      description: >
+        Provide independent, objective assurance over the effectiveness of governance, risk
+        management, and internal controls — operating with professional scepticism and
+        organisational independence.
+      processes:
+        - id: "318947"
+          number: "11.4.1"
+          name: "Develop the risk-based internal audit plan"
+          agentic_profile: "H+a"
+          agentic_note: "Humans set audit priorities; agents analyse risk data to inform planning"
+        - id: "856271"
+          number: "11.4.2"
+          name: "Execute audit engagements and fieldwork"
+          agentic_profile: "H=A"
+          agentic_note: "Agents perform data analytics and automated testing; humans conduct interviews and assess controls"
+        - id: "493128"
+          number: "11.4.3"
+          name: "Report audit findings and recommendations"
+          agentic_profile: "H+a"
+          agentic_note: "Humans form opinions and present findings; agents draft reports and track management responses"
+        - id: "627314"
+          number: "11.4.4"
+          name: "Monitor remediation of audit findings"
+          agentic_profile: "h+A"
+          agentic_note: "Agents track action completion and escalate overdue items; humans validate remediation quality"
+        - id: "185439"
+          number: "11.4.5"
+          name: "Assess internal audit effectiveness and independence"
+          agentic_profile: H
+          agentic_note: "Human-led; independence assessment requires human objectivity"
+
+    - id: "593148"
+      number: "11.5"
+      name: "Protect Data Privacy and Personal Information"
+      description: >
+        Ensure the enterprise collects, processes, stores, and shares personal data lawfully,
+        transparently, and securely — meeting the requirements of privacy regulations and
+        respecting individual rights.
+      processes:
+        - id: "905427"
+          number: "11.5.1"
+          name: "Maintain the data privacy framework and policies"
+          agentic_profile: "H+a"
+          agentic_note: "Humans set privacy policy; agents track regulatory changes and flag required updates"
+        - id: "816542"
+          number: "11.5.2"
+          name: "Conduct data protection impact assessments"
+          agentic_profile: "H=A"
+          agentic_note: "Agents perform automated data mapping and initial assessments; humans evaluate high-risk processing"
+        - id: "439617"
+          number: "11.5.3"
+          name: "Manage data subject rights requests"
+          agentic_profile: "h+A"
+          agentic_note: "Agents process requests, locate data, and prepare responses; humans approve complex cases"
+        - id: "758243"
+          number: "11.5.4"
+          name: "Monitor data processing activities for compliance"
+          agentic_profile: A
+          agentic_note: "Agent-executed; continuous monitoring of data flows against consent and purpose records"
+        - id: "361829"
+          number: "11.5.5"
+          name: "Manage data breach notification and response"
+          agentic_profile: "H+a"
+          agentic_note: "Humans lead response and notification decisions; agents detect breaches and manage timelines"
+
+    - id: "428173"
+      number: "11.6"
+      name: "Uphold Ethics and Standards of Conduct"
+      description: >
+        Establish and enforce the ethical standards, codes of conduct, and behavioural
+        expectations that govern how people — and agents — operate within the enterprise.
+      processes:
+        - id: "537284"
+          number: "11.6.1"
+          name: "Define and maintain the code of ethics and conduct"
+          agentic_profile: H
+          agentic_note: "Human-led; ethical standards require human moral reasoning"
+        - id: "841396"
+          number: "11.6.2"
+          name: "Deliver ethics awareness and training programmes"
+          agentic_profile: "H=A"
+          agentic_note: "Agents deliver training modules and track completion; humans facilitate ethical reasoning discussions"
+        - id: "334130"
+          number: "11.6.3"
+          name: "Operate whistleblowing and speak-up channels"
+          agentic_profile: "H+a"
+          agentic_note: "Humans manage investigations; agents operate reporting channels and ensure anonymity"
+        - id: "382514"
+          number: "11.6.4"
+          name: "Investigate ethical violations and misconduct"
+          agentic_profile: H
+          agentic_note: "Human-led investigation; agents manage case files and evidence assembly"
+        - id: "714928"
+          number: "11.6.5"
+          name: "Monitor organisational culture and ethical climate"
+          agentic_profile: "H=A"
+          agentic_note: "Agents analyse survey data and behavioural signals; humans interpret and intervene"
+
+    - id: "196482"
+      number: "11.7"
+      name: "Govern AI Agents and Ensure Algorithmic Compliance"
+      description: >
+        ZORBA-specific capability. Establish and operate the governance framework for AI
+        agents — ensuring their decisions are explainable, their behaviour is auditable,
+        their outputs are fair, and their operation complies with emerging AI regulations
+        and organisational policies.
+      processes:
+        - id: "853217"
+          number: "11.7.1"
+          name: "Define and maintain the AI governance framework and policies"
+          agentic_profile: "H+a"
+          agentic_note: "Humans set governance principles; agents maintain the policy repository and version history"
+        - id: "472831"
+          number: "11.7.2"
+          name: "Conduct algorithmic impact assessments before deployment"
+          agentic_profile: "H=A"
+          agentic_note: "Agents run bias testing and impact simulations; humans evaluate results and approve deployment"
+        - id: "618943"
+          number: "11.7.3"
+          name: "Monitor agent decisions for fairness, bias, and drift"
+          agentic_profile: "h+A"
+          agentic_note: "Agents continuously monitor decision patterns and flag anomalies; humans investigate and remediate"
+        - id: "345176"
+          number: "11.7.4"
+          name: "Maintain audit trails and explainability records for agent actions"
+          agentic_profile: A
+          agentic_note: "Agent-executed; automated logging and explainability record generation"
+        - id: "729368"
+          number: "11.7.5"
+          name: "Ensure compliance with AI-specific regulations and standards"
+          agentic_profile: "H=A"
+          agentic_note: "Agents track evolving AI regulation; humans interpret obligations and design compliance responses"
+        - id: "561294"
+          number: "11.7.6"
+          name: "Manage AI incident response and agent-related escalations"
+          agentic_profile: "H+a"
+          agentic_note: "Humans lead incident response; agents isolate affected agents and preserve evidence"
+        - id: "887507"
+          number: "11.7.7"
+          name: "Report on AI governance maturity and agent compliance posture"
+          agentic_profile: "h+A"
+          agentic_note: "Agents generate compliance dashboards; humans present to governance bodies and regulators"
