@@ -8,16 +8,19 @@ theme:
   name: material
   logo: assets/logo-light.png
   favicon: assets/logo-dark.png
+  font:
+    text: Inter
+    code: JetBrains Mono
   palette:
     - scheme: slate
-      primary: blue grey
-      accent: teal
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
     - scheme: default
-      primary: blue grey
-      accent: teal
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -26,6 +29,10 @@ theme:
     - navigation.top
     - toc.follow
     - search.highlight
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Home: index.md
@@ -46,5 +53,8 @@ nav:
 markdown_extensions:
   - tables
   - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
   - toc:
       permalink: true
