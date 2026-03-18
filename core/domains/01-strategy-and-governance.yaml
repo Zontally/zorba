@@ -1,0 +1,378 @@
+domain:
+  id: "738201"
+  number: 1
+  name: "Strategy & Governance"
+  subtitle: "Setting direction and ensuring accountability"
+  classification: management_function
+  description: >
+    This domain encompasses the enterprise's ability to define its purpose, set strategic
+    direction, govern its operations, manage enterprise-wide performance, and ensure the
+    organisation adapts and transforms to remain competitive. It is the domain where
+    long-term intent is formulated, corporate accountability is established, and
+    enterprise-wide coordination is orchestrated.
+
+    In a ZORBA-enabled enterprise, this domain also governs how the blended workforce
+    itself is designed and overseen — ensuring that the human/agent operating model is a
+    deliberate strategic choice, not an emergent accident.
+
+  capabilities:
+    - id: "284713"
+      number: "1.1"
+      name: "Define the Business Concept and Long-Term Vision"
+      description: >
+        Establish the foundational purpose, mission, values, and long-term vision of
+        the enterprise. This capability ensures the organisation has a clearly articulated
+        reason for existing and a compelling picture of its future state.
+      processes:
+        - id: "517342"
+          number: "1.1.1"
+          name: "Develop and articulate the enterprise mission and purpose"
+          agentic_profile: H
+          agentic_note: "Human-led; agents may research peer missions for benchmarking"
+        - id: "842156"
+          number: "1.1.2"
+          name: "Define and codify organisational values and principles"
+          agentic_profile: H
+          agentic_note: "Human-led; values require authentic human deliberation"
+        - id: "394028"
+          number: "1.1.3"
+          name: "Formulate the long-term vision and strategic ambition"
+          agentic_profile: "H+a"
+          agentic_note: "Human-led with agent scenario modelling and trend analysis"
+        - id: "651873"
+          number: "1.1.4"
+          name: "Communicate vision and purpose across the enterprise"
+          agentic_profile: "H=A"
+          agentic_note: "Agents generate communications; humans approve and personalise"
+        - id: "923467"
+          number: "1.1.5"
+          name: "Review and refresh the business concept periodically"
+          agentic_profile: "H+a"
+          agentic_note: "Agents monitor market shifts and trigger review cycles"
+
+    - id: "156489"
+      number: "1.2"
+      name: "Develop and Manage Enterprise Strategy"
+      description: >
+        Translate the long-term vision into a coherent strategic plan that defines where
+        the enterprise will compete, how it will win, and what capabilities it requires.
+        This includes environmental analysis, strategic option evaluation, and strategy
+        documentation.
+      processes:
+        - id: "308741"
+          number: "1.2.1"
+          name: "Conduct environmental and market analysis"
+          agentic_profile: "h+A"
+          agentic_note: "Agent-heavy; agents scan, synthesise, and present; humans interpret"
+        - id: "762514"
+          number: "1.2.2"
+          name: "Assess internal capabilities and strategic readiness"
+          agentic_profile: "H=A"
+          agentic_note: "Agents map capabilities and gaps; humans validate and prioritise"
+        - id: "439286"
+          number: "1.2.3"
+          name: "Identify and evaluate strategic options"
+          agentic_profile: "H+a"
+          agentic_note: "Agents model scenarios and outcomes; humans judge and decide"
+        - id: "185673"
+          number: "1.2.4"
+          name: "Select and commit to strategic direction"
+          agentic_profile: H
+          agentic_note: "Human decision; agents provide decision-support artefacts"
+        - id: "624831"
+          number: "1.2.5"
+          name: "Document and formalise the strategic plan"
+          agentic_profile: "h+A"
+          agentic_note: "Agents draft; humans review, refine, and approve"
+        - id: "571948"
+          number: "1.2.6"
+          name: "Cascade strategy across organisational units and domains"
+          agentic_profile: "H=A"
+          agentic_note: "Agents distribute and track acknowledgement; humans contextualise for their teams"
+        - id: "893215"
+          number: "1.2.7"
+          name: "Monitor strategic assumptions and trigger strategy refresh"
+          agentic_profile: A
+          agentic_note: "Agents continuously monitor assumptions; alert humans when conditions change"
+
+    - id: "472053"
+      number: "1.3"
+      name: "Manage Strategic Planning Cycles and Cadences"
+      description: >
+        Define and operate the rhythms through which strategy is planned, reviewed, and
+        refreshed — including annual planning cycles, quarterly reviews, and event-driven
+        strategic responses.
+      processes:
+        - id: "341679"
+          number: "1.3.1"
+          name: "Define the strategic planning calendar and milestones"
+          agentic_profile: "H+a"
+          agentic_note: "Humans set cadences; agents schedule and track"
+        - id: "728463"
+          number: "1.3.2"
+          name: "Coordinate cross-functional input to strategic planning"
+          agentic_profile: "H=A"
+          agentic_note: "Agents orchestrate collection; humans contribute substance"
+        - id: "514927"
+          number: "1.3.3"
+          name: "Facilitate strategic review sessions"
+          agentic_profile: "H+a"
+          agentic_note: "Agents prepare briefing packs; humans facilitate discussion"
+        - id: "896234"
+          number: "1.3.4"
+          name: "Manage the transition from planning to execution"
+          agentic_profile: "H=A"
+          agentic_note: "Agents translate strategy into initiative structures; humans approve"
+        - id: "263148"
+          number: "1.3.5"
+          name: "Operate concurrent planning horizons"
+          agentic_profile: "H=A"
+          agentic_note: "Agents maintain multiple planning timelines; humans prioritise across horizons"
+
+    - id: "619372"
+      number: "1.4"
+      name: "Manage Corporate Governance and Board Operations"
+      description: >
+        Ensure the enterprise operates within its governance framework — including board
+        management, fiduciary oversight, shareholder relations, and regulatory governance
+        obligations.
+      processes:
+        - id: "485213"
+          number: "1.4.1"
+          name: "Manage board composition, meetings, and administration"
+          agentic_profile: "h+A"
+          agentic_note: "Agents handle scheduling, document prep, minutes; humans govern"
+        - id: "753648"
+          number: "1.4.2"
+          name: "Prepare and distribute board and committee packs"
+          agentic_profile: "h+A"
+          agentic_note: "Agent-assembled; humans review and approve content"
+        - id: "192837"
+          number: "1.4.3"
+          name: "Manage fiduciary and regulatory governance obligations"
+          agentic_profile: "H+a"
+          agentic_note: "Agents monitor compliance calendars; humans exercise fiduciary judgement"
+        - id: "647312"
+          number: "1.4.4"
+          name: "Coordinate shareholder and stakeholder communications"
+          agentic_profile: "H=A"
+          agentic_note: "Agents draft; humans approve tone and content"
+        - id: "831456"
+          number: "1.4.5"
+          name: "Maintain the corporate governance framework and policies"
+          agentic_profile: "H=A"
+          agentic_note: "Agents track regulatory changes and flag policy gaps; humans update policies"
+
+    - id: "537182"
+      number: "1.5"
+      name: "Manage Enterprise Performance"
+      description: >
+        Establish and operate the enterprise performance management system — defining KPIs,
+        tracking outcomes, conducting performance reviews, and ensuring accountability from
+        strategy through to execution.
+      processes:
+        - id: "412965"
+          number: "1.5.1"
+          name: "Define enterprise KPIs and performance frameworks"
+          agentic_profile: "H+a"
+          agentic_note: "Humans define what matters; agents benchmark and recommend targets"
+        - id: "869273"
+          number: "1.5.2"
+          name: "Collect, aggregate, and validate performance data"
+          agentic_profile: A
+          agentic_note: "Agent-executed; continuous automated data collection"
+        - id: "234817"
+          number: "1.5.3"
+          name: "Analyse performance trends and identify variances"
+          agentic_profile: "h+A"
+          agentic_note: "Agents analyse and surface insights; humans interpret meaning"
+        - id: "695148"
+          number: "1.5.4"
+          name: "Conduct periodic performance reviews"
+          agentic_profile: "H+a"
+          agentic_note: "Agents prepare review materials; humans lead review discussions"
+        - id: "748321"
+          number: "1.5.5"
+          name: "Manage corrective actions and performance interventions"
+          agentic_profile: "H+a"
+          agentic_note: "Humans decide interventions; agents track execution and follow-up"
+        - id: "513429"
+          number: "1.5.6"
+          name: "Report performance to governance bodies and stakeholders"
+          agentic_profile: "h+A"
+          agentic_note: "Agents generate reports; humans present and contextualise"
+
+    - id: "843625"
+      number: "1.6"
+      name: "Manage Strategic Partnerships and Alliances"
+      description: >
+        Identify, evaluate, establish, and govern strategic partnerships, joint ventures,
+        alliances, and ecosystem relationships that extend the enterprise's capabilities
+        and market reach.
+      processes:
+        - id: "372841"
+          number: "1.6.1"
+          name: "Identify and evaluate potential strategic partners"
+          agentic_profile: "H=A"
+          agentic_note: "Agents scan market and assess fit; humans evaluate relationship potential"
+        - id: "916254"
+          number: "1.6.2"
+          name: "Negotiate and formalise partnership agreements"
+          agentic_profile: H
+          agentic_note: "Human-led negotiation; agents support with research and document preparation"
+        - id: "284163"
+          number: "1.6.3"
+          name: "Manage ongoing partner relationships and governance"
+          agentic_profile: "H+a"
+          agentic_note: "Humans own relationships; agents track commitments and performance"
+        - id: "637412"
+          number: "1.6.4"
+          name: "Measure partner value and contribution"
+          agentic_profile: "h+A"
+          agentic_note: "Agents track metrics and ROI; humans assess strategic value"
+        - id: "459823"
+          number: "1.6.5"
+          name: "Manage partner ecosystem coordination"
+          agentic_profile: "H=A"
+          agentic_note: "Agents orchestrate information flow; humans manage strategic alignment"
+
+    - id: "291648"
+      number: "1.7"
+      name: "Manage Enterprise Architecture and Operating Model"
+      description: >
+        Define, maintain, and evolve the enterprise's architecture and operating model —
+        including the structural hierarchy, domain configuration, and blended workforce
+        design that ZORBA itself describes.
+      processes:
+        - id: "823147"
+          number: "1.7.1"
+          name: "Define and maintain the enterprise operating model"
+          agentic_profile: "H+a"
+          agentic_note: "Humans design; agents maintain documentation and track drift"
+        - id: "564219"
+          number: "1.7.2"
+          name: "Manage the enterprise domain and capability map"
+          agentic_profile: "H=A"
+          agentic_note: "Agents maintain the living map; humans make structural decisions"
+        - id: "715362"
+          number: "1.7.3"
+          name: "Design and govern the blended workforce architecture"
+          agentic_profile: "H+a"
+          agentic_note: "Humans set workforce composition targets; agents model scenarios and monitor actuals"
+        - id: "348972"
+          number: "1.7.4"
+          name: "Manage framework adoption and customisation"
+          agentic_profile: "H=A"
+          agentic_note: "Agents track framework versions and compliance; humans decide adaptations"
+        - id: "471836"
+          number: "1.7.5"
+          name: "Conduct operating model reviews and maturity assessments"
+          agentic_profile: "H=A"
+          agentic_note: "Agents assess maturity against benchmarks; humans interpret and act"
+
+    - id: "165734"
+      number: "1.8"
+      name: "Manage Business Transformation and Change"
+      description: >
+        Plan, coordinate, and execute enterprise-wide transformation initiatives —
+        including organisational change, digital transformation, operating model
+        transitions, and strategic restructuring.
+      processes:
+        - id: "924183"
+          number: "1.8.1"
+          name: "Identify and prioritise transformation opportunities"
+          agentic_profile: "H=A"
+          agentic_note: "Agents surface opportunities from data; humans prioritise by strategic value"
+        - id: "647521"
+          number: "1.8.2"
+          name: "Design transformation programmes and roadmaps"
+          agentic_profile: "H+a"
+          agentic_note: "Humans design; agents model dependencies and timelines"
+        - id: "382714"
+          number: "1.8.3"
+          name: "Manage organisational change and stakeholder readiness"
+          agentic_profile: "H+a"
+          agentic_note: "Humans lead change; agents monitor sentiment and readiness indicators"
+        - id: "538469"
+          number: "1.8.4"
+          name: "Execute and track transformation initiatives"
+          agentic_profile: "H=A"
+          agentic_note: "Agents track milestones, risks, and dependencies; humans lead delivery"
+        - id: "814237"
+          number: "1.8.5"
+          name: "Measure transformation outcomes and realise benefits"
+          agentic_profile: "h+A"
+          agentic_note: "Agents measure and report; humans validate benefit realisation"
+        - id: "276948"
+          number: "1.8.6"
+          name: "Embed change and ensure sustainability of new ways of working"
+          agentic_profile: "H+a"
+          agentic_note: "Humans reinforce behaviours; agents monitor adoption and flag regression"
+
+    - id: "428519"
+      number: "1.9"
+      name: "Manage Enterprise Risk Oversight"
+      description: >
+        Provide enterprise-wide risk oversight — identifying, assessing, and monitoring
+        strategic and operational risks that span domains and organisational units. This
+        is the strategic risk layer; domain-specific risk management sits within Domain 11
+        (Risk, Legal & Compliance).
+      processes:
+        - id: "753219"
+          number: "1.9.1"
+          name: "Define the enterprise risk appetite and tolerance"
+          agentic_profile: H
+          agentic_note: "Human decision; agents provide risk landscape context"
+        - id: "319847"
+          number: "1.9.2"
+          name: "Identify and assess enterprise-level risks"
+          agentic_profile: "H=A"
+          agentic_note: "Agents scan for emerging risks; humans assess severity and likelihood"
+        - id: "862431"
+          number: "1.9.3"
+          name: "Monitor the enterprise risk landscape continuously"
+          agentic_profile: A
+          agentic_note: "Agent-executed; continuous monitoring with human-defined alert thresholds"
+        - id: "547183"
+          number: "1.9.4"
+          name: "Report risk exposure to governance bodies"
+          agentic_profile: "h+A"
+          agentic_note: "Agents compile risk reports; humans present and contextualise"
+        - id: "691524"
+          number: "1.9.5"
+          name: "Coordinate risk response across domains and OUs"
+          agentic_profile: "H+a"
+          agentic_note: "Humans lead cross-domain response; agents track actions and dependencies"
+
+    - id: "374156"
+      number: "1.10"
+      name: "Manage Mergers, Acquisitions, and Divestitures"
+      description: >
+        Evaluate, execute, and integrate (or separate) corporate transactions that
+        reshape the enterprise's portfolio of businesses.
+      processes:
+        - id: "218463"
+          number: "1.10.1"
+          name: "Scan and evaluate acquisition and divestiture targets"
+          agentic_profile: "H=A"
+          agentic_note: "Agents screen and model; humans evaluate strategic fit"
+        - id: "785314"
+          number: "1.10.2"
+          name: "Conduct due diligence"
+          agentic_profile: "H=A"
+          agentic_note: "Agents process and analyse data rooms; humans assess risks and red flags"
+        - id: "436129"
+          number: "1.10.3"
+          name: "Negotiate and structure transactions"
+          agentic_profile: H
+          agentic_note: "Human-led negotiation with agent research support"
+        - id: "862541"
+          number: "1.10.4"
+          name: "Plan and execute post-merger integration"
+          agentic_profile: "H+a"
+          agentic_note: "Humans lead integration; agents track workstreams and synergies"
+        - id: "519873"
+          number: "1.10.5"
+          name: "Plan and execute divestitures and separations"
+          agentic_profile: "H+a"
+          agentic_note: "Humans lead separation; agents manage checklists and dependencies"

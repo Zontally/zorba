@@ -1,0 +1,279 @@
+domain:
+  id: "921426"
+  number: 10
+  name: "Technology & Data"
+  subtitle: "Powering the enterprise with platforms and insight"
+  classification: management_function
+  description: >
+    This domain encompasses the enterprise's ability to design, build, operate, and evolve its
+    technology landscape — from core infrastructure and applications through to data platforms,
+    cybersecurity, and end-user technology services. It ensures technology investments align with
+    strategic intent and that data is treated as a first-class enterprise asset.
+
+    In a ZORBA-enabled enterprise, this domain carries a unique additional responsibility:
+    managing the agent platform itself. The technology function not only deploys agents — it
+    operates the infrastructure, tooling, and guardrails that make the blended workforce possible.
+
+  capabilities:
+    - id: "700381"
+      number: "10.1"
+      name: "Shape Technology Strategy and Architecture"
+      description: >
+        Define the technology vision, principles, and enterprise architecture that guide
+        investment decisions, platform choices, and the evolution of the technology estate.
+      processes:
+        - id: "631824"
+          number: "10.1.1"
+          name: "Define the enterprise technology vision and principles"
+          agentic_profile: H
+          agentic_note: "Human-led; technology strategy requires human judgement on business priorities"
+        - id: "274953"
+          number: "10.1.2"
+          name: "Develop and maintain enterprise architecture standards"
+          agentic_profile: "H=A"
+          agentic_note: "Agents maintain architecture artefacts; humans set standards and make trade-offs"
+        - id: "918362"
+          number: "10.1.3"
+          name: "Assess emerging technologies and evaluate adoption readiness"
+          agentic_profile: "h+A"
+          agentic_note: "Agents scan, evaluate, and benchmark; humans decide strategic relevance"
+        - id: "453271"
+          number: "10.1.4"
+          name: "Manage the technology investment portfolio and roadmap"
+          agentic_profile: "H+a"
+          agentic_note: "Humans prioritise investments; agents model costs and dependencies"
+        - id: "186439"
+          number: "10.1.5"
+          name: "Govern architecture conformance and technical debt"
+          agentic_profile: "H=A"
+          agentic_note: "Agents detect drift and debt; humans approve remediation priorities"
+
+    - id: "674421"
+      number: "10.2"
+      name: "Build and Manage Applications"
+      description: >
+        Design, develop, test, deploy, and maintain the enterprise's application portfolio —
+        including custom-built, configured, and integrated software solutions.
+      processes:
+        - id: "741258"
+          number: "10.2.1"
+          name: "Gather and prioritise application requirements"
+          agentic_profile: "H=A"
+          agentic_note: "Agents collect and structure requirements; humans validate and prioritise"
+        - id: "529463"
+          number: "10.2.2"
+          name: "Design and architect application solutions"
+          agentic_profile: "H+a"
+          agentic_note: "Humans design; agents generate reference architectures and patterns"
+        - id: "384716"
+          number: "10.2.3"
+          name: "Develop and configure application code"
+          agentic_profile: "h+A"
+          agentic_note: "Agents generate and refactor code; humans review, approve, and guide"
+        - id: "862147"
+          number: "10.2.4"
+          name: "Test and validate application quality"
+          agentic_profile: "h+A"
+          agentic_note: "Agents execute automated test suites; humans define test strategies and review edge cases"
+        - id: "195384"
+          number: "10.2.5"
+          name: "Deploy and release applications to production"
+          agentic_profile: "H=A"
+          agentic_note: "Agents orchestrate CI/CD pipelines; humans approve production releases"
+        - id: "647932"
+          number: "10.2.6"
+          name: "Manage the application portfolio lifecycle"
+          agentic_profile: "H=A"
+          agentic_note: "Agents track usage, costs, and health; humans decide rationalisation actions"
+
+    - id: "714538"
+      number: "10.3"
+      name: "Operate Infrastructure and Cloud Platforms"
+      description: >
+        Provision, manage, and optimise the enterprise's computing infrastructure — including
+        on-premises, cloud, hybrid, and edge environments.
+      processes:
+        - id: "428163"
+          number: "10.3.1"
+          name: "Provision and configure infrastructure resources"
+          agentic_profile: "h+A"
+          agentic_note: "Agents execute infrastructure-as-code; humans define policies and approve changes"
+        - id: "563291"
+          number: "10.3.2"
+          name: "Monitor infrastructure health and performance"
+          agentic_profile: A
+          agentic_note: "Agent-autonomous; continuous monitoring with human-defined alert thresholds"
+        - id: "819427"
+          number: "10.3.3"
+          name: "Manage capacity planning and resource optimisation"
+          agentic_profile: "h+A"
+          agentic_note: "Agents forecast and recommend; humans approve scaling decisions"
+        - id: "246875"
+          number: "10.3.4"
+          name: "Operate cloud platform services and governance"
+          agentic_profile: "H=A"
+          agentic_note: "Agents enforce guardrails and track spend; humans set cloud strategy"
+        - id: "738514"
+          number: "10.3.5"
+          name: "Execute infrastructure auto-remediation and self-healing"
+          agentic_profile: A
+          agentic_note: "Agent-autonomous; automated remediation within predefined runbooks"
+        - id: "391648"
+          number: "10.3.6"
+          name: "Manage network and connectivity services"
+          agentic_profile: "H=A"
+          agentic_note: "Agents monitor and configure; humans approve topology changes"
+
+    - id: "283946"
+      number: "10.4"
+      name: "Govern Data and Deliver Analytics"
+      description: >
+        Manage data as an enterprise asset — ensuring quality, accessibility, governance, and
+        the delivery of analytics and insights that drive decision-making.
+      processes:
+        - id: "625813"
+          number: "10.4.1"
+          name: "Define data governance frameworks and ownership"
+          agentic_profile: "H+a"
+          agentic_note: "Humans define governance; agents maintain catalogues and lineage"
+        - id: "948271"
+          number: "10.4.2"
+          name: "Manage data quality, profiling, and remediation"
+          agentic_profile: "h+A"
+          agentic_note: "Agents profile and cleanse data; humans set quality thresholds and resolve exceptions"
+        - id: "174593"
+          number: "10.4.3"
+          name: "Build and operate data pipelines and integration"
+          agentic_profile: A
+          agentic_note: "Agent-executed; automated pipeline orchestration with human-defined schemas"
+        - id: "983322"
+          number: "10.4.4"
+          name: "Deliver business intelligence and reporting"
+          agentic_profile: "h+A"
+          agentic_note: "Agents generate dashboards and reports; humans interpret and act on insights"
+        - id: "812367"
+          number: "10.4.5"
+          name: "Develop and manage advanced analytics and models"
+          agentic_profile: "H=A"
+          agentic_note: "Agents train and tune models; humans validate methodology and interpret results"
+        - id: "469752"
+          number: "10.4.6"
+          name: "Manage master data and reference data"
+          agentic_profile: "H=A"
+          agentic_note: "Agents maintain records; humans resolve conflicts and approve golden records"
+
+    - id: "866025"
+      number: "10.5"
+      name: "Protect Information and Ensure Cyber Resilience"
+      description: >
+        Defend the enterprise against cyber threats, manage information security risks, and
+        ensure resilience through detection, response, and recovery capabilities.
+      processes:
+        - id: "317524"
+          number: "10.5.1"
+          name: "Define cybersecurity strategy and risk posture"
+          agentic_profile: H
+          agentic_note: "Human-led; security strategy requires executive judgement and risk appetite alignment"
+        - id: "853162"
+          number: "10.5.2"
+          name: "Manage identity, access, and authentication controls"
+          agentic_profile: "H=A"
+          agentic_note: "Agents enforce policies and detect anomalies; humans approve access exceptions"
+        - id: "246819"
+          number: "10.5.3"
+          name: "Monitor threats and operate security operations"
+          agentic_profile: A
+          agentic_note: "Agent-autonomous; continuous threat monitoring and initial incident triage"
+        - id: "671438"
+          number: "10.5.4"
+          name: "Respond to and recover from security incidents"
+          agentic_profile: "H+a"
+          agentic_note: "Humans lead incident response; agents execute containment playbooks and collect forensics"
+        - id: "594273"
+          number: "10.5.5"
+          name: "Conduct vulnerability management and penetration testing"
+          agentic_profile: "h+A"
+          agentic_note: "Agents scan and prioritise vulnerabilities; humans validate findings and approve remediation"
+        - id: "914295"
+          number: "10.5.6"
+          name: "Manage security awareness and training"
+          agentic_profile: "H=A"
+          agentic_note: "Agents deliver training and simulate phishing; humans design curriculum and review results"
+
+    - id: "158493"
+      number: "10.6"
+      name: "Deliver Technology Operations and End-User Support"
+      description: >
+        Operate the day-to-day technology services that keep the enterprise running — including
+        service desk, incident management, problem resolution, and end-user computing.
+      processes:
+        - id: "824367"
+          number: "10.6.1"
+          name: "Operate the service desk and manage service requests"
+          agentic_profile: "h+A"
+          agentic_note: "Agents handle tier-0/1 requests; humans manage complex escalations"
+        - id: "396142"
+          number: "10.6.2"
+          name: "Manage incidents and restore services"
+          agentic_profile: "H=A"
+          agentic_note: "Agents detect, categorise, and initiate response; humans lead major incident resolution"
+        - id: "571829"
+          number: "10.6.3"
+          name: "Conduct problem management and root cause analysis"
+          agentic_profile: "H+a"
+          agentic_note: "Humans lead analysis; agents correlate data and suggest patterns"
+        - id: "249618"
+          number: "10.6.4"
+          name: "Manage change and release processes"
+          agentic_profile: "H=A"
+          agentic_note: "Agents assess impact and schedule changes; humans approve and review"
+        - id: "683475"
+          number: "10.6.5"
+          name: "Provision and manage end-user devices and workplace technology"
+          agentic_profile: "h+A"
+          agentic_note: "Agents automate provisioning and configuration; humans handle exceptions"
+
+    - id: "925743"
+      number: "10.7"
+      name: "Manage the Agent Platform"
+      description: >
+        Operate, evolve, and govern the infrastructure that enables enterprise AI agents —
+        including agent hosting, orchestration, lifecycle management, and the tooling that
+        connects agents to enterprise systems. This is the ZORBA-specific meta-capability:
+        the technology that enables the blended workforce.
+      processes:
+        - id: "348261"
+          number: "10.7.1"
+          name: "Operate agent hosting infrastructure and runtime environments"
+          agentic_profile: "H=A"
+          agentic_note: "Agents monitor their own platform; humans manage capacity and architecture"
+        - id: "517948"
+          number: "10.7.2"
+          name: "Manage agent lifecycle — provisioning, versioning, and retirement"
+          agentic_profile: "H+a"
+          agentic_note: "Humans approve agent deployment; agents manage version control and rollback"
+        - id: "264839"
+          number: "10.7.3"
+          name: "Govern agent access to enterprise systems and data"
+          agentic_profile: H
+          agentic_note: "Human-led; access decisions require accountability and policy alignment"
+        - id: "893162"
+          number: "10.7.4"
+          name: "Monitor agent performance, health, and resource consumption"
+          agentic_profile: A
+          agentic_note: "Agent-autonomous; agents monitor agent fleet health and flag anomalies"
+        - id: "471526"
+          number: "10.7.5"
+          name: "Manage agent orchestration and inter-agent coordination"
+          agentic_profile: "H=A"
+          agentic_note: "Agents execute orchestration; humans define workflow boundaries and escalation rules"
+        - id: "635274"
+          number: "10.7.6"
+          name: "Maintain the agent tooling ecosystem and integration layer"
+          agentic_profile: "H=A"
+          agentic_note: "Agents maintain integrations; humans approve new tool access and capabilities"
+        - id: "182943"
+          number: "10.7.7"
+          name: "Manage agent platform security and isolation"
+          agentic_profile: "H+a"
+          agentic_note: "Humans set security policies; agents enforce isolation and detect breaches"

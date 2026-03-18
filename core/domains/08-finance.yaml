@@ -1,0 +1,283 @@
+domain:
+  id: "593417"
+  number: 8
+  name: "Finance"
+  subtitle: "Funding growth and protecting the bottom line"
+  classification: management_function
+  description: >
+    This domain encompasses the enterprise's ability to plan, allocate, record, and report on
+    financial resources — ensuring fiscal discipline, regulatory compliance, and the financial
+    intelligence needed to support strategic decision-making. It spans from long-range financial
+    planning through day-to-day transaction processing to external reporting and audit readiness.
+
+    In a ZORBA-enabled enterprise, finance is a domain of high automation potential in
+    transactional processes (accounts payable, reconciliation, reporting) while retaining strong
+    human leadership in judgement-intensive areas such as treasury strategy, tax planning, and
+    stakeholder communication.
+
+  capabilities:
+    - id: "362819"
+      number: "8.1"
+      name: "Plan and Analyse Financial Performance"
+      description: >
+        Develop financial plans, budgets, and forecasts that translate strategic intent into
+        financial targets — and provide ongoing analysis to track performance, explain variances,
+        and inform decisions.
+      processes:
+        - id: "725163"
+          number: "8.1.1"
+          name: "Develop annual budgets and long-range financial plans"
+          agentic_profile: "H+a"
+          agentic_note: "Humans lead planning; agents compile data and model scenarios"
+        - id: "493218"
+          number: "8.1.2"
+          name: "Prepare rolling forecasts and outlook updates"
+          agentic_profile: "h+A"
+          agentic_note: "Agents generate forecasts from actuals and trends; humans adjust assumptions"
+        - id: "861347"
+          number: "8.1.3"
+          name: "Analyse financial performance and explain variances"
+          agentic_profile: "h+A"
+          agentic_note: "Agents compute variances and surface drivers; humans interpret and narrate"
+        - id: "537412"
+          number: "8.1.4"
+          name: "Model financial scenarios and investment cases"
+          agentic_profile: "H=A"
+          agentic_note: "Agents build models; humans define assumptions and evaluate outcomes"
+        - id: "284659"
+          number: "8.1.5"
+          name: "Provide financial decision support to business leaders"
+          agentic_profile: "H+a"
+          agentic_note: "Humans advise; agents prepare briefings and ad hoc analysis"
+        - id: "916743"
+          number: "8.1.6"
+          name: "Monitor financial KPIs and early warning indicators"
+          agentic_profile: A
+          agentic_note: "Agent-executed; continuous dashboard monitoring with threshold alerts"
+
+    - id: "741385"
+      number: "8.2"
+      name: "Manage Accounting and the General Ledger"
+      description: >
+        Maintain the enterprise's books of record — processing journal entries, managing the
+        chart of accounts, performing reconciliations, and ensuring the general ledger accurately
+        reflects all financial activity.
+      processes:
+        - id: "352816"
+          number: "8.2.1"
+          name: "Maintain and govern the chart of accounts"
+          agentic_profile: "H+a"
+          agentic_note: "Humans own account structure; agents flag inconsistencies and suggest harmonisation"
+        - id: "628491"
+          number: "8.2.2"
+          name: "Process journal entries and adjustments"
+          agentic_profile: "h+A"
+          agentic_note: "Agents post routine entries; humans review and approve non-standard journals"
+        - id: "174523"
+          number: "8.2.3"
+          name: "Perform account reconciliations"
+          agentic_profile: A
+          agentic_note: "Agent-executed; automated matching with human review of exceptions"
+        - id: "845362"
+          number: "8.2.4"
+          name: "Manage intercompany transactions and eliminations"
+          agentic_profile: "h+A"
+          agentic_note: "Agents process and reconcile; humans resolve disputes and policy questions"
+        - id: "593174"
+          number: "8.2.5"
+          name: "Execute period-end close processes"
+          agentic_profile: "H=A"
+          agentic_note: "Agents orchestrate close checklists and track completion; humans manage judgements"
+        - id: "416238"
+          number: "8.2.6"
+          name: "Manage fixed asset accounting and depreciation"
+          agentic_profile: "h+A"
+          agentic_note: "Agents calculate depreciation and track assets; humans approve disposals"
+
+    - id: "219648"
+      number: "8.3"
+      name: "Process Accounts Payable and Receivable"
+      description: >
+        Manage the enterprise's payment obligations to suppliers and the collection of amounts
+        owed by customers — ensuring accuracy, timeliness, and optimal cash flow management.
+      processes:
+        - id: "374852"
+          number: "8.3.1"
+          name: "Receive, validate, and code supplier invoices"
+          agentic_profile: A
+          agentic_note: "Agent-executed; automated invoice capture, matching, and coding"
+        - id: "618473"
+          number: "8.3.2"
+          name: "Manage payment runs and disbursements"
+          agentic_profile: "h+A"
+          agentic_note: "Agents schedule and execute payments; humans approve above thresholds"
+        - id: "543219"
+          number: "8.3.3"
+          name: "Manage supplier queries and dispute resolution"
+          agentic_profile: "H=A"
+          agentic_note: "Agents track disputes and compile evidence; humans negotiate resolutions"
+        - id: "892163"
+          number: "8.3.4"
+          name: "Generate and distribute customer invoices"
+          agentic_profile: A
+          agentic_note: "Agent-executed; automated billing based on delivery and contract data"
+        - id: "736524"
+          number: "8.3.5"
+          name: "Monitor receivables ageing and pursue collections"
+          agentic_profile: "h+A"
+          agentic_note: "Agents send reminders and escalate; humans handle sensitive or large accounts"
+        - id: "451837"
+          number: "8.3.6"
+          name: "Process customer payments and apply cash receipts"
+          agentic_profile: A
+          agentic_note: "Agent-executed; automated matching and application with exception routing"
+        - id: "268314"
+          number: "8.3.7"
+          name: "Manage credit exposure and bad debt provisions"
+          agentic_profile: "H+a"
+          agentic_note: "Humans set credit policy; agents monitor exposure and flag breaches"
+
+    - id: "485231"
+      number: "8.4"
+      name: "Manage Treasury and Cash Operations"
+      description: >
+        Oversee the enterprise's cash position, liquidity, banking relationships, and financial
+        risk exposures — ensuring sufficient funding is available and financial risks are managed
+        within appetite.
+      processes:
+        - id: "319472"
+          number: "8.4.1"
+          name: "Forecast cash flows and manage liquidity positions"
+          agentic_profile: "h+A"
+          agentic_note: "Agents generate daily/weekly cash forecasts; humans review and adjust"
+        - id: "672148"
+          number: "8.4.2"
+          name: "Manage banking relationships and account structures"
+          agentic_profile: "H+a"
+          agentic_note: "Humans own bank relationships; agents track fees and service levels"
+        - id: "825314"
+          number: "8.4.3"
+          name: "Execute and manage investment and borrowing activities"
+          agentic_profile: H
+          agentic_note: "Human-led; agents provide market data and scenario analysis"
+        - id: "547831"
+          number: "8.4.4"
+          name: "Manage foreign exchange and interest rate exposures"
+          agentic_profile: "H=A"
+          agentic_note: "Agents monitor exposures and model hedging; humans approve strategies"
+        - id: "193624"
+          number: "8.4.5"
+          name: "Perform daily cash positioning and fund transfers"
+          agentic_profile: "h+A"
+          agentic_note: "Agents execute routine transfers; humans approve large or unusual movements"
+
+    - id: "637241"
+      number: "8.5"
+      name: "Plan and Manage Tax Compliance"
+      description: >
+        Ensure the enterprise meets all tax obligations accurately and on time — while
+        proactively planning to optimise the tax position within legal and ethical boundaries.
+      processes:
+        - id: "824516"
+          number: "8.5.1"
+          name: "Develop and maintain the enterprise tax strategy"
+          agentic_profile: H
+          agentic_note: "Human-led; requires professional judgement and regulatory interpretation"
+        - id: "473821"
+          number: "8.5.2"
+          name: "Calculate and prepare direct and indirect tax returns"
+          agentic_profile: "h+A"
+          agentic_note: "Agents compute tax positions and draft returns; humans review and submit"
+        - id: "615342"
+          number: "8.5.3"
+          name: "Manage transfer pricing documentation and compliance"
+          agentic_profile: "H=A"
+          agentic_note: "Agents maintain documentation; humans make policy decisions"
+        - id: "291438"
+          number: "8.5.4"
+          name: "Monitor tax legislation changes and assess impact"
+          agentic_profile: "h+A"
+          agentic_note: "Agents scan regulatory changes; humans assess strategic implications"
+        - id: "748163"
+          number: "8.5.5"
+          name: "Manage tax audits and authority inquiries"
+          agentic_profile: "H+a"
+          agentic_note: "Humans lead audit responses; agents compile evidence and track requests"
+
+    - id: "158473"
+      number: "8.6"
+      name: "Prepare Financial Reports and Consolidations"
+      description: >
+        Produce accurate, timely financial reports for internal and external stakeholders —
+        including statutory accounts, management reports, and consolidated group financial
+        statements.
+      processes:
+        - id: "394217"
+          number: "8.6.1"
+          name: "Prepare statutory financial statements"
+          agentic_profile: "H=A"
+          agentic_note: "Agents compile and format; humans review and ensure compliance"
+        - id: "821546"
+          number: "8.6.2"
+          name: "Perform group consolidation and eliminate intercompany balances"
+          agentic_profile: "h+A"
+          agentic_note: "Agents execute consolidation rules; humans resolve complex judgements"
+        - id: "567413"
+          number: "8.6.3"
+          name: "Produce management reporting packs and dashboards"
+          agentic_profile: "h+A"
+          agentic_note: "Agents generate reports from live data; humans add commentary and insight"
+        - id: "243815"
+          number: "8.6.4"
+          name: "Prepare regulatory and supervisory filings"
+          agentic_profile: "H=A"
+          agentic_note: "Agents compile data and draft filings; humans validate and submit"
+        - id: "751673"
+          number: "8.6.5"
+          name: "Manage external stakeholder financial communications"
+          agentic_profile: "H+a"
+          agentic_note: "Humans own messaging and narrative; agents prepare supporting materials"
+        - id: "482631"
+          number: "8.6.6"
+          name: "Manage financial data quality and master data governance"
+          agentic_profile: "h+A"
+          agentic_note: "Agents monitor data quality; humans resolve structural issues"
+
+    - id: "326914"
+      number: "8.7"
+      name: "Maintain Financial Controls and Support Audit"
+      description: >
+        Design, operate, and test the internal control environment over financial reporting and
+        transactions — ensuring the enterprise can demonstrate effective governance and withstand
+        internal and external audit scrutiny.
+      processes:
+        - id: "758241"
+          number: "8.7.1"
+          name: "Design and document financial controls and control frameworks"
+          agentic_profile: "H+a"
+          agentic_note: "Humans design controls; agents maintain control documentation"
+        - id: "413672"
+          number: "8.7.2"
+          name: "Execute and evidence key financial controls"
+          agentic_profile: "H=A"
+          agentic_note: "Agents perform automated controls and log evidence; humans execute manual controls"
+        - id: "683594"
+          number: "8.7.3"
+          name: "Test control effectiveness and remediate deficiencies"
+          agentic_profile: "H=A"
+          agentic_note: "Agents run control tests; humans evaluate results and oversee remediation"
+        - id: "864312"
+          number: "8.7.4"
+          name: "Support internal audit engagement and follow-up"
+          agentic_profile: "H+a"
+          agentic_note: "Humans liaise with auditors; agents compile evidence and track findings"
+        - id: "291537"
+          number: "8.7.5"
+          name: "Coordinate external audit processes and information requests"
+          agentic_profile: "H=A"
+          agentic_note: "Agents manage information requests and track status; humans manage the relationship"
+        - id: "637148"
+          number: "8.7.6"
+          name: "Manage segregation of duties and access controls"
+          agentic_profile: "h+A"
+          agentic_note: "Agents monitor access patterns and flag violations; humans remediate"
