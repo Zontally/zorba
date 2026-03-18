@@ -39,6 +39,7 @@ nav:
     - Information Model: framework/07-information-model.md
     - Industry Editions: framework/08-industry-editions.md
     - Glossary: framework/09-glossary.md
+    - Usage Guide: framework/10-usage-guide.md
   - Domain Taxonomy: domains/index.md
 
 markdown_extensions:
