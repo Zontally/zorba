@@ -69,6 +69,12 @@
   background: #0f172a;
 }
 
+/* ── Image sizing — override Material's forced height:auto ── */
+.md-typeset img[style] {
+  height: revert !important;
+  max-width: 100%;
+}
+
 /* ── Smooth transitions ── */
 .md-nav__link,
 .md-typeset a {
