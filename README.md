@@ -56,9 +56,11 @@ ZORBA is published by [Zontally](https://www.zontally.com) as an open reference 
 
 While ZORBA can be adopted independently, it also serves as the foundational model within the Zontally strategy-to-execution platform.
 
-## License
+## Licence
 
-© 2026 Zontally. All rights reserved. Licensing terms to be published.
+[![CC BY-SA 4.0](https://img.shields.io/badge/licence-CC%20BY--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+
+ZORBA is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/). You are free to use, share, and adapt it — including commercially — with attribution to Zontally. Derivative works must be shared under the same licence.
 
 ## Version
 
