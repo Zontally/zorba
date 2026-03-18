@@ -12,15 +12,15 @@ ZORBA defines how organisations operate when humans and AI agents work as one �
 
 | Document | Description |
 |----------|-------------|
-| [Manifesto](01-manifesto.md) | Why enterprise architecture must be redesigned for the agentic era |
-| [Architecture](02-architecture.md) | The structural hierarchy: OU → Domain → Capability → Process → Activity → Work |
-| [Workforce Model](03-workforce-model.md) | How humans and AI agents collaborate — agent types, trust levels, autonomy |
-| [Domain Reference](04-domain-reference.md) | 12 enterprise domains with Value Chain / Management Function classification |
-| [Agentic Patterns](05-agentic-patterns.md) | Reusable patterns for agent participation in enterprise operations |
-| [Governance](06-governance.md) | Trust framework for governing a blended human-agent workforce |
-| [Glossary](07-glossary.md) | Key terms — traditional enterprise architecture + agentic vocabulary |
-| [Information Model](08-information-model.md) | Framework-agnostic meta-model — object types, relationships, composition rules |
-| [Industry Editions](09-industry-editions.md) | Vertical-specific configurations: Technology Service Providers, Healthcare, etc. |
+| [Manifesto](framework/01-manifesto.md) | Why enterprise architecture must be redesigned for the agentic era |
+| [Architecture](framework/02-architecture.md) | The structural hierarchy: OU → Domain → Capability → Process → Activity → Work |
+| [Workforce Model](framework/03-workforce-model.md) | How humans and AI agents collaborate — agent types, trust levels, autonomy |
+| [Domain Reference](framework/04-domain-reference.md) | 12 enterprise domains with Value Chain / Management Function classification |
+| [Agentic Patterns](framework/05-agentic-patterns.md) | Reusable patterns for agent participation in enterprise operations |
+| [Governance](framework/06-governance.md) | Trust framework for governing a blended human-agent workforce |
+| [Information Model](framework/07-information-model.md) | Framework-agnostic meta-model — object types, relationships, composition rules |
+| [Industry Editions](framework/08-industry-editions.md) | Vertical-specific configurations: Technology Service Providers, Healthcare, etc. |
+| [Glossary](framework/09-glossary.md) | Key terms — traditional enterprise architecture + agentic vocabulary |
 
 ### Domain Taxonomy
 
