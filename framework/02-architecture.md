@@ -85,9 +85,9 @@ Traditional frameworks like APQC's PCF define **Category → Process Group → P
 
 The Organisational Unit is the **root of the ZORBA architecture**. Every other object in the model is ultimately scoped to one or more OUs. OUs nest recursively to any depth, modelling everything from a 50-person single-entity company to a multinational conglomerate.
 
-Each OU may adopt a different [Industry Edition](09-industry-editions.md), meaning a healthcare business unit and a technology services business unit within the same holding company can operate with radically different domain configurations.
+Each OU may adopt a different [Industry Edition](08-industry-editions.md), meaning a healthcare business unit and a technology services business unit within the same holding company can operate with radically different domain configurations.
 
-See the [Information Model](08-information-model.md) for the full OU object definition, attributes, and relationship types.
+See the [Information Model](07-information-model.md) for the full OU object definition, attributes, and relationship types.
 
 ### Key Principle
 
@@ -103,7 +103,7 @@ The Organisational Unit answers the question **"who are we?"** before the archit
 
 Domains are classified as either:
 
-- **Value Chain** — activities that directly create, deliver, and capture value. These vary significantly across industries and are where [Industry Editions](09-industry-editions.md) primarily diverge.
+- **Value Chain** — activities that directly create, deliver, and capture value. These vary significantly across industries and are where [Industry Editions](08-industry-editions.md) primarily diverge.
 - **Management Function** — activities that enable, govern, and support the value chain. These are largely industry-agnostic.
 
 See [04-domain-reference.md](04-domain-reference.md) for the full domain inventory with subtitles and agentic maturity profiles.

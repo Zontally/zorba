@@ -365,7 +365,7 @@ Most organisations today are at G1 or G2. ZORBA provides the path to G3 and beyo
 
 ---
 
-*Previous: [← Agentic Enterprise Patterns](05-agentic-patterns.md) | Next: [Glossary →](07-glossary.md)*
+*Previous: [← Agentic Enterprise Patterns](05-agentic-patterns.md) | Next: [Glossary →](09-glossary.md)*
 
 ---
 

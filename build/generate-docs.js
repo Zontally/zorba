@@ -17,7 +17,10 @@ const yaml = require('js-yaml');
 
 const ROOT = path.resolve(__dirname, '..');
 const CORE_DIR = path.join(ROOT, 'core', 'domains');
+const DOCS_DIR = path.join(ROOT, 'docs');
 const DOCS_DOMAINS_DIR = path.join(ROOT, 'docs', 'domains');
+const DOCS_FRAMEWORK_DIR = path.join(ROOT, 'docs', 'framework');
+const FRAMEWORK_DIR = path.join(ROOT, 'framework');
 
 const PROFILE_LEGEND = {
   'H': 'Human-only — agent participation not appropriate',
@@ -189,6 +192,23 @@ function main() {
 
   fs.writeFileSync(path.join(DOCS_DOMAINS_DIR, 'index.md'), indexLines.join('\n'), 'utf8');
   console.log('\n  ✓ index.md — domain index page');
+
+  // Copy framework docs into docs/framework/
+  fs.mkdirSync(DOCS_FRAMEWORK_DIR, { recursive: true });
+  if (fs.existsSync(FRAMEWORK_DIR)) {
+    const fwFiles = fs.readdirSync(FRAMEWORK_DIR).filter(f => f.endsWith('.md'));
+    for (const f of fwFiles) {
+      fs.copyFileSync(path.join(FRAMEWORK_DIR, f), path.join(DOCS_FRAMEWORK_DIR, f));
+      console.log(`  ✓ framework/${f} (copied)`);
+    }
+  }
+
+  // Generate docs/index.md from README
+  const readmePath = path.join(ROOT, 'README.md');
+  if (fs.existsSync(readmePath)) {
+    fs.copyFileSync(readmePath, path.join(DOCS_DIR, 'index.md'));
+    console.log('  ✓ index.md (from README)');
+  }
 
   console.log('\nDone.');
 }

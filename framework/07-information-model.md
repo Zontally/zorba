@@ -473,7 +473,7 @@ Objects carry `created_at` and `updated_at` timestamps. For full change history,
 
 ---
 
-*Previous: [← Glossary](07-glossary.md)*
+*Previous: [← Glossary](09-glossary.md)*
 
 ---
 

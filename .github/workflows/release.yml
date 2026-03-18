@@ -51,7 +51,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: generated-docs
-          path: docs/domains/
+          path: docs/
 
   deploy-docs:
     name: Deploy MkDocs
@@ -68,7 +68,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: generated-docs
-          path: docs/domains/
+          path: docs/
 
       - run: pip install mkdocs-material
       - run: mkdocs gh-deploy --force

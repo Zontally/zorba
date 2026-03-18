@@ -26,7 +26,7 @@ ZORBA Core is the universal, industry-agnostic foundation:
 - The **Blended Workforce Model** — agent types, collaboration patterns, trust levels (see [03-workforce-model.md](03-workforce-model.md))
 - The **Agentic Enterprise Patterns** library (see [05-agentic-patterns.md](05-agentic-patterns.md))
 - The **Governance & Trust Framework** (see [06-governance.md](06-governance.md))
-- The **Information Model** — business object graph, node types, edge types (see [08-information-model.md](08-information-model.md))
+- The **Information Model** — business object graph, node types, edge types (see [07-information-model.md](07-information-model.md))
 - The **meta-model** — how domains, capabilities, processes, activities, and work instances relate
 
 Core is complete on its own. An organisation can adopt ZORBA Core without any industry edition and build their own configuration. But most will benefit from starting with an edition that reflects their operational context.
@@ -477,7 +477,7 @@ The flagship **ZORBA for Technology Service Providers** edition will be the firs
 
 ---
 
-*Previous: [← Information Model](08-information-model.md)*
+*Previous: [← Information Model](07-information-model.md)*
 
 ---
 

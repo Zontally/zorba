@@ -39,20 +39,19 @@ nav:
     - Industry Editions: framework/08-industry-editions.md
     - Glossary: framework/09-glossary.md
   - Domain Taxonomy:
-    - Overview: docs/domains/index.md
-    - Strategy & Governance: docs/domains/01-strategy-and-governance.md
-    - Product & Innovation: docs/domains/02-product-and-innovation.md
-    - Marketing: docs/domains/03-marketing.md
-    - Sales: docs/domains/04-sales.md
-    - Customer Success & Service: docs/domains/05-customer-success-and-service.md
-    - Operations & Delivery: docs/domains/06-operations-and-delivery.md
-    - Supply Chain: docs/domains/07-supply-chain.md
-    - Finance: docs/domains/08-finance.md
-    - People & Talent: docs/domains/09-people-and-talent.md
-    - Technology & Data: docs/domains/10-technology-and-data.md
-    - Risk, Legal & Compliance: docs/domains/11-risk-legal-and-compliance.md
-    - Corporate Services: docs/domains/12-corporate-services.md
-  - Changelog: CHANGELOG.md
+    - Overview: domains/index.md
+    - Strategy & Governance: domains/01-strategy-and-governance.md
+    - Product & Innovation: domains/02-product-and-innovation.md
+    - Marketing: domains/03-marketing.md
+    - Sales: domains/04-sales.md
+    - Customer Success & Service: domains/05-customer-success-and-service.md
+    - Operations & Delivery: domains/06-operations-and-delivery.md
+    - Supply Chain: domains/07-supply-chain.md
+    - Finance: domains/08-finance.md
+    - People & Talent: domains/09-people-and-talent.md
+    - Technology & Data: domains/10-technology-and-data.md
+    - Risk, Legal & Compliance: domains/11-risk-legal-and-compliance.md
+    - Corporate Services: domains/12-corporate-services.md
 
 markdown_extensions:
   - tables

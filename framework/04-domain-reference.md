@@ -13,7 +13,7 @@ The ZORBA Domain Reference Model defines **12 enterprise domains** that represen
 
 ZORBA classifies domains into two categories:
 
-- **Value Chain Domains** — Activities that directly create, deliver, and capture value for customers. These domains define *what makes the organisation distinctive* and vary significantly across industries. A technology services company's value chain looks nothing like a hospital's or a logistics provider's. Industry Editions (see [09-industry-editions.md](09-industry-editions.md)) primarily reshape these domains.
+- **Value Chain Domains** — Activities that directly create, deliver, and capture value for customers. These domains define *what makes the organisation distinctive* and vary significantly across industries. A technology services company's value chain looks nothing like a hospital's or a logistics provider's. Industry Editions (see [08-industry-editions.md](08-industry-editions.md)) primarily reshape these domains.
 
 - **Management Functions** — Activities that enable, govern, and support the value chain. These domains are largely **industry-agnostic** — managing finance, people, risk, or corporate services follows similar patterns regardless of whether you're building software or manufacturing aircraft. They are essential but not differentiating.
 

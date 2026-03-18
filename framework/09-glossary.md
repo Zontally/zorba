@@ -114,7 +114,7 @@
 
 ---
 
-*Previous: [← Governance & Trust Framework](06-governance.md) | Back to: [README →](README.md)*
+*Previous: [← Governance & Trust Framework](06-governance.md) | Back to: [README →](../index.md)*
 
 ---
 
