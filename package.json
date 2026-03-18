@@ -1,0 +1,16 @@
+{
+  "name": "@zontally/zorba",
+  "version": "0.1.0",
+  "description": "ZORBA — Zontally Reference Business Architecture. The open reference architecture for the agentic enterprise.",
+  "license": "SEE LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zontally/zorba.git"
+  },
+  "scripts": {
+    "build": "node build/compile.js",
+    "docs": "node build/generate-docs.js",
+    "validate": "node build/validate.js",
+    "version": "echo $npm_package_version"
+  }
+}
