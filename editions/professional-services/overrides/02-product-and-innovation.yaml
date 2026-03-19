@@ -52,7 +52,7 @@ domain:
           name: "Conduct periodic offering reviews and rationalisation"
           agentic_profile: "H=A"
           agentic_note: "Agents surface offering performance data; humans decide sunset or pivot"
-        - id: "183624"
+        - id: "184239"
           number: "2.1.6"
           name: "Align service roadmaps with enterprise and client strategy"
           agentic_profile: "H+a"

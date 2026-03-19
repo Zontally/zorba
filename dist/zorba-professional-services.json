@@ -3,7 +3,7 @@
   "name": "ZORBA for Professional Services",
   "extends": "core",
   "version": "0.1.0",
-  "compiled_at": "2026-03-19T16:54:11.729Z",
+  "compiled_at": "2026-03-19T16:55:03.570Z",
   "stats": {
     "totalDomains": 12,
     "totalCapabilities": 87,
@@ -535,7 +535,7 @@
               "agentic_note": "Agents surface offering performance data; humans decide sunset or pivot"
             },
             {
-              "id": "183624",
+              "id": "184239",
               "number": "2.1.6",
               "name": "Align service roadmaps with enterprise and client strategy",
               "agentic_profile": "H+a",
