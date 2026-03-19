@@ -17,6 +17,47 @@ domain:
     client-driven innovation, and practice strategy.
 
   capabilities:
+    - id: "361742"
+      number: "2.1"
+      name: "Shape Service Strategy and Offering Portfolio"
+      description: >
+        Define the firm's service vision, establish practice and offering
+        priorities, and maintain a coherent service strategy aligned to
+        market demand and firm capabilities. This capability ensures
+        investment in service lines is deliberate and balanced across
+        established practices, emerging offerings, and innovation bets.
+      processes:
+        - id: "529184"
+          number: "2.1.1"
+          name: "Articulate the service vision and practice positioning"
+          agentic_profile: H
+          agentic_note: "Human-led; service vision requires market intuition and client insight"
+        - id: "847263"
+          number: "2.1.2"
+          name: "Assess market opportunities and client demand patterns"
+          agentic_profile: "h+A"
+          agentic_note: "Agents scan markets, analyse win/loss data, and model demand; humans evaluate strategic fit"
+        - id: "613427"
+          number: "2.1.3"
+          name: "Define and balance the service portfolio across practices"
+          agentic_profile: "H+a"
+          agentic_note: "Humans set portfolio mix; agents model revenue, utilisation, and margin trade-offs"
+        - id: "295814"
+          number: "2.1.4"
+          name: "Establish offering investment criteria and funding models"
+          agentic_profile: "H+a"
+          agentic_note: "Humans define investment thresholds; agents track offering development costs"
+        - id: "397366"
+          number: "2.1.5"
+          name: "Conduct periodic offering reviews and rationalisation"
+          agentic_profile: "H=A"
+          agentic_note: "Agents surface offering performance data; humans decide sunset or pivot"
+        - id: "183624"
+          number: "2.1.6"
+          name: "Align service roadmaps with enterprise and client strategy"
+          agentic_profile: "H+a"
+          agentic_note: "Humans lead strategic alignment; agents track dependencies and conflicts"
+
     - id: "649281"
       number: "2.3"
       name: "Design and Package Service Offerings"

@@ -3,15 +3,15 @@
   "name": "ZORBA for Professional Services",
   "extends": "core",
   "version": "0.1.0",
-  "compiled_at": "2026-03-19T16:39:11.910Z",
+  "compiled_at": "2026-03-19T16:54:11.729Z",
   "stats": {
     "totalDomains": 12,
     "totalCapabilities": 87,
     "totalProcesses": 474,
     "profileCounts": {
       "H": 32,
-      "H+a": 118,
-      "H=A": 130,
+      "H+a": 119,
+      "H=A": 129,
       "h+A": 145,
       "A": 49
     }
@@ -496,50 +496,50 @@
         {
           "id": "361742",
           "number": "2.1",
-          "name": "Shape Product Strategy and Portfolio Direction",
-          "description": "Define the overarching product vision, establish portfolio priorities, and maintain a coherent product strategy aligned to enterprise goals. This capability ensures product investments are deliberate and balanced across horizons.\n",
+          "name": "Shape Service Strategy and Offering Portfolio",
+          "description": "Define the firm's service vision, establish practice and offering priorities, and maintain a coherent service strategy aligned to market demand and firm capabilities. This capability ensures investment in service lines is deliberate and balanced across established practices, emerging offerings, and innovation bets.\n",
           "processes": [
             {
               "id": "529184",
               "number": "2.1.1",
-              "name": "Articulate the product vision and strategic positioning",
+              "name": "Articulate the service vision and practice positioning",
               "agentic_profile": "H",
-              "agentic_note": "Human-led; product vision requires authentic market intuition"
+              "agentic_note": "Human-led; service vision requires market intuition and client insight"
             },
             {
               "id": "847263",
               "number": "2.1.2",
-              "name": "Assess market opportunities and whitespace analysis",
+              "name": "Assess market opportunities and client demand patterns",
               "agentic_profile": "h+A",
-              "agentic_note": "Agents scan markets and model TAM; humans evaluate strategic fit"
+              "agentic_note": "Agents scan markets, analyse win/loss data, and model demand; humans evaluate strategic fit"
             },
             {
               "id": "613427",
               "number": "2.1.3",
-              "name": "Define and balance the product portfolio across horizons",
+              "name": "Define and balance the service portfolio across practices",
               "agentic_profile": "H+a",
-              "agentic_note": "Humans set portfolio mix; agents model resource trade-offs"
+              "agentic_note": "Humans set portfolio mix; agents model revenue, utilisation, and margin trade-offs"
             },
             {
               "id": "295814",
               "number": "2.1.4",
-              "name": "Establish product investment criteria and funding models",
+              "name": "Establish offering investment criteria and funding models",
               "agentic_profile": "H+a",
-              "agentic_note": "Humans define criteria; agents benchmark against industry norms"
+              "agentic_note": "Humans define investment thresholds; agents track offering development costs"
             },
             {
-              "id": "738562",
+              "id": "397366",
               "number": "2.1.5",
-              "name": "Conduct periodic portfolio reviews and rationalisation",
+              "name": "Conduct periodic offering reviews and rationalisation",
               "agentic_profile": "H=A",
-              "agentic_note": "Agents compile performance data; humans decide keep/kill/invest"
+              "agentic_note": "Agents surface offering performance data; humans decide sunset or pivot"
             },
             {
-              "id": "184239",
+              "id": "183624",
               "number": "2.1.6",
-              "name": "Align product roadmaps with enterprise strategy",
-              "agentic_profile": "H=A",
-              "agentic_note": "Agents flag misalignments; humans resolve strategic tensions"
+              "name": "Align service roadmaps with enterprise and client strategy",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans lead strategic alignment; agents track dependencies and conflicts"
             }
           ]
         },
