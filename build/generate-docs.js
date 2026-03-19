@@ -345,6 +345,64 @@ function generateEditionDocs(editionName) {
   fs.writeFileSync(path.join(editionDocsDir, 'index.md'), editionIndex, 'utf8');
   console.log(`  ✓ edition index.md`);
 
+  // Generate edition-specific mkdocs.yml
+  const domainNavEntries = compiled.domains.map(domain => {
+    const mdFile = `${String(domain.number).padStart(2, '0')}-${domain.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '')}.md`;
+    return `      - "${domain.name}": domains/${mdFile}`;
+  });
+
+  // Read core mkdocs.yml for theme/extensions config
+  const coreMkdocs = fs.readFileSync(path.join(ROOT, 'mkdocs.yml'), 'utf8');
+  const themeMatch = coreMkdocs.match(/^theme:[\s\S]*?(?=\n\w)/m);
+  const extMatch = coreMkdocs.match(/^markdown_extensions:[\s\S]*$/m);
+  const cssMatch = coreMkdocs.match(/^extra_css:[\s\S]*?(?=\n\w)/m);
+
+  // Read framework dir for nav entries
+  const fwFiles = fs.existsSync(FRAMEWORK_DIR)
+    ? fs.readdirSync(FRAMEWORK_DIR).filter(f => f.endsWith('.md')).sort()
+    : [];
+  const fwNavEntries = fwFiles.map(f => {
+    const name = f.replace(/^\d+-/, '').replace('.md', '').replace(/-/g, ' ')
+      .replace(/\b\w/g, c => c.toUpperCase());
+    return `      - "${name}": framework/${f}`;
+  });
+
+  const editionMkdocs = [
+    `site_name: ${compiled.name}`,
+    `site_description: ${compiled.name} — Industry Edition of ZORBA`,
+    `docs_dir: docs-${editionName}`,
+    `site_dir: site-${editionName}`,
+    '',
+    themeMatch ? themeMatch[0].trim() : '',
+    '',
+    cssMatch ? cssMatch[0].trim() : '',
+    '',
+    'nav:',
+    '  - Home: index.md',
+    '  - Framework:',
+    ...fwNavEntries,
+    '  - Domain Taxonomy:',
+    `      - Overview: domains/index.md`,
+    ...domainNavEntries,
+    '',
+    extMatch ? extMatch[0].trim() : '',
+    ''
+  ].join('\n');
+
+  const mkdocsPath = path.join(ROOT, `mkdocs-${editionName}.yml`);
+  fs.writeFileSync(mkdocsPath, editionMkdocs, 'utf8');
+  console.log(`  ✓ mkdocs-${editionName}.yml`);
+
+  // Build HTML docs with mkdocs
+  console.log(`\n  Building HTML docs with mkdocs...`);
+  const { execSync } = require('child_process');
+  try {
+    execSync(`mkdocs build -f mkdocs-${editionName}.yml`, { cwd: ROOT, stdio: 'pipe' });
+    console.log(`  ✓ HTML docs built → site-${editionName}/`);
+  } catch (e) {
+    console.error(`  ✗ mkdocs build failed: ${e.stderr ? e.stderr.toString() : e.message}`);
+  }
+
   console.log('\nDone.');
 }
 

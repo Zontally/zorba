@@ -2,3 +2,5 @@ node_modules/
 docs/
 docs-*/
 site/
+site-*/
+mkdocs-*.yml
