@@ -318,6 +318,23 @@ In a traditional enterprise, architecture is a reference document. In a ZORBA-en
 
 This is not metaphor. When an agent needs to determine whether it has authority to approve a purchase, it should be able to query the architecture: What domain is this? What process am I in? What activity am I performing? What is my autonomy level? What are my escalation paths? The architecture becomes the runtime governance layer.
 
+## Evolution as a Cross-Cutting Concern
+
+ZORBA's structural hierarchy captures the enterprise at a point in time. But enterprises evolve — capabilities mature, processes standardise, technology commoditises. Understanding **where each component sits on the evolution curve** is essential for making informed workforce composition decisions.
+
+Evolution stage is tracked alongside workforce composition at every structural layer:
+
+- **Domains** may contain capabilities at different evolution stages (genesis innovation alongside commodity operations)
+- **Capabilities** evolve from genesis → custom → product → commodity over time
+- **Processes** supporting the same capability may be at different evolution stages
+- **Activities** and **Work** inherit evolution characteristics from their parent processes
+
+The evolution dimension uses **Wardley Mapping methodology** and **Pioneers, Settlers, and Town Planners (PST)** organisational patterns to map current state, predict future evolution, and plan workforce transitions.
+
+**Key principle:** A capability at genesis stage requires human-heavy (Pioneer) workforce. A commodity capability can be agent-autonomous (Town Planner). Everything in between demands thoughtful workforce evolution planning.
+
+See [Evolution Mapping](12-evolution-mapping.md) for the complete framework on tracking and predicting capability evolution in ZORBA architectures.
+
 ---
 
 *Previous: [← The ZORBA Manifesto](01-manifesto.md) | Next: [The Blended Workforce Model →](03-workforce-model.md)*

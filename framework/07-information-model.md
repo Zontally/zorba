@@ -45,6 +45,7 @@ The following table defines the **node types** in the business object graph. Eac
 | **Team** | A group of humans and/or agents that owns or operates business objects. | Recommended | Teams own processes, capabilities, or domains. A team may contain sub-teams. |
 | **Organisational Unit** | A structural entity within the enterprise — holding company, subsidiary, business unit, brand, division, region, department, or any other organisational grouping. Organisational Units nest recursively to model any corporate structure. | Yes (≥1) | Organisational Units are the **root of the object graph**. Every other object is ultimately scoped to one or more Organisational Units. Nest to arbitrary depth. |
 | **Metric** | A measurable indicator — KPI, SLA, quality score, throughput measure. | Optional | Metrics attach to objectives, processes, capabilities, or any other object type. |
+| **WardleyMap** | A Wardley Map expressed as code using the Online Wardley Maps (OWM) DSL. Contains the map source (OWM DSL text), scoped to an Organisational Unit or Domain. Maps visualise the evolution of capabilities, processes, and their dependencies. | Optional | Maps can be scoped to domains, capabilities, value chains, or custom boundaries. Multiple maps may represent different views of the same architecture. |
 
 ### Recommended Attributes per Object Type
 
@@ -73,8 +74,8 @@ Every object carries a common set of base attributes plus type-specific extensio
 |-------------|----------------------|
 | **Framework** | `version`, `source` (e.g., "ZORBA", "APQC", "Custom"), `uri` (canonical reference) |
 | **Domain** | `level` (depth in hierarchy, 1 = top) |
-| **Capability** | `maturity_level`, `workforce_composition` (human/agent/blended), `target_composition` |
-| **Process** | `process_type` (core, support, management), `sla`, `automation_percentage` |
+| **Capability** | `maturity_level`, `workforce_composition` (human/agent/blended), `target_composition`, `evolution_stage` (enum: genesis, custom, product, commodity), `evolution_target` (same enum — where it's heading), `evolution_confidence` (float 0-1), `pst_phase` (enum: pioneer, settler, town_planner) |
+| **Process** | `process_type` (core, support, management), `sla`, `automation_percentage`, `evolution_stage` (enum: genesis, custom, product, commodity), `evolution_target` (same enum — where it's heading), `evolution_confidence` (float 0-1), `pst_phase` (enum: pioneer, settler, town_planner) |
 | **Activity** | `performer_type` (human-only, agent-capable, agent-preferred, agent-only), `autonomy_level` (A0–A4) |
 | **Work Item** | `performer_id`, `confidence`, `review_status`, `lineage` (trace to strategy), `started_at`, `completed_at` |
 | **Strategy** | `time_horizon`, `scope` (enterprise, LOB, domain) |
@@ -85,6 +86,7 @@ Every object carries a common set of base attributes plus type-specific extensio
 | **Agent** | `agent_type` (see [Workforce Model](03-workforce-model.md)), `trust_level`, `autonomy_level`, `platform`, `model` |
 | **Team** | `team_type` (human, blended, agent-only), `member_count`, `agent_count` |
 | **Metric** | `unit`, `direction` (higher-is-better, lower-is-better, target-is-best), `frequency`, `source_system` |
+| **WardleyMap** | `owm_source` (Text - the OWM DSL map code), `map_scope` (enum: domain, capability, value_chain, custom), `evolution_context` (Text - narrative context for the map) |
 
 ---
 
@@ -109,6 +111,8 @@ Relationships are the **edges** in the business object graph. Every relationship
 | **fills** | An agent or human fills a role | Agent, (Human reference) | Role | N:M | Recommended |
 | **scoped_to** | Object is scoped to an organisational unit. This is the primary mechanism for multi-entity modelling — each OU gets its own domain trees, strategies, and teams. | Any | Organisational Unit | N:M | Recommended |
 | **parent_unit** | An organisational unit belongs to a parent unit (corporate hierarchy). | Organisational Unit | Organisational Unit | N:1 | Optional (top-level units have no parent) |
+| **maps** | A Wardley Map visualises objects | WardleyMap | Domain, Capability, Process, Organisational Unit | 1:N | Optional |
+| **evolves_to** | Tracks planned evolution movement | Capability, Process | Capability, Process | 1:1 | Optional |
 
 ### Relationship Attributes
 
@@ -280,6 +284,31 @@ Capability --(decomposes_into)--> Process --> Activity --> Work Item
 Capability <--(depends_on)-- other Capabilities/Processes
 Capability <--(measures)-- Metric
 Capability <--(aligns_to)-- Objective
+```
+
+### Evolution and Workforce Queries
+
+**"Show me all genesis-stage capabilities that need human-heavy workforce."**
+```
+Capability [evolution_stage = "genesis"] --> filter by pst_phase = "pioneer"
+```
+
+**"What capabilities are evolving toward commodity and can shift to agent-heavy workforce?"**
+```
+Capability [evolution_target = "commodity"] --> check current workforce_composition
+Capability --(evolves_to)--> Future Capability [evolution_stage = "commodity"]
+```
+
+**"Map all pioneer capabilities and their current workforce composition."**
+```
+Capability [pst_phase = "pioneer"] --> get workforce_composition + target_composition
+Capability --(decomposes_into)--> Process [pst_phase = "pioneer"]
+Process --(performs)--> Team [team_type] + Agent
+```
+
+**"Find wardley maps that visualise this domain's evolution."**
+```
+Domain <--(maps)-- WardleyMap --> extract owm_source + evolution_context
 ```
 
 ---
