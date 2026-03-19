@@ -151,7 +151,7 @@ function generateDomainDoc(domain, editionName) {
   lines.push('');
   lines.push('---');
   lines.push('');
-  lines.push('*© 2026 Zontally. All rights reserved.*');
+  lines.push('*© 2026 Zontally · Licensed under [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)*');
   lines.push('');
 
   return lines.join('\n');
@@ -176,7 +176,7 @@ function generateDomainIndex(title, description, domains, filenameFn) {
   lines.push('');
   lines.push('---');
   lines.push('');
-  lines.push('*© 2026 Zontally. All rights reserved.*');
+  lines.push('*© 2026 Zontally · Licensed under [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)*');
   lines.push('');
   return lines.join('\n');
 }
@@ -295,7 +295,7 @@ function main() {
         '',
         '---',
         '',
-        '*© 2026 Zontally. All rights reserved.*',
+        '*© 2026 Zontally · Licensed under [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)*',
         ''
       ].join('\n');
 
