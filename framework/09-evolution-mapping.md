@@ -7,6 +7,8 @@
 
 ## Overview
 
+<img src="../../assets/images/wardley-map.png" alt="Wardley Map" style="height: 600px;">
+
 In the agentic enterprise, understanding where your capabilities and processes sit on the **evolution curve** is not merely strategic insight — it is the foundation for **workforce composition decisions**. A capability in its genesis stage requires human creativity and judgement. A commodity capability can be entirely agent-delivered. Everything in between demands a thoughtful blend.
 
 ZORBA extends traditional Wardley Mapping to provide practitioners with **evolution tracking** as a first-class concern in enterprise architecture. Every capability and process carries evolution metadata. Every domain can be visualised as a Wardley Map. Every strategic decision can be informed by understanding not just what you have, but **where it's heading**.
@@ -261,74 +263,87 @@ ZORBA extends the [Information Model](07-information-model.md) with a **WardleyM
 Here's how ZORBA's **Technology & Data domain** might be represented as a Wardley Map using OWM DSL:
 
 ```owm
-title Technology & Data Domain - Current State
+title Typical IT Organisation
+style wardley
+size [1200, 800]
 
-# User-facing capabilities
-component "Digital Products" [0.9, 0.6]
-component "Business Intelligence" [0.8, 0.7]
-component "Data Insights" [0.8, 0.5]
+anchor BusinessUsers [0.95, 0.46]
+anchor Employees [0.93, 0.62]
 
-# Core technology capabilities  
-component "Application Portfolio" [0.7, 0.5]
-component "Cloud Platform" [0.6, 0.8]
-component "Data Platform" [0.6, 0.4]
-component "Cybersecurity" [0.5, 0.6]
+component Customer Facing Digital Services [0.83, 0.31] label [20, 0]
+component Internal Business Applications [0.78, 0.52] label [20, 0]
 
-# Infrastructure and operations
-component "Infrastructure" [0.4, 0.9]
-component "Service Desk" [0.3, 0.8]
-component "Agent Platform" [0.4, 0.2]
+component Product Teams [0.62, 0.18]
+component IT Service Desk [0.60, 0.34]
+component Security & Compliance [0.58, 0.48]
+component Data & Analytics [0.56, 0.26]
 
-# Supporting functions
-component "Enterprise Architecture" [0.2, 0.3]
-component "Technology Strategy" [0.1, 0.2]
+component CI/CD Platform [0.42, 0.18]
+component Developer Platform [0.40, 0.28]
+component Identity & Access Management [0.38, 0.42]
+component Monitoring & Observability [0.36, 0.54]
+component Integration Platform [0.34, 0.34]
+component Data Platform [0.32, 0.24]
 
-# Dependencies
-"Digital Products"->"Application Portfolio"
-"Digital Products"->"Data Platform"
-"Business Intelligence"->"Data Platform"
-"Data Insights"->"Data Platform"
+pipeline Shared Technology Platforms [0.22, 0.62]
 
-"Application Portfolio"->"Cloud Platform"
-"Application Portfolio"->"Cybersecurity"
-"Data Platform"->"Cloud Platform"
-"Data Platform"->"Cybersecurity"
+component Public Cloud [0.22, 0.20]
+component Containers / Kubernetes [0.20, 0.30]
+component Managed Databases [0.18, 0.40]
+component Network & CDN [0.16, 0.50]
+component Endpoint Devices [0.14, 0.64]
+component SaaS Commodity Tools [0.12, 0.56]
 
-"Cloud Platform"->"Infrastructure"
-"Cloud Platform"->"Agent Platform"
-"Service Desk"->"Infrastructure"
+BusinessUsers->Customer Facing Digital Services
+Employees->Internal Business Applications
 
-"Application Portfolio"->"Enterprise Architecture"
-"Data Platform"->"Enterprise Architecture"
-"Enterprise Architecture"->"Technology Strategy"
+Customer Facing Digital Services->Product Teams
+Customer Facing Digital Services->Data & Analytics
+Customer Facing Digital Services->Identity & Access Management
+Customer Facing Digital Services->Monitoring & Observability
+Customer Facing Digital Services->Integration Platform
 
-# Evolution movements
-evolve "Agent Platform" 0.4
-evolve "Data Platform" 0.6
-evolve "Cloud Platform" 0.9
+Internal Business Applications->IT Service Desk
+Internal Business Applications->Security & Compliance
+Internal Business Applications->Identity & Access Management
+Internal Business Applications->Integration Platform
+Internal Business Applications->Data Platform
 
-# Annotations with PST phases
-note "PIONEER: Agent platform - genesis, human-led innovation required" [0.4, 0.15]
-note "TOWN PLANNER: Cloud platform - commodity, agent-optimised operations" [0.6, 0.75]
-note "SETTLER: Data platform - custom→product, blended workforce transition" [0.6, 0.35]
-note "TOWN PLANNER: Infrastructure - utility operations, agent-autonomous" [0.4, 0.85]
+Product Teams->CI/CD Platform
+Product Teams->Developer Platform
+Product Teams->Containers / Kubernetes
+Product Teams->Public Cloud
 
-pipeline "Data Evolution" [0.4, 0.6]
-pipeline "PST Workforce Transition" [0.2, 0.9]
+IT Service Desk->Endpoint Devices
+IT Service Desk->SaaS Commodity Tools
+IT Service Desk->Identity & Access Management
+
+Security & Compliance->Identity & Access Management
+Security & Compliance->Monitoring & Observability
+Security & Compliance->Public Cloud
+
+Data & Analytics->Data Platform
+Data Platform->Managed Databases
+Integration Platform->Public Cloud
+CI/CD Platform->Public Cloud
+Developer Platform->Public Cloud
+Monitoring & Observability->Public Cloud
+Identity & Access Management->Public Cloud
+Containers / Kubernetes->Public Cloud
+Customer Facing Digital Services->Network & CDN
+
+evolve Customer Facing Digital Services 0.88 label [-97.00, 26.00]
+evolve Internal Business Applications 0.82
+evolve CI/CD Platform 0.72
+evolve Developer Platform 0.70
+evolve Identity & Access Management 0.78
+evolve Monitoring & Observability 0.80
+evolve Managed Databases 0.92 label [-33.00, 22.00]
+evolve Network & CDN 0.87 label [-46.00, 23.00]
+evolve SaaS Commodity Tools 0.90 label [-68.00, 22.00]
 ```
 
-This map reveals:
-
-1. **Agent Platform** is at genesis (0.2) — requires significant human expertise and innovation
-2. **Cloud Platform** is moving toward commodity (0.8→0.9) — can be increasingly agent-operated
-3. **Data Platform** is evolving from custom toward product (0.4→0.6) — workforce can shift from H+a to h+A
-4. **Infrastructure** is already commodity (0.9) — prime candidate for agent automation
-
-The workforce composition recommendations based on evolution stage and PST phase would be:
-- **Agent Platform:** H (Pioneer phase - human-led innovation team required)
-- **Data Platform:** H=A (Settler phase - blended team standardising processes)
-- **Cloud Platform:** h+A (Town Planner phase - agent-operated with human oversight)
-- **Infrastructure:** A (Town Planner phase - agent-autonomous with exception handling)
+<img src="../../assets/images/wardley-map.png" alt="Wardley Map" style="height: 600px;">
 
 ---
 
