@@ -78,38 +78,38 @@ ZORBA practitioners map evolution **relative to their organisation's context**, 
 
 ---
 
-## Pioneers, Settlers, and Town Planners (PST)
+## Explorers, Villages, and Town Planners (EVTP)
 
-Alongside evolution stages, Simon Wardley introduced the **Pioneers, Settlers, and Town Planners (PST)** organisational model that maps directly to evolution phases. PST describes the **types of people and mindset** needed at each stage of evolution, providing crucial insight into workforce composition and management approach.
+Alongside evolution stages, Simon Wardley introduced the **Explorers, Villagers, and Town Planners (EVTP)** organisational model that maps directly to evolution phases. EVTP describes the **types of people and mindset** needed at each stage of evolution, providing crucial insight into workforce composition and management approach.
 
 ### The Three Archetypes
 
 | Archetype | Characteristics | Optimal Context | ZORBA Workforce Implications |
 |-----------|----------------|-----------------|------------------------------|
-| **Pioneers** | Explorers, experimenters, comfortable with chaos and uncertainty. High failure tolerance, creative, innovative. Build the "art of the possible." | Genesis stage capabilities | Human-heavy teams required. Agents cannot pioneer — they need patterns to learn from. |
-| **Settlers** | Industrialisers, systematisers, bridge-builders. Take what Pioneers discovered and turn it into repeatable, reliable processes. | Custom→Product transition | Shift toward blended workforce. Settlers work with agents to standardise what Pioneers created. |
+| **Explorers** | Explorers, experimenters, comfortable with chaos and uncertainty. High failure tolerance, creative, innovative. Build the "art of the possible." | Genesis stage capabilities | Human-heavy teams required. Agents cannot pioneer — they need patterns to learn from. |
+| **Villagers** | Industrialisers, systematisers, bridge-builders. Take what Explorers discovered and turn it into repeatable, reliable processes. | Custom→Product transition | Shift toward blended workforce. Villagers work with agents to standardise what Explorers created. |
 | **Town Planners** | Optimisers, efficiency-focused, SLA-driven. Turn products into utilities through standardisation, automation, and operational excellence. | Commodity/Utility stage | Prime territory for autonomous agents. Predictable, measurable, optimisable work. |
 
-### PST and Evolution Stage Mapping
+### EVTP and Evolution Stage Mapping
 
-| PST Phase | Primary Evolution Stage | Secondary Stages | Mindset | Success Metrics |
+| EVTP Phase | Primary Evolution Stage | Secondary Stages | Mindset | Success Metrics |
 |-----------|------------------------|------------------|---------|-----------------|
-| **Pioneer** | Genesis | Early Custom | "Does it work?" | Innovation rate, experimentation velocity, breakthrough discoveries |
-| **Settler** | Custom | Late Custom → Early Product | "Can we repeat it?" | Reliability, process maturity, scalability |
+| **Explorer** | Genesis | Early Custom | "Does it work?" | Innovation rate, experimentation velocity, breakthrough discoveries |
+| **Villager** | Custom | Late Custom → Early Product | "Can we repeat it?" | Reliability, process maturity, scalability |
 | **Town Planner** | Product → Commodity | Utility | "Can we optimise it?" | Efficiency, cost per unit, SLA compliance, automation percentage |
 
 ### Critical Insights for Agent Deployment
 
-Understanding PST phases is **essential** for making informed agent deployment decisions:
+Understanding EVTP phases is **essential** for making informed agent deployment decisions:
 
-#### Pioneers (Genesis → Early Custom)
+#### Explorers (Genesis → Early Custom)
 - **Agents cannot pioneer.** Innovation requires creativity, intuition, and the ability to work without established patterns
-- **Human leadership mandatory.** Pioneer work needs human judgment to navigate uncertainty and make breakthrough decisions
+- **Human leadership mandatory.** Explorer work needs human judgment to navigate uncertainty and make breakthrough decisions
 - **Agent role limited to:** Data gathering, research assistance, rapid prototyping support
 - **Workforce profile:** H (human-led) with minimal agent involvement
 
-#### Settlers (Custom → Product)
-- **Agents excel at systematisation.** Once Pioneers prove something works, agents can help standardise and scale it
+#### Villagers (Custom → Product)
+- **Agents excel at systematisation.** Once Explorers prove something works, agents can help standardise and scale it
 - **Blended teams optimal.** Humans provide strategic direction and handle edge cases; agents execute standardised processes
 - **Agent capabilities:** Process documentation, pattern recognition, quality assurance, routine task automation
 - **Workforce profile:** H=A or H+a (balanced or human-led blended)
@@ -120,37 +120,37 @@ Understanding PST phases is **essential** for making informed agent deployment d
 - **Agent capabilities:** Full process ownership, continuous optimisation, anomaly detection, self-healing systems
 - **Workforce profile:** h+A or A (agent-heavy or agent-autonomous)
 
-### The PST Anti-Pattern: Role Mismatches
+### The EVTP Anti-Pattern: Role Mismatches
 
 One of the most common failures in capability management is putting the wrong archetype in the wrong context:
 
 | Anti-Pattern | Description | Consequences |
 |--------------|-------------|--------------|
-| **Pioneers in Commodity** | Creative, experimental mindset applied to utility operations | Over-engineering, unnecessary complexity, cost inefficiency |
+| **Explorers in Commodity** | Creative, experimental mindset applied to utility operations | Over-engineering, unnecessary complexity, cost inefficiency |
 | **Town Planners in Genesis** | Efficiency-focused approach applied to novel exploration | Premature optimisation, innovation stifling, false certainties |
-| **Settlers everywhere** | Using compromise approaches for all situations | Mediocre outcomes — neither breakthrough innovation nor operational excellence |
+| **Villagers everywhere** | Using compromise approaches for all situations | Mediocre outcomes — neither breakthrough innovation nor operational excellence |
 
-### PST in ZORBA Implementation
+### EVTP in ZORBA Implementation
 
 When implementing ZORBA evolution mapping:
 
-1. **Assess current PST distribution:** Map existing team members and mindsets against capabilities
-2. **Identify PST mismatches:** Look for Town Planner mindsets managing Genesis capabilities (or vice versa)
-3. **Plan PST transitions:** As capabilities evolve, workforce composition AND management approach must evolve
-4. **Design agent deployment strategy:** Use PST phase to determine agent readiness and autonomy level
-5. **Manage PST career paths:** Pioneers who become Settlers who become Town Planners need different career development
+1. **Assess current EVTP distribution:** Map existing team members and mindsets against capabilities
+2. **Identify EVTP mismatches:** Look for Town Planner mindsets managing Genesis capabilities (or vice versa)
+3. **Plan EVTP transitions:** As capabilities evolve, workforce composition AND management approach must evolve
+4. **Design agent deployment strategy:** Use EVTP phase to determine agent readiness and autonomy level
+5. **Manage EVTP career paths:** Explorers who become Villagers who become Town Planners need different career development
 
 ### Example: Software Development Evolution
 
-Consider how a software development capability evolves through PST phases:
+Consider how a software development capability evolves through EVTP phases:
 
 | Phase | Capability | Work Style | Tools | Workforce | Agent Role |
 |-------|------------|------------|-------|-----------|------------|
-| **Pioneer** | Novel AI framework | Experimental, research-driven | Jupyter notebooks, experimental tools | Senior researchers, architects | Research assistance, code generation experiments |
-| **Settler** | Productised framework | Process-driven, quality-focused | CI/CD, testing frameworks, documentation | Engineering teams, product managers | Code review, testing, documentation |
+| **Explorer** | Novel AI framework | Experimental, research-driven | Jupyter notebooks, experimental tools | Senior researchers, architects | Research assistance, code generation experiments |
+| **Villager** | Productised framework | Process-driven, quality-focused | CI/CD, testing frameworks, documentation | Engineering teams, product managers | Code review, testing, documentation |
 | **Town Planner** | Framework-as-a-Service | SLA-driven, efficiency-focused | Monitoring, automation, cost optimisation | DevOps, platform engineers | Automated deployment, monitoring, optimisation |
 
-Each phase requires different people, processes, and agent capabilities. Forcing a Pioneer approach on commodity work wastes resources. Forcing a Town Planner approach on genesis work kills innovation.
+Each phase requires different people, processes, and agent capabilities. Forcing a Explorer approach on commodity work wastes resources. Forcing a Town Planner approach on genesis work kills innovation.
 
 ---
 
@@ -381,7 +381,7 @@ evolve SaaS Commodity Tools 0.90 label [-68.00, 22.00]
 
 ## Attribution and Licensing
 
-**Wardley Mapping** and the **Pioneers, Settlers, and Town Planners (PST)** organisational model are created by Simon Wardley and licensed under [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/). 
+**Wardley Mapping** and the **Explorers, Villagers, and Town Planners (EVTP)** organisational model are created by Simon Wardley and licensed under [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/). 
 
 Learn more about Wardley Mapping:
 - [Wardley Maps on Medium](https://medium.com/wardleymaps)
