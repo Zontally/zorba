@@ -45,10 +45,10 @@ nav:
     - Governance: framework/06-governance.md
     - Information Model: framework/07-information-model.md
     - Industry Editions: framework/08-industry-editions.md
-    - Glossary: framework/09-glossary.md
+    - Evolution Mapping: framework/09-evolution-mapping.md
     - Usage Guide: framework/10-usage-guide.md
     - Contributing: framework/11-contributing.md
-    - Evolution Mapping: framework/12-evolution-mapping.md
+    - Glossary: framework/12-glossary.md
   - Domain Taxonomy: domains/index.md
 
 markdown_extensions:

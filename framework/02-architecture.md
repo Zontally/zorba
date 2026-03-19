@@ -333,7 +333,7 @@ The evolution dimension uses **Wardley Mapping methodology** and **Pioneers, Set
 
 **Key principle:** A capability at genesis stage requires human-heavy (Pioneer) workforce. A commodity capability can be agent-autonomous (Town Planner). Everything in between demands thoughtful workforce evolution planning.
 
-See [Evolution Mapping](12-evolution-mapping.md) for the complete framework on tracking and predicting capability evolution in ZORBA architectures.
+See [Evolution Mapping](09-evolution-mapping.md) for the complete framework on tracking and predicting capability evolution in ZORBA architectures.
 
 ---
 
