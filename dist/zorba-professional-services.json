@@ -1,19 +1,19 @@
 {
-  "edition": "public-sector",
-  "name": "ZORBA for Public Sector",
+  "edition": "professional-services",
+  "name": "ZORBA for Professional Services",
   "extends": "core",
   "version": "0.1.0",
-  "compiled_at": "2026-03-19T15:50:54.287Z",
+  "compiled_at": "2026-03-19T16:39:11.910Z",
   "stats": {
     "totalDomains": 12,
-    "totalCapabilities": 88,
-    "totalProcesses": 477,
+    "totalCapabilities": 87,
+    "totalProcesses": 474,
     "profileCounts": {
-      "H": 31,
-      "H+a": 117,
-      "H=A": 136,
-      "h+A": 141,
-      "A": 52
+      "H": 32,
+      "H+a": 118,
+      "H=A": 130,
+      "h+A": 145,
+      "A": 49
     }
   },
   "domains": [
@@ -488,10 +488,10 @@
     {
       "id": "482917",
       "number": 2,
-      "name": "Product & Innovation",
-      "subtitle": "Creating what the market needs next",
+      "name": "Service Design & Innovation",
+      "subtitle": "Crafting and evolving service offerings that clients value",
       "classification": "value_chain",
-      "description": "This domain encompasses the enterprise's ability to envision, design, build, and evolve the products and services that deliver value to its customers and markets. It spans from early-stage ideation and research through to product lifecycle management and retirement, including the intellectual property that protects competitive advantage.\nIn a ZORBA-enabled enterprise, this domain is where agentic capabilities most visibly augment human creativity — with agents accelerating research synthesis, automating testing cycles, generating design variations, and providing real-time product analytics that inform every decision from concept through sunset.\n",
+      "description": "This domain encompasses the firm's ability to design, package, and evolve its service offerings, methodologies, and intellectual property. In professional services, \"products\" are reusable frameworks, delivery accelerators, proprietary methodologies, and packaged service lines rather than physical or software products.\nIn a ZORBA-enabled professional services firm, agents help codify methodologies, track offering performance metrics, and accelerate proposal content reuse, while humans focus on thought leadership, client-driven innovation, and practice strategy.\n",
       "capabilities": [
         {
           "id": "361742",
@@ -589,50 +589,43 @@
         {
           "id": "649281",
           "number": "2.3",
-          "name": "Design and Engineer Products and Services",
-          "description": "Execute the core design and engineering work that transforms validated concepts into market-ready products. This capability covers requirements definition, architecture, development, and quality assurance.\n",
+          "name": "Design and Package Service Offerings",
+          "description": "Define, structure, and package reusable service offerings including scope templates, delivery frameworks, pricing models, and staffing blueprints. Ensure offerings are market-ready and consistently deliverable across the practice.\n",
           "processes": [
             {
-              "id": "514738",
+              "id": "453533",
               "number": "2.3.1",
-              "name": "Define product requirements and acceptance criteria",
+              "name": "Define service offering scope and delivery framework",
               "agentic_profile": "H+a",
-              "agentic_note": "Humans specify requirements; agents structure and cross-reference"
+              "agentic_note": "Human-led offering design; agents assist with market data and competitive analysis"
             },
             {
-              "id": "928471",
+              "id": "752095",
               "number": "2.3.2",
-              "name": "Design product architecture and technical specifications",
-              "agentic_profile": "H+a",
-              "agentic_note": "Humans architect; agents generate documentation and check consistency"
+              "name": "Develop pricing models and commercial structures",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents model pricing scenarios and margin analysis; humans set commercial strategy"
             },
             {
-              "id": "347165",
+              "id": "660643",
               "number": "2.3.3",
-              "name": "Execute product development and build cycles",
-              "agentic_profile": "H=A",
-              "agentic_note": "Agents assist with code generation, component design; humans lead creation"
-            },
-            {
-              "id": "763829",
-              "number": "2.3.4",
-              "name": "Conduct quality assurance and automated testing",
+              "name": "Create delivery accelerators and reusable templates",
               "agentic_profile": "h+A",
-              "agentic_note": "Agents execute test suites and regression tests; humans define test strategy"
+              "agentic_note": "Agents codify and templatise proven delivery approaches; humans review and curate"
             },
             {
-              "id": "481592",
+              "id": "924583",
+              "number": "2.3.4",
+              "name": "Define staffing blueprints and skill requirements per offering",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents map skill demand to available bench; humans validate and adjust"
+            },
+            {
+              "id": "278061",
               "number": "2.3.5",
-              "name": "Manage product configuration and variant engineering",
-              "agentic_profile": "H=A",
-              "agentic_note": "Agents manage configuration matrices; humans approve variant decisions"
-            },
-            {
-              "id": "629413",
-              "number": "2.3.6",
-              "name": "Perform usability and accessibility validation",
-              "agentic_profile": "H=A",
-              "agentic_note": "Agents run automated accessibility checks; humans conduct user testing"
+              "name": "Validate offering market readiness and pilot with clients",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led; client relationships and commercial judgement drive pilot decisions"
             }
           ]
         },
@@ -870,10 +863,10 @@
     {
       "id": "729415",
       "number": 3,
-      "name": "Marketing",
-      "subtitle": "Building demand and shaping perception",
+      "name": "Marketing & Practice Development",
+      "subtitle": "Building eminence and generating client opportunities through thought leadership",
       "classification": "value_chain",
-      "description": "This domain encompasses the enterprise's ability to understand its markets, build compelling brand narratives, generate demand, and attract qualified prospects. It spans the full marketing spectrum from strategic planning and brand stewardship through to campaign execution, content production, and performance measurement.\nIn a ZORBA-enabled enterprise, marketing is where agentic scale meets human creativity — with agents producing content variations at unprecedented speed, optimising campaigns in real time, automating attribution analysis, and freeing marketers to focus on strategy, storytelling, and brand authenticity.\n",
+      "description": "This domain encompasses the firm's ability to build market presence, develop practice eminence, and generate client opportunities. In professional services, marketing is deeply intertwined with practice development — thought leadership, conference speaking, published research, and executive relationship-building are primary demand generation tools rather than digital campaigns alone.\nIn a ZORBA-enabled professional services firm, agents handle content distribution, event logistics, CRM data enrichment, and marketing analytics, while humans drive thought leadership creation, keynote delivery, and strategic relationship cultivation.\n",
       "capabilities": [
         {
           "id": "418362",
@@ -1216,37 +1209,101 @@
     {
       "id": "358741",
       "number": 4,
-      "name": "Citizen Engagement & Service Delivery",
-      "subtitle": "Connecting citizens with public services",
+      "name": "Business Development & Client Acquisition",
+      "subtitle": "Winning work through relationships, proposals, and trusted advisory",
       "classification": "value_chain",
-      "description": "This domain encompasses the public sector organisation's ability to reach, engage, and serve citizens and communities. It replaces the commercial Sales domain with functions appropriate to non-commercial public entities — including citizen outreach, service awareness campaigns, digital channel management, and constituent relationship management.\nIn a ZORBA-enabled public sector organisation, agents handle citizen enquiry routing, service eligibility checks, communication scheduling, and channel analytics, while humans focus on policy interpretation, complex casework, and community relationship building.\n",
+      "description": "This domain encompasses the firm's ability to identify, pursue, and win client engagements. In professional services, business development is relationship-led and proposal-driven rather than transactional. Win strategies centre on demonstrating domain expertise, assembling the right team, and navigating complex procurement processes including RFPs, framework agreements, and competitive tenders.\nIn a ZORBA-enabled professional services firm, agents handle proposal assembly, competitive intelligence gathering, CRM hygiene, and bid coordination, while humans focus on client relationships, solution shaping, orals presentations, and commercial negotiation.\n",
       "capabilities": [
         {
           "id": "461283",
           "number": "4.1",
-          "name": "Define Citizen Engagement Strategy",
-          "description": "Establish the strategy for citizen outreach, service awareness, and channel management. Design engagement models that maximise service uptake and citizen satisfaction across diverse communities.\n",
+          "name": "Define Sales Strategy and Territory Architecture",
+          "description": "Establish the sales strategy, design territory and segment coverage models, and set the go-to-market approach that maximises revenue potential across the customer base.\n",
           "processes": [
             {
               "id": "529738",
               "number": "4.1.1",
-              "name": "Define the citizen engagement and outreach strategy",
+              "name": "Define the sales strategy and go-to-market approach",
               "agentic_profile": "H",
-              "agentic_note": "Human-led; engagement strategy requires policy context and community understanding"
+              "agentic_note": "Human-led; sales strategy requires market judgement and leadership vision"
             },
             {
               "id": "813462",
               "number": "4.1.2",
-              "name": "Design service area and community coverage models",
+              "name": "Design territory and segment coverage models",
               "agentic_profile": "H=A",
-              "agentic_note": "Agents model demographic data and service demand; humans approve coverage design"
+              "agentic_note": "Agents model territory potential and balance workload; humans approve structure"
             },
             {
               "id": "274913",
               "number": "4.1.3",
-              "name": "Set service uptake targets and KPIs",
+              "name": "Set quota and target frameworks",
               "agentic_profile": "H=A",
-              "agentic_note": "Agents analyse historical uptake and benchmark; humans set targets aligned to policy"
+              "agentic_note": "Agents model attainment scenarios; humans set targets and incentives"
+            },
+            {
+              "id": "224906",
+              "number": "4.1.4",
+              "name": "Define ideal customer profiles and account tiering",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents analyse firmographic and behavioural data; humans validate profiles"
+            },
+            {
+              "id": "348176",
+              "number": "4.1.5",
+              "name": "Align sales coverage with marketing and product strategies",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans drive alignment; agents flag gaps and overlaps"
+            }
+          ]
+        },
+        {
+          "id": "582314",
+          "number": "4.2",
+          "name": "Manage the Sales Pipeline and Forecast Revenue",
+          "description": "Operate the end-to-end pipeline from opportunity creation through to close — ensuring pipeline health, forecast accuracy, and visibility into revenue trajectory.\n",
+          "processes": [
+            {
+              "id": "419628",
+              "number": "4.2.1",
+              "name": "Manage opportunity creation and pipeline intake",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents create opportunities from qualified leads; humans validate and enrich"
+            },
+            {
+              "id": "763142",
+              "number": "4.2.2",
+              "name": "Qualify and progress opportunities through sales stages",
+              "agentic_profile": "H+a",
+              "agentic_note": "Humans drive deals; agents update stage data and flag stalled opportunities"
+            },
+            {
+              "id": "295831",
+              "number": "4.2.3",
+              "name": "Generate and maintain revenue forecasts",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents model forecasts using pipeline and historical data; humans adjust for judgement"
+            },
+            {
+              "id": "841567",
+              "number": "4.2.4",
+              "name": "Conduct pipeline reviews and health assessments",
+              "agentic_profile": "H+a",
+              "agentic_note": "Agents prepare pipeline analytics; humans lead review discussions"
+            },
+            {
+              "id": "617294",
+              "number": "4.2.5",
+              "name": "Identify and manage pipeline risks and gaps",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents surface at-risk deals and coverage gaps; humans intervene"
+            },
+            {
+              "id": "354182",
+              "number": "4.2.6",
+              "name": "Reconcile forecast to actuals and improve accuracy",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents analyse forecast deviation patterns; humans refine methodology"
             }
           ]
         },
@@ -1471,74 +1528,16 @@
               "agentic_note": "Agents surface patterns and anomalies; humans translate to strategy"
             }
           ]
-        },
-        {
-          "id": "186050",
-          "number": "4.3",
-          "name": "Manage Citizen Communications and Outreach",
-          "description": "Plan, execute, and measure citizen communication campaigns across digital and traditional channels. Ensure accessibility, inclusivity, and compliance with government communication standards.\n",
-          "processes": [
-            {
-              "id": "616088",
-              "number": "4.3.1",
-              "name": "Plan and schedule citizen communication campaigns",
-              "agentic_profile": "H=A",
-              "agentic_note": "Agents manage scheduling and channel orchestration; humans approve messaging and tone"
-            },
-            {
-              "id": "230454",
-              "number": "4.3.2",
-              "name": "Manage digital service channels and citizen portals",
-              "agentic_profile": "h+A",
-              "agentic_note": "Agents handle content updates, analytics, and A/B testing; humans set strategy and review"
-            },
-            {
-              "id": "407121",
-              "number": "4.3.3",
-              "name": "Measure outreach effectiveness and citizen satisfaction",
-              "agentic_profile": "h+A",
-              "agentic_note": "Agents compile metrics, sentiment analysis, and dashboards; humans interpret and act"
-            }
-          ]
-        },
-        {
-          "id": "235670",
-          "number": "4.4",
-          "name": "Manage Constituent Relationships",
-          "description": "Maintain records of citizen interactions, service history, and engagement preferences. Support caseworkers and service teams with a unified view of constituent needs.\n",
-          "processes": [
-            {
-              "id": "302940",
-              "number": "4.4.1",
-              "name": "Maintain constituent records and interaction history",
-              "agentic_profile": "h+A",
-              "agentic_note": "Agents maintain CRM data, flag patterns, and deduplicate records; humans review sensitive cases"
-            },
-            {
-              "id": "424292",
-              "number": "4.4.2",
-              "name": "Support caseworkers with constituent context",
-              "agentic_profile": "H=A",
-              "agentic_note": "Agents surface relevant history and eligibility data; caseworkers make decisions"
-            },
-            {
-              "id": "862622",
-              "number": "4.4.3",
-              "name": "Manage elected official and stakeholder relationships",
-              "agentic_profile": "H",
-              "agentic_note": "Human-only; political relationships require judgement and discretion"
-            }
-          ]
         }
       ]
     },
     {
       "id": "841267",
       "number": 5,
-      "name": "Customer Success & Service",
-      "subtitle": "Delivering outcomes that earn loyalty",
+      "name": "Client Engagement & Delivery Excellence",
+      "subtitle": "Delivering outcomes and building lasting client partnerships",
       "classification": "value_chain",
-      "description": "This domain encompasses the enterprise's ability to support customers after the sale, ensure they achieve their desired outcomes, manage service delivery, and build long-term loyalty. It is the domain where customer relationships are sustained and deepened — and where blended workforces are already most visibly operational.\nIn a ZORBA-enabled enterprise, this domain is the proving ground for human-agent collaboration. Agents already handle the majority of initial customer interactions, while humans provide empathy, creative problem-solving, and relationship depth for complex scenarios.\n",
+      "description": "This domain encompasses the firm's ability to deliver exceptional client outcomes and build enduring advisory relationships. In professional services, client success is inseparable from delivery — satisfaction is earned through engagement execution, not post-sale support functions. The focus is on delivery quality, stakeholder management, scope governance, and turning successful engagements into long-term partnerships.\nIn a ZORBA-enabled professional services firm, agents monitor engagement health metrics, automate status reporting, track deliverable completion, and flag risks early, while humans manage client relationships, navigate organisational politics, and provide the expert judgement that defines advisory value.\n",
       "capabilities": [
         {
           "id": "362841",
@@ -1860,10 +1859,10 @@
     {
       "id": "471829",
       "number": 6,
-      "name": "Operations & Delivery",
-      "subtitle": "Executing with precision and adaptability",
+      "name": "Engagement Delivery & Project Management",
+      "subtitle": "Managing the lifecycle of client engagements from mobilisation to close",
       "classification": "value_chain",
-      "description": "This domain encompasses the enterprise's ability to plan, execute, and continuously improve its core operational activities — whether producing physical goods, delivering services, or running hybrid fulfilment models. It covers the full span from operational planning through delivery execution, quality assurance, and ongoing operational refinement.\nIn a ZORBA-enabled enterprise, operations is where agents move from advisory to executive roles — scheduling production runs, monitoring quality in real time, detecting anomalies before they escalate, and orchestrating exception handling across the delivery chain.\n",
+      "description": "This domain encompasses the firm's ability to plan, execute, and close client engagements effectively. In professional services, operations *is* delivery — project and programme management, resource scheduling, utilisation tracking, milestone management, and change control are the operational core of the business.\nIn a ZORBA-enabled professional services firm, agents handle resource scheduling optimisation, timesheet analysis, milestone tracking, budget burn-rate monitoring, and automated status consolidation, while humans lead engagement governance, client steering committees, risk escalation, and the creative problem-solving that defines high-value delivery.\n",
       "capabilities": [
         {
           "id": "207622",
@@ -2185,10 +2184,10 @@
     {
       "id": "824713",
       "number": 7,
-      "name": "Supply Chain",
-      "subtitle": "Building a resilient, responsive supply network",
+      "name": "Subcontractor & Vendor Management",
+      "subtitle": "Managing the extended workforce and specialist vendor ecosystem",
       "classification": "value_chain",
-      "description": "This domain encompasses the enterprise's ability to source, procure, move, store, and distribute goods and services across its extended supply network. It spans from upstream supplier relationships through internal logistics to final-mile delivery, and includes the planning and risk management activities that keep the supply chain responsive and resilient.\nIn a ZORBA-enabled enterprise, the supply chain is arguably the most agent-ready domain — with mature use cases in demand forecasting, inventory optimisation, route planning, supplier monitoring, and autonomous procurement within defined parameters. Agents here operate at scale and speed that human-only models cannot match.\n",
+      "description": "This domain encompasses the firm's ability to source, manage, and govern its extended workforce of subcontractors, associate consultants, specialist vendors, and technology partners. Professional services firms do not operate physical supply chains — their \"supply\" is people and specialist capabilities sourced from an ecosystem of trusted partners and independents.\nIn a ZORBA-enabled professional services firm, agents manage subcontractor databases, rate card compliance, availability tracking, IR35/contractor compliance checks, and performance scoring, while humans manage strategic partner relationships, negotiate framework agreements, and make staffing decisions for client engagements.\n",
       "capabilities": [
         {
           "id": "391572",
@@ -2280,99 +2279,6 @@
               "name": "Manage supplier risk and contingency planning",
               "agentic_profile": "h+A",
               "agentic_note": "Agents monitor risk signals (financial, geopolitical); humans define contingencies"
-            }
-          ]
-        },
-        {
-          "id": "418639",
-          "number": "7.3",
-          "name": "Plan and Manage Logistics and Distribution",
-          "description": "Design, operate, and optimise the physical movement of goods from origin to destination — including transportation, warehousing, and distribution network management.\n",
-          "processes": [
-            {
-              "id": "729385",
-              "number": "7.3.1",
-              "name": "Design and optimise the distribution network",
-              "agentic_profile": "H=A",
-              "agentic_note": "Agents model network scenarios; humans decide structural changes"
-            },
-            {
-              "id": "563412",
-              "number": "7.3.2",
-              "name": "Plan and schedule transportation movements",
-              "agentic_profile": "A",
-              "agentic_note": "Agent-executed; automated route optimisation and carrier assignment"
-            },
-            {
-              "id": "847261",
-              "number": "7.3.3",
-              "name": "Manage warehousing and distribution centre operations",
-              "agentic_profile": "H=A",
-              "agentic_note": "Agents optimise storage and picking; humans manage workforce and exceptions"
-            },
-            {
-              "id": "218534",
-              "number": "7.3.4",
-              "name": "Track shipments and manage in-transit visibility",
-              "agentic_profile": "A",
-              "agentic_note": "Agent-executed; real-time tracking with proactive exception alerts"
-            },
-            {
-              "id": "694173",
-              "number": "7.3.5",
-              "name": "Manage freight costs and carrier performance",
-              "agentic_profile": "h+A",
-              "agentic_note": "Agents analyse costs and benchmark carriers; humans negotiate and select"
-            },
-            {
-              "id": "375918",
-              "number": "7.3.6",
-              "name": "Manage returns logistics and reverse supply chain",
-              "agentic_profile": "H=A",
-              "agentic_note": "Agents process returns and route items; humans handle disposition decisions"
-            }
-          ]
-        },
-        {
-          "id": "257914",
-          "number": "7.4",
-          "name": "Manage Inventory Across the Supply Network",
-          "description": "Plan, control, and optimise inventory levels across all nodes in the supply chain — balancing service levels, working capital, and obsolescence risk.\n",
-          "processes": [
-            {
-              "id": "483126",
-              "number": "7.4.1",
-              "name": "Set inventory policies and target service levels",
-              "agentic_profile": "H+a",
-              "agentic_note": "Humans define policies; agents model trade-offs and recommend targets"
-            },
-            {
-              "id": "926347",
-              "number": "7.4.2",
-              "name": "Monitor inventory positions and movements in real time",
-              "agentic_profile": "A",
-              "agentic_note": "Agent-executed; continuous visibility with automated reorder triggers"
-            },
-            {
-              "id": "614283",
-              "number": "7.4.3",
-              "name": "Optimise replenishment and reorder parameters",
-              "agentic_profile": "h+A",
-              "agentic_note": "Agents calculate optimal parameters; humans approve significant changes"
-            },
-            {
-              "id": "730226",
-              "number": "7.4.4",
-              "name": "Manage slow-moving, excess, and obsolete inventory",
-              "agentic_profile": "H=A",
-              "agentic_note": "Agents identify at-risk stock; humans decide write-down or disposal actions"
-            },
-            {
-              "id": "742158",
-              "number": "7.4.5",
-              "name": "Conduct inventory counts and reconciliation",
-              "agentic_profile": "H=A",
-              "agentic_note": "Agents schedule and track counts; humans investigate discrepancies"
             }
           ]
         },
@@ -2509,6 +2415,71 @@
               "name": "Review and rationalise the partner ecosystem periodically",
               "agentic_profile": "H+a",
               "agentic_note": "Humans make portfolio decisions; agents analyse utilisation and overlap"
+            }
+          ]
+        },
+        {
+          "id": "499585",
+          "number": "7.3",
+          "name": "Manage Subcontractor Sourcing and Onboarding",
+          "description": "Identify, vet, and onboard subcontractors and associate consultants into the firm's extended workforce pool. Ensure compliance with IR35, right-to-work, insurance, and confidentiality requirements.\n",
+          "processes": [
+            {
+              "id": "720535",
+              "number": "7.3.1",
+              "name": "Maintain the approved subcontractor and associate database",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents manage database, flag expiring certifications; humans approve additions"
+            },
+            {
+              "id": "199314",
+              "number": "7.3.2",
+              "name": "Conduct subcontractor vetting and compliance checks",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents automate background checks, IR35 assessments; humans review edge cases"
+            },
+            {
+              "id": "805996",
+              "number": "7.3.3",
+              "name": "Negotiate subcontractor rate cards and framework terms",
+              "agentic_profile": "H",
+              "agentic_note": "Human-led commercial negotiation; agents provide market rate benchmarks"
+            },
+            {
+              "id": "992314",
+              "number": "7.3.4",
+              "name": "Manage subcontractor onboarding and system access provisioning",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents orchestrate onboarding workflows; humans approve access and assignments"
+            }
+          ]
+        },
+        {
+          "id": "929613",
+          "number": "7.4",
+          "name": "Track Subcontractor Utilisation and Availability",
+          "description": "Monitor the availability, utilisation, and capacity of subcontractors and associates across active and upcoming engagements. Match available capacity to staffing demands.\n",
+          "processes": [
+            {
+              "id": "457166",
+              "number": "7.4.1",
+              "name": "Track subcontractor availability and forward commitments",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents maintain availability calendars and flag conflicts; humans confirm allocations"
+            },
+            {
+              "id": "485891",
+              "number": "7.4.2",
+              "name": "Match subcontractor skills to engagement staffing needs",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents run skill-matching algorithms; humans make final staffing decisions"
+            },
+            {
+              "id": "736578",
+              "number": "7.4.3",
+              "name": "Monitor subcontractor utilisation rates and cost efficiency",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents compute utilisation metrics and cost analysis; humans act on insights"
             }
           ]
         }

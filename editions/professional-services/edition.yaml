@@ -1,0 +1,19 @@
+edition:
+  name: "ZORBA for Professional Services"
+  slug: "professional-services"
+  extends: "core"
+  version: "0.1.0"
+  description: >
+    An industry edition of ZORBA tailored for professional services firms —
+    consultancies, systems integrators, advisory practices, managed service
+    providers, and specialist agencies. Reframes product-centric and
+    supply-chain concepts into service delivery equivalents: offering
+    design, engagement management, subcontractor networks, and
+    utilisation-driven workforce planning.
+  target_industries:
+    - Management Consulting
+    - Technology Consulting & Systems Integration
+    - Advisory & Assurance
+    - Managed Service Providers
+    - Specialist Agencies
+    - Legal & Accounting Services

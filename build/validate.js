@@ -86,7 +86,8 @@ function validateDomain(data, file, allIds) {
   if (domain.number === undefined) addWarning(file, 'Domain missing "number"');
 
   if (!domain.capabilities || !Array.isArray(domain.capabilities)) {
-    addError(file, 'Domain missing "capabilities" array');
+    // Edition overrides may only change domain-level metadata (name, description, classification)
+    addWarning(file, 'Domain missing "capabilities" array (ok for edition overrides)');
     return;
   }
 

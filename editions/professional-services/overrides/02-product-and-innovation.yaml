@@ -1,0 +1,53 @@
+domain:
+  id: "482917"
+  number: 2
+  name: "Service Design & Innovation"
+  subtitle: "Crafting and evolving service offerings that clients value"
+  classification: value_chain
+  description: >
+    This domain encompasses the firm's ability to design, package, and evolve
+    its service offerings, methodologies, and intellectual property. In
+    professional services, "products" are reusable frameworks, delivery
+    accelerators, proprietary methodologies, and packaged service lines
+    rather than physical or software products.
+
+    In a ZORBA-enabled professional services firm, agents help codify
+    methodologies, track offering performance metrics, and accelerate
+    proposal content reuse, while humans focus on thought leadership,
+    client-driven innovation, and practice strategy.
+
+  capabilities:
+    - id: "649281"
+      number: "2.3"
+      name: "Design and Package Service Offerings"
+      description: >
+        Define, structure, and package reusable service offerings including
+        scope templates, delivery frameworks, pricing models, and
+        staffing blueprints. Ensure offerings are market-ready and
+        consistently deliverable across the practice.
+      processes:
+        - id: "453533"
+          number: "2.3.1"
+          name: "Define service offering scope and delivery framework"
+          agentic_profile: "H+a"
+          agentic_note: "Human-led offering design; agents assist with market data and competitive analysis"
+        - id: "752095"
+          number: "2.3.2"
+          name: "Develop pricing models and commercial structures"
+          agentic_profile: "H=A"
+          agentic_note: "Agents model pricing scenarios and margin analysis; humans set commercial strategy"
+        - id: "660643"
+          number: "2.3.3"
+          name: "Create delivery accelerators and reusable templates"
+          agentic_profile: "h+A"
+          agentic_note: "Agents codify and templatise proven delivery approaches; humans review and curate"
+        - id: "924583"
+          number: "2.3.4"
+          name: "Define staffing blueprints and skill requirements per offering"
+          agentic_profile: "H=A"
+          agentic_note: "Agents map skill demand to available bench; humans validate and adjust"
+        - id: "278061"
+          number: "2.3.5"
+          name: "Validate offering market readiness and pilot with clients"
+          agentic_profile: H
+          agentic_note: "Human-led; client relationships and commercial judgement drive pilot decisions"

@@ -1,0 +1,89 @@
+domain:
+  id: "824713"
+  number: 7
+  name: "Subcontractor & Vendor Management"
+  subtitle: "Managing the extended workforce and specialist vendor ecosystem"
+  classification: management_function
+  description: >
+    This domain encompasses the firm's ability to source, manage, and
+    govern its extended workforce of subcontractors, associate consultants,
+    specialist vendors, and technology partners. Professional services
+    firms do not operate physical supply chains — their "supply" is
+    people and specialist capabilities sourced from an ecosystem of
+    trusted partners and independents.
+
+    In a ZORBA-enabled professional services firm, agents manage
+    subcontractor databases, rate card compliance, availability tracking,
+    IR35/contractor compliance checks, and performance scoring, while
+    humans manage strategic partner relationships, negotiate framework
+    agreements, and make staffing decisions for client engagements.
+
+  capabilities:
+    - id: "418639"
+      number: "7.3"
+      name: "Plan and Manage Logistics and Distribution"
+      suppress: true
+      suppress_note: "No physical logistics in professional services"
+      description: "Suppressed — not applicable to professional services."
+      processes: []
+
+    - id: "257914"
+      number: "7.4"
+      name: "Manage Inventory Across the Supply Network"
+      suppress: true
+      suppress_note: "No physical inventory in professional services"
+      description: "Suppressed — not applicable to professional services."
+      processes: []
+
+    - id: "499585"
+      number: "7.3"
+      name: "Manage Subcontractor Sourcing and Onboarding"
+      description: >
+        Identify, vet, and onboard subcontractors and associate consultants
+        into the firm's extended workforce pool. Ensure compliance with
+        IR35, right-to-work, insurance, and confidentiality requirements.
+      processes:
+        - id: "720535"
+          number: "7.3.1"
+          name: "Maintain the approved subcontractor and associate database"
+          agentic_profile: "h+A"
+          agentic_note: "Agents manage database, flag expiring certifications; humans approve additions"
+        - id: "199314"
+          number: "7.3.2"
+          name: "Conduct subcontractor vetting and compliance checks"
+          agentic_profile: "h+A"
+          agentic_note: "Agents automate background checks, IR35 assessments; humans review edge cases"
+        - id: "805996"
+          number: "7.3.3"
+          name: "Negotiate subcontractor rate cards and framework terms"
+          agentic_profile: H
+          agentic_note: "Human-led commercial negotiation; agents provide market rate benchmarks"
+        - id: "992314"
+          number: "7.3.4"
+          name: "Manage subcontractor onboarding and system access provisioning"
+          agentic_profile: "h+A"
+          agentic_note: "Agents orchestrate onboarding workflows; humans approve access and assignments"
+
+    - id: "929613"
+      number: "7.4"
+      name: "Track Subcontractor Utilisation and Availability"
+      description: >
+        Monitor the availability, utilisation, and capacity of subcontractors
+        and associates across active and upcoming engagements. Match
+        available capacity to staffing demands.
+      processes:
+        - id: "457166"
+          number: "7.4.1"
+          name: "Track subcontractor availability and forward commitments"
+          agentic_profile: "h+A"
+          agentic_note: "Agents maintain availability calendars and flag conflicts; humans confirm allocations"
+        - id: "485891"
+          number: "7.4.2"
+          name: "Match subcontractor skills to engagement staffing needs"
+          agentic_profile: "h+A"
+          agentic_note: "Agents run skill-matching algorithms; humans make final staffing decisions"
+        - id: "736578"
+          number: "7.4.3"
+          name: "Monitor subcontractor utilisation rates and cost efficiency"
+          agentic_profile: "h+A"
+          agentic_note: "Agents compute utilisation metrics and cost analysis; humans act on insights"
