@@ -1,0 +1,100 @@
+domain:
+  id: "358741"
+  number: 4
+  name: "Citizen Engagement & Service Delivery"
+  subtitle: "Connecting citizens with public services"
+  classification: value_chain
+  description: >
+    This domain encompasses the public sector organisation's ability to reach,
+    engage, and serve citizens and communities. It replaces the commercial Sales
+    domain with functions appropriate to non-commercial public entities — including
+    citizen outreach, service awareness campaigns, digital channel management,
+    and constituent relationship management.
+
+    In a ZORBA-enabled public sector organisation, agents handle citizen enquiry
+    routing, service eligibility checks, communication scheduling, and channel
+    analytics, while humans focus on policy interpretation, complex casework,
+    and community relationship building.
+
+  capabilities:
+    - id: "461283"
+      number: "4.1"
+      name: "Define Citizen Engagement Strategy"
+      description: >
+        Establish the strategy for citizen outreach, service awareness, and
+        channel management. Design engagement models that maximise service
+        uptake and citizen satisfaction across diverse communities.
+      processes:
+        - id: "529738"
+          number: "4.1.1"
+          name: "Define the citizen engagement and outreach strategy"
+          agentic_profile: H
+          agentic_note: "Human-led; engagement strategy requires policy context and community understanding"
+        - id: "813462"
+          number: "4.1.2"
+          name: "Design service area and community coverage models"
+          agentic_profile: "H=A"
+          agentic_note: "Agents model demographic data and service demand; humans approve coverage design"
+        - id: "274913"
+          number: "4.1.3"
+          name: "Set service uptake targets and KPIs"
+          agentic_profile: "H=A"
+          agentic_note: "Agents analyse historical uptake and benchmark; humans set targets aligned to policy"
+
+    - id: "582314"
+      number: "4.2"
+      name: "Manage the Sales Pipeline and Forecast Revenue"
+      suppress: true
+      suppress_note: "Original commercial pipeline management not applicable to public sector"
+      description: >
+        This capability is suppressed in the Public Sector edition. Commercial
+        pipeline management does not apply to government service delivery.
+      processes: []
+
+    - id: "186050"
+      number: "4.3"
+      name: "Manage Citizen Communications and Outreach"
+      description: >
+        Plan, execute, and measure citizen communication campaigns across
+        digital and traditional channels. Ensure accessibility, inclusivity,
+        and compliance with government communication standards.
+      processes:
+        - id: "616088"
+          number: "4.3.1"
+          name: "Plan and schedule citizen communication campaigns"
+          agentic_profile: "H=A"
+          agentic_note: "Agents manage scheduling and channel orchestration; humans approve messaging and tone"
+        - id: "230454"
+          number: "4.3.2"
+          name: "Manage digital service channels and citizen portals"
+          agentic_profile: "h+A"
+          agentic_note: "Agents handle content updates, analytics, and A/B testing; humans set strategy and review"
+        - id: "407121"
+          number: "4.3.3"
+          name: "Measure outreach effectiveness and citizen satisfaction"
+          agentic_profile: "h+A"
+          agentic_note: "Agents compile metrics, sentiment analysis, and dashboards; humans interpret and act"
+
+    - id: "235670"
+      number: "4.4"
+      name: "Manage Constituent Relationships"
+      description: >
+        Maintain records of citizen interactions, service history, and
+        engagement preferences. Support caseworkers and service teams with
+        a unified view of constituent needs.
+      processes:
+        - id: "302940"
+          number: "4.4.1"
+          name: "Maintain constituent records and interaction history"
+          agentic_profile: "h+A"
+          agentic_note: "Agents maintain CRM data, flag patterns, and deduplicate records; humans review sensitive cases"
+        - id: "424292"
+          number: "4.4.2"
+          name: "Support caseworkers with constituent context"
+          agentic_profile: "H=A"
+          agentic_note: "Agents surface relevant history and eligibility data; caseworkers make decisions"
+        - id: "862622"
+          number: "4.4.3"
+          name: "Manage elected official and stakeholder relationships"
+          agentic_profile: H
+          agentic_note: "Human-only; political relationships require judgement and discretion"

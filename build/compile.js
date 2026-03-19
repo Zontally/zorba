@@ -182,6 +182,46 @@ function compileEdition(editionName, core) {
     }
   }
 
+  // Apply suppress flags — remove suppressed nodes from the distribution
+  let suppressedCount = 0;
+  for (const domain of domains) {
+    if (domain.suppress) {
+      suppressedCount++;
+      continue; // Domain-level suppression handled below
+    }
+    if (domain.capabilities) {
+      const beforeCount = domain.capabilities.length;
+      domain.capabilities = domain.capabilities.filter(cap => {
+        if (cap.suppress) {
+          suppressedCount++;
+          console.log(`  ⊘ Suppressed: ${cap.number} ${cap.name} (${cap.id})`);
+          return false;
+        }
+        // Check for suppressed processes within capabilities
+        if (cap.processes) {
+          const procBefore = cap.processes.length;
+          cap.processes = cap.processes.filter(proc => {
+            if (proc.suppress) {
+              suppressedCount++;
+              console.log(`  ⊘ Suppressed: ${proc.number} ${proc.name} (${proc.id})`);
+              return false;
+            }
+            return true;
+          });
+        }
+        return true;
+      });
+    }
+  }
+  // Remove suppressed domains
+  const domainsBefore = domains.length;
+  domains = domains.filter(d => !d.suppress);
+  suppressedCount += (domainsBefore - domains.length);
+
+  if (suppressedCount > 0) {
+    console.log(`  ${suppressedCount} node(s) suppressed`);
+  }
+
   // Validate unique IDs across merged result
   collectIds(domains);
 

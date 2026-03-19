@@ -98,6 +98,12 @@ function validateDomain(data, file, allIds) {
   for (const cap of domain.capabilities) {
     const capLabel = `capability "${cap.name || cap.id || '(unnamed)'}"`;
 
+    // Suppressed capabilities only need a valid ID
+    if (cap.suppress) {
+      validateId(cap.id, capLabel, file);
+      continue;
+    }
+
     validateId(cap.id, capLabel, file);
     if (cap.id && allIds.has(cap.id)) {
       addError(file, `Duplicate ID "${cap.id}" — already used by "${allIds.get(cap.id)}"`);
@@ -182,10 +188,12 @@ function main() {
       console.log(`\nEdition: ${edition}`);
       const overridesDir = path.join(EDITIONS_DIR, edition, 'overrides');
       const extensionsDir = path.join(EDITIONS_DIR, edition, 'extensions');
-      // Edition IDs get their own scope (cloned from core IDs)
-      const editionIds = new Map(allIds);
+      // Edition IDs get their own scope — overrides may replace core IDs
+      const editionIds = new Map();
       validateDirectory(overridesDir, editionIds);
-      validateDirectory(extensionsDir, editionIds);
+      // Extensions must not collide with core or overrides
+      const extIds = new Map([...allIds, ...editionIds]);
+      validateDirectory(extensionsDir, extIds);
     }
   }
 

@@ -1,15 +1,16 @@
 {
-  "edition": "core",
-  "name": "ZORBA Core",
+  "edition": "public-sector",
+  "name": "ZORBA for Public Sector",
+  "extends": "core",
   "version": "0.1.0",
-  "compiled_at": "2026-03-19T15:32:30.004Z",
+  "compiled_at": "2026-03-19T15:32:30.010Z",
   "stats": {
     "totalDomains": 12,
-    "totalCapabilities": 87,
-    "totalProcesses": 479,
+    "totalCapabilities": 88,
+    "totalProcesses": 477,
     "profileCounts": {
-      "H": 30,
-      "H+a": 120,
+      "H": 31,
+      "H+a": 117,
       "H=A": 136,
       "h+A": 141,
       "A": 52
@@ -1215,101 +1216,37 @@
     {
       "id": "358741",
       "number": 4,
-      "name": "Sales",
-      "subtitle": "Converting relationships into revenue",
+      "name": "Citizen Engagement & Service Delivery",
+      "subtitle": "Connecting citizens with public services",
       "classification": "value_chain",
-      "description": "This domain encompasses the enterprise's ability to identify, pursue, win, and grow customer relationships that generate revenue. It spans the full sales spectrum from strategic territory design and pipeline management through to deal execution, account development, and revenue operations.\nIn a ZORBA-enabled enterprise, sales is where agents handle the data-heavy mechanics of selling — scoring leads, maintaining CRM hygiene, generating proposals, and forecasting revenue — while humans focus on relationship building, complex negotiation, and strategic account development.\n",
+      "description": "This domain encompasses the public sector organisation's ability to reach, engage, and serve citizens and communities. It replaces the commercial Sales domain with functions appropriate to non-commercial public entities — including citizen outreach, service awareness campaigns, digital channel management, and constituent relationship management.\nIn a ZORBA-enabled public sector organisation, agents handle citizen enquiry routing, service eligibility checks, communication scheduling, and channel analytics, while humans focus on policy interpretation, complex casework, and community relationship building.\n",
       "capabilities": [
         {
           "id": "461283",
           "number": "4.1",
-          "name": "Define Sales Strategy and Territory Architecture",
-          "description": "Establish the sales strategy, design territory and segment coverage models, and set the go-to-market approach that maximises revenue potential across the customer base.\n",
+          "name": "Define Citizen Engagement Strategy",
+          "description": "Establish the strategy for citizen outreach, service awareness, and channel management. Design engagement models that maximise service uptake and citizen satisfaction across diverse communities.\n",
           "processes": [
             {
               "id": "529738",
               "number": "4.1.1",
-              "name": "Define the sales strategy and go-to-market approach",
+              "name": "Define the citizen engagement and outreach strategy",
               "agentic_profile": "H",
-              "agentic_note": "Human-led; sales strategy requires market judgement and leadership vision"
+              "agentic_note": "Human-led; engagement strategy requires policy context and community understanding"
             },
             {
               "id": "813462",
               "number": "4.1.2",
-              "name": "Design territory and segment coverage models",
+              "name": "Design service area and community coverage models",
               "agentic_profile": "H=A",
-              "agentic_note": "Agents model territory potential and balance workload; humans approve structure"
+              "agentic_note": "Agents model demographic data and service demand; humans approve coverage design"
             },
             {
               "id": "274913",
               "number": "4.1.3",
-              "name": "Set quota and target frameworks",
+              "name": "Set service uptake targets and KPIs",
               "agentic_profile": "H=A",
-              "agentic_note": "Agents model attainment scenarios; humans set targets and incentives"
-            },
-            {
-              "id": "224906",
-              "number": "4.1.4",
-              "name": "Define ideal customer profiles and account tiering",
-              "agentic_profile": "h+A",
-              "agentic_note": "Agents analyse firmographic and behavioural data; humans validate profiles"
-            },
-            {
-              "id": "348176",
-              "number": "4.1.5",
-              "name": "Align sales coverage with marketing and product strategies",
-              "agentic_profile": "H+a",
-              "agentic_note": "Humans drive alignment; agents flag gaps and overlaps"
-            }
-          ]
-        },
-        {
-          "id": "582314",
-          "number": "4.2",
-          "name": "Manage the Sales Pipeline and Forecast Revenue",
-          "description": "Operate the end-to-end pipeline from opportunity creation through to close — ensuring pipeline health, forecast accuracy, and visibility into revenue trajectory.\n",
-          "processes": [
-            {
-              "id": "419628",
-              "number": "4.2.1",
-              "name": "Manage opportunity creation and pipeline intake",
-              "agentic_profile": "H=A",
-              "agentic_note": "Agents create opportunities from qualified leads; humans validate and enrich"
-            },
-            {
-              "id": "763142",
-              "number": "4.2.2",
-              "name": "Qualify and progress opportunities through sales stages",
-              "agentic_profile": "H+a",
-              "agentic_note": "Humans drive deals; agents update stage data and flag stalled opportunities"
-            },
-            {
-              "id": "295831",
-              "number": "4.2.3",
-              "name": "Generate and maintain revenue forecasts",
-              "agentic_profile": "h+A",
-              "agentic_note": "Agents model forecasts using pipeline and historical data; humans adjust for judgement"
-            },
-            {
-              "id": "841567",
-              "number": "4.2.4",
-              "name": "Conduct pipeline reviews and health assessments",
-              "agentic_profile": "H+a",
-              "agentic_note": "Agents prepare pipeline analytics; humans lead review discussions"
-            },
-            {
-              "id": "617294",
-              "number": "4.2.5",
-              "name": "Identify and manage pipeline risks and gaps",
-              "agentic_profile": "H=A",
-              "agentic_note": "Agents surface at-risk deals and coverage gaps; humans intervene"
-            },
-            {
-              "id": "354182",
-              "number": "4.2.6",
-              "name": "Reconcile forecast to actuals and improve accuracy",
-              "agentic_profile": "h+A",
-              "agentic_note": "Agents analyse forecast deviation patterns; humans refine methodology"
+              "agentic_note": "Agents analyse historical uptake and benchmark; humans set targets aligned to policy"
             }
           ]
         },
@@ -1532,6 +1469,64 @@
               "name": "Provide revenue intelligence and strategic insights",
               "agentic_profile": "h+A",
               "agentic_note": "Agents surface patterns and anomalies; humans translate to strategy"
+            }
+          ]
+        },
+        {
+          "id": "186050",
+          "number": "4.3",
+          "name": "Manage Citizen Communications and Outreach",
+          "description": "Plan, execute, and measure citizen communication campaigns across digital and traditional channels. Ensure accessibility, inclusivity, and compliance with government communication standards.\n",
+          "processes": [
+            {
+              "id": "616088",
+              "number": "4.3.1",
+              "name": "Plan and schedule citizen communication campaigns",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents manage scheduling and channel orchestration; humans approve messaging and tone"
+            },
+            {
+              "id": "230454",
+              "number": "4.3.2",
+              "name": "Manage digital service channels and citizen portals",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents handle content updates, analytics, and A/B testing; humans set strategy and review"
+            },
+            {
+              "id": "407121",
+              "number": "4.3.3",
+              "name": "Measure outreach effectiveness and citizen satisfaction",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents compile metrics, sentiment analysis, and dashboards; humans interpret and act"
+            }
+          ]
+        },
+        {
+          "id": "235670",
+          "number": "4.4",
+          "name": "Manage Constituent Relationships",
+          "description": "Maintain records of citizen interactions, service history, and engagement preferences. Support caseworkers and service teams with a unified view of constituent needs.\n",
+          "processes": [
+            {
+              "id": "302940",
+              "number": "4.4.1",
+              "name": "Maintain constituent records and interaction history",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents maintain CRM data, flag patterns, and deduplicate records; humans review sensitive cases"
+            },
+            {
+              "id": "424292",
+              "number": "4.4.2",
+              "name": "Support caseworkers with constituent context",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents surface relevant history and eligibility data; caseworkers make decisions"
+            },
+            {
+              "id": "862622",
+              "number": "4.4.3",
+              "name": "Manage elected official and stakeholder relationships",
+              "agentic_profile": "H",
+              "agentic_note": "Human-only; political relationships require judgement and discretion"
             }
           ]
         }

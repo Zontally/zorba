@@ -1,0 +1,16 @@
+edition:
+  name: "ZORBA for Public Sector"
+  slug: "public-sector"
+  extends: "core"
+  version: "0.1.0"
+  description: >
+    An industry edition of ZORBA tailored for local and central government,
+    public agencies, and government-funded organisations. Reframes commercial
+    concepts (sales, revenue) into public service equivalents (citizen engagement,
+    service delivery) and suppresses capabilities that do not apply to
+    non-commercial public entities.
+  target_industries:
+    - Local Government
+    - Central Government
+    - Public Agencies
+    - Government-funded Bodies
