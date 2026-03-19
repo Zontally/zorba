@@ -46,37 +46,9 @@ nav:
       - Usage Guide: framework/10-usage-guide.md
       - Contributing: framework/11-contributing.md
       - Glossary: framework/12-glossary.md
-  - Domain Taxonomy:
-      - Overview: domains/index.md
-      - Strategy & Governance: domains/01-strategy-and-governance.md
-      - Product & Innovation: domains/02-product-and-innovation.md
-      - Marketing: domains/03-marketing.md
-      - Sales: domains/04-sales.md
-      - Customer Success & Service: domains/05-customer-success-and-service.md
-      - Operations & Delivery: domains/06-operations-and-delivery.md
-      - Supply Chain: domains/07-supply-chain.md
-      - Finance: domains/08-finance.md
-      - People & Talent: domains/09-people-and-talent.md
-      - Technology & Data: domains/10-technology-and-data.md
-      - Risk, Legal & Compliance: domains/11-risk-legal-and-compliance.md
-      - Corporate Services: domains/12-corporate-services.md
+  - Domain Taxonomy: domains/index.md
   - Industry Editions:
-      - ZORBA for Public Sector:
-          - Overview: editions/public-sector/index.md
-          - Domains:
-              - Overview: editions/public-sector/domains/index.md
-              - Strategy & Governance: editions/public-sector/domains/01-strategy-governance.md
-              - Product & Innovation: editions/public-sector/domains/02-product-innovation.md
-              - Marketing: editions/public-sector/domains/03-marketing.md
-              - Citizen Engagement & Service Delivery: editions/public-sector/domains/04-citizen-engagement-service-delivery.md
-              - Customer Success & Service: editions/public-sector/domains/05-customer-success-service.md
-              - Operations & Delivery: editions/public-sector/domains/06-operations-delivery.md
-              - Supply Chain: editions/public-sector/domains/07-supply-chain.md
-              - Finance: editions/public-sector/domains/08-finance.md
-              - People & Talent: editions/public-sector/domains/09-people-talent.md
-              - Technology & Data: editions/public-sector/domains/10-technology-data.md
-              - Risk, Legal & Compliance: editions/public-sector/domains/11-risk-legal-compliance.md
-              - Corporate Services: editions/public-sector/domains/12-corporate-services.md
+      - ZORBA for Public Sector: editions/public-sector/index.md
 markdown_extensions:
   - tables
   - admonition

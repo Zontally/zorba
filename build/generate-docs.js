@@ -359,42 +359,20 @@ function main() {
     fwNav[name] = `framework/${f}`;
   }
 
-  // Build core domain nav
-  const coreDomainNav = { 'Overview': 'domains/index.md' };
-  for (const file of coreFiles) {
-    const data = readYaml(path.join(CORE_DIR, file));
-    const domain = data.domain;
-    coreDomainNav[domain.name] = `domains/${file.replace('.yaml', '.md')}`;
-  }
+  // Build edition nav — just overview links, no individual domains
+  const editionNavItems = editionNavSections.map(edition => ({
+    [edition.name]: `editions/${edition.slug}/index.md`
+  }));
 
-  // Build edition nav sections
-  const editionNav = [];
-  for (const edition of editionNavSections) {
-    const edDomainNav = { 'Overview': `editions/${edition.slug}/domains/index.md` };
-    for (const domain of edition.domains) {
-      edDomainNav[domain.name] = `editions/${edition.slug}/domains/${domainFilename(domain)}`;
-    }
-    const edNav = {};
-    edNav[edition.name] = [
-      { 'Overview': `editions/${edition.slug}/index.md` },
-      { 'Domains': Object.entries(edDomainNav).map(([k, v]) => ({ [k]: v })) }
-    ];
-    editionNav.push(edNav);
-  }
-
-  // Assemble nav
+  // Assemble nav — domains and editions as single overview links (no clutter)
   const nav = [
     { 'Home': 'index.md' },
     { 'Framework': Object.entries(fwNav).map(([k, v]) => ({ [k]: v })) },
-    { 'Domain Taxonomy': Object.entries(coreDomainNav).map(([k, v]) => ({ [k]: v })) },
+    { 'Domain Taxonomy': 'domains/index.md' },
   ];
 
-  if (editionNav.length > 0) {
-    const editionsChildren = [];
-    for (const en of editionNav) {
-      editionsChildren.push(en);
-    }
-    nav.push({ 'Industry Editions': editionsChildren });
+  if (editionNavItems.length > 0) {
+    nav.push({ 'Industry Editions': editionNavItems });
   }
 
   parsed.nav = nav;
