@@ -157,7 +157,8 @@ function generateDomainDoc(domain, editionName) {
   return lines.join('\n');
 }
 
-function generateDomainIndex(title, description, domains, domainDir) {
+function generateDomainIndex(title, description, domains, filenameFn) {
+  const fn = filenameFn || domainFilename;
   const lines = [];
   lines.push(`# ${title}`);
   lines.push('');
@@ -167,7 +168,7 @@ function generateDomainIndex(title, description, domains, domainDir) {
   lines.push('|---|--------|---------------|----------|');
 
   for (const domain of domains) {
-    const mdFile = domainFilename(domain);
+    const mdFile = fn(domain);
     const classification = CLASSIFICATION_LABELS[domain.classification] || domain.classification;
     lines.push(`| ${domain.number} | [${domain.name}](${mdFile}) | ${classification} | *${domain.subtitle}* |`);
   }
@@ -200,12 +201,14 @@ function main() {
     .sort();
 
   const coreDomains = [];
+  const coreDomainFiles = new Map(); // domain.id → md filename
   console.log(`Core: ${coreFiles.length} domains`);
   for (const file of coreFiles) {
     const data = readYaml(path.join(CORE_DIR, file));
     const domain = data.domain;
     coreDomains.push(domain);
     const outFile = file.replace('.yaml', '.md');
+    coreDomainFiles.set(domain.id, outFile);
     fs.writeFileSync(
       path.join(DOCS_DOMAINS_DIR, outFile),
       generateDomainDoc(domain)
@@ -214,13 +217,15 @@ function main() {
     console.log(`  ✓ ${outFile} — ${domain.capabilities.length} capabilities, ${procCount} processes`);
   }
 
-  // Core domain index
+  // Core domain index — use actual YAML-derived filenames
+  const coreFilenameFn = (domain) => coreDomainFiles.get(domain.id) || domainFilename(domain);
   fs.writeFileSync(
     path.join(DOCS_DOMAINS_DIR, 'index.md'),
     generateDomainIndex(
       'ZORBA Domain Taxonomy',
       'Detailed capability and process definitions for all ZORBA Core domains.\nEach process carries a unique 6-digit identifier and an agentic profile\nshowing the recommended human/agent workforce composition.',
-      coreDomains
+      coreDomains,
+      coreFilenameFn
     )
   );
   console.log('  ✓ domains/index.md');
@@ -327,6 +332,13 @@ function main() {
   if (fs.existsSync(readmePath)) {
     fs.copyFileSync(readmePath, path.join(DOCS_DIR, 'index.md'));
     console.log('  ✓ index.md (from README)');
+  }
+
+  // --- Copy CHANGELOG into docs ---
+  const changelogPath = path.join(ROOT, 'CHANGELOG.md');
+  if (fs.existsSync(changelogPath)) {
+    fs.copyFileSync(changelogPath, path.join(DOCS_DIR, 'CHANGELOG.md'));
+    console.log('  ✓ CHANGELOG.md copied');
   }
 
   // --- Generate unified mkdocs.yml ---

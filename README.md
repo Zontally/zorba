@@ -22,7 +22,7 @@ ZORBA defines how organisations operate when humans and AI agents work as one �
 | [Governance](framework/06-governance.md) | Trust framework for governing a blended human-agent workforce |
 | [Information Model](framework/07-information-model.md) | Framework-agnostic meta-model — object types, relationships, composition rules |
 | [Industry Editions](framework/08-industry-editions.md) | Vertical-specific configurations: Technology Service Providers, Healthcare, etc. |
-| [Glossary](framework/09-glossary.md) | Key terms — traditional enterprise architecture + agentic vocabulary |
+| [Glossary](framework/12-glossary.md) | Key terms — traditional enterprise architecture + agentic vocabulary |
 
 ### Domain Taxonomy
 
