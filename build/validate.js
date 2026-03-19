@@ -86,7 +86,8 @@ function validateDomain(data, file, allIds) {
   if (domain.number === undefined) addWarning(file, 'Domain missing "number"');
 
   if (!domain.capabilities || !Array.isArray(domain.capabilities)) {
-    addError(file, 'Domain missing "capabilities" array');
+    // Edition overrides may only change domain-level metadata (name, description, classification)
+    addWarning(file, 'Domain missing "capabilities" array (ok for edition overrides)');
     return;
   }
 
@@ -97,6 +98,12 @@ function validateDomain(data, file, allIds) {
   // Capability-level validation
   for (const cap of domain.capabilities) {
     const capLabel = `capability "${cap.name || cap.id || '(unnamed)'}"`;
+
+    // Suppressed capabilities only need a valid ID
+    if (cap.suppress) {
+      validateId(cap.id, capLabel, file);
+      continue;
+    }
 
     validateId(cap.id, capLabel, file);
     if (cap.id && allIds.has(cap.id)) {
@@ -182,10 +189,12 @@ function main() {
       console.log(`\nEdition: ${edition}`);
       const overridesDir = path.join(EDITIONS_DIR, edition, 'overrides');
       const extensionsDir = path.join(EDITIONS_DIR, edition, 'extensions');
-      // Edition IDs get their own scope (cloned from core IDs)
-      const editionIds = new Map(allIds);
+      // Edition IDs get their own scope — overrides may replace core IDs
+      const editionIds = new Map();
       validateDirectory(overridesDir, editionIds);
-      validateDirectory(extensionsDir, editionIds);
+      // Extensions must not collide with core or overrides
+      const extIds = new Map([...allIds, ...editionIds]);
+      validateDirectory(extensionsDir, extIds);
     }
   }
 
