@@ -21,6 +21,8 @@ domain:
       description: >
         Define the technology vision, principles, and enterprise architecture that guide
         investment decisions, platform choices, and the evolution of the technology estate.
+      evolution_stage: custom
+      pst_phase: settler
       processes:
         - id: "631824"
           number: "10.1.1"
@@ -54,6 +56,8 @@ domain:
       description: >
         Design, develop, test, deploy, and maintain the enterprise's application portfolio —
         including custom-built, configured, and integrated software solutions.
+      evolution_stage: product
+      pst_phase: settler
       processes:
         - id: "741258"
           number: "10.2.1"
@@ -92,6 +96,8 @@ domain:
       description: >
         Provision, manage, and optimise the enterprise's computing infrastructure — including
         on-premises, cloud, hybrid, and edge environments.
+      evolution_stage: commodity
+      pst_phase: town_planner
       processes:
         - id: "428163"
           number: "10.3.1"
@@ -130,6 +136,8 @@ domain:
       description: >
         Manage data as an enterprise asset — ensuring quality, accessibility, governance, and
         the delivery of analytics and insights that drive decision-making.
+      evolution_stage: custom
+      pst_phase: settler
       processes:
         - id: "625813"
           number: "10.4.1"
@@ -168,6 +176,8 @@ domain:
       description: >
         Defend the enterprise against cyber threats, manage information security risks, and
         ensure resilience through detection, response, and recovery capabilities.
+      evolution_stage: product
+      pst_phase: town_planner
       processes:
         - id: "317524"
           number: "10.5.1"
@@ -206,6 +216,8 @@ domain:
       description: >
         Operate the day-to-day technology services that keep the enterprise running — including
         service desk, incident management, problem resolution, and end-user computing.
+      evolution_stage: commodity
+      pst_phase: town_planner
       processes:
         - id: "824367"
           number: "10.6.1"
@@ -241,6 +253,8 @@ domain:
         including agent hosting, orchestration, lifecycle management, and the tooling that
         connects agents to enterprise systems. This is the ZORBA-specific meta-capability:
         the technology that enables the blended workforce.
+      evolution_stage: genesis
+      pst_phase: pioneer
       processes:
         - id: "348261"
           number: "10.7.1"
@@ -277,3 +291,55 @@ domain:
           name: "Manage agent platform security and isolation"
           agentic_profile: "H+a"
           agentic_note: "Humans set security policies; agents enforce isolation and detect breaches"
+
+  wardley_map:
+    owm_source: |
+      title Technology & Data Domain - Evolution & PST View
+      
+      # User-facing capabilities
+      component "Digital Products" [0.9, 0.6]
+      component "Business Intelligence" [0.8, 0.7]
+      component "Data Analytics" [0.7, 0.4]
+      
+      # Core capabilities (mapped from ZORBA domain)
+      component "Technology Strategy" [0.2, 0.3]
+      component "Application Development" [0.7, 0.6]
+      component "Cloud Infrastructure" [0.5, 0.8]
+      component "Data Platform" [0.6, 0.4]
+      component "Cybersecurity" [0.4, 0.7]
+      component "IT Operations" [0.3, 0.9]
+      component "Agent Platform" [0.4, 0.1]
+      
+      # Dependencies
+      "Digital Products"->"Application Development"
+      "Digital Products"->"Data Platform"
+      "Business Intelligence"->"Data Platform"
+      "Data Analytics"->"Data Platform"
+      "Application Development"->"Cloud Infrastructure"
+      "Data Platform"->"Cloud Infrastructure"
+      "Cloud Infrastructure"->"IT Operations"
+      "Agent Platform"->"Cloud Infrastructure"
+      "Application Development"->"Technology Strategy"
+      "Data Platform"->"Technology Strategy"
+      
+      # Evolution movements
+      evolve "Agent Platform" 0.2
+      evolve "Data Platform" 0.5
+      evolve "Cloud Infrastructure" 0.9
+      
+      # PST annotations
+      note "PIONEER: Agent platform - experimental, human-led innovation" [0.4, 0.05]
+      note "SETTLER: Application development - standardising practices" [0.7, 0.55]
+      note "SETTLER: Data platform - industrialising analytics" [0.6, 0.35]
+      note "TOWN PLANNER: Cloud infrastructure - utility operations" [0.5, 0.75]
+      note "TOWN PLANNER: IT operations - efficiency-focused" [0.3, 0.85]
+      
+      pipeline "Data Evolution Path" [0.4, 0.5]
+      pipeline "Agent Platform Maturation" [0.1, 0.2]
+    map_scope: domain
+    evolution_context: |
+      This map shows the Technology & Data domain capabilities at different evolution stages.
+      The Agent Platform (10.7) is at Genesis/Pioneer phase - requiring human-led innovation.
+      Data capabilities (10.4) are transitioning from Custom/Settler toward Product.
+      Infrastructure capabilities (10.3, 10.6) are at Commodity/Town Planner - prime for agent automation.
+      PST phases directly inform workforce composition: Pioneers need humans, Town Planners can use agents.
