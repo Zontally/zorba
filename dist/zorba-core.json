@@ -2,7 +2,7 @@
   "edition": "core",
   "name": "ZORBA Core",
   "version": "0.1.0",
-  "compiled_at": "2026-03-18T16:19:19.160Z",
+  "compiled_at": "2026-03-19T09:59:12.717Z",
   "stats": {
     "totalDomains": 12,
     "totalCapabilities": 87,
@@ -3231,6 +3231,8 @@
           "number": "10.1",
           "name": "Shape Technology Strategy and Architecture",
           "description": "Define the technology vision, principles, and enterprise architecture that guide investment decisions, platform choices, and the evolution of the technology estate.\n",
+          "evolution_stage": "custom",
+          "pst_phase": "settler",
           "processes": [
             {
               "id": "631824",
@@ -3274,6 +3276,8 @@
           "number": "10.2",
           "name": "Build and Manage Applications",
           "description": "Design, develop, test, deploy, and maintain the enterprise's application portfolio — including custom-built, configured, and integrated software solutions.\n",
+          "evolution_stage": "product",
+          "pst_phase": "settler",
           "processes": [
             {
               "id": "741258",
@@ -3324,6 +3328,8 @@
           "number": "10.3",
           "name": "Operate Infrastructure and Cloud Platforms",
           "description": "Provision, manage, and optimise the enterprise's computing infrastructure — including on-premises, cloud, hybrid, and edge environments.\n",
+          "evolution_stage": "commodity",
+          "pst_phase": "town_planner",
           "processes": [
             {
               "id": "428163",
@@ -3374,6 +3380,8 @@
           "number": "10.4",
           "name": "Govern Data and Deliver Analytics",
           "description": "Manage data as an enterprise asset — ensuring quality, accessibility, governance, and the delivery of analytics and insights that drive decision-making.\n",
+          "evolution_stage": "custom",
+          "pst_phase": "settler",
           "processes": [
             {
               "id": "625813",
@@ -3424,6 +3432,8 @@
           "number": "10.5",
           "name": "Protect Information and Ensure Cyber Resilience",
           "description": "Defend the enterprise against cyber threats, manage information security risks, and ensure resilience through detection, response, and recovery capabilities.\n",
+          "evolution_stage": "product",
+          "pst_phase": "town_planner",
           "processes": [
             {
               "id": "317524",
@@ -3474,6 +3484,8 @@
           "number": "10.6",
           "name": "Deliver Technology Operations and End-User Support",
           "description": "Operate the day-to-day technology services that keep the enterprise running — including service desk, incident management, problem resolution, and end-user computing.\n",
+          "evolution_stage": "commodity",
+          "pst_phase": "town_planner",
           "processes": [
             {
               "id": "824367",
@@ -3517,6 +3529,8 @@
           "number": "10.7",
           "name": "Manage the Agent Platform",
           "description": "Operate, evolve, and govern the infrastructure that enables enterprise AI agents — including agent hosting, orchestration, lifecycle management, and the tooling that connects agents to enterprise systems. This is the ZORBA-specific meta-capability: the technology that enables the blended workforce.\n",
+          "evolution_stage": "genesis",
+          "pst_phase": "pioneer",
           "processes": [
             {
               "id": "348261",
@@ -3569,7 +3583,12 @@
             }
           ]
         }
-      ]
+      ],
+      "wardley_map": {
+        "owm_source": "title Technology & Data Domain - Evolution & PST View\n\n# User-facing capabilities\ncomponent \"Digital Products\" [0.9, 0.6]\ncomponent \"Business Intelligence\" [0.8, 0.7]\ncomponent \"Data Analytics\" [0.7, 0.4]\n\n# Core capabilities (mapped from ZORBA domain)\ncomponent \"Technology Strategy\" [0.2, 0.3]\ncomponent \"Application Development\" [0.7, 0.6]\ncomponent \"Cloud Infrastructure\" [0.5, 0.8]\ncomponent \"Data Platform\" [0.6, 0.4]\ncomponent \"Cybersecurity\" [0.4, 0.7]\ncomponent \"IT Operations\" [0.3, 0.9]\ncomponent \"Agent Platform\" [0.4, 0.1]\n\n# Dependencies\n\"Digital Products\"->\"Application Development\"\n\"Digital Products\"->\"Data Platform\"\n\"Business Intelligence\"->\"Data Platform\"\n\"Data Analytics\"->\"Data Platform\"\n\"Application Development\"->\"Cloud Infrastructure\"\n\"Data Platform\"->\"Cloud Infrastructure\"\n\"Cloud Infrastructure\"->\"IT Operations\"\n\"Agent Platform\"->\"Cloud Infrastructure\"\n\"Application Development\"->\"Technology Strategy\"\n\"Data Platform\"->\"Technology Strategy\"\n\n# Evolution movements\nevolve \"Agent Platform\" 0.2\nevolve \"Data Platform\" 0.5\nevolve \"Cloud Infrastructure\" 0.9\n\n# PST annotations\nnote \"PIONEER: Agent platform - experimental, human-led innovation\" [0.4, 0.05]\nnote \"SETTLER: Application development - standardising practices\" [0.7, 0.55]\nnote \"SETTLER: Data platform - industrialising analytics\" [0.6, 0.35]\nnote \"TOWN PLANNER: Cloud infrastructure - utility operations\" [0.5, 0.75]\nnote \"TOWN PLANNER: IT operations - efficiency-focused\" [0.3, 0.85]\n\npipeline \"Data Evolution Path\" [0.4, 0.5]\npipeline \"Agent Platform Maturation\" [0.1, 0.2]\n",
+        "map_scope": "domain",
+        "evolution_context": "This map shows the Technology & Data domain capabilities at different evolution stages.\nThe Agent Platform (10.7) is at Genesis/Pioneer phase - requiring human-led innovation.\nData capabilities (10.4) are transitioning from Custom/Settler toward Product.\nInfrastructure capabilities (10.3, 10.6) are at Commodity/Town Planner - prime for agent automation.\nPST phases directly inform workforce composition: Pioneers need humans, Town Planners can use agents.\n"
+      }
     },
     {
       "id": "329571",
