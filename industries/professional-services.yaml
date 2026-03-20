@@ -1,0 +1,207 @@
+industry:
+  id: "ind_professional_services"
+  name: "Professional Services"
+  slug: "professional-services"
+  definition: "Knowledge-intensive firms that deliver expertise, advice, and specialised services to clients on a project or retainer basis."
+  status: "active"
+  aliases: ["Professional Services", "Business Services", "Advisory"]
+  commonBusinessModels: ["Time & materials", "Fixed-fee projects", "Retainers", "Outcome-based fees", "Managed services"]
+  commonValueDrivers: ["Utilisation", "Revenue per head", "Client retention", "Margin", "Talent quality"]
+  commonCapabilities: ["Client development", "Engagement delivery", "Methodology design", "Talent management", "Knowledge management"]
+  tags: ["knowledge-work", "advisory", "client-services"]
+  signals:
+    digitalIntensity: "medium"
+    regulatoryIntensity: "medium"
+    operationalComplexity: "medium"
+    assetIntensity: "very-low"
+    peopleIntensity: "very-high"
+    customerComplexity: "high"
+    salesComplexity: "high"
+    serviceIntensity: "very-high"
+    supplyChainComplexity: "very-low"
+    innovationIntensity: "medium"
+
+  subIndustries:
+    - id: "subind_management_consulting"
+      name: "Management Consulting"
+      slug: "management-consulting"
+      definition: "Firms advising organisations on strategy, operations, organisational design, and transformation."
+      status: "active"
+      aliases: ["Strategy Consulting", "Operations Consulting"]
+      businessModels: ["Fixed-fee projects", "Time & materials", "Outcome-based fees"]
+      valueDrivers: ["Partner leverage", "Client retention", "Revenue per consultant", "Thought leadership"]
+      typicalCapabilities: ["Strategy advisory", "Engagement delivery", "Knowledge management", "Business development"]
+      customerTypes: ["Enterprise", "Mid-market", "Public sector"]
+      tags: ["strategy", "transformation", "advisory"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "low"
+        operationalComplexity: "medium"
+        assetIntensity: "very-low"
+        peopleIntensity: "very-high"
+        customerComplexity: "very-high"
+        salesComplexity: "very-high"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "medium"
+
+    - id: "subind_technology_consulting_si"
+      name: "Technology Consulting & Systems Integration"
+      slug: "technology-consulting-si"
+      definition: "Firms advising on technology strategy and delivering implementation, integration, and managed service engagements."
+      status: "active"
+      aliases: ["IT Consulting", "Systems Integration", "IT Services"]
+      businessModels: ["Time & materials", "Fixed-fee projects", "Managed services", "Staff augmentation"]
+      valueDrivers: ["Utilisation", "Delivery margin", "Client satisfaction", "Repeat revenue"]
+      typicalCapabilities: ["Solution architecture", "Implementation delivery", "Managed operations", "Vendor management"]
+      customerTypes: ["Enterprise", "Mid-market", "Public sector"]
+      tags: ["technology", "implementation", "integration"]
+      signals:
+        digitalIntensity: "high"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "high"
+        assetIntensity: "very-low"
+        peopleIntensity: "very-high"
+        customerComplexity: "high"
+        salesComplexity: "very-high"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "low"
+        innovationIntensity: "high"
+
+    - id: "subind_legal_services"
+      name: "Legal Services"
+      slug: "legal-services"
+      definition: "Law firms and legal service providers delivering advisory, transactional, dispute resolution, and compliance services."
+      status: "active"
+      aliases: ["Law Firms", "Legal Advisory"]
+      businessModels: ["Billable hours", "Fixed-fee matters", "Retainers", "Contingency fees"]
+      valueDrivers: ["Revenue per partner", "Realisation rate", "Client retention", "Matter efficiency"]
+      typicalCapabilities: ["Legal advisory", "Matter management", "Client development", "Knowledge management", "Compliance"]
+      customerTypes: ["Enterprise", "Mid-market", "SMB", "Consumer", "Public sector"]
+      tags: ["legal", "compliance", "disputes"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "medium"
+        assetIntensity: "very-low"
+        peopleIntensity: "very-high"
+        customerComplexity: "high"
+        salesComplexity: "high"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "low"
+
+    - id: "subind_accounting_audit"
+      name: "Accounting & Audit"
+      slug: "accounting-audit"
+      definition: "Firms providing audit, assurance, tax advisory, bookkeeping, and financial consulting services."
+      status: "active"
+      aliases: ["Audit Firms", "Tax Advisory", "CPA Firms"]
+      businessModels: ["Billable hours", "Fixed-fee engagements", "Retainers", "Subscription"]
+      valueDrivers: ["Revenue per partner", "Client retention", "Compliance accuracy", "Engagement efficiency"]
+      typicalCapabilities: ["Audit delivery", "Tax advisory", "Financial consulting", "Compliance", "Client service"]
+      customerTypes: ["Enterprise", "Mid-market", "SMB", "Public sector"]
+      tags: ["audit", "tax", "assurance"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "medium"
+        assetIntensity: "very-low"
+        peopleIntensity: "very-high"
+        customerComplexity: "high"
+        salesComplexity: "high"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "low"
+
+    - id: "subind_architecture_engineering_services"
+      name: "Architecture & Engineering Services"
+      slug: "architecture-engineering-services"
+      definition: "Design and engineering consultancies providing architectural, structural, civil, environmental, and planning services."
+      status: "active"
+      aliases: ["AEC Consulting", "Design Consultancies", "Engineering Consultancies"]
+      businessModels: ["Fixed-fee projects", "Time & materials", "Design competitions"]
+      valueDrivers: ["Project margin", "Utilisation", "Design quality", "Client retention", "Pipeline conversion"]
+      typicalCapabilities: ["Design delivery", "Project management", "Regulatory compliance", "Client development", "BIM and digital design"]
+      customerTypes: ["Enterprise", "Government", "Developer", "Public sector"]
+      tags: ["architecture", "engineering", "design", "built-environment"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "high"
+        operationalComplexity: "high"
+        assetIntensity: "low"
+        peopleIntensity: "very-high"
+        customerComplexity: "high"
+        salesComplexity: "very-high"
+        serviceIntensity: "high"
+        supplyChainComplexity: "low"
+        innovationIntensity: "medium"
+
+    - id: "subind_recruitment_staffing"
+      name: "Recruitment & Staffing"
+      slug: "recruitment-staffing"
+      definition: "Firms providing talent acquisition, executive search, contingent staffing, and workforce solutions."
+      status: "active"
+      aliases: ["Staffing Agencies", "Executive Search", "RPO"]
+      businessModels: ["Contingency fees", "Retained search", "Markup on placements", "Managed service contracts"]
+      valueDrivers: ["Fill rate", "Time to fill", "Placement margin", "Client retention", "Candidate quality"]
+      typicalCapabilities: ["Sourcing", "Candidate management", "Client development", "Compliance", "Workforce analytics"]
+      customerTypes: ["Enterprise", "Mid-market", "SMB"]
+      tags: ["recruitment", "staffing", "talent"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "medium"
+        assetIntensity: "very-low"
+        peopleIntensity: "very-high"
+        customerComplexity: "medium"
+        salesComplexity: "high"
+        serviceIntensity: "high"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "medium"
+
+    - id: "subind_marketing_creative_agencies"
+      name: "Marketing & Creative Agencies"
+      slug: "marketing-creative-agencies"
+      definition: "Agencies delivering brand strategy, creative production, digital marketing, public relations, and communications services."
+      status: "active"
+      aliases: ["Creative Agencies", "Digital Agencies", "PR Firms"]
+      businessModels: ["Retainers", "Project fees", "Commission", "Performance-based fees"]
+      valueDrivers: ["Client retention", "Revenue per head", "Creative effectiveness", "Utilisation"]
+      typicalCapabilities: ["Creative production", "Campaign strategy", "Media buying", "Client service", "Content operations"]
+      customerTypes: ["Enterprise", "Mid-market", "SMB"]
+      tags: ["marketing", "creative", "communications"]
+      signals:
+        digitalIntensity: "high"
+        regulatoryIntensity: "low"
+        operationalComplexity: "medium"
+        assetIntensity: "very-low"
+        peopleIntensity: "very-high"
+        customerComplexity: "medium"
+        salesComplexity: "high"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "high"
+
+    - id: "subind_bpo_shared_services"
+      name: "BPO & Shared Services"
+      slug: "bpo-shared-services"
+      definition: "Firms providing outsourced business processes, contact centres, back-office operations, and global business services."
+      status: "active"
+      aliases: ["Business Process Outsourcing", "Shared Services", "GBS"]
+      businessModels: ["Volume-based", "Per-transaction", "Managed services", "FTE-based"]
+      valueDrivers: ["Cost per transaction", "SLA adherence", "Volume throughput", "Client retention", "Process efficiency"]
+      typicalCapabilities: ["Process operations", "Workforce management", "Quality assurance", "Technology enablement", "Transition management"]
+      customerTypes: ["Enterprise", "Mid-market"]
+      tags: ["outsourcing", "shared-services", "process-driven"]
+      signals:
+        digitalIntensity: "high"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "high"
+        assetIntensity: "low"
+        peopleIntensity: "very-high"
+        customerComplexity: "high"
+        salesComplexity: "very-high"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "low"
+        innovationIntensity: "medium"

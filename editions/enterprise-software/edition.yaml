@@ -1,0 +1,16 @@
+edition:
+  name: "ZORBA for Enterprise Software"
+  slug: "enterprise-software"
+  extends: "core"
+  version: "0.1.0"
+  description: >
+    An industry edition of ZORBA tailored for enterprise software companies —
+    SaaS vendors, platform providers, and software product organisations.
+    Sharpens generic offering language into product-specific terminology:
+    product strategy, product engineering, release management, and
+    software-native lifecycle practices.
+  target_industries:
+    - Enterprise SaaS
+    - Platform Software
+    - Software Product Companies
+    - Developer Tools & Infrastructure

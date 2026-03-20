@@ -1,0 +1,177 @@
+industry:
+  id: "ind_manufacturing_industrial"
+  name: "Manufacturing & Industrial"
+  slug: "manufacturing-industrial"
+  definition: "Businesses that produce physical goods, components, and industrial systems at scale."
+  status: "active"
+  commonBusinessModels: ["Product sales", "Long-term contracts", "Aftermarket services"]
+  commonValueDrivers: ["Yield", "Quality", "Asset utilisation", "Supply chain resilience"]
+  commonCapabilities: ["Procurement", "Production", "Quality", "Field service", "Planning"]
+  tags: ["operations", "physical-goods", "supply-chain"]
+  signals:
+    digitalIntensity: "medium"
+    regulatoryIntensity: "medium"
+    operationalComplexity: "very-high"
+    assetIntensity: "very-high"
+    peopleIntensity: "high"
+    customerComplexity: "high"
+    salesComplexity: "high"
+    serviceIntensity: "medium"
+    supplyChainComplexity: "very-high"
+    innovationIntensity: "medium"
+
+  subIndustries:
+    - id: "subind_discrete_manufacturing"
+      name: "Discrete Manufacturing"
+      slug: "discrete-manufacturing"
+      definition: "Manufacturing environments producing countable units such as vehicles, machinery, and equipment."
+      status: "active"
+      businessModels: ["Product sales", "Service contracts"]
+      valueDrivers: ["Throughput", "Quality", "Warranty reduction"]
+      typicalCapabilities: ["Assembly", "Planning", "Quality", "Service"]
+      customerTypes: ["Distributor", "Enterprise", "Consumer"]
+      tags: ["assembly", "equipment"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "very-high"
+        assetIntensity: "very-high"
+        peopleIntensity: "high"
+        customerComplexity: "high"
+        salesComplexity: "high"
+        serviceIntensity: "medium"
+        supplyChainComplexity: "very-high"
+        innovationIntensity: "medium"
+
+    - id: "subind_process_manufacturing"
+      name: "Process Manufacturing"
+      slug: "process-manufacturing"
+      definition: "Manufacturing environments producing bulk or formula-based outputs such as chemicals, food, and materials."
+      status: "active"
+      businessModels: ["Product sales", "Supply agreements"]
+      valueDrivers: ["Yield", "Safety", "Compliance", "Margin"]
+      typicalCapabilities: ["Batch operations", "Quality control", "Plant maintenance"]
+      customerTypes: ["Distributor", "Enterprise"]
+      tags: ["chemicals", "food", "materials"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "high"
+        operationalComplexity: "very-high"
+        assetIntensity: "very-high"
+        peopleIntensity: "medium"
+        customerComplexity: "medium"
+        salesComplexity: "medium"
+        serviceIntensity: "low"
+        supplyChainComplexity: "very-high"
+        innovationIntensity: "medium"
+
+    - id: "subind_industrial_equipment_machinery"
+      name: "Industrial Equipment & Machinery"
+      slug: "industrial-equipment-machinery"
+      definition: "Manufacturers of machinery, capital equipment, and industrial systems used by other businesses."
+      status: "active"
+      businessModels: ["Product sales", "Maintenance contracts", "Project delivery"]
+      valueDrivers: ["Order intake", "Installed base growth", "Service margin"]
+      typicalCapabilities: ["Engineering", "Manufacturing", "Field service"]
+      customerTypes: ["Enterprise", "Public sector"]
+      tags: ["capital-equipment", "machinery"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "high"
+        assetIntensity: "high"
+        peopleIntensity: "medium"
+        customerComplexity: "high"
+        salesComplexity: "very-high"
+        serviceIntensity: "high"
+        supplyChainComplexity: "high"
+        innovationIntensity: "medium"
+
+    - id: "subind_electronics_semiconductors"
+      name: "Electronics & Semiconductors"
+      slug: "electronics-semiconductors"
+      definition: "Businesses designing or manufacturing electronic components, chips, and digital hardware systems."
+      status: "active"
+      businessModels: ["Product sales", "Design services", "Licensing"]
+      valueDrivers: ["Yield", "Time to market", "Capacity utilisation"]
+      typicalCapabilities: ["Design", "Fabrication", "Supply planning", "Quality"]
+      customerTypes: ["Enterprise", "OEM", "Distributor"]
+      tags: ["electronics", "chips", "hardware"]
+      signals:
+        digitalIntensity: "high"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "very-high"
+        assetIntensity: "very-high"
+        peopleIntensity: "high"
+        customerComplexity: "high"
+        salesComplexity: "high"
+        serviceIntensity: "low"
+        supplyChainComplexity: "very-high"
+        innovationIntensity: "very-high"
+
+    - id: "subind_aerospace_defense_manufacturing"
+      name: "Aerospace & Defense Manufacturing"
+      slug: "aerospace-defense-manufacturing"
+      definition: "Manufacturers of aircraft, defense systems, and associated industrial platforms."
+      status: "active"
+      businessModels: ["Long-term contracts", "Product sales", "Service contracts"]
+      valueDrivers: ["Program execution", "Compliance", "Reliability", "Margin"]
+      typicalCapabilities: ["Engineering", "Program management", "Manufacturing", "Field support"]
+      customerTypes: ["Government", "Enterprise"]
+      tags: ["aerospace", "defense", "regulated"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "very-high"
+        assetIntensity: "very-high"
+        peopleIntensity: "high"
+        customerComplexity: "very-high"
+        salesComplexity: "very-high"
+        serviceIntensity: "high"
+        supplyChainComplexity: "very-high"
+        innovationIntensity: "high"
+
+    - id: "subind_supply_chain_logistics_operations"
+      name: "Supply Chain & Logistics Operations"
+      slug: "supply-chain-logistics-operations"
+      definition: "Operational businesses focused on warehousing, movement, and fulfilment of physical goods at scale."
+      status: "active"
+      businessModels: ["Service fees", "Contracts", "Volume-based pricing"]
+      valueDrivers: ["On-time delivery", "Inventory turns", "Cost to serve"]
+      typicalCapabilities: ["Warehousing", "Transportation planning", "Fulfilment", "Customer service"]
+      customerTypes: ["Enterprise", "Retailer", "Distributor"]
+      tags: ["logistics", "operations"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "very-high"
+        assetIntensity: "high"
+        peopleIntensity: "high"
+        customerComplexity: "medium"
+        salesComplexity: "medium"
+        serviceIntensity: "high"
+        supplyChainComplexity: "very-high"
+        innovationIntensity: "medium"
+
+    - id: "subind_automotive"
+      name: "Automotive"
+      slug: "automotive"
+      definition: "Businesses designing, manufacturing, and selling motor vehicles, components, and automotive systems."
+      status: "active"
+      aliases: ["Auto", "Motor Vehicles", "OEM"]
+      businessModels: ["Product sales", "Aftermarket parts", "Service contracts", "Leasing"]
+      valueDrivers: ["Production efficiency", "Quality", "Safety compliance", "Brand value", "Electrification readiness"]
+      typicalCapabilities: ["Vehicle engineering", "Manufacturing", "Supply chain", "Dealer management", "Aftermarket service"]
+      customerTypes: ["Consumer", "Fleet operator", "Dealer", "Enterprise"]
+      tags: ["automotive", "vehicles", "OEM"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "very-high"
+        assetIntensity: "very-high"
+        peopleIntensity: "high"
+        customerComplexity: "high"
+        salesComplexity: "high"
+        serviceIntensity: "high"
+        supplyChainComplexity: "very-high"
+        innovationIntensity: "high"

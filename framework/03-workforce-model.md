@@ -1,10 +1,5 @@
 # The Blended Workforce Model
 
-**Zontally Reference Business Architecture**
-**Version:** v0.1 (Draft)
-
----
-
 ## Overview
 
 The Blended Workforce Model is ZORBA's answer to the question that no traditional framework addresses: **how do humans and AI agents co-exist as a unified workforce within an enterprise?**

@@ -1,0 +1,155 @@
+industry:
+  id: "ind_telecommunications_media"
+  name: "Telecommunications & Media"
+  slug: "telecommunications-media"
+  definition: "Businesses that connect people and distribute information, communications, and content."
+  status: "active"
+  commonBusinessModels: ["Subscription", "Advertising", "Usage fees", "Licensing"]
+  commonValueDrivers: ["Subscriber growth", "ARPU", "Network quality", "Engagement", "Retention"]
+  commonCapabilities: ["Network operations", "Content production", "Advertising sales", "Customer care"]
+  tags: ["connectivity", "media", "content"]
+  signals:
+    digitalIntensity: "high"
+    regulatoryIntensity: "high"
+    operationalComplexity: "high"
+    assetIntensity: "high"
+    peopleIntensity: "medium"
+    customerComplexity: "high"
+    salesComplexity: "medium"
+    serviceIntensity: "high"
+    supplyChainComplexity: "medium"
+    innovationIntensity: "medium"
+
+  subIndustries:
+    - id: "subind_telecom_operators"
+      name: "Telecom Operators"
+      slug: "telecom-operators"
+      definition: "Providers of mobile, broadband, and communications services to consumers and enterprises."
+      status: "active"
+      businessModels: ["Subscription", "Usage fees"]
+      valueDrivers: ["Subscriber growth", "Network uptime", "ARPU", "Churn reduction"]
+      typicalCapabilities: ["Network operations", "Billing", "Customer service", "Field service"]
+      customerTypes: ["Consumer", "Enterprise", "Government"]
+      tags: ["mobile", "broadband", "carrier"]
+      signals:
+        digitalIntensity: "high"
+        regulatoryIntensity: "high"
+        operationalComplexity: "very-high"
+        assetIntensity: "very-high"
+        peopleIntensity: "medium"
+        customerComplexity: "high"
+        salesComplexity: "medium"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "medium"
+        innovationIntensity: "medium"
+
+    - id: "subind_network_infrastructure_providers"
+      name: "Network Infrastructure Providers"
+      slug: "network-infrastructure-providers"
+      definition: "Businesses that build, lease, or manage telecom network infrastructure and related systems."
+      status: "active"
+      businessModels: ["Contracts", "Leasing", "Service fees"]
+      valueDrivers: ["Capacity utilisation", "Uptime", "Contract growth"]
+      typicalCapabilities: ["Infrastructure operations", "Engineering", "Project delivery"]
+      customerTypes: ["Telecom operator", "Enterprise", "Government"]
+      tags: ["network", "infrastructure"]
+      signals:
+        digitalIntensity: "high"
+        regulatoryIntensity: "high"
+        operationalComplexity: "high"
+        assetIntensity: "very-high"
+        peopleIntensity: "medium"
+        customerComplexity: "high"
+        salesComplexity: "high"
+        serviceIntensity: "medium"
+        supplyChainComplexity: "medium"
+        innovationIntensity: "medium"
+
+    - id: "subind_media_production_studios"
+      name: "Media Production & Studios"
+      slug: "media-production-studios"
+      definition: "Businesses creating film, television, audio, and other media content for distribution."
+      status: "active"
+      businessModels: ["Licensing", "Production fees", "Advertising"]
+      valueDrivers: ["Audience reach", "Content monetisation", "Production efficiency"]
+      typicalCapabilities: ["Production", "Rights management", "Distribution", "Marketing"]
+      customerTypes: ["Consumer", "Platform", "Enterprise"]
+      tags: ["film", "tv", "audio"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "medium"
+        assetIntensity: "medium"
+        peopleIntensity: "high"
+        customerComplexity: "medium"
+        salesComplexity: "medium"
+        serviceIntensity: "low"
+        supplyChainComplexity: "low"
+        innovationIntensity: "high"
+
+    - id: "subind_streaming_digital_media_platforms"
+      name: "Streaming & Digital Media Platforms"
+      slug: "streaming-digital-media-platforms"
+      definition: "Digital platforms distributing content to audiences through subscription, advertising, or hybrid models."
+      status: "active"
+      businessModels: ["Subscription", "Advertising", "Freemium"]
+      valueDrivers: ["Engagement", "Subscriber growth", "Retention"]
+      typicalCapabilities: ["Product", "Content operations", "Distribution", "Trust & safety"]
+      customerTypes: ["Consumer"]
+      tags: ["streaming", "digital-media"]
+      signals:
+        digitalIntensity: "very-high"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "high"
+        assetIntensity: "medium"
+        peopleIntensity: "medium"
+        customerComplexity: "low"
+        salesComplexity: "low"
+        serviceIntensity: "medium"
+        supplyChainComplexity: "low"
+        innovationIntensity: "high"
+
+    - id: "subind_advertising_publishing"
+      name: "Advertising & Publishing"
+      slug: "advertising-publishing"
+      definition: "Businesses monetising audiences through advertising, sponsorship, publishing, and brand services."
+      status: "active"
+      businessModels: ["Advertising", "Subscriptions", "Licensing", "Services"]
+      valueDrivers: ["Audience reach", "Yield", "Client retention"]
+      typicalCapabilities: ["Sales", "Content creation", "Audience development", "Campaign operations"]
+      customerTypes: ["Consumer", "Enterprise", "SMB"]
+      tags: ["advertising", "publishing"]
+      signals:
+        digitalIntensity: "high"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "medium"
+        assetIntensity: "low"
+        peopleIntensity: "high"
+        customerComplexity: "medium"
+        salesComplexity: "high"
+        serviceIntensity: "medium"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "medium"
+
+    - id: "subind_gaming_interactive_entertainment"
+      name: "Gaming & Interactive Entertainment"
+      slug: "gaming-interactive-entertainment"
+      definition: "Businesses creating, publishing, and distributing video games, interactive media, and immersive entertainment experiences."
+      status: "active"
+      aliases: ["Video Games", "Gaming", "Interactive Media"]
+      businessModels: ["Product sales", "Subscription", "In-app purchases", "Advertising", "Licensing"]
+      valueDrivers: ["Player engagement", "Monetisation per user", "Retention", "Title pipeline", "Platform reach"]
+      typicalCapabilities: ["Game development", "Live operations", "Community management", "Monetisation", "Platform publishing"]
+      customerTypes: ["Consumer"]
+      tags: ["gaming", "interactive", "entertainment"]
+      signals:
+        digitalIntensity: "very-high"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "high"
+        assetIntensity: "medium"
+        peopleIntensity: "high"
+        customerComplexity: "low"
+        salesComplexity: "low"
+        serviceIntensity: "medium"
+        supplyChainComplexity: "low"
+        innovationIntensity: "very-high"

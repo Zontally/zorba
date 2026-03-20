@@ -1,0 +1,132 @@
+industry:
+  id: "ind_transportation_logistics"
+  name: "Transportation & Logistics"
+  slug: "transportation-logistics"
+  definition: "Organisations that move goods and people across local, national, and global networks."
+  status: "active"
+  commonBusinessModels: ["Usage fees", "Contracts", "Freight charges", "Ticket sales"]
+  commonValueDrivers: ["On-time performance", "Network utilisation", "Cost per shipment", "Safety"]
+  commonCapabilities: ["Fleet operations", "Routing", "Fulfilment", "Customer service", "Maintenance"]
+  tags: ["transport", "mobility", "logistics"]
+  signals:
+    digitalIntensity: "medium"
+    regulatoryIntensity: "high"
+    operationalComplexity: "very-high"
+    assetIntensity: "very-high"
+    peopleIntensity: "high"
+    customerComplexity: "medium"
+    salesComplexity: "medium"
+    serviceIntensity: "high"
+    supplyChainComplexity: "very-high"
+    innovationIntensity: "medium"
+
+  subIndustries:
+    - id: "subind_airlines_aviation"
+      name: "Airlines & Aviation"
+      slug: "airlines-aviation"
+      definition: "Businesses transporting passengers or cargo by air and supporting aviation operations."
+      status: "active"
+      businessModels: ["Ticket sales", "Freight charges", "Ancillary fees"]
+      valueDrivers: ["Load factor", "Yield", "On-time performance", "Cost efficiency"]
+      typicalCapabilities: ["Flight operations", "Maintenance", "Ground services", "Customer service"]
+      customerTypes: ["Consumer", "Enterprise", "Government"]
+      tags: ["airlines", "aviation"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "very-high"
+        assetIntensity: "very-high"
+        peopleIntensity: "high"
+        customerComplexity: "medium"
+        salesComplexity: "medium"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "high"
+        innovationIntensity: "medium"
+
+    - id: "subind_shipping_maritime"
+      name: "Shipping & Maritime"
+      slug: "shipping-maritime"
+      definition: "Businesses moving goods or people by sea, including shipping lines, ports, and maritime operators."
+      status: "active"
+      businessModels: ["Freight charges", "Contracts", "Port fees"]
+      valueDrivers: ["Vessel utilisation", "On-time movement", "Capacity yield"]
+      typicalCapabilities: ["Fleet operations", "Port coordination", "Compliance", "Maintenance"]
+      customerTypes: ["Enterprise", "Government", "Distributor"]
+      tags: ["shipping", "maritime", "ports"]
+      signals:
+        digitalIntensity: "low"
+        regulatoryIntensity: "high"
+        operationalComplexity: "very-high"
+        assetIntensity: "very-high"
+        peopleIntensity: "medium"
+        customerComplexity: "medium"
+        salesComplexity: "medium"
+        serviceIntensity: "medium"
+        supplyChainComplexity: "very-high"
+        innovationIntensity: "low"
+
+    - id: "subind_freight_logistics_providers"
+      name: "Freight & Logistics Providers"
+      slug: "freight-logistics-providers"
+      definition: "Businesses arranging or operating freight, warehousing, and multi-modal logistics services."
+      status: "active"
+      businessModels: ["Contracts", "Service fees", "Volume-based pricing"]
+      valueDrivers: ["Shipment efficiency", "On-time delivery", "Margin", "Customer retention"]
+      typicalCapabilities: ["Routing", "Warehousing", "Brokerage", "Customer service"]
+      customerTypes: ["Enterprise", "Retailer", "Distributor"]
+      tags: ["freight", "3pl", "logistics"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "very-high"
+        assetIntensity: "high"
+        peopleIntensity: "high"
+        customerComplexity: "medium"
+        salesComplexity: "medium"
+        serviceIntensity: "high"
+        supplyChainComplexity: "very-high"
+        innovationIntensity: "medium"
+
+    - id: "subind_rail_public_transport"
+      name: "Rail & Public Transport"
+      slug: "rail-public-transport"
+      definition: "Passenger or freight transport services delivered through rail and public transit systems."
+      status: "active"
+      businessModels: ["Ticket sales", "Public funding", "Contracts"]
+      valueDrivers: ["Reliability", "Ridership", "Cost efficiency", "Safety"]
+      typicalCapabilities: ["Operations", "Scheduling", "Maintenance", "Customer service"]
+      customerTypes: ["Consumer", "Government", "Enterprise"]
+      tags: ["rail", "public-transport"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "high"
+        assetIntensity: "very-high"
+        peopleIntensity: "high"
+        customerComplexity: "low"
+        salesComplexity: "low"
+        serviceIntensity: "high"
+        supplyChainComplexity: "medium"
+        innovationIntensity: "low"
+
+    - id: "subind_last_mile_delivery"
+      name: "Last-Mile Delivery"
+      slug: "last-mile-delivery"
+      definition: "Businesses specialising in local delivery of parcels, food, or goods to end recipients."
+      status: "active"
+      businessModels: ["Delivery fees", "Contracts", "Transaction fees"]
+      valueDrivers: ["Delivery density", "Time to delivery", "Unit economics"]
+      typicalCapabilities: ["Dispatch", "Routing", "Driver operations", "Customer support"]
+      customerTypes: ["Consumer", "Retailer", "Restaurant", "Enterprise"]
+      tags: ["delivery", "last-mile"]
+      signals:
+        digitalIntensity: "high"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "high"
+        assetIntensity: "medium"
+        peopleIntensity: "very-high"
+        customerComplexity: "low"
+        salesComplexity: "low"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "high"
+        innovationIntensity: "medium"

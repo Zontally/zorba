@@ -1,0 +1,6 @@
+model: "ZORBA_INDUSTRY_MODEL"
+version: "v0.2.0"
+status: "published"
+description: >
+  Full ZORBA industry and sub-industry taxonomy for common enterprise segmentation,
+  benchmarking, and AI-guided strategy-to-execution workflows.

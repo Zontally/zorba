@@ -1,10 +1,5 @@
 # Governance & Trust Framework
 
-**Zontally Reference Business Architecture**
-**Version:** v0.1 (Draft)
-
----
-
 ## Overview
 
 Governing a blended workforce is fundamentally different from governing a human-only organisation. Traditional governance assumes that every decision-maker is a person with judgement, accountability, and legal personhood. In the agentic enterprise, some of the most active participants in decision-making and execution are AI agents — entities that can act autonomously but cannot be held personally accountable.
@@ -365,7 +360,7 @@ Most organisations today are at G1 or G2. ZORBA provides the path to G3 and beyo
 
 ---
 
-*Previous: [← Agentic Enterprise Patterns](05-agentic-patterns.md) | Next: [Glossary →](12-glossary.md)*
+*Previous: [← Agentic Enterprise Patterns](05-agentic-patterns.md) | Next: [Glossary →](13-glossary.md)*
 
 ---
 

@@ -1,10 +1,5 @@
 # Evolution Mapping
 
-**Zontally Reference Business Architecture**
-**Version:** v0.1 (Draft)
-
----
-
 ## Overview
 
 <img src="../../assets/images/wardley-map.png" alt="Wardley Map" style="height: 600px;">

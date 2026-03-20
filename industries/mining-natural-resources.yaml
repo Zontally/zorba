@@ -1,0 +1,133 @@
+industry:
+  id: "ind_mining_natural_resources"
+  name: "Mining & Natural Resources"
+  slug: "mining-natural-resources"
+  definition: "Organisations that extract, process, and manage natural resources including minerals, metals, timber, and water."
+  status: "active"
+  aliases: ["Mining", "Natural Resources", "Extractive Industries"]
+  commonBusinessModels: ["Commodity sales", "Long-term offtake agreements", "Royalties", "Contract services"]
+  commonValueDrivers: ["Resource yield", "Safety", "Cost per tonne", "Sustainability", "Licence to operate"]
+  commonCapabilities: ["Extraction operations", "Environmental management", "Safety systems", "Supply chain", "Regulatory compliance"]
+  tags: ["mining", "resources", "extractive"]
+  signals:
+    digitalIntensity: "medium"
+    regulatoryIntensity: "very-high"
+    operationalComplexity: "very-high"
+    assetIntensity: "very-high"
+    peopleIntensity: "high"
+    customerComplexity: "medium"
+    salesComplexity: "medium"
+    serviceIntensity: "low"
+    supplyChainComplexity: "high"
+    innovationIntensity: "medium"
+
+  subIndustries:
+    - id: "subind_metals_mineral_mining"
+      name: "Metals & Mineral Mining"
+      slug: "metals-mineral-mining"
+      definition: "Businesses extracting and processing metallic ores and industrial minerals from the earth."
+      status: "active"
+      businessModels: ["Commodity sales", "Offtake agreements", "Royalties"]
+      valueDrivers: ["Cost per tonne", "Reserve life", "Safety record", "Recovery rate"]
+      typicalCapabilities: ["Mine operations", "Processing", "Safety management", "Environmental compliance", "Geology"]
+      customerTypes: ["Smelter", "Manufacturer", "Commodity trader"]
+      tags: ["metals", "minerals", "mining"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "very-high"
+        assetIntensity: "very-high"
+        peopleIntensity: "high"
+        customerComplexity: "medium"
+        salesComplexity: "medium"
+        serviceIntensity: "low"
+        supplyChainComplexity: "high"
+        innovationIntensity: "medium"
+
+    - id: "subind_forestry_timber"
+      name: "Forestry & Timber"
+      slug: "forestry-timber"
+      definition: "Businesses managing forests and producing timber, pulp, and wood-based products."
+      status: "active"
+      businessModels: ["Product sales", "Timber rights", "Sustainability credits"]
+      valueDrivers: ["Sustainable yield", "Certification compliance", "Harvest efficiency", "Replanting rates"]
+      typicalCapabilities: ["Forest management", "Harvesting operations", "Environmental stewardship", "Logistics", "Compliance"]
+      customerTypes: ["Manufacturer", "Construction", "Distributor"]
+      tags: ["forestry", "timber", "wood"]
+      signals:
+        digitalIntensity: "low"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "high"
+        assetIntensity: "high"
+        peopleIntensity: "high"
+        customerComplexity: "low"
+        salesComplexity: "low"
+        serviceIntensity: "low"
+        supplyChainComplexity: "high"
+        innovationIntensity: "low"
+
+    - id: "subind_water_resources_management"
+      name: "Water Resources & Management"
+      slug: "water-resources-management"
+      definition: "Organisations managing water extraction, treatment, distribution, and conservation for industrial, agricultural, and municipal use."
+      status: "active"
+      businessModels: ["Service fees", "Usage-based pricing", "Government contracts"]
+      valueDrivers: ["Water quality", "Distribution efficiency", "Regulatory compliance", "Conservation"]
+      typicalCapabilities: ["Water treatment", "Distribution operations", "Environmental monitoring", "Compliance", "Infrastructure maintenance"]
+      customerTypes: ["Government", "Enterprise", "Agricultural"]
+      tags: ["water", "utilities", "conservation"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "high"
+        assetIntensity: "very-high"
+        peopleIntensity: "medium"
+        customerComplexity: "medium"
+        salesComplexity: "low"
+        serviceIntensity: "high"
+        supplyChainComplexity: "medium"
+        innovationIntensity: "medium"
+
+    - id: "subind_mining_services_equipment"
+      name: "Mining Services & Equipment"
+      slug: "mining-services-equipment"
+      definition: "Businesses providing specialised services, equipment, and technology to mining operations."
+      status: "active"
+      businessModels: ["Service contracts", "Equipment sales", "Leasing", "Managed services"]
+      valueDrivers: ["Utilisation", "Safety", "Contract retention", "Equipment uptime"]
+      typicalCapabilities: ["Engineering services", "Equipment maintenance", "Drilling operations", "Project delivery", "Safety systems"]
+      customerTypes: ["Mining operator", "Enterprise"]
+      tags: ["mining-services", "equipment", "METS"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "high"
+        operationalComplexity: "high"
+        assetIntensity: "high"
+        peopleIntensity: "high"
+        customerComplexity: "high"
+        salesComplexity: "high"
+        serviceIntensity: "high"
+        supplyChainComplexity: "high"
+        innovationIntensity: "medium"
+
+    - id: "subind_quarrying_aggregates"
+      name: "Quarrying & Aggregates"
+      slug: "quarrying-aggregates"
+      definition: "Businesses extracting stone, sand, gravel, and other aggregate materials for construction and industrial use."
+      status: "active"
+      businessModels: ["Product sales", "Long-term supply contracts"]
+      valueDrivers: ["Volume", "Cost per tonne", "Permit compliance", "Transport efficiency"]
+      typicalCapabilities: ["Quarry operations", "Crushing and screening", "Logistics", "Environmental management", "Compliance"]
+      customerTypes: ["Construction", "Government", "Infrastructure"]
+      tags: ["quarrying", "aggregates", "construction-materials"]
+      signals:
+        digitalIntensity: "low"
+        regulatoryIntensity: "high"
+        operationalComplexity: "medium"
+        assetIntensity: "very-high"
+        peopleIntensity: "medium"
+        customerComplexity: "low"
+        salesComplexity: "low"
+        serviceIntensity: "low"
+        supplyChainComplexity: "medium"
+        innovationIntensity: "low"

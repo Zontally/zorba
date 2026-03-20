@@ -1,10 +1,5 @@
 # ZORBA Industry Editions
 
-**Zontally Reference Business Architecture**
-**Version:** v0.1 (Draft)
-
----
-
 ## Overview
 
 ZORBA is not a one-size-fits-all framework. While the [core architecture](02-architecture.md), [12 domains](04-domain-reference.md), [agentic patterns](05-agentic-patterns.md), and [governance model](06-governance.md) are universal, the way an organisation *instantiates* these elements varies profoundly by industry. A technology services company managing ServiceNow implementations inhabits a fundamentally different operational reality from a hospital managing clinical pathways or a manufacturer managing production lines.

@@ -1,0 +1,132 @@
+industry:
+  id: "ind_education_nonprofit"
+  name: "Education & Non-Profit"
+  slug: "education-nonprofit"
+  definition: "Organisations focused on learning, research, social impact, and mission-led service delivery."
+  status: "active"
+  commonBusinessModels: ["Tuition", "Public funding", "Donations", "Grants", "Membership"]
+  commonValueDrivers: ["Learner outcomes", "Participation", "Fundraising efficiency", "Mission impact"]
+  commonCapabilities: ["Program delivery", "Fundraising", "Community engagement", "Student services"]
+  tags: ["education", "mission-driven", "social-impact"]
+  signals:
+    digitalIntensity: "medium"
+    regulatoryIntensity: "medium"
+    operationalComplexity: "medium"
+    assetIntensity: "medium"
+    peopleIntensity: "very-high"
+    customerComplexity: "medium"
+    salesComplexity: "low"
+    serviceIntensity: "very-high"
+    supplyChainComplexity: "low"
+    innovationIntensity: "medium"
+
+  subIndustries:
+    - id: "subind_higher_education"
+      name: "Higher Education"
+      slug: "higher-education"
+      definition: "Universities, colleges, and institutions providing tertiary education and research."
+      status: "active"
+      businessModels: ["Tuition", "Public funding", "Research grants", "Donations"]
+      valueDrivers: ["Student success", "Enrollment", "Research output", "Institutional reputation"]
+      typicalCapabilities: ["Student services", "Academic administration", "Research operations", "Fundraising"]
+      customerTypes: ["Student", "Government", "Research partner"]
+      tags: ["university", "college"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "high"
+        assetIntensity: "high"
+        peopleIntensity: "very-high"
+        customerComplexity: "medium"
+        salesComplexity: "low"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "low"
+        innovationIntensity: "high"
+
+    - id: "subind_k12_education"
+      name: "K-12 Education"
+      slug: "k12-education"
+      definition: "Schools and education bodies serving primary and secondary learners."
+      status: "active"
+      businessModels: ["Public funding", "Tuition", "Grants"]
+      valueDrivers: ["Learner outcomes", "Attendance", "Operational efficiency"]
+      typicalCapabilities: ["Teaching operations", "Administration", "Student support", "Parent communication"]
+      customerTypes: ["Student", "Parent", "Government"]
+      tags: ["schools", "k12"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "medium"
+        assetIntensity: "medium"
+        peopleIntensity: "very-high"
+        customerComplexity: "low"
+        salesComplexity: "very-low"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "low"
+        innovationIntensity: "low"
+
+    - id: "subind_edtech_platforms"
+      name: "EdTech Platforms"
+      slug: "edtech-platforms"
+      definition: "Technology businesses providing digital learning, academic administration, or educational support solutions."
+      status: "active"
+      businessModels: ["Subscription", "Licensing", "Freemium"]
+      valueDrivers: ["Adoption", "Engagement", "Retention", "Learning outcomes"]
+      typicalCapabilities: ["Product", "Customer success", "Content operations", "Support"]
+      customerTypes: ["Student", "School", "University", "Employer"]
+      tags: ["edtech", "digital-learning"]
+      signals:
+        digitalIntensity: "very-high"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "medium"
+        assetIntensity: "low"
+        peopleIntensity: "medium"
+        customerComplexity: "medium"
+        salesComplexity: "medium"
+        serviceIntensity: "high"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "high"
+
+    - id: "subind_nonprofit_ngos"
+      name: "Non-Profit & NGOs"
+      slug: "nonprofit-ngos"
+      definition: "Mission-led organisations delivering social, humanitarian, advocacy, or development outcomes."
+      status: "active"
+      businessModels: ["Donations", "Grants", "Membership", "Service fees"]
+      valueDrivers: ["Mission impact", "Donor retention", "Programme efficiency"]
+      typicalCapabilities: ["Fundraising", "Program delivery", "Volunteer coordination", "Community engagement"]
+      customerTypes: ["Donor", "Community", "Government", "Member"]
+      tags: ["nonprofit", "ngo", "mission"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "medium"
+        assetIntensity: "low"
+        peopleIntensity: "very-high"
+        customerComplexity: "medium"
+        salesComplexity: "low"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "low"
+        innovationIntensity: "medium"
+
+    - id: "subind_research_institutions"
+      name: "Research Institutions"
+      slug: "research-institutions"
+      definition: "Institutions dedicated to academic, scientific, or policy research and knowledge creation."
+      status: "active"
+      businessModels: ["Grants", "Public funding", "Research contracts"]
+      valueDrivers: ["Research output", "Funding success", "Knowledge transfer"]
+      typicalCapabilities: ["Research operations", "Grant management", "Collaboration", "Data management"]
+      customerTypes: ["Government", "Enterprise", "Academic partner"]
+      tags: ["research", "science"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "medium"
+        assetIntensity: "medium"
+        peopleIntensity: "high"
+        customerComplexity: "medium"
+        salesComplexity: "low"
+        serviceIntensity: "low"
+        supplyChainComplexity: "low"
+        innovationIntensity: "very-high"
