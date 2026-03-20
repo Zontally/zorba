@@ -198,3 +198,26 @@ industry:
         serviceIntensity: "medium"
         supplyChainComplexity: "very-low"
         innovationIntensity: "very-high"
+
+    - id: "subind_it_infrastructure_hardware"
+      name: "IT Infrastructure & Hardware"
+      slug: "it-infrastructure-hardware"
+      definition: "Businesses designing, manufacturing, and selling servers, networking equipment, storage hardware, and related infrastructure components."
+      status: "active"
+      aliases: ["IT Hardware", "Infrastructure Hardware"]
+      businessModels: ["Product sales", "Service contracts", "Leasing", "Subscription"]
+      valueDrivers: ["Market share", "Margin", "Installed base growth", "Service attach rate"]
+      typicalCapabilities: ["Hardware engineering", "Manufacturing", "Supply chain", "Channel management", "Field service"]
+      customerTypes: ["Enterprise", "Mid-market", "Public sector", "Distributor"]
+      tags: ["hardware", "infrastructure", "servers"]
+      signals:
+        digitalIntensity: "high"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "high"
+        assetIntensity: "high"
+        peopleIntensity: "medium"
+        customerComplexity: "high"
+        salesComplexity: "very-high"
+        serviceIntensity: "high"
+        supplyChainComplexity: "high"
+        innovationIntensity: "high"

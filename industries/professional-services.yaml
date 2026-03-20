@@ -182,3 +182,26 @@ industry:
         serviceIntensity: "very-high"
         supplyChainComplexity: "very-low"
         innovationIntensity: "high"
+
+    - id: "subind_bpo_shared_services"
+      name: "BPO & Shared Services"
+      slug: "bpo-shared-services"
+      definition: "Firms providing outsourced business processes, contact centres, back-office operations, and global business services."
+      status: "active"
+      aliases: ["Business Process Outsourcing", "Shared Services", "GBS"]
+      businessModels: ["Volume-based", "Per-transaction", "Managed services", "FTE-based"]
+      valueDrivers: ["Cost per transaction", "SLA adherence", "Volume throughput", "Client retention", "Process efficiency"]
+      typicalCapabilities: ["Process operations", "Workforce management", "Quality assurance", "Technology enablement", "Transition management"]
+      customerTypes: ["Enterprise", "Mid-market"]
+      tags: ["outsourcing", "shared-services", "process-driven"]
+      signals:
+        digitalIntensity: "high"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "high"
+        assetIntensity: "low"
+        peopleIntensity: "very-high"
+        customerComplexity: "high"
+        salesComplexity: "very-high"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "low"
+        innovationIntensity: "medium"

@@ -153,3 +153,26 @@ industry:
         serviceIntensity: "high"
         supplyChainComplexity: "very-low"
         innovationIntensity: "medium"
+
+    - id: "subind_private_equity_vc"
+      name: "Private Equity & Venture Capital"
+      slug: "private-equity-vc"
+      definition: "Investment firms providing capital, strategic guidance, and operational support to private companies through equity ownership."
+      status: "active"
+      aliases: ["PE", "VC", "Growth Equity", "Buyout"]
+      businessModels: ["Management fees", "Carried interest", "Co-investment"]
+      valueDrivers: ["IRR", "Fund deployment", "Portfolio value creation", "Exit multiples", "Fundraising"]
+      typicalCapabilities: ["Deal origination", "Due diligence", "Portfolio operations", "Value creation", "Investor relations"]
+      customerTypes: ["Institutional", "HNWI", "Portfolio company"]
+      tags: ["private-equity", "venture-capital", "investment"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "high"
+        operationalComplexity: "high"
+        assetIntensity: "low"
+        peopleIntensity: "very-high"
+        customerComplexity: "very-high"
+        salesComplexity: "very-high"
+        serviceIntensity: "high"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "medium"

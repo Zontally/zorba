@@ -130,3 +130,26 @@ industry:
         serviceIntensity: "medium"
         supplyChainComplexity: "very-low"
         innovationIntensity: "medium"
+
+    - id: "subind_gaming_interactive_entertainment"
+      name: "Gaming & Interactive Entertainment"
+      slug: "gaming-interactive-entertainment"
+      definition: "Businesses creating, publishing, and distributing video games, interactive media, and immersive entertainment experiences."
+      status: "active"
+      aliases: ["Video Games", "Gaming", "Interactive Media"]
+      businessModels: ["Product sales", "Subscription", "In-app purchases", "Advertising", "Licensing"]
+      valueDrivers: ["Player engagement", "Monetisation per user", "Retention", "Title pipeline", "Platform reach"]
+      typicalCapabilities: ["Game development", "Live operations", "Community management", "Monetisation", "Platform publishing"]
+      customerTypes: ["Consumer"]
+      tags: ["gaming", "interactive", "entertainment"]
+      signals:
+        digitalIntensity: "very-high"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "high"
+        assetIntensity: "medium"
+        peopleIntensity: "high"
+        customerComplexity: "low"
+        salesComplexity: "low"
+        serviceIntensity: "medium"
+        supplyChainComplexity: "low"
+        innovationIntensity: "very-high"

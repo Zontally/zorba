@@ -28,7 +28,7 @@ Each level carries a consistent set of attributes that describe the operational 
 
 ### Industries
 
-Industries represent broad sectors of economic activity. ZORBA defines **13 industries** covering the full spectrum of enterprise types:
+Industries represent broad sectors of economic activity. ZORBA defines **15 industries** covering the full spectrum of enterprise types:
 
 | # | Industry | Slug |
 |---|----------|------|
@@ -45,6 +45,8 @@ Industries represent broad sectors of economic activity. ZORBA defines **13 indu
 | 11 | Real Estate & Construction | `real-estate-construction` |
 | 12 | Hospitality, Travel & Leisure | `hospitality-travel-leisure` |
 | 13 | Professional Services | `professional-services` |
+| 14 | Agriculture & Food Production | `agriculture-food-production` |
+| 15 | Mining & Natural Resources | `mining-natural-resources` |
 
 Each industry includes:
 
@@ -60,7 +62,7 @@ Each industry includes:
 
 Sub-industries represent distinct segments within a broader industry. For example, *Technology & Software* contains 8 sub-industries including Enterprise Software, Vertical SaaS, Cloud Infrastructure, and Cybersecurity.
 
-ZORBA currently defines **71 sub-industries** across the 13 industries.
+ZORBA currently defines **88 sub-industries** across the 15 industries.
 
 Sub-industries carry a similar attribute set to industries, but more specific:
 
@@ -131,7 +133,9 @@ industries/
 ├── public-sector-government.yaml
 ├── education-nonprofit.yaml
 ├── real-estate-construction.yaml
-└── hospitality-travel-leisure.yaml
+├── hospitality-travel-leisure.yaml
+├── agriculture-food-production.yaml
+└── mining-natural-resources.yaml
 ```
 
 ### Industry File Structure
@@ -253,7 +257,7 @@ Industries and sub-industries support a `status` field:
 
 ## Current Coverage
 
-The v1.0 taxonomy covers **13 industries** and **71 sub-industries**, spanning:
+The v1.0 taxonomy covers **15 industries** and **88 sub-industries**, spanning:
 
 - Digital-native sectors (Technology, Fintech, Digital Health)
 - Heavily regulated sectors (Financial Services, Healthcare, Energy, Public Sector)

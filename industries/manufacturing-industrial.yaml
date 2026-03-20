@@ -152,3 +152,26 @@ industry:
         serviceIntensity: "high"
         supplyChainComplexity: "very-high"
         innovationIntensity: "medium"
+
+    - id: "subind_automotive"
+      name: "Automotive"
+      slug: "automotive"
+      definition: "Businesses designing, manufacturing, and selling motor vehicles, components, and automotive systems."
+      status: "active"
+      aliases: ["Auto", "Motor Vehicles", "OEM"]
+      businessModels: ["Product sales", "Aftermarket parts", "Service contracts", "Leasing"]
+      valueDrivers: ["Production efficiency", "Quality", "Safety compliance", "Brand value", "Electrification readiness"]
+      typicalCapabilities: ["Vehicle engineering", "Manufacturing", "Supply chain", "Dealer management", "Aftermarket service"]
+      customerTypes: ["Consumer", "Fleet operator", "Dealer", "Enterprise"]
+      tags: ["automotive", "vehicles", "OEM"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "very-high"
+        assetIntensity: "very-high"
+        peopleIntensity: "high"
+        customerComplexity: "high"
+        salesComplexity: "high"
+        serviceIntensity: "high"
+        supplyChainComplexity: "very-high"
+        innovationIntensity: "high"

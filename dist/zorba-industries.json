@@ -1,10 +1,345 @@
 {
   "model": "ZORA_INDUSTRY_MODEL",
   "version": "v1.0",
-  "generatedAt": "2026-03-20T21:41:33.832Z",
+  "generatedAt": "2026-03-20T21:50:04.015Z",
   "status": "draft",
   "description": "Full ZORA industry and sub-industry taxonomy for common enterprise segmentation, benchmarking, and AI-guided strategy-to-execution workflows.",
   "industries": [
+    {
+      "id": "ind_agriculture_food_production",
+      "name": "Agriculture & Food Production",
+      "slug": "agriculture-food-production",
+      "definition": "Organisations involved in growing, raising, processing, and distributing food and agricultural products.",
+      "status": "active",
+      "aliases": [
+        "Agriculture",
+        "Agribusiness",
+        "Food & Agriculture"
+      ],
+      "commonBusinessModels": [
+        "Commodity sales",
+        "Contract farming",
+        "Vertical integration",
+        "Processing & distribution",
+        "Subscription (CSA)"
+      ],
+      "commonValueDrivers": [
+        "Yield",
+        "Quality",
+        "Sustainability",
+        "Cost efficiency",
+        "Supply reliability"
+      ],
+      "commonCapabilities": [
+        "Production operations",
+        "Supply chain management",
+        "Quality assurance",
+        "Regulatory compliance",
+        "Market access"
+      ],
+      "tags": [
+        "agriculture",
+        "food",
+        "commodities"
+      ],
+      "signals": {
+        "digitalIntensity": "low",
+        "regulatoryIntensity": "high",
+        "operationalComplexity": "high",
+        "assetIntensity": "high",
+        "peopleIntensity": "high",
+        "customerComplexity": "medium",
+        "salesComplexity": "medium",
+        "serviceIntensity": "low",
+        "supplyChainComplexity": "very-high",
+        "innovationIntensity": "medium"
+      },
+      "subIndustries": [
+        {
+          "id": "subind_crop_farming_agronomy",
+          "name": "Crop Farming & Agronomy",
+          "slug": "crop-farming-agronomy",
+          "definition": "Businesses cultivating field crops, horticulture, and specialty crops, including agronomic advisory and input services.",
+          "status": "active",
+          "businessModels": [
+            "Commodity sales",
+            "Contract farming",
+            "Land lease"
+          ],
+          "valueDrivers": [
+            "Yield per hectare",
+            "Input cost efficiency",
+            "Crop quality",
+            "Weather resilience"
+          ],
+          "typicalCapabilities": [
+            "Crop management",
+            "Soil science",
+            "Irrigation",
+            "Harvest logistics",
+            "Market sales"
+          ],
+          "customerTypes": [
+            "Distributor",
+            "Processor",
+            "Commodity trader"
+          ],
+          "tags": [
+            "crops",
+            "agronomy",
+            "farming"
+          ],
+          "signals": {
+            "digitalIntensity": "low",
+            "regulatoryIntensity": "high",
+            "operationalComplexity": "high",
+            "assetIntensity": "very-high",
+            "peopleIntensity": "high",
+            "customerComplexity": "low",
+            "salesComplexity": "low",
+            "serviceIntensity": "very-low",
+            "supplyChainComplexity": "high",
+            "innovationIntensity": "medium"
+          }
+        },
+        {
+          "id": "subind_livestock_animal_husbandry",
+          "name": "Livestock & Animal Husbandry",
+          "slug": "livestock-animal-husbandry",
+          "definition": "Businesses raising animals for meat, dairy, wool, and other products, including breeding and veterinary services.",
+          "status": "active",
+          "businessModels": [
+            "Product sales",
+            "Contract growing",
+            "Vertical integration"
+          ],
+          "valueDrivers": [
+            "Herd productivity",
+            "Animal welfare compliance",
+            "Feed efficiency",
+            "Disease control"
+          ],
+          "typicalCapabilities": [
+            "Animal husbandry",
+            "Veterinary management",
+            "Feed operations",
+            "Breeding programmes",
+            "Compliance"
+          ],
+          "customerTypes": [
+            "Processor",
+            "Distributor",
+            "Retailer"
+          ],
+          "tags": [
+            "livestock",
+            "dairy",
+            "animal-husbandry"
+          ],
+          "signals": {
+            "digitalIntensity": "low",
+            "regulatoryIntensity": "high",
+            "operationalComplexity": "high",
+            "assetIntensity": "high",
+            "peopleIntensity": "high",
+            "customerComplexity": "low",
+            "salesComplexity": "low",
+            "serviceIntensity": "low",
+            "supplyChainComplexity": "high",
+            "innovationIntensity": "low"
+          }
+        },
+        {
+          "id": "subind_food_processing_manufacturing",
+          "name": "Food Processing & Manufacturing",
+          "slug": "food-processing-manufacturing",
+          "definition": "Businesses that transform raw agricultural inputs into packaged food and beverage products for distribution and retail.",
+          "status": "active",
+          "businessModels": [
+            "Product sales",
+            "Private label",
+            "Co-manufacturing"
+          ],
+          "valueDrivers": [
+            "Throughput",
+            "Food safety",
+            "Shelf life",
+            "Brand value",
+            "Cost per unit"
+          ],
+          "typicalCapabilities": [
+            "Manufacturing operations",
+            "Quality control",
+            "Food safety",
+            "Supply chain",
+            "Product development"
+          ],
+          "customerTypes": [
+            "Retailer",
+            "Distributor",
+            "Food service",
+            "Consumer"
+          ],
+          "tags": [
+            "food-manufacturing",
+            "FMCG",
+            "processing"
+          ],
+          "signals": {
+            "digitalIntensity": "medium",
+            "regulatoryIntensity": "very-high",
+            "operationalComplexity": "very-high",
+            "assetIntensity": "very-high",
+            "peopleIntensity": "high",
+            "customerComplexity": "medium",
+            "salesComplexity": "medium",
+            "serviceIntensity": "low",
+            "supplyChainComplexity": "very-high",
+            "innovationIntensity": "medium"
+          }
+        },
+        {
+          "id": "subind_agritech_precision_agriculture",
+          "name": "AgriTech & Precision Agriculture",
+          "slug": "agritech-precision-agriculture",
+          "definition": "Technology businesses providing digital tools, sensors, automation, and data platforms to modernise agricultural operations.",
+          "status": "active",
+          "businessModels": [
+            "SaaS",
+            "Hardware sales",
+            "Usage-based",
+            "Data services"
+          ],
+          "valueDrivers": [
+            "Adoption",
+            "Yield improvement",
+            "Input reduction",
+            "Data quality"
+          ],
+          "typicalCapabilities": [
+            "Product engineering",
+            "Agronomy science",
+            "IoT operations",
+            "Customer success"
+          ],
+          "customerTypes": [
+            "Farm operator",
+            "Agribusiness",
+            "Enterprise"
+          ],
+          "tags": [
+            "agritech",
+            "precision-ag",
+            "digital"
+          ],
+          "signals": {
+            "digitalIntensity": "very-high",
+            "regulatoryIntensity": "medium",
+            "operationalComplexity": "high",
+            "assetIntensity": "medium",
+            "peopleIntensity": "medium",
+            "customerComplexity": "high",
+            "salesComplexity": "high",
+            "serviceIntensity": "medium",
+            "supplyChainComplexity": "medium",
+            "innovationIntensity": "very-high"
+          }
+        },
+        {
+          "id": "subind_agri_commodities_trading",
+          "name": "Agri-Commodities & Trading",
+          "slug": "agri-commodities-trading",
+          "definition": "Businesses involved in the trading, brokerage, and logistics of agricultural commodities across global markets.",
+          "status": "active",
+          "businessModels": [
+            "Trading margins",
+            "Brokerage fees",
+            "Logistics services"
+          ],
+          "valueDrivers": [
+            "Volume",
+            "Price risk management",
+            "Logistics efficiency",
+            "Market access"
+          ],
+          "typicalCapabilities": [
+            "Trading operations",
+            "Risk management",
+            "Logistics coordination",
+            "Market intelligence"
+          ],
+          "customerTypes": [
+            "Producer",
+            "Processor",
+            "Institutional"
+          ],
+          "tags": [
+            "commodities",
+            "trading",
+            "grain"
+          ],
+          "signals": {
+            "digitalIntensity": "medium",
+            "regulatoryIntensity": "high",
+            "operationalComplexity": "high",
+            "assetIntensity": "medium",
+            "peopleIntensity": "medium",
+            "customerComplexity": "high",
+            "salesComplexity": "high",
+            "serviceIntensity": "low",
+            "supplyChainComplexity": "very-high",
+            "innovationIntensity": "low"
+          }
+        },
+        {
+          "id": "subind_aquaculture_fisheries",
+          "name": "Aquaculture & Fisheries",
+          "slug": "aquaculture-fisheries",
+          "definition": "Businesses farming or harvesting aquatic organisms including fish, shellfish, and seaweed for food and other products.",
+          "status": "active",
+          "businessModels": [
+            "Product sales",
+            "Contract supply",
+            "Vertical integration"
+          ],
+          "valueDrivers": [
+            "Stock health",
+            "Feed conversion ratio",
+            "Sustainability certification",
+            "Yield"
+          ],
+          "typicalCapabilities": [
+            "Aquaculture operations",
+            "Environmental management",
+            "Harvesting",
+            "Cold chain logistics",
+            "Compliance"
+          ],
+          "customerTypes": [
+            "Processor",
+            "Distributor",
+            "Retailer"
+          ],
+          "tags": [
+            "aquaculture",
+            "fisheries",
+            "seafood"
+          ],
+          "signals": {
+            "digitalIntensity": "low",
+            "regulatoryIntensity": "very-high",
+            "operationalComplexity": "high",
+            "assetIntensity": "high",
+            "peopleIntensity": "high",
+            "customerComplexity": "low",
+            "salesComplexity": "low",
+            "serviceIntensity": "low",
+            "supplyChainComplexity": "high",
+            "innovationIntensity": "medium"
+          }
+        }
+      ]
+    },
     {
       "id": "ind_education_nonprofit",
       "name": "Education & Non-Profit",
@@ -809,6 +1144,60 @@
             "supplyChainComplexity": "very-low",
             "innovationIntensity": "medium"
           }
+        },
+        {
+          "id": "subind_private_equity_vc",
+          "name": "Private Equity & Venture Capital",
+          "slug": "private-equity-vc",
+          "definition": "Investment firms providing capital, strategic guidance, and operational support to private companies through equity ownership.",
+          "status": "active",
+          "aliases": [
+            "PE",
+            "VC",
+            "Growth Equity",
+            "Buyout"
+          ],
+          "businessModels": [
+            "Management fees",
+            "Carried interest",
+            "Co-investment"
+          ],
+          "valueDrivers": [
+            "IRR",
+            "Fund deployment",
+            "Portfolio value creation",
+            "Exit multiples",
+            "Fundraising"
+          ],
+          "typicalCapabilities": [
+            "Deal origination",
+            "Due diligence",
+            "Portfolio operations",
+            "Value creation",
+            "Investor relations"
+          ],
+          "customerTypes": [
+            "Institutional",
+            "HNWI",
+            "Portfolio company"
+          ],
+          "tags": [
+            "private-equity",
+            "venture-capital",
+            "investment"
+          ],
+          "signals": {
+            "digitalIntensity": "medium",
+            "regulatoryIntensity": "high",
+            "operationalComplexity": "high",
+            "assetIntensity": "low",
+            "peopleIntensity": "very-high",
+            "customerComplexity": "very-high",
+            "salesComplexity": "very-high",
+            "serviceIntensity": "high",
+            "supplyChainComplexity": "very-low",
+            "innovationIntensity": "medium"
+          }
         }
       ]
     },
@@ -1109,6 +1498,58 @@
             "serviceIntensity": "very-high",
             "supplyChainComplexity": "very-low",
             "innovationIntensity": "medium"
+          }
+        },
+        {
+          "id": "subind_clinical_research_organisations",
+          "name": "Clinical Research Organisations",
+          "slug": "clinical-research-organisations",
+          "definition": "Organisations providing outsourced clinical trial management, regulatory support, and research services to pharmaceutical and biotech companies.",
+          "status": "active",
+          "aliases": [
+            "CROs",
+            "Contract Research Organisations"
+          ],
+          "businessModels": [
+            "Service fees",
+            "Milestone-based contracts",
+            "Full-service outsourcing"
+          ],
+          "valueDrivers": [
+            "Trial speed",
+            "Data quality",
+            "Regulatory compliance",
+            "Client retention",
+            "Site network"
+          ],
+          "typicalCapabilities": [
+            "Clinical trial management",
+            "Regulatory affairs",
+            "Data management",
+            "Biostatistics",
+            "Patient recruitment"
+          ],
+          "customerTypes": [
+            "Pharma",
+            "Biotech",
+            "Medical device"
+          ],
+          "tags": [
+            "CRO",
+            "clinical-trials",
+            "research-services"
+          ],
+          "signals": {
+            "digitalIntensity": "medium",
+            "regulatoryIntensity": "very-high",
+            "operationalComplexity": "very-high",
+            "assetIntensity": "low",
+            "peopleIntensity": "very-high",
+            "customerComplexity": "high",
+            "salesComplexity": "very-high",
+            "serviceIntensity": "very-high",
+            "supplyChainComplexity": "low",
+            "innovationIntensity": "high"
           }
         }
       ]
@@ -1644,6 +2085,346 @@
             "supplyChainComplexity": "very-high",
             "innovationIntensity": "medium"
           }
+        },
+        {
+          "id": "subind_automotive",
+          "name": "Automotive",
+          "slug": "automotive",
+          "definition": "Businesses designing, manufacturing, and selling motor vehicles, components, and automotive systems.",
+          "status": "active",
+          "aliases": [
+            "Auto",
+            "Motor Vehicles",
+            "OEM"
+          ],
+          "businessModels": [
+            "Product sales",
+            "Aftermarket parts",
+            "Service contracts",
+            "Leasing"
+          ],
+          "valueDrivers": [
+            "Production efficiency",
+            "Quality",
+            "Safety compliance",
+            "Brand value",
+            "Electrification readiness"
+          ],
+          "typicalCapabilities": [
+            "Vehicle engineering",
+            "Manufacturing",
+            "Supply chain",
+            "Dealer management",
+            "Aftermarket service"
+          ],
+          "customerTypes": [
+            "Consumer",
+            "Fleet operator",
+            "Dealer",
+            "Enterprise"
+          ],
+          "tags": [
+            "automotive",
+            "vehicles",
+            "OEM"
+          ],
+          "signals": {
+            "digitalIntensity": "medium",
+            "regulatoryIntensity": "very-high",
+            "operationalComplexity": "very-high",
+            "assetIntensity": "very-high",
+            "peopleIntensity": "high",
+            "customerComplexity": "high",
+            "salesComplexity": "high",
+            "serviceIntensity": "high",
+            "supplyChainComplexity": "very-high",
+            "innovationIntensity": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ind_mining_natural_resources",
+      "name": "Mining & Natural Resources",
+      "slug": "mining-natural-resources",
+      "definition": "Organisations that extract, process, and manage natural resources including minerals, metals, timber, and water.",
+      "status": "active",
+      "aliases": [
+        "Mining",
+        "Natural Resources",
+        "Extractive Industries"
+      ],
+      "commonBusinessModels": [
+        "Commodity sales",
+        "Long-term offtake agreements",
+        "Royalties",
+        "Contract services"
+      ],
+      "commonValueDrivers": [
+        "Resource yield",
+        "Safety",
+        "Cost per tonne",
+        "Sustainability",
+        "Licence to operate"
+      ],
+      "commonCapabilities": [
+        "Extraction operations",
+        "Environmental management",
+        "Safety systems",
+        "Supply chain",
+        "Regulatory compliance"
+      ],
+      "tags": [
+        "mining",
+        "resources",
+        "extractive"
+      ],
+      "signals": {
+        "digitalIntensity": "medium",
+        "regulatoryIntensity": "very-high",
+        "operationalComplexity": "very-high",
+        "assetIntensity": "very-high",
+        "peopleIntensity": "high",
+        "customerComplexity": "medium",
+        "salesComplexity": "medium",
+        "serviceIntensity": "low",
+        "supplyChainComplexity": "high",
+        "innovationIntensity": "medium"
+      },
+      "subIndustries": [
+        {
+          "id": "subind_metals_mineral_mining",
+          "name": "Metals & Mineral Mining",
+          "slug": "metals-mineral-mining",
+          "definition": "Businesses extracting and processing metallic ores and industrial minerals from the earth.",
+          "status": "active",
+          "businessModels": [
+            "Commodity sales",
+            "Offtake agreements",
+            "Royalties"
+          ],
+          "valueDrivers": [
+            "Cost per tonne",
+            "Reserve life",
+            "Safety record",
+            "Recovery rate"
+          ],
+          "typicalCapabilities": [
+            "Mine operations",
+            "Processing",
+            "Safety management",
+            "Environmental compliance",
+            "Geology"
+          ],
+          "customerTypes": [
+            "Smelter",
+            "Manufacturer",
+            "Commodity trader"
+          ],
+          "tags": [
+            "metals",
+            "minerals",
+            "mining"
+          ],
+          "signals": {
+            "digitalIntensity": "medium",
+            "regulatoryIntensity": "very-high",
+            "operationalComplexity": "very-high",
+            "assetIntensity": "very-high",
+            "peopleIntensity": "high",
+            "customerComplexity": "medium",
+            "salesComplexity": "medium",
+            "serviceIntensity": "low",
+            "supplyChainComplexity": "high",
+            "innovationIntensity": "medium"
+          }
+        },
+        {
+          "id": "subind_forestry_timber",
+          "name": "Forestry & Timber",
+          "slug": "forestry-timber",
+          "definition": "Businesses managing forests and producing timber, pulp, and wood-based products.",
+          "status": "active",
+          "businessModels": [
+            "Product sales",
+            "Timber rights",
+            "Sustainability credits"
+          ],
+          "valueDrivers": [
+            "Sustainable yield",
+            "Certification compliance",
+            "Harvest efficiency",
+            "Replanting rates"
+          ],
+          "typicalCapabilities": [
+            "Forest management",
+            "Harvesting operations",
+            "Environmental stewardship",
+            "Logistics",
+            "Compliance"
+          ],
+          "customerTypes": [
+            "Manufacturer",
+            "Construction",
+            "Distributor"
+          ],
+          "tags": [
+            "forestry",
+            "timber",
+            "wood"
+          ],
+          "signals": {
+            "digitalIntensity": "low",
+            "regulatoryIntensity": "very-high",
+            "operationalComplexity": "high",
+            "assetIntensity": "high",
+            "peopleIntensity": "high",
+            "customerComplexity": "low",
+            "salesComplexity": "low",
+            "serviceIntensity": "low",
+            "supplyChainComplexity": "high",
+            "innovationIntensity": "low"
+          }
+        },
+        {
+          "id": "subind_water_resources_management",
+          "name": "Water Resources & Management",
+          "slug": "water-resources-management",
+          "definition": "Organisations managing water extraction, treatment, distribution, and conservation for industrial, agricultural, and municipal use.",
+          "status": "active",
+          "businessModels": [
+            "Service fees",
+            "Usage-based pricing",
+            "Government contracts"
+          ],
+          "valueDrivers": [
+            "Water quality",
+            "Distribution efficiency",
+            "Regulatory compliance",
+            "Conservation"
+          ],
+          "typicalCapabilities": [
+            "Water treatment",
+            "Distribution operations",
+            "Environmental monitoring",
+            "Compliance",
+            "Infrastructure maintenance"
+          ],
+          "customerTypes": [
+            "Government",
+            "Enterprise",
+            "Agricultural"
+          ],
+          "tags": [
+            "water",
+            "utilities",
+            "conservation"
+          ],
+          "signals": {
+            "digitalIntensity": "medium",
+            "regulatoryIntensity": "very-high",
+            "operationalComplexity": "high",
+            "assetIntensity": "very-high",
+            "peopleIntensity": "medium",
+            "customerComplexity": "medium",
+            "salesComplexity": "low",
+            "serviceIntensity": "high",
+            "supplyChainComplexity": "medium",
+            "innovationIntensity": "medium"
+          }
+        },
+        {
+          "id": "subind_mining_services_equipment",
+          "name": "Mining Services & Equipment",
+          "slug": "mining-services-equipment",
+          "definition": "Businesses providing specialised services, equipment, and technology to mining operations.",
+          "status": "active",
+          "businessModels": [
+            "Service contracts",
+            "Equipment sales",
+            "Leasing",
+            "Managed services"
+          ],
+          "valueDrivers": [
+            "Utilisation",
+            "Safety",
+            "Contract retention",
+            "Equipment uptime"
+          ],
+          "typicalCapabilities": [
+            "Engineering services",
+            "Equipment maintenance",
+            "Drilling operations",
+            "Project delivery",
+            "Safety systems"
+          ],
+          "customerTypes": [
+            "Mining operator",
+            "Enterprise"
+          ],
+          "tags": [
+            "mining-services",
+            "equipment",
+            "METS"
+          ],
+          "signals": {
+            "digitalIntensity": "medium",
+            "regulatoryIntensity": "high",
+            "operationalComplexity": "high",
+            "assetIntensity": "high",
+            "peopleIntensity": "high",
+            "customerComplexity": "high",
+            "salesComplexity": "high",
+            "serviceIntensity": "high",
+            "supplyChainComplexity": "high",
+            "innovationIntensity": "medium"
+          }
+        },
+        {
+          "id": "subind_quarrying_aggregates",
+          "name": "Quarrying & Aggregates",
+          "slug": "quarrying-aggregates",
+          "definition": "Businesses extracting stone, sand, gravel, and other aggregate materials for construction and industrial use.",
+          "status": "active",
+          "businessModels": [
+            "Product sales",
+            "Long-term supply contracts"
+          ],
+          "valueDrivers": [
+            "Volume",
+            "Cost per tonne",
+            "Permit compliance",
+            "Transport efficiency"
+          ],
+          "typicalCapabilities": [
+            "Quarry operations",
+            "Crushing and screening",
+            "Logistics",
+            "Environmental management",
+            "Compliance"
+          ],
+          "customerTypes": [
+            "Construction",
+            "Government",
+            "Infrastructure"
+          ],
+          "tags": [
+            "quarrying",
+            "aggregates",
+            "construction-materials"
+          ],
+          "signals": {
+            "digitalIntensity": "low",
+            "regulatoryIntensity": "high",
+            "operationalComplexity": "medium",
+            "assetIntensity": "very-high",
+            "peopleIntensity": "medium",
+            "customerComplexity": "low",
+            "salesComplexity": "low",
+            "serviceIntensity": "low",
+            "supplyChainComplexity": "medium",
+            "innovationIntensity": "low"
+          }
         }
       ]
     },
@@ -2067,6 +2848,59 @@
             "serviceIntensity": "very-high",
             "supplyChainComplexity": "very-low",
             "innovationIntensity": "high"
+          }
+        },
+        {
+          "id": "subind_bpo_shared_services",
+          "name": "BPO & Shared Services",
+          "slug": "bpo-shared-services",
+          "definition": "Firms providing outsourced business processes, contact centres, back-office operations, and global business services.",
+          "status": "active",
+          "aliases": [
+            "Business Process Outsourcing",
+            "Shared Services",
+            "GBS"
+          ],
+          "businessModels": [
+            "Volume-based",
+            "Per-transaction",
+            "Managed services",
+            "FTE-based"
+          ],
+          "valueDrivers": [
+            "Cost per transaction",
+            "SLA adherence",
+            "Volume throughput",
+            "Client retention",
+            "Process efficiency"
+          ],
+          "typicalCapabilities": [
+            "Process operations",
+            "Workforce management",
+            "Quality assurance",
+            "Technology enablement",
+            "Transition management"
+          ],
+          "customerTypes": [
+            "Enterprise",
+            "Mid-market"
+          ],
+          "tags": [
+            "outsourcing",
+            "shared-services",
+            "process-driven"
+          ],
+          "signals": {
+            "digitalIntensity": "high",
+            "regulatoryIntensity": "medium",
+            "operationalComplexity": "high",
+            "assetIntensity": "low",
+            "peopleIntensity": "very-high",
+            "customerComplexity": "high",
+            "salesComplexity": "very-high",
+            "serviceIntensity": "very-high",
+            "supplyChainComplexity": "low",
+            "innovationIntensity": "medium"
           }
         }
       ]
@@ -3252,6 +4086,59 @@
             "supplyChainComplexity": "very-low",
             "innovationIntensity": "very-high"
           }
+        },
+        {
+          "id": "subind_it_infrastructure_hardware",
+          "name": "IT Infrastructure & Hardware",
+          "slug": "it-infrastructure-hardware",
+          "definition": "Businesses designing, manufacturing, and selling servers, networking equipment, storage hardware, and related infrastructure components.",
+          "status": "active",
+          "aliases": [
+            "IT Hardware",
+            "Infrastructure Hardware"
+          ],
+          "businessModels": [
+            "Product sales",
+            "Service contracts",
+            "Leasing",
+            "Subscription"
+          ],
+          "valueDrivers": [
+            "Market share",
+            "Margin",
+            "Installed base growth",
+            "Service attach rate"
+          ],
+          "typicalCapabilities": [
+            "Hardware engineering",
+            "Manufacturing",
+            "Supply chain",
+            "Channel management",
+            "Field service"
+          ],
+          "customerTypes": [
+            "Enterprise",
+            "Mid-market",
+            "Public sector",
+            "Distributor"
+          ],
+          "tags": [
+            "hardware",
+            "infrastructure",
+            "servers"
+          ],
+          "signals": {
+            "digitalIntensity": "high",
+            "regulatoryIntensity": "medium",
+            "operationalComplexity": "high",
+            "assetIntensity": "high",
+            "peopleIntensity": "medium",
+            "customerComplexity": "high",
+            "salesComplexity": "very-high",
+            "serviceIntensity": "high",
+            "supplyChainComplexity": "high",
+            "innovationIntensity": "high"
+          }
         }
       ]
     },
@@ -3516,6 +4403,59 @@
             "serviceIntensity": "medium",
             "supplyChainComplexity": "very-low",
             "innovationIntensity": "medium"
+          }
+        },
+        {
+          "id": "subind_gaming_interactive_entertainment",
+          "name": "Gaming & Interactive Entertainment",
+          "slug": "gaming-interactive-entertainment",
+          "definition": "Businesses creating, publishing, and distributing video games, interactive media, and immersive entertainment experiences.",
+          "status": "active",
+          "aliases": [
+            "Video Games",
+            "Gaming",
+            "Interactive Media"
+          ],
+          "businessModels": [
+            "Product sales",
+            "Subscription",
+            "In-app purchases",
+            "Advertising",
+            "Licensing"
+          ],
+          "valueDrivers": [
+            "Player engagement",
+            "Monetisation per user",
+            "Retention",
+            "Title pipeline",
+            "Platform reach"
+          ],
+          "typicalCapabilities": [
+            "Game development",
+            "Live operations",
+            "Community management",
+            "Monetisation",
+            "Platform publishing"
+          ],
+          "customerTypes": [
+            "Consumer"
+          ],
+          "tags": [
+            "gaming",
+            "interactive",
+            "entertainment"
+          ],
+          "signals": {
+            "digitalIntensity": "very-high",
+            "regulatoryIntensity": "medium",
+            "operationalComplexity": "high",
+            "assetIntensity": "medium",
+            "peopleIntensity": "high",
+            "customerComplexity": "low",
+            "salesComplexity": "low",
+            "serviceIntensity": "medium",
+            "supplyChainComplexity": "low",
+            "innovationIntensity": "very-high"
           }
         }
       ]
