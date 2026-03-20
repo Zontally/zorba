@@ -502,7 +502,7 @@ Objects carry `created_at` and `updated_at` timestamps. For full change history,
 
 ---
 
-*Previous: [← Glossary](12-glossary.md)*
+*Previous: [← Glossary](13-glossary.md)*
 
 ---
 

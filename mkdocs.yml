@@ -43,9 +43,10 @@ nav:
       - Information Model: framework/07-information-model.md
       - Industry Editions: framework/08-industry-editions.md
       - Evolution Mapping: framework/09-evolution-mapping.md
-      - Usage Guide: framework/10-usage-guide.md
-      - Contributing: framework/11-contributing.md
-      - Glossary: framework/12-glossary.md
+      - Industry Taxonomy: framework/10-industry-taxonomy.md
+      - Usage Guide: framework/11-usage-guide.md
+      - Contributing: framework/12-contributing.md
+      - Glossary: framework/13-glossary.md
   - Domain Taxonomy: domains/index.md
   - Industry Editions:
       - ZORBA for Enterprise Software: editions/enterprise-software/index.md
