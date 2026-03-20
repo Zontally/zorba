@@ -249,7 +249,7 @@ domain:
           agentic_note: "Humans design interventions; agents execute at scale"
         - id: "837142"
           number: "5.7.4"
-          name: "Analyse churn drivers and root causes"
+          name: "Analyse customer attrition drivers and root causes"
           agentic_profile: "h+A"
           agentic_note: "Agents analyse patterns; humans interpret and act"
         - id: "491837"
