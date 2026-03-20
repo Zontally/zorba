@@ -1,11 +1,12 @@
 site_name: ZORBA
 site_description: The open reference architecture for the agentic enterprise
 site_url: https://zontally.github.io/zorba
-repo_url: https://github.com/Zontally/zorba
-repo_name: Zontally/zorba
+repo_url: https://github.com/zontally/zorba
+repo_name: zontally/zorba
 theme:
   name: material
   logo: assets/logo-light.png
+  favicon: assets/favicon.svg
   favicon: assets/favicon.svg
   font:
     text: Inter

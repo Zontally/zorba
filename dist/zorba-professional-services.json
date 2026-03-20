@@ -2,8 +2,13 @@
   "edition": "professional-services",
   "name": "ZORBA for Professional Services",
   "extends": "core",
+<<<<<<< HEAD
   "version": "0.1.0",
   "compiled_at": "2026-03-20T21:50:03.818Z",
+=======
+  "version": "0.1.1",
+  "compiled_at": "2026-03-19T17:12:05.071Z",
+>>>>>>> main
   "stats": {
     "totalDomains": 12,
     "totalCapabilities": 87,
@@ -546,8 +551,13 @@
         {
           "id": "527163",
           "number": "2.2",
+<<<<<<< HEAD
           "name": "Discover and Validate Offering Opportunities",
           "description": "Systematically identify, explore, and validate new product or service concepts before committing significant development resources. This capability bridges insight and action through structured experimentation.\n",
+=======
+          "name": "Discover and Validate Product Opportunities",
+          "description": "Systematically identify, explore, and validate new product concepts before committing significant development resources. This capability bridges insight and action through structured experimentation.\n",
+>>>>>>> main
           "processes": [
             {
               "id": "493821",
@@ -559,7 +569,11 @@
             {
               "id": "716348",
               "number": "2.2.2",
+<<<<<<< HEAD
               "name": "Generate and explore offering concepts and ideas",
+=======
+              "name": "Generate and explore product concepts and ideas",
+>>>>>>> main
               "agentic_profile": "H=A",
               "agentic_note": "Agents generate concept variations and provocations; humans curate and refine"
             },
@@ -580,7 +594,11 @@
             {
               "id": "254697",
               "number": "2.2.5",
+<<<<<<< HEAD
               "name": "Build and assess business cases for new offerings",
+=======
+              "name": "Build and assess business cases for new products",
+>>>>>>> main
               "agentic_profile": "H=A",
               "agentic_note": "Agents model financials and scenarios; humans judge viability"
             }
@@ -659,7 +677,11 @@
             {
               "id": "831264",
               "number": "2.4.4",
+<<<<<<< HEAD
               "name": "Scale validated innovations into core offerings",
+=======
+              "name": "Scale validated innovations into core products",
+>>>>>>> main
               "agentic_profile": "H+a",
               "agentic_note": "Humans lead scaling decisions; agents coordinate handover logistics"
             },
@@ -683,7 +705,11 @@
           "id": "293814",
           "number": "2.5",
           "name": "Direct Research and Development Activities",
+<<<<<<< HEAD
           "description": "Plan, fund, and execute research and development programmes that generate new knowledge, technologies, and capabilities for future offerings and competitive advantage.\n",
+=======
+          "description": "Plan, fund, and execute research and development programmes that generate new knowledge, technologies, and capabilities for future products and competitive advantage.\n",
+>>>>>>> main
           "processes": [
             {
               "id": "641278",
@@ -711,7 +737,11 @@
               "number": "2.5.4",
               "name": "Manage research outcomes and technology transfer",
               "agentic_profile": "H=A",
+<<<<<<< HEAD
               "agentic_note": "Agents catalogue findings and match to offering needs; humans drive transfer"
+=======
+              "agentic_note": "Agents catalogue findings and match to product needs; humans drive transfer"
+>>>>>>> main
             },
             {
               "id": "718534",
@@ -725,43 +755,70 @@
         {
           "id": "174628",
           "number": "2.6",
+<<<<<<< HEAD
           "name": "Manage the Offering Lifecycle End to End",
           "description": "Govern the full lifecycle of each product or service from launch through growth, maturity, and eventual sunset — ensuring offerings remain viable, profitable, and aligned with market needs throughout their life.\n",
+=======
+          "name": "Manage the Product Lifecycle End to End",
+          "description": "Govern the full lifecycle of each product from launch through growth, maturity, and eventual sunset — ensuring products remain viable, profitable, and aligned with market needs throughout their life.\n",
+>>>>>>> main
           "processes": [
             {
               "id": "493162",
               "number": "2.6.1",
+<<<<<<< HEAD
               "name": "Plan and execute offering launches and market entry",
+=======
+              "name": "Plan and execute product launches and market entry",
+>>>>>>> main
               "agentic_profile": "H+a",
               "agentic_note": "Humans lead launch strategy; agents coordinate checklists and readiness tracking"
             },
             {
               "id": "825347",
               "number": "2.6.2",
+<<<<<<< HEAD
               "name": "Monitor offering performance and market reception",
+=======
+              "name": "Monitor product performance and market reception",
+>>>>>>> main
               "agentic_profile": "A",
               "agentic_note": "Agent-executed; continuous monitoring of adoption, usage, and revenue metrics"
             },
             {
               "id": "567814",
               "number": "2.6.3",
+<<<<<<< HEAD
               "name": "Manage offering iterations, updates, and enhancements",
+=======
+              "name": "Manage product iterations, updates, and enhancements",
+>>>>>>> main
               "agentic_profile": "H=A",
               "agentic_note": "Agents prioritise backlog by data signals; humans approve release scope"
             },
             {
               "id": "314289",
               "number": "2.6.4",
+<<<<<<< HEAD
               "name": "Plan and execute offering retirement and sunsetting",
+=======
+              "name": "Plan and execute product retirement and sunsetting",
+>>>>>>> main
               "agentic_profile": "H+a",
               "agentic_note": "Humans decide retirement timing; agents manage migration and communication plans"
             },
             {
               "id": "682431",
               "number": "2.6.5",
+<<<<<<< HEAD
               "name": "Manage regulatory and compliance aspects of the offering lifecycle",
               "agentic_profile": "H=A",
               "agentic_note": "Agents track regulatory changes affecting offerings; humans ensure compliance"
+=======
+              "name": "Manage regulatory and compliance aspects of the product lifecycle",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents track regulatory changes affecting products; humans ensure compliance"
+>>>>>>> main
             }
           ]
         },
@@ -774,9 +831,15 @@
             {
               "id": "419237",
               "number": "2.7.1",
+<<<<<<< HEAD
               "name": "Identify and assess intellectual property arising from offerings",
               "agentic_profile": "H=A",
               "agentic_note": "Agents scan outputs for protectable elements; humans evaluate"
+=======
+              "name": "Identify and assess intellectual property arising from products",
+              "agentic_profile": "H=A",
+              "agentic_note": "Agents scan codebases and designs for patentable elements; humans evaluate"
+>>>>>>> main
             },
             {
               "id": "783164",
@@ -811,20 +874,33 @@
         {
           "id": "927341",
           "number": "2.8",
+<<<<<<< HEAD
           "name": "Generate Offering Insights and Analytics",
           "description": "Establish and operate the data, analytics, and insight capabilities that inform offering decisions — from usage analytics and experimentation through to predictive modelling and competitive intelligence.\n",
+=======
+          "name": "Generate Product Insights and Analytics",
+          "description": "Establish and operate the data, analytics, and insight capabilities that inform product decisions — from usage analytics and A/B testing through to predictive modelling and competitive intelligence.\n",
+>>>>>>> main
           "processes": [
             {
               "id": "364218",
               "number": "2.8.1",
+<<<<<<< HEAD
               "name": "Define offering metrics, KPIs, and measurement frameworks",
+=======
+              "name": "Define product metrics, KPIs, and measurement frameworks",
+>>>>>>> main
               "agentic_profile": "H+a",
               "agentic_note": "Humans define what to measure; agents recommend based on benchmarks"
             },
             {
               "id": "581749",
               "number": "2.8.2",
+<<<<<<< HEAD
               "name": "Collect and integrate offering usage and behavioural data",
+=======
+              "name": "Collect and integrate product usage and behavioural data",
+>>>>>>> main
               "agentic_profile": "A",
               "agentic_note": "Agent-executed; automated data pipeline management"
             },
@@ -838,23 +914,37 @@
             {
               "id": "413892",
               "number": "2.8.4",
+<<<<<<< HEAD
               "name": "Generate predictive models for offering performance",
+=======
+              "name": "Generate predictive models for product performance",
+>>>>>>> main
               "agentic_profile": "h+A",
               "agentic_note": "Agents build and maintain models; humans interpret and act on predictions"
             },
             {
               "id": "846527",
               "number": "2.8.5",
+<<<<<<< HEAD
               "name": "Deliver offering insight reports and recommendations",
+=======
+              "name": "Deliver product insight reports and recommendations",
+>>>>>>> main
               "agentic_profile": "h+A",
               "agentic_note": "Agents generate narrative reports; humans validate and distribute"
             },
             {
               "id": "152843",
               "number": "2.8.6",
+<<<<<<< HEAD
               "name": "Monitor competitive landscape and offering parity",
               "agentic_profile": "h+A",
               "agentic_note": "Agents track competitor releases and offerings; humans assess strategic implications"
+=======
+              "name": "Monitor competitive product landscape and feature parity",
+              "agentic_profile": "h+A",
+              "agentic_note": "Agents track competitor releases and features; humans assess strategic implications"
+>>>>>>> main
             }
           ]
         }
@@ -1841,7 +1931,11 @@
             {
               "id": "837142",
               "number": "5.7.4",
+<<<<<<< HEAD
               "name": "Analyse customer attrition drivers and root causes",
+=======
+              "name": "Analyse churn drivers and root causes",
+>>>>>>> main
               "agentic_profile": "h+A",
               "agentic_note": "Agents analyse patterns; humans interpret and act"
             },
