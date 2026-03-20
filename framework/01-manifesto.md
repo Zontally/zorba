@@ -1,10 +1,5 @@
 # The ZORBA Manifesto
 
-**Zontally Reference Business Architecture**
-**Version:** v0.1 (Draft)
-
----
-
 ## The Enterprise Has a New Workforce. It Doesn't Have a New Architecture.
 
 Something fundamental has changed in how organisations operate, and the frameworks we rely on haven't caught up.

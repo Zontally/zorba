@@ -1,10 +1,5 @@
 # Agentic Enterprise Patterns
 
-**Zontally Reference Business Architecture**
-**Version:** v0.1 (Draft)
-
----
-
 ## Overview
 
 Agentic Enterprise Patterns are **reusable architectural blueprints** for how AI agents participate in enterprise operations. Each pattern describes a proven way to integrate agents into a specific type of enterprise work, with defined human touchpoints, autonomy levels, and governance requirements.

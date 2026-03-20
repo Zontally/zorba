@@ -1,10 +1,5 @@
 # Industry Taxonomy
 
-**Zontally Reference Business Architecture**
-**Version:** v0.1 (Draft)
-
----
-
 ## Overview
 
 ZORBA's **Industry Taxonomy** provides a structured, machine-readable classification of industries, sub-industries, business models, value drivers, and operational signals. It serves as the foundational reference data that powers industry-aware features across the Zontally platform — from [Industry Editions](08-industry-editions.md) and benchmarking to AI-guided strategy-to-execution workflows.

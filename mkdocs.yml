@@ -47,6 +47,7 @@ nav:
       - Usage Guide: framework/11-usage-guide.md
       - Contributing: framework/12-contributing.md
       - Glossary: framework/13-glossary.md
+  - Industry taxonomy: industry-taxonomy/index.md
   - Domain Taxonomy: domains/index.md
   - Industry Editions:
       - ZORBA for Enterprise Software: editions/enterprise-software/index.md
