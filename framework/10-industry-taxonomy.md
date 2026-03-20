@@ -28,7 +28,7 @@ Each level carries a consistent set of attributes that describe the operational 
 
 ### Industries
 
-Industries represent broad sectors of economic activity. ZORBA defines **12 industries** covering the full spectrum of enterprise types:
+Industries represent broad sectors of economic activity. ZORBA defines **13 industries** covering the full spectrum of enterprise types:
 
 | # | Industry | Slug |
 |---|----------|------|
@@ -44,6 +44,7 @@ Industries represent broad sectors of economic activity. ZORBA defines **12 indu
 | 10 | Education & Non-Profit | `education-nonprofit` |
 | 11 | Real Estate & Construction | `real-estate-construction` |
 | 12 | Hospitality, Travel & Leisure | `hospitality-travel-leisure` |
+| 13 | Professional Services | `professional-services` |
 
 Each industry includes:
 
@@ -59,7 +60,7 @@ Each industry includes:
 
 Sub-industries represent distinct segments within a broader industry. For example, *Technology & Software* contains 8 sub-industries including Enterprise Software, Vertical SaaS, Cloud Infrastructure, and Cybersecurity.
 
-ZORBA currently defines **64 sub-industries** across the 12 industries.
+ZORBA currently defines **71 sub-industries** across the 13 industries.
 
 Sub-industries carry a similar attribute set to industries, but more specific:
 
@@ -252,7 +253,7 @@ Industries and sub-industries support a `status` field:
 
 ## Current Coverage
 
-The v1.0 taxonomy covers **12 industries** and **64 sub-industries**, spanning:
+The v1.0 taxonomy covers **13 industries** and **71 sub-industries**, spanning:
 
 - Digital-native sectors (Technology, Fintech, Digital Health)
 - Heavily regulated sectors (Financial Services, Healthcare, Energy, Public Sector)
@@ -262,5 +263,3 @@ The v1.0 taxonomy covers **12 industries** and **64 sub-industries**, spanning:
 
 This provides sufficient coverage for the majority of enterprise segmentation use cases. The taxonomy is designed to grow incrementally — new sub-industries can be added without disrupting existing ones.
 
-!!! note "Professional Services"
-    Professional Services is not currently a top-level industry in the taxonomy but exists as an [Industry Edition](08-industry-editions.md). A future iteration may add it as a sub-industry under a broader "Business Services" industry, or as a standalone industry. See the [contributing guide](12-contributing.md) for how to propose additions.
