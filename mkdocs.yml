@@ -7,7 +7,6 @@ theme:
   name: material
   logo: assets/logo-light.png
   favicon: assets/favicon.svg
-  favicon: assets/favicon.svg
   font:
     text: Inter
     code: JetBrains Mono
