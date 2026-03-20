@@ -1,0 +1,132 @@
+industry:
+  id: "ind_retail_consumer_goods"
+  name: "Retail & Consumer Goods"
+  slug: "retail-consumer-goods"
+  definition: "Businesses that design, market, distribute, and sell goods directly or indirectly to consumers."
+  status: "active"
+  commonBusinessModels: ["Product sales", "Marketplace fees", "Subscription", "Wholesale"]
+  commonValueDrivers: ["Revenue growth", "Margin", "Basket size", "Inventory turns", "Brand loyalty"]
+  commonCapabilities: ["Merchandising", "Supply chain", "Customer service", "Marketing", "Store operations"]
+  tags: ["consumer", "commerce", "brand"]
+  signals:
+    digitalIntensity: "medium"
+    regulatoryIntensity: "medium"
+    operationalComplexity: "high"
+    assetIntensity: "medium"
+    peopleIntensity: "high"
+    customerComplexity: "high"
+    salesComplexity: "medium"
+    serviceIntensity: "high"
+    supplyChainComplexity: "high"
+    innovationIntensity: "medium"
+
+  subIndustries:
+    - id: "subind_ecommerce_marketplaces"
+      name: "E-commerce & Marketplaces"
+      slug: "ecommerce-marketplaces"
+      definition: "Digital commerce businesses selling products online directly or through multi-sided platforms."
+      status: "active"
+      businessModels: ["Product sales", "Marketplace fees", "Advertising"]
+      valueDrivers: ["Conversion", "Average order value", "Fulfilment efficiency"]
+      typicalCapabilities: ["Digital merchandising", "Fulfilment", "Customer support", "Growth marketing"]
+      customerTypes: ["Consumer", "SMB"]
+      tags: ["online-retail", "marketplace"]
+      signals:
+        digitalIntensity: "very-high"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "high"
+        assetIntensity: "low"
+        peopleIntensity: "medium"
+        customerComplexity: "medium"
+        salesComplexity: "low"
+        serviceIntensity: "high"
+        supplyChainComplexity: "high"
+        innovationIntensity: "high"
+
+    - id: "subind_brick_mortar_retail"
+      name: "Brick-and-Mortar Retail"
+      slug: "brick-and-mortar-retail"
+      definition: "Retailers serving customers through physical stores and in-person shopping experiences."
+      status: "active"
+      businessModels: ["Product sales"]
+      valueDrivers: ["Footfall", "Conversion", "Store productivity"]
+      typicalCapabilities: ["Store operations", "Inventory", "Customer service"]
+      customerTypes: ["Consumer"]
+      tags: ["stores", "physical-retail"]
+      signals:
+        digitalIntensity: "low"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "high"
+        assetIntensity: "high"
+        peopleIntensity: "very-high"
+        customerComplexity: "medium"
+        salesComplexity: "low"
+        serviceIntensity: "high"
+        supplyChainComplexity: "high"
+        innovationIntensity: "low"
+
+    - id: "subind_consumer_packaged_goods"
+      name: "Consumer Packaged Goods"
+      slug: "consumer-packaged-goods"
+      definition: "Brands and manufacturers producing packaged goods for sale through retail and distribution channels."
+      status: "active"
+      businessModels: ["Wholesale", "Product sales"]
+      valueDrivers: ["Market share", "Shelf availability", "Brand strength"]
+      typicalCapabilities: ["Brand management", "Trade marketing", "Supply chain", "Forecasting"]
+      customerTypes: ["Retailer", "Distributor", "Consumer"]
+      tags: ["cpg", "fmcg"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "high"
+        assetIntensity: "high"
+        peopleIntensity: "medium"
+        customerComplexity: "medium"
+        salesComplexity: "high"
+        serviceIntensity: "low"
+        supplyChainComplexity: "very-high"
+        innovationIntensity: "medium"
+
+    - id: "subind_luxury_fashion"
+      name: "Luxury & Fashion"
+      slug: "luxury-fashion"
+      definition: "Brands and retailers selling premium fashion, accessories, and lifestyle goods."
+      status: "active"
+      businessModels: ["Product sales", "Wholesale", "Direct-to-consumer"]
+      valueDrivers: ["Brand equity", "Full-price sell-through", "Customer loyalty"]
+      typicalCapabilities: ["Merchandising", "Brand marketing", "Retail operations", "Supply planning"]
+      customerTypes: ["Consumer"]
+      tags: ["fashion", "luxury"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "low"
+        operationalComplexity: "medium"
+        assetIntensity: "medium"
+        peopleIntensity: "high"
+        customerComplexity: "medium"
+        salesComplexity: "low"
+        serviceIntensity: "medium"
+        supplyChainComplexity: "high"
+        innovationIntensity: "medium"
+
+    - id: "subind_direct_to_consumer_brands"
+      name: "Direct-to-Consumer Brands"
+      slug: "direct-to-consumer-brands"
+      definition: "Consumer brands selling directly to end buyers through owned digital and physical channels."
+      status: "active"
+      businessModels: ["Product sales", "Subscription"]
+      valueDrivers: ["CAC efficiency", "Repeat purchase", "Gross margin"]
+      typicalCapabilities: ["Growth marketing", "E-commerce", "Customer support", "Fulfilment"]
+      customerTypes: ["Consumer"]
+      tags: ["d2c", "brand"]
+      signals:
+        digitalIntensity: "high"
+        regulatoryIntensity: "low"
+        operationalComplexity: "medium"
+        assetIntensity: "medium"
+        peopleIntensity: "medium"
+        customerComplexity: "low"
+        salesComplexity: "low"
+        serviceIntensity: "medium"
+        supplyChainComplexity: "high"
+        innovationIntensity: "medium"

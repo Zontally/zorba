@@ -1,0 +1,154 @@
+industry:
+  id: "ind_healthcare_life_sciences"
+  name: "Healthcare & Life Sciences"
+  slug: "healthcare-life-sciences"
+  definition: "Organisations focused on health delivery, research, therapeutics, diagnostics, and medical innovation."
+  status: "active"
+  commonBusinessModels: ["Reimbursement", "Product sales", "Service fees", "Subscription"]
+  commonValueDrivers: ["Patient outcomes", "Compliance", "Throughput", "Innovation", "Access"]
+  commonCapabilities: ["Clinical operations", "Research", "Regulatory", "Supply chain"]
+  tags: ["health", "regulated", "science"]
+  signals:
+    digitalIntensity: "medium"
+    regulatoryIntensity: "very-high"
+    operationalComplexity: "very-high"
+    assetIntensity: "high"
+    peopleIntensity: "very-high"
+    customerComplexity: "high"
+    salesComplexity: "high"
+    serviceIntensity: "very-high"
+    supplyChainComplexity: "high"
+    innovationIntensity: "high"
+
+  subIndustries:
+    - id: "subind_hospitals_care_providers"
+      name: "Hospitals & Care Providers"
+      slug: "hospitals-care-providers"
+      definition: "Care delivery organisations providing treatment, diagnostics, and patient services."
+      status: "active"
+      businessModels: ["Reimbursement", "Service fees"]
+      valueDrivers: ["Patient throughput", "Care quality", "Staff efficiency"]
+      typicalCapabilities: ["Patient access", "Care coordination", "Clinical operations"]
+      customerTypes: ["Consumer", "Public sector"]
+      tags: ["providers", "clinical"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "very-high"
+        assetIntensity: "high"
+        peopleIntensity: "very-high"
+        customerComplexity: "high"
+        salesComplexity: "low"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "high"
+        innovationIntensity: "medium"
+
+    - id: "subind_pharmaceuticals"
+      name: "Pharmaceuticals"
+      slug: "pharmaceuticals"
+      definition: "Companies researching, manufacturing, and commercialising therapeutic drugs."
+      status: "active"
+      businessModels: ["Product sales", "Licensing"]
+      valueDrivers: ["Pipeline yield", "Time to approval", "Commercial adoption"]
+      typicalCapabilities: ["R&D", "Regulatory", "Manufacturing", "Commercialisation"]
+      customerTypes: ["Healthcare provider", "Government", "Distributor"]
+      tags: ["drugs", "therapeutics"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "very-high"
+        assetIntensity: "high"
+        peopleIntensity: "high"
+        customerComplexity: "high"
+        salesComplexity: "very-high"
+        serviceIntensity: "medium"
+        supplyChainComplexity: "high"
+        innovationIntensity: "very-high"
+
+    - id: "subind_biotechnology"
+      name: "Biotechnology"
+      slug: "biotechnology"
+      definition: "Science-led organisations using biological systems to develop treatments, diagnostics, or enabling technologies."
+      status: "active"
+      businessModels: ["Licensing", "Research partnerships", "Product sales"]
+      valueDrivers: ["Scientific progress", "Funding efficiency", "Clinical milestones"]
+      typicalCapabilities: ["Research", "Trials", "Regulatory"]
+      customerTypes: ["Healthcare provider", "Pharma", "Research institution"]
+      tags: ["biotech", "research"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "high"
+        assetIntensity: "high"
+        peopleIntensity: "high"
+        customerComplexity: "medium"
+        salesComplexity: "high"
+        serviceIntensity: "low"
+        supplyChainComplexity: "medium"
+        innovationIntensity: "very-high"
+
+    - id: "subind_medical_devices"
+      name: "Medical Devices"
+      slug: "medical-devices"
+      definition: "Manufacturers and innovators of medical equipment, diagnostics, and treatment devices."
+      status: "active"
+      businessModels: ["Product sales", "Service contracts"]
+      valueDrivers: ["Clinical adoption", "Reliability", "Regulatory compliance"]
+      typicalCapabilities: ["Engineering", "Manufacturing", "Quality systems"]
+      customerTypes: ["Healthcare provider", "Distributor"]
+      tags: ["devices", "medtech"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "high"
+        assetIntensity: "high"
+        peopleIntensity: "medium"
+        customerComplexity: "high"
+        salesComplexity: "high"
+        serviceIntensity: "medium"
+        supplyChainComplexity: "high"
+        innovationIntensity: "high"
+
+    - id: "subind_digital_health_telemedicine"
+      name: "Digital Health & Telemedicine"
+      slug: "digital-health-telemedicine"
+      definition: "Technology-enabled healthcare services and platforms supporting remote care, monitoring, and digital workflows."
+      status: "active"
+      businessModels: ["Subscription", "Service fees", "Reimbursement"]
+      valueDrivers: ["Access", "Engagement", "Care efficiency"]
+      typicalCapabilities: ["Product", "Clinical workflows", "Patient support", "Compliance"]
+      customerTypes: ["Consumer", "Healthcare provider", "Employer"]
+      tags: ["digital-health", "telemedicine"]
+      signals:
+        digitalIntensity: "very-high"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "high"
+        assetIntensity: "low"
+        peopleIntensity: "high"
+        customerComplexity: "high"
+        salesComplexity: "high"
+        serviceIntensity: "high"
+        supplyChainComplexity: "low"
+        innovationIntensity: "high"
+
+    - id: "subind_health_insurance_payers"
+      name: "Health Insurance / Payers"
+      slug: "health-insurance-payers"
+      definition: "Organisations financing healthcare access through insurance products, networks, and claims administration."
+      status: "active"
+      businessModels: ["Premiums", "Government reimbursement", "Administrative fees"]
+      valueDrivers: ["Medical loss ratio", "Member retention", "Claims efficiency"]
+      typicalCapabilities: ["Claims", "Network management", "Member service", "Risk management"]
+      customerTypes: ["Consumer", "Employer", "Government"]
+      tags: ["payers", "insurance"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "very-high"
+        assetIntensity: "low"
+        peopleIntensity: "high"
+        customerComplexity: "high"
+        salesComplexity: "medium"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "medium"

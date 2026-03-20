@@ -1,0 +1,200 @@
+industry:
+  id: "ind_technology_software"
+  name: "Technology & Software"
+  slug: "technology-software"
+  definition: "Organisations that create, deliver, or enable digital products, platforms, and infrastructure."
+  status: "active"
+  aliases: ["Technology", "Software", "Tech"]
+  commonBusinessModels: ["SaaS", "Subscription", "Usage-based", "Platform", "Licensing"]
+  commonValueDrivers: ["Growth", "Retention", "Productivity", "Platform adoption", "Innovation speed"]
+  commonCapabilities: ["Product management", "Engineering", "Customer support", "Revenue operations", "Security"]
+  tags: ["digital", "cloud", "platform"]
+  signals:
+    digitalIntensity: "very-high"
+    regulatoryIntensity: "medium"
+    operationalComplexity: "high"
+    assetIntensity: "low"
+    peopleIntensity: "high"
+    customerComplexity: "high"
+    salesComplexity: "high"
+    serviceIntensity: "high"
+    supplyChainComplexity: "low"
+    innovationIntensity: "very-high"
+
+  subIndustries:
+    - id: "subind_enterprise_software"
+      name: "Enterprise Software"
+      slug: "enterprise-software"
+      definition: "Software companies serving business customers with applications, workflows, and operational platforms."
+      status: "active"
+      aliases: ["B2B Software"]
+      businessModels: ["SaaS", "Subscription", "Licensing"]
+      valueDrivers: ["ARR growth", "Net retention", "Adoption", "Time to value"]
+      typicalCapabilities: ["Sales", "Customer success", "Support", "Product", "Engineering"]
+      customerTypes: ["SMB", "Mid-market", "Enterprise"]
+      tags: ["b2b", "applications"]
+      signals:
+        digitalIntensity: "very-high"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "high"
+        assetIntensity: "low"
+        peopleIntensity: "high"
+        customerComplexity: "high"
+        salesComplexity: "very-high"
+        serviceIntensity: "high"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "very-high"
+
+    - id: "subind_vertical_saas"
+      name: "Vertical SaaS"
+      slug: "vertical-saas"
+      definition: "Software businesses focused on a specific industry or niche operating model."
+      status: "active"
+      businessModels: ["SaaS", "Subscription"]
+      valueDrivers: ["Industry fit", "Expansion", "Retention"]
+      typicalCapabilities: ["Domain product strategy", "Customer success", "Implementation"]
+      customerTypes: ["Mid-market", "Enterprise"]
+      tags: ["specialised", "industry-specific"]
+      signals:
+        digitalIntensity: "very-high"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "medium"
+        assetIntensity: "low"
+        peopleIntensity: "high"
+        customerComplexity: "high"
+        salesComplexity: "high"
+        serviceIntensity: "high"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "high"
+
+    - id: "subind_cloud_infrastructure"
+      name: "Cloud Infrastructure"
+      slug: "cloud-infrastructure"
+      definition: "Providers of infrastructure, platforms, hosting, and cloud-native runtime services."
+      status: "active"
+      businessModels: ["Usage-based", "Consumption", "Subscription"]
+      valueDrivers: ["Utilisation", "Scalability", "Reliability"]
+      typicalCapabilities: ["Infrastructure operations", "Security", "Developer platform"]
+      customerTypes: ["Startup", "SMB", "Enterprise"]
+      tags: ["cloud", "infra"]
+      signals:
+        digitalIntensity: "very-high"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "very-high"
+        assetIntensity: "medium"
+        peopleIntensity: "medium"
+        customerComplexity: "high"
+        salesComplexity: "high"
+        serviceIntensity: "high"
+        supplyChainComplexity: "low"
+        innovationIntensity: "very-high"
+
+    - id: "subind_cybersecurity"
+      name: "Cybersecurity"
+      slug: "cybersecurity"
+      definition: "Organisations delivering security software, services, or managed protection capabilities."
+      status: "active"
+      businessModels: ["SaaS", "Managed services", "Subscription"]
+      valueDrivers: ["Risk reduction", "Compliance", "Threat response speed"]
+      typicalCapabilities: ["Threat detection", "Security operations", "Compliance"]
+      customerTypes: ["Mid-market", "Enterprise", "Public sector"]
+      tags: ["security", "risk"]
+      signals:
+        digitalIntensity: "very-high"
+        regulatoryIntensity: "high"
+        operationalComplexity: "high"
+        assetIntensity: "low"
+        peopleIntensity: "high"
+        customerComplexity: "high"
+        salesComplexity: "high"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "very-high"
+
+    - id: "subind_data_analytics"
+      name: "Data & Analytics Platforms"
+      slug: "data-analytics-platforms"
+      definition: "Platforms that help organisations collect, process, analyse, and operationalise data."
+      status: "active"
+      businessModels: ["Subscription", "Usage-based", "Platform"]
+      valueDrivers: ["Insight generation", "Decision speed", "Automation"]
+      typicalCapabilities: ["Data engineering", "Analytics", "Governance"]
+      customerTypes: ["Mid-market", "Enterprise"]
+      tags: ["data", "analytics"]
+      signals:
+        digitalIntensity: "very-high"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "high"
+        assetIntensity: "low"
+        peopleIntensity: "high"
+        customerComplexity: "high"
+        salesComplexity: "high"
+        serviceIntensity: "medium"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "high"
+
+    - id: "subind_ai_ml_platforms"
+      name: "AI & Machine Learning Platforms"
+      slug: "ai-ml-platforms"
+      definition: "Platforms and products enabling AI model development, deployment, orchestration, and business automation."
+      status: "active"
+      businessModels: ["Usage-based", "Subscription", "Platform"]
+      valueDrivers: ["Automation", "Prediction accuracy", "Labour leverage"]
+      typicalCapabilities: ["Model operations", "Workflow orchestration", "Knowledge systems"]
+      customerTypes: ["Startup", "Mid-market", "Enterprise"]
+      tags: ["ai", "agentic", "automation"]
+      signals:
+        digitalIntensity: "very-high"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "high"
+        assetIntensity: "low"
+        peopleIntensity: "high"
+        customerComplexity: "high"
+        salesComplexity: "high"
+        serviceIntensity: "medium"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "very-high"
+
+    - id: "subind_developer_tools_devops"
+      name: "Developer Tools & DevOps"
+      slug: "developer-tools-devops"
+      definition: "Tools and platforms used by software teams to build, test, deploy, and operate software."
+      status: "active"
+      businessModels: ["Subscription", "Usage-based", "Open-core"]
+      valueDrivers: ["Developer productivity", "Release speed", "Reliability"]
+      typicalCapabilities: ["Developer relations", "Product engineering", "Platform operations"]
+      customerTypes: ["Startup", "SMB", "Enterprise"]
+      tags: ["devtools", "engineering"]
+      signals:
+        digitalIntensity: "very-high"
+        regulatoryIntensity: "low"
+        operationalComplexity: "high"
+        assetIntensity: "low"
+        peopleIntensity: "medium"
+        customerComplexity: "medium"
+        salesComplexity: "medium"
+        serviceIntensity: "medium"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "very-high"
+
+    - id: "subind_consumer_apps_platforms"
+      name: "Consumer Apps & Platforms"
+      slug: "consumer-apps-platforms"
+      definition: "Digital products and platforms serving consumers at scale through apps, subscriptions, or marketplaces."
+      status: "active"
+      businessModels: ["Advertising", "Subscription", "Transaction fees", "Freemium"]
+      valueDrivers: ["User growth", "Engagement", "Retention", "Monetisation"]
+      typicalCapabilities: ["Growth marketing", "Product", "Trust & safety", "Customer support"]
+      customerTypes: ["Consumer"]
+      tags: ["consumer-tech", "apps"]
+      signals:
+        digitalIntensity: "very-high"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "high"
+        assetIntensity: "low"
+        peopleIntensity: "medium"
+        customerComplexity: "medium"
+        salesComplexity: "low"
+        serviceIntensity: "medium"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "very-high"

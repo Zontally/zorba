@@ -1,0 +1,132 @@
+industry:
+  id: "ind_public_sector_government"
+  name: "Public Sector & Government"
+  slug: "public-sector-government"
+  definition: "Government bodies and public institutions delivering public services, regulation, and civic infrastructure."
+  status: "active"
+  commonBusinessModels: ["Public funding", "Taxation", "Grants", "Service fees"]
+  commonValueDrivers: ["Public outcomes", "Efficiency", "Compliance", "Resilience", "Citizen trust"]
+  commonCapabilities: ["Service delivery", "Policy implementation", "Case management", "Field operations"]
+  tags: ["government", "public-services", "civic"]
+  signals:
+    digitalIntensity: "medium"
+    regulatoryIntensity: "very-high"
+    operationalComplexity: "very-high"
+    assetIntensity: "medium"
+    peopleIntensity: "very-high"
+    customerComplexity: "high"
+    salesComplexity: "low"
+    serviceIntensity: "very-high"
+    supplyChainComplexity: "medium"
+    innovationIntensity: "low"
+
+  subIndustries:
+    - id: "subind_central_government"
+      name: "Central Government"
+      slug: "central-government"
+      definition: "National-level government departments and agencies delivering policy, regulation, and public administration."
+      status: "active"
+      businessModels: ["Public funding"]
+      valueDrivers: ["Policy outcomes", "Efficiency", "Compliance", "Citizen trust"]
+      typicalCapabilities: ["Policy operations", "Case management", "Shared services", "Digital services"]
+      customerTypes: ["Citizen", "Business", "Government"]
+      tags: ["national-government", "administration"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "very-high"
+        assetIntensity: "medium"
+        peopleIntensity: "very-high"
+        customerComplexity: "high"
+        salesComplexity: "very-low"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "medium"
+        innovationIntensity: "low"
+
+    - id: "subind_local_government_municipalities"
+      name: "Local Government & Municipalities"
+      slug: "local-government-municipalities"
+      definition: "Regional and local authorities delivering community services, permitting, and infrastructure operations."
+      status: "active"
+      businessModels: ["Public funding", "Local taxes", "Service fees"]
+      valueDrivers: ["Service responsiveness", "Budget efficiency", "Citizen satisfaction"]
+      typicalCapabilities: ["Permitting", "Field operations", "Case management", "Constituent services"]
+      customerTypes: ["Citizen", "Business", "Community"]
+      tags: ["local-government", "municipal"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "high"
+        assetIntensity: "medium"
+        peopleIntensity: "high"
+        customerComplexity: "medium"
+        salesComplexity: "very-low"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "medium"
+        innovationIntensity: "low"
+
+    - id: "subind_defense_security"
+      name: "Defense & Security"
+      slug: "defense-security"
+      definition: "Public organisations responsible for national defense, intelligence, and security operations."
+      status: "active"
+      businessModels: ["Public funding"]
+      valueDrivers: ["Readiness", "Mission effectiveness", "Security", "Compliance"]
+      typicalCapabilities: ["Operations", "Logistics", "Security management", "Program delivery"]
+      customerTypes: ["Government"]
+      tags: ["defense", "security"]
+      signals:
+        digitalIntensity: "high"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "very-high"
+        assetIntensity: "very-high"
+        peopleIntensity: "high"
+        customerComplexity: "low"
+        salesComplexity: "very-low"
+        serviceIntensity: "medium"
+        supplyChainComplexity: "high"
+        innovationIntensity: "medium"
+
+    - id: "subind_public_health_education"
+      name: "Public Health & Education"
+      slug: "public-health-education"
+      definition: "Publicly funded institutions delivering health, education, and community development services."
+      status: "active"
+      businessModels: ["Public funding", "Grants"]
+      valueDrivers: ["Service access", "Outcomes", "Operational efficiency"]
+      typicalCapabilities: ["Service delivery", "Case management", "Scheduling", "Community engagement"]
+      customerTypes: ["Citizen", "Student", "Patient"]
+      tags: ["public-health", "education"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "high"
+        operationalComplexity: "high"
+        assetIntensity: "medium"
+        peopleIntensity: "very-high"
+        customerComplexity: "medium"
+        salesComplexity: "very-low"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "low"
+        innovationIntensity: "low"
+
+    - id: "subind_smart_cities_infrastructure"
+      name: "Smart Cities & Infrastructure"
+      slug: "smart-cities-infrastructure"
+      definition: "Public programmes and entities managing digital infrastructure, transport, utilities, and connected civic systems."
+      status: "active"
+      businessModels: ["Public funding", "Public-private partnership"]
+      valueDrivers: ["Resilience", "Efficiency", "Citizen experience", "Sustainability"]
+      typicalCapabilities: ["Infrastructure management", "Data operations", "Field services", "Program management"]
+      customerTypes: ["Citizen", "Government", "Business"]
+      tags: ["smart-city", "infrastructure"]
+      signals:
+        digitalIntensity: "high"
+        regulatoryIntensity: "high"
+        operationalComplexity: "very-high"
+        assetIntensity: "high"
+        peopleIntensity: "medium"
+        customerComplexity: "medium"
+        salesComplexity: "very-low"
+        serviceIntensity: "high"
+        supplyChainComplexity: "medium"
+        innovationIntensity: "medium"

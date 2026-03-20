@@ -1,0 +1,132 @@
+industry:
+  id: "ind_real_estate_construction"
+  name: "Real Estate & Construction"
+  slug: "real-estate-construction"
+  definition: "Businesses that develop, manage, finance, transact, or build physical property and infrastructure."
+  status: "active"
+  commonBusinessModels: ["Asset ownership", "Leasing", "Project delivery", "Management fees", "Brokerage fees"]
+  commonValueDrivers: ["Occupancy", "Asset yield", "Project margin", "Time to completion"]
+  commonCapabilities: ["Project management", "Property operations", "Leasing", "Field service", "Maintenance"]
+  tags: ["property", "construction", "built-environment"]
+  signals:
+    digitalIntensity: "low"
+    regulatoryIntensity: "high"
+    operationalComplexity: "high"
+    assetIntensity: "very-high"
+    peopleIntensity: "high"
+    customerComplexity: "medium"
+    salesComplexity: "high"
+    serviceIntensity: "medium"
+    supplyChainComplexity: "high"
+    innovationIntensity: "low"
+
+  subIndustries:
+    - id: "subind_commercial_real_estate"
+      name: "Commercial Real Estate"
+      slug: "commercial-real-estate"
+      definition: "Businesses owning, leasing, or managing office, retail, industrial, or mixed-use commercial property."
+      status: "active"
+      businessModels: ["Leasing", "Asset ownership", "Management fees"]
+      valueDrivers: ["Occupancy", "Net operating income", "Tenant retention"]
+      typicalCapabilities: ["Leasing", "Property management", "Facilities", "Capital planning"]
+      customerTypes: ["Enterprise", "Retailer", "Tenant"]
+      tags: ["cre", "commercial-property"]
+      signals:
+        digitalIntensity: "low"
+        regulatoryIntensity: "high"
+        operationalComplexity: "medium"
+        assetIntensity: "very-high"
+        peopleIntensity: "medium"
+        customerComplexity: "medium"
+        salesComplexity: "high"
+        serviceIntensity: "medium"
+        supplyChainComplexity: "low"
+        innovationIntensity: "low"
+
+    - id: "subind_residential_real_estate"
+      name: "Residential Real Estate"
+      slug: "residential-real-estate"
+      definition: "Businesses managing, developing, or transacting residential property and housing portfolios."
+      status: "active"
+      businessModels: ["Sales", "Leasing", "Management fees"]
+      valueDrivers: ["Occupancy", "Yield", "Sales velocity", "Resident satisfaction"]
+      typicalCapabilities: ["Sales", "Leasing", "Property operations", "Maintenance"]
+      customerTypes: ["Consumer", "Investor", "Resident"]
+      tags: ["housing", "residential"]
+      signals:
+        digitalIntensity: "low"
+        regulatoryIntensity: "high"
+        operationalComplexity: "medium"
+        assetIntensity: "very-high"
+        peopleIntensity: "medium"
+        customerComplexity: "low"
+        salesComplexity: "medium"
+        serviceIntensity: "high"
+        supplyChainComplexity: "low"
+        innovationIntensity: "low"
+
+    - id: "subind_property_management"
+      name: "Property Management"
+      slug: "property-management"
+      definition: "Operators managing buildings, tenant services, maintenance, and facilities on behalf of owners or residents."
+      status: "active"
+      businessModels: ["Management fees", "Service contracts"]
+      valueDrivers: ["Tenant satisfaction", "Cost efficiency", "Occupancy", "Response time"]
+      typicalCapabilities: ["Facilities management", "Maintenance", "Tenant services", "Billing"]
+      customerTypes: ["Owner", "Tenant", "Resident"]
+      tags: ["facilities", "property-ops"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "medium"
+        assetIntensity: "medium"
+        peopleIntensity: "high"
+        customerComplexity: "low"
+        salesComplexity: "low"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "medium"
+        innovationIntensity: "low"
+
+    - id: "subind_construction_engineering"
+      name: "Construction & Engineering"
+      slug: "construction-engineering"
+      definition: "Businesses delivering construction, infrastructure, and engineering projects for public and private clients."
+      status: "active"
+      businessModels: ["Project delivery", "Contracts", "Services"]
+      valueDrivers: ["Project margin", "Schedule adherence", "Safety", "Change-order control"]
+      typicalCapabilities: ["Project management", "Site operations", "Procurement", "Engineering"]
+      customerTypes: ["Government", "Enterprise", "Developer"]
+      tags: ["construction", "engineering"]
+      signals:
+        digitalIntensity: "low"
+        regulatoryIntensity: "high"
+        operationalComplexity: "very-high"
+        assetIntensity: "high"
+        peopleIntensity: "very-high"
+        customerComplexity: "high"
+        salesComplexity: "very-high"
+        serviceIntensity: "medium"
+        supplyChainComplexity: "very-high"
+        innovationIntensity: "low"
+
+    - id: "subind_proptech"
+      name: "PropTech"
+      slug: "proptech"
+      definition: "Technology businesses digitising real estate transactions, property operations, or building experiences."
+      status: "active"
+      businessModels: ["Subscription", "Transaction fees", "Licensing"]
+      valueDrivers: ["Adoption", "Operational efficiency", "Portfolio visibility"]
+      typicalCapabilities: ["Product", "Implementation", "Customer success", "Data operations"]
+      customerTypes: ["Owner", "Manager", "Developer", "Tenant"]
+      tags: ["proptech", "real-estate-tech"]
+      signals:
+        digitalIntensity: "very-high"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "medium"
+        assetIntensity: "low"
+        peopleIntensity: "medium"
+        customerComplexity: "medium"
+        salesComplexity: "high"
+        serviceIntensity: "high"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "high"

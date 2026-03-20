@@ -1,0 +1,155 @@
+industry:
+  id: "ind_financial_services"
+  name: "Financial Services"
+  slug: "financial-services"
+  definition: "Institutions that manage money, credit, investment, insurance, and financial transactions."
+  status: "active"
+  aliases: ["FSI", "Banking & Insurance"]
+  commonBusinessModels: ["Interest income", "Fees", "Premiums", "Assets under management", "Transaction fees"]
+  commonValueDrivers: ["Risk control", "Regulatory compliance", "Customer trust", "Efficiency", "Growth"]
+  commonCapabilities: ["Underwriting", "Risk management", "Claims", "Advisory", "Fraud detection"]
+  tags: ["regulated", "capital", "trust"]
+  signals:
+    digitalIntensity: "high"
+    regulatoryIntensity: "very-high"
+    operationalComplexity: "very-high"
+    assetIntensity: "medium"
+    peopleIntensity: "high"
+    customerComplexity: "high"
+    salesComplexity: "high"
+    serviceIntensity: "high"
+    supplyChainComplexity: "low"
+    innovationIntensity: "medium"
+
+  subIndustries:
+    - id: "subind_retail_banking"
+      name: "Retail Banking"
+      slug: "retail-banking"
+      definition: "Banks serving consumers and small businesses with deposits, payments, and lending products."
+      status: "active"
+      businessModels: ["Interest income", "Fees"]
+      valueDrivers: ["Customer growth", "Operational efficiency", "Fraud reduction"]
+      typicalCapabilities: ["Branch operations", "Digital banking", "Lending", "Fraud controls"]
+      customerTypes: ["Consumer", "SMB"]
+      tags: ["banking", "consumer-finance"]
+      signals:
+        digitalIntensity: "high"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "high"
+        assetIntensity: "medium"
+        peopleIntensity: "high"
+        customerComplexity: "high"
+        salesComplexity: "medium"
+        serviceIntensity: "high"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "medium"
+
+    - id: "subind_corporate_investment_banking"
+      name: "Corporate & Investment Banking"
+      slug: "corporate-investment-banking"
+      definition: "Financial institutions serving corporates and investors with advisory, capital markets, and structured finance services."
+      status: "active"
+      businessModels: ["Fees", "Trading income"]
+      valueDrivers: ["Deal flow", "Risk-adjusted return", "Client wallet share"]
+      typicalCapabilities: ["Advisory", "Origination", "Trading", "Risk"]
+      customerTypes: ["Enterprise", "Institutional"]
+      tags: ["capital-markets", "corporate-finance"]
+      signals:
+        digitalIntensity: "high"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "very-high"
+        assetIntensity: "medium"
+        peopleIntensity: "high"
+        customerComplexity: "very-high"
+        salesComplexity: "very-high"
+        serviceIntensity: "high"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "medium"
+
+    - id: "subind_wealth_asset_management"
+      name: "Wealth & Asset Management"
+      slug: "wealth-asset-management"
+      definition: "Firms managing client investments, portfolios, and advisory relationships."
+      status: "active"
+      businessModels: ["Management fees", "Performance fees", "Advisory fees"]
+      valueDrivers: ["Assets under management", "Client retention", "Performance"]
+      typicalCapabilities: ["Advisory", "Portfolio management", "Compliance", "Client service"]
+      customerTypes: ["Consumer", "Institutional", "Enterprise"]
+      tags: ["wealth", "investments"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "high"
+        assetIntensity: "low"
+        peopleIntensity: "high"
+        customerComplexity: "high"
+        salesComplexity: "high"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "medium"
+
+    - id: "subind_insurance"
+      name: "Insurance"
+      slug: "insurance"
+      definition: "Insurers and intermediaries that price, underwrite, and service risk protection products."
+      status: "active"
+      businessModels: ["Premiums", "Fees"]
+      valueDrivers: ["Loss ratio", "Claims efficiency", "Retention"]
+      typicalCapabilities: ["Underwriting", "Claims", "Policy administration", "Actuarial"]
+      customerTypes: ["Consumer", "SMB", "Enterprise"]
+      tags: ["risk", "coverage"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "very-high"
+        assetIntensity: "low"
+        peopleIntensity: "high"
+        customerComplexity: "high"
+        salesComplexity: "high"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "medium"
+
+    - id: "subind_payments_fintech"
+      name: "Payments & Fintech"
+      slug: "payments-fintech"
+      definition: "Digital financial businesses providing payment, wallet, transaction, or embedded finance services."
+      status: "active"
+      businessModels: ["Transaction fees", "Subscription", "Interchange"]
+      valueDrivers: ["Transaction volume", "Margin", "Fraud prevention"]
+      typicalCapabilities: ["Payments processing", "Risk", "Compliance", "Partner integration"]
+      customerTypes: ["Consumer", "SMB", "Enterprise"]
+      tags: ["payments", "digital-finance"]
+      signals:
+        digitalIntensity: "very-high"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "high"
+        assetIntensity: "low"
+        peopleIntensity: "medium"
+        customerComplexity: "high"
+        salesComplexity: "medium"
+        serviceIntensity: "high"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "high"
+
+    - id: "subind_capital_markets_infrastructure"
+      name: "Capital Markets Infrastructure"
+      slug: "capital-markets-infrastructure"
+      definition: "Businesses providing exchanges, clearing, settlement, custody, and market infrastructure services."
+      status: "active"
+      businessModels: ["Transaction fees", "Access fees", "Subscription"]
+      valueDrivers: ["Volume", "Reliability", "Compliance", "Latency"]
+      typicalCapabilities: ["Market operations", "Risk controls", "Settlement", "Technology operations"]
+      customerTypes: ["Institutional", "Enterprise"]
+      tags: ["market-infrastructure", "trading"]
+      signals:
+        digitalIntensity: "very-high"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "very-high"
+        assetIntensity: "medium"
+        peopleIntensity: "medium"
+        customerComplexity: "very-high"
+        salesComplexity: "high"
+        serviceIntensity: "high"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "medium"

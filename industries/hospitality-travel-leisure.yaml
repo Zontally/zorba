@@ -1,0 +1,110 @@
+industry:
+  id: "ind_hospitality_travel_leisure"
+  name: "Hospitality, Travel & Leisure"
+  slug: "hospitality-travel-leisure"
+  definition: "Businesses providing experiences, accommodation, travel, food service, and leisure activities."
+  status: "active"
+  commonBusinessModels: ["Bookings", "Ticket sales", "Food & beverage sales", "Subscriptions", "Management fees"]
+  commonValueDrivers: ["Occupancy", "RevPAR", "Customer satisfaction", "Utilisation", "Repeat visits"]
+  commonCapabilities: ["Reservations", "Operations", "Guest service", "Workforce management", "Marketing"]
+  tags: ["travel", "experience", "hospitality"]
+  signals:
+    digitalIntensity: "medium"
+    regulatoryIntensity: "medium"
+    operationalComplexity: "high"
+    assetIntensity: "high"
+    peopleIntensity: "very-high"
+    customerComplexity: "medium"
+    salesComplexity: "low"
+    serviceIntensity: "very-high"
+    supplyChainComplexity: "medium"
+    innovationIntensity: "medium"
+
+  subIndustries:
+    - id: "subind_hotels_accommodation"
+      name: "Hotels & Accommodation"
+      slug: "hotels-accommodation"
+      definition: "Businesses providing lodging, guest services, and accommodation experiences."
+      status: "active"
+      businessModels: ["Bookings", "Nightly rates", "Management fees"]
+      valueDrivers: ["Occupancy", "ADR", "RevPAR", "Guest satisfaction"]
+      typicalCapabilities: ["Reservations", "Front desk", "Housekeeping", "Guest services"]
+      customerTypes: ["Consumer", "Business traveller", "Group"]
+      tags: ["hotels", "lodging"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "high"
+        assetIntensity: "high"
+        peopleIntensity: "very-high"
+        customerComplexity: "medium"
+        salesComplexity: "low"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "medium"
+        innovationIntensity: "low"
+
+    - id: "subind_travel_tourism_operators"
+      name: "Travel & Tourism Operators"
+      slug: "travel-tourism-operators"
+      definition: "Businesses packaging, selling, or operating travel experiences, tours, and related services."
+      status: "active"
+      businessModels: ["Bookings", "Commissions", "Package sales"]
+      valueDrivers: ["Booking conversion", "Utilisation", "Customer satisfaction"]
+      typicalCapabilities: ["Booking operations", "Supplier management", "Customer support", "Marketing"]
+      customerTypes: ["Consumer", "Group", "Business traveller"]
+      tags: ["tourism", "travel"]
+      signals:
+        digitalIntensity: "high"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "medium"
+        assetIntensity: "low"
+        peopleIntensity: "high"
+        customerComplexity: "low"
+        salesComplexity: "low"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "medium"
+        innovationIntensity: "medium"
+
+    - id: "subind_restaurants_food_services"
+      name: "Restaurants & Food Services"
+      slug: "restaurants-food-services"
+      definition: "Businesses preparing and serving food through dine-in, takeaway, catering, or quick-service models."
+      status: "active"
+      businessModels: ["Food sales", "Delivery fees", "Franchise fees"]
+      valueDrivers: ["Same-store sales", "Table turns", "Labour efficiency", "Customer satisfaction"]
+      typicalCapabilities: ["Kitchen operations", "Front of house", "Scheduling", "Procurement"]
+      customerTypes: ["Consumer", "Corporate", "Event"]
+      tags: ["restaurants", "food-service"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "medium"
+        operationalComplexity: "high"
+        assetIntensity: "medium"
+        peopleIntensity: "very-high"
+        customerComplexity: "low"
+        salesComplexity: "very-low"
+        serviceIntensity: "very-high"
+        supplyChainComplexity: "medium"
+        innovationIntensity: "low"
+
+    - id: "subind_entertainment_leisure"
+      name: "Entertainment & Leisure"
+      slug: "entertainment-leisure"
+      definition: "Businesses providing events, attractions, gaming, recreation, or leisure experiences."
+      status: "active"
+      businessModels: ["Ticket sales", "Subscriptions", "Food & beverage", "Sponsorship"]
+      valueDrivers: ["Attendance", "Engagement", "Per-guest spend", "Retention"]
+      typicalCapabilities: ["Venue operations", "Programming", "Customer service", "Marketing"]
+      customerTypes: ["Consumer", "Family", "Tourist"]
+      tags: ["entertainment", "leisure", "attractions"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "low"
+        operationalComplexity: "medium"
+        assetIntensity: "high"
+        peopleIntensity: "high"
+        customerComplexity: "low"
+        salesComplexity: "very-low"
+        serviceIntensity: "high"
+        supplyChainComplexity: "low"
+        innovationIntensity: "medium"

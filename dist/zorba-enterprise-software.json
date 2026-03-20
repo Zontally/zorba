@@ -1,8 +1,9 @@
 {
-  "edition": "core",
-  "name": "ZORBA Core",
+  "edition": "enterprise-software",
+  "name": "ZORBA for Enterprise Software",
+  "extends": "core",
   "version": "0.1.0",
-  "compiled_at": "2026-03-20T20:51:44.704Z",
+  "compiled_at": "2026-03-20T20:51:44.709Z",
   "stats": {
     "totalDomains": 12,
     "totalCapabilities": 87,
@@ -487,42 +488,42 @@
     {
       "id": "482917",
       "number": 2,
-      "name": "Product/Service & Innovation",
-      "subtitle": "Creating what customers and markets need next",
+      "name": "Product & Innovation",
+      "subtitle": "Creating what the market needs next",
       "classification": "value_chain",
-      "description": "This domain encompasses the enterprise's ability to envision, design, build, and evolve the products and services that deliver value to its customers and markets. It spans from early-stage ideation and research through to lifecycle management and retirement, including the intellectual property that protects competitive advantage.\nWhether an organisation delivers physical products, software, professional services, or a combination, this domain covers how offerings are conceived, validated, brought to market, and sustained. The specific shape varies by industry — product-led firms emphasise engineering and release cycles; service-led firms emphasise methodology design and offering packaging.\nIn a ZORBA-enabled enterprise, this domain is where agentic capabilities most visibly augment human creativity — with agents accelerating research synthesis, automating testing cycles, generating design variations, and providing real-time analytics that inform every decision from concept through sunset.\n",
+      "description": "This domain encompasses the enterprise's ability to envision, design, build, and evolve the products and services that deliver value to its customers and markets. It spans from early-stage ideation and research through to product lifecycle management and retirement, including the intellectual property that protects competitive advantage.\nIn a ZORBA-enabled enterprise, this domain is where agentic capabilities most visibly augment human creativity — with agents accelerating research synthesis, automating testing cycles, generating design variations, and providing real-time product analytics that inform every decision from concept through sunset.\n",
       "capabilities": [
         {
           "id": "361742",
           "number": "2.1",
-          "name": "Shape Offering Strategy and Portfolio Direction",
-          "description": "Define the overarching product/service vision, establish portfolio priorities, and maintain a coherent offering strategy aligned to enterprise goals. This capability ensures investments in offerings are deliberate and balanced across horizons.\n",
+          "name": "Shape Product Strategy and Portfolio Direction",
+          "description": "Define the overarching product vision, establish portfolio priorities, and maintain a coherent product strategy aligned to enterprise goals. This capability ensures product investments are deliberate and balanced across horizons.\n",
           "processes": [
             {
               "id": "529184",
               "number": "2.1.1",
-              "name": "Articulate the offering vision and strategic positioning",
+              "name": "Articulate the product vision and strategic positioning",
               "agentic_profile": "H",
-              "agentic_note": "Human-led; offering vision requires authentic market intuition"
+              "agentic_note": "Human-led; product vision requires authentic market intuition"
             },
             {
               "id": "847263",
               "number": "2.1.2",
               "name": "Assess market opportunities and whitespace analysis",
               "agentic_profile": "h+A",
-              "agentic_note": "Agents scan markets and model addressable opportunities; humans evaluate strategic fit"
+              "agentic_note": "Agents scan markets and model TAM; humans evaluate strategic fit"
             },
             {
               "id": "613427",
               "number": "2.1.3",
-              "name": "Define and balance the offering portfolio across horizons",
+              "name": "Define and balance the product portfolio across horizons",
               "agentic_profile": "H+a",
               "agentic_note": "Humans set portfolio mix; agents model resource trade-offs"
             },
             {
               "id": "295814",
               "number": "2.1.4",
-              "name": "Establish offering investment criteria and funding models",
+              "name": "Establish product investment criteria and funding models",
               "agentic_profile": "H+a",
               "agentic_note": "Humans define criteria; agents benchmark against industry norms"
             },
@@ -536,7 +537,7 @@
             {
               "id": "184239",
               "number": "2.1.6",
-              "name": "Align offering roadmaps with enterprise strategy",
+              "name": "Align product roadmaps with enterprise strategy",
               "agentic_profile": "H=A",
               "agentic_note": "Agents flag misalignments; humans resolve strategic tensions"
             }
@@ -545,8 +546,8 @@
         {
           "id": "527163",
           "number": "2.2",
-          "name": "Discover and Validate Offering Opportunities",
-          "description": "Systematically identify, explore, and validate new product or service concepts before committing significant development resources. This capability bridges insight and action through structured experimentation.\n",
+          "name": "Discover and Validate Product Opportunities",
+          "description": "Systematically identify, explore, and validate new product concepts before committing significant development resources. This capability bridges insight and action through structured experimentation.\n",
           "processes": [
             {
               "id": "493821",
@@ -558,7 +559,7 @@
             {
               "id": "716348",
               "number": "2.2.2",
-              "name": "Generate and explore offering concepts and ideas",
+              "name": "Generate and explore product concepts and ideas",
               "agentic_profile": "H=A",
               "agentic_note": "Agents generate concept variations and provocations; humans curate and refine"
             },
@@ -579,7 +580,7 @@
             {
               "id": "254697",
               "number": "2.2.5",
-              "name": "Build and assess business cases for new offerings",
+              "name": "Build and assess business cases for new products",
               "agentic_profile": "H=A",
               "agentic_note": "Agents model financials and scenarios; humans judge viability"
             }
@@ -589,40 +590,40 @@
           "id": "649281",
           "number": "2.3",
           "name": "Design and Engineer Products and Services",
-          "description": "Execute the core design and engineering work that transforms validated concepts into market-ready offerings. This capability covers requirements definition, architecture, development, and quality assurance — whether for physical products, software, or service delivery models.\n",
+          "description": "Execute the core design and engineering work that transforms validated concepts into market-ready products. This capability covers requirements definition, architecture, development, and quality assurance.\n",
           "processes": [
             {
               "id": "514738",
               "number": "2.3.1",
-              "name": "Define offering requirements and acceptance criteria",
+              "name": "Define product requirements and acceptance criteria",
               "agentic_profile": "H+a",
               "agentic_note": "Humans specify requirements; agents structure and cross-reference"
             },
             {
               "id": "928471",
               "number": "2.3.2",
-              "name": "Design offering architecture and specifications",
+              "name": "Design product architecture and technical specifications",
               "agentic_profile": "H+a",
               "agentic_note": "Humans architect; agents generate documentation and check consistency"
             },
             {
               "id": "347165",
               "number": "2.3.3",
-              "name": "Execute development and build cycles",
+              "name": "Execute product development and build cycles",
               "agentic_profile": "H=A",
-              "agentic_note": "Agents assist with creation and assembly; humans lead design decisions"
+              "agentic_note": "Agents assist with code generation, component design; humans lead creation"
             },
             {
               "id": "763829",
               "number": "2.3.4",
-              "name": "Conduct quality assurance and testing",
+              "name": "Conduct quality assurance and automated testing",
               "agentic_profile": "h+A",
-              "agentic_note": "Agents execute test suites and validation checks; humans define quality strategy"
+              "agentic_note": "Agents execute test suites and regression tests; humans define test strategy"
             },
             {
               "id": "481592",
               "number": "2.3.5",
-              "name": "Manage offering configuration and variant design",
+              "name": "Manage product configuration and variant engineering",
               "agentic_profile": "H=A",
               "agentic_note": "Agents manage configuration matrices; humans approve variant decisions"
             },
@@ -665,7 +666,7 @@
             {
               "id": "831264",
               "number": "2.4.4",
-              "name": "Scale validated innovations into core offerings",
+              "name": "Scale validated innovations into core products",
               "agentic_profile": "H+a",
               "agentic_note": "Humans lead scaling decisions; agents coordinate handover logistics"
             },
@@ -689,7 +690,7 @@
           "id": "293814",
           "number": "2.5",
           "name": "Direct Research and Development Activities",
-          "description": "Plan, fund, and execute research and development programmes that generate new knowledge, technologies, and capabilities for future offerings and competitive advantage.\n",
+          "description": "Plan, fund, and execute research and development programmes that generate new knowledge, technologies, and capabilities for future products and competitive advantage.\n",
           "processes": [
             {
               "id": "641278",
@@ -717,7 +718,7 @@
               "number": "2.5.4",
               "name": "Manage research outcomes and technology transfer",
               "agentic_profile": "H=A",
-              "agentic_note": "Agents catalogue findings and match to offering needs; humans drive transfer"
+              "agentic_note": "Agents catalogue findings and match to product needs; humans drive transfer"
             },
             {
               "id": "718534",
@@ -731,43 +732,43 @@
         {
           "id": "174628",
           "number": "2.6",
-          "name": "Manage the Offering Lifecycle End to End",
-          "description": "Govern the full lifecycle of each product or service from launch through growth, maturity, and eventual sunset — ensuring offerings remain viable, profitable, and aligned with market needs throughout their life.\n",
+          "name": "Manage the Product Lifecycle End to End",
+          "description": "Govern the full lifecycle of each product from launch through growth, maturity, and eventual sunset — ensuring products remain viable, profitable, and aligned with market needs throughout their life.\n",
           "processes": [
             {
               "id": "493162",
               "number": "2.6.1",
-              "name": "Plan and execute offering launches and market entry",
+              "name": "Plan and execute product launches and market entry",
               "agentic_profile": "H+a",
               "agentic_note": "Humans lead launch strategy; agents coordinate checklists and readiness tracking"
             },
             {
               "id": "825347",
               "number": "2.6.2",
-              "name": "Monitor offering performance and market reception",
+              "name": "Monitor product performance and market reception",
               "agentic_profile": "A",
               "agentic_note": "Agent-executed; continuous monitoring of adoption, usage, and revenue metrics"
             },
             {
               "id": "567814",
               "number": "2.6.3",
-              "name": "Manage offering iterations, updates, and enhancements",
+              "name": "Manage product iterations, updates, and enhancements",
               "agentic_profile": "H=A",
               "agentic_note": "Agents prioritise backlog by data signals; humans approve release scope"
             },
             {
               "id": "314289",
               "number": "2.6.4",
-              "name": "Plan and execute offering retirement and sunsetting",
+              "name": "Plan and execute product retirement and sunsetting",
               "agentic_profile": "H+a",
               "agentic_note": "Humans decide retirement timing; agents manage migration and communication plans"
             },
             {
               "id": "682431",
               "number": "2.6.5",
-              "name": "Manage regulatory and compliance aspects of the offering lifecycle",
+              "name": "Manage regulatory and compliance aspects of the product lifecycle",
               "agentic_profile": "H=A",
-              "agentic_note": "Agents track regulatory changes affecting offerings; humans ensure compliance"
+              "agentic_note": "Agents track regulatory changes affecting products; humans ensure compliance"
             }
           ]
         },
@@ -780,9 +781,9 @@
             {
               "id": "419237",
               "number": "2.7.1",
-              "name": "Identify and assess intellectual property arising from offerings",
+              "name": "Identify and assess intellectual property arising from products",
               "agentic_profile": "H=A",
-              "agentic_note": "Agents scan outputs for protectable elements; humans evaluate"
+              "agentic_note": "Agents scan codebases and designs for patentable elements; humans evaluate"
             },
             {
               "id": "783164",
@@ -817,20 +818,20 @@
         {
           "id": "927341",
           "number": "2.8",
-          "name": "Generate Offering Insights and Analytics",
-          "description": "Establish and operate the data, analytics, and insight capabilities that inform offering decisions — from usage analytics and experimentation through to predictive modelling and competitive intelligence.\n",
+          "name": "Generate Product Insights and Analytics",
+          "description": "Establish and operate the data, analytics, and insight capabilities that inform product decisions — from usage analytics and A/B testing through to predictive modelling and competitive intelligence.\n",
           "processes": [
             {
               "id": "364218",
               "number": "2.8.1",
-              "name": "Define offering metrics, KPIs, and measurement frameworks",
+              "name": "Define product metrics, KPIs, and measurement frameworks",
               "agentic_profile": "H+a",
               "agentic_note": "Humans define what to measure; agents recommend based on benchmarks"
             },
             {
               "id": "581749",
               "number": "2.8.2",
-              "name": "Collect and integrate offering usage and behavioural data",
+              "name": "Collect and integrate product usage and behavioural data",
               "agentic_profile": "A",
               "agentic_note": "Agent-executed; automated data pipeline management"
             },
@@ -844,23 +845,23 @@
             {
               "id": "413892",
               "number": "2.8.4",
-              "name": "Generate predictive models for offering performance",
+              "name": "Generate predictive models for product performance",
               "agentic_profile": "h+A",
               "agentic_note": "Agents build and maintain models; humans interpret and act on predictions"
             },
             {
               "id": "846527",
               "number": "2.8.5",
-              "name": "Deliver offering insight reports and recommendations",
+              "name": "Deliver product insight reports and recommendations",
               "agentic_profile": "h+A",
               "agentic_note": "Agents generate narrative reports; humans validate and distribute"
             },
             {
               "id": "152843",
               "number": "2.8.6",
-              "name": "Monitor competitive landscape and offering parity",
+              "name": "Monitor competitive product landscape and feature parity",
               "agentic_profile": "h+A",
-              "agentic_note": "Agents track competitor releases and offerings; humans assess strategic implications"
+              "agentic_note": "Agents track competitor releases and features; humans assess strategic implications"
             }
           ]
         }

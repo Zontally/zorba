@@ -48,6 +48,7 @@ nav:
       - Glossary: framework/12-glossary.md
   - Domain Taxonomy: domains/index.md
   - Industry Editions:
+      - ZORBA for Enterprise Software: editions/enterprise-software/index.md
       - ZORBA for Professional Services: editions/professional-services/index.md
 markdown_extensions:
   - tables

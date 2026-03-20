@@ -1,0 +1,110 @@
+industry:
+  id: "ind_energy_utilities"
+  name: "Energy & Utilities"
+  slug: "energy-utilities"
+  definition: "Organisations involved in energy production, distribution, trading, and utility services."
+  status: "active"
+  commonBusinessModels: ["Commodity sales", "Usage fees", "Long-term contracts", "Regulated returns"]
+  commonValueDrivers: ["Reliability", "Asset utilisation", "Safety", "Compliance", "Margin"]
+  commonCapabilities: ["Generation", "Distribution", "Trading", "Field operations", "Asset management"]
+  tags: ["energy", "utilities", "infrastructure"]
+  signals:
+    digitalIntensity: "medium"
+    regulatoryIntensity: "very-high"
+    operationalComplexity: "very-high"
+    assetIntensity: "very-high"
+    peopleIntensity: "medium"
+    customerComplexity: "medium"
+    salesComplexity: "medium"
+    serviceIntensity: "medium"
+    supplyChainComplexity: "high"
+    innovationIntensity: "medium"
+
+  subIndustries:
+    - id: "subind_oil_gas"
+      name: "Oil & Gas"
+      slug: "oil-gas"
+      definition: "Businesses exploring, extracting, refining, transporting, or selling hydrocarbons."
+      status: "active"
+      businessModels: ["Commodity sales", "Contracts", "Trading"]
+      valueDrivers: ["Production efficiency", "Safety", "Reserve quality", "Margin"]
+      typicalCapabilities: ["Exploration", "Operations", "Maintenance", "Trading"]
+      customerTypes: ["Enterprise", "Distributor", "Government"]
+      tags: ["upstream", "midstream", "downstream"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "very-high"
+        assetIntensity: "very-high"
+        peopleIntensity: "medium"
+        customerComplexity: "medium"
+        salesComplexity: "medium"
+        serviceIntensity: "low"
+        supplyChainComplexity: "high"
+        innovationIntensity: "medium"
+
+    - id: "subind_renewable_energy"
+      name: "Renewable Energy"
+      slug: "renewable-energy"
+      definition: "Businesses generating or managing power from renewable sources such as solar, wind, and hydro."
+      status: "active"
+      businessModels: ["Power sales", "Contracts", "Regulated returns"]
+      valueDrivers: ["Generation efficiency", "Uptime", "Project returns"]
+      typicalCapabilities: ["Project delivery", "Generation operations", "Asset monitoring"]
+      customerTypes: ["Utility", "Government", "Enterprise"]
+      tags: ["solar", "wind", "hydro"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "high"
+        operationalComplexity: "high"
+        assetIntensity: "very-high"
+        peopleIntensity: "medium"
+        customerComplexity: "medium"
+        salesComplexity: "high"
+        serviceIntensity: "low"
+        supplyChainComplexity: "high"
+        innovationIntensity: "high"
+
+    - id: "subind_utilities"
+      name: "Utilities"
+      slug: "utilities"
+      definition: "Regulated providers of essential services such as electricity, water, and gas."
+      status: "active"
+      businessModels: ["Usage fees", "Regulated returns"]
+      valueDrivers: ["Reliability", "Cost efficiency", "Compliance", "Customer service"]
+      typicalCapabilities: ["Network operations", "Field service", "Billing", "Asset management"]
+      customerTypes: ["Consumer", "Enterprise", "Government"]
+      tags: ["electricity", "water", "gas"]
+      signals:
+        digitalIntensity: "medium"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "very-high"
+        assetIntensity: "very-high"
+        peopleIntensity: "high"
+        customerComplexity: "medium"
+        salesComplexity: "low"
+        serviceIntensity: "high"
+        supplyChainComplexity: "medium"
+        innovationIntensity: "low"
+
+    - id: "subind_energy_trading_markets"
+      name: "Energy Trading & Markets"
+      slug: "energy-trading-markets"
+      definition: "Businesses engaged in trading power, gas, and energy-related contracts in wholesale markets."
+      status: "active"
+      businessModels: ["Trading income", "Market fees", "Contracts"]
+      valueDrivers: ["Risk-adjusted return", "Market access", "Forecast accuracy"]
+      typicalCapabilities: ["Trading", "Risk management", "Settlement", "Market operations"]
+      customerTypes: ["Utility", "Enterprise", "Institutional"]
+      tags: ["trading", "markets"]
+      signals:
+        digitalIntensity: "high"
+        regulatoryIntensity: "very-high"
+        operationalComplexity: "very-high"
+        assetIntensity: "low"
+        peopleIntensity: "medium"
+        customerComplexity: "high"
+        salesComplexity: "medium"
+        serviceIntensity: "low"
+        supplyChainComplexity: "very-low"
+        innovationIntensity: "medium"

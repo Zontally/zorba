@@ -1,0 +1,6 @@
+model: "ZORA_INDUSTRY_MODEL"
+version: "v1.0"
+status: "draft"
+description: >
+  Full ZORA industry and sub-industry taxonomy for common enterprise segmentation,
+  benchmarking, and AI-guided strategy-to-execution workflows.
