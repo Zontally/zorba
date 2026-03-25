@@ -29,31 +29,141 @@ domain:
           name: "Develop annual budgets and long-range financial plans"
           agentic_profile: "H+a"
           agentic_note: "Humans lead planning; agents compile data and model scenarios"
+          measurements:
+            - id: "810101"
+              number: "8.1.1.M1"
+              name: "Budget Variance %"
+              what: "Percentage deviation of actuals from approved budget"
+              why: "Indicates accuracy of budget planning and fiscal discipline"
+              how: "(Actual Spend − Budget) / Budget × 100"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "810102"
+              number: "8.1.1.M2"
+              name: "Budget Cycle Time"
+              what: "Elapsed days from budget kickoff to board approval"
+              why: "Measures efficiency of the budgeting process"
+              how: "Board approval date − budget kickoff date (calendar days)"
+              frequency: annually
+              direction: lower_is_better
+            - id: "810103"
+              number: "8.1.1.M3"
+              name: "Long-Range Plan Coverage"
+              what: "Number of years covered by the current financial plan"
+              why: "Ensures strategic planning horizon is adequate for capital decisions"
+              how: "End year of plan − current year"
+              frequency: annually
+              direction: higher_is_better
         - id: "493218"
           number: "8.1.2"
           name: "Prepare rolling forecasts and outlook updates"
           agentic_profile: "h+A"
           agentic_note: "Agents generate forecasts from actuals and trends; humans adjust assumptions"
+          measurements:
+            - id: "810201"
+              number: "8.1.2.M1"
+              name: "Forecast Accuracy"
+              what: "Percentage accuracy of rolling forecast vs actuals"
+              why: "Reliable forecasts enable better resource allocation and decision-making"
+              how: "1 − |Forecast − Actual| / Actual × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "810202"
+              number: "8.1.2.M2"
+              name: "Forecast Cycle Time"
+              what: "Days to complete a forecast refresh cycle"
+              why: "Faster cycles enable more responsive planning"
+              how: "Forecast completion date − data cut-off date (business days)"
+              frequency: monthly
+              direction: lower_is_better
         - id: "861347"
           number: "8.1.3"
           name: "Analyse financial performance and explain variances"
           agentic_profile: "h+A"
           agentic_note: "Agents compute variances and surface drivers; humans interpret and narrate"
+          measurements:
+            - id: "810301"
+              number: "8.1.3.M1"
+              name: "Variance Report Timeliness"
+              what: "Days after period close that variance analysis is delivered"
+              why: "Timely analysis enables faster corrective action"
+              how: "Variance report delivery date − period close date (business days)"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "810302"
+              number: "8.1.3.M2"
+              name: "Variance Explanation Coverage"
+              what: "Percentage of material variances with documented root-cause explanations"
+              why: "Ensures management understands drivers behind financial performance"
+              how: "Variances with root-cause / Total material variances × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "537412"
           number: "8.1.4"
           name: "Model financial scenarios and investment cases"
           agentic_profile: "H=A"
           agentic_note: "Agents build models; humans define assumptions and evaluate outcomes"
+          measurements:
+            - id: "810401"
+              number: "8.1.4.M1"
+              name: "Business Case Approval Rate"
+              what: "Percentage of submitted investment cases that receive approval"
+              why: "Indicates quality of case preparation and strategic alignment"
+              how: "Approved cases / Submitted cases × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "810402"
+              number: "8.1.4.M2"
+              name: "Post-Investment Return Accuracy"
+              what: "Deviation of actual ROI from projected ROI at time of approval"
+              why: "Validates the quality of financial modelling assumptions"
+              how: "|Actual ROI − Projected ROI| / Projected ROI × 100"
+              frequency: annually
+              direction: lower_is_better
         - id: "284659"
           number: "8.1.5"
           name: "Provide financial decision support to business leaders"
           agentic_profile: "H+a"
           agentic_note: "Humans advise; agents prepare briefings and ad hoc analysis"
+          measurements:
+            - id: "810501"
+              number: "8.1.5.M1"
+              name: "Decision Support Request Turnaround"
+              what: "Average hours to respond to ad hoc financial analysis requests"
+              why: "Faster response enables timelier business decisions"
+              how: "Mean elapsed hours from request to delivery"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "810502"
+              number: "8.1.5.M2"
+              name: "Stakeholder Satisfaction Score"
+              what: "Business leader satisfaction with financial decision support"
+              why: "Measures perceived value and quality of finance business partnering"
+              how: "Average score from quarterly stakeholder survey (1–5 scale)"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "916743"
           number: "8.1.6"
           name: "Monitor financial KPIs and early warning indicators"
           agentic_profile: A
           agentic_note: "Agent-executed; continuous dashboard monitoring with threshold alerts"
+          measurements:
+            - id: "810601"
+              number: "8.1.6.M1"
+              name: "Alert Response Time"
+              what: "Average time between KPI threshold breach and management acknowledgement"
+              why: "Fast response to financial alerts prevents escalation of issues"
+              how: "Mean elapsed hours from alert trigger to acknowledgement"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "810602"
+              number: "8.1.6.M2"
+              name: "False Alert Rate"
+              what: "Percentage of triggered alerts that are false positives"
+              why: "High false alert rates cause alert fatigue and missed genuine issues"
+              how: "False positive alerts / Total alerts triggered × 100"
+              frequency: monthly
+              direction: lower_is_better
 
     - id: "741385"
       number: "8.2"
@@ -68,31 +178,149 @@ domain:
           name: "Maintain and govern the chart of accounts"
           agentic_profile: "H+a"
           agentic_note: "Humans own account structure; agents flag inconsistencies and suggest harmonisation"
+          measurements:
+            - id: "820101"
+              number: "8.2.1.M1"
+              name: "Chart of Accounts Integrity Score"
+              what: "Percentage of accounts that conform to naming and coding standards"
+              why: "Clean chart of accounts ensures consistent reporting and reduces mispostings"
+              how: "Compliant accounts / Total active accounts × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "820102"
+              number: "8.2.1.M2"
+              name: "Dormant Account Ratio"
+              what: "Percentage of accounts with no activity in the last 12 months"
+              why: "Excess dormant accounts add complexity and increase error risk"
+              how: "Accounts with zero transactions in 12 months / Total accounts × 100"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "628491"
           number: "8.2.2"
           name: "Process journal entries and adjustments"
           agentic_profile: "h+A"
           agentic_note: "Agents post routine entries; humans review and approve non-standard journals"
+          measurements:
+            - id: "820201"
+              number: "8.2.2.M1"
+              name: "Journal Entry Error Rate"
+              what: "Percentage of journal entries requiring correction after posting"
+              why: "Errors erode data quality and increase rework during close"
+              how: "Corrected entries / Total entries posted × 100"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "820202"
+              number: "8.2.2.M2"
+              name: "Automated Journal Entry Rate"
+              what: "Percentage of journal entries posted without manual intervention"
+              why: "Higher automation reduces cost and improves consistency"
+              how: "Auto-posted entries / Total entries × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "174523"
           number: "8.2.3"
           name: "Perform account reconciliations"
           agentic_profile: A
           agentic_note: "Agent-executed; automated matching with human review of exceptions"
+          measurements:
+            - id: "820301"
+              number: "8.2.3.M1"
+              name: "Reconciliation Completion Rate"
+              what: "Percentage of accounts reconciled by the target deadline"
+              why: "Incomplete reconciliations delay close and increase risk of misstatement"
+              how: "Accounts reconciled on time / Total accounts requiring reconciliation × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "820302"
+              number: "8.2.3.M2"
+              name: "Unreconciled Items Age"
+              what: "Average age of open reconciling items in days"
+              why: "Aged unreconciled items indicate systemic issues and increase audit risk"
+              how: "Sum of days outstanding for all open items / Number of open items"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "820303"
+              number: "8.2.3.M3"
+              name: "Auto-Match Rate"
+              what: "Percentage of reconciling items matched automatically without manual review"
+              why: "Higher auto-match rates reduce reconciliation effort and speed up close"
+              how: "Auto-matched items / Total items to reconcile × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "845362"
           number: "8.2.4"
           name: "Manage intercompany transactions and eliminations"
           agentic_profile: "h+A"
           agentic_note: "Agents process and reconcile; humans resolve disputes and policy questions"
+          measurements:
+            - id: "820401"
+              number: "8.2.4.M1"
+              name: "Intercompany Balance Match Rate"
+              what: "Percentage of intercompany balances that agree between counterparties"
+              why: "Mismatches delay consolidation and signal process breakdowns"
+              how: "Matched intercompany balances / Total intercompany balances × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "820402"
+              number: "8.2.4.M2"
+              name: "Intercompany Dispute Resolution Time"
+              what: "Average days to resolve intercompany balance disputes"
+              why: "Prolonged disputes delay close and consume finance team capacity"
+              how: "Mean calendar days from dispute raised to resolution"
+              frequency: monthly
+              direction: lower_is_better
         - id: "593174"
           number: "8.2.5"
           name: "Execute period-end close processes"
           agentic_profile: "H=A"
           agentic_note: "Agents orchestrate close checklists and track completion; humans manage judgements"
+          measurements:
+            - id: "820501"
+              number: "8.2.5.M1"
+              name: "Close Cycle Time"
+              what: "Business days from period end to books closed"
+              why: "Faster close provides earlier access to financial data for decisions"
+              how: "Books closed date − period end date (business days)"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "820502"
+              number: "8.2.5.M2"
+              name: "Close Task Completion Rate"
+              what: "Percentage of close checklist tasks completed on schedule"
+              why: "On-time task completion prevents close delays and bottlenecks"
+              how: "Tasks completed on time / Total close tasks × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "820503"
+              number: "8.2.5.M3"
+              name: "Post-Close Adjustment Count"
+              what: "Number of material adjustments made after books are closed"
+              why: "Post-close adjustments indicate close quality issues"
+              how: "Count of material journal entries posted after close date"
+              frequency: monthly
+              direction: lower_is_better
         - id: "416238"
           number: "8.2.6"
           name: "Manage fixed asset accounting and depreciation"
           agentic_profile: "h+A"
           agentic_note: "Agents calculate depreciation and track assets; humans approve disposals"
+          measurements:
+            - id: "820601"
+              number: "8.2.6.M1"
+              name: "Asset Register Accuracy"
+              what: "Percentage of fixed assets verified as physically present and correctly recorded"
+              why: "Inaccurate registers lead to misstatement and audit findings"
+              how: "Verified assets / Total registered assets × 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "820602"
+              number: "8.2.6.M2"
+              name: "Depreciation Processing Timeliness"
+              what: "Whether depreciation is run and posted by the close deadline"
+              why: "Late depreciation delays close and affects period accuracy"
+              how: "Binary: posted by deadline (Yes/No), tracked as % of periods on time"
+              frequency: monthly
+              direction: higher_is_better
 
     - id: "219648"
       number: "8.3"
@@ -106,36 +334,171 @@ domain:
           name: "Receive, validate, and code supplier invoices"
           agentic_profile: A
           agentic_note: "Agent-executed; automated invoice capture, matching, and coding"
+          measurements:
+            - id: "830101"
+              number: "8.3.1.M1"
+              name: "Invoice Processing Cycle Time"
+              what: "Average days from invoice receipt to approval-ready status"
+              why: "Faster processing enables early payment discounts and better supplier relations"
+              how: "Mean calendar days from receipt timestamp to approved status"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "830102"
+              number: "8.3.1.M2"
+              name: "Straight-Through Processing Rate"
+              what: "Percentage of invoices processed without manual intervention"
+              why: "Higher STP reduces cost per invoice and processing time"
+              how: "Auto-processed invoices / Total invoices received × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "830103"
+              number: "8.3.1.M3"
+              name: "Invoice Exception Rate"
+              what: "Percentage of invoices flagged for exceptions (mismatches, missing data)"
+              why: "High exception rates indicate upstream process issues with POs or receipts"
+              how: "Exception invoices / Total invoices × 100"
+              frequency: monthly
+              direction: lower_is_better
         - id: "618473"
           number: "8.3.2"
           name: "Manage payment runs and disbursements"
           agentic_profile: "h+A"
           agentic_note: "Agents schedule and execute payments; humans approve above thresholds"
+          measurements:
+            - id: "830201"
+              number: "8.3.2.M1"
+              name: "On-Time Payment Rate"
+              what: "Percentage of supplier payments made by the due date"
+              why: "Timely payments protect supplier relationships and avoid late fees"
+              how: "Payments made on or before due date / Total payments × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "830202"
+              number: "8.3.2.M2"
+              name: "Early Payment Discount Capture Rate"
+              what: "Percentage of available early payment discounts captured"
+              why: "Capturing discounts directly improves bottom line"
+              how: "Discounts captured / Total discounts available × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "543219"
           number: "8.3.3"
           name: "Manage supplier queries and dispute resolution"
           agentic_profile: "H=A"
           agentic_note: "Agents track disputes and compile evidence; humans negotiate resolutions"
+          measurements:
+            - id: "830301"
+              number: "8.3.3.M1"
+              name: "Supplier Dispute Resolution Time"
+              what: "Average days to resolve supplier invoice disputes"
+              why: "Unresolved disputes damage relationships and block payments"
+              how: "Mean calendar days from dispute raised to resolution"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "830302"
+              number: "8.3.3.M2"
+              name: "Open Dispute Value"
+              what: "Total monetary value of unresolved supplier disputes"
+              why: "High open dispute value indicates process breakdown and cash flow risk"
+              how: "Sum of disputed invoice amounts with status = open"
+              frequency: monthly
+              direction: lower_is_better
         - id: "892163"
           number: "8.3.4"
           name: "Generate and distribute customer invoices"
           agentic_profile: A
           agentic_note: "Agent-executed; automated billing based on delivery and contract data"
+          measurements:
+            - id: "830401"
+              number: "8.3.4.M1"
+              name: "Invoice Accuracy Rate"
+              what: "Percentage of customer invoices issued without errors"
+              why: "Invoice errors delay payment and damage customer relationships"
+              how: "Error-free invoices / Total invoices issued × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "830402"
+              number: "8.3.4.M2"
+              name: "Billing Timeliness"
+              what: "Percentage of invoices issued within the contractual billing window"
+              why: "Late billing delays cash collection and distorts revenue recognition"
+              how: "Invoices issued on time / Total invoices due × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "736524"
           number: "8.3.5"
           name: "Monitor receivables ageing and pursue collections"
           agentic_profile: "h+A"
           agentic_note: "Agents send reminders and escalate; humans handle sensitive or large accounts"
+          measurements:
+            - id: "830501"
+              number: "8.3.5.M1"
+              name: "Days Sales Outstanding"
+              what: "Average number of days to collect payment after invoicing"
+              why: "Lower DSO improves cash flow and reduces working capital requirements"
+              how: "(Accounts Receivable / Net Credit Sales) × Number of Days"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "830502"
+              number: "8.3.5.M2"
+              name: "Collection Effectiveness Index"
+              what: "Effectiveness of collections effort as a percentage"
+              why: "Measures how well the collections process converts receivables to cash"
+              how: "(Beginning Receivables + Credit Sales − Ending Total Receivables) / (Beginning Receivables + Credit Sales − Ending Current Receivables) × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "830503"
+              number: "8.3.5.M3"
+              name: "Overdue Receivables Ratio"
+              what: "Percentage of total receivables that are past due"
+              why: "High overdue ratio signals credit risk and collection inefficiency"
+              how: "Past-due receivables / Total receivables × 100"
+              frequency: monthly
+              direction: lower_is_better
         - id: "451837"
           number: "8.3.6"
           name: "Process customer payments and apply cash receipts"
           agentic_profile: A
           agentic_note: "Agent-executed; automated matching and application with exception routing"
+          measurements:
+            - id: "830601"
+              number: "8.3.6.M1"
+              name: "Cash Application Rate"
+              what: "Percentage of incoming payments auto-applied to correct invoices"
+              why: "High auto-application reduces manual effort and speeds cash posting"
+              how: "Auto-applied payments / Total payments received × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "830602"
+              number: "8.3.6.M2"
+              name: "Unapplied Cash Age"
+              what: "Average age in days of unapplied cash receipts"
+              why: "Aged unapplied cash distorts receivables reporting and frustrates customers"
+              how: "Sum of days outstanding for unapplied items / Number of unapplied items"
+              frequency: monthly
+              direction: lower_is_better
         - id: "268314"
           number: "8.3.7"
           name: "Manage credit exposure and bad debt provisions"
           agentic_profile: "H+a"
           agentic_note: "Humans set credit policy; agents monitor exposure and flag breaches"
+          measurements:
+            - id: "830701"
+              number: "8.3.7.M1"
+              name: "Bad Debt Write-Off Rate"
+              what: "Bad debt written off as a percentage of total credit sales"
+              why: "Measures effectiveness of credit management and provisioning"
+              how: "Bad debt write-offs / Total credit sales × 100"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "830702"
+              number: "8.3.7.M2"
+              name: "Credit Limit Breach Rate"
+              what: "Percentage of customers exceeding their approved credit limit"
+              why: "Frequent breaches indicate weak credit controls and elevated risk"
+              how: "Customers over limit / Total credit customers × 100"
+              frequency: monthly
+              direction: lower_is_better
 
     - id: "485231"
       number: "8.4"
@@ -150,26 +513,111 @@ domain:
           name: "Forecast cash flows and manage liquidity positions"
           agentic_profile: "h+A"
           agentic_note: "Agents generate daily/weekly cash forecasts; humans review and adjust"
+          measurements:
+            - id: "840101"
+              number: "8.4.1.M1"
+              name: "Cash Forecast Accuracy"
+              what: "Accuracy of short-term cash flow forecasts vs actuals"
+              why: "Accurate cash forecasts prevent liquidity crises and reduce idle cash"
+              how: "1 − |Forecast Cash Position − Actual Cash Position| / Actual Cash Position × 100"
+              frequency: weekly
+              direction: higher_is_better
+            - id: "840102"
+              number: "8.4.1.M2"
+              name: "Liquidity Coverage Ratio"
+              what: "Ratio of liquid assets to short-term obligations"
+              why: "Ensures the enterprise can meet near-term payment obligations"
+              how: "High-quality liquid assets / Net cash outflows over 30 days"
+              frequency: monthly
+              direction: higher_is_better
         - id: "672148"
           number: "8.4.2"
           name: "Manage banking relationships and account structures"
           agentic_profile: "H+a"
           agentic_note: "Humans own bank relationships; agents track fees and service levels"
+          measurements:
+            - id: "840201"
+              number: "8.4.2.M1"
+              name: "Bank Fee Efficiency"
+              what: "Total bank fees as a percentage of transaction volume"
+              why: "Monitoring fee efficiency ensures competitive banking costs"
+              how: "Total bank fees / Total transaction value × 100"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "840202"
+              number: "8.4.2.M2"
+              name: "Bank Account Rationalisation Score"
+              what: "Number of active bank accounts relative to operating entities"
+              why: "Excess accounts increase cost, complexity, and fraud risk"
+              how: "Active bank accounts / Number of operating entities"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "825314"
           number: "8.4.3"
           name: "Execute and manage investment and borrowing activities"
           agentic_profile: H
           agentic_note: "Human-led; agents provide market data and scenario analysis"
+          measurements:
+            - id: "840301"
+              number: "8.4.3.M1"
+              name: "Weighted Average Cost of Debt"
+              what: "Blended interest rate across all borrowing facilities"
+              why: "Lower cost of debt directly improves profitability"
+              how: "Sum of (each facility's interest × its balance) / Total borrowings"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "840302"
+              number: "8.4.3.M2"
+              name: "Investment Portfolio Yield"
+              what: "Annualised return on short-term investment portfolio"
+              why: "Maximising yield on surplus cash improves financial performance"
+              how: "Investment income / Average portfolio balance × 100 (annualised)"
+              frequency: monthly
+              direction: higher_is_better
         - id: "547831"
           number: "8.4.4"
           name: "Manage foreign exchange and interest rate exposures"
           agentic_profile: "H=A"
           agentic_note: "Agents monitor exposures and model hedging; humans approve strategies"
+          measurements:
+            - id: "840401"
+              number: "8.4.4.M1"
+              name: "FX Hedge Effectiveness"
+              what: "Percentage of FX exposure covered by effective hedges"
+              why: "Effective hedging reduces earnings volatility from currency movements"
+              how: "Hedged FX exposure / Total FX exposure × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "840402"
+              number: "8.4.4.M2"
+              name: "Realised FX Gain/Loss Ratio"
+              what: "Net FX gains or losses as a percentage of hedged notional"
+              why: "Tracks financial impact of hedging strategy effectiveness"
+              how: "Net realised FX gain or loss / Total hedged notional × 100"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "193624"
           number: "8.4.5"
           name: "Perform daily cash positioning and fund transfers"
           agentic_profile: "h+A"
           agentic_note: "Agents execute routine transfers; humans approve large or unusual movements"
+          measurements:
+            - id: "840501"
+              number: "8.4.5.M1"
+              name: "Idle Cash Ratio"
+              what: "Percentage of total cash sitting uninvested in non-interest-bearing accounts"
+              why: "Idle cash represents missed investment income"
+              how: "Non-interest-bearing balances / Total cash balances × 100"
+              frequency: daily
+              direction: lower_is_better
+            - id: "840502"
+              number: "8.4.5.M2"
+              name: "Fund Transfer Error Rate"
+              what: "Percentage of fund transfers requiring correction or reversal"
+              why: "Transfer errors create reconciliation issues and operational risk"
+              how: "Corrected or reversed transfers / Total transfers × 100"
+              frequency: monthly
+              direction: lower_is_better
 
     - id: "637241"
       number: "8.5"
@@ -183,26 +631,111 @@ domain:
           name: "Develop and maintain the enterprise tax strategy"
           agentic_profile: H
           agentic_note: "Human-led; requires professional judgement and regulatory interpretation"
+          measurements:
+            - id: "850101"
+              number: "8.5.1.M1"
+              name: "Effective Tax Rate"
+              what: "Actual tax paid as a percentage of pre-tax income"
+              why: "Measures effectiveness of tax planning within legal boundaries"
+              how: "Total tax expense / Pre-tax income × 100"
+              frequency: annually
+              direction: lower_is_better
+            - id: "850102"
+              number: "8.5.1.M2"
+              name: "Tax Strategy Review Currency"
+              what: "Months since the tax strategy was last reviewed and updated"
+              why: "Stale strategies may not reflect current legislation or business structure"
+              how: "Current date − last strategy review date (months)"
+              frequency: annually
+              direction: lower_is_better
         - id: "473821"
           number: "8.5.2"
           name: "Calculate and prepare direct and indirect tax returns"
           agentic_profile: "h+A"
           agentic_note: "Agents compute tax positions and draft returns; humans review and submit"
+          measurements:
+            - id: "850201"
+              number: "8.5.2.M1"
+              name: "Tax Filing Timeliness"
+              what: "Percentage of tax returns filed by the statutory deadline"
+              why: "Late filings attract penalties and regulatory scrutiny"
+              how: "Returns filed on time / Total returns due × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "850202"
+              number: "8.5.2.M2"
+              name: "Tax Return Accuracy"
+              what: "Percentage of tax returns filed without subsequent amendment"
+              why: "Amendments indicate calculation errors and increase audit risk"
+              how: "Returns without amendment / Total returns filed × 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "615342"
           number: "8.5.3"
           name: "Manage transfer pricing documentation and compliance"
           agentic_profile: "H=A"
           agentic_note: "Agents maintain documentation; humans make policy decisions"
+          measurements:
+            - id: "850301"
+              number: "8.5.3.M1"
+              name: "Transfer Pricing Documentation Completeness"
+              what: "Percentage of intercompany transactions with current TP documentation"
+              why: "Incomplete documentation creates significant tax audit exposure"
+              how: "Documented transactions / Total intercompany transactions × 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "850302"
+              number: "8.5.3.M2"
+              name: "Arm's Length Compliance Rate"
+              what: "Percentage of transfer prices within the arm's length range"
+              why: "Non-compliant pricing risks penalties and double taxation"
+              how: "Compliant transactions / Total tested transactions × 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "291438"
           number: "8.5.4"
           name: "Monitor tax legislation changes and assess impact"
           agentic_profile: "h+A"
           agentic_note: "Agents scan regulatory changes; humans assess strategic implications"
+          measurements:
+            - id: "850401"
+              number: "8.5.4.M1"
+              name: "Regulatory Change Response Time"
+              what: "Average days from legislation publication to impact assessment completion"
+              why: "Slow response to tax changes risks non-compliance or missed planning opportunities"
+              how: "Mean calendar days from publication to completed assessment"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "850402"
+              number: "8.5.4.M2"
+              name: "Legislation Monitoring Coverage"
+              what: "Percentage of relevant jurisdictions actively monitored for tax changes"
+              why: "Gaps in monitoring create compliance blind spots"
+              how: "Monitored jurisdictions / Total jurisdictions with tax obligations × 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "748163"
           number: "8.5.5"
           name: "Manage tax audits and authority inquiries"
           agentic_profile: "H+a"
           agentic_note: "Humans lead audit responses; agents compile evidence and track requests"
+          measurements:
+            - id: "850501"
+              number: "8.5.5.M1"
+              name: "Tax Audit Finding Rate"
+              what: "Number of material findings per tax audit"
+              why: "Fewer findings indicate strong compliance and preparation"
+              how: "Total material findings / Total audits completed"
+              frequency: annually
+              direction: lower_is_better
+            - id: "850502"
+              number: "8.5.5.M2"
+              name: "Audit Information Request Timeliness"
+              what: "Percentage of tax authority information requests met by deadline"
+              why: "Timely responses demonstrate cooperation and reduce audit friction"
+              how: "Requests responded to on time / Total requests received × 100"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "158473"
       number: "8.6"
@@ -217,31 +750,133 @@ domain:
           name: "Prepare statutory financial statements"
           agentic_profile: "H=A"
           agentic_note: "Agents compile and format; humans review and ensure compliance"
+          measurements:
+            - id: "860101"
+              number: "8.6.1.M1"
+              name: "Financial Statement Timeliness"
+              what: "Days from year-end to statutory accounts completion"
+              why: "Timely statements meet regulatory deadlines and stakeholder expectations"
+              how: "Statutory accounts sign-off date − fiscal year-end date (calendar days)"
+              frequency: annually
+              direction: lower_is_better
+            - id: "860102"
+              number: "8.6.1.M2"
+              name: "Restatement Frequency"
+              what: "Number of prior-period restatements in the current reporting period"
+              why: "Restatements indicate quality issues and erode stakeholder confidence"
+              how: "Count of prior-period adjustments classified as restatements"
+              frequency: annually
+              direction: lower_is_better
         - id: "821546"
           number: "8.6.2"
           name: "Perform group consolidation and eliminate intercompany balances"
           agentic_profile: "h+A"
           agentic_note: "Agents execute consolidation rules; humans resolve complex judgements"
+          measurements:
+            - id: "860201"
+              number: "8.6.2.M1"
+              name: "Consolidation Cycle Time"
+              what: "Business days from subsidiary data submission to consolidated results"
+              why: "Faster consolidation enables earlier group reporting"
+              how: "Consolidated results date − last subsidiary submission date (business days)"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "860202"
+              number: "8.6.2.M2"
+              name: "Elimination Accuracy Rate"
+              what: "Percentage of intercompany eliminations processed without manual correction"
+              why: "Elimination errors delay consolidation and risk misstatement"
+              how: "Auto-eliminated without correction / Total eliminations × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "567413"
           number: "8.6.3"
           name: "Produce management reporting packs and dashboards"
           agentic_profile: "h+A"
           agentic_note: "Agents generate reports from live data; humans add commentary and insight"
+          measurements:
+            - id: "860301"
+              number: "8.6.3.M1"
+              name: "Management Report Delivery Timeliness"
+              what: "Percentage of management reports delivered by the agreed deadline"
+              why: "Late reports reduce their decision-support value"
+              how: "Reports delivered on time / Total reports due × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "860302"
+              number: "8.6.3.M2"
+              name: "Report Automation Rate"
+              what: "Percentage of management report content generated automatically"
+              why: "Higher automation frees finance teams for analysis and insight"
+              how: "Auto-generated report elements / Total report elements × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "243815"
           number: "8.6.4"
           name: "Prepare regulatory and supervisory filings"
           agentic_profile: "H=A"
           agentic_note: "Agents compile data and draft filings; humans validate and submit"
+          measurements:
+            - id: "860401"
+              number: "8.6.4.M1"
+              name: "Regulatory Filing Timeliness"
+              what: "Percentage of regulatory filings submitted by the statutory deadline"
+              why: "Late filings attract penalties and regulatory sanctions"
+              how: "Filings submitted on time / Total filings due × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "860402"
+              number: "8.6.4.M2"
+              name: "Filing Rejection Rate"
+              what: "Percentage of regulatory filings rejected or returned for correction"
+              why: "Rejections indicate data quality or compliance issues"
+              how: "Rejected filings / Total filings submitted × 100"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "751673"
           number: "8.6.5"
           name: "Manage external stakeholder financial communications"
           agentic_profile: "H+a"
           agentic_note: "Humans own messaging and narrative; agents prepare supporting materials"
+          measurements:
+            - id: "860501"
+              number: "8.6.5.M1"
+              name: "Investor Query Response Time"
+              what: "Average business days to respond to investor or analyst queries"
+              why: "Prompt responses maintain investor confidence and market credibility"
+              how: "Mean business days from query receipt to substantive response"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "860502"
+              number: "8.6.5.M2"
+              name: "Earnings Guidance Accuracy"
+              what: "Deviation of actual results from published earnings guidance"
+              why: "Accurate guidance builds market trust; large misses damage credibility"
+              how: "|Actual EPS − Guided EPS| / Guided EPS × 100"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "482631"
           number: "8.6.6"
           name: "Manage financial data quality and master data governance"
           agentic_profile: "h+A"
           agentic_note: "Agents monitor data quality; humans resolve structural issues"
+          measurements:
+            - id: "860601"
+              number: "8.6.6.M1"
+              name: "Financial Data Quality Score"
+              what: "Composite score measuring completeness, accuracy, and timeliness of financial data"
+              why: "Poor data quality undermines reporting accuracy and decision-making"
+              how: "Weighted average of completeness %, accuracy %, and timeliness % metrics"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "860602"
+              number: "8.6.6.M2"
+              name: "Master Data Duplicate Rate"
+              what: "Percentage of financial master data records identified as duplicates"
+              why: "Duplicates cause misposting, reporting errors, and reconciliation failures"
+              how: "Duplicate records identified / Total master data records × 100"
+              frequency: quarterly
+              direction: lower_is_better
 
     - id: "326914"
       number: "8.7"
@@ -256,28 +891,130 @@ domain:
           name: "Design and document financial controls and control frameworks"
           agentic_profile: "H+a"
           agentic_note: "Humans design controls; agents maintain control documentation"
+          measurements:
+            - id: "870101"
+              number: "8.7.1.M1"
+              name: "Control Documentation Currency"
+              what: "Percentage of controls with documentation reviewed in the last 12 months"
+              why: "Outdated documentation indicates controls may not reflect current processes"
+              how: "Controls reviewed in last 12 months / Total documented controls × 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "870102"
+              number: "8.7.1.M2"
+              name: "Control Coverage Ratio"
+              what: "Percentage of key financial risks with at least one mapped control"
+              why: "Unmitigated risks represent governance gaps"
+              how: "Risks with mapped controls / Total key financial risks × 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "413672"
           number: "8.7.2"
           name: "Execute and evidence key financial controls"
           agentic_profile: "H=A"
           agentic_note: "Agents perform automated controls and log evidence; humans execute manual controls"
+          measurements:
+            - id: "870201"
+              number: "8.7.2.M1"
+              name: "Control Execution Rate"
+              what: "Percentage of scheduled controls executed on time"
+              why: "Missed controls create compliance gaps and audit findings"
+              how: "Controls executed on time / Controls scheduled × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "870202"
+              number: "8.7.2.M2"
+              name: "Control Evidence Completeness"
+              what: "Percentage of executed controls with complete audit-ready evidence"
+              why: "Incomplete evidence leads to audit qualifications and control failures"
+              how: "Controls with complete evidence / Controls executed × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "683594"
           number: "8.7.3"
           name: "Test control effectiveness and remediate deficiencies"
           agentic_profile: "H=A"
           agentic_note: "Agents run control tests; humans evaluate results and oversee remediation"
+          measurements:
+            - id: "870301"
+              number: "8.7.3.M1"
+              name: "Control Deficiency Rate"
+              what: "Percentage of tested controls found to be deficient"
+              why: "High deficiency rates indicate systemic control design or execution issues"
+              how: "Deficient controls / Total controls tested × 100"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "870302"
+              number: "8.7.3.M2"
+              name: "Deficiency Remediation Timeliness"
+              what: "Percentage of control deficiencies remediated within the agreed timeframe"
+              why: "Delayed remediation extends the period of elevated risk"
+              how: "Deficiencies remediated on time / Total deficiencies identified × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "864312"
           number: "8.7.4"
           name: "Support internal audit engagement and follow-up"
           agentic_profile: "H+a"
           agentic_note: "Humans liaise with auditors; agents compile evidence and track findings"
+          measurements:
+            - id: "870401"
+              number: "8.7.4.M1"
+              name: "Audit Finding Closure Rate"
+              what: "Percentage of internal audit findings closed within the agreed timeline"
+              why: "Open findings represent unresolved risks and governance concerns"
+              how: "Findings closed on time / Total findings due for closure × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "870402"
+              number: "8.7.4.M2"
+              name: "Repeat Finding Rate"
+              what: "Percentage of audit findings that are repeats of previously raised issues"
+              why: "Repeat findings indicate ineffective remediation"
+              how: "Repeat findings / Total findings in period × 100"
+              frequency: annually
+              direction: lower_is_better
         - id: "291537"
           number: "8.7.5"
           name: "Coordinate external audit processes and information requests"
           agentic_profile: "H=A"
           agentic_note: "Agents manage information requests and track status; humans manage the relationship"
+          measurements:
+            - id: "870501"
+              number: "8.7.5.M1"
+              name: "PBC (Prepared by Client) Timeliness"
+              what: "Percentage of external audit information requests delivered by the agreed date"
+              why: "Late PBC items delay the audit and increase audit fees"
+              how: "PBC items delivered on time / Total PBC items requested × 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "870502"
+              number: "8.7.5.M2"
+              name: "Audit Fee Variance"
+              what: "Deviation of actual external audit fees from budgeted fees"
+              why: "Fee overruns often indicate process inefficiency or scope creep"
+              how: "(Actual audit fees − Budgeted fees) / Budgeted fees × 100"
+              frequency: annually
+              direction: lower_is_better
         - id: "637148"
           number: "8.7.6"
           name: "Manage segregation of duties and access controls"
           agentic_profile: "h+A"
           agentic_note: "Agents monitor access patterns and flag violations; humans remediate"
+          measurements:
+            - id: "870601"
+              number: "8.7.6.M1"
+              name: "SoD Violation Rate"
+              what: "Number of active segregation of duties violations"
+              why: "SoD violations are a critical fraud and compliance risk"
+              how: "Count of users with conflicting access roles"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "870602"
+              number: "8.7.6.M2"
+              name: "Access Review Completion Rate"
+              what: "Percentage of user access reviews completed on schedule"
+              why: "Incomplete access reviews leave excess privileges undetected"
+              how: "Access reviews completed on time / Total reviews scheduled × 100"
+              frequency: quarterly
+              direction: higher_is_better

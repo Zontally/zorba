@@ -44,7 +44,7 @@ The following table defines the **node types** in the business object graph. Eac
 | **Agent** | An AI agent participating in the workforce. See the [Blended Workforce Model](03-workforce-model.md) for agent taxonomy and trust levels. | Optional | An agent may fill one or more roles. Agent objects carry autonomy-level and trust metadata. |
 | **Team** | A group of humans and/or agents that owns or operates business objects. | Recommended | Teams own processes, capabilities, or domains. A team may contain sub-teams. |
 | **Organisational Unit** | A structural entity within the enterprise — holding company, subsidiary, business unit, brand, division, region, department, or any other organisational grouping. Organisational Units nest recursively to model any corporate structure. | Yes (≥1) | Organisational Units are the **root of the object graph**. Every other object is ultimately scoped to one or more Organisational Units. Nest to arbitrary depth. |
-| **Metric** | A measurable indicator — KPI, SLA, quality score, throughput measure. | Optional | Metrics attach to objectives, processes, capabilities, or any other object type. |
+| **Metric** | A measurable indicator — KPI, SLA, quality score, throughput measure. In ZORBA, **Measurements** are first-class peers to Activities within Processes, making process performance evaluation an explicit architectural concern alongside process execution. | Optional | Metrics attach to objectives, processes, capabilities, or any other object type. Measurements (a specialisation of Metric) sit as peers to Activities under Processes. |
 | **WardleyMap** | A Wardley Map expressed as code using the Online Wardley Maps (OWM) DSL. Contains the map source (OWM DSL text), scoped to an Organisational Unit or Domain. Maps visualise the evolution of capabilities, processes, and their dependencies. | Optional | Maps can be scoped to domains, capabilities, value chains, or custom boundaries. Multiple maps may represent different views of the same architecture. |
 
 ### Recommended Attributes per Object Type
@@ -85,7 +85,7 @@ Every object carries a common set of base attributes plus type-specific extensio
 | **Role** | `performer_type` (human, agent, either), `authority_level` |
 | **Agent** | `agent_type` (see [Workforce Model](03-workforce-model.md)), `trust_level`, `autonomy_level`, `platform`, `model` |
 | **Team** | `team_type` (human, blended, agent-only), `member_count`, `agent_count` |
-| **Metric** | `unit`, `direction` (higher-is-better, lower-is-better, target-is-best), `frequency`, `source_system` |
+| **Metric** | `unit`, `direction` (higher-is-better, lower-is-better, target-is-best), `frequency`, `source_system`. **Measurement-specific** (when used as a process peer): `what` (what it measures), `why` (why it matters), `how` (formula/calculation method), `frequency` (daily/weekly/monthly/quarterly/annually), `direction` (higher_is_better, lower_is_better) |
 | **WardleyMap** | `owm_source` (Text - the OWM DSL map code), `map_scope` (enum: domain, capability, value_chain, custom), `evolution_context` (Text - narrative context for the map) |
 
 ---

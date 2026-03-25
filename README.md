@@ -15,7 +15,7 @@ ZORBA defines how organisations operate when humans and AI agents work as one �
 | Document | Description |
 |----------|-------------|
 | [Manifesto](framework/01-manifesto.md) | Why enterprise architecture must be redesigned for the agentic era |
-| [Architecture](framework/02-architecture.md) | The structural hierarchy: OU → Domain → Capability → Process → Activity → Work |
+| [Architecture](framework/02-architecture.md) | The structural hierarchy: OU → Domain → Capability → Process → {Activity → Work, Measurement} |
 | [Workforce Model](framework/03-workforce-model.md) | How humans and AI agents collaborate — agent types, trust levels, autonomy |
 | [Domain Reference](framework/04-domain-reference.md) | 12 enterprise domains with Value Chain / Management Function classification |
 | [Agentic Patterns](framework/05-agentic-patterns.md) | Reusable patterns for agent participation in enterprise operations |
