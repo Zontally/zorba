@@ -29,26 +29,111 @@ domain:
           name: "Develop and articulate the enterprise mission and purpose"
           agentic_profile: H
           agentic_note: "Human-led; agents may research peer missions for benchmarking"
+          measurements:
+            - id: "010101"
+              number: "1.1.1.M1"
+              name: "Mission Clarity Score"
+              what: "Employee understanding and alignment with enterprise mission"
+              why: "Unclear mission leads to strategic drift"
+              how: "Annual survey score (1-10) on mission comprehension"
+              frequency: annually
+              direction: higher_is_better
+            - id: "010102"
+              number: "1.1.1.M2"
+              name: "Mission Review Cycle Adherence"
+              what: "Whether mission review occurs within planned cadence"
+              why: "Ensures mission stays relevant as markets evolve"
+              how: "Binary (1=on schedule, 0=overdue) tracked quarterly"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "842156"
           number: "1.1.2"
           name: "Define and codify organisational values and principles"
           agentic_profile: H
           agentic_note: "Human-led; values require authentic human deliberation"
+          measurements:
+            - id: "010201"
+              number: "1.1.2.M1"
+              name: "Values Awareness Rate"
+              what: "Percentage of employees who can articulate core values"
+              why: "Values only drive behaviour when known and understood"
+              how: "Survey respondents correctly identifying values / Total respondents × 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "010202"
+              number: "1.1.2.M2"
+              name: "Values-Behaviour Alignment Score"
+              what: "Degree to which observed behaviours reflect stated values"
+              why: "Gap between stated and lived values erodes culture"
+              how: "360-degree assessment average score on values alignment (1-10)"
+              frequency: annually
+              direction: higher_is_better
         - id: "394028"
           number: "1.1.3"
           name: "Formulate the long-term vision and strategic ambition"
           agentic_profile: "H+a"
           agentic_note: "Human-led with agent scenario modelling and trend analysis"
+          measurements:
+            - id: "010301"
+              number: "1.1.3.M1"
+              name: "Vision Refresh Timeliness"
+              what: "Whether vision is reviewed and refreshed on schedule"
+              why: "Stale vision leads to strategic misalignment"
+              how: "Days since last vision review vs planned review cycle (variance in days)"
+              frequency: annually
+              direction: lower_is_better
+            - id: "010302"
+              number: "1.1.3.M2"
+              name: "Strategic Ambition Stretch Ratio"
+              what: "Ratio of vision targets to current performance baseline"
+              why: "Ensures vision is aspirational enough to drive transformation"
+              how: "Vision target metric / Current baseline metric"
+              frequency: annually
+              direction: higher_is_better
         - id: "651873"
           number: "1.1.4"
           name: "Communicate vision and purpose across the enterprise"
           agentic_profile: "H=A"
           agentic_note: "Agents generate communications; humans approve and personalise"
+          measurements:
+            - id: "010401"
+              number: "1.1.4.M1"
+              name: "Vision Communication Reach"
+              what: "Percentage of workforce who received vision communications"
+              why: "Vision only drives alignment when broadly communicated"
+              how: "Employees reached / Total headcount × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "010402"
+              number: "1.1.4.M2"
+              name: "Vision Comprehension Rate"
+              what: "Percentage of employees who can articulate the strategic vision"
+              why: "Receiving communications does not guarantee understanding"
+              how: "Pulse survey correct responses / Total respondents × 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "923467"
           number: "1.1.5"
           name: "Review and refresh the business concept periodically"
           agentic_profile: "H+a"
           agentic_note: "Agents monitor market shifts and trigger review cycles"
+          measurements:
+            - id: "010501"
+              number: "1.1.5.M1"
+              name: "Business Concept Review Rate"
+              what: "Whether periodic reviews are completed on schedule"
+              why: "Ensures the business concept remains relevant"
+              how: "Reviews completed on time / Reviews scheduled × 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "010502"
+              number: "1.1.5.M2"
+              name: "Market Signal Response Time"
+              what: "Days between significant market shift and triggered review"
+              why: "Slow response risks competitive disadvantage"
+              how: "Review trigger date − market event date (calendar days)"
+              frequency: quarterly
+              direction: lower_is_better
 
     - id: "156489"
       number: "1.2"
@@ -64,36 +149,155 @@ domain:
           name: "Conduct environmental and market analysis"
           agentic_profile: "h+A"
           agentic_note: "Agent-heavy; agents scan, synthesise, and present; humans interpret"
+          measurements:
+            - id: "010601"
+              number: "1.2.1.M1"
+              name: "Environmental Scan Coverage"
+              what: "Number of external domains systematically analysed"
+              why: "Blind spots lead to strategic surprises"
+              how: "Domains covered (PESTLE) / 6 × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "010602"
+              number: "1.2.1.M2"
+              name: "Insight Freshness"
+              what: "Age of the most recent market analysis deliverable"
+              why: "Stale analysis leads to outdated decisions"
+              how: "Current date − latest analysis date (calendar days)"
+              frequency: monthly
+              direction: lower_is_better
         - id: "762514"
           number: "1.2.2"
           name: "Assess internal capabilities and strategic readiness"
           agentic_profile: "H=A"
           agentic_note: "Agents map capabilities and gaps; humans validate and prioritise"
+          measurements:
+            - id: "010701"
+              number: "1.2.2.M1"
+              name: "Capability Gap Identification Rate"
+              what: "Percentage of strategic capabilities assessed for readiness"
+              why: "Unidentified gaps delay strategy execution"
+              how: "Capabilities assessed / Total strategic capabilities × 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "010702"
+              number: "1.2.2.M2"
+              name: "Readiness Assessment Cycle Time"
+              what: "Days to complete a capability readiness assessment"
+              why: "Faster assessments enable responsive planning"
+              how: "Assessment completion date − start date (business days)"
+              frequency: annually
+              direction: lower_is_better
         - id: "439286"
           number: "1.2.3"
           name: "Identify and evaluate strategic options"
           agentic_profile: "H+a"
           agentic_note: "Agents model scenarios and outcomes; humans judge and decide"
+          measurements:
+            - id: "010801"
+              number: "1.2.3.M1"
+              name: "Strategic Options Evaluated"
+              what: "Number of distinct strategic options formally evaluated"
+              why: "Too few options increases risk of suboptimal strategy"
+              how: "Count of formally evaluated strategic options per cycle"
+              frequency: annually
+              direction: higher_is_better
+            - id: "010802"
+              number: "1.2.3.M2"
+              name: "Scenario Model Accuracy"
+              what: "Variance between scenario projections and actual outcomes"
+              why: "Accurate models improve decision confidence"
+              how: "|Projected − Actual| / Actual × 100"
+              frequency: annually
+              direction: lower_is_better
         - id: "185673"
           number: "1.2.4"
           name: "Select and commit to strategic direction"
           agentic_profile: H
           agentic_note: "Human decision; agents provide decision-support artefacts"
+          measurements:
+            - id: "010901"
+              number: "1.2.4.M1"
+              name: "Strategic Decision Cycle Time"
+              what: "Days from option presentation to formal commitment"
+              why: "Delayed decisions create uncertainty"
+              how: "Commitment date − options presentation date (calendar days)"
+              frequency: annually
+              direction: lower_is_better
+            - id: "010902"
+              number: "1.2.4.M2"
+              name: "Stakeholder Alignment Score"
+              what: "Degree of leadership alignment on chosen direction"
+              why: "Misalignment cascades into execution dysfunction"
+              how: "Leadership survey agreement score (1-10)"
+              frequency: annually
+              direction: higher_is_better
         - id: "624831"
           number: "1.2.5"
           name: "Document and formalise the strategic plan"
           agentic_profile: "h+A"
           agentic_note: "Agents draft; humans review, refine, and approve"
+          measurements:
+            - id: "011001"
+              number: "1.2.5.M1"
+              name: "Strategic Plan Completion Rate"
+              what: "Percentage of strategic plan sections fully documented"
+              why: "Incomplete plans lead to ambiguous execution"
+              how: "Completed sections / Required sections × 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "011002"
+              number: "1.2.5.M2"
+              name: "Plan Formalisation Cycle Time"
+              what: "Days from strategic decision to approved plan"
+              why: "Delays slow cascade and execution start"
+              how: "Plan approval date − decision date (business days)"
+              frequency: annually
+              direction: lower_is_better
         - id: "571948"
           number: "1.2.6"
           name: "Cascade strategy across organisational units and domains"
           agentic_profile: "H=A"
           agentic_note: "Agents distribute and track acknowledgement; humans contextualise for their teams"
+          measurements:
+            - id: "011101"
+              number: "1.2.6.M1"
+              name: "Strategy Cascade Completion"
+              what: "Percentage of OUs with localised strategic plans"
+              why: "Uncascaded strategy remains executive abstraction"
+              how: "OUs with localised plans / Total OUs × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "011102"
+              number: "1.2.6.M2"
+              name: "Cascade Acknowledgement Rate"
+              what: "Percentage of leaders confirming understanding"
+              why: "Acknowledgement is minimum bar for cascade effectiveness"
+              how: "Leaders confirming / Total unit leaders × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "893215"
           number: "1.2.7"
           name: "Monitor strategic assumptions and trigger strategy refresh"
           agentic_profile: A
           agentic_note: "Agents continuously monitor assumptions; alert humans when conditions change"
+          measurements:
+            - id: "011201"
+              number: "1.2.7.M1"
+              name: "Assumption Monitoring Coverage"
+              what: "Percentage of assumptions with active monitoring"
+              why: "Unmonitored assumptions become invisible risks"
+              how: "Assumptions monitored / Total assumptions × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "011202"
+              number: "1.2.7.M2"
+              name: "Assumption Breach Alert Latency"
+              what: "Time between breach and alert to leadership"
+              why: "Faster alerts enable faster strategic response"
+              how: "Alert timestamp − breach detection timestamp (hours)"
+              frequency: quarterly
+              direction: lower_is_better
 
     - id: "472053"
       number: "1.3"
@@ -108,26 +312,111 @@ domain:
           name: "Define the strategic planning calendar and milestones"
           agentic_profile: "H+a"
           agentic_note: "Humans set cadences; agents schedule and track"
+          measurements:
+            - id: "011301"
+              number: "1.3.1.M1"
+              name: "Planning Calendar Adherence"
+              what: "Percentage of milestones completed on schedule"
+              why: "Missed milestones cascade delays"
+              how: "Milestones on time / Total milestones × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "011302"
+              number: "1.3.1.M2"
+              name: "Planning Cycle Duration"
+              what: "Total elapsed days for annual planning cycle"
+              why: "Long cycles reduce agility"
+              how: "Cycle end date − start date (calendar days)"
+              frequency: annually
+              direction: lower_is_better
         - id: "728463"
           number: "1.3.2"
           name: "Coordinate cross-functional input to strategic planning"
           agentic_profile: "H=A"
           agentic_note: "Agents orchestrate collection; humans contribute substance"
+          measurements:
+            - id: "011401"
+              number: "1.3.2.M1"
+              name: "Cross-Functional Input Rate"
+              what: "Percentage of functions providing input on time"
+              why: "Missing inputs create planning blind spots"
+              how: "Functions on time / Functions requested × 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "011402"
+              number: "1.3.2.M2"
+              name: "Input Quality Score"
+              what: "Average quality rating of cross-functional contributions"
+              why: "Low-quality inputs degrade plan quality"
+              how: "Average quality rating from reviewers (1-10)"
+              frequency: annually
+              direction: higher_is_better
         - id: "514927"
           number: "1.3.3"
           name: "Facilitate strategic review sessions"
           agentic_profile: "H+a"
           agentic_note: "Agents prepare briefing packs; humans facilitate discussion"
+          measurements:
+            - id: "011501"
+              number: "1.3.3.M1"
+              name: "Review Session Completion Rate"
+              what: "Percentage of scheduled reviews actually held"
+              why: "Skipped reviews reduce oversight"
+              how: "Reviews held / Reviews scheduled × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "011502"
+              number: "1.3.3.M2"
+              name: "Review Action Closure Rate"
+              what: "Percentage of review actions completed by due date"
+              why: "Open items undermine review effectiveness"
+              how: "Actions closed on time / Total actions × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "896234"
           number: "1.3.4"
           name: "Manage the transition from planning to execution"
           agentic_profile: "H=A"
           agentic_note: "Agents translate strategy into initiative structures; humans approve"
+          measurements:
+            - id: "011601"
+              number: "1.3.4.M1"
+              name: "Strategy-to-Initiative Rate"
+              what: "Percentage of objectives linked to funded initiatives"
+              why: "Untranslated strategies never reach execution"
+              how: "Objectives with initiatives / Total objectives × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "011602"
+              number: "1.3.4.M2"
+              name: "Execution Readiness Score"
+              what: "Average readiness of initiatives entering execution"
+              why: "Poorly prepared initiatives fail during delivery"
+              how: "Average readiness checklist score (0-100%)"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "263148"
           number: "1.3.5"
           name: "Operate concurrent planning horizons"
           agentic_profile: "H=A"
           agentic_note: "Agents maintain multiple planning timelines; humans prioritise across horizons"
+          measurements:
+            - id: "011701"
+              number: "1.3.5.M1"
+              name: "Planning Horizon Coverage"
+              what: "Number of concurrent planning horizons maintained"
+              why: "Single-horizon planning misses long-term threats"
+              how: "Count of actively maintained planning horizons"
+              frequency: annually
+              direction: higher_is_better
+            - id: "011702"
+              number: "1.3.5.M2"
+              name: "Cross-Horizon Alignment Score"
+              what: "Consistency across short, medium, and long-term plans"
+              why: "Misaligned horizons create conflicting priorities"
+              how: "Planning review assessment score (1-10)"
+              frequency: annually
+              direction: higher_is_better
 
     - id: "619372"
       number: "1.4"
@@ -142,26 +431,111 @@ domain:
           name: "Manage board composition, meetings, and administration"
           agentic_profile: "h+A"
           agentic_note: "Agents handle scheduling, document prep, minutes; humans govern"
+          measurements:
+            - id: "011801"
+              number: "1.4.1.M1"
+              name: "Board Meeting Adherence"
+              what: "Percentage of board meetings held on schedule"
+              why: "Missed meetings impair governance oversight"
+              how: "Meetings on schedule / Meetings planned × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "011802"
+              number: "1.4.1.M2"
+              name: "Board Pack Timeliness"
+              what: "Days before meeting that packs are distributed"
+              why: "Late distribution reduces preparation quality"
+              how: "Meeting date − pack distribution date (calendar days)"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "753648"
           number: "1.4.2"
           name: "Prepare and distribute board and committee packs"
           agentic_profile: "h+A"
           agentic_note: "Agent-assembled; humans review and approve content"
+          measurements:
+            - id: "011901"
+              number: "1.4.2.M1"
+              name: "Board Pack Completeness"
+              what: "Percentage of required sections included"
+              why: "Incomplete packs impair decision-making"
+              how: "Sections included / Required sections × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "011902"
+              number: "1.4.2.M2"
+              name: "Pack Preparation Cycle Time"
+              what: "Days to assemble and approve the board pack"
+              why: "Shorter cycles allow more current information"
+              how: "Approval date − assembly start date (business days)"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "192837"
           number: "1.4.3"
           name: "Manage fiduciary and regulatory governance obligations"
           agentic_profile: "H+a"
           agentic_note: "Agents monitor compliance calendars; humans exercise fiduciary judgement"
+          measurements:
+            - id: "012001"
+              number: "1.4.3.M1"
+              name: "Governance Compliance Rate"
+              what: "Percentage of obligations met on time"
+              why: "Non-compliance creates legal and reputational risk"
+              how: "Obligations met on time / Total obligations × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "012002"
+              number: "1.4.3.M2"
+              name: "Regulatory Filing Timeliness"
+              what: "Average days before deadline that filings are submitted"
+              why: "Cutting it close increases missed-deadline risk"
+              how: "Average (deadline − submission date) across filings (days)"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "647312"
           number: "1.4.4"
           name: "Coordinate shareholder and stakeholder communications"
           agentic_profile: "H=A"
           agentic_note: "Agents draft; humans approve tone and content"
+          measurements:
+            - id: "012101"
+              number: "1.4.4.M1"
+              name: "Stakeholder Comms Timeliness"
+              what: "Percentage of communications delivered on schedule"
+              why: "Late communications erode confidence"
+              how: "Communications on time / Planned communications × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "012102"
+              number: "1.4.4.M2"
+              name: "Stakeholder Satisfaction Score"
+              what: "Satisfaction with quality and transparency"
+              why: "Low satisfaction signals trust gaps"
+              how: "Average stakeholder survey score (1-10)"
+              frequency: annually
+              direction: higher_is_better
         - id: "831456"
           number: "1.4.5"
           name: "Maintain the corporate governance framework and policies"
           agentic_profile: "H=A"
           agentic_note: "Agents track regulatory changes and flag policy gaps; humans update policies"
+          measurements:
+            - id: "012201"
+              number: "1.4.5.M1"
+              name: "Policy Currency Rate"
+              what: "Percentage of policies reviewed within cycle"
+              why: "Outdated policies create compliance gaps"
+              how: "Policies reviewed on schedule / Total policies × 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "012202"
+              number: "1.4.5.M2"
+              name: "Policy Gap Closure Time"
+              what: "Average days to close identified policy gaps"
+              why: "Open gaps represent governance exposure"
+              how: "Average gap closure date − identification date (calendar days)"
+              frequency: quarterly
+              direction: lower_is_better
 
     - id: "537182"
       number: "1.5"
@@ -176,31 +550,133 @@ domain:
           name: "Define enterprise KPIs and performance frameworks"
           agentic_profile: "H+a"
           agentic_note: "Humans define what matters; agents benchmark and recommend targets"
+          measurements:
+            - id: "012301"
+              number: "1.5.1.M1"
+              name: "KPI Definition Coverage"
+              what: "Percentage of objectives with defined KPIs"
+              why: "Unmeasured objectives cannot be managed"
+              how: "Objectives with KPIs / Total objectives × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "012302"
+              number: "1.5.1.M2"
+              name: "KPI Target Setting Rate"
+              what: "Percentage of KPIs with approved targets"
+              why: "KPIs without targets provide data but not accountability"
+              how: "KPIs with targets / Total KPIs × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "869273"
           number: "1.5.2"
           name: "Collect, aggregate, and validate performance data"
           agentic_profile: A
           agentic_note: "Agent-executed; continuous automated data collection"
+          measurements:
+            - id: "012401"
+              number: "1.5.2.M1"
+              name: "Data Collection Automation Rate"
+              what: "Percentage of KPIs with automated collection"
+              why: "Manual collection is slow and error-prone"
+              how: "KPIs with automated feeds / Total KPIs × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "012402"
+              number: "1.5.2.M2"
+              name: "Data Freshness"
+              what: "Average lag between event and data availability"
+              why: "Stale data delays decisions"
+              how: "Average (data availability − event timestamp) in hours"
+              frequency: monthly
+              direction: lower_is_better
         - id: "234817"
           number: "1.5.3"
           name: "Analyse performance trends and identify variances"
           agentic_profile: "h+A"
           agentic_note: "Agents analyse and surface insights; humans interpret meaning"
+          measurements:
+            - id: "012501"
+              number: "1.5.3.M1"
+              name: "Variance Detection Rate"
+              what: "Percentage of variances identified proactively"
+              why: "Proactive detection enables faster correction"
+              how: "Variances detected proactively / Total variances × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "012502"
+              number: "1.5.3.M2"
+              name: "Trend Analysis Timeliness"
+              what: "Days after period close that analysis is available"
+              why: "Late analysis reduces actionability"
+              how: "Analysis date − period close date (business days)"
+              frequency: monthly
+              direction: lower_is_better
         - id: "695148"
           number: "1.5.4"
           name: "Conduct periodic performance reviews"
           agentic_profile: "H+a"
           agentic_note: "Agents prepare review materials; humans lead review discussions"
+          measurements:
+            - id: "012601"
+              number: "1.5.4.M1"
+              name: "Review Cadence Adherence"
+              what: "Percentage of reviews completed on time"
+              why: "Skipped reviews reduce accountability"
+              how: "Reviews on schedule / Reviews planned × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "012602"
+              number: "1.5.4.M2"
+              name: "Review Decision Cycle Time"
+              what: "Days from review to documented decisions"
+              why: "Slow follow-through undermines review value"
+              how: "Decision date − review date (business days)"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "748321"
           number: "1.5.5"
           name: "Manage corrective actions and performance interventions"
           agentic_profile: "H+a"
           agentic_note: "Humans decide interventions; agents track execution and follow-up"
+          measurements:
+            - id: "012701"
+              number: "1.5.5.M1"
+              name: "Corrective Action Completion"
+              what: "Percentage of actions completed by target date"
+              why: "Incomplete actions allow issues to persist"
+              how: "Actions on time / Total corrective actions × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "012702"
+              number: "1.5.5.M2"
+              name: "Intervention Effectiveness Rate"
+              what: "Percentage of interventions achieving target improvement"
+              why: "Ineffective interventions waste resources"
+              how: "Interventions achieving target / Total interventions × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "513429"
           number: "1.5.6"
           name: "Report performance to governance bodies and stakeholders"
           agentic_profile: "h+A"
           agentic_note: "Agents generate reports; humans present and contextualise"
+          measurements:
+            - id: "012801"
+              number: "1.5.6.M1"
+              name: "Performance Report Timeliness"
+              what: "Days after period close that reports are delivered"
+              why: "Late reports reduce oversight quality"
+              how: "Report date − period close date (business days)"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "012802"
+              number: "1.5.6.M2"
+              name: "Report Accuracy Rate"
+              what: "Percentage of reports needing no corrections"
+              why: "Corrections erode reporting credibility"
+              how: "Reports without corrections / Total reports × 100"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "843625"
       number: "1.6"
@@ -215,26 +691,111 @@ domain:
           name: "Identify and evaluate potential strategic partners"
           agentic_profile: "H=A"
           agentic_note: "Agents scan market and assess fit; humans evaluate relationship potential"
+          measurements:
+            - id: "012901"
+              number: "1.6.1.M1"
+              name: "Partner Pipeline Volume"
+              what: "Number of potential partners under evaluation"
+              why: "Healthy pipeline ensures future partnerships"
+              how: "Count of partners in evaluation pipeline"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "012902"
+              number: "1.6.1.M2"
+              name: "Partner Evaluation Cycle Time"
+              what: "Days from identification to go/no-go decision"
+              why: "Slow evaluation delays partnership benefits"
+              how: "Decision date − identification date (calendar days)"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "916254"
           number: "1.6.2"
           name: "Negotiate and formalise partnership agreements"
           agentic_profile: H
           agentic_note: "Human-led negotiation; agents support with research and document preparation"
+          measurements:
+            - id: "013001"
+              number: "1.6.2.M1"
+              name: "Partnership Agreement Cycle Time"
+              what: "Days from negotiation start to signed agreement"
+              why: "Protracted negotiations delay value"
+              how: "Signature date − negotiation start date (calendar days)"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "013002"
+              number: "1.6.2.M2"
+              name: "Partnership Terms Achievement"
+              what: "Percentage of priority terms in final agreement"
+              why: "Ensures agreements protect enterprise interests"
+              how: "Required terms included / Total required terms × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "284163"
           number: "1.6.3"
           name: "Manage ongoing partner relationships and governance"
           agentic_profile: "H+a"
           agentic_note: "Humans own relationships; agents track commitments and performance"
+          measurements:
+            - id: "013101"
+              number: "1.6.3.M1"
+              name: "Partner Satisfaction Score"
+              what: "Partner-reported satisfaction with the relationship"
+              why: "Dissatisfied partners disengage"
+              how: "Average partner survey score (1-10)"
+              frequency: annually
+              direction: higher_is_better
+            - id: "013102"
+              number: "1.6.3.M2"
+              name: "Commitment Fulfilment Rate"
+              what: "Percentage of mutual commitments fulfilled on time"
+              why: "Unfulfilled commitments erode trust"
+              how: "Commitments on time / Total commitments × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "637412"
           number: "1.6.4"
           name: "Measure partner value and contribution"
           agentic_profile: "h+A"
           agentic_note: "Agents track metrics and ROI; humans assess strategic value"
+          measurements:
+            - id: "013201"
+              number: "1.6.4.M1"
+              name: "Partner ROI"
+              what: "Return on investment from strategic partnerships"
+              why: "Ensures partnerships deliver value"
+              how: "Value generated / Investment in partnership × 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "013202"
+              number: "1.6.4.M2"
+              name: "Value Assessment Completion"
+              what: "Percentage of partners with completed value assessments"
+              why: "Unassessed partnerships may not return value"
+              how: "Assessed partners / Total active partners × 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "459823"
           number: "1.6.5"
           name: "Manage partner ecosystem coordination"
           agentic_profile: "H=A"
           agentic_note: "Agents orchestrate information flow; humans manage strategic alignment"
+          measurements:
+            - id: "013301"
+              number: "1.6.5.M1"
+              name: "Ecosystem Coordination Score"
+              what: "Rating of cross-partner coordination quality"
+              why: "Poor coordination reduces ecosystem value"
+              how: "Partner survey coordination score (1-10)"
+              frequency: annually
+              direction: higher_is_better
+            - id: "013302"
+              number: "1.6.5.M2"
+              name: "Information Sharing Timeliness"
+              what: "Average time for critical info to reach partners"
+              why: "Delayed sharing reduces responsiveness"
+              how: "Average distribution time for priority comms (hours)"
+              frequency: quarterly
+              direction: lower_is_better
 
     - id: "291648"
       number: "1.7"
@@ -249,26 +810,111 @@ domain:
           name: "Define and maintain the enterprise operating model"
           agentic_profile: "H+a"
           agentic_note: "Humans design; agents maintain documentation and track drift"
+          measurements:
+            - id: "013401"
+              number: "1.7.1.M1"
+              name: "Operating Model Currency"
+              what: "Whether documentation is current"
+              why: "Outdated docs lead to operating model drift"
+              how: "Days since last operating model review"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "013402"
+              number: "1.7.1.M2"
+              name: "Operating Model Drift Score"
+              what: "Divergence between documented and actual model"
+              why: "Drift indicates governance gaps"
+              how: "Count of undocumented deviations from audit"
+              frequency: annually
+              direction: lower_is_better
         - id: "564219"
           number: "1.7.2"
           name: "Manage the enterprise domain and capability map"
           agentic_profile: "H=A"
           agentic_note: "Agents maintain the living map; humans make structural decisions"
+          measurements:
+            - id: "013501"
+              number: "1.7.2.M1"
+              name: "Domain Map Completeness"
+              what: "Percentage of capabilities mapped and documented"
+              why: "Gaps create strategic blind spots"
+              how: "Capabilities documented / Total capabilities × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "013502"
+              number: "1.7.2.M2"
+              name: "Capability Map Update Frequency"
+              what: "Average days between capability map updates"
+              why: "Infrequent updates reduce relevance"
+              how: "Average days between consecutive map updates"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "715362"
           number: "1.7.3"
           name: "Design and govern the blended workforce architecture"
           agentic_profile: "H+a"
           agentic_note: "Humans set workforce composition targets; agents model scenarios and monitor actuals"
+          measurements:
+            - id: "013601"
+              number: "1.7.3.M1"
+              name: "Blended Workforce Maturity"
+              what: "Maturity of the human-agent workforce architecture"
+              why: "Immature design leads to suboptimal agent deployment"
+              how: "Maturity score against framework benchmarks (1-5)"
+              frequency: annually
+              direction: higher_is_better
+            - id: "013602"
+              number: "1.7.3.M2"
+              name: "Workforce Composition Adherence"
+              what: "Deviation from planned human-agent ratios"
+              why: "Large deviations indicate poor workforce planning"
+              how: "|Actual ratio − Target ratio| / Target ratio × 100"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "348972"
           number: "1.7.4"
           name: "Manage framework adoption and customisation"
           agentic_profile: "H=A"
           agentic_note: "Agents track framework versions and compliance; humans decide adaptations"
+          measurements:
+            - id: "013701"
+              number: "1.7.4.M1"
+              name: "Framework Adoption Rate"
+              what: "Percentage of OUs using the adopted framework"
+              why: "Partial adoption reduces framework value"
+              how: "OUs using framework / Applicable OUs × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "013702"
+              number: "1.7.4.M2"
+              name: "Framework Version Currency"
+              what: "Whether enterprise uses current framework version"
+              why: "Outdated versions miss improvements"
+              how: "Current version / Latest available version"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "471836"
           number: "1.7.5"
           name: "Conduct operating model reviews and maturity assessments"
           agentic_profile: "H=A"
           agentic_note: "Agents assess maturity against benchmarks; humans interpret and act"
+          measurements:
+            - id: "013801"
+              number: "1.7.5.M1"
+              name: "Operating Model Maturity Score"
+              what: "Overall maturity from latest assessment"
+              why: "Tracks operating model sophistication"
+              how: "Maturity assessment aggregate score (1-5)"
+              frequency: annually
+              direction: higher_is_better
+            - id: "013802"
+              number: "1.7.5.M2"
+              name: "Recommendation Closure Rate"
+              what: "Percentage of assessment recommendations implemented"
+              why: "Unimplemented recommendations indicate stalled improvement"
+              how: "Implemented / Total recommendations × 100"
+              frequency: annually
+              direction: higher_is_better
 
     - id: "165734"
       number: "1.8"
@@ -283,31 +929,133 @@ domain:
           name: "Identify and prioritise transformation opportunities"
           agentic_profile: "H=A"
           agentic_note: "Agents surface opportunities from data; humans prioritise by strategic value"
+          measurements:
+            - id: "013901"
+              number: "1.8.1.M1"
+              name: "Transformation Pipeline Volume"
+              what: "Number of opportunities under evaluation"
+              why: "Healthy pipeline ensures improvement momentum"
+              how: "Count of opportunities in evaluation"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "013902"
+              number: "1.8.1.M2"
+              name: "Prioritisation Cycle Time"
+              what: "Days from identification to prioritisation decision"
+              why: "Slow prioritisation delays value"
+              how: "Decision date − identification date (calendar days)"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "647521"
           number: "1.8.2"
           name: "Design transformation programmes and roadmaps"
           agentic_profile: "H+a"
           agentic_note: "Humans design; agents model dependencies and timelines"
+          measurements:
+            - id: "014001"
+              number: "1.8.2.M1"
+              name: "Roadmap Completeness Score"
+              what: "Percentage of programmes with complete roadmaps"
+              why: "Incomplete roadmaps cause execution confusion"
+              how: "Programmes with complete roadmaps / Total programmes × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "014002"
+              number: "1.8.2.M2"
+              name: "Programme Design Cycle Time"
+              what: "Days from approval to completed roadmap"
+              why: "Slow design delays execution"
+              how: "Roadmap date − approval date (business days)"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "382714"
           number: "1.8.3"
           name: "Manage organisational change and stakeholder readiness"
           agentic_profile: "H+a"
           agentic_note: "Humans lead change; agents monitor sentiment and readiness indicators"
+          measurements:
+            - id: "014101"
+              number: "1.8.3.M1"
+              name: "Change Readiness Score"
+              what: "Organisational readiness for active transformations"
+              why: "Low readiness predicts change failure"
+              how: "Average readiness survey score (1-10)"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "014102"
+              number: "1.8.3.M2"
+              name: "Stakeholder Engagement Rate"
+              what: "Percentage of stakeholders actively engaged in change"
+              why: "Disengaged stakeholders become blockers"
+              how: "Participating / Total identified stakeholders × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "538469"
           number: "1.8.4"
           name: "Execute and track transformation initiatives"
           agentic_profile: "H=A"
           agentic_note: "Agents track milestones, risks, and dependencies; humans lead delivery"
+          measurements:
+            - id: "014201"
+              number: "1.8.4.M1"
+              name: "Milestone Adherence Rate"
+              what: "Percentage of milestones achieved on schedule"
+              why: "Missed milestones signal programme issues"
+              how: "Milestones on time / Total milestones × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "014202"
+              number: "1.8.4.M2"
+              name: "Transformation Budget Variance"
+              what: "Percentage deviation from approved budget"
+              why: "Budget overruns threaten viability"
+              how: "(Actual − Budget) / Budget × 100"
+              frequency: monthly
+              direction: lower_is_better
         - id: "814237"
           number: "1.8.5"
           name: "Measure transformation outcomes and realise benefits"
           agentic_profile: "h+A"
           agentic_note: "Agents measure and report; humans validate benefit realisation"
+          measurements:
+            - id: "014301"
+              number: "1.8.5.M1"
+              name: "Benefit Realisation Rate"
+              what: "Percentage of planned benefits actually realised"
+              why: "Unrealised benefits represent wasted investment"
+              how: "Benefits realised / Benefits planned × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "014302"
+              number: "1.8.5.M2"
+              name: "Outcome Measurement Timeliness"
+              what: "Days after milestone to completed measurement"
+              why: "Delayed measurement reduces course-correction ability"
+              how: "Measurement date − milestone date (business days)"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "276948"
           number: "1.8.6"
           name: "Embed change and ensure sustainability of new ways of working"
           agentic_profile: "H+a"
           agentic_note: "Humans reinforce behaviours; agents monitor adoption and flag regression"
+          measurements:
+            - id: "014401"
+              number: "1.8.6.M1"
+              name: "New Process Adoption Rate"
+              what: "Percentage of target population using new processes"
+              why: "Low adoption means transformation hasn't stuck"
+              how: "Users on new process / Target population × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "014402"
+              number: "1.8.6.M2"
+              name: "Regression Incident Count"
+              what: "Instances of teams reverting to old ways"
+              why: "Regressions indicate insufficient embedding"
+              how: "Count of documented regression incidents"
+              frequency: monthly
+              direction: lower_is_better
 
     - id: "428519"
       number: "1.9"
@@ -323,26 +1071,111 @@ domain:
           name: "Define the enterprise risk appetite and tolerance"
           agentic_profile: H
           agentic_note: "Human decision; agents provide risk landscape context"
+          measurements:
+            - id: "014501"
+              number: "1.9.1.M1"
+              name: "Risk Appetite Currency"
+              what: "Whether risk appetite is reviewed within cycle"
+              why: "Outdated appetite may not reflect current context"
+              how: "Days since last board-approved review"
+              frequency: annually
+              direction: lower_is_better
+            - id: "014502"
+              number: "1.9.1.M2"
+              name: "Risk Appetite Awareness"
+              what: "Percentage of leaders who can articulate risk appetite"
+              why: "Unknown appetite leads to inconsistent risk-taking"
+              how: "Leaders correctly describing / Total senior leaders × 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "319847"
           number: "1.9.2"
           name: "Identify and assess enterprise-level risks"
           agentic_profile: "H=A"
           agentic_note: "Agents scan for emerging risks; humans assess severity and likelihood"
+          measurements:
+            - id: "014601"
+              number: "1.9.2.M1"
+              name: "Risk Register Completeness"
+              what: "Percentage of risk categories with assessed risks"
+              why: "Gaps represent unmanaged exposure"
+              how: "Categories with risks / Total categories × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "014602"
+              number: "1.9.2.M2"
+              name: "Risk Assessment Refresh Rate"
+              what: "Percentage of risks reassessed within review cycle"
+              why: "Stale assessments may not reflect current levels"
+              how: "Risks reassessed on schedule / Total risks × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "862431"
           number: "1.9.3"
           name: "Monitor the enterprise risk landscape continuously"
           agentic_profile: A
           agentic_note: "Agent-executed; continuous monitoring with human-defined alert thresholds"
+          measurements:
+            - id: "014701"
+              number: "1.9.3.M1"
+              name: "Risk Monitoring Uptime"
+              what: "Percentage of time monitoring is operational"
+              why: "Downtime creates blind spots"
+              how: "Uptime hours / Total hours × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "014702"
+              number: "1.9.3.M2"
+              name: "Emerging Risk Detection Rate"
+              what: "Number of emerging risks identified per quarter"
+              why: "Active monitoring should surface new risks"
+              how: "Count of new risks from monitoring systems"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "547183"
           number: "1.9.4"
           name: "Report risk exposure to governance bodies"
           agentic_profile: "h+A"
           agentic_note: "Agents compile risk reports; humans present and contextualise"
+          measurements:
+            - id: "014801"
+              number: "1.9.4.M1"
+              name: "Risk Report Timeliness"
+              what: "Days before meeting that risk reports are delivered"
+              why: "Late reports reduce oversight quality"
+              how: "Meeting date − report delivery date (calendar days)"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "014802"
+              number: "1.9.4.M2"
+              name: "Risk Report Completeness"
+              what: "Percentage of required dimensions covered"
+              why: "Incomplete reporting creates blind spots"
+              how: "Dimensions covered / Required dimensions × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "691524"
           number: "1.9.5"
           name: "Coordinate risk response across domains and OUs"
           agentic_profile: "H+a"
           agentic_note: "Humans lead cross-domain response; agents track actions and dependencies"
+          measurements:
+            - id: "014901"
+              number: "1.9.5.M1"
+              name: "Cross-Domain Response Rate"
+              what: "Percentage of multi-domain risks with coordinated plans"
+              why: "Uncoordinated responses reduce effectiveness"
+              how: "Risks with coordinated plans / Total cross-domain risks × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "014902"
+              number: "1.9.5.M2"
+              name: "Risk Action Completion Rate"
+              what: "Percentage of risk actions completed by target date"
+              why: "Incomplete actions leave residual exposure"
+              how: "Actions on time / Total risk actions × 100"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "374156"
       number: "1.10"
@@ -356,23 +1189,108 @@ domain:
           name: "Scan and evaluate acquisition and divestiture targets"
           agentic_profile: "H=A"
           agentic_note: "Agents screen and model; humans evaluate strategic fit"
+          measurements:
+            - id: "015001"
+              number: "1.10.1.M1"
+              name: "M&A Target Pipeline"
+              what: "Number of targets under active evaluation"
+              why: "Healthy pipeline supports portfolio management"
+              how: "Count of targets in active evaluation"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "015002"
+              number: "1.10.1.M2"
+              name: "Target Screening Efficiency"
+              what: "Ratio of targets advancing to due diligence"
+              why: "Indicates screening criteria quality"
+              how: "Targets advancing / Targets screened × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "785314"
           number: "1.10.2"
           name: "Conduct due diligence"
           agentic_profile: "H=A"
           agentic_note: "Agents process and analyse data rooms; humans assess risks and red flags"
+          measurements:
+            - id: "015101"
+              number: "1.10.2.M1"
+              name: "Due Diligence Completion Rate"
+              what: "Percentage of workstreams completed on schedule"
+              why: "Incomplete diligence increases transaction risk"
+              how: "Workstreams on time / Total workstreams × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "015102"
+              number: "1.10.2.M2"
+              name: "Critical Issue Discovery Rate"
+              what: "Material issues discovered during due diligence"
+              why: "Effective diligence surfaces deal-breakers before close"
+              how: "Count of material issues identified"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "436129"
           number: "1.10.3"
           name: "Negotiate and structure transactions"
           agentic_profile: H
           agentic_note: "Human-led negotiation with agent research support"
+          measurements:
+            - id: "015201"
+              number: "1.10.3.M1"
+              name: "Negotiation Cycle Time"
+              what: "Days from term sheet to signed agreement"
+              why: "Protracted negotiations increase deal risk"
+              how: "Signing date − term sheet date (calendar days)"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "015202"
+              number: "1.10.3.M2"
+              name: "Deal Term Achievement Rate"
+              what: "Percentage of priority terms achieved"
+              why: "Measures negotiation effectiveness"
+              how: "Priority terms achieved / Total priority terms × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "862541"
           number: "1.10.4"
           name: "Plan and execute post-merger integration"
           agentic_profile: "H+a"
           agentic_note: "Humans lead integration; agents track workstreams and synergies"
+          measurements:
+            - id: "015301"
+              number: "1.10.4.M1"
+              name: "Integration Milestone Rate"
+              what: "Percentage of milestones completed on schedule"
+              why: "Delayed integration erodes acquisition value"
+              how: "Milestones on time / Total milestones × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "015302"
+              number: "1.10.4.M2"
+              name: "Synergy Capture Rate"
+              what: "Percentage of planned synergies realised"
+              why: "Unrealised synergies undermine deal thesis"
+              how: "Synergies realised / Planned synergies × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "519873"
           number: "1.10.5"
           name: "Plan and execute divestitures and separations"
           agentic_profile: "H+a"
           agentic_note: "Humans lead separation; agents manage checklists and dependencies"
+          measurements:
+            - id: "015401"
+              number: "1.10.5.M1"
+              name: "Divestiture Timeliness"
+              what: "Whether divestiture completes within timeline"
+              why: "Delays increase complexity"
+              how: "Actual completion − planned completion (calendar days)"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "015402"
+              number: "1.10.5.M2"
+              name: "Separation Completeness"
+              what: "Percentage of separation activities completed by close"
+              why: "Incomplete separation creates entanglements"
+              how: "Activities completed / Total activities × 100"
+              frequency: monthly
+              direction: higher_is_better

@@ -35,31 +35,133 @@ domain:
           name: "Articulate the offering vision and strategic positioning"
           agentic_profile: H
           agentic_note: "Human-led; offering vision requires authentic market intuition"
+          measurements:
+            - id: "020101"
+              number: "2.1.1.M1"
+              name: "Offering Vision Clarity Score"
+              what: "Stakeholder understanding of offering vision"
+              why: "Unclear vision leads to misaligned decisions"
+              how: "Stakeholder survey score on vision clarity (1-10)"
+              frequency: annually
+              direction: higher_is_better
+            - id: "020102"
+              number: "2.1.1.M2"
+              name: "Positioning Differentiation Score"
+              what: "Perceived differentiation from competitors"
+              why: "Weak differentiation reduces pricing power"
+              how: "Customer perception differentiation score (1-10)"
+              frequency: annually
+              direction: higher_is_better
         - id: "847263"
           number: "2.1.2"
           name: "Assess market opportunities and whitespace analysis"
           agentic_profile: "h+A"
           agentic_note: "Agents scan markets and model addressable opportunities; humans evaluate strategic fit"
+          measurements:
+            - id: "020201"
+              number: "2.1.2.M1"
+              name: "Market Opportunity Coverage"
+              what: "Percentage of segments evaluated"
+              why: "Unevaluated segments represent missed revenue"
+              how: "Segments evaluated / Total segments × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "020202"
+              number: "2.1.2.M2"
+              name: "Whitespace Identification Rate"
+              what: "New whitespace opportunities identified per quarter"
+              why: "Continuous identification fuels growth"
+              how: "Count of new whitespace opportunities"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "613427"
           number: "2.1.3"
           name: "Define and balance the offering portfolio across horizons"
           agentic_profile: "H+a"
           agentic_note: "Humans set portfolio mix; agents model resource trade-offs"
+          measurements:
+            - id: "020301"
+              number: "2.1.3.M1"
+              name: "Portfolio Balance Score"
+              what: "Distribution of investments across horizons"
+              why: "Imbalanced portfolios create growth gaps"
+              how: "Deviation from target horizon allocation (percentage points)"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "020302"
+              number: "2.1.3.M2"
+              name: "Portfolio Strategic Alignment"
+              what: "Percentage of investments linked to strategic priorities"
+              why: "Unlinked investments represent drift"
+              how: "Investments linked / Total investments × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "295814"
           number: "2.1.4"
           name: "Establish offering investment criteria and funding models"
           agentic_profile: "H+a"
           agentic_note: "Humans define criteria; agents benchmark against industry norms"
+          measurements:
+            - id: "020401"
+              number: "2.1.4.M1"
+              name: "Investment Criteria Application"
+              what: "Percentage of decisions evaluated against criteria"
+              why: "Ad-hoc decisions reduce portfolio quality"
+              how: "Decisions using criteria / Total decisions × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "020402"
+              number: "2.1.4.M2"
+              name: "Investment Decision Cycle Time"
+              what: "Days from request to decision"
+              why: "Slow decisions delay time-to-market"
+              how: "Decision date − request date (business days)"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "738562"
           number: "2.1.5"
           name: "Conduct periodic portfolio reviews and rationalisation"
           agentic_profile: "H=A"
           agentic_note: "Agents compile performance data; humans decide keep/kill/invest"
+          measurements:
+            - id: "020501"
+              number: "2.1.5.M1"
+              name: "Portfolio Review Adherence"
+              what: "Percentage of reviews completed on time"
+              why: "Missed reviews allow underperformers to persist"
+              how: "Reviews on time / Reviews scheduled × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "020502"
+              number: "2.1.5.M2"
+              name: "Rationalisation Actions Taken"
+              what: "Keep/kill/invest decisions per review cycle"
+              why: "Active rationalisation ensures portfolio health"
+              how: "Count of formal portfolio decisions per review"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "184239"
           number: "2.1.6"
           name: "Align offering roadmaps with enterprise strategy"
           agentic_profile: "H=A"
           agentic_note: "Agents flag misalignments; humans resolve strategic tensions"
+          measurements:
+            - id: "020601"
+              number: "2.1.6.M1"
+              name: "Roadmap-Strategy Alignment"
+              what: "Percentage of roadmap items traceable to strategy"
+              why: "Misaligned roadmaps waste resources"
+              how: "Items with strategic links / Total items × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "020602"
+              number: "2.1.6.M2"
+              name: "Misalignment Resolution Time"
+              what: "Days to resolve roadmap-strategy misalignments"
+              why: "Unresolved misalignments compound over time"
+              how: "Resolution date − identification date (business days)"
+              frequency: quarterly
+              direction: lower_is_better
 
     - id: "527163"
       number: "2.2"
@@ -74,26 +176,111 @@ domain:
           name: "Gather and synthesise customer needs and pain points"
           agentic_profile: "h+A"
           agentic_note: "Agents aggregate feedback from multiple channels; humans identify patterns"
+          measurements:
+            - id: "020701"
+              number: "2.2.1.M1"
+              name: "Customer Insight Volume"
+              what: "Number of needs and pain points documented"
+              why: "Rich insights fuel better decisions"
+              how: "Count of documented customer insights"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "020702"
+              number: "2.2.1.M2"
+              name: "Insight Source Diversity"
+              what: "Number of distinct channels contributing insights"
+              why: "Single-source insights create bias"
+              how: "Count of unique insight channels"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "716348"
           number: "2.2.2"
           name: "Generate and explore offering concepts and ideas"
           agentic_profile: "H=A"
           agentic_note: "Agents generate concept variations and provocations; humans curate and refine"
+          measurements:
+            - id: "020801"
+              number: "2.2.2.M1"
+              name: "Concept Generation Rate"
+              what: "New offering concepts generated per quarter"
+              why: "Higher volume increases breakthrough chance"
+              how: "Count of new concepts documented"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "020802"
+              number: "2.2.2.M2"
+              name: "Concept Advancement Rate"
+              what: "Percentage of concepts advancing to testing"
+              why: "Indicates ideation and filtering quality"
+              how: "Concepts advancing / Total concepts × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "382519"
           number: "2.2.3"
           name: "Conduct rapid prototyping and concept testing"
           agentic_profile: "H=A"
           agentic_note: "Agents build prototype simulations; humans evaluate user response"
+          measurements:
+            - id: "020901"
+              number: "2.2.3.M1"
+              name: "Prototype Cycle Time"
+              what: "Days from concept approval to testable prototype"
+              why: "Faster prototyping accelerates learning"
+              how: "Prototype date − concept approval date (business days)"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "020902"
+              number: "2.2.3.M2"
+              name: "Concept Test Completion Rate"
+              what: "Percentage of prototypes completing user testing on time"
+              why: "Delayed testing slows validation"
+              how: "Tests on time / Total tests planned × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "861234"
           number: "2.2.4"
           name: "Validate market demand and willingness to pay"
           agentic_profile: "h+A"
           agentic_note: "Agents run conjoint analyses and survey automation; humans interpret signals"
+          measurements:
+            - id: "021001"
+              number: "2.2.4.M1"
+              name: "Demand Validation Confidence"
+              what: "Statistical confidence of market demand validation"
+              why: "Low confidence increases launch risk"
+              how: "Confidence level from demand analysis (percentage)"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "021002"
+              number: "2.2.4.M2"
+              name: "Pricing Validation Rate"
+              what: "Percentage of concepts with validated pricing"
+              why: "Unvalidated pricing risks underperformance"
+              how: "Concepts with pricing validation / Total concepts × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "254697"
           number: "2.2.5"
           name: "Build and assess business cases for new offerings"
           agentic_profile: "H=A"
           agentic_note: "Agents model financials and scenarios; humans judge viability"
+          measurements:
+            - id: "021101"
+              number: "2.2.5.M1"
+              name: "Business Case Approval Rate"
+              what: "Percentage of submitted cases approved"
+              why: "Tracks case quality and investment rigour"
+              how: "Cases approved / Cases submitted × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "021102"
+              number: "2.2.5.M2"
+              name: "Business Case Accuracy"
+              what: "Variance between projections and actuals"
+              why: "Accurate cases build investment confidence"
+              how: "|Projected − Actual| / Projected × 100"
+              frequency: annually
+              direction: lower_is_better
 
     - id: "649281"
       number: "2.3"
@@ -109,31 +296,133 @@ domain:
           name: "Define offering requirements and acceptance criteria"
           agentic_profile: "H+a"
           agentic_note: "Humans specify requirements; agents structure and cross-reference"
+          measurements:
+            - id: "021201"
+              number: "2.3.1.M1"
+              name: "Requirements Stability Index"
+              what: "Percentage unchanged after baseline approval"
+              why: "Frequent changes increase delivery risk"
+              how: "Unchanged requirements / Total baselined × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "021202"
+              number: "2.3.1.M2"
+              name: "Requirements Completeness"
+              what: "Percentage with full acceptance criteria"
+              why: "Incomplete requirements cause rework"
+              how: "Requirements with criteria / Total requirements × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "928471"
           number: "2.3.2"
           name: "Design offering architecture and specifications"
           agentic_profile: "H+a"
           agentic_note: "Humans architect; agents generate documentation and check consistency"
+          measurements:
+            - id: "021301"
+              number: "2.3.2.M1"
+              name: "Design Review Pass Rate"
+              what: "Percentage passing review on first submission"
+              why: "Low first-pass indicates quality issues"
+              how: "Approved first time / Total reviewed × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "021302"
+              number: "2.3.2.M2"
+              name: "Specification Completeness"
+              what: "Percentage of specs fully documented"
+              why: "Incomplete specs cause ambiguity"
+              how: "Complete sections / Required sections × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "347165"
           number: "2.3.3"
           name: "Execute development and build cycles"
           agentic_profile: "H=A"
           agentic_note: "Agents assist with creation and assembly; humans lead design decisions"
+          measurements:
+            - id: "021401"
+              number: "2.3.3.M1"
+              name: "Development Velocity"
+              what: "Rate of development output per sprint"
+              why: "Tracks team productivity"
+              how: "Story points completed / Sprint duration"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "021402"
+              number: "2.3.3.M2"
+              name: "Build Cycle Time"
+              what: "Average days from dev start to build completion"
+              why: "Shorter cycles enable faster iteration"
+              how: "Build completion − dev start (business days)"
+              frequency: monthly
+              direction: lower_is_better
         - id: "763829"
           number: "2.3.4"
           name: "Conduct quality assurance and testing"
           agentic_profile: "h+A"
           agentic_note: "Agents execute test suites and validation checks; humans define quality strategy"
+          measurements:
+            - id: "021501"
+              number: "2.3.4.M1"
+              name: "Defect Escape Rate"
+              what: "Percentage of defects found post-release"
+              why: "High escape rates indicate insufficient testing"
+              how: "Post-release defects / Total defects × 100"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "021502"
+              number: "2.3.4.M2"
+              name: "Test Coverage"
+              what: "Percentage of requirements covered by tests"
+              why: "Low coverage leaves risk"
+              how: "Requirements with test cases / Total requirements × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "481592"
           number: "2.3.5"
           name: "Manage offering configuration and variant design"
           agentic_profile: "H=A"
           agentic_note: "Agents manage configuration matrices; humans approve variant decisions"
+          measurements:
+            - id: "021601"
+              number: "2.3.5.M1"
+              name: "Configuration Accuracy Rate"
+              what: "Percentage of configurations without errors"
+              why: "Errors cause dissatisfaction and rework"
+              how: "Error-free configs / Total configs × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "021602"
+              number: "2.3.5.M2"
+              name: "Variant Proliferation Index"
+              what: "Ratio of active to planned variants"
+              why: "Uncontrolled proliferation increases complexity"
+              how: "Active variants / Planned variants"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "629413"
           number: "2.3.6"
           name: "Perform usability and accessibility validation"
           agentic_profile: "H=A"
           agentic_note: "Agents run automated accessibility checks; humans conduct user testing"
+          measurements:
+            - id: "021701"
+              number: "2.3.6.M1"
+              name: "Accessibility Compliance Rate"
+              what: "Percentage meeting accessibility standards"
+              why: "Non-compliance excludes users and creates legal risk"
+              how: "Compliant offerings / Total offerings × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "021702"
+              number: "2.3.6.M2"
+              name: "Usability Test Score"
+              what: "Average user satisfaction from usability testing"
+              why: "Poor usability reduces adoption"
+              how: "Average SUS score (0-100)"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "815423"
       number: "2.4"
@@ -148,31 +437,133 @@ domain:
           name: "Operate the idea intake and evaluation process"
           agentic_profile: "H=A"
           agentic_note: "Agents collect and deduplicate submissions; humans evaluate merit"
+          measurements:
+            - id: "021801"
+              number: "2.4.1.M1"
+              name: "Idea Submission Volume"
+              what: "Number of new ideas submitted per period"
+              why: "Low volume indicates weak innovation culture"
+              how: "Count of ideas submitted"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "021802"
+              number: "2.4.1.M2"
+              name: "Idea Evaluation Cycle Time"
+              what: "Days from submission to initial evaluation"
+              why: "Slow evaluation discourages submissions"
+              how: "Evaluation date − submission date (business days)"
+              frequency: monthly
+              direction: lower_is_better
         - id: "594132"
           number: "2.4.2"
           name: "Design and run structured experiments"
           agentic_profile: "H+a"
           agentic_note: "Humans design experiments; agents automate execution and data capture"
+          measurements:
+            - id: "021901"
+              number: "2.4.2.M1"
+              name: "Experiment Completion Rate"
+              what: "Percentage of experiments completed on time"
+              why: "Incomplete experiments waste resources"
+              how: "Completed on time / Total planned × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "021902"
+              number: "2.4.2.M2"
+              name: "Experiment Learning Rate"
+              what: "Validated learnings per experiment"
+              why: "Experiments should produce actionable insights"
+              how: "Documented learnings / Completed experiments"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "148726"
           number: "2.4.3"
           name: "Track innovation portfolio health and stage-gate progression"
           agentic_profile: "h+A"
           agentic_note: "Agents track metrics and flag stalled initiatives; humans intervene"
+          measurements:
+            - id: "022001"
+              number: "2.4.3.M1"
+              name: "Pipeline Health Score"
+              what: "Distribution of initiatives across stages"
+              why: "Empty stages create future gaps"
+              how: "Stages with adequate initiatives / Total stages × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "022002"
+              number: "2.4.3.M2"
+              name: "Stage-Gate Throughput"
+              what: "Percentage of initiatives passing each gate"
+              why: "Indicates gate calibration quality"
+              how: "Passing / Presented at gate × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "831264"
           number: "2.4.4"
           name: "Scale validated innovations into core offerings"
           agentic_profile: "H+a"
           agentic_note: "Humans lead scaling decisions; agents coordinate handover logistics"
+          measurements:
+            - id: "022101"
+              number: "2.4.4.M1"
+              name: "Innovation-to-Core Conversion"
+              what: "Percentage of validated innovations scaled"
+              why: "Low conversion wastes innovation investment"
+              how: "Scaled / Validated innovations × 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "022102"
+              number: "2.4.4.M2"
+              name: "Scaling Cycle Time"
+              what: "Days from scaling decision to full integration"
+              why: "Slow scaling delays revenue capture"
+              how: "Integration date − scaling decision date (calendar days)"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "267953"
           number: "2.4.5"
           name: "Foster innovation culture and internal entrepreneurship"
           agentic_profile: H
           agentic_note: "Human-led; cultural change requires human leadership and modelling"
+          measurements:
+            - id: "022201"
+              number: "2.4.5.M1"
+              name: "Innovation Culture Score"
+              what: "Employee perception of innovation culture"
+              why: "Weak culture suppresses idea generation"
+              how: "Innovation culture survey score (1-10)"
+              frequency: annually
+              direction: higher_is_better
+            - id: "022202"
+              number: "2.4.5.M2"
+              name: "Innovation Participation Rate"
+              what: "Percentage of employees in innovation programmes"
+              why: "Broad participation increases diversity"
+              how: "Participating / Total eligible employees × 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "425189"
           number: "2.4.6"
           name: "Manage external innovation partnerships and sourcing"
           agentic_profile: "H+a"
           agentic_note: "Humans manage relationships; agents scout and screen opportunities"
+          measurements:
+            - id: "022301"
+              number: "2.4.6.M1"
+              name: "External Innovation Sources"
+              what: "Number of active external innovation partnerships"
+              why: "Diverse sources accelerate innovation"
+              how: "Count of active external innovation partnerships"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "022302"
+              number: "2.4.6.M2"
+              name: "External Innovation Contribution"
+              what: "Percentage of innovations from external sources"
+              why: "Tracks open innovation effectiveness"
+              how: "Externally sourced / Total innovations × 100"
+              frequency: annually
+              direction: higher_is_better
 
     - id: "293814"
       number: "2.5"
@@ -187,26 +578,111 @@ domain:
           name: "Define R&D strategy and research priorities"
           agentic_profile: H
           agentic_note: "Human-led; research direction requires scientific and strategic judgement"
+          measurements:
+            - id: "022401"
+              number: "2.5.1.M1"
+              name: "R&D Strategy Alignment"
+              what: "Percentage of R&D programmes aligned to priorities"
+              why: "Misaligned R&D wastes resources"
+              how: "Aligned programmes / Total programmes × 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "022402"
+              number: "2.5.1.M2"
+              name: "Research Priority Freshness"
+              what: "Whether priorities are reviewed within cadence"
+              why: "Stale priorities misallocate effort"
+              how: "Days since last priority review vs planned cycle"
+              frequency: annually
+              direction: lower_is_better
         - id: "519346"
           number: "2.5.2"
           name: "Plan and allocate R&D budgets and resources"
           agentic_profile: "H+a"
           agentic_note: "Humans allocate; agents model scenarios and track burn rates"
+          measurements:
+            - id: "022501"
+              number: "2.5.2.M1"
+              name: "R&D Budget Utilisation"
+              what: "Percentage of R&D budget spent"
+              why: "Under/overspending signals planning issues"
+              how: "Actual spend / Allocated budget × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "022502"
+              number: "2.5.2.M2"
+              name: "R&D Cost per Output"
+              what: "Average cost per research output"
+              why: "Tracks R&D efficiency"
+              how: "Total R&D spend / Count of research outputs"
+              frequency: annually
+              direction: lower_is_better
         - id: "872413"
           number: "2.5.3"
           name: "Execute research programmes and technical investigations"
           agentic_profile: "H+a"
           agentic_note: "Humans conduct research; agents assist with literature review and data analysis"
+          measurements:
+            - id: "022601"
+              number: "2.5.3.M1"
+              name: "Research Milestone Adherence"
+              what: "Percentage of milestones achieved on schedule"
+              why: "Missed milestones delay readiness"
+              how: "Milestones on time / Total milestones × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "022602"
+              number: "2.5.3.M2"
+              name: "Research Output Volume"
+              what: "Number of research outputs per period"
+              why: "Tracks research productivity"
+              how: "Count of papers, patents, and prototypes"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "364729"
           number: "2.5.4"
           name: "Manage research outcomes and technology transfer"
           agentic_profile: "H=A"
           agentic_note: "Agents catalogue findings and match to offering needs; humans drive transfer"
+          measurements:
+            - id: "022701"
+              number: "2.5.4.M1"
+              name: "Technology Transfer Success"
+              what: "Percentage of outcomes transferred to product teams"
+              why: "Untransferred research is wasted investment"
+              how: "Transferred / Total transferable outcomes × 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "022702"
+              number: "2.5.4.M2"
+              name: "Transfer Cycle Time"
+              what: "Days from completion to product team handover"
+              why: "Slow transfer delays competitive advantage"
+              how: "Handover date − completion date (business days)"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "718534"
           number: "2.5.5"
           name: "Monitor technology trends and competitive R&D activity"
           agentic_profile: "h+A"
           agentic_note: "Agents continuously scan patent filings and publications; humans assess relevance"
+          measurements:
+            - id: "022801"
+              number: "2.5.5.M1"
+              name: "Technology Trend Coverage"
+              what: "Percentage of relevant domains under monitoring"
+              why: "Gaps create technology blind spots"
+              how: "Domains monitored / Total relevant domains × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "022802"
+              number: "2.5.5.M2"
+              name: "Competitive R&D Intel Freshness"
+              what: "Average age of competitive R&D intelligence"
+              why: "Stale intelligence reduces strategic value"
+              how: "Average (current date − last update) across competitors (days)"
+              frequency: monthly
+              direction: lower_is_better
 
     - id: "174628"
       number: "2.6"
@@ -221,26 +697,111 @@ domain:
           name: "Plan and execute offering launches and market entry"
           agentic_profile: "H+a"
           agentic_note: "Humans lead launch strategy; agents coordinate checklists and readiness tracking"
+          measurements:
+            - id: "022901"
+              number: "2.6.1.M1"
+              name: "Launch On-Time Rate"
+              what: "Percentage of launches on planned date"
+              why: "Delayed launches miss market windows"
+              how: "Launches on time / Total planned × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "022902"
+              number: "2.6.1.M2"
+              name: "Launch Readiness Score"
+              what: "Average readiness checklist completion at launch"
+              why: "Incomplete readiness increases risk"
+              how: "Average checklist completion across launches (%)"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "825347"
           number: "2.6.2"
           name: "Monitor offering performance and market reception"
           agentic_profile: A
           agentic_note: "Agent-executed; continuous monitoring of adoption, usage, and revenue metrics"
+          measurements:
+            - id: "023001"
+              number: "2.6.2.M1"
+              name: "Offering Adoption Rate"
+              what: "Target customers adopting within 90 days"
+              why: "Slow adoption signals product-market fit issues"
+              how: "Adopting / Target customers × 100 at 90 days"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "023002"
+              number: "2.6.2.M2"
+              name: "Customer Satisfaction (CSAT)"
+              what: "Average customer satisfaction with offering"
+              why: "Low satisfaction predicts churn"
+              how: "Average CSAT survey score (1-10)"
+              frequency: monthly
+              direction: higher_is_better
         - id: "567814"
           number: "2.6.3"
           name: "Manage offering iterations, updates, and enhancements"
           agentic_profile: "H=A"
           agentic_note: "Agents prioritise backlog by data signals; humans approve release scope"
+          measurements:
+            - id: "023101"
+              number: "2.6.3.M1"
+              name: "Iteration Cycle Time"
+              what: "Average days between offering updates"
+              why: "Faster iterations improve responsiveness"
+              how: "Average days between consecutive releases"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "023102"
+              number: "2.6.3.M2"
+              name: "Enhancement Delivery Rate"
+              what: "Percentage of planned enhancements delivered"
+              why: "Low delivery indicates capacity issues"
+              how: "Delivered / Planned enhancements × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "314289"
           number: "2.6.4"
           name: "Plan and execute offering retirement and sunsetting"
           agentic_profile: "H+a"
           agentic_note: "Humans decide retirement timing; agents manage migration and communication plans"
+          measurements:
+            - id: "023201"
+              number: "2.6.4.M1"
+              name: "Retirement Plan Adherence"
+              what: "Percentage of retirements completed on schedule"
+              why: "Delayed retirements increase costs"
+              how: "Retirements on schedule / Total planned × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "023202"
+              number: "2.6.4.M2"
+              name: "Customer Migration Rate"
+              what: "Percentage of customers migrated from retired offerings"
+              why: "Unmigrated customers represent revenue risk"
+              how: "Migrated / Total on retired offering × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "682431"
           number: "2.6.5"
           name: "Manage regulatory and compliance aspects of the offering lifecycle"
           agentic_profile: "H=A"
           agentic_note: "Agents track regulatory changes affecting offerings; humans ensure compliance"
+          measurements:
+            - id: "023301"
+              number: "2.6.5.M1"
+              name: "Regulatory Compliance Rate"
+              what: "Percentage of offerings compliant with regulations"
+              why: "Non-compliance creates legal risk"
+              how: "Compliant / Total with regulatory requirements × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "023302"
+              number: "2.6.5.M2"
+              name: "Regulatory Change Response Time"
+              what: "Days from change to compliance update"
+              why: "Slow response risks penalties"
+              how: "Update date − change effective date (calendar days)"
+              frequency: quarterly
+              direction: lower_is_better
 
     - id: "536182"
       number: "2.7"
@@ -254,26 +815,111 @@ domain:
           name: "Identify and assess intellectual property arising from offerings"
           agentic_profile: "H=A"
           agentic_note: "Agents scan outputs for protectable elements; humans evaluate"
+          measurements:
+            - id: "023401"
+              number: "2.7.1.M1"
+              name: "IP Identification Rate"
+              what: "Protectable IP elements identified per quarter"
+              why: "Unidentified IP cannot be protected"
+              how: "Count of new IP elements identified"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "023402"
+              number: "2.7.1.M2"
+              name: "IP Assessment Cycle Time"
+              what: "Days from identification to protection decision"
+              why: "Slow assessment risks lost protection windows"
+              how: "Decision date − identification date (business days)"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "783164"
           number: "2.7.2"
           name: "File and manage patent and trademark applications"
           agentic_profile: "h+A"
           agentic_note: "Agents draft initial filings and manage deadlines; humans review and approve"
+          measurements:
+            - id: "023501"
+              number: "2.7.2.M1"
+              name: "Patent Filing Rate"
+              what: "Patent applications filed per period"
+              why: "Indicates innovation output and IP execution"
+              how: "Count of patent applications filed"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "023502"
+              number: "2.7.2.M2"
+              name: "Filing Approval Rate"
+              what: "Percentage of applications granted"
+              why: "Low approval indicates quality issues"
+              how: "Granted / Filed × 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "295841"
           number: "2.7.3"
           name: "Maintain the IP portfolio and renewal schedule"
           agentic_profile: A
           agentic_note: "Agent-executed; automated tracking and renewal management with human exception handling"
+          measurements:
+            - id: "023601"
+              number: "2.7.3.M1"
+              name: "IP Portfolio Renewal Rate"
+              what: "Percentage of IP assets renewed on schedule"
+              why: "Missed renewals lose protection"
+              how: "Renewed on time / Due for renewal × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "023602"
+              number: "2.7.3.M2"
+              name: "IP Portfolio Value"
+              what: "Estimated commercial value of IP portfolio"
+              why: "Tracks portfolio as strategic asset"
+              how: "Sum of estimated commercial values across IP assets"
+              frequency: annually
+              direction: higher_is_better
         - id: "641823"
           number: "2.7.4"
           name: "Monitor for IP infringement and competitive filings"
           agentic_profile: A
           agentic_note: "Agent-executed; continuous scanning of patent databases and market activity"
+          measurements:
+            - id: "023701"
+              number: "2.7.4.M1"
+              name: "Infringement Detection Rate"
+              what: "Potential infringements detected per period"
+              why: "Active detection protects advantage"
+              how: "Count of potential infringements detected"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "023702"
+              number: "2.7.4.M2"
+              name: "Infringement Response Time"
+              what: "Days from detection to initial response"
+              why: "Delayed response weakens legal position"
+              how: "Response date − detection date (business days)"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "518472"
           number: "2.7.5"
           name: "Manage IP licensing and commercialisation"
           agentic_profile: "H+a"
           agentic_note: "Humans negotiate terms; agents model licensing revenue and track agreements"
+          measurements:
+            - id: "023801"
+              number: "2.7.5.M1"
+              name: "IP Licensing Revenue"
+              what: "Revenue from IP licensing agreements"
+              why: "Measures IP commercial exploitation"
+              how: "Total licensing revenue per period"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "023802"
+              number: "2.7.5.M2"
+              name: "Active License Count"
+              what: "Number of active licensing agreements"
+              why: "Tracks IP commercialisation breadth"
+              how: "Count of active licensing agreements"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "927341"
       number: "2.8"
@@ -288,28 +934,130 @@ domain:
           name: "Define offering metrics, KPIs, and measurement frameworks"
           agentic_profile: "H+a"
           agentic_note: "Humans define what to measure; agents recommend based on benchmarks"
+          measurements:
+            - id: "023901"
+              number: "2.8.1.M1"
+              name: "Offering Metric Coverage"
+              what: "Percentage of offerings with measurement frameworks"
+              why: "Unmeasured offerings can't be managed"
+              how: "Offerings with frameworks / Total offerings × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "023902"
+              number: "2.8.1.M2"
+              name: "KPI Freshness"
+              what: "Percentage of offering KPIs reviewed within cycle"
+              why: "Stale KPIs measure wrong things"
+              how: "KPIs reviewed on schedule / Total KPIs × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "581749"
           number: "2.8.2"
           name: "Collect and integrate offering usage and behavioural data"
           agentic_profile: A
           agentic_note: "Agent-executed; automated data pipeline management"
+          measurements:
+            - id: "024001"
+              number: "2.8.2.M1"
+              name: "Data Pipeline Uptime"
+              what: "Percentage of time pipelines are operational"
+              why: "Downtime creates data gaps"
+              how: "Uptime hours / Total hours × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "024002"
+              number: "2.8.2.M2"
+              name: "Data Integration Completeness"
+              what: "Percentage of sources successfully integrated"
+              why: "Unintegrated sources create incomplete analytics"
+              how: "Integrated / Total identified sources × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "729463"
           number: "2.8.3"
           name: "Conduct A/B testing and controlled experimentation"
           agentic_profile: "h+A"
           agentic_note: "Agents design, execute, and analyse experiments; humans set hypotheses"
+          measurements:
+            - id: "024101"
+              number: "2.8.3.M1"
+              name: "A/B Test Completion Rate"
+              what: "Percentage of tests reaching statistical significance"
+              why: "Inconclusive tests waste resources"
+              how: "Tests reaching significance / Total tests × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "024102"
+              number: "2.8.3.M2"
+              name: "Experiment Throughput"
+              what: "Experiments completed per period"
+              why: "Higher throughput accelerates learning"
+              how: "Count of completed experiments"
+              frequency: monthly
+              direction: higher_is_better
         - id: "413892"
           number: "2.8.4"
           name: "Generate predictive models for offering performance"
           agentic_profile: "h+A"
           agentic_note: "Agents build and maintain models; humans interpret and act on predictions"
+          measurements:
+            - id: "024201"
+              number: "2.8.4.M1"
+              name: "Predictive Model Accuracy"
+              what: "Average accuracy of performance models"
+              why: "Inaccurate models lead to poor decisions"
+              how: "1 − MAPE × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "024202"
+              number: "2.8.4.M2"
+              name: "Model Refresh Frequency"
+              what: "Days between model retraining cycles"
+              why: "Stale models degrade in accuracy"
+              how: "Average days between retraining runs"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "846527"
           number: "2.8.5"
           name: "Deliver offering insight reports and recommendations"
           agentic_profile: "h+A"
           agentic_note: "Agents generate narrative reports; humans validate and distribute"
+          measurements:
+            - id: "024301"
+              number: "2.8.5.M1"
+              name: "Insight Report Timeliness"
+              what: "Days after period close reports are delivered"
+              why: "Late reports reduce actionability"
+              how: "Report date − period close date (business days)"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "024302"
+              number: "2.8.5.M2"
+              name: "Insight Actionability Score"
+              what: "Percentage of recommendations acted upon"
+              why: "Unacted insights waste analytical effort"
+              how: "Acted on / Total recommendations × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "152843"
           number: "2.8.6"
           name: "Monitor competitive landscape and offering parity"
           agentic_profile: "h+A"
           agentic_note: "Agents track competitor releases and offerings; humans assess strategic implications"
+          measurements:
+            - id: "024401"
+              number: "2.8.6.M1"
+              name: "Competitive Monitoring Coverage"
+              what: "Percentage of key competitors monitored"
+              why: "Unmonitored competitors create blind spots"
+              how: "Monitored / Total key competitors × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "024402"
+              number: "2.8.6.M2"
+              name: "Competitive Intel Freshness"
+              what: "Average age of competitive intelligence"
+              why: "Stale intelligence reduces value"
+              how: "Average days since last update across competitors"
+              frequency: monthly
+              direction: lower_is_better
