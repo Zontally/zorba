@@ -30,31 +30,133 @@ domain:
           name: "Define sourcing strategies and category plans"
           agentic_profile: "H+a"
           agentic_note: "Humans design strategy; agents analyse spend data and market conditions"
+          measurements:
+            - id: "0701001"
+              number: "7.1.1.M1"
+              name: "Sourcing Strategy Coverage"
+              what: "Percentage of spend categories with defined sourcing strategies"
+              why: "Strategic sourcing reduces cost and risk"
+              how: "Categories with strategies / Total spend categories × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0701002"
+              number: "7.1.1.M2"
+              name: "Strategic Sourcing Savings"
+              what: "Cost savings achieved through strategic sourcing initiatives"
+              why: "Validates effectiveness of sourcing strategies"
+              how: "Negotiated savings / Total addressable spend × 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "673841"
           number: "7.1.2"
           name: "Identify and qualify potential suppliers"
           agentic_profile: "h+A"
           agentic_note: "Agents screen supplier databases and assess fit; humans shortlist"
+          measurements:
+            - id: "0702001"
+              number: "7.1.2.M1"
+              name: "Supplier Qualification Cycle Time"
+              what: "Average days to complete supplier qualification process"
+              why: "Faster qualification enables more responsive sourcing"
+              how: "Average (qualification complete − initial contact) in days"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "0702002"
+              number: "7.1.2.M2"
+              name: "Qualified Supplier Hit Rate"
+              what: "Percentage of evaluated suppliers that pass qualification"
+              why: "Low hit rates indicate inefficient screening processes"
+              how: "Suppliers qualified / Suppliers evaluated × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "429187"
           number: "7.1.3"
           name: "Conduct sourcing events and negotiate terms"
           agentic_profile: "H+a"
           agentic_note: "Humans lead negotiations; agents model scenarios and benchmark pricing"
+          measurements:
+            - id: "0703001"
+              number: "7.1.3.M1"
+              name: "Negotiated Savings vs Benchmark"
+              what: "Percentage savings achieved compared to market benchmarks"
+              why: "Measures effectiveness of negotiation strategies"
+              how: "(Benchmark price − Negotiated price) / Benchmark price × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0703002"
+              number: "7.1.3.M2"
+              name: "Sourcing Event Cycle Time"
+              what: "Average days from sourcing event launch to contract award"
+              why: "Shorter cycles reduce time to value and supplier fatigue"
+              how: "Average (award date − event launch date) in days"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "856312"
           number: "7.1.4"
           name: "Manage purchase orders and procurement transactions"
           agentic_profile: A
           agentic_note: "Agent-executed; automated PO creation within approved parameters"
+          measurements:
+            - id: "0704001"
+              number: "7.1.4.M1"
+              name: "Purchase Order Accuracy"
+              what: "Percentage of POs created without errors requiring correction"
+              why: "PO errors cause receiving delays and payment disputes"
+              how: "Error-free POs / Total POs × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0704002"
+              number: "7.1.4.M2"
+              name: "PO Processing Cycle Time"
+              what: "Average time from requisition to PO issuance"
+              why: "Faster processing reduces procurement lead time"
+              how: "Average (PO issued − requisition approved) in hours"
+              frequency: monthly
+              direction: lower_is_better
         - id: "294768"
           number: "7.1.5"
           name: "Evaluate and onboard new suppliers"
           agentic_profile: "H=A"
           agentic_note: "Agents run due diligence checks; humans make final approval decisions"
+          measurements:
+            - id: "0705001"
+              number: "7.1.5.M1"
+              name: "Supplier Onboarding Cycle Time"
+              what: "Average days from approval to fully operational supplier status"
+              why: "Faster onboarding accelerates time to procurement benefit"
+              how: "Average (operational date − approval date) in days"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "0705002"
+              number: "7.1.5.M2"
+              name: "Due Diligence Completion Rate"
+              what: "Percentage of new suppliers with completed due diligence checks"
+              why: "Incomplete due diligence exposes the enterprise to supplier risk"
+              how: "Suppliers with complete due diligence / Total new suppliers × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "731456"
           number: "7.1.6"
           name: "Manage contract compliance and renewal cycles"
           agentic_profile: "h+A"
           agentic_note: "Agents track contract terms and flag renewals; humans negotiate amendments"
+          measurements:
+            - id: "0706001"
+              number: "7.1.6.M1"
+              name: "Contract Compliance Rate"
+              what: "Percentage of supplier contracts in full compliance with agreed terms"
+              why: "Non-compliance increases cost and risk"
+              how: "Compliant contracts / Total active contracts × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0706002"
+              number: "7.1.6.M2"
+              name: "Contract Renewal Timeliness"
+              what: "Percentage of contracts renewed or renegotiated before expiry"
+              why: "Lapsed contracts create procurement gaps and risk"
+              how: "Timely renewals / Total renewals due × 100"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "562381"
       number: "7.2"
@@ -69,26 +171,111 @@ domain:
           name: "Segment and tier the supplier base"
           agentic_profile: "H=A"
           agentic_note: "Agents analyse spend and risk data; humans define segmentation criteria"
+          measurements:
+            - id: "0707001"
+              number: "7.2.1.M1"
+              name: "Supplier Segmentation Coverage"
+              what: "Percentage of active suppliers assigned to a tier"
+              why: "Unsegmented suppliers receive inappropriate management attention"
+              how: "Segmented suppliers / Total active suppliers × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0707002"
+              number: "7.2.1.M2"
+              name: "Segmentation Refresh Rate"
+              what: "Percentage of supplier tiers reviewed and updated within cycle"
+              why: "Stale segmentation leads to misallocated relationship investment"
+              how: "Tiers reviewed on schedule / Total tiers × 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "647213"
           number: "7.2.2"
           name: "Monitor and evaluate supplier performance"
           agentic_profile: "h+A"
           agentic_note: "Agents track KPIs and generate scorecards; humans review and act"
+          measurements:
+            - id: "0708001"
+              number: "7.2.2.M1"
+              name: "Supplier Scorecard Completion Rate"
+              what: "Percentage of strategic suppliers with current performance scorecards"
+              why: "Scorecards enable data-driven supplier management"
+              how: "Suppliers with current scorecards / Total strategic suppliers × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0708002"
+              number: "7.2.2.M2"
+              name: "Supplier Performance Index"
+              what: "Average composite score across all supplier KPIs"
+              why: "Aggregate measure of supply base health"
+              how: "Weighted average of quality, delivery, cost, and responsiveness scores"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "815674"
           number: "7.2.3"
           name: "Conduct supplier business reviews and development programmes"
           agentic_profile: "H+a"
           agentic_note: "Humans lead reviews; agents prepare performance packs and trend analysis"
+          measurements:
+            - id: "0709001"
+              number: "7.2.3.M1"
+              name: "Business Review Completion Rate"
+              what: "Percentage of scheduled supplier business reviews conducted"
+              why: "Reviews strengthen relationships and drive improvement"
+              how: "Reviews completed / Reviews scheduled × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0709002"
+              number: "7.2.3.M2"
+              name: "Supplier Development ROI"
+              what: "Return on investment from supplier development programmes"
+              why: "Ensures development spending generates measurable improvement"
+              how: "(Performance improvement value − Programme cost) / Programme cost × 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "392847"
           number: "7.2.4"
           name: "Manage supplier corrective actions and improvement plans"
           agentic_profile: "H=A"
           agentic_note: "Agents track actions and deadlines; humans manage supplier engagement"
+          measurements:
+            - id: "0710001"
+              number: "7.2.4.M1"
+              name: "Corrective Action Closure Rate"
+              what: "Percentage of supplier corrective actions closed within agreed timeline"
+              why: "Timely closure prevents recurrence and maintains quality"
+              how: "Actions closed on time / Total corrective actions × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0710002"
+              number: "7.2.4.M2"
+              name: "Supplier Improvement Plan Effectiveness"
+              what: "Percentage of improvement plans achieving target outcomes"
+              why: "Effective plans drive measurable supplier performance gains"
+              how: "Plans meeting targets / Total completed plans × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "536412"
           number: "7.2.5"
           name: "Manage supplier risk and contingency planning"
           agentic_profile: "h+A"
           agentic_note: "Agents monitor risk signals (financial, geopolitical); humans define contingencies"
+          measurements:
+            - id: "0711001"
+              number: "7.2.5.M1"
+              name: "Single-Source Exposure"
+              what: "Percentage of critical materials/services with only one supplier"
+              why: "Single-source dependencies create supply chain vulnerability"
+              how: "Single-source critical items / Total critical items × 100"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "0711002"
+              number: "7.2.5.M2"
+              name: "Supplier Risk Score Trend"
+              what: "Directional change in aggregate supplier risk scores"
+              why: "Trending risk scores indicate supply base health trajectory"
+              how: "Current period average risk score − Previous period average"
+              frequency: quarterly
+              direction: lower_is_better
 
     - id: "418639"
       number: "7.3"
@@ -103,31 +290,133 @@ domain:
           name: "Design and optimise the distribution network"
           agentic_profile: "H=A"
           agentic_note: "Agents model network scenarios; humans decide structural changes"
+          measurements:
+            - id: "0712001"
+              number: "7.3.1.M1"
+              name: "Distribution Network Cost Efficiency"
+              what: "Total logistics cost as percentage of revenue"
+              why: "Network design directly impacts logistics cost structure"
+              how: "Total logistics cost / Revenue × 100"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "0712002"
+              number: "7.3.1.M2"
+              name: "Network Service Level"
+              what: "Percentage of demand points served within target lead time"
+              why: "Network design must balance cost with service commitments"
+              how: "Demand points within target / Total demand points × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "563412"
           number: "7.3.2"
           name: "Plan and schedule transportation movements"
           agentic_profile: A
           agentic_note: "Agent-executed; automated route optimisation and carrier assignment"
+          measurements:
+            - id: "0713001"
+              number: "7.3.2.M1"
+              name: "Transportation Cost per Unit"
+              what: "Average transportation cost per unit shipped"
+              why: "Core measure of transport efficiency"
+              how: "Total transportation cost / Total units shipped"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "0713002"
+              number: "7.3.2.M2"
+              name: "Route Optimisation Savings"
+              what: "Cost savings from route optimisation vs baseline routing"
+              why: "Validates effectiveness of automated route planning"
+              how: "(Baseline cost − Optimised cost) / Baseline cost × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "847261"
           number: "7.3.3"
           name: "Manage warehousing and distribution centre operations"
           agentic_profile: "H=A"
           agentic_note: "Agents optimise storage and picking; humans manage workforce and exceptions"
+          measurements:
+            - id: "0714001"
+              number: "7.3.3.M1"
+              name: "Warehouse Space Utilisation"
+              what: "Percentage of warehouse capacity actively utilised"
+              why: "Optimal utilisation balances cost with operational flexibility"
+              how: "Used capacity / Total capacity × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0714002"
+              number: "7.3.3.M2"
+              name: "Order Picking Accuracy"
+              what: "Percentage of orders picked correctly without errors"
+              why: "Picking errors cause returns, delays, and customer dissatisfaction"
+              how: "Error-free picks / Total picks × 100"
+              frequency: weekly
+              direction: higher_is_better
         - id: "218534"
           number: "7.3.4"
           name: "Track shipments and manage in-transit visibility"
           agentic_profile: A
           agentic_note: "Agent-executed; real-time tracking with proactive exception alerts"
+          measurements:
+            - id: "0715001"
+              number: "7.3.4.M1"
+              name: "Shipment Visibility Rate"
+              what: "Percentage of in-transit shipments with real-time tracking"
+              why: "Visibility enables proactive exception management"
+              how: "Tracked shipments / Total in-transit shipments × 100"
+              frequency: weekly
+              direction: higher_is_better
+            - id: "0715002"
+              number: "7.3.4.M2"
+              name: "Exception Alert Lead Time"
+              what: "Average advance notice before delivery exception impacts customer"
+              why: "Earlier alerts enable mitigation before customer impact"
+              how: "Average (expected impact time − alert time) in hours"
+              frequency: weekly
+              direction: higher_is_better
         - id: "694173"
           number: "7.3.5"
           name: "Manage freight costs and carrier performance"
           agentic_profile: "h+A"
           agentic_note: "Agents analyse costs and benchmark carriers; humans negotiate and select"
+          measurements:
+            - id: "0716001"
+              number: "7.3.5.M1"
+              name: "Freight Cost per Unit"
+              what: "Average freight cost per unit moved"
+              why: "Core measure of freight cost efficiency"
+              how: "Total freight cost / Total units moved"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "0716002"
+              number: "7.3.5.M2"
+              name: "Carrier On-Time Performance"
+              what: "Percentage of carrier shipments delivered on time"
+              why: "Carrier reliability directly impacts customer delivery promises"
+              how: "On-time carrier deliveries / Total carrier shipments × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "375918"
           number: "7.3.6"
           name: "Manage returns logistics and reverse supply chain"
           agentic_profile: "H=A"
           agentic_note: "Agents process returns and route items; humans handle disposition decisions"
+          measurements:
+            - id: "0717001"
+              number: "7.3.6.M1"
+              name: "Returns Processing Cycle Time"
+              what: "Average days from return receipt to disposition completion"
+              why: "Faster processing improves customer experience and recovers value"
+              how: "Average (disposition date − receipt date) in days"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "0717002"
+              number: "7.3.6.M2"
+              name: "Return Value Recovery Rate"
+              what: "Percentage of returned goods value recovered through resale, refurbishment, or recycling"
+              why: "Maximising recovery reduces the financial impact of returns"
+              how: "Recovered value / Total returned goods value × 100"
+              frequency: monthly
+              direction: higher_is_better
 
     - id: "257914"
       number: "7.4"
@@ -141,26 +430,111 @@ domain:
           name: "Set inventory policies and target service levels"
           agentic_profile: "H+a"
           agentic_note: "Humans define policies; agents model trade-offs and recommend targets"
+          measurements:
+            - id: "0718001"
+              number: "7.4.1.M1"
+              name: "Inventory Service Level"
+              what: "Percentage of demand fulfilled from stock without stockout"
+              why: "Core measure of inventory policy effectiveness"
+              how: "Orders filled from stock / Total orders × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0718002"
+              number: "7.4.1.M2"
+              name: "Inventory Turns"
+              what: "Number of times inventory is sold and replaced per year"
+              why: "Higher turns indicate efficient working capital use"
+              how: "Cost of goods sold / Average inventory value"
+              frequency: monthly
+              direction: higher_is_better
         - id: "926347"
           number: "7.4.2"
           name: "Monitor inventory positions and movements in real time"
           agentic_profile: A
           agentic_note: "Agent-executed; continuous visibility with automated reorder triggers"
+          measurements:
+            - id: "0719001"
+              number: "7.4.2.M1"
+              name: "Inventory Accuracy"
+              what: "Percentage of inventory records matching physical counts"
+              why: "Inaccurate records cause stockouts and excess ordering"
+              how: "Accurate records / Total records checked × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0719002"
+              number: "7.4.2.M2"
+              name: "Stockout Rate"
+              what: "Percentage of SKUs experiencing stockout in the period"
+              why: "Stockouts directly impact customer service and revenue"
+              how: "SKUs with stockout / Total active SKUs × 100"
+              frequency: weekly
+              direction: lower_is_better
         - id: "614283"
           number: "7.4.3"
           name: "Optimise replenishment and reorder parameters"
           agentic_profile: "h+A"
           agentic_note: "Agents calculate optimal parameters; humans approve significant changes"
+          measurements:
+            - id: "0720001"
+              number: "7.4.3.M1"
+              name: "Reorder Point Optimisation Score"
+              what: "Percentage of SKUs with reorder points within optimal range"
+              why: "Optimised reorder points balance service level and inventory cost"
+              how: "SKUs within optimal range / Total SKUs × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0720002"
+              number: "7.4.3.M2"
+              name: "Replenishment Lead Time Reliability"
+              what: "Percentage of replenishments received within expected lead time"
+              why: "Reliable lead times enable tighter inventory parameters"
+              how: "On-time replenishments / Total replenishments × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "730226"
           number: "7.4.4"
           name: "Manage slow-moving, excess, and obsolete inventory"
           agentic_profile: "H=A"
           agentic_note: "Agents identify at-risk stock; humans decide write-down or disposal actions"
+          measurements:
+            - id: "0721001"
+              number: "7.4.4.M1"
+              name: "Excess and Obsolete Inventory Rate"
+              what: "Percentage of inventory value classified as excess or obsolete"
+              why: "E&O inventory ties up capital and may require write-downs"
+              how: "E&O inventory value / Total inventory value × 100"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "0721002"
+              number: "7.4.4.M2"
+              name: "Slow-Moving Inventory Reduction"
+              what: "Period-over-period reduction in slow-moving inventory value"
+              why: "Active management prevents slow-moving stock from becoming obsolete"
+              how: "(Previous period slow stock − Current period slow stock) / Previous period × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "742158"
           number: "7.4.5"
           name: "Conduct inventory counts and reconciliation"
           agentic_profile: "H=A"
           agentic_note: "Agents schedule and track counts; humans investigate discrepancies"
+          measurements:
+            - id: "0722001"
+              number: "7.4.5.M1"
+              name: "Cycle Count Completion Rate"
+              what: "Percentage of scheduled cycle counts completed on time"
+              why: "Timely counts maintain inventory accuracy"
+              how: "Counts completed on time / Counts scheduled × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0722002"
+              number: "7.4.5.M2"
+              name: "Count Variance Rate"
+              what: "Percentage of counts with variances exceeding tolerance"
+              why: "High variance rates indicate process or control issues"
+              how: "Counts with excess variance / Total counts × 100"
+              frequency: monthly
+              direction: lower_is_better
 
     - id: "693248"
       number: "7.5"
@@ -175,31 +549,133 @@ domain:
           name: "Generate statistical demand forecasts"
           agentic_profile: A
           agentic_note: "Agent-executed; automated model selection and forecast generation"
+          measurements:
+            - id: "0723001"
+              number: "7.5.1.M1"
+              name: "Forecast Accuracy (MAPE)"
+              what: "Mean absolute percentage error of demand forecasts"
+              why: "Forecast accuracy drives the entire supply planning chain"
+              how: "Average |Actual − Forecast| / Actual × 100"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "0723002"
+              number: "7.5.1.M2"
+              name: "Forecast Bias"
+              what: "Systematic tendency to over- or under-forecast"
+              why: "Bias indicates model calibration issues"
+              how: "Sum (Forecast − Actual) / Sum Actual × 100"
+              frequency: monthly
+              direction: lower_is_better
         - id: "475312"
           number: "7.5.2"
           name: "Enrich forecasts with market intelligence and sales input"
           agentic_profile: "H=A"
           agentic_note: "Agents integrate data sources; humans add qualitative judgement"
+          measurements:
+            - id: "0724001"
+              number: "7.5.2.M1"
+              name: "Forecast Enrichment Lift"
+              what: "Improvement in forecast accuracy from adding market/sales intelligence"
+              why: "Validates the value of human judgement in forecasting"
+              how: "Statistical MAPE − Enriched MAPE"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0724002"
+              number: "7.5.2.M2"
+              name: "Intelligence Integration Timeliness"
+              what: "Percentage of forecast cycles with market intelligence integrated on time"
+              why: "Late intelligence reduces its value in planning decisions"
+              how: "Cycles with timely integration / Total cycles × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "316849"
           number: "7.5.3"
           name: "Conduct sales and operations planning cycles"
           agentic_profile: "H+a"
           agentic_note: "Humans lead consensus process; agents prepare scenarios and gap analysis"
+          measurements:
+            - id: "0725001"
+              number: "7.5.3.M1"
+              name: "S&OP Cycle Adherence"
+              what: "Percentage of S&OP cycles completed within scheduled timeframe"
+              why: "Disciplined cadence ensures plans stay current"
+              how: "On-time S&OP cycles / Total S&OP cycles × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0725002"
+              number: "7.5.3.M2"
+              name: "Demand-Supply Gap Resolution Rate"
+              what: "Percentage of identified demand-supply gaps resolved during S&OP"
+              why: "Unresolved gaps cascade into service failures"
+              how: "Gaps resolved / Total gaps identified × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "548273"
           number: "7.5.4"
           name: "Translate demand plans into supply and production signals"
           agentic_profile: "h+A"
           agentic_note: "Agents generate supply plans; humans validate feasibility"
+          measurements:
+            - id: "0726001"
+              number: "7.5.4.M1"
+              name: "Plan Translation Accuracy"
+              what: "Accuracy of supply/production signals vs original demand plan intent"
+              why: "Translation errors compound through the supply chain"
+              how: "1 − |Supply signal − Demand plan| / Demand plan × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0726002"
+              number: "7.5.4.M2"
+              name: "Signal Generation Timeliness"
+              what: "Percentage of supply signals generated within target lead time"
+              why: "Late signals constrain supplier and production response options"
+              how: "Timely signals / Total signals generated × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "192467"
           number: "7.5.5"
           name: "Monitor forecast accuracy and refine models"
           agentic_profile: A
           agentic_note: "Agent-executed; continuous model tuning with human review of significant shifts"
+          measurements:
+            - id: "0727001"
+              number: "7.5.5.M1"
+              name: "Model Accuracy Improvement Rate"
+              what: "Period-over-period improvement in forecast model accuracy"
+              why: "Continuous improvement validates model tuning effectiveness"
+              how: "Previous MAPE − Current MAPE"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0727002"
+              number: "7.5.5.M2"
+              name: "Model Refresh Frequency"
+              what: "Number of model retraining cycles completed per period"
+              why: "Regular retraining keeps models aligned with changing patterns"
+              how: "Count of model retraining cycles per quarter"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "763518"
           number: "7.5.6"
           name: "Manage demand shaping and demand sensing"
           agentic_profile: "h+A"
           agentic_note: "Agents detect demand signals in real time; humans decide shaping actions"
+          measurements:
+            - id: "0728001"
+              number: "7.5.6.M1"
+              name: "Demand Signal Detection Latency"
+              what: "Average time from demand shift occurrence to detection"
+              why: "Faster sensing enables more responsive supply chain actions"
+              how: "Average (detection time − demand shift onset) in hours"
+              frequency: weekly
+              direction: lower_is_better
+            - id: "0728002"
+              number: "7.5.6.M2"
+              name: "Demand Shaping Effectiveness"
+              what: "Percentage of demand shaping actions achieving target demand shift"
+              why: "Effective shaping reduces supply chain stress"
+              how: "Successful shaping actions / Total shaping actions × 100"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "438172"
       number: "7.6"
@@ -214,26 +690,111 @@ domain:
           name: "Map and assess supply chain risk exposure"
           agentic_profile: "h+A"
           agentic_note: "Agents map multi-tier dependencies; humans assess strategic vulnerabilities"
+          measurements:
+            - id: "0729001"
+              number: "7.6.1.M1"
+              name: "Supply Chain Risk Map Coverage"
+              what: "Percentage of supply chain tiers with documented risk mapping"
+              why: "Unmapped tiers contain hidden vulnerabilities"
+              how: "Mapped tiers / Total known tiers × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0729002"
+              number: "7.6.1.M2"
+              name: "Risk Assessment Currency"
+              what: "Percentage of risk assessments updated within their review cycle"
+              why: "Stale assessments underrepresent current risk exposure"
+              how: "Current assessments / Total assessments × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "879643"
           number: "7.6.2"
           name: "Monitor supply chain risk signals and early warnings"
           agentic_profile: A
           agentic_note: "Agent-executed; continuous scanning of geopolitical, weather, and financial signals"
+          measurements:
+            - id: "0730001"
+              number: "7.6.2.M1"
+              name: "Early Warning Detection Rate"
+              what: "Percentage of supply chain disruptions detected before operational impact"
+              why: "Early detection enables proactive mitigation"
+              how: "Pre-impact detections / Total disruptions × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0730002"
+              number: "7.6.2.M2"
+              name: "Signal Monitoring Breadth"
+              what: "Number of distinct risk signal sources actively monitored"
+              why: "Broader monitoring reduces blind spots"
+              how: "Count of active risk signal sources"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "316524"
           number: "7.6.3"
           name: "Develop and maintain supply chain contingency plans"
           agentic_profile: "H+a"
           agentic_note: "Humans design contingencies; agents maintain playbooks and test readiness"
+          measurements:
+            - id: "0731001"
+              number: "7.6.3.M1"
+              name: "Contingency Plan Coverage"
+              what: "Percentage of critical supply paths with documented contingency plans"
+              why: "Unplanned disruptions without contingencies cause extended outages"
+              how: "Paths with plans / Total critical paths × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0731002"
+              number: "7.6.3.M2"
+              name: "Contingency Plan Test Rate"
+              what: "Percentage of contingency plans tested within their review cycle"
+              why: "Untested plans may not work when activated"
+              how: "Plans tested on schedule / Total plans × 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "741283"
           number: "7.6.4"
           name: "Execute supply chain disruption response"
           agentic_profile: "H=A"
           agentic_note: "Agents activate playbooks and reroute; humans manage critical decisions"
+          measurements:
+            - id: "0732001"
+              number: "7.6.4.M1"
+              name: "Disruption Response Time"
+              what: "Average time from disruption detection to response activation"
+              why: "Faster response limits disruption impact"
+              how: "Average (response activation − detection) in hours"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "0732002"
+              number: "7.6.4.M2"
+              name: "Disruption Recovery Time"
+              what: "Average time from disruption to return to normal operations"
+              why: "Shorter recovery reduces revenue and service impact"
+              how: "Average (normal operations restored − disruption start) in days"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "253918"
           number: "7.6.5"
           name: "Conduct supply chain resilience assessments and stress tests"
           agentic_profile: "H=A"
           agentic_note: "Agents run simulations; humans evaluate findings and invest in resilience"
+          measurements:
+            - id: "0733001"
+              number: "7.6.5.M1"
+              name: "Stress Test Completion Rate"
+              what: "Percentage of planned resilience stress tests completed"
+              why: "Incomplete testing leaves gaps in preparedness understanding"
+              how: "Tests completed / Tests planned × 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "0733002"
+              number: "7.6.5.M2"
+              name: "Resilience Score"
+              what: "Composite score measuring supply chain ability to absorb and recover from disruptions"
+              why: "Holistic measure of supply chain robustness"
+              how: "Weighted composite of redundancy, flexibility, visibility, and recovery metrics (0-100)"
+              frequency: annually
+              direction: higher_is_better
 
     - id: "185463"
       number: "7.7"
@@ -248,23 +809,108 @@ domain:
           name: "Define third-party governance frameworks and standards"
           agentic_profile: "H+a"
           agentic_note: "Humans set governance standards; agents benchmark and track compliance"
+          measurements:
+            - id: "0734001"
+              number: "7.7.1.M1"
+              name: "Governance Framework Coverage"
+              what: "Percentage of third-party relationships with defined governance standards"
+              why: "Ungoverned relationships increase risk and inconsistency"
+              how: "Relationships with governance / Total third-party relationships × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0734002"
+              number: "7.7.1.M2"
+              name: "Governance Compliance Rate"
+              what: "Percentage of partners meeting governance standards"
+              why: "Non-compliance undermines the governance framework"
+              how: "Compliant partners / Total governed partners × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "397514"
           number: "7.7.2"
           name: "Onboard and integrate ecosystem partners"
           agentic_profile: "H=A"
           agentic_note: "Agents manage onboarding workflows; humans approve and establish relationships"
+          measurements:
+            - id: "0735001"
+              number: "7.7.2.M1"
+              name: "Partner Onboarding Cycle Time"
+              what: "Average days from partner approval to operational integration"
+              why: "Faster onboarding accelerates ecosystem value"
+              how: "Average (integration complete − approval date) in days"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "0735002"
+              number: "7.7.2.M2"
+              name: "Integration Success Rate"
+              what: "Percentage of partner integrations completed without critical issues"
+              why: "Failed integrations delay value realisation and damage relationships"
+              how: "Successful integrations / Total integrations × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "813246"
           number: "7.7.3"
           name: "Monitor ecosystem partner performance and compliance"
           agentic_profile: "h+A"
           agentic_note: "Agents track SLAs and compliance metrics; humans manage escalations"
+          measurements:
+            - id: "0736001"
+              number: "7.7.3.M1"
+              name: "Partner SLA Compliance Rate"
+              what: "Percentage of ecosystem partners meeting their SLA commitments"
+              why: "Partner performance directly impacts enterprise delivery"
+              how: "Partners meeting SLAs / Total partners with SLAs × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0736002"
+              number: "7.7.3.M2"
+              name: "Partner Compliance Audit Rate"
+              what: "Percentage of partners audited within scheduled cycle"
+              why: "Regular audits ensure ongoing compliance"
+              how: "Partners audited on schedule / Total partners due × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "564832"
           number: "7.7.4"
           name: "Manage data exchange and integration across the ecosystem"
           agentic_profile: "h+A"
           agentic_note: "Agents operate integration platforms; humans govern data standards"
+          measurements:
+            - id: "0737001"
+              number: "7.7.4.M1"
+              name: "Data Exchange Reliability"
+              what: "Percentage of data exchanges completed successfully without errors"
+              why: "Reliable data exchange is the foundation of ecosystem collaboration"
+              how: "Successful exchanges / Total exchanges × 100"
+              frequency: weekly
+              direction: higher_is_better
+            - id: "0737002"
+              number: "7.7.4.M2"
+              name: "Integration Uptime"
+              what: "Percentage of time ecosystem integration platforms are operational"
+              why: "Downtime disrupts partner collaboration and operations"
+              how: "(Total time − Downtime) / Total time × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "238617"
           number: "7.7.5"
           name: "Review and rationalise the partner ecosystem periodically"
           agentic_profile: "H+a"
           agentic_note: "Humans make portfolio decisions; agents analyse utilisation and overlap"
+          measurements:
+            - id: "0738001"
+              number: "7.7.5.M1"
+              name: "Ecosystem Rationalisation Savings"
+              what: "Cost savings achieved through partner portfolio rationalisation"
+              why: "Eliminates redundancy and focuses investment on high-value partners"
+              how: "Cost reduction from rationalised partners per year"
+              frequency: annually
+              direction: higher_is_better
+            - id: "0738002"
+              number: "7.7.5.M2"
+              name: "Partner Portfolio Review Completion Rate"
+              what: "Percentage of scheduled ecosystem reviews completed on time"
+              why: "Regular reviews ensure the portfolio stays aligned with strategy"
+              how: "Reviews completed / Reviews scheduled × 100"
+              frequency: annually
+              direction: higher_is_better

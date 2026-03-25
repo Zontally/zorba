@@ -28,31 +28,133 @@ domain:
           name: "Receive, classify, and route customer inquiries"
           agentic_profile: A
           agentic_note: "Fully automated triage and routing"
+          measurements:
+            - id: "0501001"
+              number: "5.1.1.M1"
+              name: "Inquiry Classification Accuracy"
+              what: "Percentage of inquiries correctly classified and routed on first attempt"
+              why: "Misrouted inquiries increase resolution time and customer frustration"
+              how: "Correctly routed inquiries / Total inquiries × 100"
+              frequency: weekly
+              direction: higher_is_better
+            - id: "0501002"
+              number: "5.1.1.M2"
+              name: "Average Routing Time"
+              what: "Average time from inquiry receipt to assignment to resolving agent or team"
+              why: "Faster routing reduces overall resolution time"
+              how: "Sum of (assignment time − receipt time) / Total inquiries"
+              frequency: daily
+              direction: lower_is_better
         - id: "294816"
           number: "5.1.2"
           name: "Resolve standard issues through automated self-service"
           agentic_profile: A
           agentic_note: "Agent-autonomous within knowledge base boundaries"
+          measurements:
+            - id: "0502001"
+              number: "5.1.2.M1"
+              name: "Self-Service Resolution Rate"
+              what: "Percentage of issues fully resolved through automated self-service"
+              why: "Higher self-service resolution reduces cost and improves speed"
+              how: "Issues resolved via self-service / Total issues × 100"
+              frequency: weekly
+              direction: higher_is_better
+            - id: "0502002"
+              number: "5.1.2.M2"
+              name: "Self-Service Deflection Rate"
+              what: "Percentage of inquiries deflected from human agents by self-service"
+              why: "Frees human agents for complex issues"
+              how: "Self-service completions / (Self-service completions + Human-handled) × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "537162"
           number: "5.1.3"
           name: "Escalate complex issues to human support specialists"
           agentic_profile: "h+A"
           agentic_note: "Agent escalation with full context handoff"
+          measurements:
+            - id: "0503001"
+              number: "5.1.3.M1"
+              name: "Escalation Rate"
+              what: "Percentage of total inquiries escalated to human specialists"
+              why: "Tracks the balance between automated and human-handled resolution"
+              how: "Escalated issues / Total issues × 100"
+              frequency: weekly
+              direction: lower_is_better
+            - id: "0503002"
+              number: "5.1.3.M2"
+              name: "Escalation Context Completeness"
+              what: "Percentage of escalations that include full context handoff"
+              why: "Incomplete handoffs force customers to repeat information"
+              how: "Escalations with complete context / Total escalations × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "845219"
           number: "5.1.4"
           name: "Manage multi-channel support delivery"
           agentic_profile: "h+A"
           agentic_note: "Agents handle channels; humans oversee quality"
+          measurements:
+            - id: "0504001"
+              number: "5.1.4.M1"
+              name: "Channel Response Time"
+              what: "Average first response time across all support channels"
+              why: "Fast initial response sets customer expectations and builds confidence"
+              how: "Sum of first response times / Total inquiries, by channel"
+              frequency: daily
+              direction: lower_is_better
+            - id: "0504002"
+              number: "5.1.4.M2"
+              name: "Cross-Channel Consistency Score"
+              what: "Variance in resolution quality across support channels"
+              why: "Customers expect consistent service regardless of channel"
+              how: "Standard deviation of CSAT scores across channels"
+              frequency: monthly
+              direction: lower_is_better
         - id: "163748"
           number: "5.1.5"
           name: "Track issue resolution and confirm customer satisfaction"
           agentic_profile: A
           agentic_note: "Automated follow-up and satisfaction measurement"
+          measurements:
+            - id: "0505001"
+              number: "5.1.5.M1"
+              name: "First Contact Resolution Rate"
+              what: "Percentage of issues resolved in the first interaction"
+              why: "Reduces customer effort and support costs"
+              how: "Issues resolved on first contact / Total issues × 100"
+              frequency: weekly
+              direction: higher_is_better
+            - id: "0505002"
+              number: "5.1.5.M2"
+              name: "Post-Resolution CSAT"
+              what: "Customer satisfaction score collected after issue resolution"
+              why: "Direct measure of support quality from customer perspective"
+              how: "Average satisfaction rating (1-5 scale) from post-resolution surveys"
+              frequency: weekly
+              direction: higher_is_better
         - id: "492631"
           number: "5.1.6"
           name: "Analyse support patterns to identify systemic issues"
           agentic_profile: "h+A"
           agentic_note: "Agents identify patterns; humans decide remediation"
+          measurements:
+            - id: "0506001"
+              number: "5.1.6.M1"
+              name: "Repeat Issue Rate"
+              what: "Percentage of issues that recur within 30 days for same root cause"
+              why: "Recurring issues indicate systemic problems not being addressed"
+              how: "Recurring issues / Total issues × 100"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "0506002"
+              number: "5.1.6.M2"
+              name: "Systemic Issue Identification Rate"
+              what: "Number of systemic issues identified and escalated for remediation per period"
+              why: "Proactive identification prevents future customer impact"
+              how: "Count of new systemic issues identified per month"
+              frequency: monthly
+              direction: higher_is_better
 
     - id: "587413"
       number: "5.2"
@@ -66,31 +168,133 @@ domain:
           name: "Define customer success plans and outcome milestones"
           agentic_profile: "H+a"
           agentic_note: "Humans define plans; agents template and track"
+          measurements:
+            - id: "0507001"
+              number: "5.2.1.M1"
+              name: "Success Plan Coverage"
+              what: "Percentage of customers with active, documented success plans"
+              why: "Structured plans drive outcome achievement and retention"
+              how: "Customers with active success plans / Total customers × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0507002"
+              number: "5.2.1.M2"
+              name: "Milestone Achievement Rate"
+              what: "Percentage of planned outcome milestones achieved on time"
+              why: "Tracks whether customers are progressing toward value realisation"
+              how: "Milestones achieved on time / Total milestones due × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "416285"
           number: "5.2.2"
           name: "Monitor customer health and engagement signals"
           agentic_profile: A
           agentic_note: "Continuous automated health scoring"
+          measurements:
+            - id: "0508001"
+              number: "5.2.2.M1"
+              name: "Customer Health Score Accuracy"
+              what: "Correlation between health score predictions and actual churn/expansion outcomes"
+              why: "Accurate health scores enable effective prioritisation of CSM efforts"
+              how: "Prediction accuracy rate over trailing 12 months"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0508002"
+              number: "5.2.2.M2"
+              name: "Product Adoption Rate"
+              what: "Percentage of licensed features actively used by customers"
+              why: "Low adoption signals risk of churn and unrealised value"
+              how: "Active features used / Total licensed features × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "853174"
           number: "5.2.3"
           name: "Intervene proactively on at-risk accounts"
           agentic_profile: "H+a"
           agentic_note: "Agents alert; humans lead intervention conversations"
+          measurements:
+            - id: "0509001"
+              number: "5.2.3.M1"
+              name: "At-Risk Account Intervention Rate"
+              what: "Percentage of at-risk accounts that receive proactive intervention"
+              why: "Timely intervention prevents churn"
+              how: "At-risk accounts with intervention / Total at-risk accounts × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0509002"
+              number: "5.2.3.M2"
+              name: "At-Risk Account Recovery Rate"
+              what: "Percentage of at-risk accounts that return to healthy status"
+              why: "Measures effectiveness of intervention strategies"
+              how: "Recovered accounts / Total at-risk accounts intervened × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "626925"
           number: "5.2.4"
           name: "Conduct periodic business reviews with customers"
           agentic_profile: "H+a"
           agentic_note: "Agents prepare review packs; humans lead discussions"
+          measurements:
+            - id: "0510001"
+              number: "5.2.4.M1"
+              name: "Business Review Completion Rate"
+              what: "Percentage of scheduled business reviews completed on time"
+              why: "Regular reviews strengthen relationships and surface issues early"
+              how: "Reviews completed / Reviews scheduled × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0510002"
+              number: "5.2.4.M2"
+              name: "Review Action Item Closure Rate"
+              what: "Percentage of action items from reviews closed within agreed timeline"
+              why: "Follow-through on commitments builds trust"
+              how: "Closed action items / Total action items × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "274831"
           number: "5.2.5"
           name: "Identify and pursue expansion opportunities"
           agentic_profile: "H=A"
           agentic_note: "Agents surface signals; humans qualify and pursue"
+          measurements:
+            - id: "0511001"
+              number: "5.2.5.M1"
+              name: "Net Revenue Retention Rate"
+              what: "Revenue retained from existing customers including expansion"
+              why: "Core measure of customer success and growth from installed base"
+              how: "(Starting ARR + Expansion − Contraction − Churn) / Starting ARR × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0511002"
+              number: "5.2.5.M2"
+              name: "Expansion Pipeline Coverage"
+              what: "Ratio of expansion pipeline to expansion target"
+              why: "Ensures sufficient opportunities to meet growth goals"
+              how: "Expansion pipeline value / Expansion target × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "918346"
           number: "5.2.6"
           name: "Measure and report customer outcomes achieved"
           agentic_profile: "h+A"
           agentic_note: "Agents compile metrics; humans interpret and present"
+          measurements:
+            - id: "0512001"
+              number: "5.2.6.M1"
+              name: "Customer Outcome Achievement Rate"
+              what: "Percentage of customers achieving their defined business outcomes"
+              why: "Ultimate measure of customer success program effectiveness"
+              how: "Customers achieving outcomes / Total customers with defined outcomes × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0512002"
+              number: "5.2.6.M2"
+              name: "Time to First Value"
+              what: "Average days from contract start to first measurable outcome achieved"
+              why: "Faster value realisation improves satisfaction and reduces churn risk"
+              how: "Average (first outcome date − contract start date) in days"
+              frequency: quarterly
+              direction: lower_is_better
 
     - id: "415962"
       number: "5.3"
@@ -105,26 +309,111 @@ domain:
           name: "Map and maintain customer journey models"
           agentic_profile: "H=A"
           agentic_note: "Agents map from data; humans validate and design improvements"
+          measurements:
+            - id: "0513001"
+              number: "5.3.1.M1"
+              name: "Journey Map Coverage"
+              what: "Percentage of customer touchpoints with documented journey models"
+              why: "Complete mapping enables systematic experience improvement"
+              how: "Mapped touchpoints / Total identified touchpoints × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0513002"
+              number: "5.3.1.M2"
+              name: "Journey Map Freshness"
+              what: "Percentage of journey maps updated within the last 6 months"
+              why: "Stale maps lead to misaligned improvement efforts"
+              how: "Maps updated in last 6 months / Total maps × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "347591"
           number: "5.3.2"
           name: "Measure experience quality at each touchpoint"
           agentic_profile: A
           agentic_note: "Automated experience measurement and scoring"
+          measurements:
+            - id: "0514001"
+              number: "5.3.2.M1"
+              name: "Net Promoter Score (NPS)"
+              what: "Customer likelihood to recommend on a 0-10 scale"
+              why: "Industry-standard measure of customer loyalty and experience quality"
+              how: "% Promoters (9-10) − % Detractors (0-6)"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0514002"
+              number: "5.3.2.M2"
+              name: "Customer Effort Score (CES)"
+              what: "How easy customers find it to interact with the company"
+              why: "Lower effort correlates with higher retention"
+              how: "Average score from post-interaction effort surveys (1-7 scale)"
+              frequency: monthly
+              direction: higher_is_better
         - id: "819264"
           number: "5.3.3"
           name: "Identify experience friction points and improvement opportunities"
           agentic_profile: "h+A"
           agentic_note: "Agents surface friction; humans prioritise fixes"
+          measurements:
+            - id: "0515001"
+              number: "5.3.3.M1"
+              name: "Friction Points Identified"
+              what: "Number of new experience friction points surfaced per period"
+              why: "Continuous identification enables proactive improvement"
+              how: "Count of newly identified friction points per quarter"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0515002"
+              number: "5.3.3.M2"
+              name: "Friction Point Resolution Rate"
+              what: "Percentage of identified friction points resolved within target timeframe"
+              why: "Measuring follow-through ensures identified issues get fixed"
+              how: "Resolved friction points / Total identified friction points × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "536471"
           number: "5.3.4"
           name: "Design and implement experience improvements"
           agentic_profile: "H+a"
           agentic_note: "Humans design; agents model impact and track implementation"
+          measurements:
+            - id: "0516001"
+              number: "5.3.4.M1"
+              name: "Experience Improvement Impact"
+              what: "Measurable improvement in touchpoint scores after changes implemented"
+              why: "Validates that improvement efforts actually improve experience"
+              how: "Average touchpoint score change (post − pre implementation)"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0516002"
+              number: "5.3.4.M2"
+              name: "Improvement Implementation Cycle Time"
+              what: "Average days from improvement approval to deployment"
+              why: "Faster implementation means faster customer benefit"
+              how: "Average (deployment date − approval date) in days"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "271843"
           number: "5.3.5"
           name: "Ensure consistency across human and agent interactions"
           agentic_profile: "H=A"
           agentic_note: "Agents monitor consistency; humans set quality standards"
+          measurements:
+            - id: "0517001"
+              number: "5.3.5.M1"
+              name: "Human-Agent Experience Parity Score"
+              what: "Difference in satisfaction scores between human and agent interactions"
+              why: "Customers should receive consistent quality regardless of who serves them"
+              how: "Absolute value of (Human CSAT − Agent CSAT)"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "0517002"
+              number: "5.3.5.M2"
+              name: "Brand Consistency Index"
+              what: "Percentage of interactions meeting brand voice and quality standards"
+              why: "Consistent brand experience builds trust across all touchpoints"
+              how: "Compliant interactions / Total audited interactions × 100"
+              frequency: monthly
+              direction: higher_is_better
 
     - id: "693218"
       number: "5.4"
@@ -138,26 +427,111 @@ domain:
           name: "Define and negotiate service level agreements"
           agentic_profile: "H+a"
           agentic_note: "Humans negotiate; agents benchmark and model"
+          measurements:
+            - id: "0518001"
+              number: "5.4.1.M1"
+              name: "SLA Coverage Rate"
+              what: "Percentage of customer accounts with defined SLAs"
+              why: "Clear SLAs set expectations and enable accountability"
+              how: "Accounts with SLAs / Total accounts × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0518002"
+              number: "5.4.1.M2"
+              name: "SLA Competitiveness Score"
+              what: "How SLA terms compare to industry benchmarks"
+              why: "Competitive SLAs attract and retain customers"
+              how: "Percentage of SLA terms meeting or exceeding industry benchmarks"
+              frequency: annually
+              direction: higher_is_better
         - id: "362914"
           number: "5.4.2"
           name: "Monitor service level compliance in real time"
           agentic_profile: A
           agentic_note: "Continuous automated SLA monitoring"
+          measurements:
+            - id: "0519001"
+              number: "5.4.2.M1"
+              name: "SLA Compliance Rate"
+              what: "Percentage of SLA commitments met within agreed thresholds"
+              why: "Core measure of service reliability and promise-keeping"
+              how: "SLA targets met / Total SLA targets × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0519002"
+              number: "5.4.2.M2"
+              name: "SLA Monitoring Latency"
+              what: "Time delay between SLA breach occurrence and detection"
+              why: "Faster detection enables faster remediation"
+              how: "Average (detection time − breach time) in minutes"
+              frequency: weekly
+              direction: lower_is_better
         - id: "745183"
           number: "5.4.3"
           name: "Alert and escalate on service level breaches"
           agentic_profile: A
           agentic_note: "Automated alerting with defined thresholds"
+          measurements:
+            - id: "0520001"
+              number: "5.4.3.M1"
+              name: "Breach Escalation Speed"
+              what: "Average time from SLA breach detection to escalation notification"
+              why: "Rapid escalation minimises customer impact"
+              how: "Average (escalation time − detection time) in minutes"
+              frequency: weekly
+              direction: lower_is_better
+            - id: "0520002"
+              number: "5.4.3.M2"
+              name: "Breach Recovery Rate"
+              what: "Percentage of SLA breaches resolved within recovery timeframes"
+              why: "Effective recovery preserves customer trust"
+              how: "Breaches recovered in time / Total breaches × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "528641"
           number: "5.4.4"
           name: "Analyse service level trends and capacity requirements"
           agentic_profile: "h+A"
           agentic_note: "Agents analyse; humans plan capacity responses"
+          measurements:
+            - id: "0521001"
+              number: "5.4.4.M1"
+              name: "Service Level Trend Accuracy"
+              what: "Accuracy of service level trend predictions vs actuals"
+              why: "Accurate trends enable proactive capacity planning"
+              how: "1 − |Predicted trend − Actual trend| / Actual trend × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0521002"
+              number: "5.4.4.M2"
+              name: "Capacity Utilisation Rate"
+              what: "Percentage of service capacity actively utilised"
+              why: "Optimal utilisation balances cost and service quality"
+              how: "Active capacity used / Total available capacity × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "193472"
           number: "5.4.5"
           name: "Report service level performance to stakeholders"
           agentic_profile: "h+A"
           agentic_note: "Agents generate reports; humans contextualise"
+          measurements:
+            - id: "0522001"
+              number: "5.4.5.M1"
+              name: "SLA Report Timeliness"
+              what: "Percentage of SLA reports delivered on or before scheduled date"
+              why: "Timely reporting enables stakeholder decision-making"
+              how: "Reports delivered on time / Total scheduled reports × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0522002"
+              number: "5.4.5.M2"
+              name: "Stakeholder Report Satisfaction"
+              what: "Stakeholder satisfaction with SLA reporting quality and usefulness"
+              why: "Reports should drive action, not just inform"
+              how: "Average satisfaction rating from report recipients (1-5 scale)"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "274639"
       number: "5.5"
@@ -171,26 +545,111 @@ domain:
           name: "Create and publish knowledge articles and guides"
           agentic_profile: "h+A"
           agentic_note: "Agents draft from ticket patterns; humans review and approve"
+          measurements:
+            - id: "0523001"
+              number: "5.5.1.M1"
+              name: "Knowledge Article Publication Rate"
+              what: "Number of new knowledge articles published per period"
+              why: "Growing knowledge base improves self-service capability"
+              how: "Count of new articles published per month"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0523002"
+              number: "5.5.1.M2"
+              name: "Article Quality Score"
+              what: "Average quality rating of published articles based on user feedback"
+              why: "High-quality articles resolve issues and reduce escalations"
+              how: "Average article helpfulness rating (1-5 scale)"
+              frequency: monthly
+              direction: higher_is_better
         - id: "519247"
           number: "5.5.2"
           name: "Maintain and update knowledge content for accuracy"
           agentic_profile: "h+A"
           agentic_note: "Agents flag stale content and suggest updates; humans validate"
+          measurements:
+            - id: "0524001"
+              number: "5.5.2.M1"
+              name: "Knowledge Base Accuracy Rate"
+              what: "Percentage of articles verified as current and accurate"
+              why: "Outdated content erodes trust and causes incorrect resolutions"
+              how: "Verified accurate articles / Total articles × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0524002"
+              number: "5.5.2.M2"
+              name: "Stale Content Rate"
+              what: "Percentage of articles not reviewed within their review cycle"
+              why: "Stale content risks providing incorrect guidance"
+              how: "Overdue articles / Total articles × 100"
+              frequency: monthly
+              direction: lower_is_better
         - id: "362718"
           number: "5.5.3"
           name: "Optimise knowledge for self-service discovery"
           agentic_profile: A
           agentic_note: "Agents analyse search patterns and optimise findability"
+          measurements:
+            - id: "0525001"
+              number: "5.5.3.M1"
+              name: "Knowledge Search Success Rate"
+              what: "Percentage of searches that result in a helpful article click"
+              why: "Findable content is the key to self-service success"
+              how: "Successful searches / Total searches × 100"
+              frequency: weekly
+              direction: higher_is_better
+            - id: "0525002"
+              number: "5.5.3.M2"
+              name: "Zero-Result Search Rate"
+              what: "Percentage of searches returning no results"
+              why: "Indicates content gaps that need to be filled"
+              how: "Zero-result searches / Total searches × 100"
+              frequency: weekly
+              direction: lower_is_better
         - id: "636685"
           number: "5.5.4"
           name: "Measure knowledge effectiveness and coverage gaps"
           agentic_profile: A
           agentic_note: "Automated gap analysis from unresolved queries"
+          measurements:
+            - id: "0526001"
+              number: "5.5.4.M1"
+              name: "Knowledge Coverage Rate"
+              what: "Percentage of known issue types with corresponding knowledge articles"
+              why: "Gaps in coverage force unnecessary escalations"
+              how: "Issue types with articles / Total known issue types × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0526002"
+              number: "5.5.4.M2"
+              name: "Article Deflection Rate"
+              what: "Percentage of article views that prevent a support ticket from being created"
+              why: "Effective knowledge directly reduces support volume"
+              how: "Sessions with article view and no ticket / Sessions with article view × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "613845"
           number: "5.5.5"
           name: "Manage knowledge across languages and regions"
           agentic_profile: "h+A"
           agentic_note: "Agents translate and localise; humans verify cultural fit"
+          measurements:
+            - id: "0527001"
+              number: "5.5.5.M1"
+              name: "Localisation Coverage"
+              what: "Percentage of knowledge articles available in all supported languages"
+              why: "Customers need content in their language for effective self-service"
+              how: "Fully localised articles / Total articles × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0527002"
+              number: "5.5.5.M2"
+              name: "Localisation Freshness"
+              what: "Percentage of translated articles updated within 30 days of source change"
+              why: "Stale translations provide incorrect guidance"
+              how: "Up-to-date translations / Total translations × 100"
+              frequency: monthly
+              direction: higher_is_better
 
     - id: "938147"
       number: "5.6"
@@ -204,26 +663,111 @@ domain:
           name: "Design and deploy feedback collection mechanisms"
           agentic_profile: "H+a"
           agentic_note: "Humans design surveys; agents deploy and manage distribution"
+          measurements:
+            - id: "0528001"
+              number: "5.6.1.M1"
+              name: "Feedback Collection Coverage"
+              what: "Percentage of customer interactions with feedback collection enabled"
+              why: "Broader collection provides more representative insights"
+              how: "Interactions with feedback mechanism / Total interactions × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0528002"
+              number: "5.6.1.M2"
+              name: "Survey Response Rate"
+              what: "Percentage of feedback requests that receive a response"
+              why: "Higher response rates improve data quality and representativeness"
+              how: "Responses received / Surveys sent × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "851294"
           number: "5.6.2"
           name: "Aggregate and analyse customer feedback at scale"
           agentic_profile: A
           agentic_note: "Automated sentiment analysis and theme extraction"
+          measurements:
+            - id: "0529001"
+              number: "5.6.2.M1"
+              name: "Feedback Processing Timeliness"
+              what: "Average time from feedback receipt to analysis completion"
+              why: "Timely analysis enables faster action on customer insights"
+              how: "Average (analysis completion − feedback receipt) in hours"
+              frequency: weekly
+              direction: lower_is_better
+            - id: "0529002"
+              number: "5.6.2.M2"
+              name: "Sentiment Analysis Accuracy"
+              what: "Accuracy of automated sentiment classification vs human review"
+              why: "Accurate sentiment drives correct prioritisation"
+              how: "Correctly classified feedback / Total human-verified samples × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "374218"
           number: "5.6.3"
           name: "Identify actionable insights from feedback data"
           agentic_profile: "h+A"
           agentic_note: "Agents surface themes; humans assess significance"
+          measurements:
+            - id: "0530001"
+              number: "5.6.3.M1"
+              name: "Actionable Insight Yield"
+              what: "Percentage of analysed feedback that produces actionable insights"
+              why: "Analysis should drive improvement, not just reporting"
+              how: "Actionable insights / Total feedback themes analysed × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0530002"
+              number: "5.6.3.M2"
+              name: "Insight-to-Action Conversion Rate"
+              what: "Percentage of identified insights that result in improvement initiatives"
+              why: "Insights without action waste analysis effort"
+              how: "Insights with linked initiatives / Total insights × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "619437"
           number: "5.6.4"
           name: "Route insights to product, service, and operations teams"
           agentic_profile: "h+A"
           agentic_note: "Agents route automatically; humans validate priority"
+          measurements:
+            - id: "0531001"
+              number: "5.6.4.M1"
+              name: "Insight Routing Speed"
+              what: "Average time from insight identification to team notification"
+              why: "Faster routing enables faster response to customer needs"
+              how: "Average (notification time − insight time) in hours"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "0531002"
+              number: "5.6.4.M2"
+              name: "Insight Acknowledgement Rate"
+              what: "Percentage of routed insights acknowledged by receiving teams"
+              why: "Unacknowledged insights may be lost"
+              how: "Acknowledged insights / Total routed insights × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "283751"
           number: "5.6.5"
           name: "Close the feedback loop with customers"
           agentic_profile: "H=A"
           agentic_note: "Agents automate acknowledgement; humans respond to significant feedback personally"
+          measurements:
+            - id: "0532001"
+              number: "5.6.5.M1"
+              name: "Feedback Loop Closure Rate"
+              what: "Percentage of customer feedback with closed-loop response"
+              why: "Closing the loop demonstrates that customer voice matters"
+              how: "Feedback items with customer response / Total actionable feedback × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0532002"
+              number: "5.6.5.M2"
+              name: "Feedback Loop Closure Time"
+              what: "Average days from feedback receipt to customer follow-up"
+              why: "Timely closure maximises positive impact on customer perception"
+              how: "Average (follow-up date − feedback date) in days"
+              frequency: monthly
+              direction: lower_is_better
 
     - id: "516284"
       number: "5.7"
@@ -237,23 +781,108 @@ domain:
           name: "Build and maintain churn prediction models"
           agentic_profile: "h+A"
           agentic_note: "Agents build and train models; humans validate and tune"
+          measurements:
+            - id: "0533001"
+              number: "5.7.1.M1"
+              name: "Churn Prediction Accuracy"
+              what: "Accuracy of churn prediction model in identifying actual churners"
+              why: "Accurate predictions enable targeted retention efforts"
+              how: "True positives / (True positives + False positives) × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0533002"
+              number: "5.7.1.M2"
+              name: "Model Recall Rate"
+              what: "Percentage of actual churners that the model correctly identified"
+              why: "Missed churners represent lost retention opportunities"
+              how: "True positives / (True positives + False negatives) × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "382615"
           number: "5.7.2"
           name: "Identify and segment at-risk customers"
           agentic_profile: A
           agentic_note: "Automated risk scoring and segmentation"
+          measurements:
+            - id: "0534001"
+              number: "5.7.2.M1"
+              name: "At-Risk Customer Identification Timeliness"
+              what: "Average days before churn event that at-risk status is assigned"
+              why: "Earlier identification provides more time for intervention"
+              how: "Average (churn date − at-risk flag date) in days"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0534002"
+              number: "5.7.2.M2"
+              name: "Risk Segmentation Accuracy"
+              what: "Accuracy of risk tier assignment compared to actual outcomes"
+              why: "Correct segmentation ensures appropriate intervention levels"
+              how: "Correctly segmented accounts / Total at-risk accounts × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "614293"
           number: "5.7.3"
           name: "Design and execute retention interventions"
           agentic_profile: "H+a"
           agentic_note: "Humans design interventions; agents execute at scale"
+          measurements:
+            - id: "0535001"
+              number: "5.7.3.M1"
+              name: "Retention Intervention Success Rate"
+              what: "Percentage of retention interventions that prevent churn"
+              why: "Measures effectiveness of retention strategies"
+              how: "Retained accounts after intervention / Total accounts intervened × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0535002"
+              number: "5.7.3.M2"
+              name: "Retention Offer Acceptance Rate"
+              what: "Percentage of retention offers accepted by at-risk customers"
+              why: "Offer acceptance indicates relevance of retention strategies"
+              how: "Offers accepted / Offers extended × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "837142"
           number: "5.7.4"
           name: "Analyse customer attrition drivers and root causes"
           agentic_profile: "h+A"
           agentic_note: "Agents analyse patterns; humans interpret and act"
+          measurements:
+            - id: "0536001"
+              number: "5.7.4.M1"
+              name: "Gross Churn Rate"
+              what: "Percentage of customers lost in the period"
+              why: "Fundamental measure of customer base erosion"
+              how: "Customers churned / Starting customer count × 100"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "0536002"
+              number: "5.7.4.M2"
+              name: "Churn Root Cause Coverage"
+              what: "Percentage of churned accounts with documented root cause analysis"
+              why: "Understanding why customers leave enables prevention"
+              how: "Churned accounts with root cause / Total churned accounts × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "491837"
           number: "5.7.5"
           name: "Measure retention programme effectiveness"
           agentic_profile: "h+A"
           agentic_note: "Agents track metrics; humans evaluate ROI"
+          measurements:
+            - id: "0537001"
+              number: "5.7.5.M1"
+              name: "Retention Programme ROI"
+              what: "Return on investment of retention programmes"
+              why: "Ensures retention spending generates positive returns"
+              how: "(Retained revenue − Programme cost) / Programme cost × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0537002"
+              number: "5.7.5.M2"
+              name: "Customer Lifetime Value Trend"
+              what: "Directional change in average customer lifetime value"
+              why: "Rising CLV indicates improving retention and expansion"
+              how: "Current period average CLV − Previous period average CLV"
+              frequency: quarterly
+              direction: higher_is_better
