@@ -70,6 +70,7 @@ function addId(ids, id, type, name) {
 function computeStats(domains) {
   let totalCapabilities = 0;
   let totalProcesses = 0;
+  let totalMeasurements = 0;
   const profileCounts = {};
 
   for (const domain of domains) {
@@ -81,13 +82,22 @@ function computeStats(domains) {
           for (const proc of cap.processes) {
             const profile = proc.agentic_profile || 'unknown';
             profileCounts[profile] = (profileCounts[profile] || 0) + 1;
+            if (proc.measurements) {
+              totalMeasurements += proc.measurements.length;
+            }
           }
         }
       }
     }
   }
 
-  return { totalDomains: domains.length, totalCapabilities, totalProcesses, profileCounts };
+  return {
+    totalDomains: domains.length,
+    totalCapabilities,
+    totalProcesses,
+    totalMeasurements,
+    profileCounts
+  };
 }
 
 // --- Core compilation ---
@@ -104,7 +114,7 @@ function compileCore() {
   collectIds(domains);
 
   const stats = computeStats(domains);
-  console.log(`  ${stats.totalDomains} domains, ${stats.totalCapabilities} capabilities, ${stats.totalProcesses} processes`);
+  console.log(`  ${stats.totalDomains} domains, ${stats.totalCapabilities} capabilities, ${stats.totalProcesses} processes, ${stats.totalMeasurements} measurements`);
 
   const core = {
     edition: 'core',
@@ -226,7 +236,7 @@ function compileEdition(editionName, core) {
   collectIds(domains);
 
   const stats = computeStats(domains);
-  console.log(`  ${stats.totalDomains} domains, ${stats.totalCapabilities} capabilities, ${stats.totalProcesses} processes`);
+  console.log(`  ${stats.totalDomains} domains, ${stats.totalCapabilities} capabilities, ${stats.totalProcesses} processes, ${stats.totalMeasurements} measurements`);
 
   return {
     edition: editionName,
