@@ -9,6 +9,7 @@
  *   node build/compile-industries.js
  *
  * Reads:
+ *   package.json                   — version (synced into model.yaml before compile)
  *   industries/model.yaml          — model metadata
  *   industries/<slug>.yaml         — one file per industry (with embedded sub-industries)
  *
@@ -23,6 +24,31 @@ const yaml = require('js-yaml');
 const ROOT = path.resolve(__dirname, '..');
 const INDUSTRIES_DIR = path.join(ROOT, 'industries');
 const DIST_DIR = path.join(ROOT, 'dist');
+const PACKAGE_JSON = path.join(ROOT, 'package.json');
+const MODEL_YAML = path.join(INDUSTRIES_DIR, 'model.yaml');
+
+/**
+ * Writes industries/model.yaml `version` from package.json (semver → vX.Y.Z).
+ * Skips the write if already in sync.
+ */
+function syncIndustryModelVersionFromPackage() {
+  const pkg = JSON.parse(fs.readFileSync(PACKAGE_JSON, 'utf8'));
+  const ver = (pkg.version || '').trim();
+  if (!ver) {
+    throw new Error('package.json is missing "version"');
+  }
+  const versionStr = ver.startsWith('v') ? ver : `v${ver}`;
+  let content = fs.readFileSync(MODEL_YAML, 'utf8');
+  const newLine = `version: "${versionStr}"`;
+  if (!/^version:\s/m.test(content)) {
+    throw new Error('industries/model.yaml missing version: field');
+  }
+  const updated = content.replace(/^version:\s*.+$/m, newLine);
+  if (updated !== content) {
+    fs.writeFileSync(MODEL_YAML, updated, 'utf8');
+    console.log(`  Synced industries/model.yaml version → ${versionStr} (from package.json)`);
+  }
+}
 
 function readYaml(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
@@ -61,12 +87,12 @@ function validateIndustry(industry, file) {
 function main() {
   console.log('Compiling ZORBA Industry Model...');
 
-  // Read model metadata
-  const modelFile = path.join(INDUSTRIES_DIR, 'model.yaml');
-  if (!fs.existsSync(modelFile)) {
-    throw new Error(`Model metadata not found: ${modelFile}`);
+  if (!fs.existsSync(MODEL_YAML)) {
+    throw new Error(`Model metadata not found: ${MODEL_YAML}`);
   }
-  const modelMeta = readYaml(modelFile);
+  syncIndustryModelVersionFromPackage();
+
+  const modelMeta = readYaml(MODEL_YAML);
 
   // Read all industry files
   const industryFiles = fs.readdirSync(INDUSTRIES_DIR)

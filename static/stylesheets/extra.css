@@ -69,9 +69,9 @@
   background: #0f172a;
 }
 
-/* ── Image sizing — override Material's forced height:auto ── */
-.md-typeset img[style] {
-  height: revert !important;
+/* ── Content images: cap width; inline style="height: …" on <img> is respected ──
+   (Do not use height: revert !important here — it overrides inline heights.) */
+.md-typeset img {
   max-width: 100%;
 }
 

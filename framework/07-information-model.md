@@ -1,10 +1,5 @@
 # ZORBA Information Model
 
-**Zontally Reference Business Architecture**
-**Version:** v0.1 (Draft)
-
----
-
 ## Overview
 
 The ZORBA Information Model defines the **universal business object graph** — the node types, edge types, composition rules, and traversal patterns that allow humans and AI agents to represent, query, and reason about any enterprise architecture.

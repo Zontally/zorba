@@ -1,10 +1,5 @@
 # Framework Architecture
 
-**Zontally Reference Business Architecture**
-**Version:** v0.2 (Draft)
-
----
-
 ## Overview
 
 ZORBA's framework architecture consists of two complementary models:
@@ -16,7 +11,7 @@ What distinguishes ZORBA from traditional reference architectures is that **ever
 
 ### The Structural Hierarchy
 
-<img src="../../assets/images/hierarchy.jpg" alt="Structural Hierarchy" style="height: 600px;">
+<img src="../../assets/images/hierarchy.jpg" alt="Structural Hierarchy" style="height: 500px;">
 
 ### The Strategic Alignment Overlay
 

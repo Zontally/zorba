@@ -3,7 +3,8 @@
 /**
  * ZORBA Documentation Generator — generate-docs.js
  *
- * Generates a single unified MkDocs site containing ZORBA Core and all
+ * Generates a single unified MkDocs site containing ZORBA Core, industry
+ * taxonomy reference pages (from dist/zorba-industries.json), and all
  * compiled industry editions.
  *
  * Usage:
@@ -23,6 +24,10 @@ const DOCS_DOMAINS_DIR = path.join(DOCS_DIR, 'domains');
 const DOCS_FRAMEWORK_DIR = path.join(DOCS_DIR, 'framework');
 const EDITIONS_DIR = path.join(ROOT, 'editions');
 const FRAMEWORK_DIR = path.join(ROOT, 'framework');
+const INDUSTRIES_JSON = path.join(DIST_DIR, 'zorba-industries.json');
+const DOCS_INDUSTRY_TAXONOMY_DIR = path.join(DOCS_DIR, 'industry-taxonomy');
+const DOCS_INDUSTRIES_DIR = path.join(DOCS_INDUSTRY_TAXONOMY_DIR, 'industries');
+const DOCS_SUB_INDUSTRIES_DIR = path.join(DOCS_INDUSTRY_TAXONOMY_DIR, 'sub-industries');
 
 const PROFILE_LEGEND = {
   'H': 'Human-only — agent participation not appropriate',
@@ -181,6 +186,325 @@ function generateDomainIndex(title, description, domains, filenameFn) {
   return lines.join('\n');
 }
 
+// --- Industry taxonomy (from compiled zorba-industries.json) ---
+
+function escapeTableCell(text) {
+  if (text == null || text === '') return '—';
+  return String(text).replace(/\|/g, '\\|').replace(/\n/g, ' ');
+}
+
+function humanizeSignalKey(key) {
+  return key
+    .replace(/([a-z])([A-Z])/g, '$1 $2')
+    .replace(/_/g, ' ')
+    .split(' ')
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+    .join(' ');
+}
+
+function signalsMarkdownTable(signals) {
+  if (!signals || typeof signals !== 'object') return '';
+  const lines = [];
+  lines.push('| Dimension | Level |');
+  lines.push('|-----------|-------|');
+  for (const [k, v] of Object.entries(signals)) {
+    lines.push(`| ${escapeTableCell(humanizeSignalKey(k))} | ${escapeTableCell(v)} |`);
+  }
+  lines.push('');
+  return lines.join('\n');
+}
+
+function bulletList(items) {
+  if (!items || items.length === 0) return '';
+  return items.map((x) => `- ${x}`).join('\n') + '\n';
+}
+
+function assignSubIndustryFilenames(industries) {
+  const slugCount = new Map();
+  for (const ind of industries) {
+    for (const sub of ind.subIndustries || []) {
+      slugCount.set(sub.slug, (slugCount.get(sub.slug) || 0) + 1);
+    }
+  }
+  const filenameBySubId = new Map();
+  for (const ind of industries) {
+    for (const sub of ind.subIndustries || []) {
+      const collision = slugCount.get(sub.slug) > 1;
+      const filename = collision ? `${ind.slug}__${sub.slug}.md` : `${sub.slug}.md`;
+      filenameBySubId.set(sub.id, filename);
+    }
+  }
+  return filenameBySubId;
+}
+
+function generateSubIndustryDoc(sub, industry) {
+  const lines = [];
+  lines.push(`# ${sub.name}`);
+  lines.push('');
+  lines.push(`**Sub-industry ID:** \`${sub.id}\`  `);
+  lines.push(`**Slug:** \`${sub.slug}\`  `);
+  lines.push(`**Status:** ${sub.status || '—'}`);
+  lines.push('');
+  lines.push(
+    `**Parent industry:** [${industry.name}](../industries/${industry.slug}.md)`
+  );
+  lines.push('');
+  lines.push('---');
+  lines.push('');
+  lines.push('## Definition');
+  lines.push('');
+  lines.push((sub.definition || '').trim());
+  lines.push('');
+
+  if (sub.aliases && sub.aliases.length) {
+    lines.push('## Aliases');
+    lines.push('');
+    lines.push(bulletList(sub.aliases));
+    lines.push('');
+  }
+
+  if (sub.businessModels && sub.businessModels.length) {
+    lines.push('## Business models');
+    lines.push('');
+    lines.push(bulletList(sub.businessModels));
+    lines.push('');
+  }
+
+  if (sub.valueDrivers && sub.valueDrivers.length) {
+    lines.push('## Value drivers');
+    lines.push('');
+    lines.push(bulletList(sub.valueDrivers));
+    lines.push('');
+  }
+
+  if (sub.typicalCapabilities && sub.typicalCapabilities.length) {
+    lines.push('## Typical capabilities');
+    lines.push('');
+    lines.push(bulletList(sub.typicalCapabilities));
+    lines.push('');
+  }
+
+  if (sub.customerTypes && sub.customerTypes.length) {
+    lines.push('## Customer types');
+    lines.push('');
+    lines.push(bulletList(sub.customerTypes));
+    lines.push('');
+  }
+
+  if (sub.tags && sub.tags.length) {
+    lines.push('## Tags');
+    lines.push('');
+    lines.push(bulletList(sub.tags));
+    lines.push('');
+  }
+
+  if (sub.signals && Object.keys(sub.signals).length) {
+    lines.push('## Intensity signals');
+    lines.push('');
+    lines.push(signalsMarkdownTable(sub.signals).trimEnd());
+    lines.push('');
+  }
+
+  lines.push('---');
+  lines.push('');
+  lines.push(
+    '[← Industry taxonomy](../index.md) · ' +
+      `[${industry.name}](../industries/${industry.slug}.md)`
+  );
+  lines.push('');
+  lines.push('---');
+  lines.push('');
+  lines.push(
+    '*© 2026 Zontally · Licensed under [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)*'
+  );
+  lines.push('');
+  return lines.join('\n');
+}
+
+function truncateSummary(text, maxLen) {
+  const t = (text || '').replace(/\s+/g, ' ').trim();
+  if (t.length <= maxLen) return t;
+  return t.slice(0, maxLen - 1).trim() + '…';
+}
+
+function generateIndustryTaxonomyOverviewIndex(data) {
+  const lines = [];
+  lines.push('# Industry taxonomy');
+  lines.push('');
+  lines.push(
+    `**Model:** \`${data.model || '—'}\` · **Version:** ${data.version || '—'} · **Status:** ${data.status || '—'}`
+  );
+  lines.push('');
+  if (data.description) {
+    lines.push(data.description.trim());
+    lines.push('');
+  }
+  if (data.generatedAt) {
+    lines.push(`*Compiled: ${data.generatedAt}*`);
+    lines.push('');
+  }
+
+  lines.push(
+    'Each industry has its own page with sector-level signals and traits. Sub-industry pages hold full structured detail (signals, value drivers, capabilities, and more).'
+  );
+  lines.push('');
+  lines.push('---');
+  lines.push('');
+  lines.push('## Industries');
+  lines.push('');
+  lines.push('| Industry | Summary |');
+  lines.push('|----------|---------|');
+  for (const ind of data.industries || []) {
+    const link = `[${ind.name}](industries/${ind.slug}.md)`;
+    lines.push(`| ${link} | ${escapeTableCell(truncateSummary(ind.definition, 200))} |`);
+  }
+  lines.push('');
+  lines.push('---');
+  lines.push('');
+  lines.push(
+    '*© 2026 Zontally · Licensed under [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)*'
+  );
+  lines.push('');
+  return lines.join('\n');
+}
+
+function generateIndustryPage(ind, filenameBySubId) {
+  const lines = [];
+  lines.push(`# ${ind.name}`);
+  lines.push('');
+  lines.push(`**Industry ID:** \`${ind.id}\`  `);
+  lines.push(`**Slug:** \`${ind.slug}\`  `);
+  lines.push(`**Status:** ${ind.status || '—'}`);
+  lines.push('');
+  lines.push('[← Industry taxonomy](../index.md)');
+  lines.push('');
+  lines.push('---');
+  lines.push('');
+  lines.push('## Definition');
+  lines.push('');
+  lines.push((ind.definition || '').trim());
+  lines.push('');
+
+  if (ind.aliases && ind.aliases.length) {
+    lines.push('## Aliases');
+    lines.push('');
+    lines.push(bulletList(ind.aliases));
+    lines.push('');
+  }
+
+  if (ind.commonBusinessModels && ind.commonBusinessModels.length) {
+    lines.push('## Common business models');
+    lines.push('');
+    lines.push(bulletList(ind.commonBusinessModels));
+    lines.push('');
+  }
+
+  if (ind.commonValueDrivers && ind.commonValueDrivers.length) {
+    lines.push('## Common value drivers');
+    lines.push('');
+    lines.push(bulletList(ind.commonValueDrivers));
+    lines.push('');
+  }
+
+  if (ind.commonCapabilities && ind.commonCapabilities.length) {
+    lines.push('## Common capabilities');
+    lines.push('');
+    lines.push(bulletList(ind.commonCapabilities));
+    lines.push('');
+  }
+
+  if (ind.tags && ind.tags.length) {
+    lines.push('## Tags');
+    lines.push('');
+    lines.push(bulletList(ind.tags));
+    lines.push('');
+  }
+
+  if (ind.signals && Object.keys(ind.signals).length) {
+    lines.push('## Industry intensity signals');
+    lines.push('');
+    lines.push(signalsMarkdownTable(ind.signals).trimEnd());
+    lines.push('');
+  }
+
+  const subs = ind.subIndustries || [];
+  lines.push('## Sub-industries');
+  lines.push('');
+  if (subs.length === 0) {
+    lines.push('*No sub-industries defined.*');
+    lines.push('');
+  } else {
+    lines.push('| Sub-industry | Summary |');
+    lines.push('|--------------|---------|');
+    for (const sub of subs) {
+      const file = filenameBySubId.get(sub.id);
+      const link = file ? `../sub-industries/${file}` : '#';
+      const label = `[${sub.name}](${link})`;
+      lines.push(`| ${label} | ${escapeTableCell(truncateSummary(sub.definition, 160))} |`);
+    }
+    lines.push('');
+  }
+
+  lines.push('---');
+  lines.push('');
+  lines.push('[← Industry taxonomy](../index.md)');
+  lines.push('');
+  lines.push('---');
+  lines.push('');
+  lines.push(
+    '*© 2026 Zontally · Licensed under [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)*'
+  );
+  lines.push('');
+  return lines.join('\n');
+}
+
+function generateIndustryTaxonomyDocs() {
+  if (!fs.existsSync(INDUSTRIES_JSON)) {
+    console.log(
+      '\n  ⚠ Skipping industry taxonomy — no compiled JSON (run npm run compile:industries first)'
+    );
+    return null;
+  }
+
+  const raw = fs.readFileSync(INDUSTRIES_JSON, 'utf8');
+  const data = JSON.parse(raw);
+  if (!data.industries || !Array.isArray(data.industries)) {
+    console.log('\n  ⚠ Skipping industry taxonomy — invalid zorba-industries.json');
+    return null;
+  }
+
+  fs.mkdirSync(DOCS_INDUSTRIES_DIR, { recursive: true });
+  fs.mkdirSync(DOCS_SUB_INDUSTRIES_DIR, { recursive: true });
+
+  const filenameBySubId = assignSubIndustryFilenames(data.industries);
+
+  for (const ind of data.industries) {
+    const page = generateIndustryPage(ind, filenameBySubId);
+    fs.writeFileSync(path.join(DOCS_INDUSTRIES_DIR, `${ind.slug}.md`), page);
+  }
+
+  let subCount = 0;
+  for (const ind of data.industries) {
+    for (const sub of ind.subIndustries || []) {
+      const mdFile = filenameBySubId.get(sub.id);
+      if (!mdFile) continue;
+      const body = generateSubIndustryDoc(sub, ind);
+      fs.writeFileSync(path.join(DOCS_SUB_INDUSTRIES_DIR, mdFile), body);
+      subCount++;
+    }
+  }
+
+  fs.writeFileSync(
+    path.join(DOCS_INDUSTRY_TAXONOMY_DIR, 'index.md'),
+    generateIndustryTaxonomyOverviewIndex(data)
+  );
+
+  console.log(
+    `\n  ✓ industry-taxonomy/index.md + ${data.industries.length} industry page(s) + ${subCount} sub-industry page(s)`
+  );
+  return true;
+}
+
 // --- Main ---
 
 function main() {
@@ -327,6 +651,8 @@ function main() {
     console.log('  ✓ framework docs copied');
   }
 
+  const industryTaxonomyResult = generateIndustryTaxonomyDocs();
+
   // --- Site index from README ---
   const readmePath = path.join(ROOT, 'README.md');
   if (fs.existsSync(readmePath)) {
@@ -368,8 +694,13 @@ function main() {
   const nav = [
     { 'Home': 'index.md' },
     { 'Framework': Object.entries(fwNav).map(([k, v]) => ({ [k]: v })) },
-    { 'Domain Taxonomy': 'domains/index.md' },
   ];
+
+  if (industryTaxonomyResult) {
+    nav.push({ 'Industry taxonomy': 'industry-taxonomy/index.md' });
+  }
+
+  nav.push({ 'Domain Taxonomy': 'domains/index.md' });
 
   if (editionNavItems.length > 0) {
     nav.push({ 'Industry Editions': editionNavItems });

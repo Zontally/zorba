@@ -3,12 +3,21 @@ domain:
   number: 2
   name: "Product/Service & Innovation"
   subtitle: "Creating what customers and markets need next"
+  name: "Product/Service & Innovation"
+  subtitle: "Creating what customers and markets need next"
   classification: value_chain
   description: >
     This domain encompasses the enterprise's ability to envision, design, build, and evolve
     the products and services that deliver value to its customers and markets. It spans from
     early-stage ideation and research through to lifecycle management and retirement,
+    early-stage ideation and research through to lifecycle management and retirement,
     including the intellectual property that protects competitive advantage.
+
+    Whether an organisation delivers physical products, software, professional services, or a
+    combination, this domain covers how offerings are conceived, validated, brought to market,
+    and sustained. The specific shape varies by industry — product-led firms emphasise
+    engineering and release cycles; service-led firms emphasise methodology design and
+    offering packaging.
 
     Whether an organisation delivers physical products, software, professional services, or a
     combination, this domain covers how offerings are conceived, validated, brought to market,
@@ -19,19 +28,25 @@ domain:
     In a ZORBA-enabled enterprise, this domain is where agentic capabilities most visibly
     augment human creativity — with agents accelerating research synthesis, automating testing
     cycles, generating design variations, and providing real-time analytics that inform
+    cycles, generating design variations, and providing real-time analytics that inform
     every decision from concept through sunset.
 
   capabilities:
     - id: "361742"
       number: "2.1"
       name: "Shape Offering Strategy and Portfolio Direction"
+      name: "Shape Offering Strategy and Portfolio Direction"
       description: >
+        Define the overarching product/service vision, establish portfolio priorities, and
+        maintain a coherent offering strategy aligned to enterprise goals. This capability
+        ensures investments in offerings are deliberate and balanced across horizons.
         Define the overarching product/service vision, establish portfolio priorities, and
         maintain a coherent offering strategy aligned to enterprise goals. This capability
         ensures investments in offerings are deliberate and balanced across horizons.
       processes:
         - id: "529184"
           number: "2.1.1"
+          name: "Articulate the offering vision and strategic positioning"
           name: "Articulate the offering vision and strategic positioning"
           agentic_profile: H
           agentic_note: "Human-led; offering vision requires authentic market intuition"
@@ -77,6 +92,7 @@ domain:
         - id: "613427"
           number: "2.1.3"
           name: "Define and balance the offering portfolio across horizons"
+          name: "Define and balance the offering portfolio across horizons"
           agentic_profile: "H+a"
           agentic_note: "Humans set portfolio mix; agents model resource trade-offs"
           measurements:
@@ -98,6 +114,7 @@ domain:
               direction: higher_is_better
         - id: "295814"
           number: "2.1.4"
+          name: "Establish offering investment criteria and funding models"
           name: "Establish offering investment criteria and funding models"
           agentic_profile: "H+a"
           agentic_note: "Humans define criteria; agents benchmark against industry norms"
@@ -143,6 +160,7 @@ domain:
         - id: "184239"
           number: "2.1.6"
           name: "Align offering roadmaps with enterprise strategy"
+          name: "Align offering roadmaps with enterprise strategy"
           agentic_profile: "H=A"
           agentic_note: "Agents flag misalignments; humans resolve strategic tensions"
           measurements:
@@ -166,7 +184,11 @@ domain:
     - id: "527163"
       number: "2.2"
       name: "Discover and Validate Offering Opportunities"
+      name: "Discover and Validate Offering Opportunities"
       description: >
+        Systematically identify, explore, and validate new product or service concepts before
+        committing significant development resources. This capability bridges insight and
+        action through structured experimentation.
         Systematically identify, explore, and validate new product or service concepts before
         committing significant development resources. This capability bridges insight and
         action through structured experimentation.
@@ -195,6 +217,7 @@ domain:
               direction: higher_is_better
         - id: "716348"
           number: "2.2.2"
+          name: "Generate and explore offering concepts and ideas"
           name: "Generate and explore offering concepts and ideas"
           agentic_profile: "H=A"
           agentic_note: "Agents generate concept variations and provocations; humans curate and refine"
@@ -262,6 +285,7 @@ domain:
         - id: "254697"
           number: "2.2.5"
           name: "Build and assess business cases for new offerings"
+          name: "Build and assess business cases for new offerings"
           agentic_profile: "H=A"
           agentic_note: "Agents model financials and scenarios; humans judge viability"
           measurements:
@@ -290,9 +314,13 @@ domain:
         market-ready offerings. This capability covers requirements definition, architecture,
         development, and quality assurance — whether for physical products, software, or
         service delivery models.
+        market-ready offerings. This capability covers requirements definition, architecture,
+        development, and quality assurance — whether for physical products, software, or
+        service delivery models.
       processes:
         - id: "514738"
           number: "2.3.1"
+          name: "Define offering requirements and acceptance criteria"
           name: "Define offering requirements and acceptance criteria"
           agentic_profile: "H+a"
           agentic_note: "Humans specify requirements; agents structure and cross-reference"
@@ -316,6 +344,7 @@ domain:
         - id: "928471"
           number: "2.3.2"
           name: "Design offering architecture and specifications"
+          name: "Design offering architecture and specifications"
           agentic_profile: "H+a"
           agentic_note: "Humans architect; agents generate documentation and check consistency"
           measurements:
@@ -337,6 +366,7 @@ domain:
               direction: higher_is_better
         - id: "347165"
           number: "2.3.3"
+          name: "Execute development and build cycles"
           name: "Execute development and build cycles"
           agentic_profile: "H=A"
           agentic_note: "Agents assist with creation and assembly; humans lead design decisions"
@@ -360,6 +390,7 @@ domain:
         - id: "763829"
           number: "2.3.4"
           name: "Conduct quality assurance and testing"
+          name: "Conduct quality assurance and testing"
           agentic_profile: "h+A"
           agentic_note: "Agents execute test suites and validation checks; humans define quality strategy"
           measurements:
@@ -381,6 +412,7 @@ domain:
               direction: higher_is_better
         - id: "481592"
           number: "2.3.5"
+          name: "Manage offering configuration and variant design"
           name: "Manage offering configuration and variant design"
           agentic_profile: "H=A"
           agentic_note: "Agents manage configuration matrices; humans approve variant decisions"
@@ -501,6 +533,7 @@ domain:
         - id: "831264"
           number: "2.4.4"
           name: "Scale validated innovations into core offerings"
+          name: "Scale validated innovations into core offerings"
           agentic_profile: "H+a"
           agentic_note: "Humans lead scaling decisions; agents coordinate handover logistics"
           measurements:
@@ -570,6 +603,7 @@ domain:
       name: "Direct Research and Development Activities"
       description: >
         Plan, fund, and execute research and development programmes that generate new
+        knowledge, technologies, and capabilities for future offerings and competitive
         knowledge, technologies, and capabilities for future offerings and competitive
         advantage.
       processes:
@@ -687,13 +721,18 @@ domain:
     - id: "174628"
       number: "2.6"
       name: "Manage the Offering Lifecycle End to End"
+      name: "Manage the Offering Lifecycle End to End"
       description: >
+        Govern the full lifecycle of each product or service from launch through growth,
+        maturity, and eventual sunset — ensuring offerings remain viable, profitable, and
+        aligned with market needs throughout their life.
         Govern the full lifecycle of each product or service from launch through growth,
         maturity, and eventual sunset — ensuring offerings remain viable, profitable, and
         aligned with market needs throughout their life.
       processes:
         - id: "493162"
           number: "2.6.1"
+          name: "Plan and execute offering launches and market entry"
           name: "Plan and execute offering launches and market entry"
           agentic_profile: "H+a"
           agentic_note: "Humans lead launch strategy; agents coordinate checklists and readiness tracking"
@@ -717,6 +756,7 @@ domain:
         - id: "825347"
           number: "2.6.2"
           name: "Monitor offering performance and market reception"
+          name: "Monitor offering performance and market reception"
           agentic_profile: A
           agentic_note: "Agent-executed; continuous monitoring of adoption, usage, and revenue metrics"
           measurements:
@@ -738,6 +778,7 @@ domain:
               direction: higher_is_better
         - id: "567814"
           number: "2.6.3"
+          name: "Manage offering iterations, updates, and enhancements"
           name: "Manage offering iterations, updates, and enhancements"
           agentic_profile: "H=A"
           agentic_note: "Agents prioritise backlog by data signals; humans approve release scope"
@@ -761,6 +802,7 @@ domain:
         - id: "314289"
           number: "2.6.4"
           name: "Plan and execute offering retirement and sunsetting"
+          name: "Plan and execute offering retirement and sunsetting"
           agentic_profile: "H+a"
           agentic_note: "Humans decide retirement timing; agents manage migration and communication plans"
           measurements:
@@ -782,6 +824,7 @@ domain:
               direction: higher_is_better
         - id: "682431"
           number: "2.6.5"
+          name: "Manage regulatory and compliance aspects of the offering lifecycle"
           name: "Manage regulatory and compliance aspects of the offering lifecycle"
           agentic_profile: "H=A"
           agentic_note: "Agents track regulatory changes affecting offerings; humans ensure compliance"
@@ -812,6 +855,7 @@ domain:
       processes:
         - id: "419237"
           number: "2.7.1"
+          name: "Identify and assess intellectual property arising from offerings"
           name: "Identify and assess intellectual property arising from offerings"
           agentic_profile: "H=A"
           agentic_note: "Agents scan outputs for protectable elements; humans evaluate"
@@ -924,13 +968,16 @@ domain:
     - id: "927341"
       number: "2.8"
       name: "Generate Offering Insights and Analytics"
+      name: "Generate Offering Insights and Analytics"
       description: >
         Establish and operate the data, analytics, and insight capabilities that inform
+        offering decisions — from usage analytics and experimentation through to predictive
         offering decisions — from usage analytics and experimentation through to predictive
         modelling and competitive intelligence.
       processes:
         - id: "364218"
           number: "2.8.1"
+          name: "Define offering metrics, KPIs, and measurement frameworks"
           name: "Define offering metrics, KPIs, and measurement frameworks"
           agentic_profile: "H+a"
           agentic_note: "Humans define what to measure; agents recommend based on benchmarks"
@@ -953,6 +1000,7 @@ domain:
               direction: higher_is_better
         - id: "581749"
           number: "2.8.2"
+          name: "Collect and integrate offering usage and behavioural data"
           name: "Collect and integrate offering usage and behavioural data"
           agentic_profile: A
           agentic_note: "Agent-executed; automated data pipeline management"
@@ -998,6 +1046,7 @@ domain:
         - id: "413892"
           number: "2.8.4"
           name: "Generate predictive models for offering performance"
+          name: "Generate predictive models for offering performance"
           agentic_profile: "h+A"
           agentic_note: "Agents build and maintain models; humans interpret and act on predictions"
           measurements:
@@ -1020,6 +1069,7 @@ domain:
         - id: "846527"
           number: "2.8.5"
           name: "Deliver offering insight reports and recommendations"
+          name: "Deliver offering insight reports and recommendations"
           agentic_profile: "h+A"
           agentic_note: "Agents generate narrative reports; humans validate and distribute"
           measurements:
@@ -1041,6 +1091,7 @@ domain:
               direction: higher_is_better
         - id: "152843"
           number: "2.8.6"
+          name: "Monitor competitive landscape and offering parity"
           name: "Monitor competitive landscape and offering parity"
           agentic_profile: "h+A"
           agentic_note: "Agents track competitor releases and offerings; humans assess strategic implications"

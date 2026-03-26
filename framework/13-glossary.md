@@ -1,10 +1,5 @@
 # Glossary
 
-**Zontally Reference Business Architecture**
-**Version:** v0.1 (Draft)
-
----
-
 ## Traditional Enterprise Architecture Terms
 
 | Term | Definition |

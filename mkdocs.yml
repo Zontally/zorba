@@ -1,8 +1,8 @@
 site_name: ZORBA
 site_description: The open reference architecture for the agentic enterprise
 site_url: https://zontally.github.io/zorba
-repo_url: https://github.com/Zontally/zorba
-repo_name: Zontally/zorba
+repo_url: https://github.com/zontally/zorba
+repo_name: zontally/zorba
 theme:
   name: material
   logo: assets/logo-light.png
@@ -47,6 +47,7 @@ nav:
       - Usage Guide: framework/11-usage-guide.md
       - Contributing: framework/12-contributing.md
       - Glossary: framework/13-glossary.md
+  - Industry taxonomy: industry-taxonomy/index.md
   - Domain Taxonomy: domains/index.md
   - Industry Editions:
       - ZORBA for Enterprise Software: editions/enterprise-software/index.md

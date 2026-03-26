@@ -1,10 +1,5 @@
 # Domain Reference Model
 
-**Zontally Reference Business Architecture**
-**Version:** v0.1 (Draft)
-
----
-
 ## Overview
 
 The ZORBA Domain Reference Model defines **12 enterprise domains** that represent the complete scope of organisational operations. Unlike traditional domain models that describe only what humans do, ZORBA includes an **Agentic Maturity Profile** for each domain — characterising which activities are ripe for agent participation, what the current and target human/agent split looks like, and where the most significant workforce composition decisions lie.
