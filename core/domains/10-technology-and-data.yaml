@@ -21,34 +21,117 @@ domain:
       description: >
         Define the technology vision, principles, and enterprise architecture that guide
         investment decisions, platform choices, and the evolution of the technology estate.
-      evolution_stage: custom
-      pst_phase: settler
       processes:
         - id: "631824"
           number: "10.1.1"
           name: "Define the enterprise technology vision and principles"
           agentic_profile: H
           agentic_note: "Human-led; technology strategy requires human judgement on business priorities"
+          measurements:
+            - id: "100101"
+              number: "10.1.1.M1"
+              name: "Technology Strategy Alignment Score"
+              what: "Degree of alignment between tech investments and business strategy"
+              why: "Misaligned tech spending wastes resources and delays strategic goals"
+              how: "Percentage of tech projects mapped to strategic objectives"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "100102"
+              number: "10.1.1.M2"
+              name: "Technology Vision Refresh Cadence"
+              what: "Months since last technology vision review and update"
+              why: "Stale vision leads to outdated investment decisions"
+              how: "Months elapsed since last board-approved vision update"
+              frequency: annually
+              direction: lower_is_better
         - id: "274953"
           number: "10.1.2"
           name: "Develop and maintain enterprise architecture standards"
           agentic_profile: "H=A"
           agentic_note: "Agents maintain architecture artefacts; humans set standards and make trade-offs"
+          measurements:
+            - id: "100201"
+              number: "10.1.2.M1"
+              name: "Architecture Standards Adoption Rate"
+              what: "Percentage of new projects conforming to enterprise architecture standards"
+              why: "Non-conformance increases integration cost and technical debt"
+              how: "Conforming projects / Total new projects x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "100202"
+              number: "10.1.2.M2"
+              name: "Architecture Artefact Currency"
+              what: "Percentage of architecture documents updated within review cycle"
+              why: "Outdated artefacts lead to inconsistent design decisions"
+              how: "Current artefacts / Total artefacts x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "918362"
           number: "10.1.3"
           name: "Assess emerging technologies and evaluate adoption readiness"
           agentic_profile: "h+A"
           agentic_note: "Agents scan, evaluate, and benchmark; humans decide strategic relevance"
+          measurements:
+            - id: "100301"
+              number: "10.1.3.M1"
+              name: "Emerging Technology Assessments Completed"
+              what: "Number of formal technology evaluations completed per quarter"
+              why: "Continuous scanning prevents strategic technology blind spots"
+              how: "Count of completed technology assessment reports"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "100302"
+              number: "10.1.3.M2"
+              name: "Technology Adoption Lead Time"
+              what: "Average months from technology evaluation to production pilot"
+              why: "Faster adoption captures competitive advantage sooner"
+              how: "Average months from assessment completion to pilot launch"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "453271"
           number: "10.1.4"
           name: "Manage the technology investment portfolio and roadmap"
           agentic_profile: "H+a"
           agentic_note: "Humans prioritise investments; agents model costs and dependencies"
+          measurements:
+            - id: "100401"
+              number: "10.1.4.M1"
+              name: "IT Investment Portfolio ROI"
+              what: "Return on investment across the technology portfolio"
+              why: "Ensures technology investments deliver business value"
+              how: "(Total benefits realised - Total IT investment) / Total IT investment x 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "100402"
+              number: "10.1.4.M2"
+              name: "Roadmap Delivery Rate"
+              what: "Percentage of roadmap milestones delivered on schedule"
+              why: "Slippage delays business capabilities and erodes stakeholder confidence"
+              how: "On-time milestones / Total milestones x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "186439"
           number: "10.1.5"
           name: "Govern architecture conformance and technical debt"
           agentic_profile: "H=A"
           agentic_note: "Agents detect drift and debt; humans approve remediation priorities"
+          measurements:
+            - id: "100501"
+              number: "10.1.5.M1"
+              name: "Architecture Conformance Rate"
+              what: "Percentage of systems conforming to architecture standards"
+              why: "Non-conformance accumulates technical debt and integration risk"
+              how: "Conforming systems / Total systems x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "100502"
+              number: "10.1.5.M2"
+              name: "Technical Debt Ratio"
+              what: "Estimated technical debt as percentage of total technology asset value"
+              why: "High debt increases maintenance cost and slows delivery"
+              how: "Estimated remediation cost / Total technology asset value x 100"
+              frequency: quarterly
+              direction: lower_is_better
 
     - id: "674421"
       number: "10.2"
@@ -56,39 +139,139 @@ domain:
       description: >
         Design, develop, test, deploy, and maintain the enterprise's application portfolio —
         including custom-built, configured, and integrated software solutions.
-      evolution_stage: product
-      pst_phase: settler
       processes:
         - id: "741258"
           number: "10.2.1"
           name: "Gather and prioritise application requirements"
           agentic_profile: "H=A"
           agentic_note: "Agents collect and structure requirements; humans validate and prioritise"
+          measurements:
+            - id: "100601"
+              number: "10.2.1.M1"
+              name: "Requirements Clarity Score"
+              what: "Percentage of requirements accepted without rework after review"
+              why: "Clear requirements reduce development waste and rework"
+              how: "Requirements accepted first time / Total requirements submitted x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "100602"
+              number: "10.2.1.M2"
+              name: "Backlog Grooming Cycle Time"
+              what: "Average days from requirement submission to prioritised backlog entry"
+              why: "Faster grooming accelerates delivery pipeline flow"
+              how: "Average days from submission to backlog placement"
+              frequency: monthly
+              direction: lower_is_better
         - id: "529463"
           number: "10.2.2"
           name: "Design and architect application solutions"
           agentic_profile: "H+a"
           agentic_note: "Humans design; agents generate reference architectures and patterns"
+          measurements:
+            - id: "100701"
+              number: "10.2.2.M1"
+              name: "Design Review Pass Rate"
+              what: "Percentage of solution designs approved at first review"
+              why: "Rework in design is cheaper than rework in code"
+              how: "Designs approved first time / Total designs reviewed x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "100702"
+              number: "10.2.2.M2"
+              name: "Pattern Reuse Rate"
+              what: "Percentage of new designs leveraging existing architecture patterns"
+              why: "Reuse accelerates delivery and reduces risk"
+              how: "Designs using existing patterns / Total new designs x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "384716"
           number: "10.2.3"
           name: "Develop and configure application code"
           agentic_profile: "h+A"
           agentic_note: "Agents generate and refactor code; humans review, approve, and guide"
+          measurements:
+            - id: "100801"
+              number: "10.2.3.M1"
+              name: "Code Quality Score"
+              what: "Composite code quality metric from static analysis"
+              why: "Higher quality code reduces bugs and maintenance burden"
+              how: "Weighted score from linting, complexity, and duplication metrics (0-100)"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "100802"
+              number: "10.2.3.M2"
+              name: "Developer Velocity"
+              what: "Story points or features delivered per sprint per developer"
+              why: "Tracks development team productivity over time"
+              how: "Total story points completed / Number of developers per sprint"
+              frequency: monthly
+              direction: higher_is_better
         - id: "862147"
           number: "10.2.4"
           name: "Test and validate application quality"
           agentic_profile: "h+A"
           agentic_note: "Agents execute automated test suites; humans define test strategies and review edge cases"
+          measurements:
+            - id: "100901"
+              number: "10.2.4.M1"
+              name: "Defect Escape Rate"
+              what: "Percentage of defects found in production vs total defects"
+              why: "Lower escape rate means testing catches more issues before release"
+              how: "Production defects / Total defects found x 100"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "100902"
+              number: "10.2.4.M2"
+              name: "Automated Test Coverage"
+              what: "Percentage of code covered by automated tests"
+              why: "Higher coverage reduces regression risk and enables faster releases"
+              how: "Lines covered by automated tests / Total lines of code x 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "195384"
           number: "10.2.5"
           name: "Deploy and release applications to production"
           agentic_profile: "H=A"
           agentic_note: "Agents orchestrate CI/CD pipelines; humans approve production releases"
+          measurements:
+            - id: "101001"
+              number: "10.2.5.M1"
+              name: "Deployment Frequency"
+              what: "Number of production deployments per month"
+              why: "Higher frequency indicates mature CI/CD and faster value delivery"
+              how: "Count of successful production deployments per month"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "101002"
+              number: "10.2.5.M2"
+              name: "Deployment Failure Rate"
+              what: "Percentage of deployments requiring rollback or hotfix"
+              why: "Failed deployments cause outages and erode confidence"
+              how: "Failed deployments / Total deployments x 100"
+              frequency: monthly
+              direction: lower_is_better
         - id: "647932"
           number: "10.2.6"
           name: "Manage the application portfolio lifecycle"
           agentic_profile: "H=A"
           agentic_note: "Agents track usage, costs, and health; humans decide rationalisation actions"
+          measurements:
+            - id: "101101"
+              number: "10.2.6.M1"
+              name: "Application Portfolio Health Score"
+              what: "Percentage of applications rated as healthy in portfolio assessment"
+              why: "Unhealthy apps increase risk and maintenance cost"
+              how: "Healthy-rated applications / Total applications x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "101102"
+              number: "10.2.6.M2"
+              name: "Application Rationalisation Progress"
+              what: "Percentage of targeted applications retired or consolidated"
+              why: "Reducing portfolio complexity lowers cost and risk"
+              how: "Applications retired or consolidated / Total targeted x 100"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "714538"
       number: "10.3"
@@ -96,39 +279,139 @@ domain:
       description: >
         Provision, manage, and optimise the enterprise's computing infrastructure — including
         on-premises, cloud, hybrid, and edge environments.
-      evolution_stage: commodity
-      pst_phase: town_planner
       processes:
         - id: "428163"
           number: "10.3.1"
           name: "Provision and configure infrastructure resources"
           agentic_profile: "h+A"
           agentic_note: "Agents execute infrastructure-as-code; humans define policies and approve changes"
+          measurements:
+            - id: "101201"
+              number: "10.3.1.M1"
+              name: "Infrastructure Provisioning Time"
+              what: "Average time to provision new infrastructure resources"
+              why: "Faster provisioning accelerates project delivery"
+              how: "Average hours from request to available resource"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "101202"
+              number: "10.3.1.M2"
+              name: "Infrastructure-as-Code Coverage"
+              what: "Percentage of infrastructure managed via code templates"
+              why: "IaC ensures consistency, auditability, and repeatability"
+              how: "IaC-managed resources / Total infrastructure resources x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "563291"
           number: "10.3.2"
           name: "Monitor infrastructure health and performance"
           agentic_profile: A
           agentic_note: "Agent-autonomous; continuous monitoring with human-defined alert thresholds"
+          measurements:
+            - id: "101301"
+              number: "10.3.2.M1"
+              name: "Infrastructure Availability"
+              what: "Percentage uptime of critical infrastructure services"
+              why: "Downtime directly impacts business operations and revenue"
+              how: "Uptime minutes / Total minutes in period x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "101302"
+              number: "10.3.2.M2"
+              name: "Mean Time to Detect"
+              what: "Average time to detect infrastructure issues"
+              why: "Faster detection enables faster resolution and reduces impact"
+              how: "Average minutes from issue occurrence to alert"
+              frequency: monthly
+              direction: lower_is_better
         - id: "819427"
           number: "10.3.3"
           name: "Manage capacity planning and resource optimisation"
           agentic_profile: "h+A"
           agentic_note: "Agents forecast and recommend; humans approve scaling decisions"
+          measurements:
+            - id: "101401"
+              number: "10.3.3.M1"
+              name: "Capacity Utilisation Rate"
+              what: "Average utilisation of provisioned compute and storage resources"
+              why: "Low utilisation wastes spend; high utilisation risks performance"
+              how: "Average resource utilisation across compute and storage (%)"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "101402"
+              number: "10.3.3.M2"
+              name: "Capacity Forecast Accuracy"
+              what: "Accuracy of capacity forecasts vs actual demand"
+              why: "Accurate forecasts prevent over-provisioning and outages"
+              how: "1 - |Forecast - Actual| / Actual x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "246875"
           number: "10.3.4"
           name: "Operate cloud platform services and governance"
           agentic_profile: "H=A"
           agentic_note: "Agents enforce guardrails and track spend; humans set cloud strategy"
+          measurements:
+            - id: "101501"
+              number: "10.3.4.M1"
+              name: "Cloud Spend Variance"
+              what: "Deviation of actual cloud spend from budget"
+              why: "Uncontrolled cloud spend erodes financial discipline"
+              how: "(Actual cloud spend - Budget) / Budget x 100"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "101502"
+              number: "10.3.4.M2"
+              name: "Cloud Governance Compliance Rate"
+              what: "Percentage of cloud resources compliant with governance policies"
+              why: "Non-compliant resources create security and cost risks"
+              how: "Compliant resources / Total cloud resources x 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "738514"
           number: "10.3.5"
           name: "Execute infrastructure auto-remediation and self-healing"
           agentic_profile: A
           agentic_note: "Agent-autonomous; automated remediation within predefined runbooks"
+          measurements:
+            - id: "101601"
+              number: "10.3.5.M1"
+              name: "Auto-Remediation Success Rate"
+              what: "Percentage of automated remediations that resolve issues without escalation"
+              why: "Higher success reduces human workload and speeds recovery"
+              how: "Successful auto-remediations / Total auto-remediation attempts x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "101602"
+              number: "10.3.5.M2"
+              name: "Mean Time to Recover (Automated)"
+              what: "Average time for automated self-healing to restore service"
+              why: "Faster recovery minimises business impact"
+              how: "Average minutes from issue detection to service restoration (automated)"
+              frequency: monthly
+              direction: lower_is_better
         - id: "391648"
           number: "10.3.6"
           name: "Manage network and connectivity services"
           agentic_profile: "H=A"
           agentic_note: "Agents monitor and configure; humans approve topology changes"
+          measurements:
+            - id: "101701"
+              number: "10.3.6.M1"
+              name: "Network Availability"
+              what: "Percentage uptime of core network services"
+              why: "Network outages affect all dependent services"
+              how: "Network uptime minutes / Total minutes in period x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "101702"
+              number: "10.3.6.M2"
+              name: "Network Latency Performance"
+              what: "Average network latency against defined thresholds"
+              why: "High latency degrades application performance and user experience"
+              how: "Average round-trip latency in milliseconds for key routes"
+              frequency: monthly
+              direction: lower_is_better
 
     - id: "283946"
       number: "10.4"
@@ -136,39 +419,139 @@ domain:
       description: >
         Manage data as an enterprise asset — ensuring quality, accessibility, governance, and
         the delivery of analytics and insights that drive decision-making.
-      evolution_stage: custom
-      pst_phase: settler
       processes:
         - id: "625813"
           number: "10.4.1"
           name: "Define data governance frameworks and ownership"
           agentic_profile: "H+a"
           agentic_note: "Humans define governance; agents maintain catalogues and lineage"
+          measurements:
+            - id: "101801"
+              number: "10.4.1.M1"
+              name: "Data Governance Coverage"
+              what: "Percentage of critical data domains with assigned data owners"
+              why: "Unowned data lacks accountability for quality and access"
+              how: "Domains with assigned owners / Total critical data domains x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "101802"
+              number: "10.4.1.M2"
+              name: "Data Catalogue Completeness"
+              what: "Percentage of data assets catalogued with metadata"
+              why: "Uncatalogued data is undiscoverable and ungoverned"
+              how: "Catalogued data assets / Total known data assets x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "948271"
           number: "10.4.2"
           name: "Manage data quality, profiling, and remediation"
           agentic_profile: "h+A"
           agentic_note: "Agents profile and cleanse data; humans set quality thresholds and resolve exceptions"
+          measurements:
+            - id: "101901"
+              number: "10.4.2.M1"
+              name: "Data Quality Score"
+              what: "Composite data quality score across dimensions"
+              why: "Poor data quality leads to unreliable analytics and decisions"
+              how: "Weighted average of completeness, accuracy, consistency, and timeliness scores (0-100)"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "101902"
+              number: "10.4.2.M2"
+              name: "Data Quality Issue Resolution Time"
+              what: "Average days to resolve identified data quality issues"
+              why: "Lingering quality issues compound downstream impact"
+              how: "Average days from issue detection to resolution"
+              frequency: monthly
+              direction: lower_is_better
         - id: "174593"
           number: "10.4.3"
           name: "Build and operate data pipelines and integration"
           agentic_profile: A
           agentic_note: "Agent-executed; automated pipeline orchestration with human-defined schemas"
+          measurements:
+            - id: "102001"
+              number: "10.4.3.M1"
+              name: "Pipeline Reliability Rate"
+              what: "Percentage of data pipeline runs completing successfully"
+              why: "Failed pipelines delay analytics and reporting"
+              how: "Successful pipeline runs / Total scheduled runs x 100"
+              frequency: daily
+              direction: higher_is_better
+            - id: "102002"
+              number: "10.4.3.M2"
+              name: "Data Freshness SLA Compliance"
+              what: "Percentage of data sets refreshed within defined SLA windows"
+              why: "Stale data leads to outdated decisions"
+              how: "Data sets refreshed within SLA / Total SLA-governed data sets x 100"
+              frequency: daily
+              direction: higher_is_better
         - id: "983322"
           number: "10.4.4"
           name: "Deliver business intelligence and reporting"
           agentic_profile: "h+A"
           agentic_note: "Agents generate dashboards and reports; humans interpret and act on insights"
+          measurements:
+            - id: "102101"
+              number: "10.4.4.M1"
+              name: "Report Delivery Timeliness"
+              what: "Percentage of scheduled reports delivered on time"
+              why: "Late reports delay decision-making"
+              how: "On-time reports / Total scheduled reports x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "102102"
+              number: "10.4.4.M2"
+              name: "BI User Adoption Rate"
+              what: "Percentage of licensed users actively using BI tools"
+              why: "Low adoption wastes licensing investment"
+              how: "Active users in last 30 days / Total licensed users x 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "812367"
           number: "10.4.5"
           name: "Develop and manage advanced analytics and models"
           agentic_profile: "H=A"
           agentic_note: "Agents train and tune models; humans validate methodology and interpret results"
+          measurements:
+            - id: "102201"
+              number: "10.4.5.M1"
+              name: "Model Accuracy"
+              what: "Average prediction accuracy of production analytics models"
+              why: "Inaccurate models lead to poor automated decisions"
+              how: "Average accuracy metric across production models (model-specific)"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "102202"
+              number: "10.4.5.M2"
+              name: "Model Drift Detection Rate"
+              what: "Percentage of model drift events detected before impact"
+              why: "Undetected drift degrades model performance silently"
+              how: "Drift events detected proactively / Total drift events x 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "469752"
           number: "10.4.6"
           name: "Manage master data and reference data"
           agentic_profile: "H=A"
           agentic_note: "Agents maintain records; humans resolve conflicts and approve golden records"
+          measurements:
+            - id: "102301"
+              number: "10.4.6.M1"
+              name: "Master Data Match Rate"
+              what: "Percentage of records with confirmed golden record linkage"
+              why: "Unlinked records create duplicates and inconsistencies"
+              how: "Linked records / Total master data records x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "102302"
+              number: "10.4.6.M2"
+              name: "Reference Data Currency"
+              what: "Percentage of reference data sets updated within review cycle"
+              why: "Stale reference data causes mapping and classification errors"
+              how: "Current reference data sets / Total reference data sets x 100"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "866025"
       number: "10.5"
@@ -176,39 +559,139 @@ domain:
       description: >
         Defend the enterprise against cyber threats, manage information security risks, and
         ensure resilience through detection, response, and recovery capabilities.
-      evolution_stage: product
-      pst_phase: town_planner
       processes:
         - id: "317524"
           number: "10.5.1"
           name: "Define cybersecurity strategy and risk posture"
           agentic_profile: H
           agentic_note: "Human-led; security strategy requires executive judgement and risk appetite alignment"
+          measurements:
+            - id: "102401"
+              number: "10.5.1.M1"
+              name: "Security Risk Posture Score"
+              what: "Composite cybersecurity risk score from assessment framework"
+              why: "Provides executive visibility into overall security health"
+              how: "Weighted score from security framework assessment (0-100)"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "102402"
+              number: "10.5.1.M2"
+              name: "Security Strategy Execution Rate"
+              what: "Percentage of security strategy initiatives on track"
+              why: "Delayed initiatives leave the enterprise exposed to known risks"
+              how: "Initiatives on track / Total planned initiatives x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "853162"
           number: "10.5.2"
           name: "Manage identity, access, and authentication controls"
           agentic_profile: "H=A"
           agentic_note: "Agents enforce policies and detect anomalies; humans approve access exceptions"
+          measurements:
+            - id: "102501"
+              number: "10.5.2.M1"
+              name: "Access Review Completion Rate"
+              what: "Percentage of access reviews completed on schedule"
+              why: "Incomplete reviews leave stale or excessive access undetected"
+              how: "Completed reviews / Scheduled reviews x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "102502"
+              number: "10.5.2.M2"
+              name: "Privileged Access Anomaly Rate"
+              what: "Number of anomalous privileged access events per month"
+              why: "Anomalous privileged access is a top indicator of compromise"
+              how: "Count of flagged privileged access anomalies"
+              frequency: monthly
+              direction: lower_is_better
         - id: "246819"
           number: "10.5.3"
           name: "Monitor threats and operate security operations"
           agentic_profile: A
           agentic_note: "Agent-autonomous; continuous threat monitoring and initial incident triage"
+          measurements:
+            - id: "102601"
+              number: "10.5.3.M1"
+              name: "Threat Detection Rate"
+              what: "Percentage of simulated attacks detected by security operations"
+              why: "Measures effectiveness of detection capabilities"
+              how: "Simulated attacks detected / Total simulated attacks x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "102602"
+              number: "10.5.3.M2"
+              name: "Mean Time to Detect Threats"
+              what: "Average time from threat activity to detection alert"
+              why: "Faster detection limits attacker dwell time and damage"
+              how: "Average minutes from threat activity to SOC alert"
+              frequency: monthly
+              direction: lower_is_better
         - id: "671438"
           number: "10.5.4"
           name: "Respond to and recover from security incidents"
           agentic_profile: "H+a"
           agentic_note: "Humans lead incident response; agents execute containment playbooks and collect forensics"
+          measurements:
+            - id: "102701"
+              number: "10.5.4.M1"
+              name: "Incident Response Time"
+              what: "Average time from incident declaration to containment"
+              why: "Faster containment limits damage and data exposure"
+              how: "Average minutes from incident declaration to containment confirmation"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "102702"
+              number: "10.5.4.M2"
+              name: "Incident Recovery Time"
+              what: "Average time from containment to full service restoration"
+              why: "Faster recovery minimises business disruption"
+              how: "Average hours from containment to service restoration"
+              frequency: monthly
+              direction: lower_is_better
         - id: "594273"
           number: "10.5.5"
           name: "Conduct vulnerability management and penetration testing"
           agentic_profile: "h+A"
           agentic_note: "Agents scan and prioritise vulnerabilities; humans validate findings and approve remediation"
+          measurements:
+            - id: "102801"
+              number: "10.5.5.M1"
+              name: "Critical Vulnerability Remediation Time"
+              what: "Average days to remediate critical vulnerabilities"
+              why: "Unpatched critical vulnerabilities are prime attack vectors"
+              how: "Average days from critical vulnerability discovery to remediation"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "102802"
+              number: "10.5.5.M2"
+              name: "Vulnerability Scan Coverage"
+              what: "Percentage of IT assets scanned within the scheduled cycle"
+              why: "Unscanned assets may harbour unknown vulnerabilities"
+              how: "Assets scanned / Total IT assets x 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "914295"
           number: "10.5.6"
           name: "Manage security awareness and training"
           agentic_profile: "H=A"
           agentic_note: "Agents deliver training and simulate phishing; humans design curriculum and review results"
+          measurements:
+            - id: "102901"
+              number: "10.5.6.M1"
+              name: "Security Training Completion Rate"
+              what: "Percentage of employees completing mandatory security training"
+              why: "Untrained employees are the weakest link in security defence"
+              how: "Employees completed / Total employees required x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "102902"
+              number: "10.5.6.M2"
+              name: "Phishing Simulation Click Rate"
+              what: "Percentage of employees clicking simulated phishing links"
+              why: "Lower click rate indicates better security awareness"
+              how: "Employees who clicked / Total employees tested x 100"
+              frequency: quarterly
+              direction: lower_is_better
 
     - id: "158493"
       number: "10.6"
@@ -216,34 +699,117 @@ domain:
       description: >
         Operate the day-to-day technology services that keep the enterprise running — including
         service desk, incident management, problem resolution, and end-user computing.
-      evolution_stage: commodity
-      pst_phase: town_planner
       processes:
         - id: "824367"
           number: "10.6.1"
           name: "Operate the service desk and manage service requests"
           agentic_profile: "h+A"
           agentic_note: "Agents handle tier-0/1 requests; humans manage complex escalations"
+          measurements:
+            - id: "103001"
+              number: "10.6.1.M1"
+              name: "Service Desk First-Contact Resolution"
+              what: "Percentage of service requests resolved at first contact"
+              why: "Higher FCR improves user satisfaction and reduces costs"
+              how: "Requests resolved at first contact / Total requests x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "103002"
+              number: "10.6.1.M2"
+              name: "Service Request Fulfilment Time"
+              what: "Average time to fulfil service requests"
+              why: "Faster fulfilment improves employee productivity"
+              how: "Average business hours from request to fulfilment"
+              frequency: monthly
+              direction: lower_is_better
         - id: "396142"
           number: "10.6.2"
           name: "Manage incidents and restore services"
           agentic_profile: "H=A"
           agentic_note: "Agents detect, categorise, and initiate response; humans lead major incident resolution"
+          measurements:
+            - id: "103101"
+              number: "10.6.2.M1"
+              name: "Mean Time to Restore Service"
+              what: "Average time to restore services after incidents"
+              why: "Faster restoration minimises business impact"
+              how: "Average minutes from incident to service restoration"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "103102"
+              number: "10.6.2.M2"
+              name: "Major Incident Frequency"
+              what: "Number of major incidents per month"
+              why: "Fewer major incidents indicates more stable operations"
+              how: "Count of P1/P2 incidents per month"
+              frequency: monthly
+              direction: lower_is_better
         - id: "571829"
           number: "10.6.3"
           name: "Conduct problem management and root cause analysis"
           agentic_profile: "H+a"
           agentic_note: "Humans lead analysis; agents correlate data and suggest patterns"
+          measurements:
+            - id: "103201"
+              number: "10.6.3.M1"
+              name: "Problem Resolution Rate"
+              what: "Percentage of identified problems with confirmed root cause resolution"
+              why: "Unresolved problems lead to recurring incidents"
+              how: "Problems resolved / Total problems identified x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "103202"
+              number: "10.6.3.M2"
+              name: "Repeat Incident Rate"
+              what: "Percentage of incidents linked to previously identified problems"
+              why: "High repeat rate indicates ineffective problem management"
+              how: "Repeat incidents / Total incidents x 100"
+              frequency: monthly
+              direction: lower_is_better
         - id: "249618"
           number: "10.6.4"
           name: "Manage change and release processes"
           agentic_profile: "H=A"
           agentic_note: "Agents assess impact and schedule changes; humans approve and review"
+          measurements:
+            - id: "103301"
+              number: "10.6.4.M1"
+              name: "Change Success Rate"
+              what: "Percentage of changes implemented without causing incidents"
+              why: "Failed changes are a leading cause of outages"
+              how: "Successful changes / Total changes implemented x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "103302"
+              number: "10.6.4.M2"
+              name: "Emergency Change Ratio"
+              what: "Percentage of changes classified as emergency"
+              why: "High emergency change ratio indicates poor planning"
+              how: "Emergency changes / Total changes x 100"
+              frequency: monthly
+              direction: lower_is_better
         - id: "683475"
           number: "10.6.5"
           name: "Provision and manage end-user devices and workplace technology"
           agentic_profile: "h+A"
           agentic_note: "Agents automate provisioning and configuration; humans handle exceptions"
+          measurements:
+            - id: "103401"
+              number: "10.6.5.M1"
+              name: "Device Provisioning Time"
+              what: "Average time to provision and deliver end-user devices"
+              why: "Delays impact new starter productivity"
+              how: "Average business days from request to device delivered"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "103402"
+              number: "10.6.5.M2"
+              name: "Device Compliance Rate"
+              what: "Percentage of end-user devices compliant with security policies"
+              why: "Non-compliant devices create security vulnerabilities"
+              how: "Compliant devices / Total managed devices x 100"
+              frequency: monthly
+              direction: higher_is_better
 
     - id: "925743"
       number: "10.7"
@@ -253,48 +819,165 @@ domain:
         including agent hosting, orchestration, lifecycle management, and the tooling that
         connects agents to enterprise systems. This is the ZORBA-specific meta-capability:
         the technology that enables the blended workforce.
-      evolution_stage: genesis
-      pst_phase: pioneer
       processes:
         - id: "348261"
           number: "10.7.1"
           name: "Operate agent hosting infrastructure and runtime environments"
           agentic_profile: "H=A"
           agentic_note: "Agents monitor their own platform; humans manage capacity and architecture"
+          measurements:
+            - id: "103501"
+              number: "10.7.1.M1"
+              name: "Agent Platform Availability"
+              what: "Percentage uptime of the agent hosting platform"
+              why: "Platform downtime disables the entire agent workforce"
+              how: "Platform uptime minutes / Total minutes x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "103502"
+              number: "10.7.1.M2"
+              name: "Agent Platform Response Latency"
+              what: "Average response latency of the agent runtime environment"
+              why: "High latency degrades agent performance and user experience"
+              how: "Average milliseconds for agent API response (p95)"
+              frequency: daily
+              direction: lower_is_better
         - id: "517948"
           number: "10.7.2"
           name: "Manage agent lifecycle — provisioning, versioning, and retirement"
           agentic_profile: "H+a"
           agentic_note: "Humans approve agent deployment; agents manage version control and rollback"
+          measurements:
+            - id: "103601"
+              number: "10.7.2.M1"
+              name: "Agent Version Currency"
+              what: "Percentage of agents running the latest approved version"
+              why: "Outdated versions miss fixes and improvements"
+              how: "Agents on latest version / Total active agents x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "103602"
+              number: "10.7.2.M2"
+              name: "Agent Rollback Rate"
+              what: "Percentage of agent version updates requiring rollback"
+              why: "High rollback rate indicates poor release quality"
+              how: "Rollbacks / Total version updates x 100"
+              frequency: monthly
+              direction: lower_is_better
         - id: "264839"
           number: "10.7.3"
           name: "Govern agent access to enterprise systems and data"
           agentic_profile: H
           agentic_note: "Human-led; access decisions require accountability and policy alignment"
+          measurements:
+            - id: "103701"
+              number: "10.7.3.M1"
+              name: "Agent Access Policy Compliance"
+              what: "Percentage of agent system access conforming to approved policies"
+              why: "Non-compliant access creates security and data risk"
+              how: "Compliant access grants / Total agent access grants x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "103702"
+              number: "10.7.3.M2"
+              name: "Agent Access Review Completion"
+              what: "Percentage of agent access reviews completed on schedule"
+              why: "Stale access grants accumulate excessive permissions"
+              how: "Completed reviews / Scheduled reviews x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "893162"
           number: "10.7.4"
           name: "Monitor agent performance, health, and resource consumption"
           agentic_profile: A
           agentic_note: "Agent-autonomous; agents monitor agent fleet health and flag anomalies"
+          measurements:
+            - id: "103801"
+              number: "10.7.4.M1"
+              name: "Agent Fleet Health Score"
+              what: "Percentage of agents in healthy operational state"
+              why: "Unhealthy agents fail silently and degrade outcomes"
+              how: "Healthy agents / Total active agents x 100"
+              frequency: daily
+              direction: higher_is_better
+            - id: "103802"
+              number: "10.7.4.M2"
+              name: "Agent Resource Efficiency"
+              what: "Average compute cost per agent transaction"
+              why: "Rising costs per transaction indicate inefficiency"
+              how: "Total agent compute cost / Total agent transactions"
+              frequency: monthly
+              direction: lower_is_better
         - id: "471526"
           number: "10.7.5"
           name: "Manage agent orchestration and inter-agent coordination"
           agentic_profile: "H=A"
           agentic_note: "Agents execute orchestration; humans define workflow boundaries and escalation rules"
+          measurements:
+            - id: "103901"
+              number: "10.7.5.M1"
+              name: "Orchestration Success Rate"
+              what: "Percentage of multi-agent workflows completing successfully"
+              why: "Failed orchestrations disrupt automated business processes"
+              how: "Successful workflows / Total orchestrated workflows x 100"
+              frequency: daily
+              direction: higher_is_better
+            - id: "103902"
+              number: "10.7.5.M2"
+              name: "Inter-Agent Latency"
+              what: "Average latency for agent-to-agent communication"
+              why: "High latency in coordination slows workflow completion"
+              how: "Average milliseconds for inter-agent message round-trip"
+              frequency: daily
+              direction: lower_is_better
         - id: "635274"
           number: "10.7.6"
           name: "Maintain the agent tooling ecosystem and integration layer"
           agentic_profile: "H=A"
           agentic_note: "Agents maintain integrations; humans approve new tool access and capabilities"
+          measurements:
+            - id: "104001"
+              number: "10.7.6.M1"
+              name: "Agent Tool Integration Availability"
+              what: "Percentage uptime of agent-to-system integrations"
+              why: "Integration outages disable agent capabilities"
+              how: "Integration uptime / Total integration time x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "104002"
+              number: "10.7.6.M2"
+              name: "New Tool Onboarding Time"
+              what: "Average days to integrate a new tool into the agent ecosystem"
+              why: "Faster onboarding expands agent capabilities sooner"
+              how: "Average days from tool request to production integration"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "182943"
           number: "10.7.7"
           name: "Manage agent platform security and isolation"
           agentic_profile: "H+a"
           agentic_note: "Humans set security policies; agents enforce isolation and detect breaches"
+          measurements:
+            - id: "104101"
+              number: "10.7.7.M1"
+              name: "Agent Isolation Breach Rate"
+              what: "Number of agent isolation boundary violations detected"
+              why: "Breaches indicate security control failures"
+              how: "Count of isolation violations per month"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "104102"
+              number: "10.7.7.M2"
+              name: "Agent Security Audit Pass Rate"
+              what: "Percentage of agents passing security compliance audits"
+              why: "Non-compliant agents pose risk to enterprise security"
+              how: "Agents passing audit / Total agents audited x 100"
+              frequency: quarterly
+              direction: higher_is_better
 
   wardley_map:
     owm_source: |
-      title Technology & Data Domain - Evolution & PST View
+      title Technology & Data Domain - Evolution View
       
       # User-facing capabilities
       component "Digital Products" [0.9, 0.6]

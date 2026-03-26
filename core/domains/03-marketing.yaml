@@ -29,31 +29,133 @@ domain:
           name: "Define marketing objectives and strategic priorities"
           agentic_profile: H
           agentic_note: "Human-led; marketing strategy requires market intuition and brand judgement"
+          measurements:
+            - id: "030101"
+              number: "3.1.1.M1"
+              name: "Marketing Objective Achievement"
+              what: "Percentage of objectives meeting targets"
+              why: "Tracks strategy effectiveness"
+              how: "Objectives meeting targets / Total objectives × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "030102"
+              number: "3.1.1.M2"
+              name: "Strategy Review Adherence"
+              what: "Whether strategy reviews occur on schedule"
+              why: "Regular reviews ensure relevance"
+              how: "Reviews on time / Reviews scheduled × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "814253"
           number: "3.1.2"
           name: "Segment markets and identify target audiences"
           agentic_profile: "h+A"
           agentic_note: "Agents cluster data and model segments; humans validate and name segments"
+          measurements:
+            - id: "030201"
+              number: "3.1.2.M1"
+              name: "Segment Validation Rate"
+              what: "Percentage of segments validated by buying behaviour"
+              why: "Invalid segments waste targeting resources"
+              how: "Validated / Total identified segments × 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "030202"
+              number: "3.1.2.M2"
+              name: "Target Audience Reach"
+              what: "Percentage of target audience reached"
+              why: "Low reach indicates targeting gaps"
+              how: "Unique reached / Total target audience × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "537184"
           number: "3.1.3"
           name: "Develop annual and campaign-level marketing plans"
           agentic_profile: "H+a"
           agentic_note: "Humans plan; agents model budget scenarios and channel mix"
+          measurements:
+            - id: "030301"
+              number: "3.1.3.M1"
+              name: "Plan Execution Rate"
+              what: "Percentage of planned activities executed"
+              why: "Unexecuted plans miss opportunities"
+              how: "Executed / Planned activities × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "030302"
+              number: "3.1.3.M2"
+              name: "Campaign Launch Timeliness"
+              what: "Percentage of campaigns launched on time"
+              why: "Late campaigns miss market windows"
+              how: "On-time launches / Total campaigns × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "293647"
           number: "3.1.4"
           name: "Allocate and manage marketing budgets"
           agentic_profile: "H=A"
           agentic_note: "Agents optimise allocation models; humans approve and adjust"
+          measurements:
+            - id: "030401"
+              number: "3.1.4.M1"
+              name: "Marketing Budget Variance"
+              what: "Deviation of actual from approved budget"
+              why: "Budget discipline ensures efficiency"
+              how: "|Actual − Budget| / Budget × 100"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "030402"
+              number: "3.1.4.M2"
+              name: "Budget Utilisation Rate"
+              what: "Percentage of budget actually deployed"
+              why: "Underspending signals execution problems"
+              how: "Actual spend / Approved budget × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "461928"
           number: "3.1.5"
           name: "Define positioning and messaging frameworks"
           agentic_profile: "H+a"
           agentic_note: "Humans craft positioning; agents test messaging variations"
+          measurements:
+            - id: "030501"
+              number: "3.1.5.M1"
+              name: "Message Consistency Score"
+              what: "Messaging consistency across channels"
+              why: "Inconsistency confuses audiences"
+              how: "Brand audit consistency score (1-10)"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "030502"
+              number: "3.1.5.M2"
+              name: "Positioning Recall Rate"
+              what: "Percentage recalling key positioning messages"
+              why: "Low recall means messaging isn't landing"
+              how: "Respondents recalling / Total surveyed × 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "785312"
           number: "3.1.6"
           name: "Coordinate marketing calendar and cross-functional alignment"
           agentic_profile: "h+A"
           agentic_note: "Agents maintain calendars and flag conflicts; humans resolve priorities"
+          measurements:
+            - id: "030601"
+              number: "3.1.6.M1"
+              name: "Calendar Conflict Rate"
+              what: "Percentage of activities with scheduling conflicts"
+              why: "Conflicts reduce effectiveness"
+              how: "Activities with conflicts / Total activities × 100"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "030602"
+              number: "3.1.6.M2"
+              name: "Cross-Functional Alignment Score"
+              what: "Marketing alignment with other functions"
+              why: "Misalignment creates waste"
+              how: "Cross-functional survey score (1-10)"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "562413"
       number: "3.2"
@@ -68,31 +170,133 @@ domain:
           name: "Define and maintain brand identity and guidelines"
           agentic_profile: H
           agentic_note: "Human-led; brand identity requires authentic creative vision"
+          measurements:
+            - id: "030701"
+              number: "3.2.1.M1"
+              name: "Brand Guideline Compliance"
+              what: "Percentage of assets compliant with guidelines"
+              why: "Non-compliance erodes brand equity"
+              how: "Compliant / Total audited assets × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "030702"
+              number: "3.2.1.M2"
+              name: "Brand Identity Refresh Cycle"
+              what: "Whether identity is reviewed within cadence"
+              why: "Stale identity loses relevance"
+              how: "Days since last review vs planned cycle"
+              frequency: annually
+              direction: lower_is_better
         - id: "721563"
           number: "3.2.2"
           name: "Manage brand consistency across channels and touchpoints"
           agentic_profile: "h+A"
           agentic_note: "Agents audit brand compliance; humans address strategic deviations"
+          measurements:
+            - id: "030801"
+              number: "3.2.2.M1"
+              name: "Brand Consistency Score"
+              what: "Cross-channel consistency rating"
+              why: "Inconsistency undermines trust"
+              how: "Average consistency score across channels (1-10)"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "030802"
+              number: "3.2.2.M2"
+              name: "Deviation Resolution Time"
+              what: "Days to resolve brand deviations"
+              why: "Unresolved deviations compound damage"
+              how: "Resolution date − identification date (business days)"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "495831"
           number: "3.2.3"
           name: "Plan and execute corporate communications"
           agentic_profile: "H=A"
           agentic_note: "Agents draft communications; humans approve tone and substance"
+          measurements:
+            - id: "030901"
+              number: "3.2.3.M1"
+              name: "Corporate Comms Reach"
+              what: "Percentage of target audience reached"
+              why: "Low reach indicates distribution gaps"
+              how: "Reached / Target audience × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "030902"
+              number: "3.2.3.M2"
+              name: "Communication Approval Time"
+              what: "Days from draft to approved communication"
+              why: "Slow approval delays messaging"
+              how: "Approval date − draft date (business days)"
+              frequency: monthly
+              direction: lower_is_better
         - id: "163274"
           number: "3.2.4"
           name: "Manage public relations and media engagement"
           agentic_profile: "H+a"
           agentic_note: "Humans manage relationships; agents monitor media and prepare briefs"
+          measurements:
+            - id: "031001"
+              number: "3.2.4.M1"
+              name: "Media Mention Volume"
+              what: "Earned media mentions per period"
+              why: "Coverage amplifies awareness"
+              how: "Count of media mentions"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "031002"
+              number: "3.2.4.M2"
+              name: "Media Sentiment Score"
+              what: "Ratio of positive to negative coverage"
+              why: "Negative sentiment damages brand"
+              how: "Positive / (Positive + Negative) × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "842196"
           number: "3.2.5"
           name: "Monitor and manage brand reputation and sentiment"
           agentic_profile: "h+A"
           agentic_note: "Agents continuously track sentiment; humans respond to critical issues"
+          measurements:
+            - id: "031101"
+              number: "3.2.5.M1"
+              name: "Brand Sentiment Score"
+              what: "Net sentiment across social and review platforms"
+              why: "Negative sentiment erodes brand equity"
+              how: "(Positive − Negative) / Total mentions × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "031102"
+              number: "3.2.5.M2"
+              name: "Net Promoter Score (NPS)"
+              what: "Customer willingness to recommend"
+              why: "NPS correlates with growth"
+              how: "% Promoters − % Detractors"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "617428"
           number: "3.2.6"
           name: "Manage crisis communications and rapid response"
           agentic_profile: "H+a"
           agentic_note: "Humans lead crisis response; agents monitor situation and draft holding statements"
+          measurements:
+            - id: "031201"
+              number: "3.2.6.M1"
+              name: "Crisis Response Time"
+              what: "Minutes from detection to first response"
+              why: "Delayed response amplifies damage"
+              how: "First response − detection (minutes)"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "031202"
+              number: "3.2.6.M2"
+              name: "Crisis Communication Effectiveness"
+              what: "Stakeholder confidence post-crisis"
+              why: "Effective comms preserve trust"
+              how: "Post-crisis survey score (1-10)"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "384219"
       number: "3.3"
@@ -107,31 +311,133 @@ domain:
           name: "Design and execute demand generation campaigns"
           agentic_profile: "H=A"
           agentic_note: "Agents optimise targeting and bidding; humans set creative direction"
+          measurements:
+            - id: "031301"
+              number: "3.3.1.M1"
+              name: "Marketing Qualified Leads (MQLs)"
+              what: "MQLs generated per period"
+              why: "MQL volume drives pipeline growth"
+              how: "Count of leads meeting MQL criteria"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "031302"
+              number: "3.3.1.M2"
+              name: "Cost per MQL"
+              what: "Average cost to generate an MQL"
+              why: "Tracks demand generation efficiency"
+              how: "Total demand gen spend / Total MQLs"
+              frequency: monthly
+              direction: lower_is_better
         - id: "748213"
           number: "3.3.2"
           name: "Capture and enrich lead data from multiple sources"
           agentic_profile: A
           agentic_note: "Agent-executed; automated capture, deduplication, and enrichment"
+          measurements:
+            - id: "031401"
+              number: "3.3.2.M1"
+              name: "Lead Capture Rate"
+              what: "Visitors converting to leads"
+              why: "Low capture indicates friction"
+              how: "Leads / Total visitors × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "031402"
+              number: "3.3.2.M2"
+              name: "Lead Enrichment Rate"
+              what: "Percentage of leads with complete data"
+              why: "Incomplete data reduces scoring accuracy"
+              how: "Fully enriched / Total leads × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "391564"
           number: "3.3.3"
           name: "Score and qualify leads for sales readiness"
           agentic_profile: "h+A"
           agentic_note: "Agents score using behavioural and firmographic data; humans set thresholds"
+          measurements:
+            - id: "031501"
+              number: "3.3.3.M1"
+              name: "Lead Score Accuracy"
+              what: "Correlation between scores and conversion"
+              why: "Inaccurate scoring misallocates effort"
+              how: "Correlation coefficient (score vs conversion)"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "031502"
+              number: "3.3.3.M2"
+              name: "MQL-to-SQL Conversion Rate"
+              what: "Percentage of MQLs accepted as SQLs"
+              why: "Low conversion signals misalignment"
+              how: "SQLs / MQLs × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "613842"
           number: "3.3.4"
           name: "Nurture leads through automated journey orchestration"
           agentic_profile: "h+A"
           agentic_note: "Agents orchestrate multi-touch journeys; humans design journey logic"
+          measurements:
+            - id: "031601"
+              number: "3.3.4.M1"
+              name: "Nurture Engagement Rate"
+              what: "Leads engaging with nurture content"
+              why: "Disengaged leads unlikely to convert"
+              how: "Engaged / Total in nurture × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "031602"
+              number: "3.3.4.M2"
+              name: "Nurture-to-MQL Conversion"
+              what: "Nurtured leads reaching MQL status"
+              why: "Tracks nurture effectiveness"
+              how: "Reaching MQL / Entering nurture × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "274891"
           number: "3.3.5"
           name: "Manage the marketing-to-sales handover process"
           agentic_profile: "H=A"
           agentic_note: "Agents route and notify; humans ensure quality and context transfer"
+          measurements:
+            - id: "031701"
+              number: "3.3.5.M1"
+              name: "Handover Acceptance Rate"
+              what: "Leads accepted by sales"
+              why: "Low acceptance indicates quality issues"
+              how: "Accepted / Passed to sales × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "031702"
+              number: "3.3.5.M2"
+              name: "Handover Response Time"
+              what: "Time for sales to action a lead"
+              why: "Slow follow-up reduces conversion"
+              how: "Average (first action − handover) in hours"
+              frequency: monthly
+              direction: lower_is_better
         - id: "856423"
           number: "3.3.6"
           name: "Optimise conversion rates across the demand funnel"
           agentic_profile: "h+A"
           agentic_note: "Agents run tests and recommend optimisations; humans approve changes"
+          measurements:
+            - id: "031801"
+              number: "3.3.6.M1"
+              name: "Funnel Conversion Rate"
+              what: "Top-of-funnel to opportunity conversion"
+              why: "Tracks end-to-end funnel effectiveness"
+              how: "Opportunities / Total leads entering funnel × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "031802"
+              number: "3.3.6.M2"
+              name: "Conversion Rate Improvement"
+              what: "Period-over-period conversion improvement"
+              why: "Tracks optimisation effectiveness"
+              how: "(Current − Prior rate) / Prior rate × 100"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "731562"
       number: "3.4"
@@ -146,31 +452,133 @@ domain:
           name: "Define content strategy and editorial direction"
           agentic_profile: H
           agentic_note: "Human-led; content strategy requires brand voice and audience understanding"
+          measurements:
+            - id: "031901"
+              number: "3.4.1.M1"
+              name: "Content Strategy Alignment"
+              what: "Content mapped to journey stages and personas"
+              why: "Unmapped content may miss audiences"
+              how: "Mapped / Total content pieces × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "031902"
+              number: "3.4.1.M2"
+              name: "Editorial Calendar Adherence"
+              what: "Planned content published on schedule"
+              why: "Missed publications create gaps"
+              how: "Published on time / Planned × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "613724"
           number: "3.4.2"
           name: "Plan and manage the content calendar and production pipeline"
           agentic_profile: "H=A"
           agentic_note: "Agents schedule and track production; humans set priorities"
+          measurements:
+            - id: "032001"
+              number: "3.4.2.M1"
+              name: "Content Production Velocity"
+              what: "Content pieces produced per period"
+              why: "Tracks team productivity"
+              how: "Count of content pieces published"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "032002"
+              number: "3.4.2.M2"
+              name: "Production Cycle Time"
+              what: "Days from brief to published piece"
+              why: "Shorter cycles improve timeliness"
+              how: "Publication date − brief date (business days)"
+              frequency: monthly
+              direction: lower_is_better
         - id: "348276"
           number: "3.4.3"
           name: "Produce written, visual, and multimedia content"
           agentic_profile: "H=A"
           agentic_note: "Agents generate drafts and variations; humans create, edit, and approve"
+          measurements:
+            - id: "032101"
+              number: "3.4.3.M1"
+              name: "Content Engagement Rate"
+              what: "Average engagement across content"
+              why: "Low engagement signals quality issues"
+              how: "Engagements / Impressions × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "032102"
+              number: "3.4.3.M2"
+              name: "Content Quality Score"
+              what: "Editorial quality rating"
+              why: "Quality drives engagement"
+              how: "Average editorial review score (1-10)"
+              frequency: monthly
+              direction: higher_is_better
         - id: "926481"
           number: "3.4.4"
           name: "Localise and adapt content for markets and segments"
           agentic_profile: "h+A"
           agentic_note: "Agents translate and adapt; humans review cultural nuance"
+          measurements:
+            - id: "032201"
+              number: "3.4.4.M1"
+              name: "Localisation Coverage Rate"
+              what: "Key content localised for target markets"
+              why: "Unlocalised content limits penetration"
+              how: "Localised / Requiring localisation × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "032202"
+              number: "3.4.4.M2"
+              name: "Localisation Cycle Time"
+              what: "Days to localise for a new market"
+              why: "Slow localisation delays campaigns"
+              how: "Localised delivery − source date (business days)"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "157342"
           number: "3.4.5"
           name: "Manage the content repository and asset lifecycle"
           agentic_profile: A
           agentic_note: "Agent-executed; automated tagging, versioning, and archival"
+          measurements:
+            - id: "032301"
+              number: "3.4.5.M1"
+              name: "Repository Completeness"
+              what: "Assets properly tagged and catalogued"
+              why: "Untagged content is effectively lost"
+              how: "Tagged / Total assets × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "032302"
+              number: "3.4.5.M2"
+              name: "Content Freshness Rate"
+              what: "Content reviewed within its lifecycle"
+              why: "Stale content damages credibility"
+              how: "Reviewed within lifecycle / Total content × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "594817"
           number: "3.4.6"
           name: "Measure content performance and optimise the content mix"
           agentic_profile: "h+A"
           agentic_note: "Agents analyse engagement data; humans adjust strategy"
+          measurements:
+            - id: "032401"
+              number: "3.4.6.M1"
+              name: "Content ROI"
+              what: "Revenue attributed per dollar of content spend"
+              why: "Tracks content investment effectiveness"
+              how: "Revenue attributed / Content spend"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "032402"
+              number: "3.4.6.M2"
+              name: "Top-Performing Content Ratio"
+              what: "Content exceeding performance benchmarks"
+              why: "Identifies strategy effectiveness"
+              how: "Exceeding benchmarks / Total published × 100"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "215694"
       number: "3.5"
@@ -185,26 +593,111 @@ domain:
           name: "Manage the enterprise web presence and SEO"
           agentic_profile: "H=A"
           agentic_note: "Agents monitor rankings and suggest optimisations; humans approve changes"
+          measurements:
+            - id: "032501"
+              number: "3.5.1.M1"
+              name: "Organic Search Traffic"
+              what: "Website visits from organic search"
+              why: "Organic traffic is sustainable, low-cost"
+              how: "Count of organic search sessions"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "032502"
+              number: "3.5.1.M2"
+              name: "Search Ranking Position"
+              what: "Average position for priority keywords"
+              why: "Higher rankings drive more traffic"
+              how: "Average ranking across priority keywords"
+              frequency: monthly
+              direction: lower_is_better
         - id: "724518"
           number: "3.5.2"
           name: "Plan and execute paid media campaigns"
           agentic_profile: "h+A"
           agentic_note: "Agents manage bids, placements, and budgets in real time; humans set strategy"
+          measurements:
+            - id: "032601"
+              number: "3.5.2.M1"
+              name: "Paid Media ROAS"
+              what: "Return on ad spend"
+              why: "Tracks paid media efficiency"
+              how: "Revenue attributed / Paid media spend"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "032602"
+              number: "3.5.2.M2"
+              name: "Cost per Click (CPC)"
+              what: "Average cost per click"
+              why: "Rising CPC reduces profitability"
+              how: "Total spend / Total clicks"
+              frequency: monthly
+              direction: lower_is_better
         - id: "491362"
           number: "3.5.3"
           name: "Operate social media channels and community engagement"
           agentic_profile: "H=A"
           agentic_note: "Agents schedule posts and monitor engagement; humans create content and engage"
+          measurements:
+            - id: "032701"
+              number: "3.5.3.M1"
+              name: "Social Engagement Rate"
+              what: "Engagement rate across platforms"
+              why: "Engagement drives organic reach"
+              how: "(Likes + Comments + Shares) / Impressions × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "032702"
+              number: "3.5.3.M2"
+              name: "Social Audience Growth"
+              what: "Month-over-month follower growth"
+              why: "Growing audience expands reach"
+              how: "(New − Lost followers) / Prior followers × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "358714"
           number: "3.5.4"
           name: "Execute email and marketing automation programmes"
           agentic_profile: "h+A"
           agentic_note: "Agents personalise and send; humans design programmes and review performance"
+          measurements:
+            - id: "032801"
+              number: "3.5.4.M1"
+              name: "Email Open Rate"
+              what: "Percentage of delivered emails opened"
+              why: "Indicates subject line relevance"
+              how: "Opened / Delivered × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "032802"
+              number: "3.5.4.M2"
+              name: "Email Click-Through Rate"
+              what: "Recipients clicking on links"
+              why: "Measures content and CTA effectiveness"
+              how: "Unique clicks / Delivered × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "642839"
           number: "3.5.5"
           name: "Manage emerging and experimental channels"
           agentic_profile: "H+a"
           agentic_note: "Humans explore new channels; agents track performance baselines"
+          measurements:
+            - id: "032901"
+              number: "3.5.5.M1"
+              name: "Emerging Channel Experiments"
+              what: "New channels being tested per period"
+              why: "Experimentation identifies future channels"
+              how: "Count of channels with active experiments"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "032902"
+              number: "3.5.5.M2"
+              name: "Channel Baseline Coverage"
+              what: "Tested channels with performance baselines"
+              why: "Baselines enable investment decisions"
+              how: "Channels with baselines / Total tested × 100"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "847231"
       number: "3.6"
@@ -219,31 +712,133 @@ domain:
           name: "Define marketing measurement frameworks and KPIs"
           agentic_profile: "H+a"
           agentic_note: "Humans define what matters; agents recommend benchmark targets"
+          measurements:
+            - id: "033001"
+              number: "3.6.1.M1"
+              name: "KPI Framework Coverage"
+              what: "Marketing activities with defined KPIs"
+              why: "Unmeasured activities can't be optimised"
+              how: "Activities with KPIs / Total activities × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "033002"
+              number: "3.6.1.M2"
+              name: "Framework Review Rate"
+              what: "Frameworks reviewed within cadence"
+              why: "Outdated frameworks measure wrong things"
+              how: "Reviewed on time / Total frameworks × 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "759312"
           number: "3.6.2"
           name: "Implement and maintain marketing attribution models"
           agentic_profile: "h+A"
           agentic_note: "Agents build and calibrate models; humans validate methodology"
+          measurements:
+            - id: "033101"
+              number: "3.6.2.M1"
+              name: "Attribution Model Coverage"
+              what: "Spend covered by attribution models"
+              why: "Unattributed spend can't be optimised"
+              how: "Attributed spend / Total spend × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "033102"
+              number: "3.6.2.M2"
+              name: "Attribution Confidence Score"
+              what: "Statistical confidence of models"
+              why: "Low confidence provides unreliable guidance"
+              how: "Average model confidence (percentage)"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "284537"
           number: "3.6.3"
           name: "Collect and integrate marketing performance data"
           agentic_profile: A
           agentic_note: "Agent-executed; automated data pipeline from all marketing systems"
+          measurements:
+            - id: "033201"
+              number: "3.6.3.M1"
+              name: "Marketing Data Pipeline Uptime"
+              what: "Time data pipelines are operational"
+              why: "Downtime creates reporting gaps"
+              how: "Uptime hours / Total hours × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "033202"
+              number: "3.6.3.M2"
+              name: "Marketing Data Freshness"
+              what: "Lag between event and data availability"
+              why: "Stale data delays optimisation"
+              how: "Average lag (event to availability) in hours"
+              frequency: monthly
+              direction: lower_is_better
         - id: "563819"
           number: "3.6.4"
           name: "Analyse campaign and channel effectiveness"
           agentic_profile: "h+A"
           agentic_note: "Agents analyse and surface insights; humans interpret and act"
+          measurements:
+            - id: "033301"
+              number: "3.6.4.M1"
+              name: "Campaign Effectiveness Score"
+              what: "Average performance vs target"
+              why: "Tracks execution quality"
+              how: "Average (actual / target) × 100 across campaigns"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "033302"
+              number: "3.6.4.M2"
+              name: "Channel Efficiency Ranking"
+              what: "Relative cost-effectiveness of channels"
+              why: "Identifies best channels for reallocation"
+              how: "Revenue per dollar by channel, ranked"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "418726"
           number: "3.6.5"
           name: "Report marketing ROI and contribution to revenue"
           agentic_profile: "h+A"
           agentic_note: "Agents generate dashboards and reports; humans present to leadership"
+          measurements:
+            - id: "033401"
+              number: "3.6.5.M1"
+              name: "Marketing ROI"
+              what: "Return on marketing investment"
+              why: "Demonstrates financial contribution"
+              how: "(Revenue attributed − Cost) / Cost × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "033402"
+              number: "3.6.5.M2"
+              name: "Marketing Pipeline Contribution"
+              what: "Pipeline sourced by marketing"
+              why: "Tracks marketing's revenue role"
+              how: "Marketing pipeline / Total pipeline × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "937214"
           number: "3.6.6"
           name: "Conduct marketing mix modelling and budget optimisation"
           agentic_profile: "h+A"
           agentic_note: "Agents model scenarios; humans decide reallocation"
+          measurements:
+            - id: "033501"
+              number: "3.6.6.M1"
+              name: "Mix Model Accuracy"
+              what: "Marketing mix model prediction accuracy"
+              why: "Inaccurate models misguide allocation"
+              how: "1 − |Predicted − Actual| / Actual × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "033502"
+              number: "3.6.6.M2"
+              name: "Budget Reallocation Frequency"
+              what: "Data-driven reallocations per period"
+              why: "Active reallocation improves efficiency"
+              how: "Count of formal reallocations from model outputs"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "694238"
       number: "3.7"
@@ -258,23 +853,108 @@ domain:
           name: "Design and commission market research studies"
           agentic_profile: "H+a"
           agentic_note: "Humans define research questions; agents identify methodologies and vendors"
+          measurements:
+            - id: "033601"
+              number: "3.7.1.M1"
+              name: "Research Completion Rate"
+              what: "Studies completed on time"
+              why: "Delayed research misses decision windows"
+              how: "On time / Commissioned × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "033602"
+              number: "3.7.1.M2"
+              name: "Research Investment Efficiency"
+              what: "Cost per actionable insight"
+              why: "Tracks research productivity"
+              how: "Total research spend / Actionable insights"
+              frequency: annually
+              direction: lower_is_better
         - id: "871342"
           number: "3.7.2"
           name: "Conduct primary and secondary market research"
           agentic_profile: "H=A"
           agentic_note: "Agents gather and process data; humans conduct qualitative research"
+          measurements:
+            - id: "033701"
+              number: "3.7.2.M1"
+              name: "Research Data Coverage"
+              what: "Markets with primary research data"
+              why: "Gaps leave markets poorly understood"
+              how: "Markets with data / Total target markets × 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "033702"
+              number: "3.7.2.M2"
+              name: "Research Freshness"
+              what: "Average age of market research data"
+              why: "Stale research leads to outdated assumptions"
+              how: "Average age in months"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "419563"
           number: "3.7.3"
           name: "Build and maintain customer personas and journey maps"
           agentic_profile: "H=A"
           agentic_note: "Agents aggregate behavioural data; humans craft narrative personas"
+          measurements:
+            - id: "033801"
+              number: "3.7.3.M1"
+              name: "Persona Coverage"
+              what: "Segments with documented personas"
+              why: "Missing personas leave segments underserved"
+              how: "Segments with personas / Total segments × 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "033802"
+              number: "3.7.3.M2"
+              name: "Journey Map Currency"
+              what: "Journey maps updated within cycle"
+              why: "Outdated maps lead to poor experience design"
+              how: "Updated on schedule / Total maps × 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "362714"
           number: "3.7.4"
           name: "Monitor competitive positioning and market dynamics"
           agentic_profile: "h+A"
           agentic_note: "Agents continuously track competitors; humans assess strategic implications"
+          measurements:
+            - id: "033901"
+              number: "3.7.4.M1"
+              name: "Competitive Intel Coverage"
+              what: "Key competitors under active monitoring"
+              why: "Unmonitored competitors create blind spots"
+              how: "Monitored / Total key competitors × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "033902"
+              number: "3.7.4.M2"
+              name: "Competitive Insight Timeliness"
+              what: "Days to analyse and distribute intel"
+              why: "Delayed intelligence reduces value"
+              how: "Average (distribution − event date) in business days"
+              frequency: monthly
+              direction: lower_is_better
         - id: "738291"
           number: "3.7.5"
           name: "Distribute insights and embed market intelligence in decisions"
           agentic_profile: "H=A"
           agentic_note: "Agents push relevant insights to stakeholders; humans contextualise"
+          measurements:
+            - id: "034001"
+              number: "3.7.5.M1"
+              name: "Insight Distribution Reach"
+              what: "Stakeholders receiving market intelligence"
+              why: "Undistributed insights have no impact"
+              how: "Receiving / Target stakeholders × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "034002"
+              number: "3.7.5.M2"
+              name: "Insight Utilisation Rate"
+              what: "Insights referenced in decisions"
+              why: "Unused insights waste investment"
+              how: "Cited in decisions / Distributed × 100"
+              frequency: quarterly
+              direction: higher_is_better

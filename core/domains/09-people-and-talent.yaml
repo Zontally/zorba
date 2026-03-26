@@ -29,26 +29,111 @@ domain:
           name: "Forecast workforce demand by role, skill, and location"
           agentic_profile: "h+A"
           agentic_note: "Agents model demand using business plans and attrition data; humans validate assumptions"
+          measurements:
+            - id: "090101"
+              number: "9.1.1.M1"
+              name: "Forecast Accuracy Rate"
+              what: "Accuracy of workforce demand forecasts vs actual headcount needs"
+              why: "Ensures workforce plans reflect real business demand"
+              how: "(Forecasted positions - Actual positions needed) / Forecasted positions x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "090102"
+              number: "9.1.1.M2"
+              name: "Forecast Horizon Coverage"
+              what: "Number of quarters ahead with completed workforce forecasts"
+              why: "Longer horizons enable proactive talent pipeline building"
+              how: "Count of future quarters with approved forecasts"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "814263"
           number: "9.1.2"
           name: "Assess current workforce capacity and skills inventory"
           agentic_profile: "h+A"
           agentic_note: "Agents aggregate skills data from multiple systems; humans verify accuracy"
+          measurements:
+            - id: "090201"
+              number: "9.1.2.M1"
+              name: "Skills Inventory Completeness"
+              what: "Percentage of employees with up-to-date skills profiles"
+              why: "Accurate skills data enables effective workforce deployment"
+              how: "Employees with current skills profile / Total employees x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "090202"
+              number: "9.1.2.M2"
+              name: "Skills Data Freshness"
+              what: "Average age of employee skills assessment data in days"
+              why: "Stale data leads to poor workforce planning decisions"
+              how: "Average days since last skills update across all employees"
+              frequency: monthly
+              direction: lower_is_better
         - id: "673918"
           number: "9.1.3"
           name: "Identify critical skills gaps and surplus areas"
           agentic_profile: "H=A"
           agentic_note: "Agents surface gaps through analytics; humans interpret strategic implications"
+          measurements:
+            - id: "090301"
+              number: "9.1.3.M1"
+              name: "Critical Skills Gap Ratio"
+              what: "Percentage of critical roles with identified skills gaps"
+              why: "Highlights strategic vulnerability in workforce capability"
+              how: "Critical roles with gaps / Total critical roles x 100"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "090302"
+              number: "9.1.3.M2"
+              name: "Gap Closure Rate"
+              what: "Percentage of identified skills gaps addressed within target timeframe"
+              why: "Measures effectiveness of gap remediation efforts"
+              how: "Gaps closed on time / Total identified gaps x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "245781"
           number: "9.1.4"
           name: "Develop strategic workforce plans and scenarios"
           agentic_profile: "H+a"
           agentic_note: "Humans design workforce strategy; agents model cost and feasibility scenarios"
+          measurements:
+            - id: "090401"
+              number: "9.1.4.M1"
+              name: "Workforce Plan Adoption Rate"
+              what: "Percentage of business units with approved strategic workforce plans"
+              why: "Ensures workforce planning is enterprise-wide"
+              how: "Units with approved plans / Total business units x 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "090402"
+              number: "9.1.4.M2"
+              name: "Scenario Modelling Coverage"
+              what: "Number of workforce scenarios modelled per planning cycle"
+              why: "Multiple scenarios improve resilience of workforce strategy"
+              how: "Count of distinct scenarios modelled and reviewed"
+              frequency: annually
+              direction: higher_is_better
         - id: "918437"
           number: "9.1.5"
           name: "Monitor workforce metrics and trigger plan adjustments"
           agentic_profile: A
           agentic_note: "Agent-executed; continuous monitoring with automated alerting on threshold breaches"
+          measurements:
+            - id: "090501"
+              number: "9.1.5.M1"
+              name: "Workforce Metric Alert Response Time"
+              what: "Average time to respond to workforce metric threshold breaches"
+              why: "Faster response prevents workforce issues from escalating"
+              how: "Average hours from alert trigger to documented response action"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "090502"
+              number: "9.1.5.M2"
+              name: "Plan Adjustment Frequency"
+              what: "Number of proactive workforce plan adjustments triggered by monitoring"
+              why: "Indicates monitoring system is driving actionable insights"
+              how: "Count of plan adjustments initiated from monitoring alerts per quarter"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "749163"
       number: "9.2"
@@ -62,31 +147,133 @@ domain:
           name: "Define role requirements and craft position profiles"
           agentic_profile: "H=A"
           agentic_note: "Agents draft from templates and market data; humans refine and approve"
+          measurements:
+            - id: "090601"
+              number: "9.2.1.M1"
+              name: "Position Profile Completion Rate"
+              what: "Percentage of open roles with fully defined position profiles"
+              why: "Complete profiles improve candidate quality and reduce mis-hires"
+              how: "Roles with complete profiles / Total open roles x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "090602"
+              number: "9.2.1.M2"
+              name: "Profile Creation Cycle Time"
+              what: "Average days to create and approve a position profile"
+              why: "Faster profile creation accelerates time-to-fill"
+              how: "Average business days from request to approved profile"
+              frequency: monthly
+              direction: lower_is_better
         - id: "617284"
           number: "9.2.2"
           name: "Source and attract candidates through multiple channels"
           agentic_profile: "h+A"
           agentic_note: "Agents manage job postings, screen CVs, and engage passive talent; humans curate shortlists"
+          measurements:
+            - id: "090701"
+              number: "9.2.2.M1"
+              name: "Qualified Applicants per Role"
+              what: "Average number of qualified candidates per open position"
+              why: "Indicates effectiveness of sourcing strategy"
+              how: "Total qualified applicants / Total open positions"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "090702"
+              number: "9.2.2.M2"
+              name: "Source Channel Effectiveness"
+              what: "Hire rate from top-performing sourcing channel"
+              why: "Enables investment optimisation across recruitment channels"
+              how: "Hires from best channel / Total hires x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "453712"
           number: "9.2.3"
           name: "Assess and select candidates through structured evaluation"
           agentic_profile: "H+a"
           agentic_note: "Humans lead interviews and decisions; agents schedule, score assessments, and flag inconsistencies"
+          measurements:
+            - id: "090801"
+              number: "9.2.3.M1"
+              name: "Interview-to-Offer Ratio"
+              what: "Number of interviews conducted per offer extended"
+              why: "Lower ratio indicates efficient selection process"
+              how: "Total interviews / Total offers extended"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "090802"
+              number: "9.2.3.M2"
+              name: "Assessment Predictive Validity"
+              what: "Correlation between assessment scores and first-year performance"
+              why: "Validates that selection methods predict job success"
+              how: "Pearson correlation coefficient between assessment scores and performance ratings"
+              frequency: annually
+              direction: higher_is_better
         - id: "198436"
           number: "9.2.4"
           name: "Extend offers and manage pre-employment processes"
           agentic_profile: "H=A"
           agentic_note: "Agents generate offers and manage checks; humans approve terms and handle negotiations"
+          measurements:
+            - id: "090901"
+              number: "9.2.4.M1"
+              name: "Offer Acceptance Rate"
+              what: "Percentage of offers accepted by candidates"
+              why: "Low acceptance signals compensation or employer brand issues"
+              how: "Offers accepted / Offers extended x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "090902"
+              number: "9.2.4.M2"
+              name: "Pre-Employment Process Cycle Time"
+              what: "Average days from offer acceptance to confirmed start date"
+              why: "Lengthy pre-employment delays increase candidate dropout risk"
+              how: "Average calendar days from acceptance to start-ready clearance"
+              frequency: monthly
+              direction: lower_is_better
         - id: "726351"
           number: "9.2.5"
           name: "Deliver structured onboarding programmes"
           agentic_profile: "H=A"
           agentic_note: "Agents orchestrate onboarding journeys and track completion; humans provide cultural integration"
+          measurements:
+            - id: "091001"
+              number: "9.2.5.M1"
+              name: "Onboarding Completion Rate"
+              what: "Percentage of new hires completing all onboarding milestones on time"
+              why: "Incomplete onboarding delays productivity and integration"
+              how: "New hires completing all milestones / Total new hires x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "091002"
+              number: "9.2.5.M2"
+              name: "New Hire Satisfaction Score"
+              what: "Average satisfaction rating from onboarding experience survey"
+              why: "Early experience shapes retention and engagement trajectory"
+              how: "Average score on post-onboarding survey (1-10 scale)"
+              frequency: monthly
+              direction: higher_is_better
         - id: "564893"
           number: "9.2.6"
           name: "Evaluate onboarding effectiveness and time-to-productivity"
           agentic_profile: "h+A"
           agentic_note: "Agents measure onboarding KPIs; humans interpret and refine the programme"
+          measurements:
+            - id: "091101"
+              number: "9.2.6.M1"
+              name: "Time to Productivity"
+              what: "Average days for new hires to reach expected performance level"
+              why: "Shorter ramp-up maximises return on recruitment investment"
+              how: "Average days from start date to meeting role performance benchmarks"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "091102"
+              number: "9.2.6.M2"
+              name: "90-Day Retention Rate"
+              what: "Percentage of new hires still employed after 90 days"
+              why: "Early attrition indicates onboarding or selection failures"
+              how: "New hires retained at 90 days / Total new hires x 100"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "285641"
       number: "9.3"
@@ -101,31 +288,133 @@ domain:
           name: "Assess learning needs across the organisation"
           agentic_profile: "H=A"
           agentic_note: "Agents analyse skills gaps and performance data; humans prioritise development areas"
+          measurements:
+            - id: "091201"
+              number: "9.3.1.M1"
+              name: "Learning Needs Assessment Coverage"
+              what: "Percentage of functions with completed learning needs assessments"
+              why: "Comprehensive assessment ensures no critical gaps are missed"
+              how: "Functions assessed / Total functions x 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "091202"
+              number: "9.3.1.M2"
+              name: "Needs-to-Programme Alignment Rate"
+              what: "Percentage of identified learning needs with mapped programmes"
+              why: "Ensures learning investments address actual capability gaps"
+              how: "Needs with mapped programmes / Total identified needs x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "769215"
           number: "9.3.2"
           name: "Design and curate learning programmes and content"
           agentic_profile: "H+a"
           agentic_note: "Humans design curricula; agents curate content and personalise learning paths"
+          measurements:
+            - id: "091301"
+              number: "9.3.2.M1"
+              name: "Learning Content Currency Rate"
+              what: "Percentage of learning content updated within the last 12 months"
+              why: "Outdated content reduces learning effectiveness"
+              how: "Content updated in last 12 months / Total content items x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "091302"
+              number: "9.3.2.M2"
+              name: "Programme Design Cycle Time"
+              what: "Average days to design and launch a new learning programme"
+              why: "Faster design enables responsive capability building"
+              how: "Average days from needs approval to programme launch"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "328946"
           number: "9.3.3"
           name: "Deliver learning through multiple modalities"
           agentic_profile: "H=A"
           agentic_note: "Agents deliver digital learning and track progress; humans facilitate workshops and coaching"
+          measurements:
+            - id: "091401"
+              number: "9.3.3.M1"
+              name: "Learning Completion Rate"
+              what: "Percentage of enrolled learners completing assigned programmes"
+              why: "Low completion wastes investment and leaves gaps unaddressed"
+              how: "Completions / Total enrolments x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "091402"
+              number: "9.3.3.M2"
+              name: "Learner Satisfaction Score"
+              what: "Average learner satisfaction rating across all programmes"
+              why: "Satisfied learners are more likely to apply and retain learning"
+              how: "Average rating on post-programme survey (1-5 scale)"
+              frequency: monthly
+              direction: higher_is_better
         - id: "651428"
           number: "9.3.4"
           name: "Manage career development and succession planning"
           agentic_profile: "H+a"
           agentic_note: "Humans guide career conversations; agents maintain succession pipelines and readiness dashboards"
+          measurements:
+            - id: "091501"
+              number: "9.3.4.M1"
+              name: "Succession Pipeline Coverage"
+              what: "Percentage of critical roles with at least one ready-now successor"
+              why: "Gaps in succession create business continuity risk"
+              how: "Critical roles with ready-now successor / Total critical roles x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "091502"
+              number: "9.3.4.M2"
+              name: "Internal Promotion Rate"
+              what: "Percentage of role fills sourced from internal candidates"
+              why: "Higher internal fills indicate effective career development"
+              how: "Internal fills / Total fills x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "894317"
           number: "9.3.5"
           name: "Operate mentoring and coaching programmes"
           agentic_profile: H
           agentic_note: "Human-led; agents match mentors to mentees and schedule sessions"
+          measurements:
+            - id: "091601"
+              number: "9.3.5.M1"
+              name: "Mentoring Programme Participation Rate"
+              what: "Percentage of eligible employees in active mentoring relationships"
+              why: "Active participation drives knowledge transfer and engagement"
+              how: "Active mentoring pairs / Eligible employees x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "091602"
+              number: "9.3.5.M2"
+              name: "Mentee Satisfaction Score"
+              what: "Average satisfaction rating from mentees on programme value"
+              why: "Low satisfaction indicates programme design needs improvement"
+              how: "Average mentee rating on programme survey (1-5 scale)"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "537264"
           number: "9.3.6"
           name: "Measure learning impact and return on investment"
           agentic_profile: "h+A"
           agentic_note: "Agents track completion, assessment scores, and performance correlation; humans validate business impact"
+          measurements:
+            - id: "091701"
+              number: "9.3.6.M1"
+              name: "Learning ROI"
+              what: "Return on investment from learning programmes"
+              why: "Justifies learning spend and guides budget allocation"
+              how: "(Performance improvement value - Learning cost) / Learning cost x 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "091702"
+              number: "9.3.6.M2"
+              name: "Skill Application Rate"
+              what: "Percentage of learners applying new skills on the job within 90 days"
+              why: "Transfer to workplace is the true measure of learning effectiveness"
+              how: "Learners confirmed applying skills / Total completions x 100"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "613274"
       number: "9.4"
@@ -139,26 +428,111 @@ domain:
           name: "Design compensation structures and pay frameworks"
           agentic_profile: "H+a"
           agentic_note: "Humans design philosophy and structures; agents benchmark against market data"
+          measurements:
+            - id: "091801"
+              number: "9.4.1.M1"
+              name: "Market Competitiveness Ratio"
+              what: "Average employee pay as percentage of market median"
+              why: "Ensures compensation attracts and retains talent"
+              how: "Average actual pay / Market median pay x 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "091802"
+              number: "9.4.1.M2"
+              name: "Compensation Structure Coverage"
+              what: "Percentage of roles mapped to approved pay frameworks"
+              why: "Unmapped roles create equity and governance risks"
+              how: "Roles with pay framework mapping / Total roles x 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "736518"
           number: "9.4.2"
           name: "Administer payroll and compensation processing"
           agentic_profile: A
           agentic_note: "Agent-executed; automated payroll runs with human exception handling"
+          measurements:
+            - id: "091901"
+              number: "9.4.2.M1"
+              name: "Payroll Accuracy Rate"
+              what: "Percentage of payroll runs processed without errors"
+              why: "Payroll errors erode employee trust and create compliance risk"
+              how: "Error-free pay records / Total pay records x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "091902"
+              number: "9.4.2.M2"
+              name: "Payroll On-Time Rate"
+              what: "Percentage of payroll runs completed by scheduled deadline"
+              why: "Late payroll causes employee hardship and regulatory risk"
+              how: "On-time payroll runs / Total scheduled runs x 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "541046"
           number: "9.4.3"
           name: "Manage employee benefits programmes and enrolment"
           agentic_profile: "H=A"
           agentic_note: "Agents administer enrolment and queries; humans design benefits strategy"
+          measurements:
+            - id: "092001"
+              number: "9.4.3.M1"
+              name: "Benefits Enrolment Rate"
+              what: "Percentage of eligible employees enrolled in benefits programmes"
+              why: "Low enrolment may indicate communication gaps or relevance issues"
+              how: "Enrolled employees / Eligible employees x 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "092002"
+              number: "9.4.3.M2"
+              name: "Benefits Query Resolution Time"
+              what: "Average time to resolve employee benefits enquiries"
+              why: "Fast resolution improves employee experience and trust"
+              how: "Average hours from query submission to resolution"
+              frequency: monthly
+              direction: lower_is_better
         - id: "518463"
           number: "9.4.4"
           name: "Operate recognition and reward programmes"
           agentic_profile: "H+a"
           agentic_note: "Humans design programmes; agents track nominations and distribute rewards"
+          measurements:
+            - id: "092101"
+              number: "9.4.4.M1"
+              name: "Recognition Programme Participation"
+              what: "Percentage of employees giving or receiving recognition per quarter"
+              why: "Active recognition drives engagement and reinforces culture"
+              how: "Employees participating / Total employees x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "092102"
+              number: "9.4.4.M2"
+              name: "Recognition Distribution Equity"
+              what: "Variation in recognition rates across departments"
+              why: "Ensures recognition is equitably distributed"
+              how: "Standard deviation of recognition per department / Mean recognition per department"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "847321"
           number: "9.4.5"
           name: "Conduct pay equity analysis and remediation"
           agentic_profile: "h+A"
           agentic_note: "Agents analyse pay data for disparities; humans decide remediation actions"
+          measurements:
+            - id: "092201"
+              number: "9.4.5.M1"
+              name: "Pay Equity Gap"
+              what: "Adjusted pay gap between demographic groups for comparable roles"
+              why: "Pay equity is a legal requirement and ethical imperative"
+              how: "Average pay gap after controlling for role, experience, and performance"
+              frequency: annually
+              direction: lower_is_better
+            - id: "092202"
+              number: "9.4.5.M2"
+              name: "Remediation Completion Rate"
+              what: "Percentage of pay equity issues remediated within target timeframe"
+              why: "Timely remediation demonstrates commitment to fair pay"
+              how: "Issues remediated on time / Total issues identified x 100"
+              frequency: annually
+              direction: higher_is_better
 
     - id: "174829"
       number: "9.5"
@@ -172,31 +546,133 @@ domain:
           name: "Design and manage the employee experience journey"
           agentic_profile: "H+a"
           agentic_note: "Humans design experience touchpoints; agents map journeys and identify friction"
+          measurements:
+            - id: "092301"
+              number: "9.5.1.M1"
+              name: "Employee Experience Score"
+              what: "Composite score across key employee journey touchpoints"
+              why: "Holistic view drives targeted experience improvements"
+              how: "Weighted average of touchpoint satisfaction ratings (1-10 scale)"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "092302"
+              number: "9.5.1.M2"
+              name: "Experience Friction Points Resolved"
+              what: "Percentage of identified experience friction points addressed"
+              why: "Resolving friction improves retention and productivity"
+              how: "Friction points resolved / Total friction points identified x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "481753"
           number: "9.5.2"
           name: "Measure and analyse employee engagement"
           agentic_profile: "h+A"
           agentic_note: "Agents deploy surveys, analyse sentiment, and surface trends; humans interpret and act"
+          measurements:
+            - id: "092401"
+              number: "9.5.2.M1"
+              name: "Employee Engagement Score"
+              what: "Overall employee engagement index from pulse surveys"
+              why: "Engagement drives productivity, retention, and customer outcomes"
+              how: "Average engagement score from survey instrument (0-100 scale)"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "092402"
+              number: "9.5.2.M2"
+              name: "Survey Response Rate"
+              what: "Percentage of employees completing engagement surveys"
+              why: "Low response rates reduce data reliability"
+              how: "Responses received / Surveys distributed x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "352946"
           number: "9.5.3"
           name: "Manage employee wellbeing and welfare programmes"
           agentic_profile: "H+a"
           agentic_note: "Humans design programmes and provide pastoral support; agents signpost resources and track utilisation"
+          measurements:
+            - id: "092501"
+              number: "9.5.3.M1"
+              name: "Wellbeing Programme Utilisation"
+              what: "Percentage of employees using wellbeing resources"
+              why: "Low utilisation may indicate awareness gaps or relevance issues"
+              how: "Employees using programmes / Total employees x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "092502"
+              number: "9.5.3.M2"
+              name: "Absenteeism Rate"
+              what: "Average unplanned absence days per employee"
+              why: "High absenteeism signals wellbeing issues and impacts productivity"
+              how: "Total unplanned absence days / Total employees"
+              frequency: monthly
+              direction: lower_is_better
         - id: "718294"
           number: "9.5.4"
           name: "Foster workplace culture and inclusion"
           agentic_profile: H
           agentic_note: "Human-led; culture requires authentic human leadership and role modelling"
+          measurements:
+            - id: "092601"
+              number: "9.5.4.M1"
+              name: "Inclusion Index Score"
+              what: "Employee perception of workplace inclusion from survey data"
+              why: "Inclusive cultures drive innovation, engagement, and retention"
+              how: "Average inclusion index from engagement survey (0-100 scale)"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "092602"
+              number: "9.5.4.M2"
+              name: "Diversity Representation Rate"
+              what: "Representation of underrepresented groups at each level"
+              why: "Tracks progress toward equitable representation"
+              how: "Underrepresented group headcount / Total headcount by level x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "263841"
           number: "9.5.5"
           name: "Manage internal employee communication channels"
           agentic_profile: "H=A"
           agentic_note: "Agents create and distribute content; humans set narrative and tone"
+          measurements:
+            - id: "092701"
+              number: "9.5.5.M1"
+              name: "Internal Comms Reach Rate"
+              what: "Percentage of employees engaging with internal communications"
+              why: "Ensures messages reach the workforce effectively"
+              how: "Unique employees viewing communications / Total employees x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "092702"
+              number: "9.5.5.M2"
+              name: "Communication Satisfaction Score"
+              what: "Employee satisfaction with internal communications quality"
+              why: "Effective communication builds alignment and reduces uncertainty"
+              how: "Average rating on communications satisfaction survey (1-5 scale)"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "895412"
           number: "9.5.6"
           name: "Handle employee grievances and conflict resolution"
           agentic_profile: H
           agentic_note: "Human-led; agents manage case tracking and documentation only"
+          measurements:
+            - id: "092801"
+              number: "9.5.6.M1"
+              name: "Grievance Resolution Time"
+              what: "Average days to resolve employee grievances"
+              why: "Timely resolution prevents escalation and builds trust"
+              how: "Average calendar days from grievance filing to resolution"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "092802"
+              number: "9.5.6.M2"
+              name: "Grievance Resolution Satisfaction"
+              what: "Percentage of grievants satisfied with the resolution process"
+              why: "Process fairness matters as much as outcome"
+              how: "Satisfied grievants / Total resolved grievances x 100"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "527389"
       number: "9.6"
@@ -210,26 +686,111 @@ domain:
           name: "Maintain employee records and HR master data"
           agentic_profile: A
           agentic_note: "Agent-executed; automated record maintenance with human audit"
+          measurements:
+            - id: "092901"
+              number: "9.6.1.M1"
+              name: "Employee Data Accuracy Rate"
+              what: "Percentage of employee records without data quality errors"
+              why: "Inaccurate records cause payroll errors and compliance failures"
+              how: "Clean records / Total employee records x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "092902"
+              number: "9.6.1.M2"
+              name: "Record Update Timeliness"
+              what: "Percentage of employee changes processed within SLA"
+              why: "Delayed updates cascade to payroll and benefits errors"
+              how: "Changes processed within SLA / Total changes x 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "368215"
           number: "9.6.2"
           name: "Administer HR policies and procedures"
           agentic_profile: "H=A"
           agentic_note: "Agents distribute policies and track acknowledgement; humans author and update policies"
+          measurements:
+            - id: "093001"
+              number: "9.6.2.M1"
+              name: "Policy Acknowledgement Rate"
+              what: "Percentage of employees acknowledging updated policies on time"
+              why: "Unacknowledged policies create compliance and liability risk"
+              how: "Acknowledgements received / Required acknowledgements x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "093002"
+              number: "9.6.2.M2"
+              name: "Policy Review Currency"
+              what: "Percentage of HR policies reviewed within their scheduled cycle"
+              why: "Outdated policies may not reflect current regulations"
+              how: "Policies reviewed on schedule / Total policies x 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "294573"
           number: "9.6.3"
           name: "Operate the HR service desk and case management"
           agentic_profile: "h+A"
           agentic_note: "Agents handle tier-1 queries and route complex cases; humans resolve escalations"
+          measurements:
+            - id: "093101"
+              number: "9.6.3.M1"
+              name: "HR Service Desk First-Contact Resolution"
+              what: "Percentage of HR queries resolved at first contact"
+              why: "Higher FCR reduces costs and improves employee experience"
+              how: "Queries resolved at first contact / Total queries x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "093102"
+              number: "9.6.3.M2"
+              name: "HR Case Resolution Time"
+              what: "Average time to resolve HR service desk cases"
+              why: "Faster resolution improves employee satisfaction"
+              how: "Average business hours from case creation to closure"
+              frequency: monthly
+              direction: lower_is_better
         - id: "856149"
           number: "9.6.4"
           name: "Manage employee lifecycle events and transitions"
           agentic_profile: "H=A"
           agentic_note: "Agents process promotions, transfers, and separations; humans approve and communicate"
+          measurements:
+            - id: "093201"
+              number: "9.6.4.M1"
+              name: "Lifecycle Event Processing Accuracy"
+              what: "Percentage of lifecycle events processed without errors"
+              why: "Errors in promotions, transfers, or separations impact pay and access"
+              how: "Error-free events / Total lifecycle events x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "093202"
+              number: "9.6.4.M2"
+              name: "Lifecycle Event Cycle Time"
+              what: "Average days to process employee lifecycle events"
+              why: "Delays create gaps in access, pay, or benefits"
+              how: "Average business days from event initiation to completion"
+              frequency: monthly
+              direction: lower_is_better
         - id: "612837"
           number: "9.6.5"
           name: "Ensure HR regulatory compliance and statutory reporting"
           agentic_profile: "h+A"
           agentic_note: "Agents monitor regulatory changes and prepare filings; humans review and submit"
+          measurements:
+            - id: "093301"
+              number: "9.6.5.M1"
+              name: "HR Regulatory Filing Timeliness"
+              what: "Percentage of statutory reports filed on or before deadline"
+              why: "Late filings result in penalties and reputational damage"
+              how: "On-time filings / Total required filings x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "093302"
+              number: "9.6.5.M2"
+              name: "HR Compliance Audit Finding Rate"
+              what: "Number of material findings per HR compliance audit"
+              why: "Fewer findings indicate stronger compliance posture"
+              how: "Count of material findings in most recent audit"
+              frequency: annually
+              direction: lower_is_better
 
     - id: "938214"
       number: "9.7"
@@ -245,33 +806,152 @@ domain:
           name: "Provision and configure new agents into the workforce"
           agentic_profile: "H=A"
           agentic_note: "Agents automate provisioning workflows; humans approve agent deployment and role assignment"
+          measurements:
+            - id: "093401"
+              number: "9.7.1.M1"
+              name: "Agent Provisioning Cycle Time"
+              what: "Average days from agent request to production deployment"
+              why: "Faster provisioning accelerates time-to-value"
+              how: "Average business days from approved request to active agent"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "093402"
+              number: "9.7.1.M2"
+              name: "Agent Provisioning Success Rate"
+              what: "Percentage of agent deployments completed without rollback"
+              why: "Failed deployments waste resources and delay capabilities"
+              how: "Successful deployments / Total deployment attempts x 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "583146"
           number: "9.7.2"
           name: "Define agent roles, responsibilities, and trust boundaries"
           agentic_profile: "H+a"
           agentic_note: "Humans define trust levels and guardrails; agents maintain the role registry"
+          measurements:
+            - id: "093501"
+              number: "9.7.2.M1"
+              name: "Agent Role Definition Coverage"
+              what: "Percentage of active agents with documented roles and trust boundaries"
+              why: "Undefined boundaries create governance and safety risks"
+              how: "Agents with complete role definitions / Total active agents x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "093502"
+              number: "9.7.2.M2"
+              name: "Trust Boundary Violation Rate"
+              what: "Number of agent actions outside defined trust boundaries per 1000 actions"
+              why: "Violations indicate misconfiguration or policy gaps"
+              how: "Boundary violations / Total agent actions x 1000"
+              frequency: monthly
+              direction: lower_is_better
         - id: "719432"
           number: "9.7.3"
           name: "Monitor agent performance and behavioural compliance"
           agentic_profile: "h+A"
           agentic_note: "Agents monitor agent fleet metrics and flag anomalies; humans investigate and intervene"
+          measurements:
+            - id: "093601"
+              number: "9.7.3.M1"
+              name: "Agent Performance SLA Compliance"
+              what: "Percentage of agents meeting defined performance SLAs"
+              why: "Underperforming agents reduce blended workforce effectiveness"
+              how: "Agents meeting SLA / Total active agents x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "093602"
+              number: "9.7.3.M2"
+              name: "Agent Anomaly Detection Rate"
+              what: "Percentage of agent anomalies detected before business impact"
+              why: "Early detection prevents downstream errors and compliance breaches"
+              how: "Anomalies detected proactively / Total anomalies x 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "264891"
           number: "9.7.4"
           name: "Calibrate agent trust levels and autonomy thresholds"
           agentic_profile: "H+a"
           agentic_note: "Humans set trust policy; agents track performance and recommend recalibration"
+          measurements:
+            - id: "093701"
+              number: "9.7.4.M1"
+              name: "Trust Level Calibration Frequency"
+              what: "Average number of trust level reviews per agent per year"
+              why: "Regular calibration ensures trust levels reflect current performance"
+              how: "Total trust reviews / Total active agents"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "093702"
+              number: "9.7.4.M2"
+              name: "Trust Escalation Rate"
+              what: "Percentage of agents with trust levels increased based on performance"
+              why: "Progression indicates agents are maturing and earning autonomy"
+              how: "Agents with increased trust / Total agents reviewed x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "835617"
           number: "9.7.5"
           name: "Manage the agent lifecycle — updates, retraining, and retirement"
           agentic_profile: "H=A"
           agentic_note: "Agents execute lifecycle workflows; humans approve major transitions and decommissioning"
+          measurements:
+            - id: "093801"
+              number: "9.7.5.M1"
+              name: "Agent Update Compliance Rate"
+              what: "Percentage of agents on current approved versions"
+              why: "Outdated agents may have security or performance issues"
+              how: "Agents on current version / Total active agents x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "093802"
+              number: "9.7.5.M2"
+              name: "Agent Retirement Timeliness"
+              what: "Percentage of deprecated agents retired within target timeframe"
+              why: "Lingering deprecated agents consume resources and create risk"
+              how: "Agents retired on time / Total flagged for retirement x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "391528"
           number: "9.7.6"
           name: "Coordinate human-agent teaming and workload distribution"
           agentic_profile: "H=A"
           agentic_note: "Agents optimise task routing; humans oversee balance and intervene on conflicts"
+          measurements:
+            - id: "093901"
+              number: "9.7.6.M1"
+              name: "Human-Agent Task Routing Accuracy"
+              what: "Percentage of tasks routed to the optimal executor"
+              why: "Accurate routing maximises blended workforce productivity"
+              how: "Correctly routed tasks / Total routed tasks x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "093902"
+              number: "9.7.6.M2"
+              name: "Workload Balance Index"
+              what: "Variance in workload utilisation across human-agent teams"
+              why: "Balanced workloads prevent burnout and underutilisation"
+              how: "Standard deviation of utilisation rates across team members"
+              frequency: monthly
+              direction: lower_is_better
         - id: "642375"
           number: "9.7.7"
           name: "Report on blended workforce composition and effectiveness"
           agentic_profile: "h+A"
           agentic_note: "Agents generate dashboards and trend reports; humans interpret and present to leadership"
+          measurements:
+            - id: "094001"
+              number: "9.7.7.M1"
+              name: "Blended Workforce Report Timeliness"
+              what: "Percentage of workforce composition reports delivered on schedule"
+              why: "Timely reporting enables proactive workforce management"
+              how: "On-time reports / Total scheduled reports x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "094002"
+              number: "9.7.7.M2"
+              name: "Agent-to-Human Ratio Trend"
+              what: "Ratio of agent FTE-equivalents to human FTEs over time"
+              why: "Tracks evolution of the blended workforce composition"
+              how: "Agent FTE-equivalents / Human FTEs"
+              frequency: quarterly
+              direction: higher_is_better

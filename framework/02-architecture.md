@@ -21,14 +21,14 @@ Strategy does not sit "above" the structural hierarchy — it sits **alongside**
 
 A group strategy lives at the OU level. A supply chain strategy lives within the Supply Chain domain. Objectives cascade from strategies and attach to capabilities and processes. This means any work item can be traced back to strategic intent through *two independent paths*:
 
-- **Structural:** Work → Activity → Process → Capability → Domain → OU
+- **Structural:** Work → Activity → Process → Capability → Domain → OU (and Measurement → Process for performance evaluation)
 - **Strategic:** Work → Initiative → Objective → Strategy
 
 Both paths converge on the same architecture.
 
 ### Why This Matters
 
-Traditional frameworks like APQC's PCF define **Category → Process Group → Process** — a clean structural hierarchy but one that doesn't model corporate structure, strategic alignment, or workforce composition. ZORBA's **OU → Domain → Capability → Process → Activity → Work** extends this with:
+Traditional frameworks like APQC's PCF define **Category → Process Group → Process** — a clean structural hierarchy but one that doesn't model corporate structure, strategic alignment, or workforce composition. ZORBA's **OU → Domain → Capability → Process → {Activity → Work, Measurement}** extends this with:
 
 - **Organisational Units** at the root, enabling complex corporate structures
 - **Domains** that carry Value Chain / Management Function classification
@@ -189,6 +189,39 @@ Every activity in ZORBA is classified along two axes:
 ### Key Principle
 
 Activities are the **atomic unit of workforce composition**. The decision of who (or what) performs each activity — and at what level of autonomy — is the most granular and impactful workforce design decision in the enterprise.
+
+---
+
+## Structural Layer: Measurement
+
+**What it defines:** The KPIs and metrics that evaluate how effectively a process is performing — sitting alongside Activities as a peer within a Process.
+
+While Activities capture **process execution** (how work flows), Measurements capture **process evaluation** (how well it's working). Every process may define one or more Measurements that quantify its effectiveness, efficiency, or compliance.
+
+### Relationship to Activities
+
+Measurements and Activities are both children of a Process, but they serve different purposes:
+
+- **Activities** decompose a process into executable steps (the "doing")
+- **Measurements** define how to evaluate the process's performance (the "assessing")
+
+This separation ensures that performance evaluation is a first-class architectural concern, not an afterthought bolted onto process definitions.
+
+### Measurement Schema
+
+Each Measurement carries:
+
+| Attribute | Description |
+|-----------|-------------|
+| `what` | What the measurement quantifies (one-line description) |
+| `why` | Why this measurement matters to the enterprise |
+| `how` | Formula or calculation method |
+| `frequency` | How often the measurement is taken (daily, weekly, monthly, quarterly, annually) |
+| `direction` | Whether `higher_is_better` or `lower_is_better` |
+
+### Key Principle
+
+Measurements make process performance **explicit, quantifiable, and machine-readable**. In an agent-rich enterprise, agents continuously compute Measurements and surface deviations — turning the architecture from a static reference into a live performance management system.
 
 ---
 

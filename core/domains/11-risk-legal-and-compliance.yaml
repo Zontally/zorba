@@ -29,31 +29,133 @@ domain:
           name: "Maintain the enterprise risk framework and taxonomy"
           agentic_profile: "H+a"
           agentic_note: "Humans design the framework; agents maintain documentation and version control"
+          measurements:
+            - id: "110101"
+              number: "11.1.1.M1"
+              name: "Risk Framework Maturity Score"
+              what: "Maturity level of the enterprise risk framework"
+              why: "Higher maturity indicates more robust risk management"
+              how: "Score from independent framework maturity assessment (1-5 scale)"
+              frequency: annually
+              direction: higher_is_better
+            - id: "110102"
+              number: "11.1.1.M2"
+              name: "Risk Taxonomy Coverage"
+              what: "Percentage of business domains covered by the risk taxonomy"
+              why: "Gaps in taxonomy leave risks unidentified"
+              how: "Domains with risk taxonomy mapping / Total domains x 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "358241"
           number: "11.1.2"
           name: "Identify and register risks across domains and units"
           agentic_profile: "H=A"
           agentic_note: "Agents scan for emerging risks and prompt registration; humans validate and classify"
+          measurements:
+            - id: "110201"
+              number: "11.1.2.M1"
+              name: "Risk Register Completeness"
+              what: "Percentage of identified risks with full register entries"
+              why: "Incomplete entries prevent effective risk management"
+              how: "Fully documented risks / Total identified risks x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "110202"
+              number: "11.1.2.M2"
+              name: "Emerging Risk Identification Rate"
+              what: "Number of new risks identified and registered per quarter"
+              why: "Active identification prevents surprise risk events"
+              how: "Count of newly registered risks per quarter"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "916473"
           number: "11.1.3"
           name: "Assess and score risks by likelihood and impact"
           agentic_profile: "H=A"
           agentic_note: "Agents compute risk scores using agreed methodologies; humans exercise qualitative judgement"
+          measurements:
+            - id: "110301"
+              number: "11.1.3.M1"
+              name: "Risk Assessment Timeliness"
+              what: "Percentage of risks assessed within the scheduled review cycle"
+              why: "Overdue assessments leave risk scores stale and unreliable"
+              how: "Risks assessed on schedule / Total risks due for assessment x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "110302"
+              number: "11.1.3.M2"
+              name: "Risk Score Calibration Accuracy"
+              what: "Correlation between predicted risk scores and actual loss events"
+              why: "Accurate scoring validates the methodology and builds credibility"
+              how: "Correlation coefficient between risk scores and realised losses"
+              frequency: annually
+              direction: higher_is_better
         - id: "542168"
           number: "11.1.4"
           name: "Define and track risk treatment plans"
           agentic_profile: "H+a"
           agentic_note: "Humans design treatments; agents track implementation and flag overdue actions"
+          measurements:
+            - id: "110401"
+              number: "11.1.4.M1"
+              name: "Risk Treatment Plan Completion Rate"
+              what: "Percentage of risk treatment actions completed on schedule"
+              why: "Delayed treatments leave the enterprise exposed to known risks"
+              how: "Actions completed on time / Total planned actions x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "110402"
+              number: "11.1.4.M2"
+              name: "Residual Risk Reduction"
+              what: "Percentage reduction in residual risk scores after treatment"
+              why: "Validates that treatments are effective in reducing risk"
+              how: "(Pre-treatment score - Post-treatment score) / Pre-treatment score x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "273894"
           number: "11.1.5"
           name: "Monitor the risk landscape and produce risk reports"
           agentic_profile: "h+A"
           agentic_note: "Agents monitor continuously and generate risk dashboards; humans interpret for leadership"
+          measurements:
+            - id: "110501"
+              number: "11.1.5.M1"
+              name: "Risk Report Timeliness"
+              what: "Percentage of risk reports delivered to leadership on schedule"
+              why: "Late reports delay risk-informed decision-making"
+              how: "On-time reports / Total scheduled reports x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "110502"
+              number: "11.1.5.M2"
+              name: "Risk Dashboard Accuracy"
+              what: "Percentage of dashboard data points validated as accurate"
+              why: "Inaccurate dashboards undermine confidence in risk reporting"
+              how: "Accurate data points / Total data points audited x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "685312"
           number: "11.1.6"
           name: "Conduct risk scenario analysis and stress testing"
           agentic_profile: "H=A"
           agentic_note: "Agents run simulations and model scenarios; humans define parameters and interpret results"
+          measurements:
+            - id: "110601"
+              number: "11.1.6.M1"
+              name: "Stress Test Scenario Coverage"
+              what: "Number of distinct risk scenarios tested per cycle"
+              why: "Broader coverage improves preparedness for diverse risk events"
+              how: "Count of distinct scenarios tested"
+              frequency: annually
+              direction: higher_is_better
+            - id: "110602"
+              number: "11.1.6.M2"
+              name: "Scenario Analysis Actionability"
+              what: "Percentage of stress test findings with documented response plans"
+              why: "Findings without action plans provide no defensive value"
+              how: "Findings with response plans / Total findings x 100"
+              frequency: annually
+              direction: higher_is_better
 
     - id: "817432"
       number: "11.2"
@@ -67,31 +169,133 @@ domain:
           name: "Provide legal advice and counsel to business units"
           agentic_profile: H
           agentic_note: "Human-led; legal judgement requires qualified human practitioners"
+          measurements:
+            - id: "110701"
+              number: "11.2.1.M1"
+              name: "Legal Advice Turnaround Time"
+              what: "Average days to deliver legal advice from request"
+              why: "Delayed advice slows business decisions and deal execution"
+              how: "Average business days from request to advice delivered"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "110702"
+              number: "11.2.1.M2"
+              name: "Legal Advice Satisfaction Score"
+              what: "Business unit satisfaction with legal advisory services"
+              why: "Low satisfaction indicates disconnect between legal and business needs"
+              how: "Average rating from internal client satisfaction survey (1-5 scale)"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "763148"
           number: "11.2.2"
           name: "Draft, review, and negotiate contracts"
           agentic_profile: "H+a"
           agentic_note: "Humans lead negotiation and review; agents draft from templates and flag non-standard clauses"
+          measurements:
+            - id: "110801"
+              number: "11.2.2.M1"
+              name: "Contract Cycle Time"
+              what: "Average days from contract initiation to execution"
+              why: "Long cycle times delay revenue and partnerships"
+              how: "Average calendar days from draft initiation to signed contract"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "110802"
+              number: "11.2.2.M2"
+              name: "Non-Standard Clause Rate"
+              what: "Percentage of contracts containing non-standard clauses"
+              why: "Non-standard clauses increase risk and review burden"
+              how: "Contracts with non-standard clauses / Total contracts x 100"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "291875"
           number: "11.2.3"
           name: "Manage the contract lifecycle and obligations tracking"
           agentic_profile: "h+A"
           agentic_note: "Agents track milestones, renewals, and obligations; humans handle exceptions and renegotiations"
+          measurements:
+            - id: "110901"
+              number: "11.2.3.M1"
+              name: "Contract Obligation Compliance Rate"
+              what: "Percentage of contract obligations met on time"
+              why: "Missed obligations create legal liability and relationship damage"
+              how: "Obligations met on time / Total obligations due x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "110902"
+              number: "11.2.3.M2"
+              name: "Contract Renewal Timeliness"
+              what: "Percentage of contracts renewed or renegotiated before expiry"
+              why: "Lapsed contracts create service and legal continuity gaps"
+              how: "Timely renewals / Total contracts due for renewal x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "648312"
           number: "11.2.4"
           name: "Manage disputes, litigation, and regulatory proceedings"
           agentic_profile: H
           agentic_note: "Human-led; agents manage case files, deadlines, and document assembly"
+          measurements:
+            - id: "111001"
+              number: "11.2.4.M1"
+              name: "Litigation Spend vs Budget"
+              what: "Actual litigation spend as percentage of budget"
+              why: "Uncontrolled litigation costs impact financial performance"
+              how: "Actual litigation spend / Budget x 100"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "111002"
+              number: "11.2.4.M2"
+              name: "Dispute Resolution Rate"
+              what: "Percentage of disputes resolved without proceeding to trial"
+              why: "Pre-trial resolution saves cost and reduces risk exposure"
+              how: "Disputes resolved pre-trial / Total disputes x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "527493"
           number: "11.2.5"
           name: "Maintain the legal entity structure and corporate records"
           agentic_profile: "h+A"
           agentic_note: "Agents maintain records and filing calendars; humans authorise structural changes"
+          measurements:
+            - id: "111101"
+              number: "11.2.5.M1"
+              name: "Corporate Filing Timeliness"
+              what: "Percentage of statutory corporate filings submitted on time"
+              why: "Late filings result in penalties and regulatory scrutiny"
+              how: "On-time filings / Total required filings x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "111102"
+              number: "11.2.5.M2"
+              name: "Entity Records Accuracy"
+              what: "Percentage of legal entity records verified as accurate"
+              why: "Inaccurate records create compliance and transaction risks"
+              how: "Verified accurate records / Total entity records x 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "184736"
           number: "11.2.6"
           name: "Manage intellectual property and brand protection"
           agentic_profile: "H+a"
           agentic_note: "Humans make IP strategy decisions; agents monitor infringement and manage filings"
+          measurements:
+            - id: "111201"
+              number: "11.2.6.M1"
+              name: "IP Portfolio Coverage"
+              what: "Percentage of key innovations with intellectual property protection"
+              why: "Unprotected innovations are vulnerable to competitor appropriation"
+              how: "Protected innovations / Total key innovations x 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "111202"
+              number: "11.2.6.M2"
+              name: "IP Infringement Detection Rate"
+              what: "Number of potential IP infringements detected and actioned"
+              why: "Active monitoring protects brand and competitive position"
+              how: "Count of infringements detected and actioned per quarter"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "265918"
       number: "11.3"
@@ -106,26 +310,111 @@ domain:
           name: "Monitor and interpret regulatory changes and obligations"
           agentic_profile: "h+A"
           agentic_note: "Agents scan regulatory feeds and summarise changes; humans assess applicability"
+          measurements:
+            - id: "111301"
+              number: "11.3.1.M1"
+              name: "Regulatory Change Processing Time"
+              what: "Average days to assess and document impact of regulatory changes"
+              why: "Slow processing risks non-compliance with new requirements"
+              how: "Average days from regulatory change publication to impact assessment completion"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "111302"
+              number: "11.3.1.M2"
+              name: "Regulatory Scanning Coverage"
+              what: "Percentage of applicable regulatory bodies actively monitored"
+              why: "Gaps in monitoring create compliance blind spots"
+              how: "Monitored regulatory bodies / Total applicable bodies x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "496731"
           number: "11.3.2"
           name: "Design and implement compliance programmes"
           agentic_profile: "H+a"
           agentic_note: "Humans design programmes; agents operationalise controls and track adoption"
+          measurements:
+            - id: "111401"
+              number: "11.3.2.M1"
+              name: "Compliance Programme Coverage"
+              what: "Percentage of regulatory obligations with implemented compliance controls"
+              why: "Uncovered obligations leave the enterprise exposed"
+              how: "Obligations with controls / Total obligations x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "111402"
+              number: "11.3.2.M2"
+              name: "Compliance Control Effectiveness"
+              what: "Percentage of compliance controls rated as effective in testing"
+              why: "Ineffective controls provide false assurance"
+              how: "Effective controls / Total controls tested x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "713549"
           number: "11.3.3"
           name: "Conduct compliance assessments and testing"
           agentic_profile: "H=A"
           agentic_note: "Agents execute automated compliance checks; humans investigate exceptions"
+          measurements:
+            - id: "111501"
+              number: "11.3.3.M1"
+              name: "Compliance Assessment Completion Rate"
+              what: "Percentage of scheduled compliance assessments completed on time"
+              why: "Incomplete assessments leave compliance gaps undetected"
+              how: "Completed assessments / Scheduled assessments x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "111502"
+              number: "11.3.3.M2"
+              name: "Compliance Exception Rate"
+              what: "Number of compliance exceptions identified per assessment"
+              why: "Trending exceptions reveals systemic control weaknesses"
+              how: "Average exceptions per assessment"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "358274"
           number: "11.3.4"
           name: "Manage regulatory filings and submissions"
           agentic_profile: "h+A"
           agentic_note: "Agents prepare and submit filings; humans review and approve before submission"
+          measurements:
+            - id: "111601"
+              number: "11.3.4.M1"
+              name: "Regulatory Filing On-Time Rate"
+              what: "Percentage of regulatory filings submitted before deadline"
+              why: "Late filings trigger penalties and regulatory scrutiny"
+              how: "On-time filings / Total filings x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "111602"
+              number: "11.3.4.M2"
+              name: "Filing Accuracy Rate"
+              what: "Percentage of filings accepted without amendment requests"
+              why: "Amendments signal data quality or process issues"
+              how: "Filings accepted first time / Total filings x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "621483"
           number: "11.3.5"
           name: "Manage relationships with regulators and supervisory bodies"
           agentic_profile: H
           agentic_note: "Human-led; regulatory relationships require human diplomacy and judgement"
+          measurements:
+            - id: "111701"
+              number: "11.3.5.M1"
+              name: "Regulator Engagement Frequency"
+              what: "Number of proactive regulatory engagement touchpoints per quarter"
+              why: "Active engagement builds trust and early warning of changes"
+              how: "Count of proactive regulator meetings and communications"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "111702"
+              number: "11.3.5.M2"
+              name: "Regulatory Enquiry Response Time"
+              what: "Average days to respond to regulatory enquiries"
+              why: "Slow response damages regulatory relationships and trust"
+              how: "Average business days from enquiry receipt to response"
+              frequency: quarterly
+              direction: lower_is_better
 
     - id: "742613"
       number: "11.4"
@@ -140,26 +429,111 @@ domain:
           name: "Develop the risk-based internal audit plan"
           agentic_profile: "H+a"
           agentic_note: "Humans set audit priorities; agents analyse risk data to inform planning"
+          measurements:
+            - id: "111801"
+              number: "11.4.1.M1"
+              name: "Audit Plan Coverage"
+              what: "Percentage of high-risk areas included in the annual audit plan"
+              why: "Uncovered high-risk areas lack independent assurance"
+              how: "High-risk areas in plan / Total high-risk areas x 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "111802"
+              number: "11.4.1.M2"
+              name: "Audit Plan Completion Rate"
+              what: "Percentage of planned audits completed within the year"
+              why: "Incomplete plans leave assurance gaps"
+              how: "Audits completed / Audits planned x 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "856271"
           number: "11.4.2"
           name: "Execute audit engagements and fieldwork"
           agentic_profile: "H=A"
           agentic_note: "Agents perform data analytics and automated testing; humans conduct interviews and assess controls"
+          measurements:
+            - id: "111901"
+              number: "11.4.2.M1"
+              name: "Audit Engagement Cycle Time"
+              what: "Average days from audit start to draft report"
+              why: "Long cycle times delay remediation and reduce audit relevance"
+              how: "Average days from fieldwork start to draft report issuance"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "111902"
+              number: "11.4.2.M2"
+              name: "Audit Finding Acceptance Rate"
+              what: "Percentage of audit findings accepted by management"
+              why: "Low acceptance indicates quality or relevance issues in audit work"
+              how: "Findings accepted / Total findings issued x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "493128"
           number: "11.4.3"
           name: "Report audit findings and recommendations"
           agentic_profile: "H+a"
           agentic_note: "Humans form opinions and present findings; agents draft reports and track management responses"
+          measurements:
+            - id: "112001"
+              number: "11.4.3.M1"
+              name: "Report Issuance Timeliness"
+              what: "Percentage of audit reports issued within target timeline"
+              why: "Late reports delay management response and remediation"
+              how: "Reports issued on time / Total reports x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "112002"
+              number: "11.4.3.M2"
+              name: "High-Risk Finding Rate"
+              what: "Percentage of findings rated high or critical severity"
+              why: "Tracks the severity profile of audit outcomes"
+              how: "High/critical findings / Total findings x 100"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "627314"
           number: "11.4.4"
           name: "Monitor remediation of audit findings"
           agentic_profile: "h+A"
           agentic_note: "Agents track action completion and escalate overdue items; humans validate remediation quality"
+          measurements:
+            - id: "112101"
+              number: "11.4.4.M1"
+              name: "Audit Finding Remediation Rate"
+              what: "Percentage of audit findings remediated within agreed timelines"
+              why: "Overdue findings represent unmitigated risk"
+              how: "Findings remediated on time / Total findings due x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "112102"
+              number: "11.4.4.M2"
+              name: "Overdue Finding Ageing"
+              what: "Average age of overdue audit findings in days"
+              why: "Ageing findings indicate systemic remediation failures"
+              how: "Average days overdue for all open overdue findings"
+              frequency: monthly
+              direction: lower_is_better
         - id: "185439"
           number: "11.4.5"
           name: "Assess internal audit effectiveness and independence"
           agentic_profile: H
           agentic_note: "Human-led; independence assessment requires human objectivity"
+          measurements:
+            - id: "112201"
+              number: "11.4.5.M1"
+              name: "Audit Independence Score"
+              what: "Results of periodic independence assessment"
+              why: "Independence is the foundation of audit credibility"
+              how: "Score from independence self-assessment framework (1-5 scale)"
+              frequency: annually
+              direction: higher_is_better
+            - id: "112202"
+              number: "11.4.5.M2"
+              name: "Stakeholder Satisfaction with Audit"
+              what: "Average satisfaction rating from audit committee and management"
+              why: "Low satisfaction indicates audit function needs improvement"
+              how: "Average rating from annual stakeholder survey (1-5 scale)"
+              frequency: annually
+              direction: higher_is_better
 
     - id: "593148"
       number: "11.5"
@@ -174,26 +548,111 @@ domain:
           name: "Maintain the data privacy framework and policies"
           agentic_profile: "H+a"
           agentic_note: "Humans set privacy policy; agents track regulatory changes and flag required updates"
+          measurements:
+            - id: "112301"
+              number: "11.5.1.M1"
+              name: "Privacy Policy Currency"
+              what: "Percentage of privacy policies reviewed within scheduled cycle"
+              why: "Outdated policies may not reflect current regulations"
+              how: "Policies reviewed on schedule / Total privacy policies x 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "112302"
+              number: "11.5.1.M2"
+              name: "Privacy Framework Maturity Score"
+              what: "Maturity level of the data privacy programme"
+              why: "Higher maturity reduces risk of privacy breaches and fines"
+              how: "Score from privacy maturity assessment (1-5 scale)"
+              frequency: annually
+              direction: higher_is_better
         - id: "816542"
           number: "11.5.2"
           name: "Conduct data protection impact assessments"
           agentic_profile: "H=A"
           agentic_note: "Agents perform automated data mapping and initial assessments; humans evaluate high-risk processing"
+          measurements:
+            - id: "112401"
+              number: "11.5.2.M1"
+              name: "DPIA Completion Rate"
+              what: "Percentage of high-risk processing activities with completed DPIAs"
+              why: "Missing DPIAs create regulatory non-compliance risk"
+              how: "Completed DPIAs / Required DPIAs x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "112402"
+              number: "11.5.2.M2"
+              name: "DPIA Cycle Time"
+              what: "Average days to complete a data protection impact assessment"
+              why: "Lengthy assessments delay new data processing initiatives"
+              how: "Average days from DPIA initiation to completion"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "439617"
           number: "11.5.3"
           name: "Manage data subject rights requests"
           agentic_profile: "h+A"
           agentic_note: "Agents process requests, locate data, and prepare responses; humans approve complex cases"
+          measurements:
+            - id: "112501"
+              number: "11.5.3.M1"
+              name: "Data Subject Request Response Time"
+              what: "Average days to fulfil data subject rights requests"
+              why: "Regulatory deadlines for DSR fulfilment are strict"
+              how: "Average days from request receipt to fulfilment"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "112502"
+              number: "11.5.3.M2"
+              name: "DSR Compliance Rate"
+              what: "Percentage of data subject requests fulfilled within regulatory deadline"
+              why: "Missed deadlines trigger regulatory penalties"
+              how: "Requests fulfilled within deadline / Total requests x 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "758243"
           number: "11.5.4"
           name: "Monitor data processing activities for compliance"
           agentic_profile: A
           agentic_note: "Agent-executed; continuous monitoring of data flows against consent and purpose records"
+          measurements:
+            - id: "112601"
+              number: "11.5.4.M1"
+              name: "Processing Activity Monitoring Coverage"
+              what: "Percentage of data processing activities under continuous monitoring"
+              why: "Unmonitored processing may violate consent or purpose limitations"
+              how: "Monitored activities / Total registered activities x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "112602"
+              number: "11.5.4.M2"
+              name: "Privacy Violation Detection Rate"
+              what: "Number of potential privacy violations detected per quarter"
+              why: "Active detection prevents minor issues becoming reportable breaches"
+              how: "Count of detected potential violations"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "361829"
           number: "11.5.5"
           name: "Manage data breach notification and response"
           agentic_profile: "H+a"
           agentic_note: "Humans lead response and notification decisions; agents detect breaches and manage timelines"
+          measurements:
+            - id: "112701"
+              number: "11.5.5.M1"
+              name: "Breach Notification Timeliness"
+              what: "Percentage of reportable breaches notified within regulatory deadline"
+              why: "Late notification triggers additional penalties and regulatory scrutiny"
+              how: "Timely notifications / Total reportable breaches x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "112702"
+              number: "11.5.5.M2"
+              name: "Breach Detection to Containment Time"
+              what: "Average hours from breach detection to containment"
+              why: "Faster containment limits data exposure and regulatory impact"
+              how: "Average hours from detection to confirmed containment"
+              frequency: quarterly
+              direction: lower_is_better
 
     - id: "428173"
       number: "11.6"
@@ -207,26 +666,111 @@ domain:
           name: "Define and maintain the code of ethics and conduct"
           agentic_profile: H
           agentic_note: "Human-led; ethical standards require human moral reasoning"
+          measurements:
+            - id: "112801"
+              number: "11.6.1.M1"
+              name: "Code of Conduct Acknowledgement Rate"
+              what: "Percentage of employees acknowledging the code of conduct"
+              why: "Unacknowledged codes create liability and awareness gaps"
+              how: "Acknowledgements received / Total employees x 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "112802"
+              number: "11.6.1.M2"
+              name: "Code of Conduct Review Frequency"
+              what: "Months since last code of conduct review and update"
+              why: "Regular updates ensure the code reflects evolving ethical standards"
+              how: "Months since last review"
+              frequency: annually
+              direction: lower_is_better
         - id: "841396"
           number: "11.6.2"
           name: "Deliver ethics awareness and training programmes"
           agentic_profile: "H=A"
           agentic_note: "Agents deliver training modules and track completion; humans facilitate ethical reasoning discussions"
+          measurements:
+            - id: "112901"
+              number: "11.6.2.M1"
+              name: "Ethics Training Completion Rate"
+              what: "Percentage of employees completing mandatory ethics training"
+              why: "Untrained employees may inadvertently violate ethical standards"
+              how: "Completions / Total employees required x 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "112902"
+              number: "11.6.2.M2"
+              name: "Ethics Training Effectiveness Score"
+              what: "Average score on post-training knowledge assessment"
+              why: "Completion without comprehension provides false assurance"
+              how: "Average assessment score (0-100 scale)"
+              frequency: annually
+              direction: higher_is_better
         - id: "334130"
           number: "11.6.3"
           name: "Operate whistleblowing and speak-up channels"
           agentic_profile: "H+a"
           agentic_note: "Humans manage investigations; agents operate reporting channels and ensure anonymity"
+          measurements:
+            - id: "113001"
+              number: "11.6.3.M1"
+              name: "Speak-Up Channel Utilisation"
+              what: "Number of reports received through whistleblowing channels"
+              why: "Active utilisation indicates employee trust in the channel"
+              how: "Count of reports received per quarter"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "113002"
+              number: "11.6.3.M2"
+              name: "Reporter Anonymity Protection Rate"
+              what: "Percentage of anonymous reports with maintained anonymity throughout investigation"
+              why: "Broken anonymity destroys trust in the speak-up programme"
+              how: "Reports with maintained anonymity / Total anonymous reports x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "382514"
           number: "11.6.4"
           name: "Investigate ethical violations and misconduct"
           agentic_profile: H
           agentic_note: "Human-led investigation; agents manage case files and evidence assembly"
+          measurements:
+            - id: "113101"
+              number: "11.6.4.M1"
+              name: "Investigation Closure Rate"
+              what: "Percentage of ethics investigations closed within target timeline"
+              why: "Delayed investigations erode trust and leave violations unresolved"
+              how: "Investigations closed on time / Total investigations x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "113102"
+              number: "11.6.4.M2"
+              name: "Substantiation Rate"
+              what: "Percentage of investigated allegations found to be substantiated"
+              why: "Very low or high rates may indicate process calibration issues"
+              how: "Substantiated allegations / Total investigated allegations x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "714928"
           number: "11.6.5"
           name: "Monitor organisational culture and ethical climate"
           agentic_profile: "H=A"
           agentic_note: "Agents analyse survey data and behavioural signals; humans interpret and intervene"
+          measurements:
+            - id: "113201"
+              number: "11.6.5.M1"
+              name: "Ethical Climate Survey Score"
+              what: "Composite score measuring perceived ethical culture"
+              why: "Culture drives behaviour more than policies alone"
+              how: "Average score from ethical climate survey instrument (0-100 scale)"
+              frequency: annually
+              direction: higher_is_better
+            - id: "113202"
+              number: "11.6.5.M2"
+              name: "Ethics Hotline Awareness Rate"
+              what: "Percentage of employees aware of ethics reporting channels"
+              why: "Awareness is prerequisite for reporting and deterrence"
+              how: "Employees aware of channels / Total employees surveyed x 100"
+              frequency: annually
+              direction: higher_is_better
 
     - id: "196482"
       number: "11.7"
@@ -242,33 +786,152 @@ domain:
           name: "Define and maintain the AI governance framework and policies"
           agentic_profile: "H+a"
           agentic_note: "Humans set governance principles; agents maintain the policy repository and version history"
+          measurements:
+            - id: "113301"
+              number: "11.7.1.M1"
+              name: "AI Governance Framework Coverage"
+              what: "Percentage of deployed agents governed under the AI framework"
+              why: "Ungoverned agents create unmanaged risk"
+              how: "Agents under governance framework / Total deployed agents x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "113302"
+              number: "11.7.1.M2"
+              name: "AI Policy Currency"
+              what: "Percentage of AI governance policies reviewed within cycle"
+              why: "Rapidly evolving AI landscape requires current policies"
+              how: "Policies reviewed on schedule / Total AI policies x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "472831"
           number: "11.7.2"
           name: "Conduct algorithmic impact assessments before deployment"
           agentic_profile: "H=A"
           agentic_note: "Agents run bias testing and impact simulations; humans evaluate results and approve deployment"
+          measurements:
+            - id: "113401"
+              number: "11.7.2.M1"
+              name: "Algorithmic Impact Assessment Completion"
+              what: "Percentage of high-risk agents with completed impact assessments"
+              why: "Unassessed high-risk agents may cause harm or non-compliance"
+              how: "Agents with completed assessments / Total high-risk agents x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "113402"
+              number: "11.7.2.M2"
+              name: "Assessment-to-Deployment Gate Time"
+              what: "Average days from assessment completion to deployment approval"
+              why: "Efficient gating enables faster agent deployment without skipping controls"
+              how: "Average days from assessment completion to approval"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "618943"
           number: "11.7.3"
           name: "Monitor agent decisions for fairness, bias, and drift"
           agentic_profile: "h+A"
           agentic_note: "Agents continuously monitor decision patterns and flag anomalies; humans investigate and remediate"
+          measurements:
+            - id: "113501"
+              number: "11.7.3.M1"
+              name: "AI Fairness Score"
+              what: "Composite fairness metric across monitored agent decisions"
+              why: "Biased agent decisions create legal, reputational, and ethical risk"
+              how: "Average fairness score across demographic groups (0-100 scale)"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "113502"
+              number: "11.7.3.M2"
+              name: "AI Decision Drift Alerts"
+              what: "Number of decision pattern drift alerts triggered per month"
+              why: "Drift may indicate model degradation or data quality issues"
+              how: "Count of drift alerts triggered"
+              frequency: monthly
+              direction: lower_is_better
         - id: "345176"
           number: "11.7.4"
           name: "Maintain audit trails and explainability records for agent actions"
           agentic_profile: A
           agentic_note: "Agent-executed; automated logging and explainability record generation"
+          measurements:
+            - id: "113601"
+              number: "11.7.4.M1"
+              name: "Audit Trail Completeness"
+              what: "Percentage of agent actions with complete audit trail records"
+              why: "Incomplete trails prevent investigation and accountability"
+              how: "Actions with complete audit trails / Total agent actions x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "113602"
+              number: "11.7.4.M2"
+              name: "Explainability Record Availability"
+              what: "Percentage of agent decisions with available explanations"
+              why: "Explainability is required by regulation and builds stakeholder trust"
+              how: "Decisions with explanations / Total decisions requiring explanation x 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "729368"
           number: "11.7.5"
           name: "Ensure compliance with AI-specific regulations and standards"
           agentic_profile: "H=A"
           agentic_note: "Agents track evolving AI regulation; humans interpret obligations and design compliance responses"
+          measurements:
+            - id: "113701"
+              number: "11.7.5.M1"
+              name: "AI Regulation Compliance Rate"
+              what: "Percentage of applicable AI regulations with demonstrated compliance"
+              why: "Non-compliance triggers enforcement actions and fines"
+              how: "Regulations with demonstrated compliance / Total applicable regulations x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "113702"
+              number: "11.7.5.M2"
+              name: "AI Regulatory Change Response Time"
+              what: "Average days to assess and respond to new AI regulations"
+              why: "Slow response risks non-compliance with new requirements"
+              how: "Average days from regulation publication to compliance plan"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "561294"
           number: "11.7.6"
           name: "Manage AI incident response and agent-related escalations"
           agentic_profile: "H+a"
           agentic_note: "Humans lead incident response; agents isolate affected agents and preserve evidence"
+          measurements:
+            - id: "113801"
+              number: "11.7.6.M1"
+              name: "AI Incident Response Time"
+              what: "Average time from AI incident detection to containment"
+              why: "Faster response limits harm from agent misbehaviour"
+              how: "Average minutes from detection to containment"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "113802"
+              number: "11.7.6.M2"
+              name: "AI Incident Recurrence Rate"
+              what: "Percentage of AI incidents that are repeat occurrences"
+              why: "Recurring incidents indicate ineffective root cause remediation"
+              how: "Repeat incidents / Total AI incidents x 100"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "887507"
           number: "11.7.7"
           name: "Report on AI governance maturity and agent compliance posture"
           agentic_profile: "h+A"
           agentic_note: "Agents generate compliance dashboards; humans present to governance bodies and regulators"
+          measurements:
+            - id: "113901"
+              number: "11.7.7.M1"
+              name: "AI Governance Maturity Score"
+              what: "Overall maturity of the AI governance programme"
+              why: "Tracks progress in building robust AI governance capabilities"
+              how: "Score from AI governance maturity assessment (1-5 scale)"
+              frequency: annually
+              direction: higher_is_better
+            - id: "113902"
+              number: "11.7.7.M2"
+              name: "Agent Compliance Dashboard Accuracy"
+              what: "Percentage of compliance dashboard metrics validated as accurate"
+              why: "Inaccurate reporting undermines governance credibility"
+              how: "Accurate metrics / Total dashboard metrics audited x 100"
+              frequency: quarterly
+              direction: higher_is_better

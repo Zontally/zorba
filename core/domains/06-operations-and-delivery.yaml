@@ -29,26 +29,111 @@ domain:
           name: "Develop aggregate operational plans aligned to demand"
           agentic_profile: "H=A"
           agentic_note: "Agents model demand scenarios; humans select and approve plans"
+          measurements:
+            - id: "0601001"
+              number: "6.1.1.M1"
+              name: "Plan-to-Demand Alignment"
+              what: "Percentage variance between operational plan output and actual demand"
+              why: "Misaligned plans lead to over/under production and wasted resources"
+              how: "(Planned output − Actual demand) / Actual demand × 100"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "0601002"
+              number: "6.1.1.M2"
+              name: "Planning Cycle Time"
+              what: "Days to complete the aggregate operational planning cycle"
+              why: "Faster planning enables more responsive operations"
+              how: "Plan approval date − planning start date (business days)"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "715943"
           number: "6.1.2"
           name: "Create and maintain detailed production or service schedules"
           agentic_profile: "h+A"
           agentic_note: "Agents generate optimised schedules; humans review constraints and approve"
+          measurements:
+            - id: "0602001"
+              number: "6.1.2.M1"
+              name: "Schedule Adherence Rate"
+              what: "Percentage of scheduled activities completed as planned"
+              why: "Schedule adherence drives on-time delivery and resource efficiency"
+              how: "Activities completed on schedule / Total scheduled activities × 100"
+              frequency: weekly
+              direction: higher_is_better
+            - id: "0602002"
+              number: "6.1.2.M2"
+              name: "Schedule Stability Index"
+              what: "Percentage of schedule that remains unchanged within frozen window"
+              why: "Frequent changes increase cost and disrupt operations"
+              how: "Unchanged schedule items / Total schedule items × 100"
+              frequency: weekly
+              direction: higher_is_better
         - id: "528367"
           number: "6.1.3"
           name: "Allocate resources and materials to scheduled activities"
           agentic_profile: "h+A"
           agentic_note: "Agents optimise allocation; humans resolve conflicts and exceptions"
+          measurements:
+            - id: "0603001"
+              number: "6.1.3.M1"
+              name: "Resource Utilisation Rate"
+              what: "Percentage of allocated resources actively utilised"
+              why: "Optimal utilisation maximises throughput and minimises waste"
+              how: "Productive hours / Total available hours × 100"
+              frequency: weekly
+              direction: higher_is_better
+            - id: "0603002"
+              number: "6.1.3.M2"
+              name: "Material Availability Rate"
+              what: "Percentage of scheduled activities with all materials available at start"
+              why: "Material shortages are a leading cause of schedule disruption"
+              how: "Activities with materials ready / Total activities scheduled × 100"
+              frequency: weekly
+              direction: higher_is_better
         - id: "263814"
           number: "6.1.4"
           name: "Manage schedule changes and re-planning triggers"
           agentic_profile: A
           agentic_note: "Agents detect disruptions and re-plan within defined parameters"
+          measurements:
+            - id: "0604001"
+              number: "6.1.4.M1"
+              name: "Re-Planning Frequency"
+              what: "Number of unplanned schedule changes per period"
+              why: "Excessive re-planning indicates instability in upstream processes"
+              how: "Count of unplanned schedule changes per week"
+              frequency: weekly
+              direction: lower_is_better
+            - id: "0604002"
+              number: "6.1.4.M2"
+              name: "Re-Planning Response Time"
+              what: "Average time from disruption detection to revised schedule availability"
+              why: "Faster re-planning minimises operational downtime"
+              how: "Average (new schedule ready − disruption detected) in hours"
+              frequency: weekly
+              direction: lower_is_better
         - id: "849172"
           number: "6.1.5"
           name: "Coordinate cross-functional scheduling dependencies"
           agentic_profile: "H=A"
           agentic_note: "Agents identify clashes and propose resolutions; humans arbitrate"
+          measurements:
+            - id: "0605001"
+              number: "6.1.5.M1"
+              name: "Cross-Functional Scheduling Conflict Rate"
+              what: "Number of scheduling conflicts between departments per period"
+              why: "Conflicts disrupt operations and delay deliverables"
+              how: "Count of identified scheduling conflicts per month"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "0605002"
+              number: "6.1.5.M2"
+              name: "Conflict Resolution Time"
+              what: "Average time to resolve cross-functional scheduling conflicts"
+              why: "Prolonged conflicts cascade into larger operational disruptions"
+              how: "Average (resolution time − conflict identification time) in hours"
+              frequency: monthly
+              direction: lower_is_better
 
     - id: "183746"
       number: "6.2"
@@ -62,31 +147,133 @@ domain:
           name: "Initiate and manage production runs or service engagements"
           agentic_profile: "H=A"
           agentic_note: "Agents trigger and track; humans manage exceptions"
+          measurements:
+            - id: "0606001"
+              number: "6.2.1.M1"
+              name: "On-Time Start Rate"
+              what: "Percentage of production runs or engagements started on schedule"
+              why: "Late starts cascade into missed deadlines"
+              how: "On-time starts / Total scheduled starts × 100"
+              frequency: weekly
+              direction: higher_is_better
+            - id: "0606002"
+              number: "6.2.1.M2"
+              name: "Exception Rate"
+              what: "Percentage of production runs requiring manual exception handling"
+              why: "High exception rates indicate process immaturity or poor planning"
+              how: "Runs with exceptions / Total runs × 100"
+              frequency: weekly
+              direction: lower_is_better
         - id: "637281"
           number: "6.2.2"
           name: "Monitor work-in-progress and operational throughput"
           agentic_profile: A
           agentic_note: "Agent-executed; real-time monitoring with threshold-based alerts"
+          measurements:
+            - id: "0607001"
+              number: "6.2.2.M1"
+              name: "Operational Throughput Rate"
+              what: "Units produced or services delivered per unit of time"
+              why: "Core measure of operational productivity"
+              how: "Total output / Total production time"
+              frequency: daily
+              direction: higher_is_better
+            - id: "0607002"
+              number: "6.2.2.M2"
+              name: "WIP Cycle Time"
+              what: "Average time items spend in work-in-progress"
+              why: "Longer cycle times tie up capital and delay delivery"
+              how: "Average (completion time − start time) per item"
+              frequency: weekly
+              direction: lower_is_better
         - id: "318457"
           number: "6.2.3"
           name: "Manage handoffs and transitions between operational stages"
           agentic_profile: "h+A"
           agentic_note: "Agents orchestrate transitions; humans handle escalations"
+          measurements:
+            - id: "0608001"
+              number: "6.2.3.M1"
+              name: "Handoff Error Rate"
+              what: "Percentage of stage transitions with errors or incomplete information"
+              why: "Handoff errors cause rework and delays"
+              how: "Handoffs with errors / Total handoffs × 100"
+              frequency: weekly
+              direction: lower_is_better
+            - id: "0608002"
+              number: "6.2.3.M2"
+              name: "Stage Transition Time"
+              what: "Average idle time between operational stages"
+              why: "Minimising transition time maximises throughput"
+              how: "Average (next stage start − previous stage end) in hours"
+              frequency: weekly
+              direction: lower_is_better
         - id: "754129"
           number: "6.2.4"
           name: "Record and validate completion of deliverables"
           agentic_profile: "h+A"
           agentic_note: "Agents log completions and validate against specs; humans sign off critical items"
+          measurements:
+            - id: "0609001"
+              number: "6.2.4.M1"
+              name: "First-Pass Yield"
+              what: "Percentage of deliverables passing validation without rework"
+              why: "High first-pass yield indicates process quality and efficiency"
+              how: "Deliverables passing first time / Total deliverables × 100"
+              frequency: weekly
+              direction: higher_is_better
+            - id: "0609002"
+              number: "6.2.4.M2"
+              name: "Completion Recording Accuracy"
+              what: "Percentage of completion records without errors or omissions"
+              why: "Accurate records enable reliable reporting and compliance"
+              how: "Error-free completion records / Total records × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "861345"
           number: "6.2.5"
           name: "Manage rework, returns, and service recovery processes"
           agentic_profile: "H+a"
           agentic_note: "Humans lead recovery decisions; agents track and report rework costs"
+          measurements:
+            - id: "0610001"
+              number: "6.2.5.M1"
+              name: "Rework Rate"
+              what: "Percentage of deliverables requiring rework"
+              why: "Rework consumes resources and delays delivery"
+              how: "Deliverables reworked / Total deliverables × 100"
+              frequency: weekly
+              direction: lower_is_better
+            - id: "0610002"
+              number: "6.2.5.M2"
+              name: "Cost of Poor Quality (COPQ)"
+              what: "Total cost of rework, returns, and service recovery as percentage of revenue"
+              why: "Quantifies the financial impact of quality failures"
+              how: "(Rework cost + Returns cost + Recovery cost) / Revenue × 100"
+              frequency: monthly
+              direction: lower_is_better
         - id: "245893"
           number: "6.2.6"
           name: "Coordinate delivery and fulfilment to the customer"
           agentic_profile: "H=A"
           agentic_note: "Agents manage logistics handoffs; humans handle customer-sensitive issues"
+          measurements:
+            - id: "0611001"
+              number: "6.2.6.M1"
+              name: "On-Time Delivery Rate"
+              what: "Percentage of deliveries completed by the committed date"
+              why: "On-time delivery is a primary customer satisfaction driver"
+              how: "On-time deliveries / Total deliveries × 100"
+              frequency: weekly
+              direction: higher_is_better
+            - id: "0611002"
+              number: "6.2.6.M2"
+              name: "Order-to-Delivery Cycle Time"
+              what: "Average elapsed time from order confirmation to customer delivery"
+              why: "Shorter cycles improve customer satisfaction and reduce inventory needs"
+              how: "Average (delivery date − order confirmation date) in days"
+              frequency: monthly
+              direction: lower_is_better
 
     - id: "536482"
       number: "6.3"
@@ -101,31 +288,133 @@ domain:
           name: "Define quality standards, specifications, and acceptance criteria"
           agentic_profile: "H+a"
           agentic_note: "Humans set standards; agents benchmark against industry norms"
+          measurements:
+            - id: "0612001"
+              number: "6.3.1.M1"
+              name: "Quality Standards Coverage"
+              what: "Percentage of products/services with defined quality specifications"
+              why: "Undefined standards lead to inconsistent quality"
+              how: "Items with quality specs / Total items × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0612002"
+              number: "6.3.1.M2"
+              name: "Standards Review Currency"
+              what: "Percentage of quality standards reviewed within their review cycle"
+              why: "Outdated standards may not reflect current requirements"
+              how: "Standards reviewed on schedule / Total standards × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "782316"
           number: "6.3.2"
           name: "Conduct in-process and final quality inspections"
           agentic_profile: "h+A"
           agentic_note: "Agents perform automated checks; humans inspect edge cases"
+          measurements:
+            - id: "0613001"
+              number: "6.3.2.M1"
+              name: "Inspection Pass Rate"
+              what: "Percentage of inspections passed without findings"
+              why: "Higher pass rates indicate consistent process quality"
+              how: "Inspections passed / Total inspections × 100"
+              frequency: weekly
+              direction: higher_is_better
+            - id: "0613002"
+              number: "6.3.2.M2"
+              name: "Inspection Coverage Rate"
+              what: "Percentage of required inspection points actually completed"
+              why: "Missed inspections create quality blind spots"
+              how: "Inspections completed / Inspections required × 100"
+              frequency: weekly
+              direction: higher_is_better
         - id: "364925"
           number: "6.3.3"
           name: "Detect, log, and classify non-conformances"
           agentic_profile: A
           agentic_note: "Agent-executed; automated detection with classification models"
+          measurements:
+            - id: "0614001"
+              number: "6.3.3.M1"
+              name: "Non-Conformance Rate"
+              what: "Number of non-conformances per 1000 units produced or services delivered"
+              why: "Core indicator of process quality"
+              how: "Non-conformances / Total units × 1000"
+              frequency: weekly
+              direction: lower_is_better
+            - id: "0614002"
+              number: "6.3.3.M2"
+              name: "Detection Latency"
+              what: "Average time between non-conformance occurrence and detection"
+              why: "Faster detection reduces scope of affected output"
+              how: "Average (detection time − occurrence time) in hours"
+              frequency: monthly
+              direction: lower_is_better
         - id: "651748"
           number: "6.3.4"
           name: "Investigate root causes and determine corrective actions"
           agentic_profile: "H+a"
           agentic_note: "Humans lead root-cause analysis; agents correlate data and suggest hypotheses"
+          measurements:
+            - id: "0615001"
+              number: "6.3.4.M1"
+              name: "Root Cause Identification Rate"
+              what: "Percentage of non-conformances with confirmed root cause"
+              why: "Without root cause, corrective actions may be ineffective"
+              how: "NCRs with confirmed root cause / Total NCRs × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0615002"
+              number: "6.3.4.M2"
+              name: "Corrective Action Effectiveness"
+              what: "Percentage of corrective actions that prevent recurrence within 12 months"
+              why: "Effective corrective actions permanently eliminate quality issues"
+              how: "Non-recurring issues / Total corrective actions closed × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "893261"
           number: "6.3.5"
           name: "Track corrective and preventive action closure"
           agentic_profile: "h+A"
           agentic_note: "Agents track timelines and chase overdue actions; humans verify effectiveness"
+          measurements:
+            - id: "0616001"
+              number: "6.3.5.M1"
+              name: "CAPA On-Time Closure Rate"
+              what: "Percentage of corrective/preventive actions closed by target date"
+              why: "Overdue CAPAs indicate systemic resolution bottlenecks"
+              how: "CAPAs closed on time / Total CAPAs due × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0616002"
+              number: "6.3.5.M2"
+              name: "Average CAPA Age"
+              what: "Average days open for active corrective/preventive actions"
+              why: "Aging CAPAs increase risk of recurrence"
+              how: "Sum of days open for all active CAPAs / Active CAPA count"
+              frequency: monthly
+              direction: lower_is_better
         - id: "127584"
           number: "6.3.6"
           name: "Manage quality audits and certification compliance"
           agentic_profile: "H=A"
           agentic_note: "Agents prepare audit evidence; humans conduct and respond to audits"
+          measurements:
+            - id: "0617001"
+              number: "6.3.6.M1"
+              name: "Audit Finding Closure Rate"
+              what: "Percentage of audit findings closed within target timeframe"
+              why: "Open audit findings represent compliance risk"
+              how: "Findings closed on time / Total findings × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0617002"
+              number: "6.3.6.M2"
+              name: "Certification Compliance Score"
+              what: "Percentage of certification requirements fully met"
+              why: "Loss of certification disrupts operations and customer trust"
+              how: "Requirements met / Total requirements × 100"
+              frequency: annually
+              direction: higher_is_better
 
     - id: "274951"
       number: "6.4"
@@ -140,26 +429,111 @@ domain:
           name: "Establish and maintain the continuous improvement framework"
           agentic_profile: "H+a"
           agentic_note: "Humans design the framework; agents maintain documentation and track adoption"
+          measurements:
+            - id: "0618001"
+              number: "6.4.1.M1"
+              name: "CI Framework Adoption Rate"
+              what: "Percentage of operational teams actively using the CI framework"
+              why: "Adoption is prerequisite for improvement culture"
+              how: "Teams with active CI practices / Total operational teams × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0618002"
+              number: "6.4.1.M2"
+              name: "Employee CI Participation Rate"
+              what: "Percentage of employees who contributed improvement ideas in the period"
+              why: "Broad participation indicates a healthy improvement culture"
+              how: "Employees with submitted ideas / Total employees × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "816234"
           number: "6.4.2"
           name: "Identify improvement opportunities from operational data"
           agentic_profile: "h+A"
           agentic_note: "Agents mine data for patterns and waste; humans validate and prioritise"
+          measurements:
+            - id: "0619001"
+              number: "6.4.2.M1"
+              name: "Improvement Opportunities Identified"
+              what: "Number of data-driven improvement opportunities surfaced per period"
+              why: "A healthy pipeline ensures continuous advancement"
+              how: "Count of new opportunities identified per quarter"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0619002"
+              number: "6.4.2.M2"
+              name: "Data-to-Insight Conversion Rate"
+              what: "Percentage of analysed datasets yielding actionable improvement opportunities"
+              why: "Efficient analysis maximises return on data investment"
+              how: "Datasets with actionable findings / Total datasets analysed × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "428716"
           number: "6.4.3"
           name: "Manage the improvement initiative pipeline"
           agentic_profile: "H=A"
           agentic_note: "Agents track initiatives and ROI; humans approve and resource projects"
+          measurements:
+            - id: "0620001"
+              number: "6.4.3.M1"
+              name: "Initiative Completion Rate"
+              what: "Percentage of improvement initiatives completed on time and in scope"
+              why: "Completing initiatives realises planned benefits"
+              how: "Initiatives completed on time / Total initiatives planned × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0620002"
+              number: "6.4.3.M2"
+              name: "Initiative Pipeline Value"
+              what: "Total estimated value of active improvement initiatives"
+              why: "Pipeline value indicates potential for operational gains"
+              how: "Sum of estimated annual savings/benefits for active initiatives"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "345192"
           number: "6.4.4"
           name: "Facilitate improvement workshops and problem-solving events"
           agentic_profile: "H+a"
           agentic_note: "Humans facilitate; agents prepare data packs and track outcomes"
+          measurements:
+            - id: "0621001"
+              number: "6.4.4.M1"
+              name: "Workshop Output Rate"
+              what: "Average number of implementable solutions per improvement event"
+              why: "Productive workshops accelerate improvement"
+              how: "Total implementable solutions / Total workshops conducted"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0621002"
+              number: "6.4.4.M2"
+              name: "Workshop Action Completion Rate"
+              what: "Percentage of workshop action items completed within 30 days"
+              why: "Quick follow-through captures momentum from events"
+              how: "Actions completed within 30 days / Total actions assigned × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "762481"
           number: "6.4.5"
           name: "Measure and report improvement impact"
           agentic_profile: "h+A"
           agentic_note: "Agents calculate savings and performance uplift; humans validate claims"
+          measurements:
+            - id: "0622001"
+              number: "6.4.5.M1"
+              name: "Realised Improvement Savings"
+              what: "Total verified financial savings from improvement initiatives"
+              why: "Validates that improvement efforts deliver tangible value"
+              how: "Sum of verified savings from completed initiatives"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0622002"
+              number: "6.4.5.M2"
+              name: "Improvement ROI"
+              what: "Return on investment for the continuous improvement programme"
+              why: "Ensures improvement spending generates positive returns"
+              how: "Realised savings / Total CI programme cost × 100"
+              frequency: annually
+              direction: higher_is_better
 
     - id: "918263"
       number: "6.5"
@@ -174,26 +548,111 @@ domain:
           name: "Assess current capacity and utilisation levels"
           agentic_profile: A
           agentic_note: "Agent-executed; continuous monitoring of capacity metrics"
+          measurements:
+            - id: "0623001"
+              number: "6.5.1.M1"
+              name: "Overall Capacity Utilisation"
+              what: "Percentage of total capacity actively utilised"
+              why: "Under-utilisation wastes resources; over-utilisation risks quality"
+              how: "Actual output / Maximum capacity × 100"
+              frequency: weekly
+              direction: higher_is_better
+            - id: "0623002"
+              number: "6.5.1.M2"
+              name: "Bottleneck Identification Rate"
+              what: "Percentage of capacity bottlenecks identified before causing delays"
+              why: "Proactive identification prevents delivery disruptions"
+              how: "Proactively identified bottlenecks / Total bottlenecks × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "217438"
           number: "6.5.2"
           name: "Forecast capacity requirements against demand plans"
           agentic_profile: "h+A"
           agentic_note: "Agents model scenarios; humans review assumptions and approve"
+          measurements:
+            - id: "0624001"
+              number: "6.5.2.M1"
+              name: "Capacity Forecast Accuracy"
+              what: "Accuracy of capacity requirement predictions vs actuals"
+              why: "Accurate forecasts prevent costly over/under-provisioning"
+              how: "1 − |Forecast − Actual| / Actual × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0624002"
+              number: "6.5.2.M2"
+              name: "Demand-Capacity Gap"
+              what: "Percentage gap between forecasted demand and available capacity"
+              why: "Persistent gaps indicate need for capacity investment or demand management"
+              how: "(Demand − Capacity) / Capacity × 100"
+              frequency: monthly
+              direction: lower_is_better
         - id: "695172"
           number: "6.5.3"
           name: "Plan and execute capacity adjustments"
           agentic_profile: "H+a"
           agentic_note: "Humans decide capacity changes; agents model cost and timing implications"
+          measurements:
+            - id: "0625001"
+              number: "6.5.3.M1"
+              name: "Capacity Adjustment Lead Time"
+              what: "Average days from capacity change decision to operational readiness"
+              why: "Faster adjustments improve responsiveness to demand changes"
+              how: "Average (operational readiness date − decision date) in days"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "0625002"
+              number: "6.5.3.M2"
+              name: "Capacity Change Cost Variance"
+              what: "Actual cost of capacity adjustments vs budgeted cost"
+              why: "Cost overruns in capacity changes erode margins"
+              how: "(Actual cost − Budgeted cost) / Budgeted cost × 100"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "354281"
           number: "6.5.4"
           name: "Manage equipment, facility, and workforce availability"
           agentic_profile: "H=A"
           agentic_note: "Agents track availability and flag risks; humans resolve constraints"
+          measurements:
+            - id: "0626001"
+              number: "6.5.4.M1"
+              name: "Equipment Availability Rate"
+              what: "Percentage of time equipment is available for production"
+              why: "Downtime directly reduces capacity and throughput"
+              how: "(Total time − Downtime) / Total time × 100"
+              frequency: weekly
+              direction: higher_is_better
+            - id: "0626002"
+              number: "6.5.4.M2"
+              name: "Workforce Availability Rate"
+              what: "Percentage of planned workforce hours actually available"
+              why: "Workforce gaps directly impact service and production capacity"
+              how: "Actual available hours / Planned hours × 100"
+              frequency: weekly
+              direction: higher_is_better
         - id: "738425"
           number: "6.5.5"
           name: "Monitor capacity performance and recommend rebalancing"
           agentic_profile: "h+A"
           agentic_note: "Agents surface rebalancing opportunities; humans approve changes"
+          measurements:
+            - id: "0627001"
+              number: "6.5.5.M1"
+              name: "Capacity Rebalancing Frequency"
+              what: "Number of rebalancing actions taken per period"
+              why: "Appropriate rebalancing optimises resource use across operations"
+              how: "Count of rebalancing actions per quarter"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0627002"
+              number: "6.5.5.M2"
+              name: "Overall Equipment Effectiveness (OEE)"
+              what: "Combined measure of availability, performance, and quality"
+              why: "Industry-standard measure of operational effectiveness"
+              how: "Availability × Performance × Quality (as percentages)"
+              frequency: weekly
+              direction: higher_is_better
 
     - id: "352194"
       number: "6.6"
@@ -209,26 +668,111 @@ domain:
           name: "Identify and assess operational risks and vulnerabilities"
           agentic_profile: "H=A"
           agentic_note: "Agents scan for emerging risks; humans assess severity and define responses"
+          measurements:
+            - id: "0628001"
+              number: "6.6.1.M1"
+              name: "Risk Register Completeness"
+              what: "Percentage of operational areas with documented risk assessments"
+              why: "Unidentified risks cannot be mitigated"
+              how: "Areas with risk assessments / Total operational areas × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0628002"
+              number: "6.6.1.M2"
+              name: "Emerging Risk Detection Rate"
+              what: "Percentage of operational incidents that were on the risk register"
+              why: "Measures how well risk identification anticipates actual events"
+              how: "Incidents matching registered risks / Total incidents × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "419682"
           number: "6.6.2"
           name: "Define and maintain operational risk mitigation plans"
           agentic_profile: "H+a"
           agentic_note: "Humans design mitigations; agents track implementation and test readiness"
+          measurements:
+            - id: "0629001"
+              number: "6.6.2.M1"
+              name: "Mitigation Plan Coverage"
+              what: "Percentage of identified high-priority risks with active mitigation plans"
+              why: "Unmitigated high-priority risks represent unacceptable exposure"
+              how: "High risks with plans / Total high-priority risks × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "0629002"
+              number: "6.6.2.M2"
+              name: "Mitigation Action Completion Rate"
+              what: "Percentage of planned mitigation actions completed on schedule"
+              why: "Incomplete mitigations leave residual risk"
+              how: "Actions completed on time / Total planned actions × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "763215"
           number: "6.6.3"
           name: "Monitor operational risk indicators in real time"
           agentic_profile: A
           agentic_note: "Agent-executed; continuous monitoring with escalation protocols"
+          measurements:
+            - id: "0630001"
+              number: "6.6.3.M1"
+              name: "Risk Indicator Alert Accuracy"
+              what: "Percentage of risk alerts that indicate genuine risk events"
+              why: "False positives cause alert fatigue; false negatives miss real risks"
+              how: "True alerts / Total alerts × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0630002"
+              number: "6.6.3.M2"
+              name: "Risk Monitoring Coverage"
+              what: "Percentage of critical operations with real-time risk monitoring"
+              why: "Gaps in monitoring leave blind spots for emerging threats"
+              how: "Monitored critical operations / Total critical operations × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "291843"
           number: "6.6.4"
           name: "Conduct operational resilience testing and simulations"
           agentic_profile: "H=A"
           agentic_note: "Agents run simulations; humans evaluate results and refine plans"
+          measurements:
+            - id: "0631001"
+              number: "6.6.4.M1"
+              name: "Resilience Test Frequency"
+              what: "Number of resilience tests and simulations conducted per year"
+              why: "Regular testing validates preparedness for disruptions"
+              how: "Count of tests conducted per year"
+              frequency: annually
+              direction: higher_is_better
+            - id: "0631002"
+              number: "6.6.4.M2"
+              name: "Simulation Finding Resolution Rate"
+              what: "Percentage of simulation findings addressed within target timeframe"
+              why: "Unaddressed findings leave known vulnerabilities unresolved"
+              how: "Findings resolved on time / Total findings × 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "847536"
           number: "6.6.5"
           name: "Manage business continuity for operational functions"
           agentic_profile: "H+a"
           agentic_note: "Humans own continuity plans; agents monitor triggers and coordinate activation"
+          measurements:
+            - id: "0632001"
+              number: "6.6.5.M1"
+              name: "Business Continuity Plan Coverage"
+              what: "Percentage of critical processes with tested continuity plans"
+              why: "Untested plans may fail when needed most"
+              how: "Critical processes with tested plans / Total critical processes × 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "0632002"
+              number: "6.6.5.M2"
+              name: "Recovery Time Objective Achievement"
+              what: "Percentage of continuity tests meeting RTO targets"
+              why: "Meeting RTOs ensures acceptable service restoration speed"
+              how: "Tests meeting RTO / Total tests × 100"
+              frequency: annually
+              direction: higher_is_better
 
     - id: "643518"
       number: "6.7"
@@ -243,23 +787,108 @@ domain:
           name: "Detect and classify operational incidents and exceptions"
           agentic_profile: A
           agentic_note: "Agent-executed; real-time anomaly detection and classification"
+          measurements:
+            - id: "0633001"
+              number: "6.7.1.M1"
+              name: "Incident Detection Speed"
+              what: "Average time from incident occurrence to detection"
+              why: "Faster detection reduces impact scope"
+              how: "Average (detection time − occurrence time) in minutes"
+              frequency: weekly
+              direction: lower_is_better
+            - id: "0633002"
+              number: "6.7.1.M2"
+              name: "Incident Classification Accuracy"
+              what: "Percentage of incidents correctly classified on first attempt"
+              why: "Correct classification drives appropriate response"
+              how: "Correctly classified / Total incidents × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "428916"
           number: "6.7.2"
           name: "Triage and prioritise incident response"
           agentic_profile: "h+A"
           agentic_note: "Agents triage by severity; humans override for complex or sensitive incidents"
+          measurements:
+            - id: "0634001"
+              number: "6.7.2.M1"
+              name: "Triage Response Time"
+              what: "Average time from incident detection to triage completion"
+              why: "Fast triage enables appropriate resource allocation"
+              how: "Average (triage complete − detection time) in minutes"
+              frequency: weekly
+              direction: lower_is_better
+            - id: "0634002"
+              number: "6.7.2.M2"
+              name: "Priority Override Rate"
+              what: "Percentage of auto-triaged incidents requiring human priority override"
+              why: "High override rates indicate triage model needs tuning"
+              how: "Overridden incidents / Total auto-triaged incidents × 100"
+              frequency: monthly
+              direction: lower_is_better
         - id: "593274"
           number: "6.7.3"
           name: "Coordinate incident response and resolution activities"
           agentic_profile: "H=A"
           agentic_note: "Agents orchestrate response workflows; humans lead critical decisions"
+          measurements:
+            - id: "0635001"
+              number: "6.7.3.M1"
+              name: "Mean Time to Resolve (MTTR)"
+              what: "Average time from incident detection to resolution"
+              why: "Core measure of incident response effectiveness"
+              how: "Average (resolution time − detection time)"
+              frequency: weekly
+              direction: lower_is_better
+            - id: "0635002"
+              number: "6.7.3.M2"
+              name: "Incident Containment Rate"
+              what: "Percentage of incidents contained before wider operational impact"
+              why: "Effective containment limits blast radius of incidents"
+              how: "Incidents contained early / Total incidents × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "316748"
           number: "6.7.4"
           name: "Communicate incident status to stakeholders"
           agentic_profile: "h+A"
           agentic_note: "Agents generate and distribute status updates; humans handle sensitive comms"
+          measurements:
+            - id: "0636001"
+              number: "6.7.4.M1"
+              name: "Stakeholder Notification Speed"
+              what: "Average time from incident confirmation to first stakeholder notification"
+              why: "Timely communication maintains trust during incidents"
+              how: "Average (first notification − incident confirmation) in minutes"
+              frequency: weekly
+              direction: lower_is_better
+            - id: "0636002"
+              number: "6.7.4.M2"
+              name: "Communication Completeness Score"
+              what: "Percentage of incident communications meeting completeness standards"
+              why: "Incomplete updates cause confusion and erode confidence"
+              how: "Complete communications / Total communications × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "842157"
           number: "6.7.5"
           name: "Conduct post-incident reviews and embed learnings"
           agentic_profile: "H+a"
           agentic_note: "Humans lead reviews; agents compile data, timelines, and suggested improvements"
+          measurements:
+            - id: "0637001"
+              number: "6.7.5.M1"
+              name: "Post-Incident Review Completion Rate"
+              what: "Percentage of significant incidents with completed post-incident reviews"
+              why: "Reviews drive learning and prevent recurrence"
+              how: "Reviews completed / Significant incidents × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "0637002"
+              number: "6.7.5.M2"
+              name: "Lesson Implementation Rate"
+              what: "Percentage of post-incident lessons with implemented changes"
+              why: "Lessons without action provide no value"
+              how: "Lessons with implemented changes / Total lessons identified × 100"
+              frequency: quarterly
+              direction: higher_is_better

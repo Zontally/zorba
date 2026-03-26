@@ -29,26 +29,111 @@ domain:
           name: "Plan and manage the real estate and property portfolio"
           agentic_profile: "H+a"
           agentic_note: "Humans make portfolio decisions; agents analyse utilisation data and lease terms"
+          measurements:
+            - id: "120101"
+              number: "12.1.1.M1"
+              name: "Space Utilisation Rate"
+              what: "Average utilisation of office and property space"
+              why: "Low utilisation wastes real estate investment"
+              how: "Occupied space / Total available space x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "120102"
+              number: "12.1.1.M2"
+              name: "Real Estate Cost per Employee"
+              what: "Total real estate cost divided by headcount"
+              why: "Tracks efficiency of property portfolio against workforce size"
+              how: "Total real estate cost / Total employees"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "729461"
           number: "12.1.2"
           name: "Operate building systems and facility maintenance"
           agentic_profile: "h+A"
           agentic_note: "Agents monitor IoT sensors and schedule maintenance; humans manage vendors and major repairs"
+          measurements:
+            - id: "120201"
+              number: "12.1.2.M1"
+              name: "Preventive Maintenance Compliance"
+              what: "Percentage of scheduled maintenance tasks completed on time"
+              why: "Deferred maintenance leads to costly breakdowns and safety risks"
+              how: "Completed on-time tasks / Total scheduled tasks x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "120202"
+              number: "12.1.2.M2"
+              name: "Facility Work Order Resolution Time"
+              what: "Average time to complete facility maintenance requests"
+              why: "Fast resolution maintains productive workplace conditions"
+              how: "Average hours from work order creation to completion"
+              frequency: monthly
+              direction: lower_is_better
         - id: "584213"
           number: "12.1.3"
           name: "Manage workplace health, safety, and security"
           agentic_profile: "H+a"
           agentic_note: "Humans set safety policy and lead incident response; agents monitor compliance and track incidents"
+          measurements:
+            - id: "120301"
+              number: "12.1.3.M1"
+              name: "Workplace Safety Incident Rate"
+              what: "Number of reportable safety incidents per 100 employees"
+              why: "Tracks safety performance and identifies improvement areas"
+              how: "Reportable incidents / Employees x 100"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "120302"
+              number: "12.1.3.M2"
+              name: "Safety Compliance Audit Score"
+              what: "Score from workplace health and safety audits"
+              why: "Ensures regulatory compliance and employee protection"
+              how: "Average score from safety audit (0-100 scale)"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "861374"
           number: "12.1.4"
           name: "Manage space allocation and workplace design"
           agentic_profile: "H=A"
           agentic_note: "Agents analyse occupancy patterns; humans design spaces and approve changes"
+          measurements:
+            - id: "120401"
+              number: "12.1.4.M1"
+              name: "Workspace Satisfaction Score"
+              what: "Employee satisfaction with workspace design and functionality"
+              why: "Workspace quality impacts productivity and retention"
+              how: "Average rating from workspace satisfaction survey (1-5 scale)"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "120402"
+              number: "12.1.4.M2"
+              name: "Space Request Fulfilment Time"
+              what: "Average days to fulfil space allocation change requests"
+              why: "Delays disrupt team operations and project timelines"
+              how: "Average business days from request to space available"
+              frequency: monthly
+              direction: lower_is_better
         - id: "243689"
           number: "12.1.5"
           name: "Operate reception, mail, and visitor management services"
           agentic_profile: "h+A"
           agentic_note: "Agents manage visitor registration and mail routing; humans handle VIP reception and exceptions"
+          measurements:
+            - id: "120501"
+              number: "12.1.5.M1"
+              name: "Visitor Check-In Time"
+              what: "Average time from visitor arrival to completed check-in"
+              why: "Long waits create poor first impressions"
+              how: "Average minutes from arrival to badge issued"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "120502"
+              number: "12.1.5.M2"
+              name: "Mail Processing Timeliness"
+              what: "Percentage of mail items processed and delivered within SLA"
+              why: "Delayed mail impacts business operations"
+              how: "Items delivered within SLA / Total items x 100"
+              frequency: monthly
+              direction: higher_is_better
 
     - id: "537861"
       number: "12.2"
@@ -62,31 +147,133 @@ domain:
           name: "Develop corporate communication strategy and messaging frameworks"
           agentic_profile: "H+a"
           agentic_note: "Humans define narrative and strategy; agents research audience insights and benchmark messaging"
+          measurements:
+            - id: "120601"
+              number: "12.2.1.M1"
+              name: "Communication Strategy Alignment Score"
+              what: "Degree of alignment between communications and business strategy"
+              why: "Misaligned communications confuse stakeholders"
+              how: "Percentage of communications mapped to strategic priorities"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "120602"
+              number: "12.2.1.M2"
+              name: "Message Framework Adoption Rate"
+              what: "Percentage of external communications using approved frameworks"
+              why: "Off-framework messaging creates brand inconsistency"
+              how: "Communications using framework / Total external communications x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "693142"
           number: "12.2.2"
           name: "Manage internal communications and employee broadcasts"
           agentic_profile: "H=A"
           agentic_note: "Agents create and distribute content; humans set editorial direction and approve sensitive messages"
+          measurements:
+            - id: "120701"
+              number: "12.2.2.M1"
+              name: "Internal Comms Employee Reach"
+              what: "Percentage of employees reached by key internal broadcasts"
+              why: "Unreached employees miss critical organisational updates"
+              how: "Employees confirmed reached / Total employees x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "120702"
+              number: "12.2.2.M2"
+              name: "Internal Comms Engagement Rate"
+              what: "Average interaction rate with internal communications"
+              why: "Low engagement indicates content relevance or channel issues"
+              how: "Total interactions / Total communications distributed x 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "614750"
           number: "12.2.3"
           name: "Manage media relations and press engagement"
           agentic_profile: H
           agentic_note: "Human-led; media relationships require human judgement and rapport"
+          measurements:
+            - id: "120801"
+              number: "12.2.3.M1"
+              name: "Media Coverage Volume"
+              what: "Number of media mentions per quarter"
+              why: "Tracks brand visibility and PR effectiveness"
+              how: "Count of media mentions across monitored outlets"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "120802"
+              number: "12.2.3.M2"
+              name: "Media Sentiment Score"
+              what: "Net sentiment of media coverage"
+              why: "Negative coverage damages reputation and stakeholder confidence"
+              how: "Positive mentions - Negative mentions / Total mentions x 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "856917"
           number: "12.2.4"
           name: "Operate crisis communications and rapid response"
           agentic_profile: "H+a"
           agentic_note: "Humans lead crisis response; agents monitor media, draft holding statements, and track coverage"
+          measurements:
+            - id: "120901"
+              number: "12.2.4.M1"
+              name: "Crisis Response Activation Time"
+              what: "Time from crisis detection to communications team activation"
+              why: "Faster activation prevents narrative vacuum"
+              how: "Average minutes from crisis alert to team assembled"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "120902"
+              number: "12.2.4.M2"
+              name: "Crisis Communication Effectiveness Score"
+              what: "Stakeholder perception of crisis communication quality"
+              why: "Effective crisis comms protect reputation during adverse events"
+              how: "Average score from post-crisis stakeholder survey (1-5 scale)"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "341628"
           number: "12.2.5"
           name: "Manage executive communications and thought leadership"
           agentic_profile: "H+a"
           agentic_note: "Humans provide voice and ideas; agents research, draft, and manage publication schedules"
+          measurements:
+            - id: "121001"
+              number: "12.2.5.M1"
+              name: "Executive Content Production Rate"
+              what: "Number of thought leadership pieces published per quarter"
+              why: "Consistent publishing builds executive credibility"
+              how: "Count of published thought leadership articles and speeches"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "121002"
+              number: "12.2.5.M2"
+              name: "Executive Content Engagement"
+              what: "Average engagement metrics on executive communications"
+              why: "Low engagement indicates content or channel misalignment"
+              how: "Average views, shares, and interactions per published piece"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "762439"
           number: "12.2.6"
           name: "Monitor and analyse media coverage and public sentiment"
           agentic_profile: "h+A"
           agentic_note: "Agents continuously monitor and analyse; humans interpret trends and recommend actions"
+          measurements:
+            - id: "121101"
+              number: "12.2.6.M1"
+              name: "Media Monitoring Coverage"
+              what: "Percentage of relevant media channels actively monitored"
+              why: "Blind spots delay response to emerging narratives"
+              how: "Monitored channels / Total relevant channels x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "121102"
+              number: "12.2.6.M2"
+              name: "Sentiment Alert Response Time"
+              what: "Average time to respond to negative sentiment alerts"
+              why: "Fast response limits reputational damage"
+              how: "Average hours from alert to documented response"
+              frequency: monthly
+              direction: lower_is_better
 
     - id: "694217"
       number: "12.3"
@@ -101,26 +288,111 @@ domain:
           name: "Define the sustainability strategy and targets"
           agentic_profile: "H+a"
           agentic_note: "Humans set ambition and strategy; agents benchmark against industry standards and peer performance"
+          measurements:
+            - id: "121201"
+              number: "12.3.1.M1"
+              name: "Sustainability Target Achievement Rate"
+              what: "Percentage of sustainability targets on track for achievement"
+              why: "Tracks progress against committed sustainability goals"
+              how: "Targets on track / Total targets x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "121202"
+              number: "12.3.1.M2"
+              name: "Sustainability Strategy Review Cadence"
+              what: "Months since last strategy review"
+              why: "Regular review ensures strategy reflects evolving standards"
+              how: "Months since last board-level strategy review"
+              frequency: annually
+              direction: lower_is_better
         - id: "910625"
           number: "12.3.2"
           name: "Measure and track environmental impact and carbon footprint"
           agentic_profile: "h+A"
           agentic_note: "Agents aggregate emissions data and calculate footprints; humans validate methodology and boundaries"
+          measurements:
+            - id: "121301"
+              number: "12.3.2.M1"
+              name: "Carbon Emissions Reduction Rate"
+              what: "Year-over-year percentage reduction in carbon emissions"
+              why: "Tracks progress toward net-zero commitments"
+              how: "(Prior year emissions - Current year emissions) / Prior year emissions x 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "121302"
+              number: "12.3.2.M2"
+              name: "Environmental Data Completeness"
+              what: "Percentage of emission sources with measured data vs estimates"
+              why: "Measured data provides more reliable carbon footprint reporting"
+              how: "Measured data sources / Total emission sources x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "346918"
           number: "12.3.3"
           name: "Manage social impact programmes and community engagement"
           agentic_profile: "H+a"
           agentic_note: "Humans design programmes and build relationships; agents track metrics and manage logistics"
+          measurements:
+            - id: "121401"
+              number: "12.3.3.M1"
+              name: "Community Programme Reach"
+              what: "Number of community beneficiaries reached through social programmes"
+              why: "Tracks scale and impact of community engagement"
+              how: "Count of unique beneficiaries across all programmes"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "121402"
+              number: "12.3.3.M2"
+              name: "Employee Volunteering Participation"
+              what: "Percentage of employees participating in volunteer programmes"
+              why: "Employee participation signals cultural commitment to social impact"
+              how: "Employees volunteering / Total employees x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "728154"
           number: "12.3.4"
           name: "Prepare ESG disclosures and sustainability reports"
           agentic_profile: "h+A"
           agentic_note: "Agents compile data and draft reports against frameworks; humans approve and present"
+          measurements:
+            - id: "121501"
+              number: "12.3.4.M1"
+              name: "ESG Disclosure Timeliness"
+              what: "Percentage of ESG disclosures published within target deadlines"
+              why: "Late disclosures damage credibility with investors and regulators"
+              how: "On-time disclosures / Total required disclosures x 100"
+              frequency: annually
+              direction: higher_is_better
+            - id: "121502"
+              number: "12.3.4.M2"
+              name: "ESG Rating Score"
+              what: "Composite ESG rating from major rating agencies"
+              why: "External ratings influence investor decisions and reputation"
+              how: "Average score from top 3 ESG rating agencies"
+              frequency: annually
+              direction: higher_is_better
         - id: "715011"
           number: "12.3.5"
           name: "Monitor regulatory developments in sustainability reporting"
           agentic_profile: "h+A"
           agentic_note: "Agents scan regulatory landscape; humans assess impact and adjust reporting approaches"
+          measurements:
+            - id: "121601"
+              number: "12.3.5.M1"
+              name: "Sustainability Regulation Scanning Coverage"
+              what: "Percentage of relevant sustainability regulations actively tracked"
+              why: "Gaps in scanning create compliance blind spots"
+              how: "Tracked regulations / Total applicable regulations x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "121602"
+              number: "12.3.5.M2"
+              name: "Regulatory Change Impact Assessment Time"
+              what: "Average days to assess impact of new sustainability regulations"
+              why: "Slow assessment delays compliance preparation"
+              how: "Average days from regulation publication to impact assessment"
+              frequency: quarterly
+              direction: lower_is_better
 
     - id: "183742"
       number: "12.4"
@@ -135,26 +407,111 @@ domain:
           name: "Manage enterprise document and records lifecycle"
           agentic_profile: "h+A"
           agentic_note: "Agents classify, tag, store, and apply retention rules; humans set policies and handle exceptions"
+          measurements:
+            - id: "121701"
+              number: "12.4.1.M1"
+              name: "Records Classification Accuracy"
+              what: "Percentage of documents correctly classified per audit"
+              why: "Misclassified records create retrieval and compliance failures"
+              how: "Correctly classified records / Total records audited x 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "121702"
+              number: "12.4.1.M2"
+              name: "Retention Policy Compliance Rate"
+              what: "Percentage of records disposed or retained per policy schedule"
+              why: "Non-compliance creates legal hold and storage cost issues"
+              how: "Compliant records / Total records due for action x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "375218"
           number: "12.4.2"
           name: "Operate printing, reprographics, and physical distribution"
           agentic_profile: "h+A"
           agentic_note: "Agents manage queues and logistics; humans handle specialised requests"
+          measurements:
+            - id: "121801"
+              number: "12.4.2.M1"
+              name: "Print Volume Trend"
+              what: "Total print volume month-over-month"
+              why: "Declining print supports sustainability and cost goals"
+              how: "Total pages printed per month"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "121802"
+              number: "12.4.2.M2"
+              name: "Distribution SLA Compliance"
+              what: "Percentage of physical distribution requests fulfilled within SLA"
+              why: "Late distribution disrupts operations"
+              how: "Requests fulfilled within SLA / Total requests x 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "914263"
           number: "12.4.3"
           name: "Manage office supplies and consumables procurement"
           agentic_profile: A
           agentic_note: "Agent-executed; automated reordering based on consumption patterns and thresholds"
+          measurements:
+            - id: "121901"
+              number: "12.4.3.M1"
+              name: "Supplies Stockout Rate"
+              what: "Percentage of supply items experiencing stockout"
+              why: "Stockouts disrupt workplace operations"
+              how: "Items stocked out / Total managed items x 100"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "121902"
+              number: "12.4.3.M2"
+              name: "Procurement Cost Efficiency"
+              what: "Average cost savings from automated procurement vs manual"
+              why: "Validates automation investment in supplies procurement"
+              how: "(Manual process cost - Automated cost) / Manual cost x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "548371"
           number: "12.4.4"
           name: "Coordinate meeting room and resource booking"
           agentic_profile: A
           agentic_note: "Agent-executed; automated scheduling with conflict resolution and optimisation"
+          measurements:
+            - id: "122001"
+              number: "12.4.4.M1"
+              name: "Room Booking Utilisation Rate"
+              what: "Percentage of booked meeting rooms actually used"
+              why: "Ghost bookings waste resources and frustrate colleagues"
+              how: "Rooms actually used / Total rooms booked x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "122002"
+              number: "12.4.4.M2"
+              name: "Booking Conflict Resolution Time"
+              what: "Average time to resolve double-booking conflicts"
+              why: "Fast resolution minimises disruption to meetings"
+              how: "Average minutes from conflict detection to resolution"
+              frequency: monthly
+              direction: lower_is_better
         - id: "261849"
           number: "12.4.5"
           name: "Provide executive and departmental administrative support"
           agentic_profile: "H=A"
           agentic_note: "Agents manage calendars, prepare briefings, and handle correspondence; humans provide judgement and relationship management"
+          measurements:
+            - id: "122101"
+              number: "12.4.5.M1"
+              name: "Administrative Support Satisfaction Score"
+              what: "Satisfaction of supported executives and departments"
+              why: "Support quality directly impacts executive effectiveness"
+              how: "Average rating from supported stakeholder survey (1-5 scale)"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "122102"
+              number: "12.4.5.M2"
+              name: "Administrative Task Automation Rate"
+              what: "Percentage of administrative tasks handled by agents"
+              why: "Higher automation frees humans for judgement-based work"
+              how: "Agent-handled tasks / Total administrative tasks x 100"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "825463"
       number: "12.5"
@@ -169,26 +526,111 @@ domain:
           name: "Design and evolve the shared services operating model"
           agentic_profile: "H+a"
           agentic_note: "Humans design the model; agents benchmark performance and model consolidation scenarios"
+          measurements:
+            - id: "122201"
+              number: "12.5.1.M1"
+              name: "Shared Services Cost Efficiency"
+              what: "Cost per transaction in shared services vs industry benchmark"
+              why: "Validates the shared services value proposition"
+              how: "Average cost per transaction / Industry benchmark cost x 100"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "122202"
+              number: "12.5.1.M2"
+              name: "Service Consolidation Rate"
+              what: "Percentage of eligible services consolidated into shared services"
+              why: "Higher consolidation increases scale benefits"
+              how: "Consolidated services / Total eligible services x 100"
+              frequency: annually
+              direction: higher_is_better
         - id: "618342"
           number: "12.5.2"
           name: "Manage service catalogues and service-level agreements"
           agentic_profile: "H=A"
           agentic_note: "Agents maintain catalogues and track SLA performance; humans negotiate and review agreements"
+          measurements:
+            - id: "122301"
+              number: "12.5.2.M1"
+              name: "SLA Achievement Rate"
+              what: "Percentage of services meeting their defined SLAs"
+              why: "SLA breaches erode trust in shared services"
+              how: "Services meeting SLA / Total services with SLAs x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "122302"
+              number: "12.5.2.M2"
+              name: "Service Catalogue Completeness"
+              what: "Percentage of shared services with published catalogue entries"
+              why: "Uncatalogued services are undiscoverable and ungoverned"
+              how: "Catalogued services / Total shared services x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "562521"
           number: "12.5.3"
           name: "Operate the enterprise service desk and request fulfilment"
           agentic_profile: "h+A"
           agentic_note: "Agents handle tier-1 requests and automated fulfilment; humans resolve complex and sensitive cases"
+          measurements:
+            - id: "122401"
+              number: "12.5.3.M1"
+              name: "Service Desk First-Contact Resolution"
+              what: "Percentage of enterprise service requests resolved at first contact"
+              why: "Higher FCR improves user satisfaction and reduces cost"
+              how: "Requests resolved at first contact / Total requests x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "122402"
+              number: "12.5.3.M2"
+              name: "Service Request Fulfilment Time"
+              what: "Average time to fulfil enterprise service requests"
+              why: "Faster fulfilment improves employee productivity"
+              how: "Average business hours from request to fulfilment"
+              frequency: monthly
+              direction: lower_is_better
         - id: "742931"
           number: "12.5.4"
           name: "Monitor shared service performance and drive improvement"
           agentic_profile: "h+A"
           agentic_note: "Agents track KPIs and surface improvement opportunities; humans prioritise and implement changes"
+          measurements:
+            - id: "122501"
+              number: "12.5.4.M1"
+              name: "Shared Services Customer Satisfaction"
+              what: "Overall satisfaction score from shared services customers"
+              why: "Customer satisfaction validates service quality"
+              how: "Average score from customer satisfaction survey (1-5 scale)"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "122502"
+              number: "12.5.4.M2"
+              name: "Continuous Improvement Implementation Rate"
+              what: "Percentage of approved improvement initiatives implemented"
+              why: "Unrealised improvements waste analysis effort"
+              how: "Implemented initiatives / Approved initiatives x 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "381547"
           number: "12.5.5"
           name: "Manage vendor and outsourcing relationships for shared services"
           agentic_profile: "H+a"
           agentic_note: "Humans manage strategic vendor relationships; agents track performance and contract compliance"
+          measurements:
+            - id: "122601"
+              number: "12.5.5.M1"
+              name: "Vendor Performance Score"
+              what: "Average performance score across shared services vendors"
+              why: "Poor vendor performance impacts service delivery"
+              how: "Average vendor scorecard rating (0-100 scale)"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "122602"
+              number: "12.5.5.M2"
+              name: "Vendor Contract Compliance Rate"
+              what: "Percentage of vendor contracts meeting all obligations"
+              why: "Non-compliant vendors create risk and service gaps"
+              how: "Compliant contracts / Total vendor contracts x 100"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "219643"
       number: "12.6"
@@ -202,23 +644,108 @@ domain:
           name: "Define and maintain travel policies and preferred supplier programmes"
           agentic_profile: "H+a"
           agentic_note: "Humans set policies; agents benchmark rates and manage supplier catalogues"
+          measurements:
+            - id: "122701"
+              number: "12.6.1.M1"
+              name: "Travel Policy Compliance Rate"
+              what: "Percentage of travel bookings compliant with policy"
+              why: "Non-compliant bookings increase costs and risk"
+              how: "Compliant bookings / Total bookings x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "122702"
+              number: "12.6.1.M2"
+              name: "Preferred Supplier Utilisation Rate"
+              what: "Percentage of bookings made through preferred suppliers"
+              why: "Higher utilisation maximises negotiated rate benefits"
+              how: "Preferred supplier bookings / Total bookings x 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "563184"
           number: "12.6.2"
           name: "Process travel requests and itinerary planning"
           agentic_profile: "h+A"
           agentic_note: "Agents search, book, and optimise itineraries; humans approve out-of-policy requests"
+          measurements:
+            - id: "122801"
+              number: "12.6.2.M1"
+              name: "Travel Request Processing Time"
+              what: "Average time from travel request to confirmed itinerary"
+              why: "Delays frustrate travellers and may increase booking costs"
+              how: "Average business hours from request to confirmed booking"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "122802"
+              number: "12.6.2.M2"
+              name: "Booking Optimisation Savings"
+              what: "Cost savings from automated itinerary optimisation"
+              why: "Validates value of agent-driven travel planning"
+              how: "Savings from optimised vs first-available bookings per month"
+              frequency: monthly
+              direction: higher_is_better
         - id: "418729"
           number: "12.6.3"
           name: "Manage duty of care and traveller safety"
           agentic_profile: "H=A"
           agentic_note: "Agents track traveller locations and issue alerts; humans make evacuation and safety decisions"
+          measurements:
+            - id: "122901"
+              number: "12.6.3.M1"
+              name: "Traveller Location Tracking Coverage"
+              what: "Percentage of active travellers with real-time location tracking"
+              why: "Untracked travellers cannot be assisted in emergencies"
+              how: "Tracked travellers / Total active travellers x 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "122902"
+              number: "12.6.3.M2"
+              name: "Safety Alert Response Time"
+              what: "Average time to contact travellers after safety alert"
+              why: "Fast response protects employee safety"
+              how: "Average minutes from alert to confirmed traveller contact"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "735261"
           number: "12.6.4"
           name: "Process expense claims and reimbursements"
           agentic_profile: "h+A"
           agentic_note: "Agents validate receipts, check policy, and process payments; humans approve exceptions"
+          measurements:
+            - id: "123001"
+              number: "12.6.4.M1"
+              name: "Expense Claim Processing Time"
+              what: "Average days from claim submission to reimbursement"
+              why: "Slow reimbursement causes employee dissatisfaction"
+              how: "Average business days from submission to payment"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "123002"
+              number: "12.6.4.M2"
+              name: "Expense Policy Violation Rate"
+              what: "Percentage of expense claims flagged for policy violations"
+              why: "High violation rate indicates policy confusion or abuse"
+              how: "Flagged claims / Total claims x 100"
+              frequency: monthly
+              direction: lower_is_better
         - id: "692418"
           number: "12.6.5"
           name: "Analyse travel spend and optimise the programme"
           agentic_profile: "h+A"
           agentic_note: "Agents analyse spend patterns and savings opportunities; humans negotiate and make programme changes"
+          measurements:
+            - id: "123101"
+              number: "12.6.5.M1"
+              name: "Travel Spend per Trip"
+              what: "Average cost per business trip"
+              why: "Tracks cost efficiency of the travel programme"
+              how: "Total travel spend / Total trips"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "123102"
+              number: "12.6.5.M2"
+              name: "Travel Programme Savings Rate"
+              what: "Percentage savings achieved vs unrestricted market rates"
+              why: "Validates the travel programme's financial impact"
+              how: "(Market rate total - Actual spend) / Market rate total x 100"
+              frequency: quarterly
+              direction: higher_is_better

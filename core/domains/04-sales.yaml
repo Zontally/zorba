@@ -29,26 +29,111 @@ domain:
           name: "Define the sales strategy and go-to-market approach"
           agentic_profile: H
           agentic_note: "Human-led; sales strategy requires market judgement and leadership vision"
+          measurements:
+            - id: "040101"
+              number: "4.1.1.M1"
+              name: "Sales Strategy Achievement"
+              what: "Strategic objectives meeting targets"
+              why: "Tracks strategy effectiveness"
+              how: "Meeting targets / Total objectives × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "040102"
+              number: "4.1.1.M2"
+              name: "GTM Plan Adherence"
+              what: "GTM milestones completed on schedule"
+              why: "Delayed GTM misses market windows"
+              how: "On time / Total milestones × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "813462"
           number: "4.1.2"
           name: "Design territory and segment coverage models"
           agentic_profile: "H=A"
           agentic_note: "Agents model territory potential and balance workload; humans approve structure"
+          measurements:
+            - id: "040201"
+              number: "4.1.2.M1"
+              name: "Territory Coverage Efficiency"
+              what: "Addressable market covered by territories"
+              why: "Uncovered territories miss revenue"
+              how: "Covered / Total addressable market × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "040202"
+              number: "4.1.2.M2"
+              name: "Territory Balance Index"
+              what: "Revenue potential variance across territories"
+              why: "Imbalanced territories create unfair quotas"
+              how: "Std dev of territory potential / Mean potential"
+              frequency: annually
+              direction: lower_is_better
         - id: "274913"
           number: "4.1.3"
           name: "Set quota and target frameworks"
           agentic_profile: "H=A"
           agentic_note: "Agents model attainment scenarios; humans set targets and incentives"
+          measurements:
+            - id: "040301"
+              number: "4.1.3.M1"
+              name: "Quota Attainment Rate"
+              what: "Reps achieving or exceeding quota"
+              why: "Low attainment signals target or execution issues"
+              how: "Reps at quota / Total quota-carrying reps × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "040302"
+              number: "4.1.3.M2"
+              name: "Quota Setting Accuracy"
+              what: "Variance between quota and actual revenue"
+              why: "Inaccurate quotas undermine planning"
+              how: "|Total quota − Actual| / Total quota × 100"
+              frequency: annually
+              direction: lower_is_better
         - id: "224906"
           number: "4.1.4"
           name: "Define ideal customer profiles and account tiering"
           agentic_profile: "h+A"
           agentic_note: "Agents analyse firmographic and behavioural data; humans validate profiles"
+          measurements:
+            - id: "040401"
+              number: "4.1.4.M1"
+              name: "ICP Match Rate"
+              what: "Opportunities matching ideal customer profile"
+              why: "Non-ICP accounts waste resources"
+              how: "ICP-matching / Total active opportunities × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "040402"
+              number: "4.1.4.M2"
+              name: "Account Tier Effort Alignment"
+              what: "Sales effort on high-value tiers"
+              why: "Misallocated effort reduces potential"
+              how: "Time on Tier 1-2 / Total selling time × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "348176"
           number: "4.1.5"
           name: "Align sales coverage with marketing and product strategies"
           agentic_profile: "H+a"
           agentic_note: "Humans drive alignment; agents flag gaps and overlaps"
+          measurements:
+            - id: "040501"
+              number: "4.1.5.M1"
+              name: "Sales-Marketing Alignment Score"
+              what: "Alignment between sales and marketing"
+              why: "Misalignment wastes resources"
+              how: "Joint alignment survey score (1-10)"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "040502"
+              number: "4.1.5.M2"
+              name: "Coverage Gap Count"
+              what: "Gaps between coverage and strategy"
+              why: "Gaps represent missed opportunities"
+              how: "Count of documented gaps"
+              frequency: quarterly
+              direction: lower_is_better
 
     - id: "582314"
       number: "4.2"
@@ -62,31 +147,133 @@ domain:
           name: "Manage opportunity creation and pipeline intake"
           agentic_profile: "H=A"
           agentic_note: "Agents create opportunities from qualified leads; humans validate and enrich"
+          measurements:
+            - id: "040601"
+              number: "4.2.1.M1"
+              name: "Pipeline Creation Rate"
+              what: "Value of new pipeline created"
+              why: "Insufficient creation threatens revenue"
+              how: "Total value of new opportunities"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "040602"
+              number: "4.2.1.M2"
+              name: "Pipeline Coverage Ratio"
+              what: "Pipeline value to revenue target ratio"
+              why: "Insufficient coverage creates risk"
+              how: "Pipeline value / Revenue target"
+              frequency: monthly
+              direction: higher_is_better
         - id: "763142"
           number: "4.2.2"
           name: "Qualify and progress opportunities through sales stages"
           agentic_profile: "H+a"
           agentic_note: "Humans drive deals; agents update stage data and flag stalled opportunities"
+          measurements:
+            - id: "040701"
+              number: "4.2.2.M1"
+              name: "Stage Progression Rate"
+              what: "Opportunities advancing per period"
+              why: "Stalled opportunities consume resources"
+              how: "Advancing / Total active × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "040702"
+              number: "4.2.2.M2"
+              name: "Average Sales Cycle Length"
+              what: "Days from opportunity to close"
+              why: "Longer cycles increase cost and risk"
+              how: "Average (close − creation date) for won deals (days)"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "295831"
           number: "4.2.3"
           name: "Generate and maintain revenue forecasts"
           agentic_profile: "h+A"
           agentic_note: "Agents model forecasts using pipeline and historical data; humans adjust for judgement"
+          measurements:
+            - id: "040801"
+              number: "4.2.3.M1"
+              name: "Forecast Accuracy"
+              what: "Forecast vs actual revenue accuracy"
+              why: "Inaccurate forecasts undermine planning"
+              how: "1 − |Forecast − Actual| / Actual × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "040802"
+              number: "4.2.3.M2"
+              name: "Forecast Bias"
+              what: "Directional tendency of forecast errors"
+              why: "Systematic bias indicates process issues"
+              how: "Average (Forecast − Actual) / Actual × 100"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "841567"
           number: "4.2.4"
           name: "Conduct pipeline reviews and health assessments"
           agentic_profile: "H+a"
           agentic_note: "Agents prepare pipeline analytics; humans lead review discussions"
+          measurements:
+            - id: "040901"
+              number: "4.2.4.M1"
+              name: "Pipeline Review Adherence"
+              what: "Scheduled reviews completed on time"
+              why: "Missed reviews reduce visibility"
+              how: "Completed / Scheduled × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "040902"
+              number: "4.2.4.M2"
+              name: "Pipeline Health Score"
+              what: "Composite of balance, velocity, conversion"
+              why: "Holistic health predicts performance"
+              how: "Weighted composite (0-100)"
+              frequency: monthly
+              direction: higher_is_better
         - id: "617294"
           number: "4.2.5"
           name: "Identify and manage pipeline risks and gaps"
           agentic_profile: "H=A"
           agentic_note: "Agents surface at-risk deals and coverage gaps; humans intervene"
+          measurements:
+            - id: "041001"
+              number: "4.2.5.M1"
+              name: "At-Risk Deal Detection Rate"
+              what: "Deals flagged before loss"
+              why: "Early identification enables intervention"
+              how: "Flagged before loss / Total lost × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "041002"
+              number: "4.2.5.M2"
+              name: "Pipeline Gap Closure Rate"
+              what: "Gaps closed within target period"
+              why: "Open gaps threaten targets"
+              how: "Closed / Total gaps identified × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "354182"
           number: "4.2.6"
           name: "Reconcile forecast to actuals and improve accuracy"
           agentic_profile: "h+A"
           agentic_note: "Agents analyse forecast deviation patterns; humans refine methodology"
+          measurements:
+            - id: "041101"
+              number: "4.2.6.M1"
+              name: "Forecast Accuracy Trend"
+              what: "Period-over-period accuracy improvement"
+              why: "Improving accuracy shows process maturation"
+              how: "Current − Prior accuracy (percentage points)"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "041102"
+              number: "4.2.6.M2"
+              name: "Methodology Refinement Actions"
+              what: "Forecast methodology improvements"
+              why: "Active refinement drives improvement"
+              how: "Count of documented methodology changes"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "724918"
       number: "4.3"
@@ -100,26 +287,111 @@ domain:
           name: "Develop strategic account plans and growth strategies"
           agentic_profile: "H+a"
           agentic_note: "Humans plan account strategy; agents research account landscape"
+          measurements:
+            - id: "041201"
+              number: "4.3.1.M1"
+              name: "Account Plan Coverage"
+              what: "Strategic accounts with current plans"
+              why: "Unplanned accounts lack growth strategies"
+              how: "With plans / Total strategic accounts × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "041202"
+              number: "4.3.1.M2"
+              name: "Account Revenue Growth"
+              what: "YoY revenue growth in strategic accounts"
+              why: "Growth validates strategy effectiveness"
+              how: "(Current − Prior year) / Prior year revenue × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "619427"
           number: "4.3.2"
           name: "Map stakeholder networks and influence structures"
           agentic_profile: "H=A"
           agentic_note: "Agents compile org charts and relationship data; humans build relationships"
+          measurements:
+            - id: "041301"
+              number: "4.3.2.M1"
+              name: "Stakeholder Map Completeness"
+              what: "Key stakeholders mapped per account"
+              why: "Incomplete maps create blind spots"
+              how: "Average (mapped / estimated total) × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "041302"
+              number: "4.3.2.M2"
+              name: "Executive Relationship Depth"
+              what: "Active C-level relationships per account"
+              why: "Executive access drives strategic deals"
+              how: "Average C-level contacts with recent engagement"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "847213"
           number: "4.3.3"
           name: "Identify cross-sell and up-sell opportunities"
           agentic_profile: "h+A"
           agentic_note: "Agents analyse usage and purchase patterns; humans validate and pursue"
+          measurements:
+            - id: "041401"
+              number: "4.3.3.M1"
+              name: "Cross-Sell Revenue"
+              what: "Revenue from cross-sell and up-sell"
+              why: "Cross-sell is more efficient than new acquisition"
+              how: "Revenue from cross-sell/up-sell transactions"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "041402"
+              number: "4.3.3.M2"
+              name: "Product Penetration Rate"
+              what: "Average products per strategic account"
+              why: "Higher penetration deepens relationships"
+              how: "Total products / Total strategic accounts"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "536184"
           number: "4.3.4"
           name: "Coordinate multi-product and multi-team account delivery"
           agentic_profile: "H+a"
           agentic_note: "Humans lead coordination; agents track commitments across teams"
+          measurements:
+            - id: "041501"
+              number: "4.3.4.M1"
+              name: "Coordination Effectiveness"
+              what: "Account team satisfaction with coordination"
+              why: "Poor coordination hurts customer experience"
+              how: "Coordination satisfaction score (1-10)"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "041502"
+              number: "4.3.4.M2"
+              name: "Commitment Delivery Rate"
+              what: "Customer commitments delivered on time"
+              why: "Missed commitments damage trust"
+              how: "On time / Total commitments × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "291748"
           number: "4.3.5"
           name: "Conduct executive business reviews with key accounts"
           agentic_profile: "H+a"
           agentic_note: "Agents prepare review materials and data packs; humans present and discuss"
+          measurements:
+            - id: "041601"
+              number: "4.3.5.M1"
+              name: "EBR Completion Rate"
+              what: "Strategic accounts receiving EBRs"
+              why: "EBRs strengthen executive relationships"
+              how: "With EBRs / Total strategic accounts × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "041602"
+              number: "4.3.5.M2"
+              name: "EBR Action Follow-Through"
+              what: "EBR actions completed by due date"
+              why: "Undelivered commitments damage credibility"
+              how: "Completed on time / Total EBR actions × 100"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "839162"
       number: "4.4"
@@ -133,31 +405,133 @@ domain:
           name: "Develop proposals and solution presentations"
           agentic_profile: "H=A"
           agentic_note: "Agents generate proposal drafts and pricing models; humans customise and present"
+          measurements:
+            - id: "041701"
+              number: "4.4.1.M1"
+              name: "Proposal Win Rate"
+              what: "Proposals resulting in won deals"
+              why: "Low rates indicate quality or targeting issues"
+              how: "Won / Submitted × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "041702"
+              number: "4.4.1.M2"
+              name: "Proposal Cycle Time"
+              what: "Days from request to delivery"
+              why: "Slow proposals risk losing deals"
+              how: "Average (delivery − request date) in business days"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "563817"
           number: "4.4.2"
           name: "Configure pricing and assemble deal structures"
           agentic_profile: "h+A"
           agentic_note: "Agents calculate pricing, discounts, and terms; humans approve exceptions"
+          measurements:
+            - id: "041801"
+              number: "4.4.2.M1"
+              name: "Average Deal Size"
+              what: "Average value of closed-won deals"
+              why: "Tracks pricing effectiveness"
+              how: "Total closed-won revenue / Number of deals"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "041802"
+              number: "4.4.2.M2"
+              name: "Discount Rate"
+              what: "Average discount as percentage of list"
+              why: "Excessive discounting erodes margins"
+              how: "Average (list − deal price) / list × 100"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "729348"
           number: "4.4.3"
           name: "Navigate complex negotiations and objection handling"
           agentic_profile: H
           agentic_note: "Human-led; complex negotiation requires empathy and strategic judgement"
+          measurements:
+            - id: "041901"
+              number: "4.4.3.M1"
+              name: "Complex Deal Win Rate"
+              what: "Win rate on multi-stakeholder deals"
+              why: "Indicates negotiation capability"
+              how: "Complex won / Complex pursued × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "041902"
+              number: "4.4.3.M2"
+              name: "Negotiation Cycle Time"
+              what: "Days in negotiation before close"
+              why: "Extended negotiations increase risk"
+              how: "Average days in negotiation stage"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "184263"
           number: "4.4.4"
           name: "Manage deal approval workflows and governance"
           agentic_profile: "h+A"
           agentic_note: "Agents route approvals and track SLAs; humans approve within authority"
+          measurements:
+            - id: "042001"
+              number: "4.4.4.M1"
+              name: "Approval Cycle Time"
+              what: "Days from request to decision"
+              why: "Slow approvals delay closure"
+              how: "Average (approval − request date) in business days"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "042002"
+              number: "4.4.4.M2"
+              name: "Approval SLA Compliance"
+              what: "Approvals completed within SLAs"
+              why: "Breaches indicate bottlenecks"
+              how: "Within SLA / Total approvals × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "641729"
           number: "4.4.5"
           name: "Execute contract finalisation and signature"
           agentic_profile: "H=A"
           agentic_note: "Agents manage document assembly and e-signature; humans review final terms"
+          measurements:
+            - id: "042101"
+              number: "4.4.5.M1"
+              name: "Contract Execution Cycle Time"
+              what: "Days from terms to executed contract"
+              why: "Delays risk deal changes"
+              how: "Average (execution − terms date) in business days"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "042102"
+              number: "4.4.5.M2"
+              name: "Contract Error Rate"
+              what: "Contracts requiring amendments"
+              why: "Errors create legal risk"
+              how: "With amendments / Total executed × 100"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "392517"
           number: "4.4.6"
           name: "Conduct deal retrospectives and win/loss analysis"
           agentic_profile: "H=A"
           agentic_note: "Agents compile data and patterns; humans extract strategic lessons"
+          measurements:
+            - id: "042201"
+              number: "4.4.6.M1"
+              name: "Win/Loss Analysis Rate"
+              what: "Closed deals with completed analysis"
+              why: "Analysis drives learning"
+              how: "With analysis / Total closed × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "042202"
+              number: "4.4.6.M2"
+              name: "Win Rate Trend"
+              what: "Period-over-period win rate change"
+              why: "Improving rates indicate effectiveness"
+              how: "Current − Prior win rate (percentage points)"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "613482"
       number: "4.5"
@@ -172,26 +546,111 @@ domain:
           name: "Manage CRM data quality and system hygiene"
           agentic_profile: A
           agentic_note: "Agent-executed; continuous data cleansing, deduplication, and enrichment"
+          measurements:
+            - id: "042301"
+              number: "4.5.1.M1"
+              name: "CRM Data Accuracy"
+              what: "Records meeting quality standards"
+              why: "Poor quality undermines forecasting"
+              how: "Meeting standards / Total records × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "042302"
+              number: "4.5.1.M2"
+              name: "Duplicate Record Rate"
+              what: "CRM records identified as duplicates"
+              why: "Duplicates fragment customer views"
+              how: "Duplicates / Total records × 100"
+              frequency: monthly
+              direction: lower_is_better
         - id: "435003"
           number: "4.5.2"
           name: "Develop and deliver sales training and onboarding"
           agentic_profile: "H+a"
           agentic_note: "Humans design programmes; agents personalise learning paths"
+          measurements:
+            - id: "042401"
+              number: "4.5.2.M1"
+              name: "Sales Ramp Time"
+              what: "Days for new reps to reach productivity"
+              why: "Faster ramp accelerates revenue"
+              how: "Average days from start to first quota attainment"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "042402"
+              number: "4.5.2.M2"
+              name: "Training Completion Rate"
+              what: "Reps completing required training"
+              why: "Incomplete training reduces effectiveness"
+              how: "Completing / Total reps × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "315948"
           number: "4.5.3"
           name: "Create and maintain sales playbooks and collateral"
           agentic_profile: "H=A"
           agentic_note: "Agents generate and update materials; humans review and approve content"
+          measurements:
+            - id: "042501"
+              number: "4.5.3.M1"
+              name: "Playbook Adoption Rate"
+              what: "Reps actively using playbooks"
+              why: "Unused playbooks waste enablement investment"
+              how: "Using playbooks / Total reps × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "042502"
+              number: "4.5.3.M2"
+              name: "Collateral Currency Rate"
+              what: "Collateral updated within review cycle"
+              why: "Outdated collateral damages credibility"
+              how: "Current / Total collateral × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "748162"
           number: "4.5.4"
           name: "Manage sales tools and technology stack"
           agentic_profile: "H=A"
           agentic_note: "Agents monitor adoption and performance; humans select and configure tools"
+          measurements:
+            - id: "042601"
+              number: "4.5.4.M1"
+              name: "Sales Tool Adoption"
+              what: "Reps actively using core tools"
+              why: "Low adoption wastes tech investment"
+              how: "Active users / Licensed users × 100"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "042602"
+              number: "4.5.4.M2"
+              name: "Sales Tech ROI"
+              what: "Revenue per dollar of tech investment"
+              why: "Tracks tech investment effectiveness"
+              how: "Total revenue / Total sales tech spend"
+              frequency: annually
+              direction: higher_is_better
         - id: "263591"
           number: "4.5.5"
           name: "Standardise and optimise sales processes"
           agentic_profile: "H+a"
           agentic_note: "Humans design processes; agents measure adherence and flag deviations"
+          measurements:
+            - id: "042701"
+              number: "4.5.5.M1"
+              name: "Process Adherence Rate"
+              what: "Deals following defined sales process"
+              why: "Non-adherence reduces forecast accuracy"
+              how: "Following process / Total deals × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "042702"
+              number: "4.5.5.M2"
+              name: "Process Improvement Actions"
+              what: "Process improvements implemented"
+              why: "Active optimisation drives gains"
+              how: "Count of documented improvements"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "475291"
       number: "4.6"
@@ -205,26 +664,111 @@ domain:
           name: "Design the channel and partner sales strategy"
           agentic_profile: H
           agentic_note: "Human-led; channel strategy requires market and relationship judgement"
+          measurements:
+            - id: "042801"
+              number: "4.6.1.M1"
+              name: "Channel Revenue Share"
+              what: "Revenue from channel sales"
+              why: "Tracks channel strategy effectiveness"
+              how: "Channel revenue / Total revenue × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "042802"
+              number: "4.6.1.M2"
+              name: "Channel Market Coverage"
+              what: "Target markets covered by partners"
+              why: "Gaps limit reach"
+              how: "Markets with coverage / Total targets × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "364721"
           number: "4.6.2"
           name: "Recruit and onboard channel partners"
           agentic_profile: "H+a"
           agentic_note: "Humans recruit; agents manage onboarding workflows and documentation"
+          measurements:
+            - id: "042901"
+              number: "4.6.2.M1"
+              name: "Partner Recruitment Rate"
+              what: "New partners onboarded per period"
+              why: "Recruitment drives channel growth"
+              how: "Count of new partners onboarded"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "042902"
+              number: "4.6.2.M2"
+              name: "Partner Onboarding Time"
+              what: "Days from agreement to first deal"
+              why: "Faster onboarding accelerates revenue"
+              how: "Average (first deal − agreement date) in days"
+              frequency: quarterly
+              direction: lower_is_better
         - id: "592837"
           number: "4.6.3"
           name: "Enable partners with training, tools, and content"
           agentic_profile: "H=A"
           agentic_note: "Agents distribute and track enablement; humans create programmes"
+          measurements:
+            - id: "043001"
+              number: "4.6.3.M1"
+              name: "Partner Certification Rate"
+              what: "Partners completing certification"
+              why: "Certified partners sell more effectively"
+              how: "Certified / Total active partners × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "043002"
+              number: "4.6.3.M2"
+              name: "Enablement Content Usage"
+              what: "Materials accessed by partners"
+              why: "Unused materials indicate gaps"
+              how: "Accessed / Total available × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "427163"
           number: "4.6.4"
           name: "Manage partner pipeline and co-selling activities"
           agentic_profile: "H=A"
           agentic_note: "Agents track partner pipeline and flag collaboration opportunities; humans engage"
+          measurements:
+            - id: "043101"
+              number: "4.6.4.M1"
+              name: "Partner Pipeline Value"
+              what: "Value of partner-sourced pipeline"
+              why: "Drives channel revenue growth"
+              how: "Sum of partner-sourced opportunity values"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "043102"
+              number: "4.6.4.M2"
+              name: "Co-Sell Engagement Rate"
+              what: "Partner deals with active co-selling"
+              why: "Co-selling improves win rates"
+              how: "With co-selling / Total partner deals × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "738419"
           number: "4.6.5"
           name: "Measure partner performance and manage incentive programmes"
           agentic_profile: "h+A"
           agentic_note: "Agents calculate performance metrics and incentives; humans review and adjust"
+          measurements:
+            - id: "043201"
+              number: "4.6.5.M1"
+              name: "Revenue per Partner"
+              what: "Average revenue per active partner"
+              why: "Tracks partner productivity"
+              how: "Total partner revenue / Active partners"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "043202"
+              number: "4.6.5.M2"
+              name: "Partner Incentive ROI"
+              what: "Revenue per dollar of incentive spend"
+              why: "Ensures profitable incentive programmes"
+              how: "Incremental revenue / Total incentive spend"
+              frequency: quarterly
+              direction: higher_is_better
 
     - id: "291563"
       number: "4.7"
@@ -238,23 +782,108 @@ domain:
           name: "Align metrics and definitions across the revenue funnel"
           agentic_profile: "H+a"
           agentic_note: "Humans define standards; agents enforce consistency across systems"
+          measurements:
+            - id: "043301"
+              number: "4.7.1.M1"
+              name: "Metric Alignment Rate"
+              what: "Revenue metrics with consistent definitions"
+              why: "Inconsistent definitions create conflicts"
+              how: "Aligned / Total shared metrics × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "043302"
+              number: "4.7.1.M2"
+              name: "Data Reconciliation Rate"
+              what: "Discrepancies resolved between systems"
+              why: "Unresolved discrepancies undermine trust"
+              how: "Resolved / Total identified × 100"
+              frequency: monthly
+              direction: higher_is_better
         - id: "524718"
           number: "4.7.2"
           name: "Manage the lead-to-cash process end to end"
           agentic_profile: "H=A"
           agentic_note: "Agents automate handoffs and track lifecycle; humans resolve exceptions"
+          measurements:
+            - id: "043401"
+              number: "4.7.2.M1"
+              name: "Lead-to-Cash Cycle Time"
+              what: "Days from lead to revenue recognition"
+              why: "Shorter cycles improve cash flow"
+              how: "Average (recognition − lead creation) in days"
+              frequency: quarterly
+              direction: lower_is_better
+            - id: "043402"
+              number: "4.7.2.M2"
+              name: "Handoff Error Rate"
+              what: "Handoffs with errors or missing info"
+              why: "Errors slow process and frustrate teams"
+              how: "With errors / Total handoffs × 100"
+              frequency: monthly
+              direction: lower_is_better
         - id: "419836"
           number: "4.7.3"
           name: "Analyse revenue performance and unit economics"
           agentic_profile: "h+A"
           agentic_note: "Agents model cohort data and trends; humans interpret and act"
+          measurements:
+            - id: "043501"
+              number: "4.7.3.M1"
+              name: "Revenue per Employee"
+              what: "Revenue divided by revenue team headcount"
+              why: "Tracks team productivity"
+              how: "Total revenue / Revenue team headcount"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "043502"
+              number: "4.7.3.M2"
+              name: "Unit Economics Health"
+              what: "Key unit economics within target ranges"
+              why: "Healthy economics ensure sustainable growth"
+              how: "Unit metrics within target / Total unit metrics × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "748291"
           number: "4.7.4"
           name: "Optimise the revenue tech stack and data architecture"
           agentic_profile: "H=A"
           agentic_note: "Agents monitor system performance; humans make technology decisions"
+          measurements:
+            - id: "043601"
+              number: "4.7.4.M1"
+              name: "Tech Stack Utilisation"
+              what: "Percentage of tech stack features actively used"
+              why: "Low utilisation wastes investment"
+              how: "Features used / Total features × 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "043602"
+              number: "4.7.4.M2"
+              name: "System Integration Score"
+              what: "Percentage of revenue systems fully integrated"
+              why: "Unintegrated systems create data silos"
+              how: "Integrated / Total systems × 100"
+              frequency: quarterly
+              direction: higher_is_better
         - id: "381924"
           number: "4.7.5"
           name: "Provide revenue intelligence and strategic insights"
           agentic_profile: "h+A"
           agentic_note: "Agents surface patterns and anomalies; humans translate to strategy"
+          measurements:
+            - id: "043701"
+              number: "4.7.5.M1"
+              name: "Revenue Insight Timeliness"
+              what: "Days after period close for insight delivery"
+              why: "Late insights reduce strategic value"
+              how: "Delivery date − close date (business days)"
+              frequency: monthly
+              direction: lower_is_better
+            - id: "043702"
+              number: "4.7.5.M2"
+              name: "Insight Action Rate"
+              what: "Percentage of insights resulting in actions"
+              why: "Unacted insights waste analysis effort"
+              how: "Acted on / Total insights × 100"
+              frequency: quarterly
+              direction: higher_is_better
