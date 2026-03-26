@@ -21,8 +21,6 @@ domain:
       description: >
         Define the technology vision, principles, and enterprise architecture that guide
         investment decisions, platform choices, and the evolution of the technology estate.
-      evolution_stage: custom
-      pst_phase: settler
       processes:
         - id: "631824"
           number: "10.1.1"
@@ -141,8 +139,6 @@ domain:
       description: >
         Design, develop, test, deploy, and maintain the enterprise's application portfolio —
         including custom-built, configured, and integrated software solutions.
-      evolution_stage: product
-      pst_phase: settler
       processes:
         - id: "741258"
           number: "10.2.1"
@@ -283,8 +279,6 @@ domain:
       description: >
         Provision, manage, and optimise the enterprise's computing infrastructure — including
         on-premises, cloud, hybrid, and edge environments.
-      evolution_stage: commodity
-      pst_phase: town_planner
       processes:
         - id: "428163"
           number: "10.3.1"
@@ -425,8 +419,6 @@ domain:
       description: >
         Manage data as an enterprise asset — ensuring quality, accessibility, governance, and
         the delivery of analytics and insights that drive decision-making.
-      evolution_stage: custom
-      pst_phase: settler
       processes:
         - id: "625813"
           number: "10.4.1"
@@ -567,8 +559,6 @@ domain:
       description: >
         Defend the enterprise against cyber threats, manage information security risks, and
         ensure resilience through detection, response, and recovery capabilities.
-      evolution_stage: product
-      pst_phase: town_planner
       processes:
         - id: "317524"
           number: "10.5.1"
@@ -709,8 +699,6 @@ domain:
       description: >
         Operate the day-to-day technology services that keep the enterprise running — including
         service desk, incident management, problem resolution, and end-user computing.
-      evolution_stage: commodity
-      pst_phase: town_planner
       processes:
         - id: "824367"
           number: "10.6.1"
@@ -831,8 +819,6 @@ domain:
         including agent hosting, orchestration, lifecycle management, and the tooling that
         connects agents to enterprise systems. This is the ZORBA-specific meta-capability:
         the technology that enables the blended workforce.
-      evolution_stage: genesis
-      pst_phase: pioneer
       processes:
         - id: "348261"
           number: "10.7.1"
@@ -991,7 +977,7 @@ domain:
 
   wardley_map:
     owm_source: |
-      title Technology & Data Domain - Evolution & PST View
+      title Technology & Data Domain - Evolution View
       
       # User-facing capabilities
       component "Digital Products" [0.9, 0.6]
