@@ -1,0 +1,2478 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The open reference architecture for the agentic enterprise">
+      
+      
+      
+        <link rel="canonical" href="https://zontally.github.io/zorba/framework/09-evolution-mapping/">
+      
+      
+        <link rel="prev" href="../08-industry-editions/">
+      
+      
+        <link rel="next" href="../10-industry-taxonomy/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Evolution Mapping - ZORBA</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#evolution-mapping" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ZORBA" class="md-header__button md-logo" aria-label="ZORBA" data-md-component="logo">
+      
+  <img src="../../assets/logo-light.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ZORBA
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Evolution Mapping
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/zontally/zorba" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    zontally/zorba
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ZORBA" class="md-nav__button md-logo" aria-label="ZORBA" data-md-component="logo">
+      
+  <img src="../../assets/logo-light.png" alt="logo">
+
+    </a>
+    ZORBA
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/zontally/zorba" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    zontally/zorba
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Framework
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Framework
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-manifesto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manifesto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-workforce-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workforce Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-domain-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domain Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-agentic-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentic Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-information-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Information Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-industry-editions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Industry Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evolution Mapping
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evolution Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-evolution-matters-for-zorba-practitioners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Evolution Matters for ZORBA Practitioners
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why Evolution Matters for ZORBA Practitioners">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-human-agent-workforce-imperative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Human-Agent Workforce Imperative
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-drives-investment-and-architecture-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evolution Drives Investment and Architecture Decisions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wardley-mapping-as-the-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wardley Mapping as the Methodology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wardley Mapping as the Methodology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-four-evolution-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Four Evolution Stages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-is-context-dependent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evolution is Context-Dependent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explorers-villages-and-town-planners-evtp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explorers, Villages, and Town Planners (EVTP)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Explorers, Villages, and Town Planners (EVTP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-three-archetypes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Three Archetypes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evtp-and-evolution-stage-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EVTP and Evolution Stage Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-insights-for-agent-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critical Insights for Agent Deployment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Critical Insights for Agent Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explorers-genesis-early-custom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explorers (Genesis → Early Custom)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#villagers-custom-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Villagers (Custom → Product)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#town-planners-product-commodity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Town Planners (Product → Commodity)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-evtp-anti-pattern-role-mismatches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The EVTP Anti-Pattern: Role Mismatches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evtp-in-zorba-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EVTP in ZORBA Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-software-development-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Software Development Evolution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-evolution-informs-workforce-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Evolution Informs Workforce Composition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How Evolution Informs Workforce Composition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-evolution-workforce-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Evolution-Workforce Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-trajectory-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evolution Trajectory Planning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maps-as-code-using-online-wardley-maps-dsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maps-as-Code Using Online Wardley Maps DSL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Maps-as-Code Using Online Wardley Maps DSL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#online-wardley-maps-dsl-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Online Wardley Maps DSL Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Online Wardley Maps DSL Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-dsl-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key DSL Elements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-axis-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evolution Axis Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-wardleymap-object-type-in-the-information-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The WardleyMap Object Type in the Information Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The WardleyMap Object Type in the Information Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wardleymap-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WardleyMap Attributes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relationships
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-technology-data-domain-as-a-wardley-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Technology &amp; Data Domain as a Wardley Map
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-implementation-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Implementation Guidelines
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Implementation Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-start-with-current-state-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Start with Current State Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-add-evolution-trajectories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Add Evolution Trajectories
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-plan-workforce-transitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Plan Workforce Transitions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-regular-review-and-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Regular Review and Updates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribution-and-licensing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribution and Licensing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-zorba-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration with ZORBA Framework
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-industry-taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Industry Taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-usage-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../industry-taxonomy/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Industry taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domain Taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Industry Editions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Industry Editions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../editions/enterprise-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ZORBA for Enterprise Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../editions/professional-services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ZORBA for Professional Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-evolution-matters-for-zorba-practitioners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Evolution Matters for ZORBA Practitioners
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why Evolution Matters for ZORBA Practitioners">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-human-agent-workforce-imperative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Human-Agent Workforce Imperative
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-drives-investment-and-architecture-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evolution Drives Investment and Architecture Decisions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wardley-mapping-as-the-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wardley Mapping as the Methodology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wardley Mapping as the Methodology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-four-evolution-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Four Evolution Stages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-is-context-dependent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evolution is Context-Dependent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explorers-villages-and-town-planners-evtp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explorers, Villages, and Town Planners (EVTP)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Explorers, Villages, and Town Planners (EVTP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-three-archetypes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Three Archetypes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evtp-and-evolution-stage-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EVTP and Evolution Stage Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-insights-for-agent-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critical Insights for Agent Deployment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Critical Insights for Agent Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explorers-genesis-early-custom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explorers (Genesis → Early Custom)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#villagers-custom-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Villagers (Custom → Product)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#town-planners-product-commodity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Town Planners (Product → Commodity)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-evtp-anti-pattern-role-mismatches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The EVTP Anti-Pattern: Role Mismatches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evtp-in-zorba-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EVTP in ZORBA Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-software-development-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Software Development Evolution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-evolution-informs-workforce-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Evolution Informs Workforce Composition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How Evolution Informs Workforce Composition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-evolution-workforce-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Evolution-Workforce Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-trajectory-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evolution Trajectory Planning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maps-as-code-using-online-wardley-maps-dsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maps-as-Code Using Online Wardley Maps DSL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Maps-as-Code Using Online Wardley Maps DSL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#online-wardley-maps-dsl-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Online Wardley Maps DSL Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Online Wardley Maps DSL Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-dsl-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key DSL Elements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-axis-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evolution Axis Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-wardleymap-object-type-in-the-information-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The WardleyMap Object Type in the Information Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The WardleyMap Object Type in the Information Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wardleymap-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WardleyMap Attributes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relationships
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-technology-data-domain-as-a-wardley-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Technology &amp; Data Domain as a Wardley Map
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-implementation-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Implementation Guidelines
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Implementation Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-start-with-current-state-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Start with Current State Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-add-evolution-trajectories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Add Evolution Trajectories
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-plan-workforce-transitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Plan Workforce Transitions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-regular-review-and-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Regular Review and Updates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribution-and-licensing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribution and Licensing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-zorba-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration with ZORBA Framework
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="evolution-mapping">Evolution Mapping<a class="headerlink" href="#evolution-mapping" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p><img src="../../assets/images/wardley-map.png" alt="Wardley Map" style="height: 600px;"></p>
+<p>In the agentic enterprise, understanding where your capabilities and processes sit on the <strong>evolution curve</strong> is not merely strategic insight — it is the foundation for <strong>workforce composition decisions</strong>. A capability in its genesis stage requires human creativity and judgement. A commodity capability can be entirely agent-delivered. Everything in between demands a thoughtful blend.</p>
+<p>ZORBA extends traditional Wardley Mapping to provide practitioners with <strong>evolution tracking</strong> as a first-class concern in enterprise architecture. Every capability and process carries evolution metadata. Every domain can be visualised as a Wardley Map. Every strategic decision can be informed by understanding not just what you have, but <strong>where it's heading</strong>.</p>
+<p>This document outlines how ZORBA practitioners use <strong>Wardley Mapping methodology</strong> to track evolution, predict change, and make informed workforce composition decisions across the enterprise.</p>
+<hr />
+<h2 id="why-evolution-matters-for-zorba-practitioners">Why Evolution Matters for ZORBA Practitioners<a class="headerlink" href="#why-evolution-matters-for-zorba-practitioners" title="Permanent link">&para;</a></h2>
+<h3 id="the-human-agent-workforce-imperative">The Human-Agent Workforce Imperative<a class="headerlink" href="#the-human-agent-workforce-imperative" title="Permanent link">&para;</a></h3>
+<p>In a traditional enterprise, the question is "should we build this capability ourselves, or buy it?" In the agentic enterprise, the question is more nuanced: "should this capability be delivered by humans, agents, or a blend — and how will that change as the capability evolves?"</p>
+<p>Consider three scenarios:</p>
+<ol>
+<li>
+<p><strong>Genesis Capability:</strong> A fintech company building a novel risk algorithm for cryptocurrency derivatives. This is uncharted territory requiring human creativity, domain expertise, and the ability to navigate uncertainty. <strong>Human-heavy workforce.</strong></p>
+</li>
+<li>
+<p><strong>Custom Capability:</strong> A bank operating its proprietary credit scoring model, refined over years but still differentiated. Agents can assist with model tuning and data processing, but human oversight is essential for regulatory compliance and strategic decisions. <strong>Blended workforce.</strong></p>
+</li>
+<li>
+<p><strong>Commodity Capability:</strong> A retailer processing standard payment transactions. This is well-understood, standardised, and high-volume. Agents can handle the entire process with human intervention only for exceptions. <strong>Agent-heavy workforce.</strong></p>
+</li>
+</ol>
+<p><strong>The same process — payment processing — might sit at different evolution stages across different organisations.</strong> A payments startup building a novel blockchain-based system is at genesis. A traditional bank using established card networks is at commodity. The workforce composition should reflect this reality.</p>
+<h3 id="evolution-drives-investment-and-architecture-decisions">Evolution Drives Investment and Architecture Decisions<a class="headerlink" href="#evolution-drives-investment-and-architecture-decisions" title="Permanent link">&para;</a></h3>
+<p>Evolution stage also influences:</p>
+<ul>
+<li><strong>Build vs. buy decisions:</strong> Genesis capabilities must be built internally. Commodity capabilities should be bought or outsourced.</li>
+<li><strong>Platform vs. bespoke:</strong> Early-stage capabilities require flexible, bespoke solutions. Mature capabilities benefit from standardised platforms.</li>
+<li><strong>Risk tolerance:</strong> Genesis capabilities carry high risk but high potential reward. Commodity capabilities should be low-risk, low-cost.</li>
+<li><strong>Innovation focus:</strong> Organisations should concentrate innovation effort on genesis and custom capabilities, not on commodity ones.</li>
+</ul>
+<p>ZORBA's evolution mapping helps practitioners <strong>visualise</strong> these trade-offs and make <strong>informed</strong> architectural decisions.</p>
+<hr />
+<h2 id="wardley-mapping-as-the-methodology">Wardley Mapping as the Methodology<a class="headerlink" href="#wardley-mapping-as-the-methodology" title="Permanent link">&para;</a></h2>
+<p>Wardley Mapping, created by <strong>Simon Wardley</strong>, is a method for visualising the evolution of business capabilities and their dependencies. It plots components on two axes:</p>
+<ul>
+<li><strong>Visibility</strong> (Y-axis): How visible the component is to the end user (high = user-facing, low = infrastructure)</li>
+<li><strong>Evolution</strong> (X-axis): How evolved the component is (genesis → custom → product → commodity)</li>
+</ul>
+<p>Maps reveal dependencies, highlight evolution paths, and inform strategic decisions. In ZORBA, we extend Wardley Mapping to explicitly connect evolution stage to workforce composition.</p>
+<h3 id="the-four-evolution-stages">The Four Evolution Stages<a class="headerlink" href="#the-four-evolution-stages" title="Permanent link">&para;</a></h3>
+<p>Evolution is not binary — capabilities move through <strong>four distinct stages</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Description</th>
+<th>Characteristics</th>
+<th>ZORBA Workforce Implications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Genesis</strong></td>
+<td>Novel, unproven, experimental</td>
+<td>High uncertainty, requires innovation, few examples exist</td>
+<td>Human-heavy: creativity, judgment, experimentation required</td>
+</tr>
+<tr>
+<td><strong>Custom</strong></td>
+<td>Proven but bespoke solutions</td>
+<td>Built to specific requirements, competitive advantage, limited reuse</td>
+<td>Blended: humans for strategy/oversight, agents for execution</td>
+</tr>
+<tr>
+<td><strong>Product</strong></td>
+<td>Standardised offerings with variation</td>
+<td>Multiple vendors, feature differentiation, established market</td>
+<td>Agent-capable: well-defined processes that agents can learn</td>
+</tr>
+<tr>
+<td><strong>Commodity</strong></td>
+<td>Fully standardised, utility-like</td>
+<td>Price competition, minimal differentiation, high volume</td>
+<td>Agent-preferred: routine, high-volume, low-variation work</td>
+</tr>
+</tbody>
+</table>
+<h3 id="evolution-is-context-dependent">Evolution is Context-Dependent<a class="headerlink" href="#evolution-is-context-dependent" title="Permanent link">&para;</a></h3>
+<p>A capability's evolution stage depends on <strong>organisational context</strong>, not absolute maturity. Examples:</p>
+<ul>
+<li><strong>CRM systems</strong> are commodity for most organisations (buy Salesforce), but genesis for Salesforce itself (they invented the category).</li>
+<li><strong>Machine learning</strong> is custom for most enterprises (building models), but commodity for Google (their infrastructure), and genesis for research labs (developing new algorithms).</li>
+<li><strong>Payment processing</strong> is commodity for retailers, but custom for payment providers building new rails.</li>
+</ul>
+<p>ZORBA practitioners map evolution <strong>relative to their organisation's context</strong>, not the global state of technology.</p>
+<hr />
+<h2 id="explorers-villages-and-town-planners-evtp">Explorers, Villages, and Town Planners (EVTP)<a class="headerlink" href="#explorers-villages-and-town-planners-evtp" title="Permanent link">&para;</a></h2>
+<p>Alongside evolution stages, Simon Wardley introduced the <strong>Explorers, Villagers, and Town Planners (EVTP)</strong> organisational model that maps directly to evolution phases. EVTP describes the <strong>types of people and mindset</strong> needed at each stage of evolution, providing crucial insight into workforce composition and management approach.</p>
+<h3 id="the-three-archetypes">The Three Archetypes<a class="headerlink" href="#the-three-archetypes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Archetype</th>
+<th>Characteristics</th>
+<th>Optimal Context</th>
+<th>ZORBA Workforce Implications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Explorers</strong></td>
+<td>Explorers, experimenters, comfortable with chaos and uncertainty. High failure tolerance, creative, innovative. Build the "art of the possible."</td>
+<td>Genesis stage capabilities</td>
+<td>Human-heavy teams required. Agents cannot pioneer — they need patterns to learn from.</td>
+</tr>
+<tr>
+<td><strong>Villagers</strong></td>
+<td>Industrialisers, systematisers, bridge-builders. Take what Explorers discovered and turn it into repeatable, reliable processes.</td>
+<td>Custom→Product transition</td>
+<td>Shift toward blended workforce. Villagers work with agents to standardise what Explorers created.</td>
+</tr>
+<tr>
+<td><strong>Town Planners</strong></td>
+<td>Optimisers, efficiency-focused, SLA-driven. Turn products into utilities through standardisation, automation, and operational excellence.</td>
+<td>Commodity/Utility stage</td>
+<td>Prime territory for autonomous agents. Predictable, measurable, optimisable work.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="evtp-and-evolution-stage-mapping">EVTP and Evolution Stage Mapping<a class="headerlink" href="#evtp-and-evolution-stage-mapping" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>EVTP Phase</th>
+<th>Primary Evolution Stage</th>
+<th>Secondary Stages</th>
+<th>Mindset</th>
+<th>Success Metrics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Explorer</strong></td>
+<td>Genesis</td>
+<td>Early Custom</td>
+<td>"Does it work?"</td>
+<td>Innovation rate, experimentation velocity, breakthrough discoveries</td>
+</tr>
+<tr>
+<td><strong>Villager</strong></td>
+<td>Custom</td>
+<td>Late Custom → Early Product</td>
+<td>"Can we repeat it?"</td>
+<td>Reliability, process maturity, scalability</td>
+</tr>
+<tr>
+<td><strong>Town Planner</strong></td>
+<td>Product → Commodity</td>
+<td>Utility</td>
+<td>"Can we optimise it?"</td>
+<td>Efficiency, cost per unit, SLA compliance, automation percentage</td>
+</tr>
+</tbody>
+</table>
+<h3 id="critical-insights-for-agent-deployment">Critical Insights for Agent Deployment<a class="headerlink" href="#critical-insights-for-agent-deployment" title="Permanent link">&para;</a></h3>
+<p>Understanding EVTP phases is <strong>essential</strong> for making informed agent deployment decisions:</p>
+<h4 id="explorers-genesis-early-custom">Explorers (Genesis → Early Custom)<a class="headerlink" href="#explorers-genesis-early-custom" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Agents cannot pioneer.</strong> Innovation requires creativity, intuition, and the ability to work without established patterns</li>
+<li><strong>Human leadership mandatory.</strong> Explorer work needs human judgment to navigate uncertainty and make breakthrough decisions</li>
+<li><strong>Agent role limited to:</strong> Data gathering, research assistance, rapid prototyping support</li>
+<li><strong>Workforce profile:</strong> H (human-led) with minimal agent involvement</li>
+</ul>
+<h4 id="villagers-custom-product">Villagers (Custom → Product)<a class="headerlink" href="#villagers-custom-product" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Agents excel at systematisation.</strong> Once Explorers prove something works, agents can help standardise and scale it</li>
+<li><strong>Blended teams optimal.</strong> Humans provide strategic direction and handle edge cases; agents execute standardised processes</li>
+<li><strong>Agent capabilities:</strong> Process documentation, pattern recognition, quality assurance, routine task automation</li>
+<li><strong>Workforce profile:</strong> H=A or H+a (balanced or human-led blended)</li>
+</ul>
+<h4 id="town-planners-product-commodity">Town Planners (Product → Commodity)<a class="headerlink" href="#town-planners-product-commodity" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Agents thrive in optimisation.</strong> Predictable, measurable work with clear success criteria is ideal for agent autonomy</li>
+<li><strong>Human role shifts to oversight.</strong> Humans set targets and handle exceptions; agents optimise within parameters</li>
+<li><strong>Agent capabilities:</strong> Full process ownership, continuous optimisation, anomaly detection, self-healing systems</li>
+<li><strong>Workforce profile:</strong> h+A or A (agent-heavy or agent-autonomous)</li>
+</ul>
+<h3 id="the-evtp-anti-pattern-role-mismatches">The EVTP Anti-Pattern: Role Mismatches<a class="headerlink" href="#the-evtp-anti-pattern-role-mismatches" title="Permanent link">&para;</a></h3>
+<p>One of the most common failures in capability management is putting the wrong archetype in the wrong context:</p>
+<table>
+<thead>
+<tr>
+<th>Anti-Pattern</th>
+<th>Description</th>
+<th>Consequences</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Explorers in Commodity</strong></td>
+<td>Creative, experimental mindset applied to utility operations</td>
+<td>Over-engineering, unnecessary complexity, cost inefficiency</td>
+</tr>
+<tr>
+<td><strong>Town Planners in Genesis</strong></td>
+<td>Efficiency-focused approach applied to novel exploration</td>
+<td>Premature optimisation, innovation stifling, false certainties</td>
+</tr>
+<tr>
+<td><strong>Villagers everywhere</strong></td>
+<td>Using compromise approaches for all situations</td>
+<td>Mediocre outcomes — neither breakthrough innovation nor operational excellence</td>
+</tr>
+</tbody>
+</table>
+<h3 id="evtp-in-zorba-implementation">EVTP in ZORBA Implementation<a class="headerlink" href="#evtp-in-zorba-implementation" title="Permanent link">&para;</a></h3>
+<p>When implementing ZORBA evolution mapping:</p>
+<ol>
+<li><strong>Assess current EVTP distribution:</strong> Map existing team members and mindsets against capabilities</li>
+<li><strong>Identify EVTP mismatches:</strong> Look for Town Planner mindsets managing Genesis capabilities (or vice versa)</li>
+<li><strong>Plan EVTP transitions:</strong> As capabilities evolve, workforce composition AND management approach must evolve</li>
+<li><strong>Design agent deployment strategy:</strong> Use EVTP phase to determine agent readiness and autonomy level</li>
+<li><strong>Manage EVTP career paths:</strong> Explorers who become Villagers who become Town Planners need different career development</li>
+</ol>
+<h3 id="example-software-development-evolution">Example: Software Development Evolution<a class="headerlink" href="#example-software-development-evolution" title="Permanent link">&para;</a></h3>
+<p>Consider how a software development capability evolves through EVTP phases:</p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Capability</th>
+<th>Work Style</th>
+<th>Tools</th>
+<th>Workforce</th>
+<th>Agent Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Explorer</strong></td>
+<td>Novel AI framework</td>
+<td>Experimental, research-driven</td>
+<td>Jupyter notebooks, experimental tools</td>
+<td>Senior researchers, architects</td>
+<td>Research assistance, code generation experiments</td>
+</tr>
+<tr>
+<td><strong>Villager</strong></td>
+<td>Productised framework</td>
+<td>Process-driven, quality-focused</td>
+<td>CI/CD, testing frameworks, documentation</td>
+<td>Engineering teams, product managers</td>
+<td>Code review, testing, documentation</td>
+</tr>
+<tr>
+<td><strong>Town Planner</strong></td>
+<td>Framework-as-a-Service</td>
+<td>SLA-driven, efficiency-focused</td>
+<td>Monitoring, automation, cost optimisation</td>
+<td>DevOps, platform engineers</td>
+<td>Automated deployment, monitoring, optimisation</td>
+</tr>
+</tbody>
+</table>
+<p>Each phase requires different people, processes, and agent capabilities. Forcing a Explorer approach on commodity work wastes resources. Forcing a Town Planner approach on genesis work kills innovation.</p>
+<hr />
+<h2 id="how-evolution-informs-workforce-composition">How Evolution Informs Workforce Composition<a class="headerlink" href="#how-evolution-informs-workforce-composition" title="Permanent link">&para;</a></h2>
+<h3 id="the-evolution-workforce-matrix">The Evolution-Workforce Matrix<a class="headerlink" href="#the-evolution-workforce-matrix" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Evolution Stage</th>
+<th>Recommended Profile</th>
+<th>Rationale</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Genesis</strong></td>
+<td>H (Human-led)</td>
+<td>Innovation requires creativity, intuition, and comfort with ambiguity</td>
+<td>Novel AI research, new product ideation</td>
+</tr>
+<tr>
+<td><strong>Custom</strong></td>
+<td>H+a or H=A (Blended)</td>
+<td>Strategy and judgment remain human, execution can be augmented</td>
+<td>Proprietary algorithms, customised processes</td>
+</tr>
+<tr>
+<td><strong>Product</strong></td>
+<td>h+A or H=A (Agent-capable)</td>
+<td>Well-defined processes that agents can learn and optimise</td>
+<td>Standard business processes, reporting</td>
+</tr>
+<tr>
+<td><strong>Commodity</strong></td>
+<td>A (Agent-preferred)</td>
+<td>Routine, high-volume work where humans add little value</td>
+<td>Transaction processing, data entry</td>
+</tr>
+</tbody>
+</table>
+<p>This matrix is <strong>guidance, not prescription</strong>. Factors like regulatory requirements, risk tolerance, and organisational culture may override pure evolution-based recommendations.</p>
+<h3 id="evolution-trajectory-planning">Evolution Trajectory Planning<a class="headerlink" href="#evolution-trajectory-planning" title="Permanent link">&para;</a></h3>
+<p>ZORBA practitioners don't just map current state — they <strong>predict future evolution</strong> and plan workforce transitions:</p>
+<ol>
+<li><strong>Map current evolution stage</strong> of each capability and process</li>
+<li><strong>Predict target evolution stage</strong> over a 1-3 year horizon</li>
+<li><strong>Plan workforce composition changes</strong> to match evolution trajectory</li>
+<li><strong>Invest in agent development</strong> for capabilities moving toward commodity</li>
+<li><strong>Preserve human expertise</strong> for capabilities remaining at genesis or custom</li>
+</ol>
+<p>Example: A bank's fraud detection system might evolve from custom (H+a) to product (h+A) as machine learning models become more standardised and regulatory guidance clarifies. The workforce composition should shift accordingly.</p>
+<hr />
+<h2 id="maps-as-code-using-online-wardley-maps-dsl">Maps-as-Code Using Online Wardley Maps DSL<a class="headerlink" href="#maps-as-code-using-online-wardley-maps-dsl" title="Permanent link">&para;</a></h2>
+<p>ZORBA represents Wardley Maps as <strong>code</strong>, not static images, using the <strong>Online Wardley Maps (OWM) Domain Specific Language</strong>. This enables:</p>
+<ul>
+<li><strong>Version control:</strong> Maps evolve alongside the architecture they represent</li>
+<li><strong>Automated generation:</strong> Maps can be generated from ZORBA domain data</li>
+<li><strong>Integration:</strong> Maps embed in documentation and dashboards</li>
+<li><strong>Collaboration:</strong> Maps can be reviewed, discussed, and merged like code</li>
+</ul>
+<h3 id="online-wardley-maps-dsl-overview">Online Wardley Maps DSL Overview<a class="headerlink" href="#online-wardley-maps-dsl-overview" title="Permanent link">&para;</a></h3>
+<p>The OWM DSL provides a simple text format for defining map components and relationships:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>title My Enterprise Architecture
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>component User [0.9, 0.1]
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>component CRM System [0.7, 0.8]
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>component Customer Database [0.3, 0.9]
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>User-&gt;CRM System
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>CRM System-&gt;Customer Database
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>evolve CRM System 0.85
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>note &quot;Custom CRM being replaced by Salesforce&quot; [0.7, 0.75]
+</code></pre></div>
+<h4 id="key-dsl-elements">Key DSL Elements<a class="headerlink" href="#key-dsl-elements" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Components:</strong> <code>component Name [visibility, maturity]</code></li>
+<li>Visibility: 0 = infrastructure, 1 = user-facing</li>
+<li>Maturity: 0 = genesis, 0.25 = custom, 0.5 = product, 0.75+ = commodity</li>
+<li><strong>Dependencies:</strong> <code>ComponentA-&gt;ComponentB</code></li>
+<li><strong>Evolution:</strong> <code>evolve ComponentName newMaturity</code></li>
+<li><strong>Annotations:</strong> <code>note "Text" [visibility, maturity]</code></li>
+<li><strong>Pipelines:</strong> <code>pipeline Name [startMaturity, endMaturity]</code> (for showing evolution paths)</li>
+</ul>
+<h3 id="evolution-axis-mapping">Evolution Axis Mapping<a class="headerlink" href="#evolution-axis-mapping" title="Permanent link">&para;</a></h3>
+<p>The maturity axis (0→1) maps to ZORBA evolution stages:</p>
+<table>
+<thead>
+<tr>
+<th>ZORBA Stage</th>
+<th>OWM Maturity Range</th>
+<th>Typical Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Genesis</td>
+<td>0.0 - 0.25</td>
+<td>0.1 (novel), 0.2 (experimental)</td>
+</tr>
+<tr>
+<td>Custom</td>
+<td>0.25 - 0.5</td>
+<td>0.3 (bespoke), 0.4 (tailored)</td>
+</tr>
+<tr>
+<td>Product</td>
+<td>0.5 - 0.75</td>
+<td>0.6 (standard), 0.7 (differentiated)</td>
+</tr>
+<tr>
+<td>Commodity</td>
+<td>0.75 - 1.0</td>
+<td>0.8 (utility), 0.9 (ubiquitous)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="the-wardleymap-object-type-in-the-information-model">The WardleyMap Object Type in the Information Model<a class="headerlink" href="#the-wardleymap-object-type-in-the-information-model" title="Permanent link">&para;</a></h2>
+<p>ZORBA extends the <a href="../07-information-model/">Information Model</a> with a <strong>WardleyMap</strong> object type that captures maps as structured data:</p>
+<h3 id="wardleymap-attributes">WardleyMap Attributes<a class="headerlink" href="#wardleymap-attributes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>owm_source</code></td>
+<td>Text</td>
+<td>The OWM DSL map source code</td>
+</tr>
+<tr>
+<td><code>map_scope</code></td>
+<td>Enum</td>
+<td><code>domain</code>, <code>capability</code>, <code>value_chain</code>, <code>custom</code></td>
+</tr>
+<tr>
+<td><code>evolution_context</code></td>
+<td>Text</td>
+<td>Narrative explanation of the evolution assumptions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships">Relationships<a class="headerlink" href="#relationships" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>maps:</strong> A Wardley Map visualises Domain, Capability, Process, or Organisational Unit objects</li>
+<li>Maps can show dependencies between capabilities across domains</li>
+<li>Evolution trajectories link current and future states</li>
+</ul>
+<h3 id="usage-patterns">Usage Patterns<a class="headerlink" href="#usage-patterns" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Domain-level maps:</strong> Show all capabilities within a domain and their evolution stages</li>
+<li><strong>Value chain maps:</strong> Trace end-to-end processes across multiple domains</li>
+<li><strong>Capability maps:</strong> Deep-dive into a specific capability and its supporting components</li>
+<li><strong>Strategic maps:</strong> Connect business model components to underlying capabilities</li>
+</ol>
+<hr />
+<h2 id="example-technology-data-domain-as-a-wardley-map">Example: Technology &amp; Data Domain as a Wardley Map<a class="headerlink" href="#example-technology-data-domain-as-a-wardley-map" title="Permanent link">&para;</a></h2>
+<p>Here's how ZORBA's <strong>Technology &amp; Data domain</strong> might be represented as a Wardley Map using OWM DSL:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>title Typical IT Organisation
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>style wardley
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>size [1200, 800]
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>anchor BusinessUsers [0.95, 0.46]
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>anchor Employees [0.93, 0.62]
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>component Customer Facing Digital Services [0.83, 0.31] label [20, 0]
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>component Internal Business Applications [0.78, 0.52] label [20, 0]
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>component Product Teams [0.62, 0.18]
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>component IT Service Desk [0.60, 0.34]
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>component Security &amp; Compliance [0.58, 0.48]
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>component Data &amp; Analytics [0.56, 0.26]
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>component CI/CD Platform [0.42, 0.18]
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>component Developer Platform [0.40, 0.28]
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>component Identity &amp; Access Management [0.38, 0.42]
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>component Monitoring &amp; Observability [0.36, 0.54]
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>component Integration Platform [0.34, 0.34]
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>component Data Platform [0.32, 0.24]
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>pipeline Shared Technology Platforms [0.22, 0.62]
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>component Public Cloud [0.22, 0.20]
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>component Containers / Kubernetes [0.20, 0.30]
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>component Managed Databases [0.18, 0.40]
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>component Network &amp; CDN [0.16, 0.50]
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>component Endpoint Devices [0.14, 0.64]
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>component SaaS Commodity Tools [0.12, 0.56]
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>BusinessUsers-&gt;Customer Facing Digital Services
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>Employees-&gt;Internal Business Applications
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>Customer Facing Digital Services-&gt;Product Teams
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>Customer Facing Digital Services-&gt;Data &amp; Analytics
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>Customer Facing Digital Services-&gt;Identity &amp; Access Management
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>Customer Facing Digital Services-&gt;Monitoring &amp; Observability
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>Customer Facing Digital Services-&gt;Integration Platform
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>Internal Business Applications-&gt;IT Service Desk
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>Internal Business Applications-&gt;Security &amp; Compliance
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>Internal Business Applications-&gt;Identity &amp; Access Management
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>Internal Business Applications-&gt;Integration Platform
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>Internal Business Applications-&gt;Data Platform
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>Product Teams-&gt;CI/CD Platform
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>Product Teams-&gt;Developer Platform
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>Product Teams-&gt;Containers / Kubernetes
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>Product Teams-&gt;Public Cloud
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>IT Service Desk-&gt;Endpoint Devices
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>IT Service Desk-&gt;SaaS Commodity Tools
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>IT Service Desk-&gt;Identity &amp; Access Management
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>Security &amp; Compliance-&gt;Identity &amp; Access Management
+<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>Security &amp; Compliance-&gt;Monitoring &amp; Observability
+<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a>Security &amp; Compliance-&gt;Public Cloud
+<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>
+<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>Data &amp; Analytics-&gt;Data Platform
+<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a>Data Platform-&gt;Managed Databases
+<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>Integration Platform-&gt;Public Cloud
+<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>CI/CD Platform-&gt;Public Cloud
+<a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a>Developer Platform-&gt;Public Cloud
+<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>Monitoring &amp; Observability-&gt;Public Cloud
+<a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>Identity &amp; Access Management-&gt;Public Cloud
+<a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a>Containers / Kubernetes-&gt;Public Cloud
+<a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a>Customer Facing Digital Services-&gt;Network &amp; CDN
+<a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a>
+<a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>evolve Customer Facing Digital Services 0.88 label [-97.00, 26.00]
+<a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>evolve Internal Business Applications 0.82
+<a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a>evolve CI/CD Platform 0.72
+<a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a>evolve Developer Platform 0.70
+<a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a>evolve Identity &amp; Access Management 0.78
+<a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a>evolve Monitoring &amp; Observability 0.80
+<a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a>evolve Managed Databases 0.92 label [-33.00, 22.00]
+<a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a>evolve Network &amp; CDN 0.87 label [-46.00, 23.00]
+<a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a>evolve SaaS Commodity Tools 0.90 label [-68.00, 22.00]
+</code></pre></div>
+<p><img src="../../assets/images/wardley-map.png" alt="Wardley Map" style="height: 600px;"></p>
+<hr />
+<h2 id="practical-implementation-guidelines">Practical Implementation Guidelines<a class="headerlink" href="#practical-implementation-guidelines" title="Permanent link">&para;</a></h2>
+<h3 id="1-start-with-current-state-mapping">1. Start with Current State Mapping<a class="headerlink" href="#1-start-with-current-state-mapping" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Map existing capabilities and processes using current evolution stage</li>
+<li>Focus on accuracy over perfection — maps will evolve</li>
+<li>Include key dependencies and user journeys</li>
+<li>Use existing ZORBA domain structure as the foundation</li>
+</ul>
+<h3 id="2-add-evolution-trajectories">2. Add Evolution Trajectories<a class="headerlink" href="#2-add-evolution-trajectories" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Predict where capabilities will be in 1-3 years</li>
+<li>Consider technology trends, market forces, and organisational strategy</li>
+<li>Show evolution paths using <code>pipeline</code> and <code>evolve</code> directives</li>
+<li>Document assumptions in <code>evolution_context</code></li>
+</ul>
+<h3 id="3-plan-workforce-transitions">3. Plan Workforce Transitions<a class="headerlink" href="#3-plan-workforce-transitions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Identify capabilities moving between evolution stages</li>
+<li>Plan workforce composition changes to match evolution trajectory</li>
+<li>Invest in agent development for capabilities becoming commodity</li>
+<li>Preserve human expertise for genesis and custom capabilities</li>
+</ul>
+<h3 id="4-regular-review-and-updates">4. Regular Review and Updates<a class="headerlink" href="#4-regular-review-and-updates" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Review maps quarterly as part of architecture governance</li>
+<li>Update evolution assumptions based on market changes</li>
+<li>Adjust workforce plans based on actual evolution pace</li>
+<li>Use maps to inform technology investment decisions</li>
+</ul>
+<hr />
+<h2 id="attribution-and-licensing">Attribution and Licensing<a class="headerlink" href="#attribution-and-licensing" title="Permanent link">&para;</a></h2>
+<p><strong>Wardley Mapping</strong> and the <strong>Explorers, Villagers, and Town Planners (EVTP)</strong> organisational model are created by Simon Wardley and licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0</a>. </p>
+<p>Learn more about Wardley Mapping:
+- <a href="https://medium.com/wardleymaps">Wardley Maps on Medium</a>
+- <a href="https://learnwardleymapping.com">Learn Wardley Mapping</a>
+- <a href="https://docs.onlinewardleymaps.com/">Online Wardley Maps Documentation</a></p>
+<p>ZORBA extends Wardley Mapping methodology for enterprise architecture and workforce composition — the core mapping concepts and notation remain unchanged.</p>
+<hr />
+<h2 id="integration-with-zorba-framework">Integration with ZORBA Framework<a class="headerlink" href="#integration-with-zorba-framework" title="Permanent link">&para;</a></h2>
+<p>Evolution mapping integrates with other ZORBA framework components:</p>
+<ul>
+<li><strong><a href="../02-architecture/">Architecture</a>:</strong> Evolution stage tracked at every structural layer</li>
+<li><strong><a href="../03-workforce-model/">Workforce Model</a>:</strong> Evolution stage informs agentic profile recommendations</li>
+<li><strong><a href="../07-information-model/">Information Model</a>:</strong> Evolution metadata captured in capability and process objects</li>
+<li><strong><a href="../06-governance/">Governance</a>:</strong> Evolution tracking included in architecture decision records</li>
+</ul>
+<p>Evolution is not a separate concern — it is a <strong>cross-cutting dimension</strong> that enhances every aspect of ZORBA's enterprise architecture framework.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "toc.follow", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2752 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The open reference architecture for the agentic enterprise">
+      
+      
+      
+        <link rel="canonical" href="https://zontally.github.io/zorba/framework/07-information-model/">
+      
+      
+        <link rel="prev" href="../06-governance/">
+      
+      
+        <link rel="next" href="../08-industry-editions/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Information Model - ZORBA</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#zorba-information-model" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ZORBA" class="md-header__button md-logo" aria-label="ZORBA" data-md-component="logo">
+      
+  <img src="../../assets/logo-light.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ZORBA
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Information Model
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/zontally/zorba" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    zontally/zorba
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ZORBA" class="md-nav__button md-logo" aria-label="ZORBA" data-md-component="logo">
+      
+  <img src="../../assets/logo-light.png" alt="logo">
+
+    </a>
+    ZORBA
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/zontally/zorba" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    zontally/zorba
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Framework
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Framework
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-manifesto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manifesto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-workforce-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workforce Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-domain-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domain Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-agentic-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentic Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Information Model
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Information Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-business-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Business Objects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Business Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#object-type-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object Type Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-attributes-per-object-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Attributes per Object Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relationship-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relationship Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relationship Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relationship-type-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relationship Type Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationship-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relationship Attributes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#composition-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Composition Rules
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Composition Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hierarchical-nesting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hierarchical Nesting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organisational-structure-multi-instantiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organisational Structure &amp; Multi-Instantiation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-vs-owned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared vs. Owned
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#framework-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Framework Overlay
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traversal-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Traversal Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Traversal Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategic-alignment-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategic Alignment Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workforce-composition-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workforce Composition Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ownership-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ownership Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impact-analysis-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Impact Analysis Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-and-workforce-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evolution and Workforce Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extensibility
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extensibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-object-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Object Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-relationship-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Relationship Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Attributes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tagging-and-metadata-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tagging and Metadata Conventions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-instantiations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Instantiations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Instantiations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-small-company-50-people" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: Small Company (50 People)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-multi-lob-enterprise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Multi-LOB Enterprise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-apqcpcf-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3: APQC/PCF Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation Notes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serialisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Serialisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent-discoverability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agent Discoverability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versioning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-industry-editions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Industry Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-evolution-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evolution Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-industry-taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Industry Taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-usage-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../industry-taxonomy/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Industry taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domain Taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Industry Editions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Industry Editions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../editions/enterprise-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ZORBA for Enterprise Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../editions/professional-services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ZORBA for Professional Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-business-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Business Objects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Business Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#object-type-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object Type Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-attributes-per-object-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Attributes per Object Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relationship-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relationship Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relationship Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relationship-type-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relationship Type Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationship-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relationship Attributes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#composition-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Composition Rules
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Composition Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hierarchical-nesting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hierarchical Nesting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organisational-structure-multi-instantiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organisational Structure &amp; Multi-Instantiation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-vs-owned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared vs. Owned
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#framework-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Framework Overlay
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traversal-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Traversal Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Traversal Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategic-alignment-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategic Alignment Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workforce-composition-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workforce Composition Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ownership-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ownership Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impact-analysis-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Impact Analysis Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-and-workforce-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evolution and Workforce Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extensibility
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extensibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-object-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Object Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-relationship-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Relationship Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Attributes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tagging-and-metadata-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tagging and Metadata Conventions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-instantiations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Instantiations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Instantiations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-small-company-50-people" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: Small Company (50 People)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-multi-lob-enterprise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Multi-LOB Enterprise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-apqcpcf-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3: APQC/PCF Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation Notes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serialisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Serialisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent-discoverability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agent Discoverability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versioning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="zorba-information-model">ZORBA Information Model<a class="headerlink" href="#zorba-information-model" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The ZORBA Information Model defines the <strong>universal business object graph</strong> — the node types, edge types, composition rules, and traversal patterns that allow humans and AI agents to represent, query, and reason about any enterprise architecture.</p>
+<p>This model is deliberately <strong>framework-agnostic</strong>. While ZORBA's <a href="../04-domain-reference/">12-domain taxonomy</a> provides a recommended starting template, the information model supports any classification scheme — APQC Process Classification Framework (PCF), TOGAF, custom taxonomies, or hybrids. The data model is not ZORBA-specific; it is a universal business architecture object model that ZORBA (and any other framework) instantiates.</p>
+<h3 id="design-principles">Design Principles<a class="headerlink" href="#design-principles" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Framework-agnostic meta-model.</strong> Object types and relationship types are independent of any particular domain taxonomy. A customer already using APQC/PCF can deploy the same object graph with their existing classification.</p>
+</li>
+<li>
+<p><strong>Permissive, not rigid.</strong> A 50-person company with a single line of business and a multinational conglomerate with dozens of operating units must both be representable without forcing unnatural structures. Cardinalities are generous; required fields are minimal.</p>
+</li>
+<li>
+<p><strong>Machine-readable by design.</strong> Every object and relationship is typed, directional, and traversable. AI agents must be able to query the graph — "what objectives connect to this capability?", "what processes does this team own?", "trace this work item back to strategic intent" — without human intermediation.</p>
+</li>
+<li>
+<p><strong>Recommended templates + customisation.</strong> The object types and relationship types defined here are a recommended starting set. Organisations are encouraged to extend, rename, or restructure them to fit their reality.</p>
+</li>
+</ol>
+<hr />
+<h2 id="core-business-objects">Core Business Objects<a class="headerlink" href="#core-business-objects" title="Permanent link">&para;</a></h2>
+<p>The following table defines the <strong>node types</strong> in the business object graph. Each object type is independent of any particular framework — ZORBA's 12 domains, APQC's process groups, or a bespoke taxonomy all instantiate the same types.</p>
+<h3 id="object-type-reference">Object Type Reference<a class="headerlink" href="#object-type-reference" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Object Type</th>
+<th>Description</th>
+<th>Required?</th>
+<th>Cardinality Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Framework</strong></td>
+<td>A top-level container representing a classification scheme (e.g., "ZORBA v1", "APQC PCF v7.3", "Custom Retail Ops"). An organisation may have multiple active frameworks.</td>
+<td>Yes (≥1)</td>
+<td>One or more per organisation. Multiple frameworks may coexist.</td>
+</tr>
+<tr>
+<td><strong>Domain</strong></td>
+<td>A major area of enterprise activity. In ZORBA this maps to the <a href="../04-domain-reference/">12 domains</a>; in APQC/PCF it maps to process categories; in a custom framework it maps to whatever top-level grouping the organisation uses.</td>
+<td>Yes (≥1)</td>
+<td>Domains nest: a domain may contain sub-domains to arbitrary depth (recommended ≤4 levels).</td>
+</tr>
+<tr>
+<td><strong>Capability</strong></td>
+<td>What the organisation can do — an ability independent of how it is delivered. Maps to ZORBA <a href="../02-architecture/">Layer 3</a>.</td>
+<td>Recommended</td>
+<td>Capabilities nest within domains. A capability may belong to multiple domains (shared capability).</td>
+</tr>
+<tr>
+<td><strong>Process</strong></td>
+<td>How work flows — a structured sequence of activities that delivers a capability. Maps to ZORBA <a href="../02-architecture/">Layer 4</a>.</td>
+<td>Recommended</td>
+<td>A process belongs to one or more capabilities. Processes may be shared across lines of business.</td>
+</tr>
+<tr>
+<td><strong>Activity</strong></td>
+<td>A discrete unit of work within a process. Maps to ZORBA <a href="../02-architecture/">Layer 5</a>.</td>
+<td>Optional</td>
+<td>Activities compose within processes. An activity may appear in multiple processes (reusable activity).</td>
+</tr>
+<tr>
+<td><strong>Work Item</strong></td>
+<td>An actual instance of executed work — a ticket, transaction, case, or task. Maps to ZORBA <a href="../02-architecture/">Layer 6</a>.</td>
+<td>Optional</td>
+<td>Work items are instances of activities. Volume is unbounded.</td>
+</tr>
+<tr>
+<td><strong>Strategy</strong></td>
+<td>A strategic intent document — vision statement, strategic plan, strategic theme. Maps to ZORBA <a href="../02-architecture/">Layer 1</a>.</td>
+<td>Recommended</td>
+<td>Typically few per organisation. May be scoped to a line of business or shared across the enterprise.</td>
+</tr>
+<tr>
+<td><strong>Objective</strong></td>
+<td>A measurable target — OKR, KPI target, goal, milestone. Maps to ZORBA <a href="../02-architecture/">Layer 2</a>.</td>
+<td>Recommended</td>
+<td>Objectives nest (strategic → tactical → operational). An objective may align to multiple strategies.</td>
+</tr>
+<tr>
+<td><strong>Initiative</strong></td>
+<td>A bounded effort to achieve one or more objectives — a programme, project, or workstream.</td>
+<td>Optional</td>
+<td>Initiatives connect objectives to work. An initiative may serve multiple objectives.</td>
+</tr>
+<tr>
+<td><strong>Role</strong></td>
+<td>A named function performed by a human or agent — "Financial Controller", "Tier-1 Support Agent", "Data Steward".</td>
+<td>Recommended</td>
+<td>Roles are assigned to teams and may be filled by humans, agents, or both.</td>
+</tr>
+<tr>
+<td><strong>Agent</strong></td>
+<td>An AI agent participating in the workforce. See the <a href="../03-workforce-model/">Blended Workforce Model</a> for agent taxonomy and trust levels.</td>
+<td>Optional</td>
+<td>An agent may fill one or more roles. Agent objects carry autonomy-level and trust metadata.</td>
+</tr>
+<tr>
+<td><strong>Team</strong></td>
+<td>A group of humans and/or agents that owns or operates business objects.</td>
+<td>Recommended</td>
+<td>Teams own processes, capabilities, or domains. A team may contain sub-teams.</td>
+</tr>
+<tr>
+<td><strong>Organisational Unit</strong></td>
+<td>A structural entity within the enterprise — holding company, subsidiary, business unit, brand, division, region, department, or any other organisational grouping. Organisational Units nest recursively to model any corporate structure.</td>
+<td>Yes (≥1)</td>
+<td>Organisational Units are the <strong>root of the object graph</strong>. Every other object is ultimately scoped to one or more Organisational Units. Nest to arbitrary depth.</td>
+</tr>
+<tr>
+<td><strong>Metric</strong></td>
+<td>A measurable indicator — KPI, SLA, quality score, throughput measure. In ZORBA, <strong>Measurements</strong> are first-class peers to Activities within Processes, making process performance evaluation an explicit architectural concern alongside process execution.</td>
+<td>Optional</td>
+<td>Metrics attach to objectives, processes, capabilities, or any other object type. Measurements (a specialisation of Metric) sit as peers to Activities under Processes.</td>
+</tr>
+<tr>
+<td><strong>WardleyMap</strong></td>
+<td>A Wardley Map expressed as code using the Online Wardley Maps (OWM) DSL. Contains the map source (OWM DSL text), scoped to an Organisational Unit or Domain. Maps visualise the evolution of capabilities, processes, and their dependencies.</td>
+<td>Optional</td>
+<td>Maps can be scoped to domains, capabilities, value chains, or custom boundaries. Multiple maps may represent different views of the same architecture.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="recommended-attributes-per-object-type">Recommended Attributes per Object Type<a class="headerlink" href="#recommended-attributes-per-object-type" title="Permanent link">&para;</a></h3>
+<p>Every object carries a common set of base attributes plus type-specific extensions.</p>
+<p><strong>Base attributes (all object types):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>String (UUID)</td>
+<td>Globally unique identifier</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Enum</td>
+<td>The object type (from table above)</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>String</td>
+<td>Human-readable name</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>Text</td>
+<td>Prose description</td>
+</tr>
+<tr>
+<td><code>framework_id</code></td>
+<td>String (UUID)</td>
+<td>The framework this object belongs to (or <code>null</code> for framework-independent objects)</td>
+</tr>
+<tr>
+<td><code>parent_id</code></td>
+<td>String (UUID)</td>
+<td>Parent object of the same type (for hierarchical nesting), nullable</td>
+</tr>
+<tr>
+<td><code>owner_id</code></td>
+<td>String (UUID)</td>
+<td>The team or role that owns this object, nullable</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>Enum</td>
+<td><code>draft</code>, <code>active</code>, <code>deprecated</code>, <code>archived</code></td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>String[]</td>
+<td>Freeform tags for filtering and grouping</td>
+</tr>
+<tr>
+<td><code>metadata</code></td>
+<td>Map</td>
+<td>Arbitrary key-value pairs for custom attributes</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td>Timestamp</td>
+<td>Creation timestamp</td>
+</tr>
+<tr>
+<td><code>updated_at</code></td>
+<td>Timestamp</td>
+<td>Last modification timestamp</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Type-specific attributes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Object Type</th>
+<th>Additional Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Framework</strong></td>
+<td><code>version</code>, <code>source</code> (e.g., "ZORBA", "APQC", "Custom"), <code>uri</code> (canonical reference)</td>
+</tr>
+<tr>
+<td><strong>Domain</strong></td>
+<td><code>level</code> (depth in hierarchy, 1 = top)</td>
+</tr>
+<tr>
+<td><strong>Capability</strong></td>
+<td><code>maturity_level</code>, <code>workforce_composition</code> (human/agent/blended), <code>target_composition</code>, <code>evolution_stage</code> (enum: genesis, custom, product, commodity), <code>evolution_target</code> (same enum — where it's heading), <code>evolution_confidence</code> (float 0-1), <code>pst_phase</code> (enum: pioneer, settler, town_planner)</td>
+</tr>
+<tr>
+<td><strong>Process</strong></td>
+<td><code>process_type</code> (core, support, management), <code>sla</code>, <code>automation_percentage</code>, <code>evolution_stage</code> (enum: genesis, custom, product, commodity), <code>evolution_target</code> (same enum — where it's heading), <code>evolution_confidence</code> (float 0-1), <code>pst_phase</code> (enum: pioneer, settler, town_planner)</td>
+</tr>
+<tr>
+<td><strong>Activity</strong></td>
+<td><code>performer_type</code> (human-only, agent-capable, agent-preferred, agent-only), <code>autonomy_level</code> (A0–A4)</td>
+</tr>
+<tr>
+<td><strong>Work Item</strong></td>
+<td><code>performer_id</code>, <code>confidence</code>, <code>review_status</code>, <code>lineage</code> (trace to strategy), <code>started_at</code>, <code>completed_at</code></td>
+</tr>
+<tr>
+<td><strong>Strategy</strong></td>
+<td><code>time_horizon</code>, <code>scope</code> (enterprise, LOB, domain)</td>
+</tr>
+<tr>
+<td><strong>Objective</strong></td>
+<td><code>target_value</code>, <code>current_value</code>, <code>unit</code>, <code>cadence</code> (annual, quarterly, monthly), <code>objective_type</code> (OKR, KPI, goal)</td>
+</tr>
+<tr>
+<td><strong>Organisational Unit</strong></td>
+<td><code>unit_type</code> (holding_company, subsidiary, business_unit, brand, division, region, department, team, custom), <code>legal_entity</code> (boolean), <code>industry_edition</code> (e.g., "ZORBA for Healthcare", nullable), <code>country</code>, <code>currency</code></td>
+</tr>
+<tr>
+<td><strong>Initiative</strong></td>
+<td><code>start_date</code>, <code>end_date</code>, <code>budget</code>, <code>initiative_status</code> (planned, active, completed, cancelled)</td>
+</tr>
+<tr>
+<td><strong>Role</strong></td>
+<td><code>performer_type</code> (human, agent, either), <code>authority_level</code></td>
+</tr>
+<tr>
+<td><strong>Agent</strong></td>
+<td><code>agent_type</code> (see <a href="../03-workforce-model/">Workforce Model</a>), <code>trust_level</code>, <code>autonomy_level</code>, <code>platform</code>, <code>model</code></td>
+</tr>
+<tr>
+<td><strong>Team</strong></td>
+<td><code>team_type</code> (human, blended, agent-only), <code>member_count</code>, <code>agent_count</code></td>
+</tr>
+<tr>
+<td><strong>Metric</strong></td>
+<td><code>unit</code>, <code>direction</code> (higher-is-better, lower-is-better, target-is-best), <code>frequency</code>, <code>source_system</code>. <strong>Measurement-specific</strong> (when used as a process peer): <code>what</code> (what it measures), <code>why</code> (why it matters), <code>how</code> (formula/calculation method), <code>frequency</code> (daily/weekly/monthly/quarterly/annually), <code>direction</code> (higher_is_better, lower_is_better)</td>
+</tr>
+<tr>
+<td><strong>WardleyMap</strong></td>
+<td><code>owm_source</code> (Text - the OWM DSL map code), <code>map_scope</code> (enum: domain, capability, value_chain, custom), <code>evolution_context</code> (Text - narrative context for the map)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="relationship-types">Relationship Types<a class="headerlink" href="#relationship-types" title="Permanent link">&para;</a></h2>
+<p>Relationships are the <strong>edges</strong> in the business object graph. Every relationship is <strong>typed</strong> and <strong>directional</strong> — source → target — with defined cardinality and semantics.</p>
+<h3 id="relationship-type-reference">Relationship Type Reference<a class="headerlink" href="#relationship-type-reference" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Relationship Type</th>
+<th>Description</th>
+<th>Source Type(s)</th>
+<th>Target Type(s)</th>
+<th>Cardinality</th>
+<th>Required?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>contains</strong></td>
+<td>Hierarchical parent-child within the same type</td>
+<td>Domain, Capability, Process, Objective, Team</td>
+<td>Same as source</td>
+<td>1:N</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>belongs_to</strong></td>
+<td>Object is classified under a framework or domain</td>
+<td>Any</td>
+<td>Framework, Domain</td>
+<td>N:1 or N:M</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><strong>decomposes_into</strong></td>
+<td>Compositional: a higher-level object breaks down into lower-level objects of a different type</td>
+<td>Domain → Capability, Capability → Process, Process → Activity</td>
+<td>(implied by pairing)</td>
+<td>1:N</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><strong>instantiates</strong></td>
+<td>A work item is an instance of an activity</td>
+<td>Work Item</td>
+<td>Activity</td>
+<td>N:1</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><strong>aligns_to</strong></td>
+<td>Strategic alignment: an object contributes to a higher-level intent</td>
+<td>Objective → Strategy, Initiative → Objective, Work Item → Initiative</td>
+<td>(implied by pairing)</td>
+<td>N:M</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><strong>owns</strong></td>
+<td>Accountability: a team or role is accountable for an object</td>
+<td>Team, Role</td>
+<td>Domain, Capability, Process, Activity, Initiative</td>
+<td>1:N</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><strong>performs</strong></td>
+<td>Agency: a human, agent, or team executes work</td>
+<td>Agent, Role, Team</td>
+<td>Activity, Work Item</td>
+<td>N:M</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><strong>measures</strong></td>
+<td>A metric measures the performance of an object</td>
+<td>Metric</td>
+<td>Objective, Process, Capability, Activity, Domain</td>
+<td>N:M</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><strong>depends_on</strong></td>
+<td>A dependency between objects</td>
+<td>Process, Capability, Activity</td>
+<td>Process, Capability, Activity</td>
+<td>N:M</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><strong>collaborates_with</strong></td>
+<td>Two objects work together (non-hierarchical)</td>
+<td>Team, Agent, Role</td>
+<td>Team, Agent, Role</td>
+<td>N:M</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><strong>fills</strong></td>
+<td>An agent or human fills a role</td>
+<td>Agent, (Human reference)</td>
+<td>Role</td>
+<td>N:M</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><strong>scoped_to</strong></td>
+<td>Object is scoped to an organisational unit. This is the primary mechanism for multi-entity modelling — each OU gets its own domain trees, strategies, and teams.</td>
+<td>Any</td>
+<td>Organisational Unit</td>
+<td>N:M</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><strong>parent_unit</strong></td>
+<td>An organisational unit belongs to a parent unit (corporate hierarchy).</td>
+<td>Organisational Unit</td>
+<td>Organisational Unit</td>
+<td>N:1</td>
+<td>Optional (top-level units have no parent)</td>
+</tr>
+<tr>
+<td><strong>maps</strong></td>
+<td>A Wardley Map visualises objects</td>
+<td>WardleyMap</td>
+<td>Domain, Capability, Process, Organisational Unit</td>
+<td>1:N</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><strong>evolves_to</strong></td>
+<td>Tracks planned evolution movement</td>
+<td>Capability, Process</td>
+<td>Capability, Process</td>
+<td>1:1</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationship-attributes">Relationship Attributes<a class="headerlink" href="#relationship-attributes" title="Permanent link">&para;</a></h3>
+<p>Every relationship edge carries:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>String (UUID)</td>
+<td>Unique edge identifier</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Enum</td>
+<td>Relationship type (from table above)</td>
+</tr>
+<tr>
+<td><code>source_id</code></td>
+<td>String (UUID)</td>
+<td>Source object</td>
+</tr>
+<tr>
+<td><code>target_id</code></td>
+<td>String (UUID)</td>
+<td>Target object</td>
+</tr>
+<tr>
+<td><code>metadata</code></td>
+<td>Map</td>
+<td>Arbitrary key-value pairs (e.g., <code>effective_from</code>, <code>weight</code>, <code>notes</code>)</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>Enum</td>
+<td><code>active</code>, <code>proposed</code>, <code>deprecated</code></td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td>Timestamp</td>
+<td>Creation timestamp</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="composition-rules">Composition Rules<a class="headerlink" href="#composition-rules" title="Permanent link">&para;</a></h2>
+<h3 id="hierarchical-nesting">Hierarchical Nesting<a class="headerlink" href="#hierarchical-nesting" title="Permanent link">&para;</a></h3>
+<p>Objects of the same type may nest to arbitrary depth using the <code>contains</code> relationship. Recommended maximum depths:</p>
+<table>
+<thead>
+<tr>
+<th>Object Type</th>
+<th>Recommended Max Depth</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Organisational Unit</td>
+<td>Unbounded</td>
+<td>Holding Co → Subsidiary → Business Unit → Division → Department</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>4</td>
+<td>Enterprise → Division → Department → Sub-function</td>
+</tr>
+<tr>
+<td>Capability</td>
+<td>5</td>
+<td>L0 → L1 → L2 → L3 → L4</td>
+</tr>
+<tr>
+<td>Process</td>
+<td>3</td>
+<td>End-to-end → Sub-process → Procedure</td>
+</tr>
+<tr>
+<td>Objective</td>
+<td>3</td>
+<td>Strategic → Tactical → Operational</td>
+</tr>
+<tr>
+<td>Team</td>
+<td>4</td>
+<td>Organisation → Division → Squad → Sub-team</td>
+</tr>
+</tbody>
+</table>
+<p>These are recommendations, not constraints. The model imposes no hard limits.</p>
+<h3 id="organisational-structure-multi-instantiation">Organisational Structure &amp; Multi-Instantiation<a class="headerlink" href="#organisational-structure-multi-instantiation" title="Permanent link">&para;</a></h3>
+<p>The <strong>Organisational Unit</strong> object type is the root of the entire business object graph. It models corporate structure — holding companies, subsidiaries, business units, brands, divisions, regions, departments — as a recursive hierarchy. Every other object in the model is ultimately <code>scoped_to</code> one or more Organisational Units.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>OU: ACME Corp (type: holding_company)
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── OU: ACME Health (type: business_unit, industry_edition: &quot;ZORBA for Healthcare&quot;)
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│   ├── Domain: &quot;Supply Chain&quot; → healthcare-specific capabilities
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│   │   └── Capability: &quot;Pharmaceutical Procurement&quot;
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│   │       └── Process: &quot;Controlled Substance Supply Chain&quot;
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│   ├── Domain: &quot;Operations &amp; Delivery&quot; → clinical service delivery
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│   └── Strategy: &quot;ACME Health 2027 Growth Plan&quot;
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├── OU: ACME Digital (type: business_unit, industry_edition: &quot;ZORBA for Technology Service Providers&quot;)
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│   ├── Domain: &quot;Supply Chain&quot; → completely different: subcontractors, cloud vendors
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│   │   └── Capability: &quot;Technology Partner Management&quot;
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│   │       └── Process: &quot;Vendor Onboarding &amp; Compliance&quot;
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│   ├── Domain: &quot;Operations &amp; Delivery&quot; → project &amp; service delivery
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│   └── Strategy: &quot;ACME Digital Platform Strategy&quot;
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>│
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>├── OU: ACME Corp Group Functions (type: division)
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>│   ├── Domain: &quot;Finance&quot; (shared — group-wide)
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>│   ├── Domain: &quot;Risk, Legal &amp; Compliance&quot; (shared — group governance)
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>│   └── Domain: &quot;People &amp; Talent&quot; (shared — group HR)
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>│
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>└── Strategy: &quot;ACME Corp Group Strategy 2026–2030&quot; (scoped to top-level OU, inherited by all children)
+</code></pre></div>
+<p><strong>Rules governing Organisational Units and multi-instantiation:</strong></p>
+<ol>
+<li><strong>Every object is scoped to an Organisational Unit</strong> via the <code>scoped_to</code> relationship. Objects at a parent OU are visible to all child OUs (inheritance). Objects at a child OU are private to that unit by default.</li>
+<li><strong>Each OU may adopt a different Industry Edition.</strong> ACME Health runs "ZORBA for Healthcare" while ACME Digital runs "ZORBA for Technology Service Providers" — both within the same group.</li>
+<li><strong>Domains instantiate per OU.</strong> ACME Health's "Supply Chain" and ACME Digital's "Supply Chain" are separate domain trees with entirely different capabilities, processes, and workforce compositions.</li>
+<li><strong>Shared objects</strong> (group strategy, group finance) are scoped to a parent OU and referenced by all children. They exist once.</li>
+<li><strong>No forced symmetry.</strong> ACME Health may decompose "Supply Chain" into 15 capabilities while ACME Digital uses 3. The model does not require structural parity across OUs.</li>
+<li><strong>Cross-OU references</strong> are permitted — a shared group capability (e.g., "Group Procurement") may be consumed by processes in multiple child OUs.</li>
+<li><strong>OU types are flexible.</strong> The <code>unit_type</code> attribute accepts standard values (holding_company, subsidiary, business_unit, brand, division, region, department) but also <code>custom</code> for anything else. The hierarchy is not prescriptive — a flat company might have one OU; a multinational might have dozens nested 5+ levels deep.</li>
+</ol>
+<h3 id="shared-vs-owned">Shared vs. Owned<a class="headerlink" href="#shared-vs-owned" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Shared</strong></td>
+<td>Object exists once, referenced by multiple consumers</td>
+<td>Corporate strategy, group-wide compliance process</td>
+</tr>
+<tr>
+<td><strong>Owned</strong></td>
+<td>Object is scoped to a single owner (LOB, team, domain)</td>
+<td>LOB-specific sales process, team-level objective</td>
+</tr>
+<tr>
+<td><strong>Federated</strong></td>
+<td>Object is defined centrally but instantiated locally with permitted variation</td>
+<td>Standard procurement process with LOB-specific variations</td>
+</tr>
+</tbody>
+</table>
+<h3 id="framework-overlay">Framework Overlay<a class="headerlink" href="#framework-overlay" title="Permanent link">&para;</a></h3>
+<p>Multiple frameworks may coexist in the same object graph. This enables organisations to maintain their existing taxonomy while adopting ZORBA.</p>
+<p><strong>Example: APQC/PCF overlay on ZORBA</strong></p>
+<table>
+<thead>
+<tr>
+<th>APQC PCF Category</th>
+<th>ZORBA Domain Equivalent</th>
+<th>Mapping Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0 Develop Vision &amp; Strategy</td>
+<td>Strategy &amp; Governance</td>
+<td>Direct</td>
+</tr>
+<tr>
+<td>2.0 Develop &amp; Manage Products &amp; Services</td>
+<td>Product &amp; Innovation</td>
+<td>Direct</td>
+</tr>
+<tr>
+<td>3.0 Market &amp; Sell Products &amp; Services</td>
+<td>Marketing + Sales</td>
+<td>Split</td>
+</tr>
+<tr>
+<td>4.0 Deliver Products &amp; Services</td>
+<td>Operations &amp; Delivery + Supply Chain</td>
+<td>Split</td>
+</tr>
+<tr>
+<td>5.0 Manage Customer Service</td>
+<td>Customer Success &amp; Service</td>
+<td>Direct</td>
+</tr>
+<tr>
+<td>6.0 Develop &amp; Manage Human Capital</td>
+<td>People &amp; Talent</td>
+<td>Direct</td>
+</tr>
+<tr>
+<td>7.0 Manage Information Technology</td>
+<td>Technology &amp; Data</td>
+<td>Direct</td>
+</tr>
+<tr>
+<td>8.0 Manage Financial Resources</td>
+<td>Finance</td>
+<td>Direct</td>
+</tr>
+<tr>
+<td>9.0 Acquire, Construct &amp; Manage Assets</td>
+<td>Corporate Services (partial)</td>
+<td>Partial</td>
+</tr>
+<tr>
+<td>10.0 Manage EHS</td>
+<td>Risk, Legal &amp; Compliance (partial)</td>
+<td>Partial</td>
+</tr>
+<tr>
+<td>11.0 Manage External Relationships</td>
+<td>Strategy &amp; Governance (partial)</td>
+<td>Partial</td>
+</tr>
+<tr>
+<td>12.0 Develop &amp; Manage Business Capabilities</td>
+<td>Cross-cutting</td>
+<td>Distributed</td>
+</tr>
+<tr>
+<td>13.0 Manage Knowledge, Improvement &amp; Change</td>
+<td>Cross-cutting</td>
+<td>Distributed</td>
+</tr>
+</tbody>
+</table>
+<p>To implement a dual-framework overlay:</p>
+<ol>
+<li>Create two <code>Framework</code> objects: "ZORBA v1" and "APQC PCF v7.3".</li>
+<li>Create <code>Domain</code> objects for each framework's top-level categories.</li>
+<li>Use <code>belongs_to</code> relationships to classify capabilities, processes, and activities under both frameworks simultaneously.</li>
+<li>A single <code>Process</code> object (e.g., "Procure-to-Pay") can belong to ZORBA's "Supply Chain" domain AND APQC's "4.0 Deliver Products &amp; Services" — the model supports N:M classification.</li>
+</ol>
+<hr />
+<h2 id="traversal-patterns">Traversal Patterns<a class="headerlink" href="#traversal-patterns" title="Permanent link">&para;</a></h2>
+<p>The information model is designed for both human exploration and programmatic agent traversal. Below are common query patterns expressed as graph traversals.</p>
+<h3 id="strategic-alignment-queries">Strategic Alignment Queries<a class="headerlink" href="#strategic-alignment-queries" title="Permanent link">&para;</a></h3>
+<p><strong>"Show me all objectives connected to this capability."</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Capability --(decomposes_into)--&gt; Process
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Process --(aligns_to)--&gt; Objective  [via Initiative or directly]
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  OR
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Capability --(aligns_to)--&gt; Objective  [direct link if established]
+</code></pre></div></p>
+<p><strong>"Trace this work item back to strategic intent."</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Work Item --(instantiates)--&gt; Activity
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Activity --(part of)--&gt; Process
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Process --(aligns_to | decomposes_into⁻¹)--&gt; Capability
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Capability --(aligns_to)--&gt; Objective
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Objective --(aligns_to)--&gt; Strategy
+</code></pre></div></p>
+<h3 id="workforce-composition-queries">Workforce Composition Queries<a class="headerlink" href="#workforce-composition-queries" title="Permanent link">&para;</a></h3>
+<p><strong>"What agents are operating in this process?"</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Process --(decomposes_into)--&gt; Activity
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Activity &lt;--(performs)-- Agent
+</code></pre></div></p>
+<p><strong>"What's the workforce composition (human vs. agent) for this domain?"</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Domain --(decomposes_into)--&gt; Capability --(decomposes_into)--&gt; Process --(decomposes_into)--&gt; Activity
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Aggregate: Activity.performer_type counts → {human-only: N, agent-capable: N, agent-preferred: N, agent-only: N}
+</code></pre></div></p>
+<h3 id="ownership-queries">Ownership Queries<a class="headerlink" href="#ownership-queries" title="Permanent link">&para;</a></h3>
+<p><strong>"What processes does this team own?"</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Team --(owns)--&gt; Process [direct]
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  OR
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Team --(owns)--&gt; Capability --(decomposes_into)--&gt; Process [inherited]
+</code></pre></div></p>
+<p><strong>"Who is accountable for this domain?"</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Domain &lt;--(owns)-- Team
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Team &lt;--(fills)-- Role [where authority_level = &#39;accountable&#39;]
+</code></pre></div></p>
+<h3 id="impact-analysis-queries">Impact Analysis Queries<a class="headerlink" href="#impact-analysis-queries" title="Permanent link">&para;</a></h3>
+<p><strong>"If this capability is deprecated, what is affected?"</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Capability --(decomposes_into)--&gt; Process --&gt; Activity --&gt; Work Item
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Capability &lt;--(depends_on)-- other Capabilities/Processes
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Capability &lt;--(measures)-- Metric
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Capability &lt;--(aligns_to)-- Objective
+</code></pre></div></p>
+<h3 id="evolution-and-workforce-queries">Evolution and Workforce Queries<a class="headerlink" href="#evolution-and-workforce-queries" title="Permanent link">&para;</a></h3>
+<p><strong>"Show me all genesis-stage capabilities that need human-heavy workforce."</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Capability [evolution_stage = &quot;genesis&quot;] --&gt; filter by pst_phase = &quot;pioneer&quot;
+</code></pre></div></p>
+<p><strong>"What capabilities are evolving toward commodity and can shift to agent-heavy workforce?"</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Capability [evolution_target = &quot;commodity&quot;] --&gt; check current workforce_composition
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>Capability --(evolves_to)--&gt; Future Capability [evolution_stage = &quot;commodity&quot;]
+</code></pre></div></p>
+<p><strong>"Map all pioneer capabilities and their current workforce composition."</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Capability [pst_phase = &quot;pioneer&quot;] --&gt; get workforce_composition + target_composition
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Capability --(decomposes_into)--&gt; Process [pst_phase = &quot;pioneer&quot;]
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>Process --(performs)--&gt; Team [team_type] + Agent
+</code></pre></div></p>
+<p><strong>"Find wardley maps that visualise this domain's evolution."</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Domain &lt;--(maps)-- WardleyMap --&gt; extract owm_source + evolution_context
+</code></pre></div></p>
+<hr />
+<h2 id="extensibility">Extensibility<a class="headerlink" href="#extensibility" title="Permanent link">&para;</a></h2>
+<p>The information model is a <strong>recommended starting set</strong>, not a closed schema.</p>
+<h3 id="custom-object-types">Custom Object Types<a class="headerlink" href="#custom-object-types" title="Permanent link">&para;</a></h3>
+<p>Organisations may define additional object types that participate in the same graph. Common extensions:</p>
+<table>
+<thead>
+<tr>
+<th>Custom Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Application</strong></td>
+<td>A software system that supports capabilities or processes</td>
+<td>"SAP S/4HANA", "Salesforce"</td>
+</tr>
+<tr>
+<td><strong>Data Entity</strong></td>
+<td>A business data object managed within processes</td>
+<td>"Customer Record", "Invoice"</td>
+</tr>
+<tr>
+<td><strong>Policy</strong></td>
+<td>A governance document that constrains how work is performed</td>
+<td>"Data Retention Policy"</td>
+</tr>
+<tr>
+<td><strong>Risk</strong></td>
+<td>An identified risk attached to objectives or processes</td>
+<td>"Supplier Concentration Risk"</td>
+</tr>
+<tr>
+<td><strong>Location</strong></td>
+<td>A physical or virtual place where work is performed</td>
+<td>"London HQ", "AWS eu-west-1"</td>
+</tr>
+</tbody>
+</table>
+<p>Custom types inherit all base attributes and participate in relationships using the standard edge types plus any custom relationship types.</p>
+<h3 id="custom-relationship-types">Custom Relationship Types<a class="headerlink" href="#custom-relationship-types" title="Permanent link">&para;</a></h3>
+<p>Define new edge types using the same schema as built-in relationships:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;supports&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;An application supports a process&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span><span class="nt">&quot;source_types&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Application&quot;</span><span class="p">],</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">  </span><span class="nt">&quot;target_types&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Process&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Activity&quot;</span><span class="p">],</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">  </span><span class="nt">&quot;cardinality&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;N:M&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">  </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="custom-attributes">Custom Attributes<a class="headerlink" href="#custom-attributes" title="Permanent link">&para;</a></h3>
+<p>The <code>metadata</code> map on every object and relationship is the primary extension point. For structured extensions, organisations may define <strong>attribute schemas</strong> — named sets of key-value pairs with type constraints — and register them against object types.</p>
+<h3 id="tagging-and-metadata-conventions">Tagging and Metadata Conventions<a class="headerlink" href="#tagging-and-metadata-conventions" title="Permanent link">&para;</a></h3>
+<p>Tags and metadata enable cross-cutting classification without modifying the core schema:</p>
+<table>
+<thead>
+<tr>
+<th>Convention</th>
+<th>Example</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lob:&lt;name&gt;</code> tag</td>
+<td><code>lob:retail</code></td>
+<td>Line-of-business scoping</td>
+</tr>
+<tr>
+<td><code>region:&lt;code&gt;</code> tag</td>
+<td><code>region:emea</code></td>
+<td>Geographic scoping</td>
+</tr>
+<tr>
+<td><code>maturity:&lt;level&gt;</code> tag</td>
+<td><code>maturity:optimised</code></td>
+<td>Maturity classification</td>
+</tr>
+<tr>
+<td><code>sensitivity:&lt;level&gt;</code> metadata</td>
+<td><code>sensitivity:confidential</code></td>
+<td>Information classification</td>
+</tr>
+<tr>
+<td><code>review_cycle</code> metadata</td>
+<td><code>review_cycle:quarterly</code></td>
+<td>Governance cadence</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="example-instantiations">Example Instantiations<a class="headerlink" href="#example-instantiations" title="Permanent link">&para;</a></h2>
+<h3 id="example-1-small-company-50-people">Example 1: Small Company (50 People)<a class="headerlink" href="#example-1-small-company-50-people" title="Permanent link">&para;</a></h3>
+<p><strong>Scenario:</strong> A SaaS startup with one product, one market, and a flat organisational structure.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Framework: &quot;ZORBA v1&quot; (lite)
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>├── Domain: &quot;Strategy&quot;
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>│   ├── Strategy: &quot;2026 Growth Plan&quot;
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>│   └── Objective: &quot;Reach £5M ARR by Q4&quot;
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>│       └── Initiative: &quot;Enterprise Sales Push&quot;
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>├── Domain: &quot;Product&quot;
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>│   ├── Capability: &quot;Product Development&quot;
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>│   │   └── Process: &quot;Feature Delivery&quot;
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>│   │       ├── Activity: &quot;Requirements Analysis&quot; [agent-capable]
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>│   │       ├── Activity: &quot;Development&quot; [human-only]
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>│   │       ├── Activity: &quot;Code Review&quot; [blended]
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>│   │       └── Activity: &quot;Testing&quot; [agent-preferred]
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>│   └── Capability: &quot;Product Support&quot;
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>│       └── Process: &quot;Bug Triage&quot;
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>├── Domain: &quot;Revenue&quot; (combines Sales + Marketing + CS)
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>│   ├── Capability: &quot;Demand Generation&quot;
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>│   └── Capability: &quot;Customer Onboarding&quot;
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>├── Domain: &quot;Operations&quot; (combines Finance + People + Corp Services)
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>│   ├── Capability: &quot;Financial Management&quot;
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>│   └── Capability: &quot;Hiring&quot;
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>└── Team: &quot;Engineering&quot;
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>    ├── Role: &quot;Senior Developer&quot; (×8 humans)
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>    ├── Role: &quot;QA Agent&quot; (×2 agents)
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>    └── Agent: &quot;CodeReview-Bot&quot; → fills &quot;Code Reviewer&quot; role
+</code></pre></div>
+<p><strong>Key observations:</strong>
+- Only 4 domains (not 12) — ZORBA's taxonomy is compressed to fit the reality
+- Domains are renamed to match the company's language ("Revenue" not "Sales + Marketing")
+- Agent presence is minimal but explicit
+- The model is sparse — many optional object types are unused</p>
+<h3 id="example-2-multi-lob-enterprise">Example 2: Multi-LOB Enterprise<a class="headerlink" href="#example-2-multi-lob-enterprise" title="Permanent link">&para;</a></h3>
+<p><strong>Scenario:</strong> A financial services group with three lines of business (Retail Banking, Wealth Management, Insurance) and shared corporate functions.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Framework: &quot;ZORBA v1&quot;
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>├── [Shared] Domain: &quot;Strategy &amp; Governance&quot;
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>│   ├── Strategy: &quot;Group 5-Year Plan&quot;
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>│   ├── Objective: &quot;Group ROE &gt;15%&quot;
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>│   └── Team: &quot;Group Executive Committee&quot;
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>├── [Shared] Domain: &quot;Finance&quot;
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>│   ├── Capability: &quot;Group Financial Reporting&quot;
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>│   └── Capability: &quot;Regulatory Capital Management&quot;
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>├── [Shared] Domain: &quot;Risk, Legal &amp; Compliance&quot;
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>│   ├── Capability: &quot;Group Risk Oversight&quot;
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>│   └── Capability: &quot;AI Governance &amp; Agent Compliance&quot;
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>│
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>├── [LOB: Retail Banking] Domain: &quot;Customer Success &amp; Service&quot;
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>│   ├── Capability: &quot;Retail Customer Support&quot;
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>│   │   └── Process: &quot;Complaint Resolution&quot;
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>│   │       ├── Activity: &quot;Classify Complaint&quot; [agent-only, A4]
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>│   │       ├── Activity: &quot;Attempt Auto-Resolution&quot; [agent-preferred, A3]
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>│   │       └── Activity: &quot;Complex Resolution&quot; [human-only, A0]
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>│   └── Team: &quot;Retail Service&quot; (200 humans, 45 agents)
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>│
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>├── [LOB: Wealth Management] Domain: &quot;Customer Success &amp; Service&quot;
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>│   ├── Capability: &quot;HNW Client Advisory&quot;
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>│   │   └── Process: &quot;Portfolio Review&quot;
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>│   └── Team: &quot;Wealth Advisory&quot; (50 humans, 8 agents)
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>│
+<a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>├── [LOB: Insurance] Domain: &quot;Operations &amp; Delivery&quot;
+<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>│   ├── Capability: &quot;Claims Processing&quot;
+<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a>│   │   └── Process: &quot;Motor Claims End-to-End&quot;
+<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a>│   └── Team: &quot;Claims Operations&quot; (300 humans, 120 agents)
+<a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a>│
+<a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a>└── [Shared] Domain: &quot;Technology &amp; Data&quot;
+<a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a>    ├── Capability: &quot;Agent Platform Management&quot;
+<a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a>    └── Team: &quot;Platform Engineering&quot; (40 humans, 15 agents)
+</code></pre></div>
+<p><strong>Key observations:</strong>
+- "Customer Success &amp; Service" is instantiated separately for Retail Banking and Wealth Management — same domain name, different decomposition
+- Corporate functions (Strategy, Finance, Risk, Technology) are shared
+- Agent density varies dramatically by LOB — Insurance Claims is 29% agent, Wealth Advisory is 14%
+- The model accommodates this without structural distortion</p>
+<h3 id="example-3-apqcpcf-mapping">Example 3: APQC/PCF Mapping<a class="headerlink" href="#example-3-apqcpcf-mapping" title="Permanent link">&para;</a></h3>
+<p><strong>Scenario:</strong> An organisation already using APQC/PCF that wants to add ZORBA's workforce composition layer.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Framework: &quot;APQC PCF v7.3&quot;
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>├── Domain: &quot;1.0 Develop Vision &amp; Strategy&quot;
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>│   └── Capability: &quot;1.1 Define Business Concept &amp; Strategy&quot;
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>│       └── Process: &quot;1.1.1 Assess the External Environment&quot;
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>│           └── Activity: &quot;1.1.1.1 Analyse market trends&quot; [agent-preferred, A3]
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>│
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>Framework: &quot;ZORBA v1&quot; (overlay)
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>├── Domain: &quot;Strategy &amp; Governance&quot;
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>│   └── [links to same Capability: &quot;1.1 Define Business Concept &amp; Strategy&quot;]
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>│   └── [links to same Process: &quot;1.1.1 Assess the External Environment&quot;]
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>Shared objects:
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>  Capability &quot;1.1 Define Business Concept &amp; Strategy&quot;
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>    belongs_to → &quot;APQC PCF v7.3&quot; / &quot;1.0 Develop Vision &amp; Strategy&quot;
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>    belongs_to → &quot;ZORBA v1&quot; / &quot;Strategy &amp; Governance&quot;
+</code></pre></div>
+<p>The same capability, process, and activity objects are classified under <strong>both</strong> frameworks simultaneously. APQC provides the process taxonomy; ZORBA adds the workforce composition, agent governance, and blended workforce metadata that APQC does not address.</p>
+<hr />
+<h2 id="implementation-notes">Implementation Notes<a class="headerlink" href="#implementation-notes" title="Permanent link">&para;</a></h2>
+<h3 id="serialisation">Serialisation<a class="headerlink" href="#serialisation" title="Permanent link">&para;</a></h3>
+<p>The information model is serialisation-agnostic. Recommended formats:</p>
+<ul>
+<li><strong>JSON/JSON-LD</strong> for API interchange and agent consumption</li>
+<li><strong>YAML</strong> for human-authored configuration</li>
+<li><strong>Graph database</strong> (property graph or RDF) for large-scale traversal</li>
+<li><strong>Relational</strong> with junction tables for relationship N:M cardinality</li>
+</ul>
+<h3 id="agent-discoverability">Agent Discoverability<a class="headerlink" href="#agent-discoverability" title="Permanent link">&para;</a></h3>
+<p>For agents to traverse the business object graph effectively (see <a href="../02-architecture/">Architecture</a>, "Architecture as Operating System"):</p>
+<ol>
+<li>Every object must be addressable by <code>id</code>.</li>
+<li>Relationships must be queryable by <code>source_id</code>, <code>target_id</code>, and <code>type</code>.</li>
+<li>The graph must support reverse traversal — given a target, find all sources.</li>
+<li>Bulk queries (e.g., "all objects of type Activity where performer_type = agent-preferred") must be efficient.</li>
+<li>Schema introspection — agents must be able to discover available object types, relationship types, and attribute schemas at runtime.</li>
+</ol>
+<h3 id="versioning">Versioning<a class="headerlink" href="#versioning" title="Permanent link">&para;</a></h3>
+<p>Objects carry <code>created_at</code> and <code>updated_at</code> timestamps. For full change history, implementations should maintain an <strong>event log</strong> or <strong>version history</strong> per object. Framework-level versioning (e.g., "ZORBA v1" → "ZORBA v2") is managed via the Framework object's <code>version</code> attribute.</p>
+<hr />
+<p><em>Previous: <a href="../13-glossary/">← Glossary</a></em></p>
+<hr />
+<p><em>© 2026 Zontally. All rights reserved.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "toc.follow", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

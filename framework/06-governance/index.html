@@ -1,0 +1,2506 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The open reference architecture for the agentic enterprise">
+      
+      
+      
+        <link rel="canonical" href="https://zontally.github.io/zorba/framework/06-governance/">
+      
+      
+        <link rel="prev" href="../05-agentic-patterns/">
+      
+      
+        <link rel="next" href="../07-information-model/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Governance - ZORBA</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#governance-trust-framework" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ZORBA" class="md-header__button md-logo" aria-label="ZORBA" data-md-component="logo">
+      
+  <img src="../../assets/logo-light.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ZORBA
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Governance
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/zontally/zorba" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    zontally/zorba
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ZORBA" class="md-nav__button md-logo" aria-label="ZORBA" data-md-component="logo">
+      
+  <img src="../../assets/logo-light.png" alt="logo">
+
+    </a>
+    ZORBA
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/zontally/zorba" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    zontally/zorba
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Framework
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Framework
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-manifesto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manifesto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-workforce-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workforce Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-domain-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domain Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-agentic-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentic Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-agent-accountability-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Agent Accountability Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Agent Accountability Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-accountability-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Accountability Problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zorbas-accountability-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ZORBA's Accountability Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-decision-authority-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Decision Authority Matrix
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Decision Authority Matrix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authority-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authority Levels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-decision-authority-assignments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Decision Authority Assignments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintaining-the-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maintaining the Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-escalation-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Escalation Protocols
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Escalation Protocols">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-escalation-is-a-design-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Escalation Is a Design Feature
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escalation-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escalation Triggers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escalation-protocol-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escalation Protocol Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escalation-response-slas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escalation Response SLAs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anti-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anti-Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-audit-traceability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Audit &amp; Traceability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Audit &amp; Traceability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-audit-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Audit Challenge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zorba-audit-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ZORBA Audit Requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ZORBA Audit Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-decision-lineage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Decision Lineage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-agent-execution-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Agent Execution Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-human-agent-handoff-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Human-Agent Handoff Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-audit-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Audit Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-trust-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Trust Calibration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Trust Calibration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trust-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trust Signals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trust-calibration-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trust Calibration Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trust-is-contextual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trust Is Contextual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trust-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trust Recovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-human-override-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Human Override Principles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Human Override Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-non-negotiable-right" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Non-Negotiable Right
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-seven-override-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Seven Override Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#governance-operating-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governance Operating Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Governance Operating Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roles-and-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roles and Responsibilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#governance-cadence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governance Cadence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#governance-maturity-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governance Maturity Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-information-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Information Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-industry-editions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Industry Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-evolution-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evolution Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-industry-taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Industry Taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-usage-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../industry-taxonomy/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Industry taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domain Taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Industry Editions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Industry Editions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../editions/enterprise-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ZORBA for Enterprise Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../editions/professional-services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ZORBA for Professional Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-agent-accountability-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Agent Accountability Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Agent Accountability Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-accountability-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Accountability Problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zorbas-accountability-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ZORBA's Accountability Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-decision-authority-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Decision Authority Matrix
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Decision Authority Matrix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authority-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authority Levels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-decision-authority-assignments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Decision Authority Assignments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintaining-the-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maintaining the Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-escalation-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Escalation Protocols
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Escalation Protocols">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-escalation-is-a-design-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Escalation Is a Design Feature
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escalation-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escalation Triggers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escalation-protocol-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escalation Protocol Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escalation-response-slas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escalation Response SLAs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anti-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anti-Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-audit-traceability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Audit &amp; Traceability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Audit &amp; Traceability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-audit-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Audit Challenge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zorba-audit-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ZORBA Audit Requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ZORBA Audit Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-decision-lineage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Decision Lineage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-agent-execution-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Agent Execution Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-human-agent-handoff-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Human-Agent Handoff Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-audit-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Audit Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-trust-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Trust Calibration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Trust Calibration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trust-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trust Signals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trust-calibration-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trust Calibration Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trust-is-contextual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trust Is Contextual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trust-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trust Recovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-human-override-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Human Override Principles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Human Override Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-non-negotiable-right" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Non-Negotiable Right
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-seven-override-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Seven Override Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#governance-operating-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governance Operating Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Governance Operating Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roles-and-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roles and Responsibilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#governance-cadence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governance Cadence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#governance-maturity-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governance Maturity Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="governance-trust-framework">Governance &amp; Trust Framework<a class="headerlink" href="#governance-trust-framework" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Governing a blended workforce is fundamentally different from governing a human-only organisation. Traditional governance assumes that every decision-maker is a person with judgement, accountability, and legal personhood. In the agentic enterprise, some of the most active participants in decision-making and execution are AI agents — entities that can act autonomously but cannot be held personally accountable.</p>
+<p>This creates a <strong>governance gap</strong> that most frameworks ignore entirely.</p>
+<p>ZORBA's Governance &amp; Trust Framework addresses this gap with six interconnected components:</p>
+<ol>
+<li><strong>Agent Accountability Model</strong> — Who is responsible when an agent acts?</li>
+<li><strong>Decision Authority Matrix</strong> — Who (human or agent) can decide what?</li>
+<li><strong>Escalation Protocols</strong> — How and when do agents escalate to humans?</li>
+<li><strong>Audit &amp; Traceability</strong> — How do you audit a blended decision chain?</li>
+<li><strong>Trust Calibration</strong> — How do you manage evolving trust in agents?</li>
+<li><strong>Human Override Principles</strong> — The non-negotiable right to intervene</li>
+</ol>
+<hr />
+<h2 id="1-agent-accountability-model">1. Agent Accountability Model<a class="headerlink" href="#1-agent-accountability-model" title="Permanent link">&para;</a></h2>
+<h3 id="the-accountability-problem">The Accountability Problem<a class="headerlink" href="#the-accountability-problem" title="Permanent link">&para;</a></h3>
+<p>When a human makes a bad decision, accountability is clear. When an agent makes a bad decision, accountability fragments across:</p>
+<ul>
+<li>The agent (which cannot be disciplined or held legally liable)</li>
+<li>The human who deployed the agent</li>
+<li>The human who configured or trained the agent</li>
+<li>The human who approved the agent's autonomy level</li>
+<li>The organisation that chose to use the agent</li>
+</ul>
+<h3 id="zorbas-accountability-framework">ZORBA's Accountability Framework<a class="headerlink" href="#zorbas-accountability-framework" title="Permanent link">&para;</a></h3>
+<p>ZORBA resolves this through the <strong>Chain of Accountability</strong> model:</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Accountability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Agent Owner</strong></td>
+<td>The human or team responsible for the agent's existence, configuration, and fitness for purpose. Accountable for the agent's behaviour within its defined scope.</td>
+</tr>
+<tr>
+<td><strong>Authority Grantor</strong></td>
+<td>The human who approved the agent's autonomy level and authority boundaries. Accountable for the appropriateness of the authority granted.</td>
+</tr>
+<tr>
+<td><strong>Process Owner</strong></td>
+<td>The human who owns the process in which the agent operates. Accountable for the process design including agent participation.</td>
+</tr>
+<tr>
+<td><strong>Domain Owner</strong></td>
+<td>The human who owns the enterprise domain. Accountable for the overall workforce composition decisions in their domain.</td>
+</tr>
+<tr>
+<td><strong>Governance Function</strong></td>
+<td>The function responsible for enterprise-wide agent governance. Accountable for the governance framework itself.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-principles">Key Principles<a class="headerlink" href="#key-principles" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Accountability cannot be delegated to an agent.</strong> An agent can execute a decision, but a human must be accountable for that decision being executable by the agent.</p>
+</li>
+<li>
+<p><strong>Accountability follows authority.</strong> The human who granted the agent its authority is accountable for outcomes within that authority scope.</p>
+</li>
+<li>
+<p><strong>Shared accountability is explicit.</strong> When multiple humans share accountability for an agent's actions, each person's accountability scope must be documented.</p>
+</li>
+<li>
+<p><strong>Agent "decisions" are executions of human-defined policy.</strong> When an agent "decides" to approve a refund, it is executing a policy that a human defined and another human authorised the agent to apply.</p>
+</li>
+</ol>
+<hr />
+<h2 id="2-decision-authority-matrix">2. Decision Authority Matrix<a class="headerlink" href="#2-decision-authority-matrix" title="Permanent link">&para;</a></h2>
+<h3 id="overview_1">Overview<a class="headerlink" href="#overview_1" title="Permanent link">&para;</a></h3>
+<p>The Decision Authority Matrix (DAM) defines, for every significant decision type in the enterprise, <strong>who has authority to make that decision</strong> — and specifically, whether an agent can make it, and under what conditions.</p>
+<h3 id="authority-levels">Authority Levels<a class="headerlink" href="#authority-levels" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>D1</strong></td>
+<td><strong>Human-Only</strong></td>
+<td>Decision requires human authority. No agent involvement in the decision itself (agents may prepare information).</td>
+</tr>
+<tr>
+<td><strong>D2</strong></td>
+<td><strong>Human-Decided, Agent-Prepared</strong></td>
+<td>Agent prepares the decision package (analysis, recommendation, options). Human makes the decision.</td>
+</tr>
+<tr>
+<td><strong>D3</strong></td>
+<td><strong>Agent-Decided, Human-Approved</strong></td>
+<td>Agent makes a preliminary decision. Decision takes effect only after human approval.</td>
+</tr>
+<tr>
+<td><strong>D4</strong></td>
+<td><strong>Agent-Decided, Human-Notified</strong></td>
+<td>Agent makes and executes the decision. Human is notified and can review/reverse.</td>
+</tr>
+<tr>
+<td><strong>D5</strong></td>
+<td><strong>Agent-Decided, Exception-Reported</strong></td>
+<td>Agent makes and executes the decision autonomously. Human is informed only of exceptions or anomalies.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-decision-authority-assignments">Example Decision Authority Assignments<a class="headerlink" href="#example-decision-authority-assignments" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Decision Type</th>
+<th>Authority Level</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strategic direction changes</td>
+<td>D1</td>
+<td>Values, vision, and risk appetite</td>
+</tr>
+<tr>
+<td>Annual budget approval</td>
+<td>D1</td>
+<td>Resource commitment at scale</td>
+</tr>
+<tr>
+<td>Hiring decisions</td>
+<td>D2</td>
+<td>Legal and cultural implications</td>
+</tr>
+<tr>
+<td>Customer refund &lt; £100</td>
+<td>D5</td>
+<td>Low risk, high volume, clear rules</td>
+</tr>
+<tr>
+<td>Customer refund £100–£1,000</td>
+<td>D4</td>
+<td>Medium risk, human visibility</td>
+</tr>
+<tr>
+<td>Customer refund &gt; £1,000</td>
+<td>D2</td>
+<td>High value, human judgement</td>
+</tr>
+<tr>
+<td>Standard purchase order &lt; threshold</td>
+<td>D5</td>
+<td>Routine procurement</td>
+</tr>
+<tr>
+<td>Vendor contract negotiation</td>
+<td>D1</td>
+<td>Relationship and commitment</td>
+</tr>
+<tr>
+<td>Content publication (routine)</td>
+<td>D4</td>
+<td>Brand risk manageable</td>
+</tr>
+<tr>
+<td>Content publication (sensitive)</td>
+<td>D2</td>
+<td>Reputational risk</td>
+</tr>
+<tr>
+<td>System configuration change</td>
+<td>D3</td>
+<td>Operational risk</td>
+</tr>
+<tr>
+<td>Emergency incident response (initial)</td>
+<td>D5</td>
+<td>Speed critical</td>
+</tr>
+<tr>
+<td>Emergency incident response (major)</td>
+<td>D1</td>
+<td>Consequence severity</td>
+</tr>
+</tbody>
+</table>
+<h3 id="maintaining-the-matrix">Maintaining the Matrix<a class="headerlink" href="#maintaining-the-matrix" title="Permanent link">&para;</a></h3>
+<p>The Decision Authority Matrix is a <strong>living document</strong>:</p>
+<ul>
+<li>Reviewed quarterly or when significant changes occur</li>
+<li>Updated when agent capabilities evolve</li>
+<li>Adjusted after incidents involving agent decisions</li>
+<li>Domain owners are responsible for their section of the matrix</li>
+<li>Enterprise governance reviews the overall matrix for consistency</li>
+</ul>
+<hr />
+<h2 id="3-escalation-protocols">3. Escalation Protocols<a class="headerlink" href="#3-escalation-protocols" title="Permanent link">&para;</a></h2>
+<h3 id="why-escalation-is-a-design-feature">Why Escalation Is a Design Feature<a class="headerlink" href="#why-escalation-is-a-design-feature" title="Permanent link">&para;</a></h3>
+<p>Escalation is not failure. It is the mechanism by which agents <strong>acknowledge the limits of their authority and capability</strong>. Well-designed escalation is the single most important safety feature in a blended workforce.</p>
+<h3 id="escalation-triggers">Escalation Triggers<a class="headerlink" href="#escalation-triggers" title="Permanent link">&para;</a></h3>
+<p>Agents must escalate when:</p>
+<table>
+<thead>
+<tr>
+<th>Trigger Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Authority boundary</strong></td>
+<td>The action required exceeds the agent's decision authority level</td>
+<td>Refund amount exceeds agent's approval threshold</td>
+</tr>
+<tr>
+<td><strong>Confidence threshold</strong></td>
+<td>The agent's confidence in its assessment falls below the defined minimum</td>
+<td>Classification confidence &lt; 80%</td>
+</tr>
+<tr>
+<td><strong>Novel situation</strong></td>
+<td>The agent encounters a scenario not covered by its training or rules</td>
+<td>Customer request type never seen before</td>
+</tr>
+<tr>
+<td><strong>Conflict detection</strong></td>
+<td>The agent detects conflicting rules, data, or instructions</td>
+<td>Two policies give contradictory guidance</td>
+</tr>
+<tr>
+<td><strong>Safety concern</strong></td>
+<td>The agent detects potential harm, legal risk, or ethical issue</td>
+<td>Data suggests discriminatory outcome</td>
+</tr>
+<tr>
+<td><strong>Consecutive failures</strong></td>
+<td>The agent has failed at this task type multiple times consecutively</td>
+<td>Third failed attempt at automated resolution</td>
+</tr>
+<tr>
+<td><strong>Human request</strong></td>
+<td>A human explicitly requests escalation or review</td>
+<td>Customer asks to speak to a person</td>
+</tr>
+</tbody>
+</table>
+<h3 id="escalation-protocol-structure">Escalation Protocol Structure<a class="headerlink" href="#escalation-protocol-structure" title="Permanent link">&para;</a></h3>
+<p>Every escalation must include:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ESCALATION PACKET:
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── Escalation ID (unique, traceable)
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── Trigger type and description
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── Full context of the situation
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├── Actions already taken by the agent
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├── Agent&#39;s assessment (if any) with confidence level
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>├── Recommended actions (if applicable)
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├── Time sensitivity / SLA implications
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├── Suggested escalation target (human or higher-authority agent)
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>└── Current state preservation (so the target can resume seamlessly)
+</code></pre></div>
+<h3 id="escalation-response-slas">Escalation Response SLAs<a class="headerlink" href="#escalation-response-slas" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Escalation Priority</th>
+<th>Response Target</th>
+<th>Use When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Critical</strong></td>
+<td>&lt; 15 minutes</td>
+<td>Safety, legal, major financial impact</td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>&lt; 1 hour</td>
+<td>Customer-impacting, SLA at risk</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>&lt; 4 hours</td>
+<td>Normal exception handling</td>
+</tr>
+<tr>
+<td><strong>Low</strong></td>
+<td>&lt; 24 hours</td>
+<td>Improvement opportunity, non-urgent review</td>
+</tr>
+</tbody>
+</table>
+<h3 id="anti-patterns">Anti-Patterns<a class="headerlink" href="#anti-patterns" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Escalation flooding</strong> — Agent escalates too frequently, overwhelming humans. <em>Fix: Recalibrate thresholds, expand agent authority, or improve agent capability.</em></li>
+<li><strong>Escalation avoidance</strong> — Agent operates beyond its authority rather than escalating. <em>Fix: This is a critical governance failure. Reduce autonomy level. Investigate root cause.</em></li>
+<li><strong>Escalation ping-pong</strong> — Issue bounces between agents and humans without resolution. <em>Fix: Define clear ownership. If escalated to a human, the human owns it until resolved or explicitly delegated back.</em></li>
+<li><strong>Context-free escalation</strong> — Agent escalates without adequate context. <em>Fix: Enforce escalation packet structure. Agent cannot escalate without the required fields.</em></li>
+</ul>
+<hr />
+<h2 id="4-audit-traceability">4. Audit &amp; Traceability<a class="headerlink" href="#4-audit-traceability" title="Permanent link">&para;</a></h2>
+<h3 id="the-audit-challenge">The Audit Challenge<a class="headerlink" href="#the-audit-challenge" title="Permanent link">&para;</a></h3>
+<p>In a traditional enterprise, audit follows humans. In a blended workforce, audit must follow <strong>decisions and actions regardless of whether the performer was human or agent</strong>.</p>
+<h3 id="zorba-audit-requirements">ZORBA Audit Requirements<a class="headerlink" href="#zorba-audit-requirements" title="Permanent link">&para;</a></h3>
+<h4 id="41-decision-lineage">4.1 Decision Lineage<a class="headerlink" href="#41-decision-lineage" title="Permanent link">&para;</a></h4>
+<p>Every significant decision must be traceable through its full lineage:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Decision Lineage:
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── Strategic context (which strategy/objective does this serve?)
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>├── Authority basis (what gave the decision-maker authority?)
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>├── Information basis (what data/analysis informed the decision?)
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>├── Decision rationale (why this option vs. alternatives?)
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>├── Performer (human ID or agent ID)
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>├── Autonomy level at time of decision
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>├── Review status (reviewed by whom, or auto-approved)
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>└── Outcome (what happened as a result?)
+</code></pre></div>
+<h4 id="42-agent-execution-logs">4.2 Agent Execution Logs<a class="headerlink" href="#42-agent-execution-logs" title="Permanent link">&para;</a></h4>
+<p>Agent-executed activities must produce logs that meet audit standards:</p>
+<table>
+<thead>
+<tr>
+<th>Log Element</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Timestamp</strong></td>
+<td>Precise time of every action</td>
+</tr>
+<tr>
+<td><strong>Agent identity</strong></td>
+<td>Which agent instance performed the action</td>
+</tr>
+<tr>
+<td><strong>Input data</strong></td>
+<td>What data the agent received</td>
+</tr>
+<tr>
+<td><strong>Processing logic</strong></td>
+<td>What rules, models, or reasoning the agent applied</td>
+</tr>
+<tr>
+<td><strong>Output</strong></td>
+<td>What the agent produced or decided</td>
+</tr>
+<tr>
+<td><strong>Confidence</strong></td>
+<td>Agent's self-assessed confidence level</td>
+</tr>
+<tr>
+<td><strong>Alternatives considered</strong></td>
+<td>Other options the agent evaluated (where applicable)</td>
+</tr>
+<tr>
+<td><strong>Escalations</strong></td>
+<td>Any escalations triggered, to whom, and resolution</td>
+</tr>
+<tr>
+<td><strong>Exceptions</strong></td>
+<td>Any anomalies detected or errors encountered</td>
+</tr>
+</tbody>
+</table>
+<h4 id="43-human-agent-handoff-logs">4.3 Human-Agent Handoff Logs<a class="headerlink" href="#43-human-agent-handoff-logs" title="Permanent link">&para;</a></h4>
+<p>Every transition between human and agent must be logged:</p>
+<ul>
+<li>Who handed off to whom</li>
+<li>What state was transferred</li>
+<li>What authority was conferred or revoked</li>
+<li>What the receiving party (human or agent) did next</li>
+</ul>
+<h4 id="44-audit-capabilities">4.4 Audit Capabilities<a class="headerlink" href="#44-audit-capabilities" title="Permanent link">&para;</a></h4>
+<p>The blended workforce must support:</p>
+<ul>
+<li><strong>End-to-end process trace</strong> — follow any work instance from inception to completion across all human and agent performers</li>
+<li><strong>Agent performance audit</strong> — evaluate any agent's decision quality over time</li>
+<li><strong>Authority compliance audit</strong> — verify that agents operated within their authority boundaries</li>
+<li><strong>Escalation audit</strong> — analyse escalation patterns for governance and capability gaps</li>
+<li><strong>Workforce composition audit</strong> — assess whether the actual human/agent mix matches the designed composition</li>
+</ul>
+<hr />
+<h2 id="5-trust-calibration">5. Trust Calibration<a class="headerlink" href="#5-trust-calibration" title="Permanent link">&para;</a></h2>
+<h3 id="overview_2">Overview<a class="headerlink" href="#overview_2" title="Permanent link">&para;</a></h3>
+<p>Trust in agents is not a switch (on/off). It is a <strong>continuously calibrated variable</strong> that determines how much autonomy an agent receives. Trust calibration is the process by which the organisation adjusts agent autonomy based on evidence.</p>
+<h3 id="trust-signals">Trust Signals<a class="headerlink" href="#trust-signals" title="Permanent link">&para;</a></h3>
+<p>Trust is calibrated based on observable signals:</p>
+<p><strong>Positive signals (trust increases):</strong>
+- Consistent decision quality over sustained periods
+- Appropriate escalation behaviour (escalates when it should, doesn't when it shouldn't)
+- Graceful handling of edge cases
+- Accurate self-assessment of confidence
+- Positive human feedback on outputs</p>
+<p><strong>Negative signals (trust decreases):</strong>
+- Decision errors, especially repeated patterns
+- Failure to escalate when appropriate
+- Inappropriate autonomous action
+- Declining output quality
+- Misalignment between confidence scores and actual accuracy
+- Adverse incidents involving agent actions</p>
+<h3 id="trust-calibration-process">Trust Calibration Process<a class="headerlink" href="#trust-calibration-process" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>1. CONTINUOUS MONITORING
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>   Agent performance metrics are collected continuously.
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2. PERIODIC REVIEW (monthly or as triggered)
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>   Performance data is reviewed against trust thresholds.
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>3. TRUST ASSESSMENT
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>   Current trust level assessed against criteria for current
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>   and adjacent autonomy levels.
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>4. CALIBRATION DECISION (human authority required)
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>   - Maintain current level
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>   - Promote to higher autonomy (requires positive evidence)
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>   - Demote to lower autonomy (triggered by negative signals)
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>   - Suspend (immediate, pending investigation)
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>5. IMPLEMENTATION
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>   Autonomy level adjusted in agent configuration.
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>   Affected humans notified of the change.
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>6. OBSERVATION PERIOD
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>   Enhanced monitoring following any trust level change.
+</code></pre></div>
+<h3 id="trust-is-contextual">Trust Is Contextual<a class="headerlink" href="#trust-is-contextual" title="Permanent link">&para;</a></h3>
+<p>An agent may hold different trust levels in different contexts:</p>
+<ul>
+<li>High trust for standard transactions, low trust for edge cases</li>
+<li>High trust during normal operations, reduced trust during periods of market volatility</li>
+<li>High trust in one domain, not automatically transferable to another</li>
+<li>Trust earned in one organisation does not transfer to another</li>
+</ul>
+<h3 id="trust-recovery">Trust Recovery<a class="headerlink" href="#trust-recovery" title="Permanent link">&para;</a></h3>
+<p>When trust is reduced, there must be a defined path to recovery:</p>
+<ol>
+<li>Root cause analysis of the trust-reducing event</li>
+<li>Remediation (retraining, rule adjustment, scope reduction)</li>
+<li>Re-entry at reduced autonomy level with enhanced monitoring</li>
+<li>Graduated return to previous autonomy based on sustained performance</li>
+</ol>
+<hr />
+<h2 id="6-human-override-principles">6. Human Override Principles<a class="headerlink" href="#6-human-override-principles" title="Permanent link">&para;</a></h2>
+<h3 id="the-non-negotiable-right">The Non-Negotiable Right<a class="headerlink" href="#the-non-negotiable-right" title="Permanent link">&para;</a></h3>
+<p>Human override is the <strong>foundational principle</strong> of the ZORBA Governance Framework. It is not a feature. It is an axiom.</p>
+<h3 id="the-seven-override-principles">The Seven Override Principles<a class="headerlink" href="#the-seven-override-principles" title="Permanent link">&para;</a></h3>
+<p><strong>1. Universality</strong>
+Every agent, at every autonomy level, in every domain, is subject to human override. No exceptions.</p>
+<p><strong>2. Immediacy</strong>
+Override takes effect immediately upon invocation. The agent cannot delay, negotiate, or queue an override request.</p>
+<p><strong>3. Completeness</strong>
+Override can stop, redirect, or take over agent activity entirely. Partial override (e.g., "stop doing X but continue Y") is also supported.</p>
+<p><strong>4. Authority</strong>
+Override authority is defined — not everyone can override every agent. But the authority structure must ensure that at least one available human can override any given agent at any time.</p>
+<p><strong>5. State Preservation</strong>
+When overridden, the agent must preserve and make available its current state, context, and in-progress work so that the overriding human can continue effectively.</p>
+<p><strong>6. Non-Retaliation</strong>
+An agent that has been overridden must not treat the override as a signal to change its behaviour in ways not explicitly directed. Override is a governance event, not a training signal (unless explicitly used as such).</p>
+<p><strong>7. Transparency</strong>
+All overrides are logged with full context: who overrode, which agent, what the agent was doing, why the override occurred, and what happened next.</p>
+<hr />
+<h2 id="governance-operating-model">Governance Operating Model<a class="headerlink" href="#governance-operating-model" title="Permanent link">&para;</a></h2>
+<h3 id="roles-and-responsibilities">Roles and Responsibilities<a class="headerlink" href="#roles-and-responsibilities" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Chief Agent Officer</strong> (or equivalent)</td>
+<td>Enterprise-wide agent strategy, governance, and risk management</td>
+</tr>
+<tr>
+<td><strong>Domain Agent Steward</strong></td>
+<td>Agent governance within a specific domain — workforce composition, autonomy levels, performance</td>
+</tr>
+<tr>
+<td><strong>Agent Owner</strong></td>
+<td>Day-to-day management of specific agents — configuration, monitoring, incident response</td>
+</tr>
+<tr>
+<td><strong>Agent Auditor</strong></td>
+<td>Independent assessment of agent compliance, performance, and governance adherence</td>
+</tr>
+<tr>
+<td><strong>Ethics &amp; AI Review Board</strong></td>
+<td>Oversight of ethical implications, bias, fairness, and societal impact</td>
+</tr>
+</tbody>
+</table>
+<h3 id="governance-cadence">Governance Cadence<a class="headerlink" href="#governance-cadence" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>Frequency</th>
+<th>Participants</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent performance review</td>
+<td>Monthly</td>
+<td>Agent Owner, Domain Agent Steward</td>
+</tr>
+<tr>
+<td>Trust calibration assessment</td>
+<td>Monthly or triggered</td>
+<td>Domain Agent Steward, Agent Owner</td>
+</tr>
+<tr>
+<td>Decision Authority Matrix review</td>
+<td>Quarterly</td>
+<td>Domain owners, governance function</td>
+</tr>
+<tr>
+<td>Workforce composition review</td>
+<td>Quarterly</td>
+<td>Domain owners, executive leadership</td>
+</tr>
+<tr>
+<td>Enterprise agent governance review</td>
+<td>Semi-annually</td>
+<td>Chief Agent Officer, executive leadership</td>
+</tr>
+<tr>
+<td>Ethics and bias audit</td>
+<td>Annually or triggered</td>
+<td>Ethics &amp; AI Review Board, Agent Auditor</td>
+</tr>
+<tr>
+<td>Full governance framework review</td>
+<td>Annually</td>
+<td>All governance roles</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="governance-maturity-model">Governance Maturity Model<a class="headerlink" href="#governance-maturity-model" title="Permanent link">&para;</a></h2>
+<p>Organisations adopt agent governance progressively. ZORBA defines five maturity levels:</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Name</th>
+<th>Characteristics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>G1</strong></td>
+<td><strong>Ad Hoc</strong></td>
+<td>Agents deployed without formal governance. Accountability unclear. No systematic monitoring.</td>
+</tr>
+<tr>
+<td><strong>G2</strong></td>
+<td><strong>Emerging</strong></td>
+<td>Basic accountability defined. Some monitoring in place. Decision authority informal.</td>
+</tr>
+<tr>
+<td><strong>G3</strong></td>
+<td><strong>Defined</strong></td>
+<td>Governance framework documented. Decision Authority Matrix established. Escalation protocols defined. Regular audits.</td>
+</tr>
+<tr>
+<td><strong>G4</strong></td>
+<td><strong>Managed</strong></td>
+<td>Governance is operationalised and measured. Trust calibration is systematic. Audit is comprehensive. Governance is itself partially agent-assisted.</td>
+</tr>
+<tr>
+<td><strong>G5</strong></td>
+<td><strong>Optimising</strong></td>
+<td>Governance is continuously improving based on data. Agents participate in governance monitoring. Workforce composition is dynamically optimised. The governance framework itself is a living, adaptive system.</td>
+</tr>
+</tbody>
+</table>
+<p>Most organisations today are at G1 or G2. ZORBA provides the path to G3 and beyond.</p>
+<hr />
+<p><em>Previous: <a href="../05-agentic-patterns/">← Agentic Enterprise Patterns</a> | Next: <a href="../13-glossary/">Glossary →</a></em></p>
+<hr />
+<p><em>© 2026 Zontally. All rights reserved.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "toc.follow", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
