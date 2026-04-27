@@ -1,8 +1,8 @@
 {
   "edition": "core",
   "name": "ZORBA Core",
-  "version": "0.3.4",
-  "compiled_at": "2026-04-27T13:43:06.510Z",
+  "version": "0.3.5",
+  "compiled_at": "2026-04-27T13:48:17.544Z",
   "stats": {
     "totalDomains": 12,
     "totalCapabilities": 87,

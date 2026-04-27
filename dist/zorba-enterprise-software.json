@@ -2,8 +2,8 @@
   "edition": "enterprise-software",
   "name": "ZORBA for Enterprise Software",
   "extends": "core",
-  "version": "0.3.4",
-  "compiled_at": "2026-04-27T13:43:06.523Z",
+  "version": "0.3.5",
+  "compiled_at": "2026-04-27T13:48:17.561Z",
   "stats": {
     "totalDomains": 12,
     "totalCapabilities": 87,
