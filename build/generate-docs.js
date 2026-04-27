@@ -345,7 +345,12 @@ function generateIndustryTaxonomyOverviewIndex(data) {
   }
 
   lines.push(
-    'Each industry has its own page with sector-level signals and traits. Sub-industry pages hold full structured detail (signals, value drivers, capabilities, and more).'
+    'Each industry has its own page with sector-level signals and traits. Sub-industry pages hold full structured detail (signals, value drivers, capabilities, and more).',
+    '',
+    '## Download industry taxonomy JSON',
+    '',
+    '[zorba-industries.json](https://github.com/zontally/zorba/releases/download/v${compiled.version}/zorba-industries.json)',
+    '',
   );
   lines.push('');
   lines.push('---');
