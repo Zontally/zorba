@@ -33,8 +33,7 @@ jobs:
         with:
           node-version: '20'
       - run: npm install
-      - run: npm run compile
-      - run: npm run generate
+      - run: npm run build
 
       # Commit compiled JSON back to repo (main only)
       - name: Commit dist/
