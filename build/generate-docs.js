@@ -349,7 +349,7 @@ function generateIndustryTaxonomyOverviewIndex(data) {
     '',
     '## Download industry taxonomy JSON',
     '',
-    `[zorba-industries.json](https://github.com/zontally/zorba/releases/download/v${data.version}/zorba-industries.json)`,
+    `[zorba-industries.json](https://github.com/zontally/zorba/releases/download/${data.version}/zorba-industries.json)`,
     '',
   );
   lines.push('');
