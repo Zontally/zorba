@@ -650,6 +650,50 @@ domain:
               how: "Up-to-date translations / Total translations × 100"
               frequency: monthly
               direction: higher_is_better
+        - id: "734198"
+          number: "5.5.6"
+          name: "Govern knowledge taxonomy and information architecture"
+          agentic_profile: "H=A"
+          agentic_note: "Agents can suggest taxonomy improvements based on content analysis, but humans must govern the overall structure to ensure it aligns with user mental models and business strategy."
+          measurements:
+            - id: "054101"
+              number: "5.5.6.M1"
+              name: "Taxonomy Coverage Score"
+              what: "Percentage of knowledge base content accurately classified within the defined taxonomy."
+              why: "A well-governed taxonomy ensures content is discoverable and logically organised, which is critical for self-service success."
+              how: "(Number of correctly tagged articles / Total number of articles) * 100"
+              frequency: quarterly
+              direction: higher_is_better
+            - id: "054102"
+              number: "5.5.6.M2"
+              name: "Time to Find Information"
+              what: "Average time taken by users to find a correct answer in the knowledge base, measured via analytics."
+              why: "A lower time-to-find indicates an efficient information architecture and effective taxonomy."
+              how: "Average session duration for successful knowledge base searches (in seconds)"
+              frequency: monthly
+              direction: lower_is_better
+        - id: "283746"
+          number: "5.5.7"
+          name: "Optimise knowledge for AI agent retrieval"
+          agentic_profile: "h+A"
+          agentic_note: "Agents can automatically chunk, tag, and format knowledge for optimal retrieval by other AI agents, but humans should oversee the process to ensure the semantic integrity of the information is maintained."
+          measurements:
+            - id: "054201"
+              number: "5.5.7.M1"
+              name: "Agent Retrieval Success Rate"
+              what: "Percentage of AI agent queries to the knowledge base that return a correct and relevant answer."
+              why: "This directly measures how effectively the knowledge base is serving its AI 'users', which is crucial for automated support."
+              how: "(Number of successful agent retrievals / Total agent queries) * 100"
+              frequency: weekly
+              direction: higher_is_better
+            - id: "054202"
+              number: "5.5.7.M2"
+              name: "Content Chunking Effectiveness"
+              what: "A measure of how well knowledge articles are chunked for retrieval, often assessed by the relevance of retrieved chunks to a query."
+              why: "Poorly chunked content can lead to irrelevant or incomplete answers from AI agents, hurting the customer experience."
+              how: "Average relevance score (e.g., on a 1-5 scale) of chunks retrieved for a sample set of queries."
+              frequency: monthly
+              direction: higher_is_better
 
     - id: "938147"
       number: "5.6"

@@ -1,0 +1,31 @@
+# Enterprise Software Edition Overrides for Customer Success & Service Domain
+# This file extends the core domain model for the specific needs of an
+# enterprise software company.
+
+capabilities:
+  - id: "274639" # 5.5 - Build and Maintain the Customer Knowledge Base
+    # This extension adds a process specifically for managing the complex
+    # feedback loops common in enterprise software.
+    processes:
+      - id: "442198"
+        number: "5.5.8"
+        name: "Manage the feedback loop from product, support, and AI usage into knowledge"
+        agentic_profile: "H=A"
+        agentic_note: "Agents can correlate data from various sources (support tickets, product telemetry, agent query failures) to identify knowledge gaps, but a human knowledge manager is essential to synthesise these diverse inputs into a coherent content strategy."
+        measurements:
+          - id: "054301"
+            number: "5.5.8.M1"
+            name: "Knowledge Gap Identification Rate"
+            what: "The number of actionable knowledge gaps identified per month from product, support, and AI analytics."
+            why: "A high rate indicates a healthy feedback loop and a proactive approach to improving the knowledge base before customers are impacted."
+            how: "Count of new knowledge base articles or updates initiated from non-user-reported feedback channels."
+            frequency: monthly
+            direction: higher_is_better
+          - id: "054302"
+            number: "5.5.8.M2"
+            name: "Time to Incorporate Feedback"
+            what: "The average time from when a knowledge gap is identified (e.g., from a new product feature or a failed agent query) to when the corresponding knowledge is published."
+            why: "Rapidly incorporating feedback ensures the knowledge base keeps pace with the product and customer needs, particularly in a fast-moving software environment."
+            how: "Average time in days from feedback receipt to knowledge publication."
+            frequency: monthly
+            direction: lower_is_better

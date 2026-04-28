@@ -810,6 +810,28 @@ domain:
               how: "Compliant devices / Total managed devices x 100"
               frequency: monthly
               direction: higher_is_better
+        - id: "529871"
+          number: "10.6.6"
+          name: "Manage Knowledge"
+          agentic_profile: "H=A"
+          agentic_note: "Agents manage the knowledge base, create draft articles from incidents, and flag stale content; humans approve, curate, and define the overall knowledge management strategy."
+          measurements:
+            - id: "104201"
+              number: "10.6.6.M1"
+              name: "Knowledge Base Article Contribution Rate"
+              what: "Number of new and updated knowledge articles published per month"
+              why: "Ensures the knowledge base grows, stays current, and reflects resolved issues"
+              how: "Count of new or significantly updated articles published"
+              frequency: monthly
+              direction: higher_is_better
+            - id: "104202"
+              number: "10.6.6.M2"
+              name: "Knowledge Article Utilisation Rate"
+              what: "Percentage of service requests resolved using knowledge articles (self-service or assisted)"
+              why: "High utilisation proves the value and effectiveness of the knowledge base in deflecting tickets and speeding up resolution"
+              how: "(Incidents resolved with KB link / Total incidents) x 100"
+              frequency: monthly
+              direction: higher_is_better
 
     - id: "925743"
       number: "10.7"
