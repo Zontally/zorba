@@ -1,0 +1,22 @@
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{etoolbox}
+\usepackage{xurl}
+
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{ZORBA Framework Booklet}
+\fancyhead[R]{\leftmark}
+\fancyfoot[C]{\thepage\ of \pageref{LastPage}}
+
+% Keep table headers visible across pages.
+\AtBeginEnvironment{longtable}{\small}
+\renewcommand{\arraystretch}{1.15}
+
+% Allow wrapping in long textual columns.
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}

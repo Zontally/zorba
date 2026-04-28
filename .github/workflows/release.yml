@@ -32,8 +32,21 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+      - name: Install Pandoc and LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-xetex texlive-latex-extra lmodern
       - run: npm install
       - run: npm run build
+      - name: Verify booklet PDFs in dist
+        run: |
+          shopt -s nullglob
+          pdfs=(dist/*-booklet.pdf)
+          if [ ${#pdfs[@]} -eq 0 ]; then
+            echo "No booklet PDFs generated in dist/"
+            exit 1
+          fi
+          ls -lh "${pdfs[@]}"
 
       # Upload generated docs for MkDocs job
       - name: Upload generated docs

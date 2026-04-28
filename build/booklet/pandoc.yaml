@@ -1,0 +1,17 @@
+from: markdown+pipe_tables+grid_tables+table_captions
+pdf-engine: xelatex
+toc: true
+toc-depth: 3
+number-sections: true
+highlight-style: tango
+variables:
+  geometry:
+    - margin=1in
+  fontsize: 11pt
+  linestretch: 1.15
+  colorlinks: true
+  linkcolor: blue
+  urlcolor: blue
+header-includes:
+  - |
+    \input{build/booklet/preamble.tex}
