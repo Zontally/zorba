@@ -9,6 +9,7 @@ const DIST_DIR = path.join(ROOT, 'dist');
 const FRAMEWORK_DIR = path.join(ROOT, 'framework');
 const TEMP_DIR = path.join(ROOT, 'build', '.tmp-booklets');
 const PANDOC_DEFAULTS = path.join(ROOT, 'build', 'booklet', 'pandoc.yaml');
+const PACKAGE_JSON = path.join(ROOT, 'package.json');
 
 function exists(filePath) {
   return fs.existsSync(filePath);
@@ -27,6 +28,18 @@ function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 }
 
+function readPackageVersion() {
+  const pkg = readJson(PACKAGE_JSON);
+  return pkg.version || '';
+}
+
+function formatGeneratedTimestamp(date = new Date()) {
+  return new Intl.DateTimeFormat('en-GB', {
+    dateStyle: 'long',
+    timeStyle: 'short'
+  }).format(date);
+}
+
 function readFrameworkFiles() {
   if (!exists(FRAMEWORK_DIR)) {
     throw new Error(`Framework directory not found: ${FRAMEWORK_DIR}`);
@@ -34,6 +47,23 @@ function readFrameworkFiles() {
   return fs.readdirSync(FRAMEWORK_DIR)
     .filter(name => name.endsWith('.md'))
     .sort((a, b) => a.localeCompare(b));
+}
+
+function normalizeFrameworkAssetPaths(content) {
+  let normalized = content
+    .replace(/src=["']\.\.\/\.\.\/assets\/images\//g, 'src="static/assets/images/')
+    .replace(/\]\(\.\.\/\.\.\/assets\/images\//g, '](static/assets/images/');
+
+  // Pandoc-to-PDF drops raw HTML img tags; convert them to markdown images.
+  normalized = normalized.replace(
+    /<img\s+[^>]*src=["']([^"']+)["'][^>]*alt=["']([^"']*)["'][^>]*>/gi,
+    (_match, src, alt) => `![${alt || ''}](${src})`
+  );
+
+  // Render markdown links as plain text labels in PDFs (no clickable targets).
+  normalized = normalized.replace(/(^|[^!])\[([^\]]+)\]\(([^)]+)\)/g, '$1$2');
+
+  return normalized;
 }
 
 function discoverCompiledTargets() {
@@ -50,7 +80,7 @@ function discoverCompiledTargets() {
   const targets = files.map(filename => {
     const slug = filename.replace(/^zorba-/, '').replace(/\.json$/, '');
     const inputPath = path.join(DIST_DIR, filename);
-    const outputPath = path.join(DIST_DIR, `zorba-${slug}-booklet.pdf`);
+    const outputPath = path.join(DIST_DIR, `zorba-${slug}-model-booklet.pdf`);
     return { slug, inputPath, outputPath };
   });
 
@@ -229,35 +259,75 @@ function renderDataModelSection(compiled) {
   return lines.join('\n');
 }
 
-function renderBookletMarkdown(target, compiled, frameworkFiles) {
-  const prettyEditionName = target.slug === 'core'
-    ? 'Core'
-    : (compiled.name || target.slug);
-
+function renderFrameworkBookletMarkdown(frameworkFiles, version) {
+  const generatedAt = formatGeneratedTimestamp();
   const sections = [];
-  sections.push(`# ZORBA ${prettyEditionName} Booklet`);
+  sections.push(`\\fancyfoot[L]{Version ${version}}`);
   sections.push('');
-  sections.push(`_Version ${compiled.version || ''}_`);
+  sections.push('\\begin{titlepage}');
+  sections.push('\\centering');
+  sections.push('\\vspace*{1cm}');
+  sections.push('\\includegraphics[width=0.7\\textwidth]{static/assets/logo-dark.png}');
+  sections.push('\\par');
+  sections.push('\\vspace{2cm}');
+  sections.push('{\\Huge\\bfseries ZORBA framework\\par}');
+  sections.push('\\vspace{1.5cm}');
+  sections.push('{\\Large The Reference Architecture for the Agentic Enterprise\\par}');
+  sections.push('\\vspace{1cm}');
+  sections.push('ZORBA is an open business architecture framework that defines how organisations operate when humans and AI agents work as one. From strategy to execution, across every domain, for any industry.');
+  sections.push('\\par');
+  sections.push('\\vspace{0.75cm}');
+  sections.push(`{\\large Version ${version}\\par}`);
+  sections.push('\\vfill');
+  sections.push(`{\\large Generated ${generatedAt}\\par}`);
+  sections.push('\\end{titlepage}');
   sections.push('');
-  sections.push(`_Generated ${new Date().toISOString()}_`);
+  sections.push('\\tableofcontents');
   sections.push('');
   sections.push('\\newpage');
   sections.push('');
-  sections.push('# Framework');
+  sections.push('# Introduction');
+  sections.push('');
+  sections.push('This volume contains the complete ZORBA framework guidance and methodology.');
+  sections.push('');
+  sections.push('\\newpage');
   sections.push('');
 
   for (const fileName of frameworkFiles) {
     const filePath = path.join(FRAMEWORK_DIR, fileName);
-    const title = fileName.replace(/^\d+-/, '').replace(/\.md$/, '').replace(/-/g, ' ');
     const content = fs.readFileSync(filePath, 'utf8');
-    sections.push(`## ${title}`);
-    sections.push('');
-    sections.push(content.trim());
+    sections.push(normalizeFrameworkAssetPaths(content).trim());
     sections.push('');
     sections.push('\\newpage');
     sections.push('');
   }
 
+  return sections.join('\n');
+}
+
+function renderModelBookletMarkdown(target, compiled, version) {
+  const generatedAt = formatGeneratedTimestamp();
+  const prettyEditionName = target.slug === 'core'
+    ? 'Core'
+    : (compiled.name || target.slug);
+
+  const sections = [];
+  sections.push(`\\fancyfoot[L]{Version ${version}}`);
+  sections.push('');
+  sections.push(`# ZORBA ${prettyEditionName} Model Booklet`);
+  sections.push('');
+  sections.push('## Part 2: Edition Data Model');
+  sections.push('');
+  sections.push('This volume contains the compiled domain, capability, process, and measurement model tables.');
+  sections.push('');
+  sections.push(`_Version ${version}_`);
+  sections.push('');
+  sections.push(`_Generated ${generatedAt}_`);
+  sections.push('');
+  sections.push('\\tableofcontents');
+  sections.push('');
+  sections.push('\\newpage');
+  sections.push('');
   sections.push(renderDataModelSection(compiled));
   sections.push('');
 
@@ -268,11 +338,18 @@ function ensureDir(dirPath) {
   fs.mkdirSync(dirPath, { recursive: true });
 }
 
-function renderPdf(markdownPath, outputPdfPath, title) {
+function renderPdf(markdownPath, outputPdfPath) {
+  const resourcePath = [
+    ROOT,
+    FRAMEWORK_DIR,
+    path.join(ROOT, 'static'),
+    path.join(ROOT, 'docs')
+  ].join(path.delimiter);
+
   const args = [
     markdownPath,
     '--defaults', PANDOC_DEFAULTS,
-    '--metadata', `title=${title}`,
+    '--resource-path', resourcePath,
     '--output', outputPdfPath
   ];
 
@@ -296,6 +373,7 @@ function main() {
 
   const frameworkFiles = readFrameworkFiles();
   const targets = discoverCompiledTargets();
+  const version = readPackageVersion();
 
   if (!targets.length) {
     throw new Error('No compiled JSON targets found in dist/. Run compile first.');
@@ -303,17 +381,20 @@ function main() {
 
   console.log('Generating ZORBA booklet PDFs...');
 
+  const frameworkMarkdown = renderFrameworkBookletMarkdown(frameworkFiles, version);
+  const frameworkMarkdownPath = path.join(TEMP_DIR, 'zorba-framework-booklet.md');
+  const frameworkPdfPath = path.join(DIST_DIR, 'zorba-framework-booklet.pdf');
+  fs.writeFileSync(frameworkMarkdownPath, frameworkMarkdown, 'utf8');
+  renderPdf(frameworkMarkdownPath, frameworkPdfPath);
+  console.log(`  → ${path.relative(ROOT, frameworkPdfPath)}`);
+
   for (const target of targets) {
     const compiled = readJson(target.inputPath);
-    const markdown = renderBookletMarkdown(target, compiled, frameworkFiles);
-    const markdownPath = path.join(TEMP_DIR, `zorba-${target.slug}-booklet.md`);
+    const markdown = renderModelBookletMarkdown(target, compiled, version);
+    const markdownPath = path.join(TEMP_DIR, `zorba-${target.slug}-model-booklet.md`);
     fs.writeFileSync(markdownPath, markdown, 'utf8');
 
-    const pdfTitle = target.slug === 'core'
-      ? 'ZORBA Core Booklet'
-      : `ZORBA ${compiled.name || target.slug} Booklet`;
-
-    renderPdf(markdownPath, target.outputPath, pdfTitle);
+    renderPdf(markdownPath, target.outputPath);
     console.log(`  → ${path.relative(ROOT, target.outputPath)}`);
   }
 

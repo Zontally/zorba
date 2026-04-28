@@ -1,18 +1,38 @@
+\usepackage{fontspec}
 \usepackage{longtable}
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{ragged2e}
+\usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{etoolbox}
 \usepackage{xurl}
 
+% Prefer modern SaaS-style fonts when available; otherwise keep XeLaTeX default.
+\newif\ifzorbafontset
+\zorbafontsetfalse
+\IfFontExistsTF{Inter}{
+  \setmainfont{Inter}
+  \setsansfont{Inter}
+  \zorbafontsettrue
+}{}
+\ifzorbafontset\else
+  \IfFontExistsTF{TeX Gyre Heros}{
+    \setmainfont{TeX Gyre Heros}
+    \setsansfont{TeX Gyre Heros}
+    \zorbafontsettrue
+  }{}
+\fi
+
 \setlength{\headheight}{14pt}
+\setkeys{Gin}{width=0.5\linewidth,height=0.55\textheight,keepaspectratio}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{ZORBA Framework Booklet}
+\fancyhead[L]{ZORBA Framework}
 \fancyhead[R]{\leftmark}
 \fancyfoot[C]{\thepage\ of \pageref{LastPage}}
+\AtBeginDocument{\hypersetup{draft}}
 
 % Keep table headers visible across pages.
 \AtBeginEnvironment{longtable}{\small}

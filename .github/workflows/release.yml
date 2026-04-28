@@ -35,7 +35,7 @@ jobs:
       - name: Install Pandoc and LaTeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-xetex texlive-latex-extra lmodern
+          sudo apt-get install -y pandoc texlive-xetex texlive-latex-extra lmodern fonts-inter
       - run: npm install
       - run: npm run build
       - name: Verify booklet PDFs in dist
