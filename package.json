@@ -1,6 +1,6 @@
 {
   "name": "@zontally/zorba",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "description": "ZORBA — Zontally Reference Business Architecture. The open reference architecture for the agentic enterprise.",
   "license": "SEE LICENSE",
   "repository": {
@@ -16,6 +16,7 @@
     "version": "echo $npm_package_version"
   },
   "dependencies": {
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "xlsx": "^0.18.5"
   }
 }

@@ -15,6 +15,7 @@
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
+const XLSX = require('xlsx');
 
 const ROOT = path.resolve(__dirname, '..');
 const CORE_DIR = path.join(ROOT, 'core', 'domains');
@@ -258,12 +259,117 @@ function writeJson(filename, data) {
   console.log(`  → ${path.relative(ROOT, outPath)}`);
 }
 
+function sanitizeSheetName(name) {
+  return name
+    .replace(/[:\\/?*[\]]/g, ' ')
+    .trim()
+    .slice(0, 31) || 'Domain';
+}
+
+function getUniqueSheetName(baseName, usedNames) {
+  let candidate = baseName;
+  let index = 2;
+
+  while (usedNames.has(candidate)) {
+    const suffix = ` (${index})`;
+    const maxBaseLength = 31 - suffix.length;
+    candidate = `${baseName.slice(0, maxBaseLength)}${suffix}`;
+    index++;
+  }
+
+  usedNames.add(candidate);
+  return candidate;
+}
+
+function addHeaderAutoFilter(worksheet) {
+  const range = XLSX.utils.decode_range(worksheet['!ref'] || 'A1:A1');
+  worksheet['!autofilter'] = {
+    ref: XLSX.utils.encode_range({
+      s: { c: range.s.c, r: 0 },
+      e: { c: range.e.c, r: range.e.r }
+    })
+  };
+}
+
+function writeMeasurementsWorkbook(baseFilename, compiled) {
+  fs.mkdirSync(DIST_DIR, { recursive: true });
+
+  const workbook = XLSX.utils.book_new();
+  const usedSheetNames = new Set();
+  const domainsSummaryRows = [];
+
+  for (const domain of compiled.domains || []) {
+    let processCount = 0;
+    let measurementCount = 0;
+
+    for (const capability of domain.capabilities || []) {
+      processCount += (capability.processes || []).length;
+      for (const process of capability.processes || []) {
+        measurementCount += (process.measurements || []).length;
+      }
+    }
+
+    domainsSummaryRows.push({
+      Domain: `${domain.number}. ${domain.name}`,
+      Subtitle: domain.subtitle || '',
+      Description: domain.description || '',
+      Classification: domain.classification || '',
+      Capabilities: (domain.capabilities || []).length,
+      Processes: processCount,
+      Measurements: measurementCount
+    });
+  }
+
+  const domainsWorksheet = XLSX.utils.json_to_sheet(domainsSummaryRows);
+  addHeaderAutoFilter(domainsWorksheet);
+  const domainsSheetName = getUniqueSheetName('Domains', usedSheetNames);
+  XLSX.utils.book_append_sheet(workbook, domainsWorksheet, domainsSheetName);
+
+  for (const domain of compiled.domains || []) {
+    const rows = [];
+
+    for (const capability of domain.capabilities || []) {
+      for (const process of capability.processes || []) {
+        for (const measurement of process.measurements || []) {
+          const domainLabel = `${domain.number}. ${domain.name}`;
+          const capabilityLabel = `${capability.number}. ${capability.name}`;
+          const processLabel = `${process.number}. ${process.name}`;
+          rows.push({
+            Domain: domainLabel,
+            Capability: capabilityLabel,
+            Process: processLabel,
+            'Measurement ID': measurement.id,
+            'Measurement Number': measurement.number,
+            'Measurement Name': measurement.name,
+            What: measurement.what,
+            Why: measurement.why,
+            How: measurement.how,
+            Frequency: measurement.frequency,
+            Direction: measurement.direction
+          });
+        }
+      }
+    }
+
+    const worksheet = XLSX.utils.json_to_sheet(rows);
+    addHeaderAutoFilter(worksheet);
+    const baseSheetName = sanitizeSheetName(`${domain.number} ${domain.name}`);
+    const sheetName = getUniqueSheetName(baseSheetName, usedSheetNames);
+    XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
+  }
+
+  const outPath = path.join(DIST_DIR, `${baseFilename}.xlsx`);
+  XLSX.writeFile(workbook, outPath);
+  console.log(`  → ${path.relative(ROOT, outPath)}`);
+}
+
 // --- Main ---
 
 function main() {
   const args = process.argv.slice(2);
   const core = compileCore();
   writeJson('zorba-core.json', core);
+  writeMeasurementsWorkbook('zorba-core', core);
 
   if (args.includes('--all')) {
     // Compile all editions
@@ -276,6 +382,7 @@ function main() {
       for (const edition of editions) {
         const compiled = compileEdition(edition, core);
         writeJson(`zorba-${edition}.json`, compiled);
+        writeMeasurementsWorkbook(`zorba-${edition}`, compiled);
       }
     }
   } else {
@@ -284,6 +391,7 @@ function main() {
       const editionName = args[editionIdx + 1];
       const compiled = compileEdition(editionName, core);
       writeJson(`zorba-${editionName}.json`, compiled);
+      writeMeasurementsWorkbook(`zorba-${editionName}`, compiled);
     }
   }
 
