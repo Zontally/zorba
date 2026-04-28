@@ -1,0 +1,85 @@
+edition:
+  name: "ZORBA for Energy & Utilities"
+  slug: "energy-utilities"
+  extends: "core"
+  version: "0.1.0"
+  description: >
+    An industry edition of ZORBA tailored for energy and utilities operators —
+    electricity generators, distribution network operators (DNOs), gas transporters,
+    and multi-utility businesses operating in GB and EU-regulated markets.
+
+    This edition overrides core agentic profiles where UK and EU regulation places
+    explicit constraints on agent autonomy. Energy operators classified as Operators
+    of Essential Services (OES) under the NIS Regulations 2018 face a statutory floor
+    below which agent autonomy cannot fall. The EU AI Act (Annex III) independently
+    classifies AI used in the management and operation of gas and electricity supply
+    as high-risk, requiring human oversight to be designed in by providers.
+
+    The central override this edition makes: NIS Regulations require documented human
+    authorisation for changes to systems supporting essential services. This shifts
+    several processes from H=A (shared accountability) to H+a (human-led), because
+    shared accountability is not legally sufficient — a named human must be the
+    accountable approver.
+  target_industries:
+    - Electricity Generation
+    - Electricity Distribution (DNOs)
+    - Electricity Transmission
+    - Gas Transportation and Distribution
+    - Water and Wastewater Utilities
+    - Multi-utility Operators
+  regulatory_context:
+    primary:
+      - name: "Network and Information Systems (NIS) Regulations 2018"
+        jurisdiction: "United Kingdom"
+        reference: "SI 2018/506"
+        competent_authority: "Ofgem / DESNZ (joint, energy sector)"
+        notes: >
+          OES must manage security and resilience of network and information systems
+          on which essential services depend. NIS Guidance for Downstream Gas and
+          Electricity OES (Ofgem, v3.0, January 2026) requires documented human
+          authorisation for significant changes to OES systems, with an auditable
+          record of human judgement. This makes H=A insufficient for change and
+          incident processes: shared accountability has no legal meaning under NIS —
+          a named individual must own the decision.
+      - name: "NCSC Cyber Assessment Framework (CAF) v4.0"
+        jurisdiction: "United Kingdom"
+        notes: >
+          CAF is the assessment standard used by Ofgem for NIS compliance in energy.
+          Relevant principles: A1 (Governance — named accountability structures),
+          B1 (Service Protection — documented change procedures), B2 (Identity and
+          Access Control — human approval for privileged access), B4 (System Security
+          — change controls with human authorisation), D1 (Response & Recovery —
+          human-led incident response with regulatory notification obligations).
+      - name: "EU AI Act — Annex III (High-Risk AI Systems)"
+        jurisdiction: "European Union"
+        reference: "Regulation (EU) 2024/1689, Annex III, point 2(b)"
+        notes: >
+          AI used as safety components in the management and operation of critical
+          digital infrastructure including the supply of water, gas, heating, and
+          electricity is classified as high-risk. Providers must design systems to
+          allow deployers to implement human oversight, establish lifecycle risk
+          management systems, and maintain technical documentation. Applies to
+          UK energy operators with EU operations or EU-market exposure.
+    secondary:
+      - name: "Electricity at Work Regulations 1989"
+        jurisdiction: "United Kingdom"
+        notes: >
+          Creates personal legal liability for named duty holders on safety decisions.
+          Statutory duty cannot be delegated to automated systems. Decisions about
+          working on live systems, safety-critical configurations, and network
+          switching must remain with a named, competent human.
+      - name: "Gas Safety (Installation and Use) Regulations 1998"
+        jurisdiction: "United Kingdom"
+        reference: "SI 1998/2451"
+        notes: >
+          Legal duties fall on named individuals — employers, engineers, landlords.
+          Installation, maintenance, and sign-off on gas systems requires a qualified,
+          accountable human. Agent-generated recommendations may inform but cannot
+          replace the statutory sign-off.
+      - name: "UK Cyber Security and Resilience Bill (in progress)"
+        jurisdiction: "United Kingdom"
+        notes: >
+          Anticipated to strengthen NIS obligations for CNI operators including energy.
+          Introduces mandatory incident notification windows (24h notify, 72h full
+          report) and configuration baseline requirements. Monitored for further
+          profile impacts when enacted.

@@ -1,0 +1,109 @@
+# Energy & Utilities — Domain 10: Technology & Data
+#
+# Targeted overrides for processes where UK/EU regulation constrains agent autonomy
+# for Operators of Essential Services (OES). Only processes with changed profiles
+# are included. All other Domain 10 processes retain their core profiles.
+#
+# Regulatory basis: NIS Regulations 2018, CAF v4.0, EU AI Act Annex III.
+# See edition.yaml for full regulatory context and citations.
+
+domain:
+  id: "921426"
+  number: 10
+  name: "Technology & Data"
+
+  capabilities:
+
+    # ─────────────────────────────────────────────────────────────────────────
+    # 10.5 — Protect Information and Ensure Cyber Resilience
+    # ─────────────────────────────────────────────────────────────────────────
+    - id: "866025"
+      number: "10.5"
+      name: "Protect Information and Ensure Cyber Resilience"
+      processes:
+
+        - id: "853162"
+          number: "10.5.2"
+          name: "Manage identity, access, and authentication controls"
+          agentic_profile: "H+a"
+          agentic_note: >
+            OVERRIDE (core: H=A). In energy OES, privileged access to operational
+            technology (OT) environments — SCADA, DCS, energy management systems —
+            must be human-approved as a baseline, not only for exceptions. CAF v4.0
+            Principle B2 (Identity and Access Control) requires clear accountability
+            for access to systems supporting essential services. Agent-driven access
+            enforcement and anomaly detection remain in scope; the override applies
+            specifically to access grant decisions for OT and CNI-adjacent systems,
+            where a named human must be the approving authority.
+          regulatory_basis:
+            - "CAF v4.0 — Principle B2: Identity and Access Control"
+            - "NIS Regulations 2018 — Regulation 10 (appropriate and proportionate security measures)"
+
+        - id: "671438"
+          number: "10.5.4"
+          name: "Respond to and recover from security incidents"
+          agentic_profile: "H+a"
+          agentic_note: >
+            Profile unchanged from core (H+a), but regulatory obligations strengthen
+            the rationale. For energy OES, the human-led requirement is statutory:
+            NIS Regulations mandate that a named individual owns incident declaration
+            and regulatory notification. The anticipated Cyber Security and Resilience
+            Bill introduces explicit 24-hour notification windows (to Ofgem/NCSC)
+            and 72-hour full report obligations. Agents execute containment playbooks
+            and forensic collection; humans own declaration, notification, and
+            resolution authority. This note ensures the H+a profile is treated as a
+            regulatory floor, not a design preference.
+          regulatory_basis:
+            - "NIS Regulations 2018 — Regulation 11 (incident notification)"
+            - "CAF v4.0 — Principle D1: Response and Recovery Planning"
+            - "UK Cyber Security and Resilience Bill (anticipated)"
+
+    # ─────────────────────────────────────────────────────────────────────────
+    # 10.6 — Deliver Technology Operations and End-User Support
+    # ─────────────────────────────────────────────────────────────────────────
+    - id: "158493"
+      number: "10.6"
+      name: "Deliver Technology Operations and End-User Support"
+      processes:
+
+        - id: "396142"
+          number: "10.6.2"
+          name: "Manage incidents and restore services"
+          agentic_profile: "H+a"
+          agentic_note: >
+            OVERRIDE (core: H=A). For energy OES, major incident response cannot
+            operate on a shared-accountability model: NIS Regulations require a named
+            individual to own incident decisions and regulatory notifications. Agents
+            detect, categorise, and initiate automated response — that scope is
+            unchanged. The override elevates human authority specifically over:
+            (1) major incident declaration, (2) regulatory notification to Ofgem and
+            NCSC, (3) decisions to isolate or restore systems supporting essential
+            services. These decisions carry personal accountability under NIS and
+            cannot be shared with an agent.
+          regulatory_basis:
+            - "NIS Regulations 2018 — Regulation 11 (incident notification to competent authority)"
+            - "CAF v4.0 — Principle D1: Response and Recovery Planning"
+            - "Ofgem NIS Guidance for Downstream Gas and Electricity OES, v3.0 (January 2026)"
+
+        - id: "249618"
+          number: "10.6.4"
+          name: "Manage change and release processes"
+          agentic_profile: "H+a"
+          agentic_note: >
+            OVERRIDE (core: H=A). This is the primary regulatory override for energy
+            OES. NIS Regulations 2018 require that changes to systems supporting
+            essential services have documented human authorisation before implementation.
+            H=A — where humans and agents share accountability — does not satisfy this
+            requirement: shared accountability has no legal standing under NIS; a named
+            human must be the sole approving authority. Agents retain full scope for
+            impact assessment, scheduling, dependency analysis, and coordination.
+            The human's role shifts from co-participant (H=A) to accountable approver
+            (H+a). Note: this applies to all changes affecting OES systems. For
+            low-risk changes to corporate IT systems not supporting essential services,
+            the core H=A profile may be appropriate at the operator's discretion.
+          regulatory_basis:
+            - "NIS Regulations 2018 — Regulation 10 (appropriate and proportionate security measures)"
+            - "CAF v4.0 — Principle B4: System Security (change controls)"
+            - "CAF v4.0 — Principle B1: Service Protection Policies and Procedures"
+            - "Ofgem NIS Guidance for Downstream Gas and Electricity OES, v3.0 (January 2026)"
+            - "EU AI Act — Annex III, point 2(b) (high-risk classification; human oversight required by design)"
