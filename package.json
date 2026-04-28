@@ -1,6 +1,6 @@
 {
   "name": "@zontally/zorba",
-  "version": "0.3.9",
+  "version": "0.3.10",
   "description": "ZORBA — Zontally Reference Business Architecture. The open reference architecture for the agentic enterprise.",
   "license": "SEE LICENSE",
   "repository": {
@@ -12,7 +12,8 @@
     "compile": "node build/compile.js --all",
     "compile:industries": "node build/compile-industries.js",
     "generate": "node build/generate-docs.js",
-    "build": "npm run validate && npm run compile && npm run compile:industries && npm run generate",
+    "booklets": "node build/generate-booklets.js",
+    "build": "npm run validate && npm run compile && npm run compile:industries && npm run generate && npm run booklets",
     "version": "echo $npm_package_version"
   },
   "dependencies": {

@@ -2,3 +2,4 @@ node_modules/
 docs/
 site/
 dist/
+build/.tmp-booklets/
