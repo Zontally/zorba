@@ -9,6 +9,7 @@ const DIST_DIR = path.join(ROOT, 'dist');
 const FRAMEWORK_DIR = path.join(ROOT, 'framework');
 const TEMP_DIR = path.join(ROOT, 'build', '.tmp-booklets');
 const PANDOC_DEFAULTS = path.join(ROOT, 'build', 'booklet', 'pandoc.yaml');
+const PANDOC_MODEL_DEFAULTS = path.join(ROOT, 'build', 'booklet', 'pandoc-model.yaml');
 const PACKAGE_JSON = path.join(ROOT, 'package.json');
 
 function exists(filePath) {
@@ -80,7 +81,7 @@ function discoverCompiledTargets() {
   const targets = files.map(filename => {
     const slug = filename.replace(/^zorba-/, '').replace(/\.json$/, '');
     const inputPath = path.join(DIST_DIR, filename);
-    const outputPath = path.join(DIST_DIR, `zorba-${slug}-model-booklet.pdf`);
+    const outputPath = path.join(DIST_DIR, `zorba-${slug}.pdf`);
     return { slug, inputPath, outputPath };
   });
 
@@ -114,6 +115,13 @@ function cmpByNumberThenName(a, b) {
 function escapeCell(value) {
   const raw = value === undefined || value === null ? '' : String(value);
   return raw.replace(/\|/g, '\\|').replace(/\n/g, '<br>');
+}
+
+function formatClassification(value) {
+  if (value === undefined || value === null) return '';
+  return String(value)
+    .replace(/_/g, ' ')
+    .replace(/\b\w/g, c => c.toUpperCase());
 }
 
 function toPipeTable(headers, rows) {
@@ -150,110 +158,65 @@ function renderDataModelSection(compiled) {
   lines.push(`- Measurements: ${compiled.stats?.totalMeasurements ?? ''}`);
   lines.push('');
 
-  lines.push('## Domain Summary');
-  lines.push('');
-  lines.push(toPipeTable(
-    ['Domain #', 'Domain', 'Classification', 'Capabilities', 'Processes', 'Measurements'],
-    domains.map(domain => [
-      domain.number || '',
-      domain.name || '',
-      domain.classification || '',
-      (domain.capabilities || []).length,
-      countProcesses(domain),
-      countMeasurements(domain)
-    ])
-  ));
-  lines.push('');
-
-  lines.push('## Capabilities');
-  lines.push('');
-  lines.push(toPipeTable(
-    ['Domain #', 'Domain', 'Capability #', 'Capability', 'Processes'],
-    domains.flatMap(domain => {
-      const capabilities = [...(domain.capabilities || [])].sort(cmpByNumberThenName);
-      return capabilities.map(cap => [
-        domain.number || '',
-        domain.name || '',
-        cap.number || '',
-        cap.name || '',
-        (cap.processes || []).length
-      ]);
-    })
-  ));
-  lines.push('');
-
-  lines.push('## Processes');
-  lines.push('');
-  lines.push(toPipeTable(
-    ['Domain #', 'Capability #', 'Process #', 'Process', 'Agentic Profile', 'Agentic Note'],
-    domains.flatMap(domain => {
-      const capabilities = [...(domain.capabilities || [])].sort(cmpByNumberThenName);
-      return capabilities.flatMap(cap => {
-        const processes = [...(cap.processes || [])].sort(cmpByNumberThenName);
-        return processes.map(proc => [
-          domain.number || '',
-          cap.number || '',
-          proc.number || '',
-          proc.name || '',
-          proc.agentic_profile || '',
-          proc.agentic_note || ''
-        ]);
-      });
-    })
-  ));
-  lines.push('');
-
-  lines.push('## Measurements');
-  lines.push('');
-
   for (const domain of domains) {
-    const capabilities = [...(domain.capabilities || [])].sort(cmpByNumberThenName);
-    const rows = capabilities.flatMap(cap => {
-      const processes = [...(cap.processes || [])].sort(cmpByNumberThenName);
-      return processes.flatMap(proc => {
-        const measurements = [...(proc.measurements || [])].sort(cmpByNumberThenName);
-        return measurements.map(measurement => [
-          cap.number || '',
-          cap.name || '',
-          proc.number || '',
-          proc.name || '',
-          measurement.number || '',
-          measurement.name || '',
-          measurement.what || '',
-          measurement.why || '',
-          measurement.how || '',
-          measurement.frequency || '',
-          measurement.direction || ''
-        ]);
-      });
-    });
-
-    lines.push(`### ${domain.number || ''} ${domain.name || ''}`.trim());
+    lines.push(`## ${domain.number || ''} ${domain.name || ''}`.trim());
+    lines.push('');
+    lines.push(`- Classification: ${formatClassification(domain.classification)}`);
+    lines.push(`- Capabilities: ${(domain.capabilities || []).length}`);
+    lines.push(`- Processes: ${countProcesses(domain)}`);
+    lines.push(`- Measurements: ${countMeasurements(domain)}`);
     lines.push('');
 
-    if (!rows.length) {
-      lines.push('_No measurements in this domain._');
+    const capabilities = [...(domain.capabilities || [])].sort(cmpByNumberThenName);
+
+    if (!capabilities.length) {
+      lines.push('_No capabilities defined for this domain._');
       lines.push('');
       continue;
     }
 
-    lines.push(toPipeTable(
-      [
-        'Capability #',
-        'Capability',
-        'Process #',
-        'Process',
-        'Measurement #',
-        'Measurement',
-        'What',
-        'Why',
-        'How',
-        'Frequency',
-        'Direction'
-      ],
-      rows
-    ));
-    lines.push('');
+    for (const capability of capabilities) {
+      lines.push(`### ${capability.number || ''} ${capability.name || ''}`.trim());
+      lines.push('');
+
+      const processes = [...(capability.processes || [])].sort(cmpByNumberThenName);
+      if (!processes.length) {
+        lines.push('_No processes defined for this capability._');
+        lines.push('');
+        continue;
+      }
+
+      for (const process of processes) {
+        lines.push(`#### ${process.number || ''} ${process.name || ''}`.trim());
+        lines.push('');
+        lines.push(`- Agentic Profile: ${process.agentic_profile || ''}`);
+        if (process.agentic_note) {
+          lines.push(`- Agentic Note: ${process.agentic_note}`);
+        }
+        lines.push('');
+
+        const measurements = [...(process.measurements || [])].sort(cmpByNumberThenName);
+        if (!measurements.length) {
+          lines.push('_No measurements defined for this process._');
+          lines.push('');
+          continue;
+        }
+
+        lines.push(toPipeTable(
+          ['Measurement #', 'Measurement', 'What', 'Why', 'How', 'Frequency', 'Direction'],
+          measurements.map(measurement => [
+            measurement.number || '',
+            measurement.name || '',
+            measurement.what || '',
+            measurement.why || '',
+            measurement.how || '',
+            measurement.frequency || '',
+            measurement.direction || ''
+          ])
+        ));
+        lines.push('');
+      }
+    }
   }
 
   return lines.join('\n');
@@ -307,18 +270,22 @@ function renderFrameworkBookletMarkdown(frameworkFiles, version) {
 
 function renderModelBookletMarkdown(target, compiled, version) {
   const generatedAt = formatGeneratedTimestamp();
-  const prettyEditionName = target.slug === 'core'
+  const rawEditionName = target.slug === 'core'
     ? 'Core'
     : (compiled.name || target.slug);
+  const prettyEditionName = rawEditionName.replace(/^ZORBA\s+/i, '').trim();
+  const frameworkPdfUrl = `https://github.com/zontally/zorba/releases/download/v${version}/zorba-framework.pdf`;
 
   const sections = [];
   sections.push(`\\fancyfoot[L]{Version ${version}}`);
   sections.push('');
-  sections.push(`# ZORBA ${prettyEditionName} Model Booklet`);
+  sections.push(`# ZORBA ${prettyEditionName} Model`);
   sections.push('');
   sections.push('## Part 2: Edition Data Model');
   sections.push('');
   sections.push('This volume contains the compiled domain, capability, process, and measurement model tables.');
+  sections.push('');
+  sections.push(`Understand the ZORBA framework by reading Part 1: [Framework](${frameworkPdfUrl}).`);
   sections.push('');
   sections.push(`_Version ${version}_`);
   sections.push('');
@@ -338,7 +305,7 @@ function ensureDir(dirPath) {
   fs.mkdirSync(dirPath, { recursive: true });
 }
 
-function renderPdf(markdownPath, outputPdfPath) {
+function renderPdf(markdownPath, outputPdfPath, defaultsPath = PANDOC_DEFAULTS) {
   const resourcePath = [
     ROOT,
     FRAMEWORK_DIR,
@@ -348,7 +315,7 @@ function renderPdf(markdownPath, outputPdfPath) {
 
   const args = [
     markdownPath,
-    '--defaults', PANDOC_DEFAULTS,
+    '--defaults', defaultsPath,
     '--resource-path', resourcePath,
     '--output', outputPdfPath
   ];
@@ -367,6 +334,9 @@ function main() {
   if (!exists(PANDOC_DEFAULTS)) {
     throw new Error(`Pandoc defaults file not found: ${PANDOC_DEFAULTS}`);
   }
+  if (!exists(PANDOC_MODEL_DEFAULTS)) {
+    throw new Error(`Pandoc model defaults file not found: ${PANDOC_MODEL_DEFAULTS}`);
+  }
 
   ensureDir(TEMP_DIR);
   ensureDir(DIST_DIR);
@@ -383,7 +353,7 @@ function main() {
 
   const frameworkMarkdown = renderFrameworkBookletMarkdown(frameworkFiles, version);
   const frameworkMarkdownPath = path.join(TEMP_DIR, 'zorba-framework-booklet.md');
-  const frameworkPdfPath = path.join(DIST_DIR, 'zorba-framework-booklet.pdf');
+  const frameworkPdfPath = path.join(DIST_DIR, 'zorba-framework.pdf');
   fs.writeFileSync(frameworkMarkdownPath, frameworkMarkdown, 'utf8');
   renderPdf(frameworkMarkdownPath, frameworkPdfPath);
   console.log(`  → ${path.relative(ROOT, frameworkPdfPath)}`);
@@ -394,7 +364,7 @@ function main() {
     const markdownPath = path.join(TEMP_DIR, `zorba-${target.slug}-model-booklet.md`);
     fs.writeFileSync(markdownPath, markdown, 'utf8');
 
-    renderPdf(markdownPath, target.outputPath);
+    renderPdf(markdownPath, target.outputPath, PANDOC_MODEL_DEFAULTS);
     console.log(`  → ${path.relative(ROOT, target.outputPath)}`);
   }
 
