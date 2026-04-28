@@ -1,0 +1,2508 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The open reference architecture for the agentic enterprise">
+      
+      
+      
+        <link rel="canonical" href="https://zontally.github.io/zorba/framework/02-architecture/">
+      
+      
+        <link rel="prev" href="../01-manifesto/">
+      
+      
+        <link rel="next" href="../03-workforce-model/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Architecture - ZORBA</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#framework-architecture" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ZORBA" class="md-header__button md-logo" aria-label="ZORBA" data-md-component="logo">
+      
+  <img src="../../assets/logo-light.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ZORBA
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Architecture
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/zontally/zorba" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    zontally/zorba
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ZORBA" class="md-nav__button md-logo" aria-label="ZORBA" data-md-component="logo">
+      
+  <img src="../../assets/logo-light.png" alt="logo">
+
+    </a>
+    ZORBA
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/zontally/zorba" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    zontally/zorba
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Framework
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Framework
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-manifesto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manifesto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-structural-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Structural Hierarchy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-strategic-alignment-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Strategic Alignment Overlay
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structural-layer-organisational-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structural Layer: Organisational Unit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structural Layer: Organisational Unit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Principle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structural-layer-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structural Layer: Domain
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structural Layer: Domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workforce-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workforce Composition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-principle_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Principle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structural-layer-capability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structural Layer: Capability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structural Layer: Capability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workforce-composition-blended-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workforce Composition: Blended Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capability-composition-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capability Composition Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-principle_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Principle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structural-layer-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structural Layer: Process
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structural Layer: Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workforce-composition-blended-orchestration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workforce Composition: Blended Orchestration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Process Notation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-principle_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Principle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structural-layer-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structural Layer: Activity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structural Layer: Activity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workforce-composition-agent-heavy-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workforce Composition: Agent-Heavy Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activity-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activity Classification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-principle_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Principle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structural-layer-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structural Layer: Measurement
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structural Layer: Measurement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relationship-to-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relationship to Activities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measurement-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measurement Schema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-principle_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Principle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structural-layer-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structural Layer: Work
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structural Layer: Work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workforce-composition-agent-dominant-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workforce Composition: Agent-Dominant Delivery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-instance-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Work Instance Metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-principle_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Principle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strategic-alignment-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategic Alignment Overlay
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Strategic Alignment Overlay">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initiatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initiatives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Traversal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-layer-dynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-Layer Dynamics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cross-Layer Dynamics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-governance-gradient" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Governance Gradient
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-feedback-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Feedback Loop
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-as-operating-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture as Operating System
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evolution-as-a-cross-cutting-concern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evolution as a Cross-Cutting Concern
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-workforce-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workforce Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-domain-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domain Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-agentic-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentic Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-information-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Information Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-industry-editions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Industry Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-evolution-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evolution Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-industry-taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Industry Taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-usage-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../industry-taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Industry taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domain Taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Industry Editions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Industry Editions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../editions/enterprise-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ZORBA for Enterprise Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../editions/professional-services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ZORBA for Professional Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-structural-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Structural Hierarchy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-strategic-alignment-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Strategic Alignment Overlay
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structural-layer-organisational-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structural Layer: Organisational Unit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structural Layer: Organisational Unit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Principle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structural-layer-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structural Layer: Domain
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structural Layer: Domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workforce-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workforce Composition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-principle_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Principle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structural-layer-capability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structural Layer: Capability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structural Layer: Capability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workforce-composition-blended-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workforce Composition: Blended Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capability-composition-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capability Composition Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-principle_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Principle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structural-layer-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structural Layer: Process
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structural Layer: Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workforce-composition-blended-orchestration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workforce Composition: Blended Orchestration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Process Notation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-principle_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Principle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structural-layer-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structural Layer: Activity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structural Layer: Activity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workforce-composition-agent-heavy-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workforce Composition: Agent-Heavy Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activity-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activity Classification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-principle_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Principle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structural-layer-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structural Layer: Measurement
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structural Layer: Measurement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relationship-to-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relationship to Activities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measurement-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measurement Schema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-principle_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Principle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structural-layer-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structural Layer: Work
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structural Layer: Work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workforce-composition-agent-dominant-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workforce Composition: Agent-Dominant Delivery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-instance-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Work Instance Metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-principle_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Principle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strategic-alignment-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategic Alignment Overlay
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Strategic Alignment Overlay">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initiatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initiatives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Traversal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-layer-dynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-Layer Dynamics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cross-Layer Dynamics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-governance-gradient" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Governance Gradient
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-feedback-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Feedback Loop
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-as-operating-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture as Operating System
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evolution-as-a-cross-cutting-concern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evolution as a Cross-Cutting Concern
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="framework-architecture">Framework Architecture<a class="headerlink" href="#framework-architecture" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>ZORBA's framework architecture consists of two complementary models:</p>
+<ol>
+<li><strong>The Structural Hierarchy</strong> — a containment model that describes how enterprises are organised, from corporate structure down to individual units of work.</li>
+<li><strong>The Strategic Alignment Overlay</strong> — a cross-cutting model that connects strategic intent to the structural hierarchy through relationships, not containment.</li>
+</ol>
+<p>What distinguishes ZORBA from traditional reference architectures is that <strong>every structural layer explicitly defines the roles of humans and agents, their collaboration model, and the governance that applies</strong>.</p>
+<h3 id="the-structural-hierarchy">The Structural Hierarchy<a class="headerlink" href="#the-structural-hierarchy" title="Permanent link">&para;</a></h3>
+<p><img src="../../assets/images/hierarchy.jpg" alt="Structural Hierarchy" style="height: 500px;"></p>
+<h3 id="the-strategic-alignment-overlay">The Strategic Alignment Overlay<a class="headerlink" href="#the-strategic-alignment-overlay" title="Permanent link">&para;</a></h3>
+<p>Strategy does not sit "above" the structural hierarchy — it sits <strong>alongside</strong> it, connecting to structural objects through alignment relationships:</p>
+<p><img src="../../assets/images/strategy-interlock.jpg" alt="Structural Hierarchy" style="height: 600px;"></p>
+<p>A group strategy lives at the OU level. A supply chain strategy lives within the Supply Chain domain. Objectives cascade from strategies and attach to capabilities and processes. This means any work item can be traced back to strategic intent through <em>two independent paths</em>:</p>
+<ul>
+<li><strong>Structural:</strong> Work → Activity → Process → Capability → Domain → OU (and Measurement → Process for performance evaluation)</li>
+<li><strong>Strategic:</strong> Work → Initiative → Objective → Strategy</li>
+</ul>
+<p>Both paths converge on the same architecture.</p>
+<h3 id="why-this-matters">Why This Matters<a class="headerlink" href="#why-this-matters" title="Permanent link">&para;</a></h3>
+<p>Traditional frameworks like APQC's PCF define <strong>Category → Process Group → Process</strong> — a clean structural hierarchy but one that doesn't model corporate structure, strategic alignment, or workforce composition. ZORBA's <strong>OU → Domain → Capability → Process → {Activity → Work, Measurement}</strong> extends this with:</p>
+<ul>
+<li><strong>Organisational Units</strong> at the root, enabling complex corporate structures</li>
+<li><strong>Domains</strong> that carry Value Chain / Management Function classification</li>
+<li><strong>Workforce composition</strong> defined at every layer</li>
+<li><strong>Strategic alignment</strong> as a cross-cutting overlay rather than a rigid top-down cascade</li>
+</ul>
+<hr />
+<h2 id="structural-layer-organisational-unit">Structural Layer: Organisational Unit<a class="headerlink" href="#structural-layer-organisational-unit" title="Permanent link">&para;</a></h2>
+<p><strong>What it defines:</strong> The corporate structure of the enterprise — holding companies, subsidiaries, business units, brands, divisions, regions, departments.</p>
+<p>The Organisational Unit is the <strong>root of the ZORBA architecture</strong>. Every other object in the model is ultimately scoped to one or more OUs. OUs nest recursively to any depth, modelling everything from a 50-person single-entity company to a multinational conglomerate.</p>
+<p>Each OU may adopt a different <a href="../08-industry-editions/">Industry Edition</a>, meaning a healthcare business unit and a technology services business unit within the same holding company can operate with radically different domain configurations.</p>
+<p>See the <a href="../07-information-model/">Information Model</a> for the full OU object definition, attributes, and relationship types.</p>
+<h3 id="key-principle">Key Principle<a class="headerlink" href="#key-principle" title="Permanent link">&para;</a></h3>
+<p>The Organisational Unit answers the question <strong>"who are we?"</strong> before the architecture asks <strong>"what do we do?"</strong> You cannot describe enterprise operations without first describing the enterprise itself.</p>
+<hr />
+<h2 id="structural-layer-domain">Structural Layer: Domain<a class="headerlink" href="#structural-layer-domain" title="Permanent link">&para;</a></h2>
+<p><strong>What it defines:</strong> The major areas of enterprise activity within an Organisational Unit. In ZORBA, these are the <a href="../04-domain-reference/">12 reference domains</a>; in APQC/PCF, they map to categories; in a custom framework, they map to whatever top-level grouping the organisation uses.</p>
+<h3 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">&para;</a></h3>
+<p>Domains are classified as either:</p>
+<ul>
+<li><strong>Value Chain</strong> — activities that directly create, deliver, and capture value. These vary significantly across industries and are where <a href="../08-industry-editions/">Industry Editions</a> primarily diverge.</li>
+<li><strong>Management Function</strong> — activities that enable, govern, and support the value chain. These are largely industry-agnostic.</li>
+</ul>
+<p>See <a href="../04-domain-reference/">04-domain-reference.md</a> for the full domain inventory with subtitles and agentic maturity profiles.</p>
+<h3 id="workforce-composition">Workforce Composition<a class="headerlink" href="#workforce-composition" title="Permanent link">&para;</a></h3>
+<p>Each domain carries an overall workforce composition outlook — from domains that are already highly agent-automated (Supply Chain, Finance) to those that remain human-dominant (Strategy &amp; Governance, People &amp; Talent). This composition is not prescriptive; it describes the direction of travel and helps organisations make deliberate design decisions.</p>
+<h3 id="key-principle_1">Key Principle<a class="headerlink" href="#key-principle_1" title="Permanent link">&para;</a></h3>
+<p>Domains answer the question <strong>"what areas of activity does this part of the enterprise engage in?"</strong> They are the organisational lens through which capabilities, processes, and work are understood.</p>
+<hr />
+<h2 id="structural-layer-capability">Structural Layer: Capability<a class="headerlink" href="#structural-layer-capability" title="Permanent link">&para;</a></h2>
+<p><strong>What it defines:</strong> The organisational abilities required to operate a domain — what the enterprise needs to be able to do, independent of how it does it.</p>
+<h3 id="workforce-composition-blended-design">Workforce Composition: Blended Design<a class="headerlink" href="#workforce-composition-blended-design" title="Permanent link">&para;</a></h3>
+<p>This is the layer where the human/agent boundary becomes a <strong>primary design decision</strong>. Capability design must now explicitly answer: is this capability delivered by humans, agents, or a blend? What is the target workforce composition?</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Human role</strong></td>
+<td>Define capability requirements, make build/buy/partner decisions, set quality standards, own capability maturity</td>
+</tr>
+<tr>
+<td><strong>Agent role</strong></td>
+<td>Capability gap analysis, maturity assessment, cross-domain capability mapping, identifying automation opportunities, maintaining capability registries</td>
+</tr>
+<tr>
+<td><strong>Collaboration model</strong></td>
+<td><strong>Agent-as-architect.</strong> Agents maintain the living map of organisational capabilities, including which are human-delivered, agent-delivered, or blended. Humans make investment and design decisions.</td>
+</tr>
+<tr>
+<td><strong>Governance</strong></td>
+<td>Capability definitions require human approval. The designation of a capability as "agent-deliverable" requires explicit governance review including risk assessment, fallback planning, and human override specification.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="capability-composition-matrix">Capability Composition Matrix<a class="headerlink" href="#capability-composition-matrix" title="Permanent link">&para;</a></h3>
+<p>At this layer, each capability should be assessed on the ZORBA Capability Composition Matrix:</p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Assessment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cognitive complexity</strong></td>
+<td>Does this require reasoning that agents can reliably perform?</td>
+</tr>
+<tr>
+<td><strong>Judgement sensitivity</strong></td>
+<td>Are the consequences of error high enough to require human judgement?</td>
+</tr>
+<tr>
+<td><strong>Data availability</strong></td>
+<td>Is sufficient structured data available for agent operation?</td>
+</tr>
+<tr>
+<td><strong>Regulatory requirement</strong></td>
+<td>Do regulations require human involvement or decision-making?</td>
+</tr>
+<tr>
+<td><strong>Velocity requirement</strong></td>
+<td>Does the speed requirement exceed human capacity?</td>
+</tr>
+<tr>
+<td><strong>Creativity requirement</strong></td>
+<td>Does this require genuinely novel thinking vs. pattern application?</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-principle_2">Key Principle<a class="headerlink" href="#key-principle_2" title="Permanent link">&para;</a></h3>
+<p>Capabilities are <strong>workforce-agnostic in definition but workforce-specific in design</strong>. The capability "Process Customer Refunds" exists regardless of who performs it — but the architectural decision of whether it's human-delivered, agent-delivered, or blended is made explicitly at this layer.</p>
+<hr />
+<h2 id="structural-layer-process">Structural Layer: Process<a class="headerlink" href="#structural-layer-process" title="Permanent link">&para;</a></h2>
+<p><strong>What it defines:</strong> The structured sequences of activities that deliver capabilities — the "how" of the enterprise.</p>
+<h3 id="workforce-composition-blended-orchestration">Workforce Composition: Blended Orchestration<a class="headerlink" href="#workforce-composition-blended-orchestration" title="Permanent link">&para;</a></h3>
+<p>Processes are where humans and agents most visibly co-exist. A single process may involve human decision points, autonomous agent execution, handoffs between humans and agents, and parallel work streams of mixed composition.</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Human role</strong></td>
+<td>Design process flows, make exception decisions, handle escalations, perform judgement-intensive steps, validate critical outputs</td>
+</tr>
+<tr>
+<td><strong>Agent role</strong></td>
+<td>Process orchestration, routing, status tracking, SLA monitoring, automated steps, data transformation, integration, parallel execution of routine branches</td>
+</tr>
+<tr>
+<td><strong>Collaboration model</strong></td>
+<td><strong>Agent-as-orchestrator.</strong> In many processes, agents manage the flow while humans contribute at defined decision points. In others, humans lead and agents execute supporting steps. The collaboration model is process-specific.</td>
+</tr>
+<tr>
+<td><strong>Governance</strong></td>
+<td>Every process must have a defined <strong>handoff protocol</strong> for human↔agent transitions. Decision points must be classified by authority level. Agent-executed steps must produce audit-grade logs. Exception handling must define escalation paths.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="process-notation">Process Notation<a class="headerlink" href="#process-notation" title="Permanent link">&para;</a></h3>
+<p>ZORBA extends standard process notation with workforce composition markers:</p>
+<ul>
+<li><strong>[H]</strong> — Human-executed step</li>
+<li><strong>[A]</strong> — Agent-executed step</li>
+<li><strong>[H→A]</strong> — Human-to-agent handoff</li>
+<li><strong>[A→H]</strong> — Agent-to-human escalation</li>
+<li><strong>[H+A]</strong> — Collaborative step (human and agent working together)</li>
+<li><strong>[A⟲]</strong> — Agent autonomous loop (repeating without human intervention)</li>
+</ul>
+<p><strong>Example: Customer Complaint Resolution</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[A]   Receive and classify complaint
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>[A]   Retrieve customer history and context
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>[A⟲]  Attempt automated resolution (tier 1)
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>[A→H] Escalate if resolution confidence &lt; threshold
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>[H+A] Human reviews with agent-prepared brief
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>[H]   Decision on resolution approach
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>[A]   Execute resolution actions
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>[A]   Follow-up and satisfaction monitoring
+</code></pre></div>
+<h3 id="key-principle_3">Key Principle<a class="headerlink" href="#key-principle_3" title="Permanent link">&para;</a></h3>
+<p>Process design in the agentic era is fundamentally about <strong>orchestrating a blended workforce</strong>. Every process is a choreography of human and agent actions, and the quality of that choreography determines operational effectiveness.</p>
+<hr />
+<h2 id="structural-layer-activity">Structural Layer: Activity<a class="headerlink" href="#structural-layer-activity" title="Permanent link">&para;</a></h2>
+<p><strong>What it defines:</strong> The discrete, bounded units of work within processes — individual tasks with defined inputs, outputs, and performers.</p>
+<h3 id="workforce-composition-agent-heavy-execution">Workforce Composition: Agent-Heavy Execution<a class="headerlink" href="#workforce-composition-agent-heavy-execution" title="Permanent link">&para;</a></h3>
+<p>Activities are where agents deliver the most direct value. Many enterprise activities — data entry, validation, transformation, monitoring, reporting, routing, scheduling — are naturally suited to agent execution.</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Human role</strong></td>
+<td>Complex judgement activities, creative work, relationship-dependent interactions, novel situations, ethical decisions</td>
+</tr>
+<tr>
+<td><strong>Agent role</strong></td>
+<td>Routine execution, data processing, pattern-based decisions, monitoring, alerting, document generation, quality checks, scheduling, integration tasks</td>
+</tr>
+<tr>
+<td><strong>Collaboration model</strong></td>
+<td><strong>Agent-as-executor.</strong> At this layer, agents perform the majority of defined activities autonomously, with humans handling exceptions and judgement-intensive activities.</td>
+</tr>
+<tr>
+<td><strong>Governance</strong></td>
+<td>Each activity has a defined <strong>autonomy level</strong> (see <a href="../03-workforce-model/">Workforce Model</a>). Agent-executed activities must meet defined quality thresholds. Activities above a certain risk level require human verification of agent output before proceeding.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="activity-classification">Activity Classification<a class="headerlink" href="#activity-classification" title="Permanent link">&para;</a></h3>
+<p>Every activity in ZORBA is classified along two axes:</p>
+<p><strong>Performer axis:</strong>
+- <strong>Human-only</strong> — Requires capabilities that agents cannot reliably provide
+- <strong>Agent-capable</strong> — Can be performed by agents under defined conditions
+- <strong>Agent-preferred</strong> — More effectively performed by agents (speed, consistency, scale)
+- <strong>Agent-only</strong> — Requires capabilities that exceed human capacity (speed, data volume, parallelism)</p>
+<p><strong>Autonomy axis:</strong>
+- <strong>Supervised</strong> — Agent executes, human reviews output before it proceeds
+- <strong>Monitored</strong> — Agent executes autonomously, human reviews periodically or by exception
+- <strong>Autonomous</strong> — Agent executes without human review under normal conditions
+- <strong>Delegated</strong> — Agent has full authority including exception handling within defined bounds</p>
+<h3 id="key-principle_4">Key Principle<a class="headerlink" href="#key-principle_4" title="Permanent link">&para;</a></h3>
+<p>Activities are the <strong>atomic unit of workforce composition</strong>. The decision of who (or what) performs each activity — and at what level of autonomy — is the most granular and impactful workforce design decision in the enterprise.</p>
+<hr />
+<h2 id="structural-layer-measurement">Structural Layer: Measurement<a class="headerlink" href="#structural-layer-measurement" title="Permanent link">&para;</a></h2>
+<p><strong>What it defines:</strong> The KPIs and metrics that evaluate how effectively a process is performing — sitting alongside Activities as a peer within a Process.</p>
+<p>While Activities capture <strong>process execution</strong> (how work flows), Measurements capture <strong>process evaluation</strong> (how well it's working). Every process may define one or more Measurements that quantify its effectiveness, efficiency, or compliance.</p>
+<h3 id="relationship-to-activities">Relationship to Activities<a class="headerlink" href="#relationship-to-activities" title="Permanent link">&para;</a></h3>
+<p>Measurements and Activities are both children of a Process, but they serve different purposes:</p>
+<ul>
+<li><strong>Activities</strong> decompose a process into executable steps (the "doing")</li>
+<li><strong>Measurements</strong> define how to evaluate the process's performance (the "assessing")</li>
+</ul>
+<p>This separation ensures that performance evaluation is a first-class architectural concern, not an afterthought bolted onto process definitions.</p>
+<h3 id="measurement-schema">Measurement Schema<a class="headerlink" href="#measurement-schema" title="Permanent link">&para;</a></h3>
+<p>Each Measurement carries:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>what</code></td>
+<td>What the measurement quantifies (one-line description)</td>
+</tr>
+<tr>
+<td><code>why</code></td>
+<td>Why this measurement matters to the enterprise</td>
+</tr>
+<tr>
+<td><code>how</code></td>
+<td>Formula or calculation method</td>
+</tr>
+<tr>
+<td><code>frequency</code></td>
+<td>How often the measurement is taken (daily, weekly, monthly, quarterly, annually)</td>
+</tr>
+<tr>
+<td><code>direction</code></td>
+<td>Whether <code>higher_is_better</code> or <code>lower_is_better</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-principle_5">Key Principle<a class="headerlink" href="#key-principle_5" title="Permanent link">&para;</a></h3>
+<p>Measurements make process performance <strong>explicit, quantifiable, and machine-readable</strong>. In an agent-rich enterprise, agents continuously compute Measurements and surface deviations — turning the architecture from a static reference into a live performance management system.</p>
+<hr />
+<h2 id="structural-layer-work">Structural Layer: Work<a class="headerlink" href="#structural-layer-work" title="Permanent link">&para;</a></h2>
+<p><strong>What it defines:</strong> The actual execution — instances of activities being performed, producing outputs, consuming resources, generating data.</p>
+<h3 id="workforce-composition-agent-dominant-delivery">Workforce Composition: Agent-Dominant Delivery<a class="headerlink" href="#workforce-composition-agent-dominant-delivery" title="Permanent link">&para;</a></h3>
+<p>At the work layer, agents dominate by volume. The vast majority of discrete work instances in a modern enterprise — transactions processed, documents generated, data validated, messages routed, reports compiled — are or will be agent-executed.</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Human role</strong></td>
+<td>Perform assigned work items, exercise judgement on escalated items, provide feedback on agent outputs, handle novel situations</td>
+</tr>
+<tr>
+<td><strong>Agent role</strong></td>
+<td>Execute work items at scale, maintain quality and consistency, generate execution data, self-monitor performance, flag anomalies</td>
+</tr>
+<tr>
+<td><strong>Collaboration model</strong></td>
+<td><strong>Agent-as-workforce.</strong> At this layer, the agent IS the primary workforce for most work types. Humans participate in exception handling, quality oversight, and work that requires uniquely human capabilities.</td>
+</tr>
+<tr>
+<td><strong>Governance</strong></td>
+<td>Continuous quality monitoring. Statistical process control applied to agent-executed work. Human sampling for quality assurance. Full traceability from work instance back through activity, process, capability, domain, to OU — and through initiative, objective, to strategy.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="work-instance-metadata">Work Instance Metadata<a class="headerlink" href="#work-instance-metadata" title="Permanent link">&para;</a></h3>
+<p>Every work instance in ZORBA carries metadata that enables governance and traceability:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>performer_type</code></td>
+<td>Human, agent, or collaborative</td>
+</tr>
+<tr>
+<td><code>performer_id</code></td>
+<td>Identifier of the specific human or agent instance</td>
+</tr>
+<tr>
+<td><code>autonomy_level</code></td>
+<td>The autonomy level at which this work was performed</td>
+</tr>
+<tr>
+<td><code>confidence</code></td>
+<td>Agent's self-assessed confidence (agent-executed work only)</td>
+</tr>
+<tr>
+<td><code>review_status</code></td>
+<td>Unreviewed, human-reviewed, agent-reviewed, auto-approved</td>
+</tr>
+<tr>
+<td><code>escalation_chain</code></td>
+<td>If escalated, the sequence of handoffs</td>
+</tr>
+<tr>
+<td><code>structural_lineage</code></td>
+<td>OU → Domain → Capability → Process → Activity → Work</td>
+</tr>
+<tr>
+<td><code>strategic_lineage</code></td>
+<td>Strategy → Objective → Initiative → Work</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-principle_6">Key Principle<a class="headerlink" href="#key-principle_6" title="Permanent link">&para;</a></h3>
+<p>Work is where architecture meets reality. Every work instance is <strong>evidence</strong> of how the blended workforce actually operates — and the data generated at this layer feeds back into every layer above it.</p>
+<hr />
+<h2 id="strategic-alignment-overlay">Strategic Alignment Overlay<a class="headerlink" href="#strategic-alignment-overlay" title="Permanent link">&para;</a></h2>
+<p>Strategy, Objectives, and Initiatives are not structural containers — they are <strong>alignment objects</strong> that connect to the structural hierarchy through typed relationships.</p>
+<h3 id="strategy">Strategy<a class="headerlink" href="#strategy" title="Permanent link">&para;</a></h3>
+<p>Strategies exist at multiple levels of the architecture:</p>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Example</th>
+<th>Scoped To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Enterprise</strong></td>
+<td>"ACME Corp Group Strategy 2026–2030"</td>
+<td>Top-level OU</td>
+</tr>
+<tr>
+<td><strong>Business Unit</strong></td>
+<td>"ACME Health Growth Strategy"</td>
+<td>Business Unit OU</td>
+</tr>
+<tr>
+<td><strong>Domain</strong></td>
+<td>"Marketing Strategy 2026"</td>
+<td>Domain within an OU</td>
+</tr>
+<tr>
+<td><strong>Capability</strong></td>
+<td>"Customer Self-Service Automation Strategy"</td>
+<td>Specific capability</td>
+</tr>
+<tr>
+<td><strong>Process</strong></td>
+<td>"Product Marketing Strategy"</td>
+<td>Specific process or process group</td>
+</tr>
+</tbody>
+</table>
+<p>Strategies at different levels naturally interlink — a Product Marketing Strategy connects upward to the Marketing Strategy which connects to the Business Unit strategy. This creates a <strong>strategy hierarchy that mirrors but does not duplicate the structural hierarchy</strong>. The architecture does not prescribe where strategies must exist; it permits them at any level where strategic intent needs to be articulated.</p>
+<p>Strategy formulation is <strong>human-dominant</strong> — it is fundamentally about judgement, values, ambition, and risk appetite. Agents play a critical supporting role in environmental scanning, competitive intelligence, scenario modelling, and strategy document generation, but strategic decisions require human authority.</p>
+<h3 id="objectives">Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h3>
+<p>Objectives cascade from strategies and attach to structural objects:</p>
+<ul>
+<li>An OKR might align to a capability: <em>"Reduce customer complaint resolution time by 40%"</em> → attached to the Customer Support capability</li>
+<li>A KPI might measure a process: <em>"First-contact resolution rate &gt; 85%"</em> → attached to the Complaint Resolution process</li>
+<li>A strategic goal might span a domain: <em>"Achieve 60% agent workforce composition in Operations"</em> → attached to the Operations &amp; Delivery domain</li>
+</ul>
+<p>Objective-setting is <strong>human-led, agent-informed</strong>. Agents analyse historical performance, recommend targets, track progress, and alert on deviation — but humans set the targets and own accountability.</p>
+<h3 id="initiatives">Initiatives<a class="headerlink" href="#initiatives" title="Permanent link">&para;</a></h3>
+<p>Initiatives bridge objectives to work. They are bounded efforts (programmes, projects, workstreams) that produce work items contributing to objectives. Initiatives may span multiple domains and capabilities.</p>
+<h3 id="traversal">Traversal<a class="headerlink" href="#traversal" title="Permanent link">&para;</a></h3>
+<p>An agent (or human) can trace any work item back to strategic intent through two paths:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>STRUCTURAL PATH:
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Work Item → Activity → Process → Capability → Domain → OU
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>&quot;What part of the organisation produced this work?&quot;
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>STRATEGIC PATH:
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Work Item → Initiative → Objective → Strategy
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>&quot;What strategic intent drove this work?&quot;
+</code></pre></div>
+<p>Both paths converge on the same architecture. This dual traversal is what makes ZORBA's architecture machine-readable and strategically traceable.</p>
+<hr />
+<h2 id="cross-layer-dynamics">Cross-Layer Dynamics<a class="headerlink" href="#cross-layer-dynamics" title="Permanent link">&para;</a></h2>
+<h3 id="the-governance-gradient">The Governance Gradient<a class="headerlink" href="#the-governance-gradient" title="Permanent link">&para;</a></h3>
+<p>Governance intensity varies across the structural hierarchy, reflecting different risk profiles:</p>
+<table>
+<thead>
+<tr>
+<th>Structural Layer</th>
+<th>Governance Intensity</th>
+<th>Primary Concern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Organisational Unit</td>
+<td>Corporate governance, board-level</td>
+<td>Legal structure, regulatory compliance</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>Strategic oversight</td>
+<td>Domain strategy, investment priority</td>
+</tr>
+<tr>
+<td>Capability</td>
+<td>High — explicit workforce composition decisions</td>
+<td>Build/automate decisions, risk assessment</td>
+</tr>
+<tr>
+<td>Process</td>
+<td>Medium — defined handoff and escalation protocols</td>
+<td>Orchestration quality, exception handling</td>
+</tr>
+<tr>
+<td>Activity</td>
+<td>Varies by classification — risk-proportionate</td>
+<td>Execution quality, autonomy appropriateness</td>
+</tr>
+<tr>
+<td>Work</td>
+<td>Continuous monitoring — statistical and exception-based</td>
+<td>Output quality, anomaly detection</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-feedback-loop">The Feedback Loop<a class="headerlink" href="#the-feedback-loop" title="Permanent link">&para;</a></h3>
+<p>ZORBA is not a top-down cascade. Data flows upward as well as downward:</p>
+<ul>
+<li><strong>Work data</strong> reveals actual agent performance, informing Activity classification</li>
+<li><strong>Activity metrics</strong> expose process bottlenecks and workforce composition effectiveness</li>
+<li><strong>Process performance</strong> validates or challenges Capability design decisions</li>
+<li><strong>Capability assessments</strong> inform Domain strategy and investment</li>
+<li><strong>Domain performance</strong> feeds Organisational Unit governance and strategic review</li>
+</ul>
+<p>In an agent-rich enterprise, this feedback loop operates <strong>continuously and automatically</strong> — agents monitoring their own performance across layers and surfacing insights that would take human analysts weeks to compile.</p>
+<h3 id="architecture-as-operating-system">Architecture as Operating System<a class="headerlink" href="#architecture-as-operating-system" title="Permanent link">&para;</a></h3>
+<p>In a traditional enterprise, architecture is a reference document. In a ZORBA-enabled enterprise, architecture is closer to an <strong>operating system</strong> — a machine-readable, agent-interpretable structure that agents use to understand their own context, authority, and boundaries.</p>
+<p>This is not metaphor. When an agent needs to determine whether it has authority to approve a purchase, it should be able to query the architecture: What domain is this? What process am I in? What activity am I performing? What is my autonomy level? What are my escalation paths? The architecture becomes the runtime governance layer.</p>
+<h2 id="evolution-as-a-cross-cutting-concern">Evolution as a Cross-Cutting Concern<a class="headerlink" href="#evolution-as-a-cross-cutting-concern" title="Permanent link">&para;</a></h2>
+<p>ZORBA's structural hierarchy captures the enterprise at a point in time. But enterprises evolve — capabilities mature, processes standardise, technology commoditises. Understanding <strong>where each component sits on the evolution curve</strong> is essential for making informed workforce composition decisions.</p>
+<p>Evolution stage is tracked alongside workforce composition at every structural layer:</p>
+<ul>
+<li><strong>Domains</strong> may contain capabilities at different evolution stages (genesis innovation alongside commodity operations)</li>
+<li><strong>Capabilities</strong> evolve from genesis → custom → product → commodity over time</li>
+<li><strong>Processes</strong> supporting the same capability may be at different evolution stages</li>
+<li><strong>Activities</strong> and <strong>Work</strong> inherit evolution characteristics from their parent processes</li>
+</ul>
+<p>The evolution dimension uses <strong>Wardley Mapping methodology</strong> and <strong>Pioneers, Settlers, and Town Planners (PST)</strong> organisational patterns to map current state, predict future evolution, and plan workforce transitions.</p>
+<p><strong>Key principle:</strong> A capability at genesis stage requires human-heavy (Pioneer) workforce. A commodity capability can be agent-autonomous (Town Planner). Everything in between demands thoughtful workforce evolution planning.</p>
+<p>See <a href="../09-evolution-mapping/">Evolution Mapping</a> for the complete framework on tracking and predicting capability evolution in ZORBA architectures.</p>
+<hr />
+<p><em>Previous: <a href="../01-manifesto/">← The ZORBA Manifesto</a> | Next: <a href="../03-workforce-model/">The Blended Workforce Model →</a></em></p>
+<hr />
+<p><em>© 2026 Zontally. All rights reserved.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "toc.follow", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

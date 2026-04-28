@@ -1,0 +1,1691 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The open reference architecture for the agentic enterprise">
+      
+      
+      
+        <link rel="canonical" href="https://zontally.github.io/zorba/framework/05-agentic-patterns/">
+      
+      
+        <link rel="prev" href="../04-domain-reference/">
+      
+      
+        <link rel="next" href="../06-governance/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Agentic Patterns - ZORBA</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#agentic-enterprise-patterns" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ZORBA" class="md-header__button md-logo" aria-label="ZORBA" data-md-component="logo">
+      
+  <img src="../../assets/logo-light.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ZORBA
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Agentic Patterns
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/zontally/zorba" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    zontally/zorba
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ZORBA" class="md-nav__button md-logo" aria-label="ZORBA" data-md-component="logo">
+      
+  <img src="../../assets/logo-light.png" alt="logo">
+
+    </a>
+    ZORBA
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/zontally/zorba" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    zontally/zorba
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Framework
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Framework
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-manifesto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manifesto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-workforce-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workforce Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-domain-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domain Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentic Patterns
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentic Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-1-strategy-formulation-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 1: Strategy Formulation Assistant
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-2-autonomous-process-monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 2: Autonomous Process Monitor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-3-decision-support-analyst" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 3: Decision Support Analyst
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-4-execution-orchestrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 4: Execution Orchestrator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-5-continuous-compliance-guardian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 5: Continuous Compliance Guardian
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-6-intelligent-triage-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 6: Intelligent Triage Engine
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-7-knowledge-curator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 7: Knowledge Curator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-8-predictive-advisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 8: Predictive Advisor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-9-workforce-coordinator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 9: Workforce Coordinator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-10-autonomous-executor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 10: Autonomous Executor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-selection-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern Selection Guide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pattern Selection Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#combining-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combining Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-information-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Information Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-industry-editions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Industry Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-evolution-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evolution Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-industry-taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Industry Taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-usage-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../industry-taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Industry taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domain Taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Industry Editions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Industry Editions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../editions/enterprise-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ZORBA for Enterprise Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../editions/professional-services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ZORBA for Professional Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-1-strategy-formulation-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 1: Strategy Formulation Assistant
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-2-autonomous-process-monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 2: Autonomous Process Monitor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-3-decision-support-analyst" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 3: Decision Support Analyst
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-4-execution-orchestrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 4: Execution Orchestrator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-5-continuous-compliance-guardian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 5: Continuous Compliance Guardian
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-6-intelligent-triage-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 6: Intelligent Triage Engine
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-7-knowledge-curator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 7: Knowledge Curator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-8-predictive-advisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 8: Predictive Advisor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-9-workforce-coordinator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 9: Workforce Coordinator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-10-autonomous-executor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 10: Autonomous Executor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-selection-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern Selection Guide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pattern Selection Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#combining-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combining Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="agentic-enterprise-patterns">Agentic Enterprise Patterns<a class="headerlink" href="#agentic-enterprise-patterns" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Agentic Enterprise Patterns are <strong>reusable architectural blueprints</strong> for how AI agents participate in enterprise operations. Each pattern describes a proven way to integrate agents into a specific type of enterprise work, with defined human touchpoints, autonomy levels, and governance requirements.</p>
+<p>These patterns are technology-agnostic. They describe <strong>what</strong> the agent does and <strong>how</strong> it relates to humans — not which platform or model implements it.</p>
+<h3 id="pattern-structure">Pattern Structure<a class="headerlink" href="#pattern-structure" title="Permanent link">&para;</a></h3>
+<p>Each pattern is documented with:</p>
+<ul>
+<li><strong>Description</strong> — What this pattern does</li>
+<li><strong>Applicable ZORBA Layers</strong> — Where in the architecture this pattern operates</li>
+<li><strong>Agent Type</strong> — Which agent type (from the <a href="../03-workforce-model/">Workforce Model</a>) this pattern uses</li>
+<li><strong>Human Touchpoints</strong> — Where and how humans interact with this pattern</li>
+<li><strong>Autonomy Level</strong> — The typical autonomy level (A0–A4)</li>
+<li><strong>Governance Requirements</strong> — What governance must be in place</li>
+<li><strong>Example Applications</strong> — Concrete enterprise use cases</li>
+</ul>
+<hr />
+<h2 id="pattern-1-strategy-formulation-assistant">Pattern 1: Strategy Formulation Assistant<a class="headerlink" href="#pattern-1-strategy-formulation-assistant" title="Permanent link">&para;</a></h2>
+<p><strong>Description:</strong> An agent that continuously monitors the external and internal environment, synthesises information, generates strategic insights, and prepares materials for human strategic decision-making. It does not make strategic decisions — it ensures that the humans who do are comprehensively informed.</p>
+<p><strong>Applicable Layers:</strong> L1 (Strategy), L2 (Objectives)</p>
+<p><strong>Agent Type:</strong> Co-Pilot</p>
+<p><strong>Human Touchpoints:</strong>
+- Human defines strategic questions and areas of focus
+- Human reviews and interrogates agent-generated analyses
+- Human makes all strategic decisions
+- Human provides feedback on relevance and quality of insights</p>
+<p><strong>Autonomy Level:</strong> A1 (Supervised) — all outputs reviewed before influencing decisions</p>
+<p><strong>Governance Requirements:</strong>
+- Source attribution for all intelligence gathered
+- Bias disclosure — agent must flag when data sources are limited or skewed
+- No autonomous external communications or commitments
+- Audit trail of all analyses provided to decision-makers
+- Periodic review of the agent's information sources and analytical methods</p>
+<p><strong>Example Applications:</strong>
+- Board meeting preparation — scanning market, competitor, and regulatory developments
+- Strategic planning cycles — generating scenario analyses and strategic options
+- M&amp;A opportunity screening — monitoring and evaluating potential targets
+- Strategic risk radar — continuous monitoring of threats and emerging risks</p>
+<hr />
+<h2 id="pattern-2-autonomous-process-monitor">Pattern 2: Autonomous Process Monitor<a class="headerlink" href="#pattern-2-autonomous-process-monitor" title="Permanent link">&para;</a></h2>
+<p><strong>Description:</strong> An agent that continuously observes business processes in real-time, detects deviations from expected behaviour, identifies bottlenecks and quality issues, and either resolves them autonomously (within authority) or escalates to humans.</p>
+<p><strong>Applicable Layers:</strong> L4 (Processes), L5 (Activities), L6 (Work)</p>
+<p><strong>Agent Type:</strong> Autonomous Agent</p>
+<p><strong>Human Touchpoints:</strong>
+- Human defines monitoring parameters and alert thresholds
+- Human receives and acts on escalations
+- Human reviews periodic performance summaries
+- Human adjusts parameters based on changing business needs</p>
+<p><strong>Autonomy Level:</strong> A3 (Trusted) — operates autonomously, escalates by exception</p>
+<p><strong>Governance Requirements:</strong>
+- Defined escalation triggers (cannot be modified by the agent)
+- Complete monitoring logs retained for audit
+- False positive / false negative tracking
+- Human review of auto-resolved issues on a sampling basis
+- Clear authority boundaries for autonomous remediation actions</p>
+<p><strong>Example Applications:</strong>
+- Order fulfilment monitoring — detecting delays, stock issues, routing problems
+- SLA compliance monitoring — tracking service levels across customer contracts
+- Financial control monitoring — detecting anomalous transactions or approval violations
+- IT operations monitoring — infrastructure health, performance, and security</p>
+<hr />
+<h2 id="pattern-3-decision-support-analyst">Pattern 3: Decision Support Analyst<a class="headerlink" href="#pattern-3-decision-support-analyst" title="Permanent link">&para;</a></h2>
+<p><strong>Description:</strong> An agent that gathers data, performs analysis, models scenarios, and presents structured recommendations to a human decision-maker. The agent prepares the decision; the human makes it.</p>
+<p><strong>Applicable Layers:</strong> L2 (Objectives), L3 (Capabilities), L4 (Processes)</p>
+<p><strong>Agent Type:</strong> Specialist Agent</p>
+<p><strong>Human Touchpoints:</strong>
+- Human frames the decision and defines the question
+- Human reviews analysis and recommendations
+- Human makes the final decision
+- Human provides feedback on the quality and relevance of analysis</p>
+<p><strong>Autonomy Level:</strong> A1 (Supervised) for high-stakes decisions; A2 (Guided) for operational decisions</p>
+<p><strong>Governance Requirements:</strong>
+- Methodology transparency — the agent must explain its analytical approach
+- Confidence levels on all recommendations
+- Sensitivity analysis showing how conclusions change with different assumptions
+- No cherry-picking — the agent must present countervailing evidence
+- Decision log linking recommendation to final decision and outcome</p>
+<p><strong>Example Applications:</strong>
+- Pricing decisions — market analysis, elasticity modelling, competitive positioning
+- Resource allocation — capacity analysis, ROI projections, scenario comparison
+- Vendor selection — multi-criteria evaluation with weighted scoring
+- Investment decisions — financial modelling, risk assessment, portfolio impact</p>
+<hr />
+<h2 id="pattern-4-execution-orchestrator">Pattern 4: Execution Orchestrator<a class="headerlink" href="#pattern-4-execution-orchestrator" title="Permanent link">&para;</a></h2>
+<p><strong>Description:</strong> An agent that manages the end-to-end execution of a business process, routing work to the appropriate performers (human or agent), managing dependencies and sequencing, monitoring progress, and ensuring completion.</p>
+<p><strong>Applicable Layers:</strong> L4 (Processes), L5 (Activities)</p>
+<p><strong>Agent Type:</strong> Orchestrator Agent</p>
+<p><strong>Human Touchpoints:</strong>
+- Human defines process design and rules
+- Human performs assigned decision/judgement steps within the process
+- Human handles escalations from the orchestrator
+- Human reviews process performance metrics</p>
+<p><strong>Autonomy Level:</strong> A3 (Trusted) — manages flow autonomously, escalates exceptions</p>
+<p><strong>Governance Requirements:</strong>
+- Process definition is human-approved and version-controlled
+- Routing logic is transparent and auditable
+- Cannot modify process definitions without human approval
+- Full process execution audit trail
+- SLA tracking with automated alerting
+- Defined behaviour for process failures and exceptions</p>
+<p><strong>Example Applications:</strong>
+- Employee onboarding — coordinating IT setup, HR paperwork, manager introductions, training
+- Incident management — coordinating detection, triage, investigation, resolution, post-mortem
+- Procurement cycle — requisition through approval, sourcing, PO, receipt, payment
+- Campaign launch — coordinating creative, compliance review, channel setup, activation</p>
+<hr />
+<h2 id="pattern-5-continuous-compliance-guardian">Pattern 5: Continuous Compliance Guardian<a class="headerlink" href="#pattern-5-continuous-compliance-guardian" title="Permanent link">&para;</a></h2>
+<p><strong>Description:</strong> An agent that continuously monitors enterprise activities for compliance with regulations, policies, and standards. Operates as an always-on compliance function that catches issues in real-time rather than in periodic audits.</p>
+<p><strong>Applicable Layers:</strong> L4 (Processes), L5 (Activities), L6 (Work)</p>
+<p><strong>Agent Type:</strong> Autonomous Agent</p>
+<p><strong>Human Touchpoints:</strong>
+- Human defines compliance rules and regulatory interpretations
+- Human receives and investigates flagged violations
+- Human makes judgement calls on ambiguous compliance situations
+- Human reviews false positive rates and adjusts rules</p>
+<p><strong>Autonomy Level:</strong> A3 (Trusted) for monitoring and flagging; A1 (Supervised) for enforcement actions</p>
+<p><strong>Governance Requirements:</strong>
+- Compliance rule definitions require legal/compliance human approval
+- All flags and enforcement actions logged and auditable
+- False positive tracking with regular calibration
+- Cannot autonomously impose sanctions or penalties
+- Regular testing against known compliance scenarios
+- Regulatory change monitoring to keep rules current</p>
+<p><strong>Example Applications:</strong>
+- Data privacy compliance — monitoring data handling against GDPR/privacy regulations
+- Financial compliance — transaction monitoring for AML, fraud, sanctions screening
+- HR compliance — monitoring employment practices against labour regulations
+- Information security — monitoring access patterns, data flows, and policy adherence</p>
+<hr />
+<h2 id="pattern-6-intelligent-triage-engine">Pattern 6: Intelligent Triage Engine<a class="headerlink" href="#pattern-6-intelligent-triage-engine" title="Permanent link">&para;</a></h2>
+<p><strong>Description:</strong> An agent that receives incoming requests, enquiries, or issues, classifies them, assesses priority and urgency, enriches them with context, and routes them to the appropriate handler (human or agent).</p>
+<p><strong>Applicable Layers:</strong> L4 (Processes), L5 (Activities)</p>
+<p><strong>Agent Type:</strong> Autonomous Agent</p>
+<p><strong>Human Touchpoints:</strong>
+- Human defines classification taxonomy and routing rules
+- Human handles escalated or ambiguous cases
+- Human reviews triage accuracy periodically
+- Human adjusts rules based on changing patterns</p>
+<p><strong>Autonomy Level:</strong> A3–A4 (Trusted to Autonomous) — high-volume, pattern-based work</p>
+<p><strong>Governance Requirements:</strong>
+- Classification accuracy metrics with minimum thresholds
+- Misrouting tracking and correction protocols
+- Priority override capability for humans
+- Full audit trail of triage decisions
+- Regular retraining/recalibration based on outcomes</p>
+<p><strong>Example Applications:</strong>
+- Customer support triage — classifying and routing customer enquiries
+- IT service desk — categorising and prioritising incidents and requests
+- Lead qualification — scoring and routing sales leads
+- Document processing — classifying, extracting, and routing incoming documents</p>
+<hr />
+<h2 id="pattern-7-knowledge-curator">Pattern 7: Knowledge Curator<a class="headerlink" href="#pattern-7-knowledge-curator" title="Permanent link">&para;</a></h2>
+<p><strong>Description:</strong> An agent that continuously maintains, updates, and improves the organisation's knowledge base. It ingests new information, identifies outdated content, resolves contradictions, and ensures knowledge is accessible to both humans and agents.</p>
+<p><strong>Applicable Layers:</strong> L3 (Capabilities), L5 (Activities)</p>
+<p><strong>Agent Type:</strong> Autonomous Agent</p>
+<p><strong>Human Touchpoints:</strong>
+- Human subject matter experts validate significant knowledge updates
+- Human defines knowledge quality standards
+- Human reviews agent-proposed changes to critical knowledge articles
+- Human provides feedback on knowledge gaps</p>
+<p><strong>Autonomy Level:</strong> A3 (Trusted) for routine maintenance; A2 (Guided) for significant content changes</p>
+<p><strong>Governance Requirements:</strong>
+- Version control on all knowledge artefacts
+- Change approval workflow for sensitive or regulated content
+- Source attribution for all knowledge claims
+- Contradiction detection and resolution logging
+- Knowledge usage analytics to prioritise maintenance</p>
+<p><strong>Example Applications:</strong>
+- Customer-facing knowledge base maintenance
+- Internal policy and procedure documentation
+- Technical documentation and runbook management
+- Regulatory and compliance knowledge management</p>
+<hr />
+<h2 id="pattern-8-predictive-advisor">Pattern 8: Predictive Advisor<a class="headerlink" href="#pattern-8-predictive-advisor" title="Permanent link">&para;</a></h2>
+<p><strong>Description:</strong> An agent that analyses historical and real-time data to predict future states, risks, or opportunities, and proactively advises humans on actions to take.</p>
+<p><strong>Applicable Layers:</strong> L2 (Objectives), L3 (Capabilities)</p>
+<p><strong>Agent Type:</strong> Specialist Agent</p>
+<p><strong>Human Touchpoints:</strong>
+- Human defines prediction domains and acceptable risk thresholds
+- Human receives and evaluates predictions
+- Human decides on actions based on predictions
+- Human provides outcome feedback to improve predictions</p>
+<p><strong>Autonomy Level:</strong> A2 (Guided) — predictions are advisory, not action-triggering</p>
+<p><strong>Governance Requirements:</strong>
+- Model transparency and explainability requirements
+- Confidence intervals on all predictions
+- Backtesting results published and reviewed
+- Bias auditing on a regular schedule
+- No autonomous action based on predictions alone (unless explicitly authorised)</p>
+<p><strong>Example Applications:</strong>
+- Customer churn prediction with retention recommendations
+- Demand forecasting with inventory and staffing recommendations
+- Equipment failure prediction with maintenance scheduling
+- Cash flow forecasting with liquidity management recommendations</p>
+<hr />
+<h2 id="pattern-9-workforce-coordinator">Pattern 9: Workforce Coordinator<a class="headerlink" href="#pattern-9-workforce-coordinator" title="Permanent link">&para;</a></h2>
+<p><strong>Description:</strong> An agent that manages the allocation and coordination of work across a blended workforce — assigning tasks to the most appropriate performer (human or agent) based on capability, availability, autonomy level, and workload.</p>
+<p><strong>Applicable Layers:</strong> L4 (Processes), L5 (Activities), L6 (Work)</p>
+<p><strong>Agent Type:</strong> Orchestrator Agent</p>
+<p><strong>Human Touchpoints:</strong>
+- Human defines workforce allocation policies
+- Human handles override requests and special assignments
+- Human reviews workload balance and performance
+- Human makes staffing and capacity decisions</p>
+<p><strong>Autonomy Level:</strong> A3 (Trusted) — allocates work autonomously within defined policies</p>
+<p><strong>Governance Requirements:</strong>
+- Allocation logic transparency
+- Fairness monitoring (for human workers)
+- Workload caps and wellbeing considerations (for human workers)
+- Agent capacity and performance monitoring
+- Escalation when no suitable performer is available</p>
+<p><strong>Example Applications:</strong>
+- Shared services team coordination — routing work to available humans or agents
+- Contact centre workforce management — balancing load across human and AI agents
+- Project resource management — matching tasks to available capability
+- Field service coordination — scheduling and dispatching human and robotic workers</p>
+<hr />
+<h2 id="pattern-10-autonomous-executor">Pattern 10: Autonomous Executor<a class="headerlink" href="#pattern-10-autonomous-executor" title="Permanent link">&para;</a></h2>
+<p><strong>Description:</strong> An agent that independently executes a defined class of work from receipt to completion, with no human involvement in the standard flow. The most autonomous pattern — used for high-volume, well-defined, low-risk work.</p>
+<p><strong>Applicable Layers:</strong> L5 (Activities), L6 (Work)</p>
+<p><strong>Agent Type:</strong> Autonomous Agent</p>
+<p><strong>Human Touchpoints:</strong>
+- Human defines execution rules and quality standards
+- Human reviews exception reports
+- Human performs periodic quality audits
+- Human adjusts rules and parameters as needed</p>
+<p><strong>Autonomy Level:</strong> A4 (Autonomous) — full authority within defined scope</p>
+<p><strong>Governance Requirements:</strong>
+- Strict boundary definition — what the agent can and cannot do
+- Continuous quality monitoring with automated alerts
+- Statistical process control on outputs
+- Exception handling protocols with human escalation
+- Regular performance reviews and scope assessments
+- Kill switch / pause capability for emergencies</p>
+<p><strong>Example Applications:</strong>
+- Invoice processing — receive, validate, match, approve, pay (within thresholds)
+- Data migration and transformation — moving and transforming data between systems
+- Report generation — automated creation and distribution of standard reports
+- Email classification and response — handling routine enquiries end-to-end</p>
+<hr />
+<h2 id="pattern-selection-guide">Pattern Selection Guide<a class="headerlink" href="#pattern-selection-guide" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Best For</th>
+<th>Autonomy</th>
+<th>Risk Tolerance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strategy Formulation Assistant</td>
+<td>Strategic planning support</td>
+<td>Low</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Autonomous Process Monitor</td>
+<td>Operational oversight</td>
+<td>High</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Decision Support Analyst</td>
+<td>Complex decision preparation</td>
+<td>Low</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Execution Orchestrator</td>
+<td>Multi-step process management</td>
+<td>Medium-High</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Continuous Compliance Guardian</td>
+<td>Regulatory adherence</td>
+<td>Medium-High</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Intelligent Triage Engine</td>
+<td>High-volume intake and routing</td>
+<td>High</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Knowledge Curator</td>
+<td>Knowledge management</td>
+<td>Medium</td>
+<td>Low-Medium</td>
+</tr>
+<tr>
+<td>Predictive Advisor</td>
+<td>Forecasting and early warning</td>
+<td>Low-Medium</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Workforce Coordinator</td>
+<td>Blended team management</td>
+<td>Medium-High</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Autonomous Executor</td>
+<td>High-volume routine work</td>
+<td>Maximum</td>
+<td>Medium-High</td>
+</tr>
+</tbody>
+</table>
+<h3 id="combining-patterns">Combining Patterns<a class="headerlink" href="#combining-patterns" title="Permanent link">&para;</a></h3>
+<p>Patterns are composable. A typical enterprise process might combine:</p>
+<ul>
+<li>An <strong>Intelligent Triage Engine</strong> to receive and classify incoming work</li>
+<li>An <strong>Execution Orchestrator</strong> to manage the process flow</li>
+<li>Multiple <strong>Autonomous Executors</strong> for routine steps</li>
+<li>A <strong>Decision Support Analyst</strong> for judgement-required steps</li>
+<li>A <strong>Continuous Compliance Guardian</strong> monitoring the entire flow</li>
+<li>A <strong>Knowledge Curator</strong> maintaining the knowledge that agents and humans rely on</li>
+</ul>
+<p>This composition of patterns — not any single pattern — is what characterises the agentic enterprise.</p>
+<hr />
+<p><em>Previous: <a href="../04-domain-reference/">← Domain Reference Model</a> | Next: <a href="../06-governance/">Governance &amp; Trust Framework →</a></em></p>
+<hr />
+<p><em>© 2026 Zontally. All rights reserved.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "toc.follow", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

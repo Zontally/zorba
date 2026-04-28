@@ -1,0 +1,82 @@
+/* ZORBA — Zontally Brand Overrides for MkDocs Material */
+
+/* ── Colour scheme: Dark mode (slate) ── */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #1e293b;        /* gray-800 — header */
+  --md-primary-bg-color: #f8fafc;        /* light text on header */
+  --md-accent-fg-color: #3b82f6;         /* blue-500 — links, accents */
+  --md-default-bg-color: #0f172a;        /* gray-900 — page background */
+  --md-default-fg-color: #e2e8f0;        /* gray-200 — body text */
+  --md-default-fg-color--light: #94a3b8; /* gray-400 — secondary text */
+  --md-code-bg-color: #1e293b;           /* gray-800 — code blocks */
+  --md-typeset-a-color: #60a5fa;         /* blue-400 — links */
+}
+
+/* ── Colour scheme: Light mode ── */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #1e293b;        /* gray-800 — header */
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: #2563eb;         /* blue-600 — links, accents */
+  --md-default-bg-color: #f8fafc;        /* gray-50 — page background */
+  --md-typeset-a-color: #2563eb;         /* blue-600 */
+}
+
+/* ── Navigation sidebar ── */
+.md-nav__link--active,
+.md-nav__link:hover {
+  color: var(--md-accent-fg-color) !important;
+}
+
+/* ── Header bar ── */
+.md-header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+/* ── Logo sizing in header ── */
+.md-header__button.md-logo img {
+  height: 1.8rem;
+  width: auto;
+}
+
+/* ── Content links ── */
+.md-typeset a:hover {
+  color: #93c5fd; /* blue-300 */
+}
+
+[data-md-color-scheme="default"] .md-typeset a:hover {
+  color: #1d4ed8; /* blue-700 */
+}
+
+/* ── Tables — cleaner look ── */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  font-size: 0.82rem;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-code-bg-color);
+  font-weight: 600;
+}
+
+/* ── Admonitions — blue accent ── */
+.md-typeset .admonition,
+.md-typeset details {
+  border-left-color: var(--md-accent-fg-color);
+}
+
+/* ── Footer ── */
+.md-footer {
+  background: #0f172a;
+}
+
+/* ── Content images: cap width; inline style="height: …" on <img> is respected ──
+   (Do not use height: revert !important here — it overrides inline heights.) */
+.md-typeset img {
+  max-width: 100%;
+}
+
+/* ── Smooth transitions ── */
+.md-nav__link,
+.md-typeset a {
+  transition: color 0.15s ease;
+}
