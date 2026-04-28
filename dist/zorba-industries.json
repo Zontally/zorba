@@ -1,7 +1,7 @@
 {
   "model": "ZORBA_INDUSTRY_MODEL",
-  "version": "v0.3.7",
-  "generatedAt": "2026-04-27T15:40:56.407Z",
+  "version": "v0.3.8",
+  "generatedAt": "2026-04-28T09:58:45.022Z",
   "status": "published",
   "description": "Full ZORBA industry and sub-industry taxonomy for common enterprise segmentation, benchmarking, and AI-guided strategy-to-execution workflows.",
   "industries": [

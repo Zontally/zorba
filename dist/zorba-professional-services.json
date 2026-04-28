@@ -2,8 +2,8 @@
   "edition": "professional-services",
   "name": "ZORBA for Professional Services",
   "extends": "core",
-  "version": "0.3.7",
-  "compiled_at": "2026-04-27T15:40:56.205Z",
+  "version": "0.3.8",
+  "compiled_at": "2026-04-28T09:58:44.791Z",
   "stats": {
     "totalDomains": 12,
     "totalCapabilities": 87,
