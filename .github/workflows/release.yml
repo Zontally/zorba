@@ -35,22 +35,20 @@ jobs:
       - run: npm install
       - run: npm run build
 
-      # Commit compiled JSON back to repo (main only)
-      - name: Commit dist/
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f dist/
-          git diff --cached --quiet || git commit -m "chore: compile zorba-core.json [skip ci]"
-          git push
-
       # Upload generated docs for MkDocs job
       - name: Upload generated docs
         uses: actions/upload-artifact@v4
         with:
           name: generated-docs
           path: docs/
+
+      # Upload compiled release assets (JSON + XLSX)
+      - name: Upload release assets
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-assets
+          path: dist/
 
   deploy-docs:
     name: Deploy MkDocs
@@ -79,6 +77,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # Download compiled assets from build job
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-assets
+          path: release-assets/
+
+      - name: List release assets
+        run: ls -R release-assets
 
       - name: Get version
         id: version
@@ -114,4 +121,4 @@ jobs:
           draft: false
           prerelease: ${{ contains(steps.version.outputs.version, '-') }}
           files: |
-            dist/*
+            release-assets/**
