@@ -423,6 +423,14 @@ domain:
         - id: "625813"
           number: "10.4.1"
           name: "Define data governance frameworks and ownership"
+          regulatory_basis:
+            - name: "General Data Protection Regulation (GDPR)"
+              jurisdiction: "EU"
+              url: "https://gdpr-info.eu/"
+            - name: "California Consumer Privacy Act (CCPA)"
+              jurisdiction: "US (California)"
+              url: "https://oag.ca.gov/privacy/ccpa"
+
           agentic_profile: "H+a"
           agentic_note: "Humans define governance; agents maintain catalogues and lineage"
           measurements:
@@ -585,6 +593,11 @@ domain:
         - id: "853162"
           number: "10.5.2"
           name: "Manage identity, access, and authentication controls"
+          regulatory_basis:
+            - name: "ISO/IEC 27001:2022 (Annex A.5)"
+              jurisdiction: "Global"
+              url: "https://www.iso.org/standard/27001"
+
           agentic_profile: "H=A"
           agentic_note: "Agents enforce policies and detect anomalies; humans approve access exceptions"
           measurements:
@@ -629,6 +642,11 @@ domain:
         - id: "671438"
           number: "10.5.4"
           name: "Respond to and recover from security incidents"
+          regulatory_basis:
+            - name: "NIS2 Directive"
+              jurisdiction: "EU"
+              url: "https://digital-strategy.ec.europa.eu/en/policies/nis2-directive"
+
           agentic_profile: "H+a"
           agentic_note: "Humans lead incident response; agents execute containment playbooks and collect forensics"
           measurements:
@@ -955,6 +973,11 @@ domain:
         - id: "182943"
           number: "10.7.7"
           name: "Manage agent platform security and isolation"
+          regulatory_basis:
+            - name: "EU AI Act"
+              jurisdiction: "EU"
+              url: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+
           agentic_profile: "H+a"
           agentic_note: "Humans set security policies; agents enforce isolation and detect breaches"
           measurements:

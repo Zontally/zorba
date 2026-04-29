@@ -748,6 +748,14 @@ domain:
         - id: "394217"
           number: "8.6.1"
           name: "Prepare statutory financial statements"
+          regulatory_basis:
+            - name: "International Financial Reporting Standards (IFRS)"
+              jurisdiction: "Global"
+              url: "https://www.ifrs.org/"
+            - name: "US Generally Accepted Accounting Principles (GAAP)"
+              jurisdiction: "US"
+              url: "https://www.fasb.org/"
+
           agentic_profile: "H=A"
           agentic_note: "Agents compile and format; humans review and ensure compliance"
           measurements:
@@ -889,6 +897,11 @@ domain:
         - id: "758241"
           number: "8.7.1"
           name: "Design and document financial controls and control frameworks"
+          regulatory_basis:
+            - name: "Sarbanes-Oxley Act (SOX) of 2002"
+              jurisdiction: "US"
+              url: "https://www.congress.gov/bill/107th-congress/house-bill/3763"
+
           agentic_profile: "H+a"
           agentic_note: "Humans design controls; agents maintain control documentation"
           measurements:
@@ -999,6 +1012,11 @@ domain:
         - id: "637148"
           number: "8.7.6"
           name: "Manage segregation of duties and access controls"
+          regulatory_basis:
+            - name: "COSO Internal Control – Integrated Framework"
+              jurisdiction: "Global"
+              url: "https://www.coso.org/site-pages/internal-control.aspx"
+
           agentic_profile: "h+A"
           agentic_note: "Agents monitor access patterns and flag violations; humans remediate"
           measurements:
