@@ -424,12 +424,9 @@ domain:
           number: "10.4.1"
           name: "Define data governance frameworks and ownership"
           regulatory_basis:
-            - name: "General Data Protection Regulation (GDPR)"
-              jurisdiction: "EU"
-              url: "https://gdpr-info.eu/"
-            - name: "California Consumer Privacy Act (CCPA)"
-              jurisdiction: "US (California)"
-              url: "https://oag.ca.gov/privacy/ccpa"
+            - REG-005 # General Data Protection Regulation (GDPR)
+            - REG-009 # California Consumer Privacy Act (CCPA)
+
 
           agentic_profile: "H+a"
           agentic_note: "Humans define governance; agents maintain catalogues and lineage"
@@ -594,9 +591,8 @@ domain:
           number: "10.5.2"
           name: "Manage identity, access, and authentication controls"
           regulatory_basis:
-            - name: "ISO/IEC 27001:2022 (Annex A.5)"
-              jurisdiction: "Global"
-              url: "https://www.iso.org/standard/27001"
+            - REG-010 # ISO/IEC 27001:2022
+
 
           agentic_profile: "H=A"
           agentic_note: "Agents enforce policies and detect anomalies; humans approve access exceptions"
@@ -643,9 +639,8 @@ domain:
           number: "10.5.4"
           name: "Respond to and recover from security incidents"
           regulatory_basis:
-            - name: "NIS2 Directive"
-              jurisdiction: "EU"
-              url: "https://digital-strategy.ec.europa.eu/en/policies/nis2-directive"
+            - REG-011 # NIS2 Directive
+
 
           agentic_profile: "H+a"
           agentic_note: "Humans lead incident response; agents execute containment playbooks and collect forensics"
@@ -974,9 +969,8 @@ domain:
           number: "10.7.7"
           name: "Manage agent platform security and isolation"
           regulatory_basis:
-            - name: "EU AI Act"
-              jurisdiction: "EU"
-              url: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+            - REG-012 # EU AI Act
+
 
           agentic_profile: "H+a"
           agentic_note: "Humans set security policies; agents enforce isolation and detect breaches"

@@ -190,12 +190,9 @@ domain:
           number: "9.2.3"
           name: "Assess and select candidates through structured evaluation"
           regulatory_basis:
-            - name: "Equal Employment Opportunity Commission (EEOC) Guidelines"
-              jurisdiction: "US"
-              url: "https://www.eeoc.gov/laws/guidance/uniform-guidelines-employee-selection-procedures"
-            - name: "Equality Act 2010"
-              jurisdiction: "UK"
-              url: "https://www.legislation.gov.uk/ukpga/2010/15/contents"
+            - REG-001 # EEOC Guidelines
+            - REG-002 # Equality Act 2010
+
 
           regulatory_basis:
             - name: "Equal Employment Opportunity Commission (EEOC) Guidelines"
@@ -531,12 +528,9 @@ domain:
           number: "9.4.5"
           name: "Conduct pay equity analysis and remediation"
           regulatory_basis:
-            - name: "Equal Pay Act of 1963"
-              jurisdiction: "US"
-              url: "https://www.eeoc.gov/statutes/equal-pay-act-1963"
-            - name: "EU Pay Transparency Directive"
-              jurisdiction: "EU"
-              url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023L0970"
+            - REG-003 # Equal Pay Act of 1963
+            - REG-004 # EU Pay Transparency Directive
+
 
           regulatory_basis:
             - name: "Equal Pay Act of 1963"
@@ -717,12 +711,9 @@ domain:
           number: "9.6.1"
           name: "Maintain employee records and HR master data"
           regulatory_basis:
-            - name: "General Data Protection Regulation (GDPR)"
-              jurisdiction: "EU"
-              url: "https://gdpr-info.eu/"
-            - name: "ISO 30405:2016"
-              jurisdiction: "Global"
-              url: "https://www.iso.org/standard/66694.html"
+            - REG-005 # General Data Protection Regulation (GDPR)
+            - REG-006 # ISO 30405:2016 - Guidelines on recruitment
+
 
           regulatory_basis:
             - name: "General Data Protection Regulation (GDPR)"
@@ -821,12 +812,9 @@ domain:
           number: "9.6.5"
           name: "Ensure HR regulatory compliance and statutory reporting"
           regulatory_basis:
-            - name: "Applicable National Employment Law (e.g., FLSA, ERISA)"
-              jurisdiction: "Varies"
-              url: "https://www.dol.gov/general/topic/laws-and-regs"
-            - name: "ISO 30400:2016 Vocabulary"
-              jurisdiction: "Global"
-              url: "https://www.iso.org/standard/66687.html"
+            - REG-007 # Applicable National Employment Law
+            - REG-008 # ISO 30400:2016 - Human resource management — Vocabulary
+
 
           regulatory_basis:
             - name: "Applicable National Employment Law (e.g., FLSA, ERISA)"
